@@ -10,7 +10,6 @@ var ADRI = "https://drive.google.com/file/d/1IiFyAh1teNLEvMVvqYFo_SR__kBQYwFI/pr
 var ADRI_Expect = "ทำการเพิ่มใส่นามสกุลเข้าไปโดยให้รหัสนักศึกษาแสดงออกมาท้ายสุด"
 var ADRI_Answer = "https://drive.google.com/file/d/1M8DU6l8MTxe6UIc426o4Ofyl98KF9xu1/preview"
 
-
 router.get('/', async (req, res, next) => {
   const person = req.user;
   // PRETEST Check
