@@ -1,7 +1,7 @@
 # `A Personalized Programming Tutoring System (PTW)`
 <h5>
 <br>Thesis Project Web Application (Recommand Learning C Language System)
-<br> Azure Linux Sever , NodeJS , Bootstrap , Javascript , MongoDB asdfjasldjsdjasdjasdjaosj
+<br> Azure Linux Sever , NodeJS , Bootstrap , Javascript , MongoDB
     
 <br> ``` Server settings use port 8080 ```
 </h5>
