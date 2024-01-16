@@ -33,7 +33,7 @@ router.get('/', async (req, res, next) => { //ย่อโค้ดนี้ล�
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/quiz/1_Introduction-quiz', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
+            res.render('student/quiz/1_Algorithms_and_Flowcharts-quiz', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
           });
         });
         
