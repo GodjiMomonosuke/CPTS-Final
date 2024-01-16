@@ -111,7 +111,7 @@ router.post('/submit', async (req, res, next) => {
 
   
  
-  /** chekc score */ 
+  /** check score */ 
   if(choice1 === 'B'){
     score1 = 1;
   }
