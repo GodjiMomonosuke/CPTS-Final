@@ -107,10 +107,10 @@ app.use('/project-Calculator',
   require('./routes/student/project/5_Calculator.route')
 );
 /** course  */
-app.use('/course-Introduction',
+app.use('/course-Algorithms_and_Flowcharts',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/1_Introduction-course.route')
+  require('./routes/student/course/1_Algorithms_and_Flowcharts-course.route')
 );
 app.use('/course-String',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -163,10 +163,10 @@ app.use('/course-InputOutput',
   require('./routes/student/course/10_InputOutput-course.route')
 );
 /** Quiz  */
-app.use('/course-Introduction-quiz',
+app.use('/course-Algorithms_and_Flowcharts-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/quiz/1_Introduction-quiz.route')
+  require('./routes/student/quiz/1_Algorithms_and_Flowcharts-quiz.route')
 );
 app.use('/course-String-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -219,10 +219,10 @@ app.use('/course-InputOutput-quiz',
   require('./routes/student/quiz/10_InputOutput-quiz.route')
 );
 /** Pretest */
-app.use('/course-Introduction-pretest',
+app.use('/course-Algorithms_and_Flowcharts-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest/1_Introduction-pretest.route')
+  require('./routes/student/pretest/1_Algorithms_and_Flowcharts-pretest.route')
 );
 /**app.use('/course-String-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
