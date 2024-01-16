@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/home1.css' />
+    <link rel='stylesheet' href='stylesheets/compiler_line.css' />
+    <link rel='stylesheet' href='stylesheets/Drag_Drop.css' />
+    <link rel="stylesheet" href="stylesheets/quiz.css">
+    
+    <title>Introduction - QUIZ</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+<!-- LEFT -->
+
+<!-- END OF LEFT-->
+    
+    
+ 
+
+<!-- MIDDLE 1 -->
+<div class="content">
+    <div id = "content" class="container">
+<!--   C Language -->
+        <div class="accordion" id="accordionParentSyntax">
+            <!--   Introduce -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h1>Algorithms and Flowcharts</h1>
+                
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><i href="/home" class="fa fa-home" style="font-size:16px"></i></li>
+                    <li class="breadcrumb-item active" aria-current="page">Course</li>
+                </ol> <br>
+
+<%# START %> 
+
+
+<form action="/course-Introduction-quiz/submit" method="post" autocomplete="off" > 
+    <%#  <ul class="draggable-list" id="draggable-list"></ul>
+    <h1 id="choice3"></h1>
+   %>
+
+    <%# LV1 %> 
+                <h3>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</h3>
+                <!-- ข้อ 1 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        1. Algorithm คืออะไร
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice1" id="option1-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-1">
+                        ภาษาที่ใช้ในการเขียนโปรแกรม
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-2">
+                        ขั้นตอนหรือวิธีการเพื่อแก้ปัญหาหรือดำเนินการในรูปแบบที่เข้าใจง่าย
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-3">
+                        หน่วยวัดประสิทธิภาพของโปรแกรม
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-4">
+                        โปรแกรมที่ถูกคอมไพล์แล้วเสร็จสิ้น
+                    </label>
+                </div> <br>
+                <!-- ข้อ 2 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        2. Pseudo code คืออะไร
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice2" id="option2-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-1">
+                        ขั้นตอนและลอจิคของโปรแกรมเขียนอย่างง่าย ๆ ในรูปแบบของภาษาธรรมดา
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-2">
+                        โค้ดที่เขียนลงในกระดาษ
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-3">
+                        ภาษาที่ใช้ในการเขียนโปรแกรมจริง ๆ
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-4">
+                        ภาษาที่ใช้สร้างเว็บไซต์
+                    </label>
+                </div><br>
+                <!-- ข้อ 3 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        3. หลักการในการเขียน Pseudo Code คืออะไร
+
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice3" id="option3-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-1">
+                        ความเข้าใจและความชัดเจนของขั้นตอน
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-2">
+                        การใช้ข้อมูลที่น้อยที่สุด
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-3">
+                        ความเร็วในการทำงาน
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-4">
+                        ความถูกต้องของ Syntax
+                    </label>
+                </div><br>
+                <!-- ข้อ 4 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; "> 
+                        4. Flowchart คืออะไร
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice4" id="option4-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-1">
+                        เครื่องมือในการวัดประสิทธิภาพของโปรแกรม
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-2">
+                        การแสดงผลของโปรแกรมในรูปแบบข้อความ
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-3">
+                        รหัสที่ได้จากการคอมไพล์โปรแกรม
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-4">
+                        การวาดรูปภาพเพื่อแสดงขั้นตอนและลำดับการทำงานของโปรแกรม
+                    </label>
+                </div><br>
+                <!-- ข้อ 5 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        5. Flowchart หลัก ๆ ใช้ในส่วนไหนของการพัฒนาโปรแกรม
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice5" id="option5-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-1">
+                        การออกแบบและการวางแผน
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-2">
+                        การประเมินประสิทธิภาพ
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-3">
+                        การทดสอบและการดีบั๊ก
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-4">
+                        การเขียนโค้ด
+                    </label>
+                </div><br>
+                <br>
+
+    <%# LV2 %>
+                <h3>ข้อที่ 6 - 10: วัดความสามารถด้านการติดตามโค้ด (Tracing)</h3>
+                <!-- ข้อ 6 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        6. Pseudo Code ต่อไปนี้จะพิมพ์อะไรออกมา <br>
+                    <b style="font-weight: lighter;"> &ensp;FOR i FROM 1 TO 3 <br>
+                        &ensp;&ensp;PRINT i <br>
+                        &ensp;END FOR <br> </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice6" id="option6-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-1">
+                        1 2
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-2">
+                        2 3 4
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-3">
+                        0 1 2
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-4">
+                        1 2 3
+                    </label>
+                </div><br>
+                <!-- ข้อ 7 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        7. Pseudo Code ต่อไปนี้จะพิมพ์อะไรออกมา <br>
+                    <b style="font-weight: lighter;"> 
+                        &ensp;x = 10 <br>
+                        &ensp;y = 5 <br>
+                        &ensp;IF x > y <br>
+                        &ensp;&ensp;IF y > 0 <br>
+                        &ensp;&ensp;&ensp;PRINT "A" <br>
+                        &ensp;ELSE <br>
+                        &ensp;&ensp;&ensp;PRINT "B" <br>
+                        &ensp;&ensp;END IF <br>
+                        &ensp;ELSE <br>
+                        &ensp;&ensp;PRINT "C" <br>
+                        &ensp;END IF <br>
+                    </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice7" id="option7-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-1">
+                        A
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-2">
+                        B
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-3">
+                        C
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-4">
+                        Error
+                    </label>
+                </div><br>
+                <!-- ข้อ 8 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        8. Pseudo Code ต่อไปนี้จะคืนค่าเป็นอะไร <br>
+                    <b style="font-weight: lighter;"> 
+                        &ensp;FUNCTION add(a, b) <br>
+                        &ensp;&ensp; RETURN a + b <br>
+                        &ensp;END FUNCTION <br><br>
+                        &ensp;x = add(2, 3) <br>
+                        &ensp;PRINT x </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice8" id="option8-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-1">
+                        2
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-2">
+                        3
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-3">
+                        5
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-4">
+                        6
+                    </label>
+                </div><br>   
+                <!-- ข้อ 9 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        9. Flowchart ต่อไปนี้ เมื่อกำหนดให้ Number เป็น 8 จะแสดงผลเป็นอะไร </p><br>                     
+                    
+                    <iframe src="https://drive.google.com/file/d/1hNwCOdSnuh9lDUy6u7prjM5v39j6IJzb/preview" width="100%" height="480" allow="autoplay"></iframe><br>          
+                    
+                    <input type="radio" class="btn-check" name="choice9" id="option9-1" autocomplete="off" value="A">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-1">
+                        8
+
+                    </label>
+
+                    <input type="radio" class="btn-check" name="choice9" id="option9-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-2">
+                        Odd
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-3">
+                        Even
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-4">
+                        End
+                    </label>
+                </div><br>  
+                <!-- ข้อ 10 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        10. Flowchart ต่อไปนี้ ถ้ากำหนดให้ n = 10 จะแสดงผลเป็นเลขอะไร </p><br>
+                        <iframe src="https://drive.google.com/file/d/1sDwvOeh2a2zUCLtkah4eEy7ur7Ettk-Y/preview" width="100%" height="480" allow="autoplay"></iframe><br>                      
+                    <input type="radio" class="btn-check" name="choice10" id="option10-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-1">
+                        1 2 3 4 5 6 7 8 9 10
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-2">
+                        2 4 6 8 10
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-3">
+                        1 3 5 7 9
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-4">
+                        2 4 6 8 9 10
+                    </label>
+                </div><br>  
+
+    <%# LV3 %>
+                <h2>ข้อที่ 11 - 15: วัดความสามารถด้านการอธิบายโค้ด (Explaining)</h2>
+                <!-- ข้อ 11 -->
+                <div class="list-group">
+                    <p id="choice11question" type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;"></p>
+                    <div class="group2 ">
+                    <iframe src="https://drive.google.com/file/d/1I8Jk1qL0a59E8Ojb_bT0bW--X8Dv57G0/preview" width="400" height="480" allow="autoplay"></iframe>
+                    <ul class="draggable-list" id="draggable-list"></ul>
+                    <input type="hidden" name="choice11" id="choice11result"></div>
+                </div>
+                <br>    
+                <!-- ข้อ 12 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        12. Algorithm ดังต่อไปนี้อธิบายการทำงานของ Flowchart ได้ถูกต้องหรือไม่ </p><br>   
+                        <div class="group">   
+                        <iframe src="https://drive.google.com/file/d/1yiAQ9JNnb-9sqDIXhtn4EP21cM-mFcPm/preview" width="400" height="480" allow="autoplay"></iframe>
+                        <p style="font-size: 20px;">
+                            STEP 1: Start <br> 
+                            STEP 2: Input two numbers in variable a and b <br> 
+                            STEP 3: If (a>b), then print value of a, Otherwise Print value of b <br> 
+                            STEP 4: Stop
+                        </p>
+                        </div> 
+                    
+                </div>
+                    <br>
+
+                    <div class="group2">
+                        <input type="radio" class="btn-check" name="choice12" id="option12-1" autocomplete="off" value="A">
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option12-1">
+                            Yes
+                        </label>
+                        <input type="radio" class="btn-check" name="choice12" id="option12-2" autocomplete="off" value="B">
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option12-2">
+                            No
+                        </label>
+                    </div><br>  
+                <!-- ข้อ 13 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        13. Algorithm ดังต่อไปนี้อธิบายการทำงานของ Flowchart ได้ถูกต้องหรือไม่ </p><br>
+                        <div class="group">   
+                            <iframe src="https://drive.google.com/file/d/1powyVmgMMwji4OUxaiT5cGiYOYqtPhNQ/preview" width="400" height="480" allow="autoplay"></iframe>
+                            <p style="font-size: 20px;">
+                                STEP 1: Start <br> 
+                                STEP 2: Calculate C=((F-32)5)/9 <br> 
+                                STEP 3: Input Fahrenheit temperature in variable <br> 
+                                STEP 4: Print value of C  <br> 
+                                STEP 5: Stop
+                            </p>
+                            </div> <br>
+                            <div class="group2">
+                                <input type="radio" class="btn-check" name="choice13" id="option13-1" autocomplete="off" value="A">
+                                <label class="list-group-item btn-outline-dark list-group-item-action" for="option13-1">
+                                    Yes
+                                </label>
+                                <input type="radio" class="btn-check" name="choice13" id="option13-2" autocomplete="off" value="B">
+                                <label class="list-group-item btn-outline-dark list-group-item-action" for="option13-2">
+                                    No
+                                </label>
+                                </div>
+
+
+                </div><br>
+                <!-- ข้อ 14 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        14. ข้อใดอธิบาย Algorithm การทำงานของ Flowchart ต่อไปนี้ได้ถูกต้อง 
+                        <iframe src="https://drive.google.com/file/d/1qiPiJH-TeKdPDujgx8_MZkjSZfN3Ycdh/preview" width="100%" height="480" allow="autoplay"></iframe>                        <div style="padding: 10px;">
+                            <input type="radio" class="btn-check" name="choice14" id="option14-1" autocomplete="off" value="A">
+                            <label class="btn-outline-dark" for="option14-1">
+                                <img src="https://lh6.googleusercontent.com/_MdznoDzDPReL7YvANIaSV0i8nZ-jbwWXDUDO5Z3lhvGC7zNuRUQm3Oqsu4MQ0ZbaBsizG_H3rH5T-NoKAuexhf18y3jfYh09hgHyuUxSIpRpWqivgNWC4ekfmZKY6KQAQ=w260" alt="">
+                            </label>
+
+                            <input type="radio" class="btn-check" name="choice14" id="option14-2" autocomplete="off" value="B">
+                            <label class="btn-outline-dark" for="option14-2">
+                                <img src="https://lh3.googleusercontent.com/VDFSl_fbdIIwMvOJl7_c9NpCAY4j6maOmVyC2U_mCplN0L2TxiFkudhv_n9-G54cxC6dvpBDViAmrJE29dGtntvQVy-_L7RP2FBLl8xuvMe9gvJ0Is_GbNm3ZOGBlL5OyQ=w260" alt="">
+                            </label>
+
+                            <input type="radio" class="btn-check" name="choice14" id="option14-3" autocomplete="off" value="C">
+                            <label class="btn-outline-dark" for="option14-3">
+                                <img src="https://lh6.googleusercontent.com/MVoXpWMXAbGFahtanlpiTFYvT1axhBjHJEPXCv38Ukj3eZezcfoh0pW2U4UUKWmq0d-hpqbAxCPzL7BIsm-E6rAAK7m2Uis_Xd-aE8vMCplctuui7OI1amiTSMm-7iSlZQ=w260" alt="">
+                            </label>
+
+                            <input type="radio" class="btn-check" name="choice14" id="option14-4" autocomplete="off" value="D">
+                            <label class="btn-outline-dark" for="option14-4">
+                                <img src="https://lh3.googleusercontent.com/_WlQyvO7sORplJHlHbA5I1P9fEcpfFziOtMn0WFKOV4bz2GlNFVXh4ANwFl45WFi1Ezo1apMgMpdKgv5JlHSrwfndDZZ29Dc0pQT6vBdZ_KMFTM9AHCBGVCm3k9yLQYQGw=w260" alt="">
+                            </label>
+                        </div>
+                </div><br> 
+                <!-- ข้อ 15 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        15. STEP ที่ 4 ตรงกับข้อใด</p><br> 
+                        <div class="group">
+                        <iframe src="https://drive.google.com/file/d/1INnlwsHLlwEcN37t-yiymmV-HD684P9K/preview" width="400" height="480" allow="autoplay"></iframe>
+                        <div><input type="radio" class="btn-check" name="choice15" id="option15-1" autocomplete="off" value="A" required>
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option15-1">
+                            If (i ≤ 10), then go to step-4, Otherwise go to step-6
+                        </label>
+                        <input type="radio" class="btn-check" name="choice15" id="option15-2" autocomplete="off" value="B">
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option15-2">
+                            Let i=1
+    
+                        </label>
+                        <input type="radio" class="btn-check" name="choice15" id="option15-3" autocomplete="off" value="C">
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option15-3">
+                            Print value of i
+    
+                        </label>
+                        <input type="radio" class="btn-check" name="choice15" id="option15-4" autocomplete="off" value="C">
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option15-4">
+                            i=i+2 and again go to step-3
+    
+                        </label></div>
+                        </div>
+
+                </div><br>
+                
+               
+                
+                
+
+    <%# LV4 %>                
+                <h2>ข้อที่ 16 - 20: วัดความสามารถด้านการเขียนโปรแกรม (Writing)</h2> 
+                     <br>
+
+                <!-- ข้อ 16 -->
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #363e62;">
+                    16.1 (Deployment) ให้เขียน Algorithm การทำงานของ Flowchart ต่อไปนี้ แบบ Step by Step ให้ถูกต้อง (3 คะแนน) <br>
+                    และเขียนตอบคำถามว่า โปรแกรมนี้คือโปรแกรคำนวณค่าอะไร
+                </p>
+                <div class="group" style="margin: 20px;">
+                    <iframe src="https://drive.google.com/file/d/1MPevV4k9LkzOjqrxAHvA08qs27XNpqxk/preview" width="400" height="480" allow="autoplay"></iframe>
+
+                <div class="form-group">
+                    <div class="group2">
+                        <h3>CODE</h3>
+                        <button type="button" style="color: black;" class="btn1 " data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                        ทดสอบโค้ด
+                        </button>
+                    </div>
+                    <textarea style="height: 400px;" class="form-control" id="lineCounter" readonly rows="10">1 </textarea>
+                    <textarea style="height: 400px;" class="form-control" id="code" name="code" rows="10" required></textarea>
+                </div></div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #363e62;">
+                    16.2 (Result) ผลลัพธ์ของโปรแกรมนี้คืออะไร เมื่อกำหนดให้ base = 8 และ height = 10 (1 คะแนน)</p>
+                    <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="expResult16" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #363e62;">
+                    16.3 (Improvement) ถ้าต้องคำรนวณหาปริมาตรของพีระมิดต้องแก้ไข Algorithms และ Flowcharts อย่างไร (1 คะแนน) <br>
+                    (ใช้ draw.io ในการวาด และเขียนชื่อ นามสกุล รหัสนักศึกษา) ส่งเป็น Link ของ draw.io 
+                    โดยที่หน้าเว็บ draw.io ไปที่เมนู File -> Export -> URL -> Copy Link ส่ง</p>
+                    <div class="group3 bg-dark">
+                        
+                            <b style="color: #ff8821;">Draw.io</b>
+                            <iframe style="width:95%;height:100px;" src="https://viewer.diagrams.net/?tags=%7B%7D&target=frame&highlight=0000ff&edit=_blank&layers=1&nav=1#RddG9DoMgEADgp2FXaKrO1talk0NnIlchQc8gjbZPXw1SS2wXcnx3cPwQlrfTxfBeXlGAJjQSE2EnQmmWHuZxgaeDJIkcNEYJR%2FEGlXrBir7soQQMQaFF1Fb1IdbYdVDbwLgxOIZld9Rh1543sIOq5nqvNyWsdJrSZPMSVCN95%2FiYuUzLffF6k0FygeMXsYKw3CBaF7VTDnp5O%2F8ubt35T%2FZzMAOd%2FbFgDra950nwQax4Aw%3D%3D"></iframe>
+                        
+                        <input class="form-control" name="sendLink16" type="text" placeholder="Link">
+                    </div>
+                <br><br>
+                <!-- ข้อ 17 -->
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #8c521f;">
+                    17.1 (Deployment) ให้วาดรูป Flowchart ของ Algorithm โปรแกรมแปลงอุณหภูมิ Celsius (C) เป็น Fahrenheit (F) ต่อไปนี้ให้ถูกต้อง (3 คะแนน) <br>
+                    (ใช้ draw.io ในการวาด และเขียนชื่อ นามสกุล รหัสนักศึกษา) ส่งเป็น Link ของ draw.io โดยที่หน้าเว็บ draw.io ไปที่เมนู File -> Export -> URL -> Copy Link ส่ง 
+                    <iframe src="https://drive.google.com/file/d/1y_OuR6vmKvC7ucsPYgurPV43a350W4-D/preview" width="100%" height="480" allow="autoplay"></iframe>                
+                </p><br>
+
+                    <div class="group3 bg-dark">
+                        
+                        <b style="color: #ff8821;">Draw.io</b>
+                        <iframe style="width:95%;height:100px;" src="https://viewer.diagrams.net/?tags=%7B%7D&target=frame&highlight=0000ff&edit=_blank&layers=1&nav=1#RddG9DoMgEADgp2FXaKrO1talk0NnIlchQc8gjbZPXw1SS2wXcnx3cPwQlrfTxfBeXlGAJjQSE2EnQmmWHuZxgaeDJIkcNEYJR%2FEGlXrBir7soQQMQaFF1Fb1IdbYdVDbwLgxOIZld9Rh1543sIOq5nqvNyWsdJrSZPMSVCN95%2FiYuUzLffF6k0FygeMXsYKw3CBaF7VTDnp5O%2F8ubt35T%2FZzMAOd%2FbFgDra950nwQax4Aw%3D%3D"></iframe>
+                        
+                        <input class="form-control" name="sendLink171" type="text" placeholder="Link">
+                    </div><br>
+
+                <p type="text"  class="list-group-item list-group-item-action " style="color: white; background-color: #8c521f;">
+                    17.2 (Result) ผลลัพธ์ของโปรแกรมนี้คืออะไร เมื่อกำหนดให้ C เท่ากับ 36 (1 คะแนน)</p>
+                    <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="expResult17" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action " style="color: white; background-color: #8c521f;">
+                    17.3 (Improvement) ถ้าต้องแปลงอุณหภูมิจาก Fahrenheit (F) เป็น Celsius (C) ต้องแก้ไข Flowcharts อย่างไร (1 คะแนน) <br>
+                    (ใช้ draw.io ในการวาด และเขียนชื่อ นามสกุล รหัสนักศึกษา) ส่งเป็น Link ของ draw.io 
+                    โดยที่หน้าเว็บ draw.io ไปที่เมนู File -> Export -> URL -> Copy Link ส่ง</p>
+                    <div class="group3 bg-dark">
+                        
+                        <b style="color: #ff8821;">Draw.io</b>
+                        <iframe style="width:95%;height:100px;" src="https://viewer.diagrams.net/?tags=%7B%7D&target=frame&highlight=0000ff&edit=_blank&layers=1&nav=1#RddG9DoMgEADgp2FXaKrO1talk0NnIlchQc8gjbZPXw1SS2wXcnx3cPwQlrfTxfBeXlGAJjQSE2EnQmmWHuZxgaeDJIkcNEYJR%2FEGlXrBir7soQQMQaFF1Fb1IdbYdVDbwLgxOIZld9Rh1543sIOq5nqvNyWsdJrSZPMSVCN95%2FiYuUzLffF6k0FygeMXsYKw3CBaF7VTDnp5O%2F8ubt35T%2FZzMAOd%2FbFgDra950nwQax4Aw%3D%3D"></iframe>
+                        
+                        <input class="form-control" name="sendLink172" type="text" placeholder="Link">
+                    </div>
+                <br>
+                <!-- ข้อ 18 -->
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #366241;">
+                    18.1 (Deployment) ให้เขียน Flowchart ของโปรแกรมตัดเกรด โดยให้มีการรับค่าของตัวแปร และแสดงค่าของข้อมูลดังนี้ (3 คะแนน) <br>
+                    (ใช้ draw.io ในการวาด และเขียนชื่อ นามสกุล รหัสนักศึกษา) ส่งเป็น Link ของ draw.io โดยที่หน้าเว็บ draw.io ไปที่เมนู File -> Export -> URL -> Copy Link ส่ง 
+                    <iframe src="https://drive.google.com/file/d/1lYWF0-KxUkVRufld0_ECkov6fIpVfPL0/preview" width="100%" height="480" allow="autoplay"></iframe>
+                </p><br>
+                    
+                    <div class="group3 bg-dark">
+                        
+                        <b style="color: #ff8821;">Draw.io</b>
+                        <iframe style="width:95%;height:100px;" src="https://viewer.diagrams.net/?tags=%7B%7D&target=frame&highlight=0000ff&edit=_blank&layers=1&nav=1#RddG9DoMgEADgp2FXaKrO1talk0NnIlchQc8gjbZPXw1SS2wXcnx3cPwQlrfTxfBeXlGAJjQSE2EnQmmWHuZxgaeDJIkcNEYJR%2FEGlXrBir7soQQMQaFF1Fb1IdbYdVDbwLgxOIZld9Rh1543sIOq5nqvNyWsdJrSZPMSVCN95%2FiYuUzLffF6k0FygeMXsYKw3CBaF7VTDnp5O%2F8ubt35T%2FZzMAOd%2FbFgDra950nwQax4Aw%3D%3D"></iframe>
+                        
+                        <input class="form-control" name="sendLink181" type="text" placeholder="Link">
+                    </div><br>
+                    <p type="text"  class="list-group-item list-group-item-action " style="color: white; background-color: #366241;">
+                        18.2 (Result) ผลลัพธ์ของโปรแกรมนี้คืออะไร เมื่อกำหนดให้ คะแนนเท่ากับ 80 (1 คะแนน)</p>
+                        <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="expResult18" required></textarea>
+                    <br>
+                    <p type="text"  class="list-group-item list-group-item-action " style="color: white; background-color: #366241;">
+                        18.3 (Improvement) ถ้าต้องการให้มีการแสดงข้อความแจ้งเตือนว่า "Please Enter 0 - 100: " เมื่อใส่ข้อมูลที่ไม่ใช่ตัวเลข 0 - 100 ต้องแก้ไข Flowcharts อย่างไร (1 คะแนน) <br>
+                        (ใช้ draw.io ในการวาด และเขียนชื่อ นามสกุล รหัสนักศึกษา) ส่งเป็น Link ของ draw.io 
+                        โดยที่หน้าเว็บ draw.io ไปที่เมนู File -> Export -> URL -> Copy Link ส่ง</p>
+                        <div class="group3 bg-dark">
+                            
+                            <b style="color: #ff8821;">Draw.io</b>
+                            <iframe style="width:95%;height:100px;" src="https://viewer.diagrams.net/?tags=%7B%7D&target=frame&highlight=0000ff&edit=_blank&layers=1&nav=1#RddG9DoMgEADgp2FXaKrO1talk0NnIlchQc8gjbZPXw1SS2wXcnx3cPwQlrfTxfBeXlGAJjQSE2EnQmmWHuZxgaeDJIkcNEYJR%2FEGlXrBir7soQQMQaFF1Fb1IdbYdVDbwLgxOIZld9Rh1543sIOq5nqvNyWsdJrSZPMSVCN95%2FiYuUzLffF6k0FygeMXsYKw3CBaF7VTDnp5O%2F8ubt35T%2FZzMAOd%2FbFgDra950nwQax4Aw%3D%3D"></iframe>
+                            
+                            <input class="form-control" name="sendLink182" type="text" placeholder="Link">
+                        </div>
+                    <br>
+                    <!-- ข้อ 19 -->
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #453662;">
+                        19. (Deployment)  ให้เขียน Flowchart ของโปรแกรมแปลงอุณหภูมิ พิมพ์  F คือการแปลง Celcius เป็น Fahrenheit <br>
+                        และพิมพ์ C คือการแปลง Fahrenheit เป็น Celcius โดยรับค่าของตัวแปร ทำการคำนวณ และแสดงค่าของข้อมูลดังนี้ (3 คะแนน) <br>
+                        (ใช้ draw.io ในการวาด และเขียนชื่อ นามสกุล รหัสนักศึกษา) ส่งเป็น Link ของ draw.io โดยที่หน้าเว็บ draw.io ไปที่เมนู File -> Export -> URL -> Copy Link ส่ง 
+                        <iframe src="https://drive.google.com/file/d/1w737Hm85h6icIA0eL-N75Ul4Sca8sQtH/preview" width="100%" height="480" allow="autoplay"></iframe>                
+                    </p><br>
+                    <div class="group3 bg-dark">
+                        
+                        <b style="color: #ff8821;">Draw.io</b>
+                        <iframe style="width:95%;height:100px;" src="https://viewer.diagrams.net/?tags=%7B%7D&target=frame&highlight=0000ff&edit=_blank&layers=1&nav=1#RddG9DoMgEADgp2FXaKrO1talk0NnIlchQc8gjbZPXw1SS2wXcnx3cPwQlrfTxfBeXlGAJjQSE2EnQmmWHuZxgaeDJIkcNEYJR%2FEGlXrBir7soQQMQaFF1Fb1IdbYdVDbwLgxOIZld9Rh1543sIOq5nqvNyWsdJrSZPMSVCN95%2FiYuUzLffF6k0FygeMXsYKw3CBaF7VTDnp5O%2F8ubt35T%2FZzMAOd%2FbFgDra950nwQax4Aw%3D%3D"></iframe>
+                        
+                        <input class="form-control" name="sendLink191" type="text" placeholder="Link">
+                    </div><br>
+                    <p type="text"  class="list-group-item list-group-item-action " style="color: white; background-color: #453662;">
+                        19.2 (Result) ผลลัพธ์ของโปรแกรมนี้คืออะไร เมื่อพิมพ์ C และใส่ค่า C เป็น 36 (1 คะแนน)</p>
+                        <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="expResult19" required></textarea>
+                    <br>
+                    <p type="text"  class="list-group-item list-group-item-action " style="color: white; background-color: #453662;">
+                        19.3 (Improvement) ถ้าต้องการให้เพิ่มเงื่อนไขจากโปรแกรมเดิม โดยให้พิมพ์ K ทำการแปลงอุณภูมิ Celsius เป็น Kelvin ต้องแก้ไข Flowchart อย่างไร <br>
+                        กำหนดให้สูตร Kelvin = Celsius + 273.15 (1 คะแนน) <br>
+                        (ใช้ draw.io ในการวาด และเขียนชื่อ นามสกุล รหัสนักศึกษา) ส่งเป็น Link ของ draw.io 
+                        โดยที่หน้าเว็บ draw.io ไปที่เมนู File -> Export -> URL -> Copy Link ส่ง</p>
+                        <div class="group3 bg-dark">
+                            
+                            <b style="color: #ff8821;">Draw.io</b>
+                            <iframe style="width:95%;height:100px;" src="https://viewer.diagrams.net/?tags=%7B%7D&target=frame&highlight=0000ff&edit=_blank&layers=1&nav=1#RddG9DoMgEADgp2FXaKrO1talk0NnIlchQc8gjbZPXw1SS2wXcnx3cPwQlrfTxfBeXlGAJjQSE2EnQmmWHuZxgaeDJIkcNEYJR%2FEGlXrBir7soQQMQaFF1Fb1IdbYdVDbwLgxOIZld9Rh1543sIOq5nqvNyWsdJrSZPMSVCN95%2FiYuUzLffF6k0FygeMXsYKw3CBaF7VTDnp5O%2F8ubt35T%2FZzMAOd%2FbFgDra950nwQax4Aw%3D%3D"></iframe>
+                            
+                            <input class="form-control" name="sendLink192" type="text" placeholder="Link">
+                        </div>
+                    <br>
+                    <!-- ข้อ 20 -->
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #687521;">
+                        20.1 (Deployment) ให้เขียน Flowchart โปรแกรมคำนวณดอกเบี้ยเงินฝากธนาคารจากโจทย์ที่กำหนดให้ (3 คะแนน) <br>
+                        (ใช้ draw.io ในการวาด และเขียนชื่อ นามสกุล รหัสนักศึกษา) ส่งเป็น Link ของ draw.io โดยที่หน้าเว็บ draw.io ไปที่เมนู File -> Export -> URL -> Copy Link ส่ง 
+                        <iframe src="https://drive.google.com/file/d/163DxCROxDpO2yF6jer4NJRhdMo1uS1VR/preview" width="100%" height="480" allow="autoplay"></iframe>                    </p><br>  
+
+                        <div class="group3 bg-dark">
+                        <b style="color: #ff8821;">Draw.io</b>
+                        <iframe style="width:95%;height:100px;" src="https://viewer.diagrams.net/?tags=%7B%7D&target=frame&highlight=0000ff&edit=_blank&layers=1&nav=1#RddG9DoMgEADgp2FXaKrO1talk0NnIlchQc8gjbZPXw1SS2wXcnx3cPwQlrfTxfBeXlGAJjQSE2EnQmmWHuZxgaeDJIkcNEYJR%2FEGlXrBir7soQQMQaFF1Fb1IdbYdVDbwLgxOIZld9Rh1543sIOq5nqvNyWsdJrSZPMSVCN95%2FiYuUzLffF6k0FygeMXsYKw3CBaF7VTDnp5O%2F8ubt35T%2FZzMAOd%2FbFgDra950nwQax4Aw%3D%3D"></iframe>
+                        
+                        <input class="form-control" name="sendLink201" type="text" placeholder="Link">
+                    </div><br>
+                    <p type="text"  class="list-group-item list-group-item-action " style="color: white; background-color: #687521;">
+                        20.2 (Result) ถ้ากำหนดให้ฝากเงินเริ่มต้นที่ 20,000 บาท เมื่อครบ 3 เดือน จะได้ดอกเบี้ยหลังหักภาษีเท่าไร (1 คะแนน)</p>
+                        <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="expResult20" required></textarea>
+                    <br>
+                    <p type="text"  class="list-group-item list-group-item-action " style="color: white; background-color: #687521;">
+                        20.3 (Improvement) ถ้าต้องการให้คิดดอกเบี้ยเงินฝากประจำเป็น 6 เดือน จะแก้ไข Flowchart อย่างไร (1 คะแนน)<br>
+                        (ใช้ draw.io ในการวาด และเขียนชื่อ นามสกุล รหัสนักศึกษา) ส่งเป็น Link ของ draw.io 
+                        โดยที่หน้าเว็บ draw.io ไปที่เมนู File -> Export -> URL -> Copy Link ส่ง</p>
+                        <div class="group3 bg-dark">
+                            
+                            <b style="color: #ff8821;">Draw.io</b>
+                            <iframe style="width:95%;height:100px;" src="https://viewer.diagrams.net/?tags=%7B%7D&target=frame&highlight=0000ff&edit=_blank&layers=1&nav=1#RddG9DoMgEADgp2FXaKrO1talk0NnIlchQc8gjbZPXw1SS2wXcnx3cPwQlrfTxfBeXlGAJjQSE2EnQmmWHuZxgaeDJIkcNEYJR%2FEGlXrBir7soQQMQaFF1Fb1IdbYdVDbwLgxOIZld9Rh1543sIOq5nqvNyWsdJrSZPMSVCN95%2FiYuUzLffF6k0FygeMXsYKw3CBaF7VTDnp5O%2F8ubt35T%2FZzMAOd%2FbFgDra950nwQax4Aw%3D%3D"></iframe>
+                            
+                            <input class="form-control" name="sendLink202" type="text" placeholder="Link">
+                        </div>
+                    <br>
+
+
+               
+
+                Language : <select name="lang"><option value="C">C</option></select>
+                <br />
+                <br>
+                
+
+
+
+
+
+
+
+
+    <%# SUBMIT %> 
+            <!-- Button trigger modal -->
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
+                    ส่งคำตอบ
+                </button>
+            </div>
+            
+            <!-- Modal Submit -->        
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">ส่งคำตอบ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        คุณต้องการส่งคำตอบใช่หรือไม่ ?
+                        <div id="emailHelp" class="form-text">หากยังทำโจทย์ไม่ครบ จะไม่สามารถกดส่งได้ </div>
+                        </div>
+                        
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">ไม่</button>
+                        <button type="submit" class="btn btn-dark" value="Submits" id="check" name="check">ใช่</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <br>
+
+            <!-- Modal CODE -->        
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Online compiler</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="500px"></iframe>
+                    </div>   
+          
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-lg btn-block" data-bs-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <br>
+</form> 
+
+
+
+
+<%# END %> 
+
+        <br></div>
+        </div>
+    </div>
+</div>
+
+<script src="javascripts/lv3/1_Introduction.js"></script>
+<script src="javascripts/compilerStyle.js"></script>
+
+
+
