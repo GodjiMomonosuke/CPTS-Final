@@ -36,21 +36,17 @@
     </style>
 
     <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/home1.css' />
     <link rel='stylesheet' href='stylesheets/compiler_line.css' />
     <link rel='stylesheet' href='stylesheets/Drag_Drop.css' />
-    <title>String - QUIZ</title>
+    <link rel="stylesheet" href="stylesheets/quiz.css">
+    <title>Datatype and Variable - QUIZ</title>
 </head>
 
 <body>
     <!-- Narbar-->
     <%- include('../layouts/navbar') %>
     <!-- end of Narbar-->
-<!-- LEFT -->
-<%- include('../layouts/course-list') %>
-<!-- END OF LEFT-->
-    
-    
- 
 
 <!-- MIDDLE 1 -->
 <div class="content">
@@ -59,7 +55,7 @@
         <div class="accordion" id="accordionParentSyntax">
             <!--   Introduce -->
             <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
-                <h1>String - QUIZ</h1>
+                <h1>Datatype and Variable (Quiz)</h1>
                 
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><i href="/home" class="fa fa-home" style="font-size:16px"></i></li>
@@ -71,68 +67,462 @@
 
     
 
-    <%# LV1 %> 
-                <h2><u>คำถามที่ : 1</u></h2>
-                <img width="500" height="600" src="https://drive.google.com/uc?id=1HjCnpnrPJT5LXO0ADNCw-1pXREeSl5E0" class="img-thumbnail rounded" >
+    <%# LV1 %> <br>
+                <h3>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</h3>
+                <!-- ข้อ 1 -->
                 <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        จากรูปต้องใส่ค่าใน [  ] เท่าไร
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        1. ข้อใดต่อไปนี้เป็นตัวอย่างของประเภทข้อมูล int ในภาษา C
                     </p>
                     
                     <input type="radio" class="btn-check" name="choice1" id="option1-1" autocomplete="off" value="A" required>
                     <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-1">
-                        ก. 8
+                        3.14
                     </label>
                     <input type="radio" class="btn-check" name="choice1" id="option1-2" autocomplete="off" value="B">
                     <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-2">
-                        ข. 11
+                        "Hello"
                     </label>
                     <input type="radio" class="btn-check" name="choice1" id="option1-3" autocomplete="off" value="C">
                     <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-3">
-                        ค. 15
+                        42 *
                     </label>
                     <input type="radio" class="btn-check" name="choice1" id="option1-4" autocomplete="off" value="D">
                     <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-4">
-                        ง. 19
+                        2.71828
                     </label>
-                </div>
-                <br>
-    <%# LV2 %>                     
-                <h2><u>คำถามที่ : 2</u></h2>
-                <img width="500" height="600" src="https://drive.google.com/uc?id=1R6unmdxP4uBFWaKNI3j6paRoc5ZHz4eV" class="img-thumbnail rounded" >
+                </div> <br>
+                <!-- ข้อ 2 -->
                 <div class="list-group">
-                    <h7>Output :</h7>
-                    <img width="150" height="160" src="https://drive.google.com/uc?id=1evDUHnjmiqTBMs-HCdzMJxzTczp9daje" class="img-thumbnail rounded" >
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        จากรูปคำสั่งบรรทัดใดทำให้ค่า output ต่างกัน
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        2. ในภาษา C ประเภทข้อมูล float ใช้สำหรับเก็บข้อมูลที่เป็นอะไร
                     </p>
                     
-                    <input type="radio" class="btn-check" name="choice2" id="option2-1" autocomplete="off" value="A" required="required">
+                    <input type="radio" class="btn-check" name="choice2" id="option2-1" autocomplete="off" value="A" required>
                     <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-1">
-                        ก. 5
+                        ตัวเลขจำนวนเต็ม
                     </label>
                     <input type="radio" class="btn-check" name="choice2" id="option2-2" autocomplete="off" value="B">
                     <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-2">
-                        ข. 6
+                        ตัวอักษร
                     </label>
                     <input type="radio" class="btn-check" name="choice2" id="option2-3" autocomplete="off" value="C">
                     <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-3">
-                        ค. 7
+                        ตัวเลขทศนิยม *
                     </label>
                     <input type="radio" class="btn-check" name="choice2" id="option2-4" autocomplete="off" value="D">
                     <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-4">
-                        ง. 8
+                        ค่าความจริง (Boolean)
                     </label>
-                </div>
-                <br>
-                <%# LV3 %>
-                <h2><u>คำถามที่ : 3</u></h2>
+                </div><br>
+                <!-- ข้อ 3 -->
                 <div class="list-group">
-                    <p id="choice3question" type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;"></p>
-                    <ul class="draggable-list" id="draggable-list"></ul>
-                    <input type="hidden" name="choice3" id="choice3result">
-                </div>
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        3. ในภาษา C การประกาศตัวแปร int x; หมายความว่าอะไร
+
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice3" id="option3-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-1">
+                        ตัวแปร x เป็นชนิดข้อมูล int *
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-2">
+                        ตัวแปร x มีค่าเริ่มต้นเป็น 0
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-3">
+                        ตัวแปร x ไม่สามารถเปลี่ยนค่าได้
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-4">
+                        ตัวแปร x ไม่ถูกประกาศ
+                    </label>
+                </div><br>
+                <!-- ข้อ 4 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; "> 
+                        4. ข้อใดต่อไปนี้เป็นตัวอย่างของการกำหนดค่าคงที่ (constant) ในภาษา C ได้ถูกต้อง
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice4" id="option4-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-1">
+                        #define PI 3.14; หรือ const float pi = 3.14;
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-2">
+                        count = 10; หรือ constant count = 10;
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-3">
+                        #define MAX_VALUE 100 หรือ const int max_value = 100; *
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-4">
+                        #define TOTAL 10 หรือ constant total = 10;
+                    </label>
+                </div><br>
+                <!-- ข้อ 5 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        5. ข้อใดกล่าวถูกต้องเกี่ยวกับ Global Variable และ Local Variable
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice5" id="option5-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-1">
+                        Global Variable เป็นตัวแปรที่ประกาศอยู่นอกฟังก์ชันและมีขอบเขตการทำงานทั้งโปรแกรม 
+                        และ Local Variable เป็นตัวแปรที่ทำงานอยู่ในฟังก์ชันที่ถูกประกาศเท่านั้น *
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-2">
+                        Global Variable  เป็นตัวแปรที่ทำงานอยู่ในฟังก์ชันที่ถูกประกาศเท่านั้น 
+                        และ Local Variable เป็นตัวแปรที่ประกาศอยู่นอกฟังก์ชันและมีขอบเขตการทำงานทั้งโปรแกรม
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-3">
+                        Global Variable เป็นตัวแปรที่มีขอบเขตในฟังก์ชัน main() เท่านั้น 
+                        และ Local Variable เป็นตัวแปรที่มีขอบเขตการทำงานทั้งโปรแกรม
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-4">
+                        Global Variable เป็นตัวแปรที่ประกาศอยู่นอกฟังก์ชันและมีขอบเขตการทำงานทั้งโปรแกรม 
+                        และ Local Variable เป็นตัวแปรที่มีขอบเขตการทำงานทั้งโปรแกรม
+                    </label>
+                </div><br>
                 <br>
+    <%# LV2 %>                     
+                <h3>ข้อที่ 6 - 10: วัดความสามารถด้านการติดตามโค้ด (Tracing)</h3>
+                <!-- ข้อ 6 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        6. โปรแกรมนี้จะแสดงผลลัพธ์อะไร <br>
+                    <b style="font-weight: lighter;"> 
+                        &ensp;#include < stdio.h> <br>
+                        &ensp;int main() <br>
+                        &ensp;{ <br>
+                        &ensp;&ensp;int a = 5; <br>
+                        &ensp;&ensp;int b = 10; <br>
+                        &ensp;&ensp;printf("%d", a = b); <br>
+                        &ensp;&ensp;return 0; <br>
+                        &ensp;} <br> </b> 
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice6" id="option6-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-1">
+                        5
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-2">
+                        10 *
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-3">
+                        15
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-4">
+                        20
+                    </label>
+                </div><br>
+                <!-- ข้อ 7 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        7. โปรแกรมนี้จะแสดงผลลัพธ์ค่า x และ y เป็นตัวเลขอะไร <br>
+                    <b style="font-weight: lighter;"> 
+                        &ensp;#include < stdio.h> <br>
+                        &ensp;int main() <br>
+                        &ensp;{ <br>
+                        &ensp;&ensp;int x = 5; <br>
+                        &ensp;&ensp;int y = 10; <br>
+                        &ensp;&ensp;x = y; <br>
+                        &ensp;&ensp;y = x; <br>
+                        &ensp;&ensp;printf("%d\n", x); <br>
+                        &ensp;&ensp;printf("%d", y); <br>
+                        &ensp;&ensp;return 0; <br>
+                        &ensp;} <br>      
+                    </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice7" id="option7-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-1">
+                        x = 5, y = 10
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-2">
+                        x = 10, y = 10 *
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-3">
+                        x = 10, y = 5
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-4">
+                        x = 5, y = 5
+                    </label>
+                </div><br>
+                <!-- ข้อ 8 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        8. โปรแกรมนี้จะแสดงผลลัพธ์อะไร <br>
+                    <b style="font-weight: lighter;"> 
+                        &ensp;#include < stdio.h> <br>
+                        &ensp;#define MAX_VALUE 100 <br>
+                        &ensp;int main()  <br>
+                        &ensp;{ <br>
+                        &ensp;&ensp;const int x = 10; <br>
+                        &ensp;&ensp;const float y = 3.14; <br>
+                        &ensp;&ensp;const char z = 'A'; <br>
+                        &ensp;&ensp;printf("%d, ", MAX_VALUE); <br>
+                        &ensp;&ensp;printf("%d, ", x); <br>
+                        &ensp;&ensp;printf("%.2f, ", y); <br>
+                        &ensp;&ensp;printf("%c, ", z); <br>
+                        &ensp;&ensp;return 0; <br>
+                        &ensp;}</b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice8" id="option8-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-1">
+                        100, 10, 3.14, A * 
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-2">
+                        100, 10, 3.140000, A
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-3">
+                        10, 3.14, A, 100
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-4">
+                        3.14, 10, 100, A
+                    </label>
+                </div><br> 
+                <!-- ข้อ 9 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">   
+                    9. โปรแกรมนี้จะแสดงผลลัพธ์อะไร <br>
+                    <b style="font-weight: lighter;"> 
+                        &ensp;#include < stdio.h> <br>
+                        &ensp;#define MAX_VALUE 100 <br>
+                        &ensp;int main() <br>
+                        &ensp;{ <br>
+                        &ensp;&ensp;const int x = 10; <br>
+                        &ensp;&ensp;const float y = 3.14; <br>
+                        &ensp;&ensp;const char z = 'A'; <br><br>
+                        &ensp;&ensp;MAX_VALUE = 200; <br>
+                        &ensp;&ensp;int z = 'B'; <br><br>
+                        &ensp;&ensp;printf("%d, ", MAX_VALUE); <br>
+                        &ensp;&ensp;printf("%d, ", x); <br>
+                        &ensp;&ensp;printf("%.2f, ", y); <br>
+                        &ensp;&ensp;printf("%c ", z); <br>
+                        &ensp;&ensp;return 0; <br>
+                        &ensp;} <br></b>
+                    </p>                   
+                                        
+                    <input type="radio" class="btn-check" name="choice9" id="option9-1" autocomplete="off" value="A">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-1">
+                        200, 10, 3.14, B
+
+                    </label>
+
+                    <input type="radio" class="btn-check" name="choice9" id="option9-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-2">
+                        100, 10, 3.14, A
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-3">
+                        200, 10, 3.140000, B
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-4">
+                        Error *
+                    </label>
+                </div><br>  
+                <!-- ข้อ 10 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        10. โปรแกรมนี้จะแสดงผลลัพธ์อะไร <br>
+                        <b style="font-weight: lighter;"> 
+                            &ensp;#include < stdio.h> <br>
+                            &ensp;int a = 10; <br>
+                            &ensp;int b = 20; <br><br>
+                            &ensp;int main() <br>
+                            &ensp;{ <br>
+                            &ensp;&ensp;int c = 30; <br>
+                            &ensp;&ensp;int d = 40; <br>
+                            &ensp;&ensp;int e = c + d; <br>
+                            &ensp;&ensp;int f = a + b; <br><br>
+                            &ensp;&ensp;printf("Local Variable: %d, ", e); <br>
+                            &ensp;&ensp;printf("Global Variable: %d", f); <br>
+                            &ensp;&ensp;return 0; <br>
+                            &ensp;} <br>
+                        </b></p>
+                    
+                            <input type="radio" class="btn-check" name="choice10" id="option10-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-1">
+                        Local Variable: 30, Global Variable: 40
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-2">
+                        Local Variable: 30, Global Variable: 70
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-3">
+                        Local Variable: 70, Global Variable: 30 *
+
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-4">
+                        Local Variable: 60, Global Variable: 40
+                    </label>
+                </div><br>  
+        <%# LV3 %>
+                <h2>ข้อที่ 11 - 15: วัดความสามารถด้านการอธิบายโค้ด (Explaining)</h2>
+                <!-- ข้อ 11 -->
+                <div class="list-group">
+                    <p id="choice11question" type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;"></p>
+                    <div class="group2 ">
+                        <iframe src="https://drive.google.com/file/d/16qnH4P0U0JKZyQGzJp8q63TCV2uOprD9/preview" width="400" height="480" allow="autoplay"></iframe>
+                    <ul class="draggable-list" id="draggable-list"></ul>
+                    <input type="hidden" name="choice11" id="choice11result"></div>
+                </div>
+                <br>   
+                <!-- ข้อ 12 ** -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        12. การทำงนต่อไปนี้ อธิบายการทำงานของโค้ดได้ถูกต้องหรือไม่</p><br>   
+                        <div class="group">   
+                        <iframe src="https://drive.google.com/file/d/1yiAQ9JNnb-9sqDIXhtn4EP21cM-mFcPm/preview" width="400" height="480" allow="autoplay"></iframe>
+                        <p style="font-size: 20px;">
+                            STEP 1: Start <br>  
+                            STEP 2: เรียกใช้ Library ชื่อ stdio.h <br>  
+                            STEP 3: กำหนดตัวแปร a เป็นค่าเริ่มต้น 5 และ b เป็นค่าเริ่มต้น 10 เป็นชนิดจำนวนเต็ม <br>  
+                            STEP 4: ใช้คำสั่ง printf เพื่อแสดงค่าของตัวแปร b ผ่าน %d ที่ทำการประมวลผล a = b <br>  
+                            STEP 5: แสดงผลเป็น 10 ออกทางหน้าจอ <br>  
+                            STEP 6: End
+                        </p>
+                        </div> 
+                    
+                </div>
+                    <br>
+
+                    <div class="group2">
+                        <input type="radio" class="btn-check" name="choice12" id="option12-1" autocomplete="off" value="A">
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option12-1">
+                            Yes
+                        </label>
+                        <input type="radio" class="btn-check" name="choice12" id="option12-2" autocomplete="off" value="B">
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option12-2">
+                            No *
+                        </label>
+                    </div><br>   
+                <!-- ข้อ 13 ** -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        13. การทำงนต่อไปนี้ อธิบายการทำงานของโค้ดได้ถูกต้องหรือไม่ </p><br>
+                        <div class="group">   
+                            <iframe src="https://drive.google.com/file/d/1powyVmgMMwji4OUxaiT5cGiYOYqtPhNQ/preview" width="400" height="480" allow="autoplay"></iframe>
+                            <p style="font-size: 20px;">
+                                STEP 1: Start <br> 
+                                STEP 2: เรียกใช้ Library ชื่อ stdio.h  <br> 
+                                STEP 3: กำหนดค่าคงที่ชื่อ MAX_VALUE มีค่า 100  <br> 
+                                STEP 4: กำหนดตัวแปรค่าคงที่ x เป็น 10 (เป็นชนิดจำนวนเต็ม), y เป็น 3.14 (เป็นทศนิยม), z เป็น A (เป็นตัวอักขระ)   <br> 
+                                STEP 5: ใช้คำสั่ง printf แสดงค่าคงที่ของ MAX_VALUE ผ่าน %d, ตัวแปรคงที่ x ผ่าน %d, ตัวแปรคงที่ y ผ่าน %f เป็นทศนิยม 2 ตำแหน่ง และตัวแปรคงที่ z ผ่าน %c <br>
+                                STEP 6: แสดงผลลัพธ์เป็น 100, 10, 3.14, A ออกทางหน้าจอ <br>
+                                STEP 7: End
+                            </p>
+                            </div> <br>
+                            <div class="group2">
+                                <input type="radio" class="btn-check" name="choice13" id="option13-1" autocomplete="off" value="A">
+                                <label class="list-group-item btn-outline-dark list-group-item-action" for="option13-1">
+                                    Yes *
+                                </label>
+                                <input type="radio" class="btn-check" name="choice13" id="option13-2" autocomplete="off" value="B">
+                                <label class="list-group-item btn-outline-dark list-group-item-action" for="option13-2">
+                                    No
+                                </label>
+                                </div>
+
+
+                </div><br>
+                <!-- ข้อ 14 ** -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        14. ข้อใดตอบได้ถูกต้องที่สุด
+                        <iframe src="https://drive.google.com/file/d/1qiPiJH-TeKdPDujgx8_MZkjSZfN3Ycdh/preview" width="100%" height="480" allow="autoplay"></iframe>                        <div style="padding: 10px;">
+                            <input type="radio" class="btn-check" name="choice14" id="option14-1" autocomplete="off" value="A">
+                            <label class="list-group-item btn-outline-dark list-group-item-action" style="padding: 5px;" for="option14-1">
+                                โปรแกรมนี้ได้มีการประกาศค่าคงที่คือ MAX_VALUE เท่ากับ 100 และตัวแปรคงที่คือ x, y, z <br> 
+                                หลังจากนั้นมีการแก้ไขค่า MAX_VALUE เป็น 200, z เป็น B <br> 
+                                ผลลัพธ์จะได้เป็น 200, 10, 3.14, B
+                            </label>
+
+                            <input type="radio" class="btn-check" name="choice14" id="option14-2" autocomplete="off" value="B">
+                            <label class="list-group-item btn-outline-dark list-group-item-action" style="padding: 5px;" for="option14-2">
+                                โปรแกรมนี้ได้มีการประกาศค่าคงที่คือ MAX_VALUE เท่ากับ 100 และตัวแปรคงที่คือ x, y, z <br> 
+                                หลังจากนั้นมีการแก้ไขค่า MAX_VALUE เป็น 200, z เป็น B <br> 
+                                ผลลัพธ์จะได้เป็น 100, 10, 3.14, A
+                            </label>
+
+                            <input type="radio" class="btn-check" name="choice14" id="option14-3" autocomplete="off" value="C">
+                            <label class="list-group-item btn-outline-dark list-group-item-action" style="padding: 5px;" for="option14-3">
+                                โปรแกรมนี้ได้มีการประกาศค่าคงที่คือ MAX_VALUE เท่ากับ 100 และตัวแปรคงที่คือ x, y, z <br> 
+                                หลังจากนั้นมีการแก้ไขค่า MAX_VALUE เป็น 200, z เป็น B <br> 
+                                ผลลัพธ์ Error <br> 
+                                ต้องทำการแก้ไขโดยต้องเปลี่ยน #define MAX_VALUE 100 เป็น 200 และตรง const char z  = 'A' เป็น 'B' <br> 
+                                ถึงจะได้ผลลัพธ์เป็น 200, 10, 3.14, B
+                            </label>
+
+                            <input type="radio" class="btn-check" name="choice14" id="option14-4" autocomplete="off" value="D">
+                            <label class="list-group-item btn-outline-dark list-group-item-action" style="padding: 5px;" for="option14-4">
+                                โปรแกรมนี้ได้มีการประกาศค่าคงที่คือ MAX_VALUE เท่ากับ 100 และตัวแปรคงที่คือ x, y, z <br> 
+                                หลังจากนั้นมีการแก้ไขค่า MAX_VALUE เป็น 200, z เป็น B <br> 
+                                ผลลัพธ์ Error <br> 
+                                ต้องทำการแก้ไขโดยต้องเปลี่ยน #define MAX_VALUE 100 เป็น 200 และตรง const char z  = 'A' เป็น 'B' <br> 
+                                เมื่อแก้แล้วให้ลบบรรทัดของ MAX_VALUE = 200 และ int z = 'B' ออกก่อน <br> 
+                                ถึงจะได้ผลลัพธ์เป็น 200, 10, 3.14, B
+                            </label>
+                        </div>
+                </div><br> 
+                <!-- ข้อ 15 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        15. ข้อใดตอบได้ถูกต้องที่สุด</p><br> 
+                        <div class="group">
+                        <iframe src="https://drive.google.com/file/d/1INnlwsHLlwEcN37t-yiymmV-HD684P9K/preview" width="400" height="480" allow="autoplay"></iframe>
+                        <div><input type="radio" class="btn-check" name="choice15" id="option15-1" autocomplete="off" value="A" required>
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option15-1">
+                            ตัวแปร a, b ประกาศครั้งเดียวสามารถใช้ได้ทั้งโปรแกรม ส่วนตัวแปร c, <br>
+                            d ต้องใช้ภายในฟังก์ชัน main() เท่านั้น ถึงจะทำงานได้ และได้ผลลัพธ์ผ่านตัวแปร e เป็น 30 และตัวแปร f เป็น 70
+                        </label>
+                        <input type="radio" class="btn-check" name="choice15" id="option15-2" autocomplete="off" value="B">
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option15-2">
+                            ตัวแปร c, d ประกาศครั้งเดียวสามารถใช้ได้ทั้งโปรแกรม ส่วนตัวแปร a, b ต้องใช้ภายในฟังก์ชัน main() เท่านั้น <br>
+                            ถึงจะทำงานได้ และได้ผลลัพธ์ผ่านตัวแปร e เป็น 70 และตัวแปร f เป็น 30
+    
+                        </label>
+                        <input type="radio" class="btn-check" name="choice15" id="option15-3" autocomplete="off" value="C">
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option15-3">
+                            ตัวแปร c, d ประกาศครั้งเดียวสามารถใช้ได้ทั้งโปรแกรม ส่วนตัวแปร a, b ต้องใช้ภายในฟังก์ชัน main() เท่านั้น <br>
+                            ถึงจะทำงานได้ และได้ผลลัพธ์ผ่านตัวแปร e เป็น 30 และตัวแปร f เป็น 70
+    
+                        </label>
+                        <input type="radio" class="btn-check" name="choice15" id="option15-4" autocomplete="off" value="C">
+                        <label class="list-group-item btn-outline-dark list-group-item-action" for="option15-4">
+                            ตัวแปร a, b ประกาศครั้งเดียวสามารถใช้ได้ทั้งโปรแกรม ส่วนตัวแปร c, d ต้องใช้ภายในฟังก์ชัน main() เท่านั้น <br>
+                            ถึงจะทำงานได้ และได้ผลลัพธ์ผ่านตัวแปร e เป็น 70 และตัวแปร f เป็น 30
+    
+                        </label></div>
+                        </div>
+
+                </div><br>
         <%# LV4 %>                
                 <h2><u>คำถามที่ : 4</u> <button type="button" style="color: black;" class="btn btn-outline-danger " data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
                     ทดสอบโค้ด

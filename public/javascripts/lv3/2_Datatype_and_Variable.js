@@ -3,19 +3,19 @@ const check = document.getElementById("check");
 //**  */
 var data =  
   {
-  "question":"เรียงลำดับของโปรแกรมให้ถูกต้อง (โปรแกรมรับค่าชื่อ)",
-  "opt":['#include＜stdio.h＞',
-          "int main(){<br>&nbsp  char name[15];",
-          'printf("Enter your name: ");',
-          'scanf("%s", name);',
-          'printf("Hi %s.〵n", name);',
-          'return 0; }'
+  "question":"11. ข้อใดอธิบายการทำงานของ Source Code นี้ได้ถูกต้อง",
+  "opt":[ 'Start',
+          'เรียกใช้ Library ชื่อ stdio.h',
+          'กำหนดตัวแปร letter เป็นชนิด char และกำหนดค่าเริ่มต้นให้เป็น A',
+          'ใช้คำสั่ง printf เพื่อแสดงค่าของตัวแปร letter ผ่าน %c',
+          'แสดงผลเป็น A ออกทางหน้าจอ',
+          'End'
         ],
   "pic" :"https://i.redd.it/mwljue1r4sk11.jpg"
   }
 
 //**  */
-document.getElementById("choice3question").innerHTML = data.question;
+document.getElementById("choice11question").innerHTML = data.question;
 const richestPeople = data.opt;
 
 
