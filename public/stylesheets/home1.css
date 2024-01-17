@@ -12,6 +12,7 @@ main {
     display: grid;
     grid-template: 180px / auto auto auto auto;
     background-color: #E2D9E5;
+    margin-top: 20px;
     margin-left: 10%;
     margin-right: 10%;
     height: 100%;
