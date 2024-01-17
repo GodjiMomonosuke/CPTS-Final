@@ -34,6 +34,7 @@ router.get('/', async (req, res, next) => {
 /** teacher send student score */
 router.post('/submit', async (req, res, next) => {
     const person = req.user;
+    
     var score = req.body.studentScore;
     var idStudent = req.body.idStudent;
     
