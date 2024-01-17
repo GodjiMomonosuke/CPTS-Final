@@ -112,10 +112,10 @@ app.use('/course-Algorithms_and_Flowcharts',
   ensureStudent,
   require('./routes/student/course/1_Algorithms_and_Flowcharts-course.route')
 );
-app.use('/course-String',
+app.use('/course-Datatype_and_Variable',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/2_String-course.route')
+  require('./routes/student/course/2_Datatype_and_Variable-course.route')
 );
 app.use('/course-Datatype',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -168,10 +168,10 @@ app.use('/course-Algorithms_and_Flowcharts-quiz',
   ensureStudent,
   require('./routes/student/quiz/1_Algorithms_and_Flowcharts-quiz.route')
 );
-app.use('/course-String-quiz',
+app.use('/course-Datatype_and_Variable-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/quiz/2_String-quiz.route')
+  require('./routes/student/quiz/2_Datatype_and_Variable-quiz.route')
 );
 app.use('/course-Datatype-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
