@@ -5,13 +5,10 @@ compiler.init(options);
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://admin:1234@cluster0.ormtjkb.mongodb.net";
 const mydatabase = "Cluster0";
-
-/**โจทย์ข้อที่ 4 (ข้อที่ต้องเขียนโค้ด)*/
+/*
 var ADRI = "https://drive.google.com/file/d/1wQOAcBxYwUJix_06JzJJ48aqGBKDN7WF/preview" 
 var ADRI_Expect = "เขียนโปรแกรม C เพื่อพิมพ์ 'A-Z' ตัวใหญ่ โดยเลือก 1 ตัวอักษร (ยกเว้นตัว C)" 
-var ADRI_Answer = "https://drive.google.com/file/d/1GfNE8Tlxo7FVYWdglVp-uikdJzchQSUj/preview"
- 
-
+var ADRI_Answer = "https://drive.google.com/file/d/1GfNE8Tlxo7FVYWdglVp-uikdJzchQSUj/preview"*/
 
 router.get('/', async (req, res, next) => { //ย่อโค้ดนี้ลงเลย
   const person = req.user;
@@ -63,8 +60,6 @@ router.post('/submit', async (req, res, next) => {
   const choice14  = req.body.choice14
   const choice15  = req.body.choice15
   
-
-  
   var code = req.body.code;
   var lang = req.body.lang;
   var expResult16 = req.body.expResult16
@@ -81,14 +76,6 @@ router.post('/submit', async (req, res, next) => {
   var sendLink192 = req.body.sendLink192
   var sendLink201 = req.body.sendLink201
   var sendLink202 = req.body.sendLink202
-  
-
-
-  var ImproveResult = ADRI_Expect
-  var Improvevariable = req.body.Improvevariable
-
-
-
 
   var score1 = 0;
   var score2 = 0;
@@ -108,7 +95,7 @@ router.post('/submit', async (req, res, next) => {
   
 
 
-  var currentQuiz = "Introduction-Quiz"
+  var currentQuiz = "Algorithms and Flowcharts-Postest"
   var timetodo = 0;
 
   
@@ -212,8 +199,6 @@ router.post('/submit', async (req, res, next) => {
                 sendLink192:sendLink192,
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
-                ImproveResult:ImproveResult,
-                Improvevariable:Improvevariable,
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };
