@@ -63,8 +63,6 @@ router.post('/submit', async (req, res, next) => {
   const choice14  = req.body.choice14
   const choice15  = req.body.choice15
   
-
-  
   var code = req.body.code;
   var lang = req.body.lang;
   var expResult16 = req.body.expResult16
@@ -85,9 +83,6 @@ router.post('/submit', async (req, res, next) => {
   var ImproveResult = ADRI_Expect
   var Improvevariable = req.body.Improvevariable
 
-
-
-
   var score1 = 0;
   var score2 = 0;
   var score3 = 0;
@@ -106,7 +101,7 @@ router.post('/submit', async (req, res, next) => {
   
 
 
-  var currentQuiz = "Introduction-Pretest"
+  var currentQuiz = "Algorithms and Flowcharts (Pre-test)"
   var timetodo = 0;
 
   

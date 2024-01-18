@@ -5,10 +5,10 @@ compiler.init(options);
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://admin:1234@cluster0.ormtjkb.mongodb.net";
 const mydatabase = "Cluster0";
-/*
+
 var ADRI = "https://drive.google.com/file/d/1wQOAcBxYwUJix_06JzJJ48aqGBKDN7WF/preview" 
 var ADRI_Expect = "เขียนโปรแกรม C เพื่อพิมพ์ 'A-Z' ตัวใหญ่ โดยเลือก 1 ตัวอักษร (ยกเว้นตัว C)" 
-var ADRI_Answer = "https://drive.google.com/file/d/1GfNE8Tlxo7FVYWdglVp-uikdJzchQSUj/preview"*/
+var ADRI_Answer = "https://drive.google.com/file/d/1GfNE8Tlxo7FVYWdglVp-uikdJzchQSUj/preview"
 
 router.get('/', async (req, res, next) => { //ย่อโค้ดนี้ลงเลย
   const person = req.user;
@@ -95,7 +95,7 @@ router.post('/submit', async (req, res, next) => {
   
 
 
-  var currentQuiz = "Algorithms and Flowcharts-Postest"
+  var currentQuiz = "Algorithms and Flowcharts (Post-test)"
   var timetodo = 0;
 
   
@@ -199,6 +199,8 @@ router.post('/submit', async (req, res, next) => {
                 sendLink192:sendLink192,
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
+                ImproveResult:ImproveResult,
+                Improvevariable:Improvevariable,
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };
