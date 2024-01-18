@@ -199,8 +199,6 @@ router.post('/submit', async (req, res, next) => {
                 sendLink192:sendLink192,
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
-                ImproveResult:ImproveResult,
-                Improvevariable:Improvevariable,
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };
