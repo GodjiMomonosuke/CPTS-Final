@@ -10,8 +10,6 @@ const mydatabase = "Cluster0";
 var ADRI = "https://drive.google.com/file/d/1wQOAcBxYwUJix_06JzJJ48aqGBKDN7WF/preview" 
 var ADRI_Expect = "เขียนโปรแกรม C เพื่อพิมพ์ 'A-Z' ตัวใหญ่ โดยเลือก 1 ตัวอักษร (ยกเว้นตัว C)" 
 var ADRI_Answer = "https://drive.google.com/file/d/1GfNE8Tlxo7FVYWdglVp-uikdJzchQSUj/preview"
- 
-
 
 router.get('/', async (req, res, next) => { //ย่อโค้ดนี้ลงเลย
   const person = req.user;
@@ -106,7 +104,8 @@ router.post('/submit', async (req, res, next) => {
   
 
 
-  var currentQuiz = "Introduction-Quiz"
+
+  var currentQuiz = "Algorithms and Flowcharts (Post-test)"
   var timetodo = 0;
 
   
