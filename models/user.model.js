@@ -16,6 +16,7 @@ const UserSchema = new mongoose.Schema({
   },
   role: {},
   name: {},
+  studentID: {},
   plan:{},
   MA105: {},
   EN101:{},
