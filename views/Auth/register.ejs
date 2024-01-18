@@ -18,12 +18,16 @@
       <div class="card-body">
           <form action="/auth/register" method="post" class="lg-form">
               <div class="form-group">
-                <label for="name">Name</label>
-                <input  class="form-control" type="text"name="name" id="name" placeholder="Name" value=""/>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="name">ชื่อ-นามสกุล</label>
+                <input  class="form-control" type="text"name="name" id="name" placeholder="" value=""/>
               </div>
               <div class="form-group">
-                <label for="email">Email address</label>
+                <label for="name">รหัสนักศึกษา</label>
+                <input  class="form-control" type="text"name="studentID" id="studentID" placeholder="" value=""/>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
                 <input  class="form-control" type="text"name="email" id="email" aria-describedby="emailHelp" pattern="^[a-zA-Z._%+-]+@bumail\.net$" title="Use @bumail.net" placeholder="Enter @bumail.net" value="<%= locals.email ? email : '' %>"/>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
@@ -45,54 +49,60 @@
               <div class="form-group">
                 <label for="exampleFormControlSelect2">เรียนจบสายอะไร</label>
                 <select class="form-control" id="exampleFormControlSelect2" name="plan">
-                  <option value="sci">ม.ปลาย สายวิทย์-คณิต</option>
-                  <option value="art">ม.ปลาย สายศิลป์-คำนวณ</option>
-                  <option value="art">ม.ปลาย สายศิลป์-ภาษา</option>
-                  <option value="art">ปวช.อุตสาหกรรม หรือวิศวกรรม</option>
-                  <option value="art">ปวช. พาณิชย์</option>
-                  <option value="art">ปวส.อุตสาหกรรม หรือวิศวกรรม </option>
-                  <option value="art">ปวส. พาณิชย์</option>
-                  <option value="art">Other</option>
+                  <option value="วิทย์-คณิต">ม.ปลาย สายวิทย์-คณิต</option>
+                  <option value="ศิลป์-คำนวณ">ม.ปลาย สายศิลป์-คำนวณ</option>
+                  <option value="ศิลป์-ภาษา">ม.ปลาย สายศิลป์-ภาษา</option>
+                  <option value="ปวช.อุตสาหกรรม หรือวิศวกรรม">ปวช.อุตสาหกรรม หรือวิศวกรรม</option>
+                  <option value="ปวช. พาณิชย์">ปวช. พาณิชย์</option>
+                  <option value="ปวส.อุตสาหกรรม หรือวิศวกรรม">ปวส.อุตสาหกรรม หรือวิศวกรรม </option>
+                  <option value="ปวส. พาณิชย์">ปวส. พาณิชย์</option>
+                  <option value="Other">อื่น ๆ (โปรดระบุ)</option>
                 </select>
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text"name="other" id="other" placeholder="อื่น ๆ ให้ระบุในช่องนี้" value="" style="margin-top: 5px;"/>
               </div>
               <div class="form-group">
                 <label for="exampleFormControlSelect3">เกรดวิชา MA105</label>
                 <select class="form-control" id="exampleFormControlSelect3" name="MA105">
                   <option value="A">A</option>
-                  <option value="A">B+</option>
-                  <option value="A">B</option>
-                  <option value="A">C+</option>
-                  <option value="A">C</option>
-                  <option value="A">D+</option>
-                  <option value="A">D</option>
-                  <option value="A">F</option>
-                  <option value="A">W</option>
+                  <option value="B+">B+</option>
+                  <option value="B">B</option>
+                  <option value="C+">C+</option>
+                  <option value="C">C</option>
+                  <option value="D+">D+</option>
+                  <option value="D">D</option>
+                  <option value="F">F</option>
+                  <option value="W">W</option>
+                  <option value="เทียบ">เทียบวิชาได้</option>
                 </select>
               </div><div class="form-group">
                 <label for="exampleFormControlSelect4">เกรดวิชา EN101</label>
                 <select class="form-control" id="exampleFormControlSelect4" name="EN101">
                   <option value="A">A</option>
-                  <option value="A">B+</option>
-                  <option value="A">B</option>
-                  <option value="A">C+</option>
-                  <option value="A">C</option>
-                  <option value="A">D+</option>
-                  <option value="A">D</option>
-                  <option value="A">F</option>
-                  <option value="A">W</option>
+                  <option value="B+">B+</option>
+                  <option value="B">B</option>
+                  <option value="C+">C+</option>
+                  <option value="C">C</option>
+                  <option value="D+">D+</option>
+                  <option value="D">D</option>
+                  <option value="F">F</option>
+                  <option value="W">W</option>
+                  <option value="เทียบ">เทียบวิชาได้</option>
                 </select>
               </div><div class="form-group">
                 <label for="exampleFormControlSelect5">เกรดวิชา PH109</label>
                 <select class="form-control" id="exampleFormControlSelect5" name="PH109">
                   <option value="A">A</option>
-                  <option value="A">B+</option>
-                  <option value="A">B</option>
-                  <option value="A">C+</option>
-                  <option value="A">C</option>
-                  <option value="A">D+</option>
-                  <option value="A">D</option>
-                  <option value="A">F</option>
-                  <option value="A">W</option>
+                  <option value="B+">B+</option>
+                  <option value="B">B</option>
+                  <option value="C+">C+</option>
+                  <option value="C">C</option>
+                  <option value="D+">D+</option>
+                  <option value="D">D</option>
+                  <option value="F">F</option>
+                  <option value="W">W</option>
+                  <option value="เทียบ">เทียบวิชาได้</option>
                 </select>
               </div>
               
