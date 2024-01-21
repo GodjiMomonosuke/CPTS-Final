@@ -18,6 +18,7 @@ const UserSchema = new mongoose.Schema({
   name: {},
   studentID: {},
   plan:{},
+  other: {},
   MA105: {},
   EN101:{},
   PH109:{},
