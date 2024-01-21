@@ -9,7 +9,6 @@ const mydatabase = "Cluster0";
 router.post('/pretestSubmit', async (req, res, next) => {
   const person = req.user;
   var currentQuiz = "Ready"
-  var scoreC1=0,scoreC2=0,scoreC3=0,scoreC4=0,scoreC5=0,scoreC6=0,scoreC7=0,scoreC8=0,scoreC9=0,scoreC10=0,scoreC11=0;
   var c11 = req.body.c11;
   var c12 = req.body.c12;
   var c13 = req.body.c13;
@@ -432,13 +431,13 @@ router.get('/', async (req, res, next) => {
                     StudentAnswerLV4 = StudentAnswer[i].scoreTeacher;
                   }
                
-                  if(StudentAnswer[i].contentName ==='Introduction-Quiz'){
+                  if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
                     IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
-                  if(StudentAnswer[i].contentName ==='Introduction-Pretest'){
+                  if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)'){
                     IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
-                  if(StudentAnswer[i].contentName ==='Datatype-Quiz'){
+                  if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'){
                     DatatypeDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='String-Quiz'){
@@ -554,21 +553,21 @@ router.get('/', async (req, res, next) => {
         
         
                 for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {
-                    if (StudentAnswer[i].contentName ==='Introduction-Quiz') {   
+                    if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)') {   
                         IntroductionScoreLV1 = StudentAnswer[i].scoreLV1;
                         IntroductionScoreLV2 = StudentAnswer[i].scoreLV2;
                         IntroductionScoreLV3 = StudentAnswer[i].scoreLV3;
                         IntroductionScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         IntroductionDone = 1;
                     } 
-                    if (StudentAnswer[i].contentName ==='Introduction-Pretest') {   
+                    if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)') {   
                       IntroductionScorePre1 = StudentAnswer[i].scorePre1;
                       IntroductionScorePre2 = StudentAnswer[i].scorePre2;
                       IntroductionScorePre3 = StudentAnswer[i].scorePre3;
                       IntroductionScorePre4 = parseInt(StudentAnswer[i].scoreTeacher);
                       IntroductionDone = 1;
                   } 
-                    if (StudentAnswer[i].contentName ==='String-Quiz') {   
+                    if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)') {   
                         StringScoreLV1 = StudentAnswer[i].scoreLV1;
                         StringScoreLV2 = StudentAnswer[i].scoreLV2;
                         StringScoreLV3 = StudentAnswer[i].scoreLV3;

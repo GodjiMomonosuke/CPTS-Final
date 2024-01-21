@@ -105,7 +105,7 @@ router.post('/submit', async (req, res, next) => {
 
 
 
-  var currentQuiz = "Algorithms and Flowcharts (Post-test)"
+  var currentQuiz = "Algorithms_and_Flowcharts-(Post-test)"
   var timetodo = 0;
 
   

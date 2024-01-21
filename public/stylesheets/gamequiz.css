@@ -1,0 +1,50 @@
+.button {
+    padding: 5px 5px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+
+}
+#demo.button {
+    margin: 10px;
+    width: 100px;
+}
+.head{
+    color: #4effbe;
+    font-size: 20px;
+}
+
+h3 {
+    color: rgb(146, 255, 219);
+}
+.button:hover {
+    background-color: #00ffee;
+    color: black;
+}
+  
+.button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.row {
+    display: flex;
+    padding-left: 30px;
+}
+.c1 {
+    background-color: rgb(21, 0, 139);
+    height: 250px;
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    align-items: center;
+    margin: 20px;
+}
+.game {
+    display: flex;
+}

@@ -93,7 +93,7 @@ router.post('/submit', async (req, res, next) => {
   var score14 = 0;
   var score15 = 0;
 
-  var currentQuiz = "Datatype and Variable-Postest" //*** */
+  var currentQuiz = "Datatype_and_Variable-(Post-test)" //*** */
   var timetodo = 0;
 
   /** chekc score */
