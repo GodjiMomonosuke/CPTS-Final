@@ -224,12 +224,12 @@ app.use('/course-Algorithms_and_Flowcharts-pretest',
   ensureStudent,
   require('./routes/student/pretest/1_Algorithms_and_Flowcharts-pretest.route')
 );
-/**app.use('/course-String-pretest',
+app.use('/course-Datatype_and_Variable-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest/2_String-pretest.route')
+  require('./routes/student/pretest/2_Datatype_and_Variable-pretest.route')
 );
-app.use('/course-Datatype-pretest',
+/**app.use('/course-Datatype-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest/3_Datatype-pretest.route')
