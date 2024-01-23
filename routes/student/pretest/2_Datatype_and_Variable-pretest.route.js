@@ -30,7 +30,7 @@ router.get('/', async (req, res, next) => {
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/quiz/2_Datatype_and_Variable-pretest', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
+            res.render('student/pretest/2_Datatype_and_Variable-pretest', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
           });
         });
       }
