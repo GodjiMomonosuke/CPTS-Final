@@ -3,7 +3,7 @@ const check = document.getElementById("check");
 //**  */
 var data =  
   {
-  "question":"11. ข้อใดอธิบายการทำงานของ Source Code นี้ได้ถูกต้อง",
+  "question":"11. เรียงลำดับของโปรแกรมให้ถูกต้อง",
   "opt":[ 'Start',
           'เรียกใช้ Library ชื่อ stdio.h',
           'กำหนดตัวแปร letter เป็นชนิด char และกำหนดค่าเริ่มต้นให้เป็น A',
