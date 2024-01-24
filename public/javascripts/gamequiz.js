@@ -22,6 +22,10 @@ function myFunctionW5() {document.getElementById("demo5").innerHTML = "Wrong T~T
 function myFunctionT6() {document.getElementById("demo6").innerHTML = "Right ^~^";}
 function myFunctionW6() {document.getElementById("demo6").innerHTML = "Wrong T~T";}
 
+//** 7 **/
+function myFunctionT7() {document.getElementById("demo7").innerHTML = "Right ^~^";}
+function myFunctionW7() {document.getElementById("demo7").innerHTML = "Wrong T~T";}
+
 
 function myFunction() {
     var x = document.getElementById("myDIV");
@@ -31,3 +35,4 @@ function myFunction() {
       x.style.display = "none";
     }
   }
+  
