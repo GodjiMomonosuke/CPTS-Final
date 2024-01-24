@@ -279,7 +279,7 @@ app.use('/course-InputOutput-pretest',
 app.use('/navig-1-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/navig/navig-1-pretest')
+  require('./routes/student/navig/navig-1-pretest.route')
 );
 
 
