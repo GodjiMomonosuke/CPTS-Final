@@ -440,6 +440,9 @@ router.get('/', async (req, res, next) => {
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'){
                     DatatypeDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
+                  if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)'){
+                    IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                  }
                   if(StudentAnswer[i].contentName ==='String-Quiz'){
                     StringDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
