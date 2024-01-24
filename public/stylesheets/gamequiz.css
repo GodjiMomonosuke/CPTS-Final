@@ -5,22 +5,25 @@
     cursor: pointer;
     outline: none;
     color: #000000;
-    background-color: #fdff7c;
+    background-color: #ACE57E;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 5px #c800ff;
+    border-style: solid;
+    border-color: #666;
+    box-shadow: 0 5px #000000;
 
 }
 #demo.button {
     margin: 10px;
     width: 100px;
+     
 }
-.head{
+.question{
     color: #00ffee;
-    font-size: 20px;
-    background-color: black;
-    height: 200px;
-    padding: 10px;
+    font-size: 18px;
+    background-color: #37228D;
+    height: 350px;
+    padding: 20px;
     border-radius: 10px;
 }
 
@@ -37,14 +40,13 @@ h3 {
     transform: translateY(4px);
 }
 
-.row {
+div.btn {
     display: flex;
-    padding: 15px;
 }
-.c1 {
-    background-color: rgb(21, 0, 139);
-    height: 400px;
-    width: 400px;
+.gamecontent {
+    background-color: #C3C3DA;
+    height: 600px;
+    width: 450px;
     border-radius: 20px;
     padding: 15px;
     align-items: center;
@@ -53,9 +55,10 @@ h3 {
 .game {
     display: flex;
 }
-.click1 {
+.ans {
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 
 img {
@@ -63,11 +66,11 @@ img {
     height: 60px;
 }
 
-button.click {
-    background-color: fuchsia;
+button.toggle {
+    background-color: #ff43cd;
     color: #fff;
     border-radius: 50px;
-    height: 80px;
-    width: 80px;
-    margin-left: 20px;
+    height: 100px;
+    width: 100px;
+    margin-left: 10px;
 }
