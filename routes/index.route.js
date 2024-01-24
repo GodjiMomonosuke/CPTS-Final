@@ -713,11 +713,11 @@ router.get('/', async (req, res, next) => {
                     var Course_Left = [];
                     var ArrRankStorage = []
                     
-                    var PathTicTacToe = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] //เรียกจากง่ายไปยาก
-                    var PathLibrary = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Structure'] 
-                    var PathRoshambo = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] 
-                    var PathCalendar = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','Pointers','Function'] 
-                    var PathCalculator = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String']
+                    var PathTicTacToe = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] //เรียกจากง่ายไปยาก
+                    var PathLibrary = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Structure'] 
+                    var PathRoshambo = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] 
+                    var PathCalendar = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','Pointers','Function'] 
+                    var PathCalculator = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String']
                     //ตรวจสอบคอร์สที่ทำ กับ แต่ละ path
                     var b = new Set(CourseDoneSorted);
                     var DiffTicTacToe = [...PathTicTacToe].filter(x => !b.has(x));
