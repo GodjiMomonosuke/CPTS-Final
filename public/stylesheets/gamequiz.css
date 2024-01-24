@@ -27,8 +27,8 @@
     border-radius: 10px;
 }
 
-h3 {
-    color: rgb(146, 255, 219);
+p {
+    color: #ffffff;
 }
 .button:hover {
     background-color: #00ffee;
@@ -42,11 +42,12 @@ h3 {
 
 div.btn {
     display: flex;
+    padding: 0;
 }
 .gamecontent {
     background-color: #C3C3DA;
     height: 600px;
-    width: 450px;
+    width: 400px;
     border-radius: 20px;
     padding: 15px;
     align-items: center;
@@ -58,7 +59,7 @@ div.btn {
 .ans {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 img {
@@ -72,5 +73,5 @@ button.toggle {
     border-radius: 50px;
     height: 100px;
     width: 100px;
-    margin-left: 10px;
+    margin: 10px;
 }
