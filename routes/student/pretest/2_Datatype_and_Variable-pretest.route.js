@@ -19,8 +19,8 @@ router.get('/', async (req, res, next) => {
     var query = { email: person.email };
     dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
       if (err) throw err;
-      if(Object.keys(StudentAnswer).length === 0){
-        res.redirect('/')
+      if(Object.keys(StudentAnswer).length < 3){
+        res.redirect('/navig-1-pretest')
       }
       else{
         MongoClient.connect(url, function(err, db) {

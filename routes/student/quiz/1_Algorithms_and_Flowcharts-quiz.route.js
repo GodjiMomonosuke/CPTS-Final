@@ -20,8 +20,8 @@ router.get('/', async (req, res, next) => { //ย่อโค้ดนี้ล�
     var query = { email: person.email };
     dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
       if (err) throw err;
-      if(Object.keys(StudentAnswer).length === 0){
-        res.redirect('/')
+      if(Object.keys(StudentAnswer).length < 2){
+        res.redirect('/course-Algorithms_and_Flowcharts-pretest')
       }
       else{
         MongoClient.connect(url, function(err, db) {

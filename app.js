@@ -275,6 +275,13 @@ app.use('/course-InputOutput-pretest',
   require('./routes/student/v/10_InputOutput-pretest.route')
 );*/
 
+//** navig **//
+app.use('/navig-1-pretest',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/navig/navig-1-pretest')
+);
+
 
 // ****** teacher ******** // 
 app.use('/class',
