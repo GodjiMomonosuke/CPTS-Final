@@ -28,7 +28,7 @@ function myFunctionW7() {document.getElementById("demo7").innerHTML = "Wrong T~T
 
 
 function myFunction() {
-    var x = document.getElementById("myDIV");
+    var x = document.getElementById("demo6");
     if (x.style.display === "none") {
       x.style.display = "block";
     } else {
