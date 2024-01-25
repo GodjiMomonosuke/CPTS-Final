@@ -20,7 +20,7 @@ router.get('/', async (req, res, next) => {
     dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
       if (err) throw err;
       if(Object.keys(StudentAnswer).length === 0){
-        res.redirect('/')
+        res.redirect('/course-Algorithms_and_Flowcharts-quiz')
       }
       else{
         MongoClient.connect(url, function(err, db) {

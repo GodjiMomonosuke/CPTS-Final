@@ -542,8 +542,9 @@ router.get('/', async (req, res, next) => {
 
 
                 var IntroductionScoreLV1=0,IntroductionScoreLV2=0,IntroductionScoreLV3=0,IntroductionScoreLV4=0;
-                var IntroductionScorePre1=0,IntroductionScorePre2=0,IntroductionScorePre3=0,IntroductionScorePre4=0;
+                var Pretest1_Score1=0,Pretest1_Score2=0,Pretest1_Score3=0,Pretest1_Score4=0;
                 var StringScoreLV1=0,StringScoreLV2=0,StringScoreLV3=0,StringScoreLV4=0;
+                var Pretest2_Score1=0,Pretest2_Score2=0,Pretest2_Score3=0,Pretest2_Score4=0;
                 var DatatypeScoreLV1=0,DatatypeScoreLV2=0,DatatypeScoreLV3=0,DatatypeScoreLV4=0;
                 var OperatorsScoreLV1=0,OperatorsScoreLV2=0,OperatorsScoreLV3=0,OperatorsScoreLV4=0;
                 var FlowControlScoreLV1=0,FlowControlScoreLV2=0,FlowControlScoreLV3=0,FlowControlScoreLV4=0;
@@ -564,12 +565,12 @@ router.get('/', async (req, res, next) => {
                         IntroductionDone = 1;
                     } 
                     if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)') {   
-                      IntroductionScorePre1 = StudentAnswer[i].scorePre1;
-                      IntroductionScorePre2 = StudentAnswer[i].scorePre2;
-                      IntroductionScorePre3 = StudentAnswer[i].scorePre3;
-                      IntroductionScorePre4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      Pretest1_Score1 = StudentAnswer[i].scorePre1;
+                      Pretest1_Score2 = StudentAnswer[i].scorePre2;
+                      Pretest1_Score3 = StudentAnswer[i].scorePre3;
+                      Pretest1_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
                       IntroductionDone = 1;
-                  } 
+                    } 
                     if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)') {   
                         StringScoreLV1 = StudentAnswer[i].scoreLV1;
                         StringScoreLV2 = StudentAnswer[i].scoreLV2;
@@ -577,6 +578,13 @@ router.get('/', async (req, res, next) => {
                         StringScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         StringDone = 1;
                     }
+                    if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)') {   
+                      Pretest2_Score1 = StudentAnswer[i].scorePre1;
+                      Pretest2_Score2 = StudentAnswer[i].scorePre2;
+                      Pretest2_Score3 = StudentAnswer[i].scorePre3;
+                      Pretest2_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      StringDone = 1;
+                  }
                     if (StudentAnswer[i].contentName ==='Datatype-Quiz') {   
                         DatatypeScoreLV1 = StudentAnswer[i].scoreLV1;
                         DatatypeScoreLV2 = StudentAnswer[i].scoreLV2;
@@ -641,10 +649,7 @@ router.get('/', async (req, res, next) => {
                 var ExplainScore = IntroductionScoreLV3+StringScoreLV3+DatatypeScoreLV3+OperatorsScoreLV3+FlowControlScoreLV3+PointersScoreLV3+FunctionScoreLV3+StructureScoreLV3+ArrayLV3+InputOutputLV3 ;
                 var WriteScore = IntroductionScoreLV4+StringScoreLV4+DatatypeScoreLV4+OperatorsScoreLV4+FlowControlScoreLV4+PointersScoreLV4+FunctionScoreLV4+StructureScoreLV4+ArrayLV4+InputOutputLV4 ;
                 //var CourseDone = IntroductionDone+StringDone+DatatypeDone+OperatorsDone+FlowControlDone+PointersDone+FunctionDone+StructureDone+ArrayDone+InputOutputDone;
-                var BasicS= IntroductionScorePre1
-                var TraceS = IntroductionScorePre2
-                var ExplainS = IntroductionScorePre3
-                var WriteS = IntroductionScorePre4
+                
                 /*** Chart Posttest score */
                 var BasicPercent =  Math.round((BasicScore*5));
                 var TracePercent= Math.round((TraceScore*5));
@@ -654,7 +659,13 @@ router.get('/', async (req, res, next) => {
                 TracePercent = TracePercent;
                 ExplainPercent = ExplainPercent;
                 WritePercent = WritePercent;
+
                 /*** Pretest score */
+                var BasicS = Pretest1_Score1+Pretest2_Score1;
+                var TraceS = Pretest1_Score2+Pretest2_Score2;
+                var ExplainS = Pretest1_Score3+Pretest2_Score3;
+                var WriteS = Pretest1_Score4+Pretest2_Score4;
+
                 var BasicPer =  Math.round((BasicS));
                 var TracePer = Math.round((TraceS));
                 var ExplainPer = Math.round((ExplainS));
@@ -713,11 +724,11 @@ router.get('/', async (req, res, next) => {
                     var Course_Left = [];
                     var ArrRankStorage = []
                     
-                    var PathTicTacToe = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] //เรียกจากง่ายไปยาก
-                    var PathLibrary = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Structure'] 
-                    var PathRoshambo = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] 
-                    var PathCalendar = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','Pointers','Function'] 
-                    var PathCalculator = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String']
+                    var PathTicTacToe = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] //เรียกจากง่ายไปยาก
+                    var PathLibrary = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Structure'] 
+                    var PathRoshambo = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] 
+                    var PathCalendar = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','Pointers','Function'] 
+                    var PathCalculator = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String']
                     //ตรวจสอบคอร์สที่ทำ กับ แต่ละ path
                     var b = new Set(CourseDoneSorted);
                     var DiffTicTacToe = [...PathTicTacToe].filter(x => !b.has(x));

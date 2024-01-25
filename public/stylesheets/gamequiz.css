@@ -1,5 +1,5 @@
 .button {
-    padding: 5px 5px;
+    padding: 10px 10px;
     font-size: 18px;
     text-align: center;
     cursor: pointer;
@@ -11,22 +11,24 @@
     border-style: solid;
     border-color: #666;
     box-shadow: 0 5px #000000;
-
-}
-#demo.button {
     margin: 10px;
-    width: 100px;
-     
+    width: auto;
 }
+
 .question{
     color: #00ffee;
     font-size: 18px;
     background-color: #37228D;
-    height: 350px;
-    padding: 20px;
+    height: 250px;
     border-radius: 10px;
+    text-align: center;
 }
 
+h5{
+    background-color: #000000;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
 p {
     color: #ffffff;
 }
@@ -44,12 +46,22 @@ div.btn {
     display: flex;
     padding: 0;
 }
+
 .gamecontent {
     background-color: #C3C3DA;
-    height: 600px;
-    width: 400px;
-    border-radius: 20px;
+    height: 500px;
+    width: 350px;
     padding: 15px;
+    border-radius: 20px;
+    align-items: center;
+    margin: 20px;
+}
+.gamecontent-M {
+    background-color: #C3C3DA;
+    height: auto;
+    width: auto;
+    padding: 15px;
+    border-radius: 20px;
     align-items: center;
     margin: 20px;
 }
@@ -58,8 +70,8 @@ div.btn {
 }
 .ans {
     display: flex;
-    align-items: center;
-    margin-top: 20px;
+    text-align: center;
+
 }
 
 img {
@@ -75,3 +87,7 @@ button.toggle {
     width: 100px;
     margin: 10px;
 }
+
+
+
+
