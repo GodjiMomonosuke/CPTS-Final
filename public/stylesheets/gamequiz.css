@@ -1,7 +1,6 @@
 .button {
     padding: 10px 10px;
     font-size: 18px;
-    text-align: center;
     cursor: pointer;
     outline: none;
     color: #000000;
@@ -21,13 +20,33 @@
     background-color: #37228D;
     height: 250px;
     border-radius: 10px;
-    text-align: center;
+    
+}
+
+.question-T{
+    color: #00ffee;
+    font-size: 18px;
+    background-color: #37228D;
+    height: 400px;
+    border-radius: 10px;
+    
+}
+
+.question-E{
+    color: #00ffee;
+    font-size: 18px;
+    background-color: #37228D;
+    height: 400px;
+    border-radius: 10px;
+    
 }
 
 h5{
     background-color: #000000;
     padding: 15px;
     border-radius: 10px 10px 0 0;
+    text-align: center;
+
 }
 p {
     color: #ffffff;
@@ -56,15 +75,26 @@ div.btn {
     align-items: center;
     margin: 20px;
 }
-.gamecontent-M {
+.gamecontent-T {
     background-color: #C3C3DA;
-    height: auto;
-    width: auto;
+    height: 600px;
+    width: 400px;
     padding: 15px;
     border-radius: 20px;
     align-items: center;
     margin: 20px;
 }
+
+.gamecontent-E {
+    background-color: #C3C3DA;
+    height: 750px;
+    width: 1200px;
+    padding: 15px;
+    border-radius: 20px;
+    align-items: center;
+    margin: 20px;
+}
+
 .game {
     display: flex;
 }
