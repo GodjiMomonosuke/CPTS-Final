@@ -19,7 +19,7 @@ router.get('/', async (req, res, next) => {
     var query = { email: person.email };
     dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
       if (err) throw err;
-      if(Object.keys(StudentAnswer).length < 5){
+      if(Object.keys(StudentAnswer).length < 6){
         res.redirect('/pretest3_check')
       }
       else{
