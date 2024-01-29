@@ -275,11 +275,16 @@ app.use('/course-InputOutput-pretest',
   require('./routes/student/v/10_InputOutput-pretest.route')
 );*/
 
-//** navig **//
-app.use('/pretest1_check',
+//** pretest check **//
+app.use('/pretest2_check',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest_check/pretest1_check.route')
+  require('./routes/student/pretest_check/pretest2_check.route')
+);
+app.use('/pretest3_check',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/pretest_check/pretest3_check.route')
 );
 
 

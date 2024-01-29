@@ -20,7 +20,7 @@ router.get('/', async (req, res, next) => {
     dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
       if (err) throw err;
       if(Object.keys(StudentAnswer).length < 4){
-        res.redirect('/pretest1_check')
+        res.redirect('/pretest2_check')
       }
       else{
         MongoClient.connect(url, function(err, db) {
