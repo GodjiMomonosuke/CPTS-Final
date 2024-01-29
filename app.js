@@ -173,11 +173,11 @@ app.use('/course-Datatype_and_Variable-quiz',
   ensureStudent,
   require('./routes/student/quiz/2_Datatype_and_Variable-quiz.route')
 );
-app.use('/course-Datatype-quiz',
+app.use('/course-Input_and_Output-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/quiz/3_Datatype-quiz.route')
-);
+  require('./routes/student/quiz/3_Input_and_Output-quiz.route')
+);//** **/
 app.use('/course-Operators-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
@@ -218,7 +218,7 @@ app.use('/course-InputOutput-quiz',
   ensureStudent,
   require('./routes/student/quiz/10_InputOutput-quiz.route')
 );
-/** Pretest */
+//** Pretest **//
 app.use('/course-Algorithms_and_Flowcharts-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
@@ -229,7 +229,7 @@ app.use('/course-Datatype_and_Variable-pretest',
   ensureStudent,
   require('./routes/student/pretest/2_Datatype_and_Variable-pretest.route')
 );
-/**app.use('/course-Datatype-pretest',
+/**app.use('/course-Input_and_Output-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest/3_Datatype-pretest.route')

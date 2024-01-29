@@ -30,7 +30,7 @@ router.get('/', async (req, res, next) => {
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/quiz/3_Datatype-quiz', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
+            res.render('student/quiz/3_Input_and_Output-quiz', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
           });
         });
       }
@@ -54,7 +54,7 @@ router.post('/submit', async (req, res, next) => {
   var scoreLV1 = 0;
   var scoreLV2 = 0;
   var scoreLV3 = 0;
-  var currentQuiz = "Datatype-Quiz" //*** */
+  var currentQuiz = "Input_and_Output-(Post-test)" //*** */
   var timetodo = 0;
 
   /** chekc score */
