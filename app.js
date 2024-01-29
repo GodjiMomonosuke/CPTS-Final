@@ -229,12 +229,12 @@ app.use('/course-Datatype_and_Variable-pretest',
   ensureStudent,
   require('./routes/student/pretest/2_Datatype_and_Variable-pretest.route')
 );
-/**app.use('/course-Input_and_Output-pretest',
+app.use('/course-Input_and_Output-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest/3_Datatype-pretest.route')
+  require('./routes/student/pretest/3_Input_and_Output-pretest.route')
 );
-app.use('/course-Operators-pretest',
+/**app.use('/course-Operators-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest/4_Operators-pretest.route')
