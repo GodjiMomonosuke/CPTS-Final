@@ -30,7 +30,7 @@ router.get('/', async (req, res, next) => {
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/pretest/2_Datatype_and_Variable-pretest', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
+            res.render('student/pretest/3_Input_and_Output-pretest', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
           });
         });
       }
@@ -93,53 +93,53 @@ router.post('/submit', async (req, res, next) => {
   var score14 = 0;
   var score15 = 0;
 
-  var currentQuiz = "Datatype_and_Variable-(Pre-test)" //*** */
+  var currentQuiz = "Input_and_Output-(Pre-test)" //*** */
   var timetodo = 0;
 
-  /** chekc score */
-  if(choice1 === 'C'){
+  /** check score */
+  if(choice1 === 'A'){
     score1 = 1;
   }
-  if(choice2 === 'C'){
+  if(choice2 === 'D'){
     score2 = 1;
   }
-  if(choice3 === 'A'){
+  if(choice3 === 'C'){
     score3 = 1;
   }
-  if(choice4 === 'C'){
+  if(choice4 === 'A'){
     score4 = 1;
   }
-  if(choice5 === 'A'){
+  if(choice5 === 'C'){
     score5 = 1;
   }
-  if(choice6 === 'B'){
+  if(choice6 === 'C'){
     score6 = 1;
   }
-  if(choice7 === 'B'){
+  if(choice7 === 'C'){
     score7 = 1;
   }
-  if(choice8 === 'A'){
+  if(choice8 === 'B'){
     score8 = 1;
   }
-  if(choice9 === 'D'){
+  if(choice9 === 'A'){
     score9 = 1;
   }
-  if(choice10 === 'C'){
+  if(choice10 === 'B'){
     score10 = 1;
   }
-  if(choice11 === 'right'){
-    score11 = 1;//ตรวจคำตอบข้อ 3 ต้องไปที่ public\javascripts\lv3 (เรียงให้ถูก)
+  if(choice11 === 'A'){
+    score11 = 1;
   }
-  if(choice12 === 'A'){
+  if(choice12 === 'D'){
     score12 = 1;
   }
-  if(choice13 === 'A'){
+  if(choice13 === 'B'){
     score13 = 1;
   }
-  if(choice14 === 'D'){
+  if(choice14 === 'C'){
     score14 = 1;
   }
-  if(choice15 === 'D'){
+  if(choice15 === 'B'){
     score15 = 1;
   }
 
@@ -172,6 +172,8 @@ router.post('/submit', async (req, res, next) => {
                 timetodo:timetodo+1,
                 times: new Date().toLocaleString(), 
                 email: person.email,
+                Name: person.name,
+                studentID: person.studentID,
                 role:person.role,
                 contentName:currentQuiz,
                 scorePre1:score1+score2+score3+score4+score5,
