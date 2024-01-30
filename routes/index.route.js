@@ -573,11 +573,11 @@ router.get('/', async (req, res, next) => {
                         IntroductionDone = 1;
                     } 
                     if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)') {   
-                      Pretest1_Score1 = StudentAnswer[i].scorePre1;
-                      Pretest1_Score2 = StudentAnswer[i].scorePre2;
-                      Pretest1_Score3 = StudentAnswer[i].scorePre3;
-                      Pretest1_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
-                      IntroductionDone = 1;
+                        Pretest1_Score1 = StudentAnswer[i].scorePre1;
+                        Pretest1_Score2 = StudentAnswer[i].scorePre2;
+                        Pretest1_Score3 = StudentAnswer[i].scorePre3;
+                        Pretest1_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        IntroductionDone = 1;
                     } 
                     if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)') {   
                         StringScoreLV1 = StudentAnswer[i].scoreLV1;
@@ -587,19 +587,26 @@ router.get('/', async (req, res, next) => {
                         StringDone = 1;
                     }
                     if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)') {   
-                      Pretest2_Score1 = StudentAnswer[i].scorePre1;
-                      Pretest2_Score2 = StudentAnswer[i].scorePre2;
-                      Pretest2_Score3 = StudentAnswer[i].scorePre3;
-                      Pretest2_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
-                      StringDone = 1;
-                  }
-                    if (StudentAnswer[i].contentName ==='Datatype-Quiz') {   
+                        Pretest2_Score1 = StudentAnswer[i].scorePre1;
+                        Pretest2_Score2 = StudentAnswer[i].scorePre2;
+                        Pretest2_Score3 = StudentAnswer[i].scorePre3;
+                        Pretest2_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        StringDone = 1;
+                    }
+                    if (StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)') {   
                         DatatypeScoreLV1 = StudentAnswer[i].scoreLV1;
                         DatatypeScoreLV2 = StudentAnswer[i].scoreLV2;
                         DatatypeScoreLV3 = StudentAnswer[i].scoreLV3;
                         DatatypeScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         DatatypeDone = 1;
                     } 
+                    if (StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)') {   
+                        Pretest2_Score1 = StudentAnswer[i].scorePre1;
+                        Pretest2_Score2 = StudentAnswer[i].scorePre2;
+                        Pretest2_Score3 = StudentAnswer[i].scorePre3;
+                        Pretest2_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        StringDone = 1;
+                    }
                     if (StudentAnswer[i].contentName ==='Operators-Quiz') {   
                         OperatorsScoreLV1 = StudentAnswer[i].scoreLV1;
                         OperatorsScoreLV2 = StudentAnswer[i].scoreLV2;
