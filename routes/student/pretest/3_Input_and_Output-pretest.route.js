@@ -6,9 +6,11 @@ const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://admin:1234@cluster0.ormtjkb.mongodb.net";
 const mydatabase = "Cluster0";
 
-var ADRI = "https://drive.google.com/file/d/1IiFyAh1teNLEvMVvqYFo_SR__kBQYwFI/preview"
-var ADRI_Expect = "ทำการเพิ่มใส่นามสกุลเข้าไปโดยให้รหัสนักศึกษาแสดงออกมาท้ายสุด"
-var ADRI_Answer = "https://drive.google.com/file/d/1M8DU6l8MTxe6UIc426o4Ofyl98KF9xu1/preview"
+var ADRI1 = "https://drive.google.com/file/d/1pBIrINpZGRsPmonHCMpD6Vrobal8vX5q/preview"
+var ADRI2 = "https://drive.google.com/file/d/1o0XCMzQm7WUNV639rhytCrxdZaYoLbuw/preview"
+var ADRI3 = "https://drive.google.com/file/d/1CX7kBXlcwnKMsxnXpHWhnEWqrS51hWxc/preview"
+var ADRI4 = "https://drive.google.com/file/d/1O_bv7V3TGVRSRU5wWClBmtI4fcOfZ5ia/preview"
+var ADRI5 = "https://drive.google.com/file/d/11TahBnBjiHp-YtvHoeBw2eblzJECsOra/preview"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -30,7 +32,7 @@ router.get('/', async (req, res, next) => {
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/pretest/3_Input_and_Output-pretest', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
+            res.render('student/pretest/3_Input_and_Output-pretest', { person,StudentAnswer,RecommendaResult,ADRI1,ADRI2,ADRI3,ADRI4,ADRI5});
           });
         });
       }
