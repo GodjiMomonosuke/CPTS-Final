@@ -426,26 +426,33 @@ router.get('/', async (req, res, next) => {
                   if(StudentAnswer[i].scorePre3 === 0 &&  StudentAnswer[i].scorePre3 != undefined){
                     StudentAnswerPre3 = "✗"
                   }
-
+                  //** */
                   if(StudentAnswer[i].scoreTeacher != undefined){
                     StudentAnswerLV4 = StudentAnswer[i].scoreTeacher;
                   }
-               
+                
+                  //** Algorithms_and_Flowcharts */
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
                     IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)'){
-                    IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    IntroductionDone = StudentAnswerPre1+"-"+StudentAnswerPre2+"-"+StudentAnswerPre3+"-"+StudentAnswerLV4;
                   }
+                  //** Datatype_and_Variable */
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'){
                     DatatypeDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)'){
-                    IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    IntroductionDone = StudentAnswerPre1+"-"+StudentAnswerPre2+"-"+StudentAnswerPre3+"-"+StudentAnswerLV4;
                   }
-                  if(StudentAnswer[i].contentName ==='String-Quiz'){
+                  //** Input_and_Output */
+                  if(StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'){
                     StringDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
+                  if(StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)'){
+                    StringDone = StudentAnswerPre1+"-"+StudentAnswerPre2+"-"+StudentAnswerPre3+"-"+StudentAnswerLV4;
+                  }
+                  //** */
                   if(StudentAnswer[i].contentName ==='Operators-Quiz'){
                     OperatorsDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
