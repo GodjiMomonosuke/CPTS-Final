@@ -551,9 +551,13 @@ router.get('/', async (req, res, next) => {
 
                 var IntroductionScoreLV1=0,IntroductionScoreLV2=0,IntroductionScoreLV3=0,IntroductionScoreLV4=0;
                 var Pretest1_Score1=0,Pretest1_Score2=0,Pretest1_Score3=0,Pretest1_Score4=0;
+
                 var StringScoreLV1=0,StringScoreLV2=0,StringScoreLV3=0,StringScoreLV4=0;
                 var Pretest2_Score1=0,Pretest2_Score2=0,Pretest2_Score3=0,Pretest2_Score4=0;
+
                 var DatatypeScoreLV1=0,DatatypeScoreLV2=0,DatatypeScoreLV3=0,DatatypeScoreLV4=0;
+                var Pretest3_Score1=0,Pretest3_Score2=0,Pretest3_Score3=0,Pretest3_Score4=0;
+
                 var OperatorsScoreLV1=0,OperatorsScoreLV2=0,OperatorsScoreLV3=0,OperatorsScoreLV4=0;
                 var FlowControlScoreLV1=0,FlowControlScoreLV2=0,FlowControlScoreLV3=0,FlowControlScoreLV4=0;
                 var PointersScoreLV1=0,PointersScoreLV2=0,PointersScoreLV3=0,PointersScoreLV4=0;
@@ -601,11 +605,11 @@ router.get('/', async (req, res, next) => {
                         DatatypeDone = 1;
                     } 
                     if (StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)') {   
-                        Pretest2_Score1 = StudentAnswer[i].scorePre1;
-                        Pretest2_Score2 = StudentAnswer[i].scorePre2;
-                        Pretest2_Score3 = StudentAnswer[i].scorePre3;
-                        Pretest2_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
-                        StringDone = 1;
+                        Pretest3_Score1 = StudentAnswer[i].scorePre1;
+                        Pretest3_Score2 = StudentAnswer[i].scorePre2;
+                        Pretest3_Score3 = StudentAnswer[i].scorePre3;
+                        Pretest3_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        DatatypeDone = 1;
                     }
                     if (StudentAnswer[i].contentName ==='Operators-Quiz') {   
                         OperatorsScoreLV1 = StudentAnswer[i].scoreLV1;
@@ -676,10 +680,10 @@ router.get('/', async (req, res, next) => {
                 WritePercent = WritePercent;
 
                 /*** Pretest score */
-                var BasicS = Pretest1_Score1+Pretest2_Score1;
-                var TraceS = Pretest1_Score2+Pretest2_Score2;
-                var ExplainS = Pretest1_Score3+Pretest2_Score3;
-                var WriteS = Pretest1_Score4+Pretest2_Score4;
+                var BasicS = Pretest1_Score1+Pretest2_Score1+Pretest3_Score1;
+                var TraceS = Pretest1_Score2+Pretest2_Score2+Pretest3_Score2;
+                var ExplainS = Pretest1_Score3+Pretest2_Score3+Pretest3_Score3;
+                var WriteS = Pretest1_Score4+Pretest2_Score4+Pretest3_Score4;
 
                 var BasicPer =  Math.round((BasicS));
                 var TracePer = Math.round((TraceS));
