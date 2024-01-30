@@ -663,13 +663,13 @@ router.get('/', async (req, res, next) => {
                 }
 
                 /*** SUM */
+                //*** Chart Posttest score */
                 var BasicScore = IntroductionScoreLV1+StringScoreLV1+DatatypeScoreLV1+OperatorsScoreLV1+FlowControlScoreLV1+PointersScoreLV1+FunctionScoreLV1+StructureScoreLV1+ArrayLV1+InputOutputLV1 ;
                 var TraceScore = IntroductionScoreLV2+StringScoreLV2+DatatypeScoreLV2+OperatorsScoreLV2+FlowControlScoreLV2+PointersScoreLV2+FunctionScoreLV2+StructureScoreLV2+ArrayLV2+InputOutputLV2 ;
                 var ExplainScore = IntroductionScoreLV3+StringScoreLV3+DatatypeScoreLV3+OperatorsScoreLV3+FlowControlScoreLV3+PointersScoreLV3+FunctionScoreLV3+StructureScoreLV3+ArrayLV3+InputOutputLV3 ;
                 var WriteScore = IntroductionScoreLV4+StringScoreLV4+DatatypeScoreLV4+OperatorsScoreLV4+FlowControlScoreLV4+PointersScoreLV4+FunctionScoreLV4+StructureScoreLV4+ArrayLV4+InputOutputLV4 ;
                 //var CourseDone = IntroductionDone+StringDone+DatatypeDone+OperatorsDone+FlowControlDone+PointersDone+FunctionDone+StructureDone+ArrayDone+InputOutputDone;
                 
-                /*** Chart Posttest score */
                 var BasicPercent =  Math.round((BasicScore*5));
                 var TracePercent= Math.round((TraceScore*5));
                 var ExplainPercent = Math.round((ExplainScore*5));
@@ -679,7 +679,7 @@ router.get('/', async (req, res, next) => {
                 ExplainPercent = ExplainPercent;
                 WritePercent = WritePercent;
 
-                /*** Pretest score */
+                //*** Pretest score */
                 var BasicS = Pretest1_Score1+Pretest2_Score1+Pretest3_Score1;
                 var TraceS = Pretest1_Score2+Pretest2_Score2+Pretest3_Score2;
                 var ExplainS = Pretest1_Score3+Pretest2_Score3+Pretest3_Score3;
