@@ -386,6 +386,7 @@ router.get('/', async (req, res, next) => {
                 var IntroductionDone = "ยังไม่ทำ" ,StringDone = "ยังไม่ทำ" ,OperatorsDone = "ยังไม่ทำ" ,DatatypeDone = "ยังไม่ทำ",FlowControlDone = "ยังไม่ทำ",LoopDone = "ยังไม่ทำ",PointersDone = "ยังไม่ทำ",FunctionDone = "ยังไม่ทำ",StructureDone = "ยังไม่ทำ",ArrayDone = "ยังไม่ทำ" ,InputOutputDone = "ยังไม่ทำ" ;
                 var TicTacToeDone = "ยังไม่ทำ" , Library_SystemDone = "ยังไม่ทำ" , RoshamboDone = "ยังไม่ทำ" ,CalendarDone = "ยังไม่ทำ" , CalculatorDone = "ยังไม่ทำ";
                 var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "รอตรวจ";
+                var StudentAnswerPre1 = "", StudentAnswerPre2 = "" , StudentAnswerPre3 = "", StudentAnswerLV4 = "รอตรวจ";
       
                 for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
 
@@ -426,26 +427,33 @@ router.get('/', async (req, res, next) => {
                   if(StudentAnswer[i].scorePre3 === 0 &&  StudentAnswer[i].scorePre3 != undefined){
                     StudentAnswerPre3 = "✗"
                   }
-
+                  //** */
                   if(StudentAnswer[i].scoreTeacher != undefined){
                     StudentAnswerLV4 = StudentAnswer[i].scoreTeacher;
                   }
-               
+                
+                  //** Algorithms_and_Flowcharts */
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
                     IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)'){
-                    IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    IntroductionDone = StudentAnswerPre1+"-"+StudentAnswerPre2+"-"+StudentAnswerPre3+"-"+StudentAnswerLV4;
                   }
+                  //** Datatype_and_Variable */
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'){
                     DatatypeDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)'){
-                    IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    IntroductionDone = StudentAnswerPre1+"-"+StudentAnswerPre2+"-"+StudentAnswerPre3+"-"+StudentAnswerLV4;
                   }
-                  if(StudentAnswer[i].contentName ==='String-Quiz'){
+                  //** Input_and_Output */
+                  if(StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'){
                     StringDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
+                  if(StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)'){
+                    StringDone = StudentAnswerPre1+"-"+StudentAnswerPre2+"-"+StudentAnswerPre3+"-"+StudentAnswerLV4;
+                  }
+                  //** */
                   if(StudentAnswer[i].contentName ==='Operators-Quiz'){
                     OperatorsDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
@@ -543,9 +551,13 @@ router.get('/', async (req, res, next) => {
 
                 var IntroductionScoreLV1=0,IntroductionScoreLV2=0,IntroductionScoreLV3=0,IntroductionScoreLV4=0;
                 var Pretest1_Score1=0,Pretest1_Score2=0,Pretest1_Score3=0,Pretest1_Score4=0;
+
                 var StringScoreLV1=0,StringScoreLV2=0,StringScoreLV3=0,StringScoreLV4=0;
                 var Pretest2_Score1=0,Pretest2_Score2=0,Pretest2_Score3=0,Pretest2_Score4=0;
+
                 var DatatypeScoreLV1=0,DatatypeScoreLV2=0,DatatypeScoreLV3=0,DatatypeScoreLV4=0;
+                var Pretest3_Score1=0,Pretest3_Score2=0,Pretest3_Score3=0,Pretest3_Score4=0;
+
                 var OperatorsScoreLV1=0,OperatorsScoreLV2=0,OperatorsScoreLV3=0,OperatorsScoreLV4=0;
                 var FlowControlScoreLV1=0,FlowControlScoreLV2=0,FlowControlScoreLV3=0,FlowControlScoreLV4=0;
                 var PointersScoreLV1=0,PointersScoreLV2=0,PointersScoreLV3=0,PointersScoreLV4=0;
@@ -565,11 +577,11 @@ router.get('/', async (req, res, next) => {
                         IntroductionDone = 1;
                     } 
                     if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)') {   
-                      Pretest1_Score1 = StudentAnswer[i].scorePre1;
-                      Pretest1_Score2 = StudentAnswer[i].scorePre2;
-                      Pretest1_Score3 = StudentAnswer[i].scorePre3;
-                      Pretest1_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
-                      IntroductionDone = 1;
+                        Pretest1_Score1 = StudentAnswer[i].scorePre1;
+                        Pretest1_Score2 = StudentAnswer[i].scorePre2;
+                        Pretest1_Score3 = StudentAnswer[i].scorePre3;
+                        Pretest1_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        IntroductionDone = 1;
                     } 
                     if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)') {   
                         StringScoreLV1 = StudentAnswer[i].scoreLV1;
@@ -579,19 +591,26 @@ router.get('/', async (req, res, next) => {
                         StringDone = 1;
                     }
                     if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)') {   
-                      Pretest2_Score1 = StudentAnswer[i].scorePre1;
-                      Pretest2_Score2 = StudentAnswer[i].scorePre2;
-                      Pretest2_Score3 = StudentAnswer[i].scorePre3;
-                      Pretest2_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
-                      StringDone = 1;
-                  }
-                    if (StudentAnswer[i].contentName ==='Datatype-Quiz') {   
+                        Pretest2_Score1 = StudentAnswer[i].scorePre1;
+                        Pretest2_Score2 = StudentAnswer[i].scorePre2;
+                        Pretest2_Score3 = StudentAnswer[i].scorePre3;
+                        Pretest2_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        StringDone = 1;
+                    }
+                    if (StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)') {   
                         DatatypeScoreLV1 = StudentAnswer[i].scoreLV1;
                         DatatypeScoreLV2 = StudentAnswer[i].scoreLV2;
                         DatatypeScoreLV3 = StudentAnswer[i].scoreLV3;
                         DatatypeScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         DatatypeDone = 1;
                     } 
+                    if (StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)') {   
+                        Pretest3_Score1 = StudentAnswer[i].scorePre1;
+                        Pretest3_Score2 = StudentAnswer[i].scorePre2;
+                        Pretest3_Score3 = StudentAnswer[i].scorePre3;
+                        Pretest3_Score4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        DatatypeDone = 1;
+                    }
                     if (StudentAnswer[i].contentName ==='Operators-Quiz') {   
                         OperatorsScoreLV1 = StudentAnswer[i].scoreLV1;
                         OperatorsScoreLV2 = StudentAnswer[i].scoreLV2;
@@ -644,13 +663,13 @@ router.get('/', async (req, res, next) => {
                 }
 
                 /*** SUM */
+                //*** Chart Posttest score */
                 var BasicScore = IntroductionScoreLV1+StringScoreLV1+DatatypeScoreLV1+OperatorsScoreLV1+FlowControlScoreLV1+PointersScoreLV1+FunctionScoreLV1+StructureScoreLV1+ArrayLV1+InputOutputLV1 ;
                 var TraceScore = IntroductionScoreLV2+StringScoreLV2+DatatypeScoreLV2+OperatorsScoreLV2+FlowControlScoreLV2+PointersScoreLV2+FunctionScoreLV2+StructureScoreLV2+ArrayLV2+InputOutputLV2 ;
                 var ExplainScore = IntroductionScoreLV3+StringScoreLV3+DatatypeScoreLV3+OperatorsScoreLV3+FlowControlScoreLV3+PointersScoreLV3+FunctionScoreLV3+StructureScoreLV3+ArrayLV3+InputOutputLV3 ;
                 var WriteScore = IntroductionScoreLV4+StringScoreLV4+DatatypeScoreLV4+OperatorsScoreLV4+FlowControlScoreLV4+PointersScoreLV4+FunctionScoreLV4+StructureScoreLV4+ArrayLV4+InputOutputLV4 ;
                 //var CourseDone = IntroductionDone+StringDone+DatatypeDone+OperatorsDone+FlowControlDone+PointersDone+FunctionDone+StructureDone+ArrayDone+InputOutputDone;
                 
-                /*** Chart Posttest score */
                 var BasicPercent =  Math.round((BasicScore*5));
                 var TracePercent= Math.round((TraceScore*5));
                 var ExplainPercent = Math.round((ExplainScore*5));
@@ -660,11 +679,11 @@ router.get('/', async (req, res, next) => {
                 ExplainPercent = ExplainPercent;
                 WritePercent = WritePercent;
 
-                /*** Pretest score */
-                var BasicS = Pretest1_Score1+Pretest2_Score1;
-                var TraceS = Pretest1_Score2+Pretest2_Score2;
-                var ExplainS = Pretest1_Score3+Pretest2_Score3;
-                var WriteS = Pretest1_Score4+Pretest2_Score4;
+                //*** Pretest score */
+                var BasicS = Pretest1_Score1+Pretest2_Score1+Pretest3_Score1;
+                var TraceS = Pretest1_Score2+Pretest2_Score2+Pretest3_Score2;
+                var ExplainS = Pretest1_Score3+Pretest2_Score3+Pretest3_Score3;
+                var WriteS = Pretest1_Score4+Pretest2_Score4+Pretest3_Score4;
 
                 var BasicPer =  Math.round((BasicS));
                 var TracePer = Math.round((TraceS));

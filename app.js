@@ -117,10 +117,10 @@ app.use('/course-Datatype_and_Variable',
   ensureStudent,
   require('./routes/student/course/2_Datatype_and_Variable-course.route')
 );
-app.use('/course-Datatype',
+app.use('/course-Input_Output',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/3_Datatype-course.route')
+  require('./routes/student/course/3_Input_Output-course.route')
 );
 app.use('/course-Operators',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
