@@ -417,21 +417,12 @@ router.get('/', async (req, res, next) => {
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
                     IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
-                  if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)'){
-                    IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                  }
                   //** Datatype_and_Variable */
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'){
                     DatatypeDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
-                  if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)'){
-                    IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                  }
                   //** Input_and_Output */
                   if(StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'){
-                    StringDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                  }
-                  if(StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)'){
                     StringDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   //** */
