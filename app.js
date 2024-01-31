@@ -117,15 +117,15 @@ app.use('/course-Datatype_and_Variable',
   ensureStudent,
   require('./routes/student/course/2_Datatype_and_Variable-course.route')
 );
-app.use('/course-Input_Output',
+app.use('/course-Input_and_Output',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/3_Input_Output-course.route')
+  require('./routes/student/course/3_Input_and_Output-course.route')
 );
-app.use('/course-Operators',
+app.use('/course-Operators_and_Expressions',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/4_Operators-course.route')
+  require('./routes/student/course/4_Operators_and_Expressions-course.route')
 );
 app.use('/course-Selection_Statement',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -177,12 +177,12 @@ app.use('/course-Input_and_Output-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/quiz/3_Input_and_Output-quiz.route')
-);//** **/
-app.use('/course-Operators-quiz',
+);
+app.use('/course-Operators_and_Expressions-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/quiz/4_Operators-quiz.route')
-);
+  require('./routes/student/quiz/4_Operators_and_Expressions-quiz.route')
+);//** **/
 app.use('/course-Selection_Statement-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
@@ -234,10 +234,10 @@ app.use('/course-Input_and_Output-pretest',
   ensureStudent,
   require('./routes/student/pretest/3_Input_and_Output-pretest.route')
 );
-/**app.use('/course-Operators-pretest',
+/**app.use('/course-Operators_and_Expressions-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest/4_Operators-pretest.route')
+  require('./routes/student/pretest/4_Operators_and_Expressions-pretest.route')
 );
 app.use('/course-Selection_Statement-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
