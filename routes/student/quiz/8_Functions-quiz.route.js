@@ -6,9 +6,9 @@ const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://admin:1234@cluster0.ormtjkb.mongodb.net";
 const mydatabase = "Cluster0";
 
-var ADRI = "https://drive.google.com/file/d/17FCfs6NYXTPPYKf4SON56owA51xkkQRO/preview"
-var ADRI_Expect = "เขียนโปรแกรมโดยรับค่าตัวเลขจำนวน 2 ตัว จาก Keyboard โดยเลขที่เรียงจะเพิ่มขึ้นเท่าค่าตัวเลขที่ 2 ที่รับมาและหาค่าผลรวม"
-var ADRI_Answer = "https://drive.google.com/file/d/1i_f_tXaFK-u5Ni-d3u6Src1AL5RrCx9G/preview"
+var ADRI = "https://drive.google.com/file/d/1iIigzM3q5OUMdoAiPUNp1hsEZoOChZT_/preview"
+var ADRI_Expect = "จงเขียนโปรแกรมคำนวณการตั้งราคาสินค้า โดยรับค่า 1.ราคาต้นทุน 2.เปอร์เซ็นกำไรที่อยากได้ 3.ภาษีที่ต้องจ่าย "
+var ADRI_Answer = "https://drive.google.com/file/d/18WUyM9NXa5zy2Xm_E7_6ny9bncidIwaP/preview"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -30,7 +30,7 @@ router.get('/', async (req, res, next) => {
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/quiz/5_2_Loop-quiz', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
+            res.render('student/quiz/8_Functions-quiz', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
           });
         });
       }
@@ -39,6 +39,7 @@ router.get('/', async (req, res, next) => {
   });
   // PRETEST Check
 });
+
 /** user quiz send  */
 router.post('/submit', async (req, res, next) => {
   const person = req.user;
@@ -53,11 +54,11 @@ router.post('/submit', async (req, res, next) => {
   var scoreLV1 = 0;
   var scoreLV2 = 0;
   var scoreLV3 = 0;
-  var currentQuiz = "Loop-Quiz" //*** */
+  var currentQuiz = "Structure-Quiz" //*** */
   var timetodo = 0;
 
   /** chekc score */
-  if(choice1 === 'C'){
+  if(choice1 === 'A'){
     scoreLV1 = 10;
   }
   if(choice2 === 'B'){

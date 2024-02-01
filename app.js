@@ -126,32 +126,27 @@ app.use('/course-Operators_and_Expressions',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/course/4_Operators_and_Expressions-course.route')
-);//** */
+);
 app.use('/course-Selection_Statement',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/5_1_Selection-course.route')
+  require('./routes/student/course/5_Selection_Statement-course.route')
 );
 app.use('/course-Loop_Statement',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/5_2_Loop-course.route')
+  require('./routes/student/course/6_Loop_Statement-course.route')
 );
-app.use('/course-Pointers',
+app.use('/course-Array_and_String',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/6_Pointers-course.route')
+  require('./routes/student/course/7_Array_and_String-course.route')
 );
-app.use('/course-Function',
+app.use('/course-Functions',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/7_Function-course.route')
-);
-app.use('/course-Structure',
-  ensureLoggedIn({ redirectTo: '/auth/login' }),
-  ensureStudent,
-  require('./routes/student/course/8_Structure-course.route')
-);
+  require('./routes/student/course/8_Functions-course.route')
+);//** */
 app.use('/course-Array',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
@@ -188,11 +183,6 @@ app.use('/course-Selection_Statement-quiz',
   ensureStudent,
   require('./routes/student/quiz/5_1_Selection-quiz.route')
 );
-app.use('/course-Loop_Statement-quiz',
-  ensureLoggedIn({ redirectTo: '/auth/login' }),
-  ensureStudent,
-  require('./routes/student/quiz/5_2_Loop-course-quiz.route')
-);
 app.use('/course-Pointers-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
@@ -206,7 +196,7 @@ app.use('/course-Function-quiz',
 app.use('/course-Structure-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/quiz/8_Structure-quiz.route')
+  require('./routes/student/quiz/8_Functions-quiz.route')
 );
 app.use('/course-Array-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
