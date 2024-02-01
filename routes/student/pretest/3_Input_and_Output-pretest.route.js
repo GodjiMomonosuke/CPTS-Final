@@ -6,9 +6,11 @@ const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://admin:1234@cluster0.ormtjkb.mongodb.net";
 const mydatabase = "Cluster0";
 
-var ADRI = "https://drive.google.com/file/d/1IiFyAh1teNLEvMVvqYFo_SR__kBQYwFI/preview"
-var ADRI_Expect = "ทำการเพิ่มใส่นามสกุลเข้าไปโดยให้รหัสนักศึกษาแสดงออกมาท้ายสุด"
-var ADRI_Answer = "https://drive.google.com/file/d/1M8DU6l8MTxe6UIc426o4Ofyl98KF9xu1/preview"
+var ADRI1 = "https://drive.google.com/file/d/1pBIrINpZGRsPmonHCMpD6Vrobal8vX5q/preview"
+var ADRI2 = "https://drive.google.com/file/d/1o0XCMzQm7WUNV639rhytCrxdZaYoLbuw/preview"
+var ADRI3 = "https://drive.google.com/file/d/1CX7kBXlcwnKMsxnXpHWhnEWqrS51hWxc/preview"
+var ADRI4 = "https://drive.google.com/file/d/1O_bv7V3TGVRSRU5wWClBmtI4fcOfZ5ia/preview"
+var ADRI5 = "https://drive.google.com/file/d/11TahBnBjiHp-YtvHoeBw2eblzJECsOra/preview"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -30,7 +32,7 @@ router.get('/', async (req, res, next) => {
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/pretest/3_Input_and_Output-pretest', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
+            res.render('student/pretest/3_Input_and_Output-pretest', { person,StudentAnswer,RecommendaResult,ADRI1,ADRI2,ADRI3,ADRI4,ADRI5});
           });
         });
       }
@@ -176,24 +178,39 @@ router.post('/submit', async (req, res, next) => {
                 studentID: person.studentID,
                 role:person.role,
                 contentName:currentQuiz,
-                scorePre1:score1+score2+score3+score4+score5,
-                scorePre2:score6+score7+score8+score9+score10,
-                scorePre3:score11+score12+score13+score14+score15,
+                c1:score1,
+                c2:score2,
+                c3:score3,
+                c4:score4,
+                c5:score5,
+                scoreLV1:score1+score2+score3+score4+score5,
+                c6:score6,
+                c7:score7,
+                c8:score8,
+                c9:score9,
+                c10:score10,
+                scoreLV2:score6+score7+score8+score9+score10,
+                c11:score11,
+                c12:score12,
+                c13:score13,
+                c14:score14,
+                c15:score15,
+                scoreLV3:score11+score12+score13+score14+score15,
                 lang:lang,
                 code:code,
                 output:dataOut,
                 expResult16:expResult16,
-                expResult17:expResult17,
-                expResult18:expResult18,
-                expResult19:expResult19,
-                expResult20:expResult20,
                 sendLink16:sendLink16,
+                expResult17:expResult17,
                 sendLink171:sendLink171,
                 sendLink172:sendLink172,
+                expResult18:expResult18,
                 sendLink181:sendLink181,
                 sendLink182:sendLink182,
+                expResult19:expResult19,
                 sendLink191:sendLink191,
                 sendLink192:sendLink192,
+                expResult20:expResult20,
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
                 /**ADRI:ADRI,
