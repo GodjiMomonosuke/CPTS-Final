@@ -26,7 +26,9 @@
     </style>
 
     <link rel='stylesheet' href='stylesheets/home.css' />
-    <title>Datatype & I/O</title>
+    <link rel='stylesheet' href='stylesheets/gamequiz.css' />
+    <script src="javascripts/gamequiz.js"></script>
+    <title>Input and Output</title>
 </head>
 
 <body>
@@ -66,7 +68,231 @@
                     <iframe width="100%" height="600" src="https://www.youtube.com/embed/c8FwnP1TvNo?si=HVlNgIDERyAiPsR6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <h2>ใช้งาน Math.h Library คำสั่งช่วยทางคณิตศาสตร์ 🔥</h2>
                     <iframe width="100%" height="600" src="https://www.youtube.com/embed/3rrtOFUHv9I?si=hlThjJG8_2uWP94o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <br ></div>
+                <br ></div>
+            </div>
+
+
+            <br><br>
+            <h2>Knowledge</h2>
+            <div class="game">
+            <!--* ข้อ 1 K1 *-->
+            <div class="gamecontent">
+                <div  class="question">
+                <h5>คำสั่งใดใช้รับข้อมูลจำนวนเต็มจากผู้ใช้ในภาษา C</h5>
+                <br><br><p id="demo1"> </p>
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW1()">printf("%d", &num);</p>  
+                                                                                             
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionT1()">scanf("%d", &num);</p> 
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW1()">getchar();</p>   
+                        <p id="demo" class="button" onclick="myFunctionW1()">cin >> num;</p>    
+                    </div></div>
+                    
+                </div>
+            </div>
+            
+            <!--* ข้อ 2 K2 *-->
+            <div class="gamecontent">
+                <div  class="question">
+                <h5>ฟังก์ชันใดใช้แสดงข้อความออกทางหน้าจอในภาษา C</h5>
+                <br><br><p id="demo2"> </p>
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW2()">print();</p>    
+                        <p id="demo" class="button" onclick="myFunctionT2()">printf();</p>                                                                      
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW2()">cout <<;</p> 
+                        <p id="demo" class="button" onclick="myFunctionW2()">System.out.println();</p>  
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+
+            <!--* ข้อ 3 K3 *-->
+            <div class="gamecontent">
+                <div  class="question">
+                <h5>สำหรับการแสดงตัวเลขทศนิยม 2 ตำแหน่ง จะใช้ format specifier ใด</h5>
+                <br><br><p id="demo3"> </p>
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW3()">%d</p>    
+                        <p id="demo" class="button" onclick="myFunctionW3()">%2f</p>                                                                      
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionT3()">%.2f</p>  
+                        <p id="demo" class="button" onclick="myFunctionW3()">%f2</p>  
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+            </div>
+
+             <!-- Tracing -->
+             <h2>Tracing</h2>
+            <div class="game">
+            <!--* ข้อ 4 T1 *-->
+            <div class="gamecontent-T">
+                <div  class="question-T">
+                <h5>ถ้าผู้ใช้ป้อน 30 ข้อความที่แสดงออกทางหน้าจอจะเป็นอย่างไร</h5>
+                <p id="demo7">#include < stdio.h > 
+                <br>int main() {
+                <br>&ensp;int num;
+                <br>&ensp;printf("Enter a number: ");
+                <br>&ensp;scanf("%d", &num);
+                <br>&ensp;printf("Number entered: %d\n", num);
+                <br>&ensp;return 0;
+                <br>}
+
+                </p>
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW7()">Enter a number: Number entered: 30</p>    
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionT7()">Enter a number: 30 Number entered: 30</p>  
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW7()">Number entered: 30</p>  
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW7()">Enter a number: Number entered:</p>  
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+            <!--* ข้อ 5 T2*-->
+            <div class="gamecontent-T">
+                <div  class="question-T">
+                <h5>ถ้าผู้ใช้ป้อน "Hello Programming" ข้อความที่แสดงออกทางหน้าจอจะเป็นอย่างไร</h5>
+                <p id="demo8">#include < stdio.h >
+                <br>#define MAX_VALUE 80
+                <br>int main() {
+                <br>&ensp;char str[50];
+                <br>&ensp;printf("Enter a string: ");
+                <br>&ensp;scanf("%s", str);
+                <br>&ensp;printf("String entered: %s", str);
+                <br>&ensp;return 0;
+                <br>}
+
+                </p>
+                
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW8()">Enter a string: Hello Programming</p>                                                                      
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW8()">Enter a string: String entered: Hello Programming</p>  
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW8()">String entered: Hello Programming</p>  
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionT8()">Enter a string: Hello Programming String entered: Hello</p>  
+                    </div>
+                </div>
+                    
+                </div>
+            </div>  
+        </div>
+
+        <!-- Explaining -->
+        <h2>Explaining</h2>
+        <div class="game">
+            <!--* ข้อ 6 E1 *-->
+            <div class="gamecontent-E">
+                <div  class="question-E">
+                <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                <p id="demo9">#include < stdio.h > 
+                <br>#define MAX_VALUE 120
+                <br>int main() {
+                <br>&ensp;int num;
+                <br>&ensp;printf("Enter a number: ");
+                <br>&ensp;scanf("%d", &num);
+                <br>&ensp;printf("Number is: %d\n", num);
+                <br>&ensp;return 0;
+                <br>}
+
+                </p>
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW9()">โปรแกรมจะแสดง "Number is: " แล้วรอให้ผู้ใช้ป้อนตัวเลข</p>    
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW9()">โปรแกรมจะแสดง "Enter a number: " แล้วแสดงตัวเลขที่ผู้ใช้ป้อน</p>  
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW9()">โปรแกรมจะแสดง "Enter a number: " รอให้ผู้ใช้ป้อนข้อความ แล้วจะแสดงข้อความที่ผู้ใช้ป้อน</p>  
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionT9()">โปรแกรมจะแสดง "Enter a number: " รอให้ผู้ใช้ป้อนตัวเลข แล้วจะแสดงตัวเลขที่ผู้ใช้ป้อน</p>  
+                    </div>
+                </div>
+                    
+                </div>
+            </div></div>
+            <div class="game">
+                <!--* ข้อ 7 E2 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                    <p id="demo9">#include < stdio.h > 
+                    <br>#define MAX_VALUE 120
+                    <br>int main() {
+                    <br>&ensp;float temp;
+                    <br>&ensp;printf("Enter temperature in Celsius: ");
+                    <br>&ensp;scanf("%f", &temp);
+                    <br>&ensp;printf("Temperature in Fahrenheit: %.2f\n", (temp * 9 / 5) + 32);
+                    <br>&ensp;return 0;
+                    <br>}
+    
+                    </p>
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW9()">โปรแกรมจะรับค่าตัวเลขอุณหภูมิ Fahrenheit แล้วทำการแปลงเป็น Celsius พร้อมแสดงผล</p>    
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT9()">โปรแกรมจะรับค่าตัวเลขอุณหภูมิ Celsius แล้วทำการแปลงเป็น Fahrenheit พร้อมแสดงผล</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW9()">โปรแกรมจะแสดงอุณหภูมิ Celsius</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW9()">โปรแกรมจะแสดงอุณหภูมิ Fahrenheit</p>  
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+    
+            </div>
+
+
+
+
+
 
         <!-- 
         <button onclick="window.location.href='/course-Datatype-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" >
