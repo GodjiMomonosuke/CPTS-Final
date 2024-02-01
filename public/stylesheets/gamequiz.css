@@ -27,7 +27,7 @@
     color: #00ffee;
     font-size: 18px;
     background-color: #37228D;
-    height: 400px;
+    height: auto;
     border-radius: 10px; 
 }
 
@@ -66,7 +66,7 @@ div.btn {
 .gamecontent {
     background-color: #C3C3DA;
     height: 500px;
-    width: 350px;
+    width: 1200px;
     padding: 15px;
     border-radius: 20px;
     align-items: center;
@@ -75,7 +75,7 @@ div.btn {
 .gamecontent-T {
     background-color: #C3C3DA;
     height: auto;
-    width: auto;
+    width: 1200px;
     padding: 15px;
     border-radius: 20px;
     align-items: center;
