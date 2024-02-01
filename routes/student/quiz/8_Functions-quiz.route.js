@@ -6,9 +6,9 @@ const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://admin:1234@cluster0.ormtjkb.mongodb.net";
 const mydatabase = "Cluster0";
 
-var ADRI = "https://drive.google.com/file/d/18-UA-mYhZu9dqwnEdVuvrfkLnMlguqof/preview"
-var ADRI_Expect = "ให้ใส่ข้อมูลวันที่หมดอายุในเเต่ล่ะสินค้าโดยกำหนดการ input ด้วยตนเอง"
-var ADRI_Answer = "https://drive.google.com/file/d/1JtpxBq2MqkASL5q5i6kmwIt5y0wqFJei/preview"
+var ADRI = "https://drive.google.com/file/d/1iIigzM3q5OUMdoAiPUNp1hsEZoOChZT_/preview"
+var ADRI_Expect = "จงเขียนโปรแกรมคำนวณการตั้งราคาสินค้า โดยรับค่า 1.ราคาต้นทุน 2.เปอร์เซ็นกำไรที่อยากได้ 3.ภาษีที่ต้องจ่าย "
+var ADRI_Answer = "https://drive.google.com/file/d/18WUyM9NXa5zy2Xm_E7_6ny9bncidIwaP/preview"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -30,7 +30,7 @@ router.get('/', async (req, res, next) => {
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/quiz/10_InputOutput-quiz', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
+            res.render('student/quiz/8_Functions-quiz', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
           });
         });
       }
@@ -39,6 +39,7 @@ router.get('/', async (req, res, next) => {
   });
   // PRETEST Check
 });
+
 /** user quiz send  */
 router.post('/submit', async (req, res, next) => {
   const person = req.user;
@@ -50,15 +51,14 @@ router.post('/submit', async (req, res, next) => {
   var expResult = req.body.expResult
   var ImproveResult = ADRI_Expect
   var Improvevariable = req.body.Improvevariable
-  var expInput = req.body.expInput
   var scoreLV1 = 0;
   var scoreLV2 = 0;
   var scoreLV3 = 0;
-  var currentQuiz = "InputOutput-Quiz" //*** */
+  var currentQuiz = "Structure-Quiz" //*** */
   var timetodo = 0;
 
   /** chekc score */
-  if(choice1 === 'D'){
+  if(choice1 === 'A'){
     scoreLV1 = 10;
   }
   if(choice2 === 'B'){
@@ -69,7 +69,7 @@ router.post('/submit', async (req, res, next) => {
   }
   /** compiler */
   var envData = { OS : "linux" , cmd : "gcc" };
-  compiler.compileCPPWithInput(envData , code ,expInput, function (data) {
+  compiler.compileCPP(envData , code , function (data) {
     //compiler.compileCPP(envData , code , function (data) {
         var dataOut = data.output;
         if(dataOut === undefined || dataOut === null) {console.log("DataOut@undefined!!!! : "+dataOut)}
@@ -105,10 +105,9 @@ router.post('/submit', async (req, res, next) => {
                 output:dataOut,
                 ImproveResult:ImproveResult,
                 Improvevariable:Improvevariable,
-                expResult:"\n  *** INPUT ที่ต้องกรอก ***\n==========================\n: "+expInput+"\n==========================\n"+" \n  *** Output  ที่ได้ *** \n==========================\n"+expResult,
+                expResult:expResult,
                 ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer
-
               };
               dbo.collection("StudentAnswer").insertOne(myobj, function(err, res) {
                 if (err) throw err;
@@ -127,6 +126,5 @@ router.post('/submit', async (req, res, next) => {
     next(error);
   }
 });
-
 
 module.exports = router;
