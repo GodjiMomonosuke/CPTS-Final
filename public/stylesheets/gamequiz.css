@@ -1,3 +1,15 @@
+.scrollbtn {
+    height: 50px;
+    width: 150px;
+    background-color: #00ffee;
+    color: #000000;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: large;
+}
+
 .button {
     padding: 10px 10px;
     font-size: 18px;
@@ -45,9 +57,7 @@ h5{
     text-align: center;
 
 }
-p {
-    color: #ffffff;
-}
+
 .button:hover {
     background-color: #00ffee;
     color: black;

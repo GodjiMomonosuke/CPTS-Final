@@ -206,12 +206,12 @@ app.use('/course-Input_and_Output-pretest',
   ensureStudent,
   require('./routes/student/pretest/3_Input_and_Output-pretest.route')
 );
-/**app.use('/course-Operators_and_Expressions-pretest',
+app.use('/course-Operators_and_Expressions-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest/4_Operators_and_Expressions-pretest.route')
 );
-app.use('/course-Selection_Statement-pretest',
+/**app.use('/course-Selection_Statement-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest/5_1_Selection-pretest.route')
@@ -257,6 +257,11 @@ app.use('/pretest3_check',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest_check/pretest3_check.route')
+);
+app.use('/pretest4_check',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/pretest_check/pretest4_check.route')
 );
 
 
