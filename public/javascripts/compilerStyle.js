@@ -13,7 +13,7 @@ var code = document.getElementById('code');
                  }
                  lineCountCache = lineCount;
              }
- 
+
              code.addEventListener('scroll', () => {
                  lineCounter.scrollTop = code.scrollTop;
                  lineCounter.scrollLeft = code.scrollLeft;
