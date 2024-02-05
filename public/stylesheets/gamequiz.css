@@ -92,7 +92,6 @@ div.btn {
     margin: 20px;
 }
 
-
 .gamecontent-E {
     background-color: #C3C3DA;
     height: 750px;
@@ -100,6 +99,15 @@ div.btn {
     padding: 15px;
     border-radius: 20px;
     align-items: center;
+    margin: 20px;
+}
+
+.gamecontent-W {
+    background-color: #C3C3DA;
+    height: auto;
+    width: 1200px;
+    padding: 15px;
+    border-radius: 20px;
     margin: 20px;
 }
 
@@ -124,6 +132,9 @@ button.toggle {
     height: 100px;
     width: 100px;
     margin: 10px;
+}
+.btn.btn-info {
+    height: 60px;
 }
 
 
