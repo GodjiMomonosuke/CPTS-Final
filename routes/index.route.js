@@ -450,7 +450,7 @@ router.get('/', async (req, res, next) => {
                   if(StudentAnswer[i].contentName ==='InputOutput-Quiz'){
                     InputOutputDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
-                  /** 
+                  
                   if (StudentAnswer[i].contentName ==='TicTacToe' && StudentAnswer[i].scoreTeacher != undefined) {   
                     TicTacToeDone = StudentAnswer[i].scoreTeacher
                   }
@@ -465,7 +465,7 @@ router.get('/', async (req, res, next) => {
                   }
                   if (StudentAnswer[i].contentName ==='Calendar' && StudentAnswer[i].scoreTeacher != undefined) {   
                       CalculatorDone = StudentAnswer[i].scoreTeacher
-                  }*/
+                  }
 
                 }
 
