@@ -6,11 +6,11 @@ const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://admin:1234@cluster0.ormtjkb.mongodb.net";
 const mydatabase = "Cluster0";
 
-var ADRI1 = "https://drive.google.com/file/d/1pBIrINpZGRsPmonHCMpD6Vrobal8vX5q/preview"
-var ADRI2 = "https://drive.google.com/file/d/1o0XCMzQm7WUNV639rhytCrxdZaYoLbuw/preview"
-var ADRI3 = "https://drive.google.com/file/d/1CX7kBXlcwnKMsxnXpHWhnEWqrS51hWxc/preview"
-var ADRI4 = "https://drive.google.com/file/d/1O_bv7V3TGVRSRU5wWClBmtI4fcOfZ5ia/preview"
-var ADRI5 = "https://drive.google.com/file/d/11TahBnBjiHp-YtvHoeBw2eblzJECsOra/preview"
+var ADRI1 = "https://drive.google.com/file/d/1HzFgWUmyDx56mIiblOg8yUOAixuuQpKg/preview"
+var ADRI2 = "https://drive.google.com/file/d/1VFbeJRnLZHIU6P_wuDwtpxphq3X6Ur6Z/preview"
+var ADRI3 = "https://drive.google.com/file/d/1TmBJbXa8_wAY7ODfsQihN8G8ctXCzb2V/preview"
+var ADRI4 = "https://drive.google.com/file/d/1-91TH7mkgYYod5LGWU7IC5174T1pL0xd/preview"
+var ADRI5 = "https://drive.google.com/file/d/1WtMD_X4lmzUvNvY9uyyjUsAF1rNTuXc_/preview"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -21,8 +21,8 @@ router.get('/', async (req, res, next) => {
     var query = { email: person.email };
     dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
       if (err) throw err;
-      if(Object.keys(StudentAnswer).length < 6){
-        res.redirect('/pretest3_check')
+      if(Object.keys(StudentAnswer).length < 8){
+        res.redirect('/pretest4_check')
       }
       else{
         MongoClient.connect(url, function(err, db) {
@@ -98,52 +98,52 @@ router.post('/submit', async (req, res, next) => {
   var currentQuiz = "Operators_and_Expressions-(Post-test)" //*** */
   var timetodo = 0;
 
-  /** check score */
-  if(choice1 === 'A'){
-    score1 = 1;
-  }
-  if(choice2 === 'D'){
-    score2 = 1;
-  }
-  if(choice3 === 'C'){
-    score3 = 1;
-  }
-  if(choice4 === 'A'){
-    score4 = 1;
-  }
-  if(choice5 === 'C'){
-    score5 = 1;
-  }
-  if(choice6 === 'C'){
-    score6 = 1;
-  }
-  if(choice7 === 'C'){
-    score7 = 1;
-  }
-  if(choice8 === 'B'){
-    score8 = 1;
-  }
-  if(choice9 === 'A'){
-    score9 = 1;
-  }
-  if(choice10 === 'B'){
-    score10 = 1;
-  }
-  if(choice11 === 'A'){
-    score11 = 1;
-  }
-  if(choice12 === 'D'){
-    score12 = 1;
-  }
-  if(choice13 === 'B'){
-    score13 = 1;
-  }
-  if(choice14 === 'C'){
-    score14 = 1;
-  }
-  if(choice15 === 'B'){
-    score15 = 1;
-  }
+/** check score */
+if(choice1 === 'A'){
+  score1 = 1;
+}
+if(choice2 === 'A'){
+  score2 = 1;
+}
+if(choice3 === 'C'){
+  score3 = 1;
+}
+if(choice4 === 'A'){
+  score4 = 1;
+}
+if(choice5 === 'C'){
+  score5 = 1;
+}
+if(choice6 === 'A'){
+  score6 = 1;
+}
+if(choice7 === 'D'){
+  score7 = 1;
+}
+if(choice8 === 'C'){
+  score8 = 1;
+}
+if(choice9 === 'A'){
+  score9 = 1;
+}
+if(choice10 === 'B'){
+  score10 = 1;
+}
+if(choice11 === 'B'){
+  score11 = 1;
+}
+if(choice12 === 'C'){
+  score12 = 1;
+}
+if(choice13 === 'A'){
+  score13 = 1;
+}
+if(choice14 === 'C'){
+  score14 = 1;
+}
+if(choice15 === 'C'){
+  score15 = 1;
+}
 
 
   /** compiler */
