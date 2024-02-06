@@ -102,7 +102,7 @@ router.post('/submit', async (req, res, next) => {
   if(choice1 === 'A'){
     score1 = 1;
   }
-  if(choice2 === 'A'){
+  if(choice2 === 'B'){
     score2 = 1;
   }
   if(choice3 === 'C'){
