@@ -37,7 +37,12 @@
 
     <main class="grid-container">
 
-        <div>
+        <div class="content">
+        <!-- RECOMMENDATION-->
+        <% if (Object.keys(RecommendaResult).length !== 0 && RecommendaResult[0].RecommendCourse != "null"  ) { %>
+            <%- include('../layouts/recommendation') %>
+        <% } else { %>
+        <% } %>    
         <!-- POSTTEST  -->
         <% if (PostTestDone === 1) { %><%- include('../layouts/post-test') %><% }%>
         <!-- END Of POSTTEST  -->
