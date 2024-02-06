@@ -640,17 +640,15 @@ router.get('/', async (req, res, next) => {
                     var ArrCourseDone = [];
                     for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {        //value คือ ความยาก ง่าย - 1 ยาก - 9
                       var LV1 = StudentAnswer[i].scoreLV1 , LV2 = StudentAnswer[i].scoreLV2 , LV3 = StudentAnswer[i].scoreLV3;
-                      if (StudentAnswer[i].contentName ==='Introduction-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30 ) {ArrCourseDone.push({key:"Introduction",value:1});} 
-                      if (StudentAnswer[i].contentName ==='String-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30) {ArrCourseDone.push({key:"String",value:8});}
-                      if (StudentAnswer[i].contentName ==='Datatype-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30) {ArrCourseDone.push({key:"Datatype",value:2});} 
-                      if (StudentAnswer[i].contentName ==='Operators-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30) { ArrCourseDone.push({key:"Operators",value:3});}
-                      if (StudentAnswer[i].contentName ==='Selection-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30) {ArrCourseDone.push({key:"Selection Statement",value:5});}
-                      if (StudentAnswer[i].contentName ==='Loop-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30) {ArrCourseDone.push({key:"Loop Statement",value:6});}
-                      if (StudentAnswer[i].contentName ==='Pointers-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30) {ArrCourseDone.push({key:"Pointers",value:9});}
-                      if (StudentAnswer[i].contentName ==='Function-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30) {ArrCourseDone.push({key:"Function",value:10});}
-                      if (StudentAnswer[i].contentName ==='Structure-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30) {ArrCourseDone.push({key:"Structure",value:11});}
-                      if (StudentAnswer[i].contentName ==='Array-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30 ) {ArrCourseDone.push({key:"Array",value:7});}
-                      if (StudentAnswer[i].contentName ==='InputOutput-Quiz' && LV1 === 10 && LV2 === 20 && LV3 === 30) {ArrCourseDone.push({key:"InputOutput",value:4});}
+                      if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Algorithms and Flowcharts",value:1});} 
+                      if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'       && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Datatype and Variable",value:2});}
+                      if (StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'            && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Input and Output",value:3});} 
+                      if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) { ArrCourseDone.push({key:"Operators and Expressions",value:4});}
+                      if (StudentAnswer[i].contentName ==='Selection_Statement-(Post-test)'         && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Selection Statement",value:5});}
+                      if (StudentAnswer[i].contentName ==='Loop_Statement-(Post-test)'              && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Loop Statement",value:6});}
+                      if (StudentAnswer[i].contentName ==='Array_and_String-(Post-test)'            && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Array and String",value:7});}
+                      if (StudentAnswer[i].contentName ==='Function-(Post-test)'                    && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Function",value:8});}
+                      
                     }
                    
                     let CourseDonedictionary = Object.assign({}, ...ArrCourseDone.map((x) => ({[x.key]: x.value}))); //Array to dictionary
@@ -669,15 +667,15 @@ router.get('/', async (req, res, next) => {
                     // RecommendaResult[0].RecommendationType คือ วิธีแนะนำที่ผู้เรียนเลือก
  
                     var RecommendOutput = [];
-                    var CourseTotol = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Pointers','Function','Structure'] //เรียกจากง่ายไปยาก เปรียบเทียบที่เหมือนกับ path_left หาตัวที่ต่าง เพื่อเลือกตัวง่ายสุดแสดงผล (ไม่รวม file operation)
+                    var CourseTotol = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function'] //เรียกจากง่ายไปยาก เปรียบเทียบที่เหมือนกับ path_left หาตัวที่ต่าง เพื่อเลือกตัวง่ายสุดแสดงผล (ไม่รวม file operation)
                     var Course_Left = [];
                     var ArrRankStorage = []
                     
-                    var PathTicTacToe = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] //เรียกจากง่ายไปยาก
-                    var PathLibrary = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Structure'] 
-                    var PathRoshambo = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] 
-                    var PathCalendar = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','Pointers','Function'] 
-                    var PathCalculator = ['Algorithms_and_Flowcharts','Datatype_and_Variable','Operators','InputOutput','Selection Statement','Loop Statement','Array','String']
+                    var PathTicTacToe = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function'] //เรียกจากง่ายไปยาก
+                    var PathLibrary = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function'] 
+                    var PathRoshambo = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function'] 
+                    var PathCalendar = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function'] 
+                    var PathCalculator = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function']
                     //ตรวจสอบคอร์สที่ทำ กับ แต่ละ path
                     var b = new Set(CourseDoneSorted);
                     var DiffTicTacToe = [...PathTicTacToe].filter(x => !b.has(x));
@@ -867,33 +865,31 @@ router.post('/joinclass', async (req, res, next) => {
               
                         for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
         
-                        if(StudentAnswer[i].contentName ==='Introduction-Quiz'){
+                        if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
                           IntroductionDone = "YES";
                         }
-                        if(StudentAnswer[i].contentName ==='Datatype-Quiz'){
+                        if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'){
                           DatatypeDone = "YES";
                         }
-                        if(StudentAnswer[i].contentName ==='String-Quiz'){
+                        if(StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'){
                           StringDone = "YES";
                         }
-                        if(StudentAnswer[i].contentName ==='Operators-Quiz'){
+                        if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'){
                           OperatorsDone = "YES";
                         }
-                        if(StudentAnswer[i].contentName ==='FlowControl-Quiz'){
+                        if(StudentAnswer[i].contentName ==='Selection_Statement-(Post-test)'){
                           FlowControlDone = "YES";
                         }
-                        if(StudentAnswer[i].contentName ==='Pointers-Quiz'){
+                        if(StudentAnswer[i].contentName ==='Loop_Statement-(Post-test)'){
                           PointersDone = "YES";
                         }
-                        if(StudentAnswer[i].contentName ==='Function-Quiz'){
+                        if(StudentAnswer[i].contentName ==='Array_and_String-(Post-test)'){
                           FunctionDone = "YES";
                         }
-                        if(StudentAnswer[i].contentName ==='Structure-Quiz'){
+                        if(StudentAnswer[i].contentName ==='Functions-(Post-test)'){
                           StructureDone = "YES";
                         }
-                        if(StudentAnswer[i].contentName ==='Array-Quiz'){
-                          ArrayDone = "YES";
-                        }
+
                         /** */
                         if (StudentAnswer[i].contentName ==='TicTacToe') {   
                           TicTacToeDone = "YES";
