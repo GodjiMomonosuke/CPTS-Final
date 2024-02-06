@@ -18,21 +18,21 @@
                 <div class="col">
     
     
-                    <% if(RecommendaResult[0].RecommendCourse === "Algorithms_and_Flowcharts"){ %> <%# Output จาก Recommend มาเทียบ %> 
+                    <% if(RecommendaResult[0].RecommendCourse === "Algorithms and Flowcharts"){ %> <%# Output จาก Recommend มาเทียบ %> 
                         
                             <button onclick="window.location.href='/course-Algorithms_and_Flowcharts'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
                
-                    <% }else if(RecommendaResult[0].RecommendCourse === "Datatype_and_Variable"){ %>
+                    <% }else if(RecommendaResult[0].RecommendCourse === "Datatype and Variable"){ %>
                         
                             <button onclick="window.location.href='/course-Datatype_and_Variable'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
                         
-                    <% }else if(RecommendaResult[0].RecommendCourse === "Datatype"){ %>
+                    <% }else if(RecommendaResult[0].RecommendCourse === "Input and Output"){ %>
                         
-                            <button onclick="window.location.href='/course-Datatype'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
+                            <button onclick="window.location.href='/course-Input_and_Output'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
                    
-                    <% }else if(RecommendaResult[0].RecommendCourse === "Operators"){ %>
+                    <% }else if(RecommendaResult[0].RecommendCourse === "Operators and Expressions"){ %>
                         
-                            <button onclick="window.location.href='/course-Operators'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
+                            <button onclick="window.location.href='/course-Operators_and_Expressions'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
                   
                     <% }else if(RecommendaResult[0].RecommendCourse === "Selection Statement"){ %>
                         
@@ -41,25 +41,13 @@
                         
                             <button onclick="window.location.href='/course-Loop_Statement'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
                   
-                    <% }else if(RecommendaResult[0].RecommendCourse === "Pointers"){ %>
+                    <% }else if(RecommendaResult[0].RecommendCourse === "Array and String"){ %>
                         
-                            <button onclick="window.location.href='/course-Pointers'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
+                            <button onclick="window.location.href='/course-Array_and_String'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
                   
                     <% }else if(RecommendaResult[0].RecommendCourse === "Function"){ %>
                         
                             <button onclick="window.location.href='/course-Function'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
-                    
-                    <% }else if(RecommendaResult[0].RecommendCourse === "InputOutput"){ %>
-                        
-                            <button onclick="window.location.href='/course-InputOutput'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
-                           
-                    <% }else if(RecommendaResult[0].RecommendCourse === "Structure"){ %>
-                        
-                            <button onclick="window.location.href='/course-Structure'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
-                   
-                    <% }else if(RecommendaResult[0].RecommendCourse === "Array"){ %>
-                        
-                            <button onclick="window.location.href='/course-Array'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
                     
                     <% } else{ %>  <%# ถ้าไม่มีการแนะนำ คือ เรียนตาม path ที่เลือกเรียบร้อยแล้ว%> 
                         <button type="button" class="btn btn-outline-dark btn-sm btn-block " data-bs-toggle="modal" data-bs-target="#RecommendSetting"><svg height="20" width="20" viewBox="0 0 512 512">
