@@ -19,7 +19,9 @@ main {
     text-align: left;
     font-size: 20px;
 }
-  
+.content {
+    height: auto;
+}
 .item1 {
     grid-area: 1  / span 4 ;
     height: 140px;
@@ -28,13 +30,18 @@ main {
     padding: 10px;
     width: auto;
 }
-
-.content {
+.item2 {
     grid-area: 2  / span 4 ;
+    height: 160px;
+    background-color: #E2D9E5;
+    padding: 10px;
+    width: auto;
+}
+.content3 {
+    grid-area: 3  / span 4 ;
     width: 100%;
     padding: 10px;
-    height: 50%;
-
+    margin-top: 30px;
 }
 
 
