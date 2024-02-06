@@ -19,9 +19,7 @@ main {
     text-align: left;
     font-size: 20px;
 }
-.content {
-    height: auto;
-}
+
 .item1 {
     grid-area: 1  / span 4 ;
     height: 140px;
