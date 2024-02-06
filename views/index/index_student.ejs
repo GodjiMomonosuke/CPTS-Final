@@ -61,96 +61,95 @@
                             </button>
                             
                         <% } %>
-                        
-                        
-                <!-- Reccoment -->
-                <!-- <div class="card-header">
-                    <svg height="20" width="20" viewBox="0 0 512 512">
-                        <path d="M505.2 324.8l-47.73-68.78l47.75-68.81c7.359-10.62 8.797-24.12 3.844-36.06c-4.969-11.94-15.52-20.44-28.22-22.72l-82.39-14.88l-14.89-82.41c-2.281-12.72-10.76-23.25-22.69-28.22c-11.97-4.936-25.42-3.498-36.12 3.844L256 54.49L187.2 6.709C176.5-.6016 163.1-2.039 151.1 2.896c-11.92 4.971-20.4 15.5-22.7 28.19l-14.89 82.44L31.15 128.4C18.42 130.7 7.854 139.2 2.9 151.2C-2.051 163.1-.5996 176.6 6.775 187.2l47.73 68.78l-47.75 68.81c-7.359 10.62-8.795 24.12-3.844 36.06c4.969 11.94 15.52 20.44 28.22 22.72l82.39 14.88l14.89 82.41c2.297 12.72 10.78 23.25 22.7 28.22c11.95 4.906 25.44 3.531 36.09-3.844L256 457.5l68.83 47.78C331.3 509.7 338.8 512 346.3 512c4.906 0 9.859-.9687 14.56-2.906c11.92-4.969 20.4-15.5 22.7-28.19l14.89-82.44l82.37-14.88c12.73-2.281 23.3-10.78 28.25-22.75C514.1 348.9 512.6 335.4 505.2 324.8zM456.8 339.2l-99.61 18l-18 99.63L256 399.1L172.8 456.8l-18-99.63l-99.61-18L112.9 255.1L55.23 172.8l99.61-18l18-99.63L256 112.9l83.15-57.75l18.02 99.66l99.61 18L399.1 255.1L456.8 339.2zM256 143.1c-61.85 0-111.1 50.14-111.1 111.1c0 61.85 50.15 111.1 111.1 111.1s111.1-50.14 111.1-111.1C367.1 194.1 317.8 143.1 256 143.1zM256 319.1c-35.28 0-63.99-28.71-63.99-63.99S220.7 192 256 192s63.99 28.71 63.99 63.1S291.3 319.1 256 319.1z"/>
-                    </svg><b> Recommend</b>
+                </div>    
+            </thead>
+        </div>     
+        <div class="item2"> 
+            <thead>
+                <div class="card ">
+                    <div class="card-header">
+                        <svg height="20" width="20" viewBox="0 0 512 512">
+                            <path d="M505.2 324.8l-47.73-68.78l47.75-68.81c7.359-10.62 8.797-24.12 3.844-36.06c-4.969-11.94-15.52-20.44-28.22-22.72l-82.39-14.88l-14.89-82.41c-2.281-12.72-10.76-23.25-22.69-28.22c-11.97-4.936-25.42-3.498-36.12 3.844L256 54.49L187.2 6.709C176.5-.6016 163.1-2.039 151.1 2.896c-11.92 4.971-20.4 15.5-22.7 28.19l-14.89 82.44L31.15 128.4C18.42 130.7 7.854 139.2 2.9 151.2C-2.051 163.1-.5996 176.6 6.775 187.2l47.73 68.78l-47.75 68.81c-7.359 10.62-8.795 24.12-3.844 36.06c4.969 11.94 15.52 20.44 28.22 22.72l82.39 14.88l14.89 82.41c2.297 12.72 10.78 23.25 22.7 28.22c11.95 4.906 25.44 3.531 36.09-3.844L256 457.5l68.83 47.78C331.3 509.7 338.8 512 346.3 512c4.906 0 9.859-.9687 14.56-2.906c11.92-4.969 20.4-15.5 22.7-28.19l14.89-82.44l82.37-14.88c12.73-2.281 23.3-10.78 28.25-22.75C514.1 348.9 512.6 335.4 505.2 324.8zM456.8 339.2l-99.61 18l-18 99.63L256 399.1L172.8 456.8l-18-99.63l-99.61-18L112.9 255.1L55.23 172.8l99.61-18l18-99.63L256 112.9l83.15-57.75l18.02 99.66l99.61 18L399.1 255.1L456.8 339.2zM256 143.1c-61.85 0-111.1 50.14-111.1 111.1c0 61.85 50.15 111.1 111.1 111.1s111.1-50.14 111.1-111.1C367.1 194.1 317.8 143.1 256 143.1zM256 319.1c-35.28 0-63.99-28.71-63.99-63.99S220.7 192 256 192s63.99 28.71 63.99 63.1S291.3 319.1 256 319.1z"/>
+                        </svg><b> Recommend</b>
 
-                    <% if (Object.keys(RecommendaResult).length !== 0 && RecommendaResult[0].RecommendCourse != "null" ) { %> <%# ถ้าเลือกวิธีแนะนำแล้ว %> 
-                        <br>
-                        <%= RecommendaResult[0].RecommendationType %> <%# วิธีแนะนำคือ %> 
-                        <br>
-                        
-                        <% if (TicTacToePercent === 100 && Library_SystemPercent === 100 && RoshamboPercent === 100 && CalendarPercent === 100 && CalculatorPercent === 100 ) { %> <%# ถ้า Path ครบแล้ว %> 
-                            <p>คุณได้เรียนครบแล้ว!</p>
-                        <% } else { %>
-                            <div class="row">
-                                <% if(RecommendaResult[0].RecommendCourse === "Algorithms_and_Flowcharts"){ %> <%# Output จาก Recommend มาเทียบ %> 
-                                    <div class="col-6">
-                                        <button onclick="window.location.href='/course-Algorithms_and_Flowcharts'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
-                                    </div>
-                                <% }else if(RecommendaResult[0].RecommendCourse === "Datatype_and_Variable"){ %>
-                                    <div class="col-6">
-                                        <button onclick="window.location.href='/course-Datatype_and_Variable'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
-                                    </div>
-                                <% }else if(RecommendaResult[0].RecommendCourse === "Datatype"){ %>
-                                    <div class="col-6">
-                                        <button onclick="window.location.href='/course-Datatype'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
-                                    </div>
-                                <% }else if(RecommendaResult[0].RecommendCourse === "Operators"){ %>
-                                    <div class="col-6">
-                                        <button onclick="window.location.href='/course-Operators'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
-                                    </div>
-                                <% }else if(RecommendaResult[0].RecommendCourse === "Flow Control"){ %>
-                                    <div class="col-6">
-                                        <button onclick="window.location.href='/course-Flow_Control'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
-                                    </div>
-                                <% }else if(RecommendaResult[0].RecommendCourse === "Pointers"){ %>
-                                    <div class="col-6">
-                                        <button onclick="window.location.href='/course-Pointers'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
-                                    </div>
-                                <% }else if(RecommendaResult[0].RecommendCourse === "Function"){ %>
-                                    <div class="col-6">
-                                        <button onclick="window.location.href='/course-Function'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
-                                    </div>
-                                <% }else if(RecommendaResult[0].RecommendCourse === "Structure"){ %>
-                                    <div class="col-6">
-                                        <button onclick="window.location.href='/course-Structure'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
-                                    </div>
-                                <% }else if(RecommendaResult[0].RecommendCourse === "Array"){ %>
-                                    <div class="col-6">
-                                        <button onclick="window.location.href='/course-Array'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
-                                    </div>
-                                <% } else { %>  <%# ถ้าไม่มีการแนะนำ คือ เรียนตาม path ที่เลือกเรียบร้อยแล้ว%> 
-                                    <h6>Finished</h6>
-                                    <div class="w-100"></div>
-                                    <div class="col-6">Next</div>
-                                    
-                                <% } %>
+                        <% if (Object.keys(RecommendaResult).length !== 0 && RecommendaResult[0].RecommendCourse != "null" ) { %> <%# ถ้าเลือกวิธีแนะนำแล้ว %> 
+                            <br>
+                            <%= RecommendaResult[0].RecommendationType %> <%# วิธีแนะนำคือ %> 
+                            <br>
+                            
+                            <% if (TicTacToePercent === 100 && Library_SystemPercent === 100 && RoshamboPercent === 100 && CalendarPercent === 100 && CalculatorPercent === 100 ) { %> <%# ถ้า Path ครบแล้ว %> 
+                                <p>คุณได้เรียนครบแล้ว!</p>
+                            <% } else { %>
+                                <div class="row">
+                                    <% if(RecommendaResult[0].RecommendCourse === "Algorithms and Flowcharts"){ %> <%# Output จาก Recommend มาเทียบ %> 
+                                        <div class="col-6">
+                                            <button onclick="window.location.href='/course-Algorithms_and_Flowcharts'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                        </div>
+                                    <% }else if(RecommendaResult[0].RecommendCourse === "Datatype and Variable"){ %>
+                                        <div class="col-6">
+                                            <button onclick="window.location.href='/course-Datatype_and_Variable'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                        </div>
+                                    <% }else if(RecommendaResult[0].RecommendCourse === "Input and Output"){ %>
+                                        <div class="col-6">
+                                            <button onclick="window.location.href='/course-Input_and_Output'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                        </div>
+                                    <% }else if(RecommendaResult[0].RecommendCourse === "Operators and Expressions"){ %>
+                                        <div class="col-6">
+                                            <button onclick="window.location.href='/course-Operators_and_Expressions'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                        </div>
+                                    <% }else if(RecommendaResult[0].RecommendCourse === "Selection Statement"){ %>
+                                        <div class="col-6">
+                                            <button onclick="window.location.href='/course-Selection_Statement'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                        </div>
+                                    <% }else if(RecommendaResult[0].RecommendCourse === "Loop Statement"){ %>
+                                        <div class="col-6">
+                                            <button onclick="window.location.href='/course-Loop_Statement'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                        </div>
+                                    <% }else if(RecommendaResult[0].RecommendCourse === "Array and String"){ %>
+                                        <div class="col-6">
+                                            <button onclick="window.location.href='/course-Array_and_String'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                        </div>
+                                    <% }else if(RecommendaResult[0].RecommendCourse === "Function"){ %>
+                                        <div class="col-6">
+                                            <button onclick="window.location.href='/course-Functions'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i></button>
+                                        </div>
+                                    <% } else{ %>  <%# ถ้าไม่มีการแนะนำ คือ เรียนตาม path ที่เลือกเรียบร้อยแล้ว%> 
+                                        <h6>Finished</h6>
+                                        <div class="w-100"></div>
+                                        <div class="col-6">Next</div>
+                                        
+                                    <% } %>
 
-                                <div class="col-auto">
-                                    <button type="button" class="btn btn-outline-dark btn-sm btn-block " data-bs-toggle="modal" data-bs-target="#RecommendSetting"><i class="fa fa-flag" style="font-size: 16px;;align-items: center;" ></i></button>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-dark btn-sm btn-block " data-bs-toggle="modal" data-bs-target="#RecommendSetting"><i class="fa fa-flag" style="font-size: 16px;;align-items: center;" ></i></button>
+                                    </div>
                                 </div>
-                            </div>
-                        <% } %>
+                            <% } %>
+                            
+
+                        <% } else{ %> 
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#RecommendSetting">
+                                <svg height="20" width="20" viewBox="0 0 512 512">
+                                    <path d="M349.565 98.783C295.978 98.783 251.721 64 184.348 64c-24.955 0-47.309 4.384-68.045 12.013a55.947 55.947 0 0 0 3.586-23.562C118.117 24.015 94.806 1.206 66.338.048 34.345-1.254 8 24.296 8 56c0 19.026 9.497 35.825 24 45.945V488c0 13.255 10.745 24 24 24h16c13.255 0 24-10.745 24-24v-94.4c28.311-12.064 63.582-22.122 114.435-22.122 53.588 0 97.844 34.783 165.217 34.783 48.169 0 86.667-16.294 122.505-40.858C506.84 359.452 512 349.571 512 339.045v-243.1c0-23.393-24.269-38.87-45.485-29.016-34.338 15.948-76.454 31.854-116.95 31.854z"/></svg>
+                                    <b> Choose</b>
+                            </button>
+                         <% } %>  
                         
-
-                    <% } else{ %> 
-                        <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#RecommendSetting">
-                            <svg height="20" width="20" viewBox="0 0 512 512">
-                                <path d="M349.565 98.783C295.978 98.783 251.721 64 184.348 64c-24.955 0-47.309 4.384-68.045 12.013a55.947 55.947 0 0 0 3.586-23.562C118.117 24.015 94.806 1.206 66.338.048 34.345-1.254 8 24.296 8 56c0 19.026 9.497 35.825 24 45.945V488c0 13.255 10.745 24 24 24h16c13.255 0 24-10.745 24-24v-94.4c28.311-12.064 63.582-22.122 114.435-22.122 53.588 0 97.844 34.783 165.217 34.783 48.169 0 86.667-16.294 122.505-40.858C506.84 359.452 512 349.571 512 339.045v-243.1c0-23.393-24.269-38.87-45.485-29.016-34.338 15.948-76.454 31.854-116.95 31.854z"/></svg>
-                                <b> Choose</b>
-                        </button>
-                     <% } %> 
-
-                     
-                    
-                </div>    -->
-
-                </div>
+                    </div>	
+            </thead>
+            
+        </div>    
                 
-            </thead>    
-        </div>
+       
+        
+        
    
     
 
 <!-- MID -->
     <!-- SKILLS-->
-  
-    <div class="content">
+
+    <div class="content3">
         <% if(isNaN(BasicPercent)){ %>
 
         <% } else{ %>  
@@ -206,17 +205,9 @@
              
               
              
-        <% } %>
-<br>
-
-        
-
-        
-        
-    <div>
-
-        
-        
+            <% } %>
+            <br>
+        </div>
     </div>
 
 
@@ -248,7 +239,43 @@
         </div>
     </div>
 
-
+    <!-- Recommendation -->
+    <div class="modal fade" id="RecommendSetting" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Recommendation Setting</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/Recommendation_setting" method="post" autocomplete="off">
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <b>เส้นทางตาม Course ที่ทำ</b>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="RecommendationSetting" id="course-Path" value="Fastest Path">
+                                    <label class="form-check-label" for="course-Path">
+                                    หาเส้นทางที่เร็วที่สุด
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>   
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
+            </form>       
+    
+          </div>
+        </div>
+    </div>
 
     
 
