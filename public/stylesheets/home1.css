@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 
 html {
-    height: 110%;
+    height: fit-content;
 }
 body {
     background-color: #E2D9E5;
@@ -9,10 +9,8 @@ body {
     height: 100%;
 }
 main { 
-    display: grid;
-    grid-template: 180px / auto auto auto auto;
     background-color: #E2D9E5;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 10%;
     margin-right: 10%;
     height: 100%;
@@ -21,7 +19,7 @@ main {
 }
 
 .item1 {
-    grid-area: 1  / span 4 ;
+
     height: 140px;
     margin-top: 30px;
     background-color: #9C7EB7;
@@ -29,14 +27,14 @@ main {
     width: auto;
 }
 .item2 {
-    grid-area: 2  / span 4 ;
+
     height: 160px;
     background-color: #E2D9E5;
     padding: 10px;
     width: auto;
 }
 .content3 {
-    grid-area: 3  / span 4 ;
+
     width: 100%;
     padding: 10px;
     margin-top: 30px;
