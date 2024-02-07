@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 
 html {
-    height: 110%;
+    height: fit-content;
 }
 body {
     background-color: #E2D9E5;
@@ -10,7 +10,7 @@ body {
 }
 main { 
     background-color: #E2D9E5;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 10%;
     margin-right: 10%;
     height: 100%;
