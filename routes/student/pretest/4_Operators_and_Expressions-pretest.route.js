@@ -61,7 +61,8 @@ router.post('/submit', async (req, res, next) => {
   const choice13  = req.body.choice13
   const choice14  = req.body.choice14
   const choice15  = req.body.choice15
-  
+ 
+
   var code = req.body.code;
   var lang = req.body.lang;
   var expResult16 = req.body.expResult16
@@ -78,6 +79,7 @@ router.post('/submit', async (req, res, next) => {
   var sendLink192 = req.body.sendLink192
   var sendLink201 = req.body.sendLink201
   var sendLink202 = req.body.sendLink202
+  var rating  = req.body.rating
 
   var score1 = 0;
   var score2 = 0;
@@ -213,6 +215,7 @@ router.post('/submit', async (req, res, next) => {
                 expResult20:expResult20,
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
+                rating:rating,
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };
