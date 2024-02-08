@@ -426,7 +426,7 @@ router.get('/', async (req, res, next) => {
                     StringDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   //** */
-                  if(StudentAnswer[i].contentName ==='Operators-Quiz'){
+                  if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'){
                     OperatorsDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Selection-Quiz'){
@@ -556,7 +556,7 @@ router.get('/', async (req, res, next) => {
                         DatatypeScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         DatatypeDone = 1;
                     } 
-                    if (StudentAnswer[i].contentName ==='Operators-Quiz') {   
+                    if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)') {   
                         OperatorsScoreLV1 = StudentAnswer[i].scoreLV1;
                         OperatorsScoreLV2 = StudentAnswer[i].scoreLV2;
                         OperatorsScoreLV3 = StudentAnswer[i].scoreLV3;
