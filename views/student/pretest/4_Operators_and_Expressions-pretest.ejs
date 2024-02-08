@@ -68,6 +68,28 @@
     
 
     <%# LV1 %> <br>
+
+        <script> // * Timer * //
+            var timerVariable = setInterval(countUpTimer, 1000);
+            var totalSeconds = 0;
+
+            function countUpTimer() {
+            ++totalSeconds;
+            var hour = Math.floor(totalSeconds / 3600);
+            var minute = Math.floor((totalSeconds - hour * 3600) / 60);
+            var seconds = totalSeconds - (hour * 3600 + minute * 60);
+            if (hour < 10) hour = '0' + hour;
+            if (minute < 10) minute = '0' + minute;
+            if (seconds < 10) seconds = '0' + seconds;
+            document.getElementById('count_up_timer').innerHTML =
+                hour + ':' + minute + ':' + seconds;
+            }
+        </script>
+        <div id="count_up_timer">00:00:00</div>
+        <button id="stop_count_up_timer" onclick="clearInterval(timerVariable)">Stop Time</button>
+        
+       
+    
                 <h3>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</h3>
                 <!-- ข้อ 1 -->
                 <div class="list-group">
@@ -674,7 +696,7 @@
     <%# SUBMIT %> 
             <!-- Button trigger modal -->
             <div class="d-grid gap-2">
-                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
+                <button type="button" id="stop_count_up_timer" onclick="clearInterval(timerVariable)" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
                     ส่งคำตอบ
                 </button>
             </div>
