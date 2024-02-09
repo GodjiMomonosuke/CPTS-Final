@@ -42,6 +42,9 @@ router.get('/', async (req, res, next) => {
   // PRETEST Check
 });
 
+//** Time count **//
+
+
 
 /** user quiz send  */
 router.post('/submit', async (req, res, next) => {
@@ -79,6 +82,7 @@ router.post('/submit', async (req, res, next) => {
   var sendLink192 = req.body.sendLink192
   var sendLink201 = req.body.sendLink201
   var sendLink202 = req.body.sendLink202
+
   var rating  = req.body.rating
 
   var score1 = 0;
@@ -216,6 +220,7 @@ router.post('/submit', async (req, res, next) => {
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
                 rating:rating,
+                
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };
