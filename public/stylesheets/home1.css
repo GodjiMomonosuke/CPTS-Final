@@ -64,9 +64,7 @@ button.btn-secondary {
     grid-template-columns: 5% 30% 65%;
     padding: 10px;
 }
-iframe {
-    border-radius: 10px;
-}
+
 
 .btn1 {
     background-color: #9C7EB7;

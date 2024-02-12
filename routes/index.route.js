@@ -384,7 +384,7 @@ router.get('/', async (req, res, next) => {
                 if (err) throw err;
 
                 var IntroductionDone = "ยังไม่ทำ" ,StringDone = "ยังไม่ทำ" ,OperatorsDone = "ยังไม่ทำ" ,DatatypeDone = "ยังไม่ทำ",FlowControlDone = "ยังไม่ทำ",LoopDone = "ยังไม่ทำ",PointersDone = "ยังไม่ทำ",FunctionDone = "ยังไม่ทำ",StructureDone = "ยังไม่ทำ",ArrayDone = "ยังไม่ทำ" ,InputOutputDone = "ยังไม่ทำ" ;
-                var TicTacToeDone = "ยังไม่ทำ" , Library_SystemDone = "ยังไม่ทำ" , RoshamboDone = "ยังไม่ทำ" ,CalendarDone = "ยังไม่ทำ" , CalculatorDone = "ยังไม่ทำ";
+                var Ticket_Booking_System = "ยังไม่ทำ" , Library_SystemDone = "ยังไม่ทำ" , RoshamboDone = "ยังไม่ทำ" ,CalendarDone = "ยังไม่ทำ" , CalculatorDone = "ยังไม่ทำ";
                 var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "รอตรวจ";
       
                 for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
@@ -451,8 +451,8 @@ router.get('/', async (req, res, next) => {
                     InputOutputDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   
-                  if (StudentAnswer[i].contentName ==='TicTacToe' && StudentAnswer[i].scoreTeacher != undefined) {   
-                    TicTacToeDone = StudentAnswer[i].scoreTeacher
+                  if (StudentAnswer[i].contentName ==='TicketBookingSystem' && StudentAnswer[i].scoreTeacher != undefined) {   
+                    Ticket_Booking_SystemDone = StudentAnswer[i].scoreTeacher
                   }
                   if (StudentAnswer[i].contentName ==='LibrarySystem'&& StudentAnswer[i].scoreTeacher != undefined) {   
                     Library_SystemDone = StudentAnswer[i].scoreTeacher
@@ -481,7 +481,7 @@ router.get('/', async (req, res, next) => {
                           var dbo = db.db(mydatabase);
                           var myquery = { email: person.email};
                           var newvalues = { $set: {
-                            TicTacToe:TicTacToeDone,
+                            TicketBookingSystem:Ticket_Booking_SystemDone,
                             LibrarySystem:Library_SystemDone,
                             Roshambo:RoshamboDone,
                             Calculator:CalendarDone,
@@ -671,14 +671,14 @@ router.get('/', async (req, res, next) => {
                     var Course_Left = [];
                     var ArrRankStorage = []
                     
-                    var PathTicTacToe = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function'] //เรียกจากง่ายไปยาก
+                    var PathTicketBookingSystem = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions'] //เรียกจากง่ายไปยาก
                     var PathLibrary = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function'] 
                     var PathRoshambo = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function'] 
                     var PathCalendar = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function'] 
                     var PathCalculator = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function']
                     //ตรวจสอบคอร์สที่ทำ กับ แต่ละ path
                     var b = new Set(CourseDoneSorted);
-                    var DiffTicTacToe = [...PathTicTacToe].filter(x => !b.has(x));
+                    var DiffTicketBookingSystem = [...PathTicketBookingSystem].filter(x => !b.has(x));
                     var DiffLibrary = [...PathLibrary].filter(x => !b.has(x));
                     var DiffRoshambo = [...PathRoshambo].filter(x => !b.has(x));
                     var DiffCalendar = [...PathCalendar].filter(x => !b.has(x));
@@ -691,11 +691,11 @@ router.get('/', async (req, res, next) => {
                         //***RECOMMEND : COURSE
                         if(RecommendaResult[0].RecommendationType === "Fastest Path"){
                           //ตรวจสอบว่ายังมีคอร์สเหลือไหม && เก็บข้อมูลเพื่อส่งต่อ
-                          if(DiffCalculator.length != 0){Course_Left.push({CourseName:"Calculator" ,length:DiffCalculator.length, CourseLEFT :DiffCalculator})}
-                          if(DiffTicTacToe.length != 0) {Course_Left.push({CourseName:"TicTacToe"  ,length:DiffTicTacToe.length , CourseLEFT :DiffTicTacToe})}
-                          if(DiffRoshambo.length != 0)  {Course_Left.push({CourseName:"Roshambo"   ,length:DiffRoshambo.length  , CourseLEFT :DiffRoshambo})}
-                          if(DiffCalendar.length != 0)  {Course_Left.push({CourseName:"Calendar"   ,length:DiffCalendar.length  , CourseLEFT :DiffCalendar})}
-                          if(DiffLibrary.length != 0)   {Course_Left.push({CourseName:"Library"    ,length:DiffLibrary.length   , CourseLEFT :DiffLibrary})}
+                          if(DiffCalculator.length != 0){Course_Left.push({CourseName:"Calculator"                      ,length:DiffCalculator.length ,           CourseLEFT :DiffCalculator})}
+                          if(DiffTicketBookingSystem.length != 0) {Course_Left.push({CourseName:"TicketBookingSystem"   ,length:DiffTicketBookingSystem.length ,  CourseLEFT :DiffTicketBookingSystem})}
+                          if(DiffRoshambo.length != 0)  {Course_Left.push({CourseName:"Roshambo"                        ,length:DiffRoshambo.length  ,            CourseLEFT :DiffRoshambo})}
+                          if(DiffCalendar.length != 0)  {Course_Left.push({CourseName:"Calendar"                        ,length:DiffCalendar.length  ,            CourseLEFT :DiffCalendar})}
+                          if(DiffLibrary.length != 0)   {Course_Left.push({CourseName:"Library"                         ,length:DiffLibrary.length   ,            CourseLEFT :DiffLibrary})}
                           //หา path ที่น้อยที่สุด
                           var rankCourse_left = Course_Left.sort(function (a, b) {return a.length - b.length;});
                           if(rankCourse_left[1] === undefined){ //ตรวจสอบค่าเปรียบเทียบว่ามีให้เปรียบเทียบไหม
@@ -729,7 +729,7 @@ router.get('/', async (req, res, next) => {
                           }
                         }
                           //***RECOMMEND : PROJECT ถ้าเลือก path มาก็จะแนะนำ คอร์ส ที่ง่ายที่สุด
-                          else if(RecommendaResult[0].RecommendationType === "TicTacToe"  ){ RecommendOutput = DiffTicTacToe  }
+                          else if(RecommendaResult[0].RecommendationType === "TicketBookingSystem"  ){ RecommendOutput = DiffTicketBookingSystem }
                           else if(RecommendaResult[0].RecommendationType === "Library"    ){ RecommendOutput = DiffLibrary    }
                           else if(RecommendaResult[0].RecommendationType === "Roshambo"   ){ RecommendOutput = DiffRoshambo   }
                           else if(RecommendaResult[0].RecommendationType === "Calendar"   ){ RecommendOutput = DiffCalendar   }
@@ -758,7 +758,7 @@ router.get('/', async (req, res, next) => {
 
 
                     //***PROJECT UNLOCK */
-                    var TicTacToePercent = Math.round(((PathTicTacToe.length-DiffTicTacToe.length)/PathTicTacToe.length)*100)
+                    var TicketBooking_SystemPercent = Math.round(((PathTicketBookingSystem.length-DiffTicketBookingSystem.length)/PathTicketBookingSystem.length)*100)
                     var Library_SystemPercent = Math.round(((PathLibrary.length-DiffLibrary.length)/PathLibrary.length)*100)
                     var RoshamboPercent = Math.round(((PathRoshambo.length-DiffRoshambo.length)/PathRoshambo.length)*100)
                     var CalendarPercent = Math.round(((PathCalendar.length-DiffCalendar.length)/PathCalendar.length)*100)
@@ -776,7 +776,7 @@ router.get('/', async (req, res, next) => {
                           MongoClient.connect(url, function(err, db) {
                             if (err) throw err;
                             var dbo = db.db(mydatabase);
-                            var myobj = { email:person.email,TicTacToePercent:TicTacToePercent, LibraryPercent:Library_SystemPercent,RoshamboPercent:RoshamboPercent,CalendarPercent:CalendarPercent,CalculatorPercent:CalculatorPercent};
+                            var myobj = { email:person.email,TicketBooking_SystemPercent:TicketBooking_SystemPercent, LibraryPercent:Library_SystemPercent,RoshamboPercent:RoshamboPercent,CalendarPercent:CalendarPercent,CalculatorPercent:CalculatorPercent};
                             dbo.collection("StudentProject").insertOne(myobj, function(err, res) {
                               if (err) throw err;
                               db.close();
@@ -789,7 +789,7 @@ router.get('/', async (req, res, next) => {
                             if (err) throw err;
                             var dbo = db.db(mydatabase);
                             var myquery = { email: person.email };
-                            var newvalues = { $set: {TicTacToePercent:TicTacToePercent, LibraryPercent:Library_SystemPercent,RoshamboPercent:RoshamboPercent,CalendarPercent:CalendarPercent,CalculatorPercent:CalculatorPercent} };
+                            var newvalues = { $set: {TicketBooking_SystemPercent:TicketBooking_SystemPercent, LibraryPercent:Library_SystemPercent,RoshamboPercent:RoshamboPercent,CalendarPercent:CalendarPercent,CalculatorPercent:CalculatorPercent} };
                             dbo.collection("StudentProject").updateOne(myquery, newvalues, function(err, res) {
                               if (err) throw err;
                               db.close();
@@ -807,7 +807,7 @@ router.get('/', async (req, res, next) => {
 
                     res.render('index/index_student', { person ,result,RecommendaResult,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
-                      TicTacToePercent,Library_SystemPercent,RoshamboPercent,CalendarPercent,CalculatorPercent
+                      TicketBooking_SystemPercent,Library_SystemPercent,RoshamboPercent,CalendarPercent,CalculatorPercent
                     });
 
                   });
