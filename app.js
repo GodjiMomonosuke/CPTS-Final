@@ -81,10 +81,10 @@ app.use('/project',
   ensureStudent,
   require('./routes/student/project/project.route')
 );
-app.use('/project-Tic_Tac_Toe',
+app.use('/project-Ticket_Booking_System',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/project/1_TicTacToe.route')
+  require('./routes/student/project/1_TicketBookingSystem.route')
 );
 app.use('/project-Library_System',
   ensureLoggedIn({ redirectTo: '/auth/login' }),

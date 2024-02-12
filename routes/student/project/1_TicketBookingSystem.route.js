@@ -6,19 +6,19 @@ const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://admin:1234@cluster0.ormtjkb.mongodb.net";
 const mydatabase = "Cluster0";
 
-var ADRI = "https://drive.google.com/file/d/1Is8Qj2im9biFdFb-Cmq53AGFwRLRUPbU/preview"
-var ADRI_Answer = "https://drive.google.com/file/d/1Vvh6VsYOV5hjspRp5vQYdZultMEKjaZJ/preview"
+var ADRI = "https://drive.google.com/file/d/1PpWrOPCdhHaGmN-OWPOpa4aYoqvlZeAq/preview"
+var ADRI_Answer = ""
 
 router.post('/submit', async (req, res, next) => {
   const person = req.user;
 
   var code = req.body.code;
   var lang = req.body.lang;
-  var expResult = req.body.expResult
-  var ImproveResult = req.body.ImproveResult
-  var Improvevariable = req.body.Improvevariable
+  var sendLink16 = req.body.sendLink16
+  var expResult16 = req.body.expResult16
+  var expResult17 = req.body.expResult17
 
-  var currentProject = "TicTacToe";
+  var currentProject = "TicketBookingSystem";
   var timetodo = 0;
 
   //*** COMPILER */
@@ -50,12 +50,12 @@ router.post('/submit', async (req, res, next) => {
             role:person.role,
             contentName:currentProject,
             lang:lang,
+            sendLink16:sendLink16,
             code:code,
             output:dataOut,
- 
-            expResult:expResult,
-            ImproveResult:ImproveResult,
-            Improvevariable:Improvevariable,
+            expResult16:expResult16,
+            expResult17:expResult17,
+
             ADRI:ADRI,
             ADRI_Answer:ADRI_Answer
           };
@@ -90,7 +90,7 @@ router.get('/', async (req, res, next) => {
           res.redirect('/')
         }
         else{
-          res.render('student/project/1_TicTacToe', { person , ADRI });
+          res.render('student/project/1_TicketBookingSystem', { person , ADRI });
         }
         db.close();
       });

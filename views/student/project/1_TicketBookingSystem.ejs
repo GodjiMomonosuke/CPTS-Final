@@ -15,6 +15,20 @@
             -moz-user-select: none;
             user-select: none;
         }
+        .group2 {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 10px;
+        }
+        a.DrawIo {
+            color: black;
+            text-decoration: none;
+            background-color: #d27700;
+            padding-top: 15px;
+            height: 60px;
+            width: 600px;
+            text-align: center;
+        }
 
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
@@ -23,11 +37,11 @@
         }
     </style>
 
-    <link rel='stylesheet' href='stylesheets/home.css' />
+    
     <link rel='stylesheet' href='stylesheets/compiler_line.css' />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <title>Tic Tac Toe</title>
+    <title>Ticket Booking System</title>
 </head>
 
 <body>
@@ -38,32 +52,41 @@
 <br><br><br>
     <div id = "content" class="container">
 
-<form action="/project-Tic_Tac_Toe/submit" method="post" autocomplete="off" > 
+<form action="/project-Ticket_Booking_System/submit" method="post" autocomplete="off" > 
 
         <%# LV4 %>                
-        <h2><u>Tic Tac Toe</u> <button type="button" style="color: black;" class="btn btn-outline-danger " data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-            ทดสอบโค้ด
-        </button></h2> 
+        <h2><u>Ticket Booking System</u></h2> 
 
+
+        <div class="group2" style="background-color: #212121;">
+            <iframe src="<%= ADRI  %> " width="600px" height="800" allow="autoplay"></iframe>
+            <div>
+                <a class="DrawIo btn" href="https://app.diagrams.net/" target="_blank">Draw.io</a>
+
+                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="600px" height="740px"></iframe> 
+            </div>
+            
+        </div>  
+
+        <br><h3>Approach</h3>
+            <p>Flowchart ใช้ draw.io (30 คะแนน)</p>
+            <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="sendLink16" required></textarea>
         
-        <p type="text"  class="list-group-item list-group-item-action bg-dark" style="color: white;">
-            <iframe src="<%= ADRI  %> " width="100%" height="480" allow="autoplay"></iframe>
-        </p>
-        <br>
-
-        <div class="form-group" >
-            <h3>CODE</h3>
+        <br><div class="form-group" >
+            <h3>Deployment</h3>
+            <p>Source Code ที่เขียนขึ้น (50 คะแนน)</p>
             <textarea style="height: 400px;" class="form-control" id="lineCounter" readonly rows="10">1 </textarea>
             <textarea style="height: 400px;" class="form-control" id="code" name="code" rows="10" required></textarea>
         </div>
-        <h3>ผลลัพธ์ที่ได้</h3>
-        <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="expResult" required></textarea>
+        
 
-        <h3>การประยุกต์</h3>
-            <p>ผลลัพธ์ที่คาด</p>
-            <textarea class="form-control" style="height: 100px;" rows="4" name="ImproveResult" cols="50"></textarea>
-            <p>ตัวแปรที่เปลี่ยน</p>
-            <textarea class="form-control" style="height: 150px;" rows="4" name="Improvevariable" cols="50"></textarea>
+        <br><h3>Result</h3>
+            <p>แสดงผลลัพธ์ของโปรแกรม (10 คะแนน) </p>
+            <textarea class="form-control" style="height: 100px;" rows="4" name="expResult16" cols="50"></textarea>
+        <br><h3>Improvement</h3>
+            <p>ตอบคำถาม (10 คะแนน) </p>
+            <p>โจทย์คำถาม ถ้าต้องการแสดงข้อมูล ที่อยู่ ของผู้จอง ตั้งแต่บ้านเลขที่ หมู่ที่ ตำบล อำเภอ จังหวัด และรหัสไปรษณีย์ ต้องใช้คำสั่งใดในการรับค่าของข้อมูลนี้</p>
+            <textarea class="form-control" style="height: 150px;" rows="4" name="expResult17" cols="50"></textarea>
     <br>
         Language : <select name="lang"><option value="C">C</option></select>
         <div class="d-grid gap-2">
