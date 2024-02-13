@@ -56,8 +56,8 @@ router.post('/submit', async (req, res, next) => {
             expResult16:expResult16,
             expResult17:expResult17,
 
-            ADRI:ADRI,
-            ADRI_Answer:ADRI_Answer
+            /*ADRI:ADRI,
+            ADRI_Answer:ADRI_Answer*/
           };
           dbo.collection("StudentAnswer").insertOne(myobj, function(err, res) {
             if (err) throw err;

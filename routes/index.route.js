@@ -384,7 +384,7 @@ router.get('/', async (req, res, next) => {
                 if (err) throw err;
 
                 var IntroductionDone = "ยังไม่ทำ" ,StringDone = "ยังไม่ทำ" ,OperatorsDone = "ยังไม่ทำ" ,DatatypeDone = "ยังไม่ทำ",FlowControlDone = "ยังไม่ทำ",LoopDone = "ยังไม่ทำ",PointersDone = "ยังไม่ทำ",FunctionDone = "ยังไม่ทำ",StructureDone = "ยังไม่ทำ",ArrayDone = "ยังไม่ทำ" ,InputOutputDone = "ยังไม่ทำ" ;
-                var Ticket_Booking_System = "ยังไม่ทำ" , Library_SystemDone = "ยังไม่ทำ" , RoshamboDone = "ยังไม่ทำ" ,CalendarDone = "ยังไม่ทำ" , CalculatorDone = "ยังไม่ทำ";
+                var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Library_SystemDone = "ยังไม่ทำ" , RoshamboDone = "ยังไม่ทำ" ,CalendarDone = "ยังไม่ทำ" , CalculatorDone = "ยังไม่ทำ";
                 var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "รอตรวจ";
       
                 for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
