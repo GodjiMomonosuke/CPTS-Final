@@ -45,7 +45,6 @@ router.get('/', async (req, res, next) => {
 //** Time count **//
 
 
-
 /** user quiz send  */
 router.post('/submit', async (req, res, next) => {
   const person = req.user;
@@ -83,7 +82,8 @@ router.post('/submit', async (req, res, next) => {
   var sendLink201 = req.body.sendLink201
   var sendLink202 = req.body.sendLink202
 
-  var rating  = req.body.rating
+  var rating = req.body.rating
+
 
   var score1 = 0;
   var score2 = 0;
@@ -183,6 +183,8 @@ router.post('/submit', async (req, res, next) => {
                 Name: person.name,
                 studentID: person.studentID,
                 role:person.role,
+                rating:rating,
+                timer:time,
                 contentName:currentQuiz,
                 c1:score1,
                 c2:score2,
@@ -219,7 +221,7 @@ router.post('/submit', async (req, res, next) => {
                 expResult20:expResult20,
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
-                rating:rating,
+                
                 
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
