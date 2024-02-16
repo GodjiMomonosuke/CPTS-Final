@@ -42,8 +42,6 @@ router.get('/', async (req, res, next) => {
   // PRETEST Check
 });
 
-//** Time count **//
-
 
 /** user quiz send  */
 router.post('/submit', async (req, res, next) => {
@@ -63,8 +61,7 @@ router.post('/submit', async (req, res, next) => {
   const choice13  = req.body.choice13
   const choice14  = req.body.choice14
   const choice15  = req.body.choice15
- 
-
+  
   var code = req.body.code;
   var lang = req.body.lang;
   var expResult16 = req.body.expResult16
@@ -81,9 +78,7 @@ router.post('/submit', async (req, res, next) => {
   var sendLink192 = req.body.sendLink192
   var sendLink201 = req.body.sendLink201
   var sendLink202 = req.body.sendLink202
-
   var rating = req.body.rating
-
 
   var score1 = 0;
   var score2 = 0;
@@ -104,52 +99,52 @@ router.post('/submit', async (req, res, next) => {
   var currentQuiz = "Operators_and_Expressions-(Pre-test)" //*** */
   var timetodo = 0;
 
-  /** check score */
-  if(choice1 === 'A'){
-    score1 = 1;
-  }
-  if(choice2 === 'B'){
-    score2 = 1;
-  }
-  if(choice3 === 'C'){
-    score3 = 1;
-  }
-  if(choice4 === 'A'){
-    score4 = 1;
-  }
-  if(choice5 === 'C'){
-    score5 = 1;
-  }
-  if(choice6 === 'A'){
-    score6 = 1;
-  }
-  if(choice7 === 'D'){
-    score7 = 1;
-  }
-  if(choice8 === 'C'){
-    score8 = 1;
-  }
-  if(choice9 === 'A'){
-    score9 = 1;
-  }
-  if(choice10 === 'B'){
-    score10 = 1;
-  }
-  if(choice11 === 'B'){
-    score11 = 1;
-  }
-  if(choice12 === 'C'){
-    score12 = 1;
-  }
-  if(choice13 === 'A'){
-    score13 = 1;
-  }
-  if(choice14 === 'C'){
-    score14 = 1;
-  }
-  if(choice15 === 'C'){
-    score15 = 1;
-  }
+/** check score */
+if(choice1 === 'A'){
+  score1 = 1;
+}
+if(choice2 === 'B'){
+  score2 = 1;
+}
+if(choice3 === 'C'){
+  score3 = 1;
+}
+if(choice4 === 'A'){
+  score4 = 1;
+}
+if(choice5 === 'C'){
+  score5 = 1;
+}
+if(choice6 === 'A'){
+  score6 = 1;
+}
+if(choice7 === 'D'){
+  score7 = 1;
+}
+if(choice8 === 'C'){
+  score8 = 1;
+}
+if(choice9 === 'A'){
+  score9 = 1;
+}
+if(choice10 === 'B'){
+  score10 = 1;
+}
+if(choice11 === 'B'){
+  score11 = 1;
+}
+if(choice12 === 'C'){
+  score12 = 1;
+}
+if(choice13 === 'A'){
+  score13 = 1;
+}
+if(choice14 === 'C'){
+  score14 = 1;
+}
+if(choice15 === 'C'){
+  score15 = 1;
+}
 
 
   /** compiler */
@@ -183,8 +178,6 @@ router.post('/submit', async (req, res, next) => {
                 Name: person.name,
                 studentID: person.studentID,
                 role:person.role,
-                rating:rating,
-                timer:time,
                 contentName:currentQuiz,
                 c1:score1,
                 c2:score2,
@@ -221,8 +214,7 @@ router.post('/submit', async (req, res, next) => {
                 expResult20:expResult20,
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
-                
-                
+                rating:rating,
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };
