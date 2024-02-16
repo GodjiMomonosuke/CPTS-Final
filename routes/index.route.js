@@ -451,7 +451,7 @@ router.get('/', async (req, res, next) => {
                     InputOutputDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   
-                  if (StudentAnswer[i].contentName ==='TicketBookingSystem' && StudentAnswer[i].scoreTeacher != undefined) {   
+                  if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)' && StudentAnswer[i].scoreTeacher != undefined) {   
                     Ticket_Booking_SystemDone = StudentAnswer[i].scoreTeacher
                   }
                   if (StudentAnswer[i].contentName ==='LibrarySystem'&& StudentAnswer[i].scoreTeacher != undefined) {   
@@ -692,7 +692,7 @@ router.get('/', async (req, res, next) => {
                         if(RecommendaResult[0].RecommendationType === "Fastest Path"){
                           //ตรวจสอบว่ายังมีคอร์สเหลือไหม && เก็บข้อมูลเพื่อส่งต่อ
                           if(DiffCalculator.length != 0){Course_Left.push({CourseName:"Calculator"                      ,length:DiffCalculator.length ,           CourseLEFT :DiffCalculator})}
-                          if(DiffTicketBookingSystem.length != 0) {Course_Left.push({CourseName:"TicketBookingSystem"   ,length:DiffTicketBookingSystem.length ,  CourseLEFT :DiffTicketBookingSystem})}
+                          if(DiffTicketBookingSystem.length != 0) {Course_Left.push({CourseName:"TicketBookingSystem-(Project_quiz1)"   ,length:DiffTicketBookingSystem.length ,  CourseLEFT :DiffTicketBookingSystem})}
                           if(DiffRoshambo.length != 0)  {Course_Left.push({CourseName:"Roshambo"                        ,length:DiffRoshambo.length  ,            CourseLEFT :DiffRoshambo})}
                           if(DiffCalendar.length != 0)  {Course_Left.push({CourseName:"Calendar"                        ,length:DiffCalendar.length  ,            CourseLEFT :DiffCalendar})}
                           if(DiffLibrary.length != 0)   {Course_Left.push({CourseName:"Library"                         ,length:DiffLibrary.length   ,            CourseLEFT :DiffLibrary})}
@@ -729,7 +729,7 @@ router.get('/', async (req, res, next) => {
                           }
                         }
                           //***RECOMMEND : PROJECT ถ้าเลือก path มาก็จะแนะนำ คอร์ส ที่ง่ายที่สุด
-                          else if(RecommendaResult[0].RecommendationType === "TicketBookingSystem"  ){ RecommendOutput = DiffTicketBookingSystem }
+                          else if(RecommendaResult[0].RecommendationType === "TicketBookingSystem-(Project_quiz1)"  ){ RecommendOutput = DiffTicketBookingSystem }
                           else if(RecommendaResult[0].RecommendationType === "Library"    ){ RecommendOutput = DiffLibrary    }
                           else if(RecommendaResult[0].RecommendationType === "Roshambo"   ){ RecommendOutput = DiffRoshambo   }
                           else if(RecommendaResult[0].RecommendationType === "Calendar"   ){ RecommendOutput = DiffCalendar   }
@@ -891,7 +891,7 @@ router.post('/joinclass', async (req, res, next) => {
                         }
 
                         /** */
-                        if (StudentAnswer[i].contentName ==='TicTacToe') {   
+                        if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
                           TicTacToeDone = "YES";
                         }
                         if (StudentAnswer[i].contentName ==='LibrarySystem') {   
