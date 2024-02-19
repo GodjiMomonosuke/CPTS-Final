@@ -127,10 +127,10 @@ app.use('/course-Operators_and_Expressions',
   ensureStudent,
   require('./routes/student/course/4_Operators_and_Expressions-course.route')
 );
-app.use('/course-Selection_Statement',
+app.use('/course-Selection_Statements',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/5_Selection_Statement-course.route')
+  require('./routes/student/course/5_Selection_Statements-course.route')
 );
 app.use('/course-Loop_Statement',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -168,12 +168,12 @@ app.use('/course-Operators_and_Expressions-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/quiz/4_Operators_and_Expressions-quiz.route')
-);//** **/
-app.use('/course-Selection_Statement-quiz',
+);
+app.use('/course-Selection_Statements-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/quiz/5_1_Selection-quiz.route')
-);
+  require('./routes/student/quiz/5_Selection_Statements-quiz.route')
+);//** **/
 app.use('/course-Pointers-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
@@ -211,12 +211,12 @@ app.use('/course-Operators_and_Expressions-pretest',
   ensureStudent,
   require('./routes/student/pretest/4_Operators_and_Expressions-pretest.route')
 );
-/**app.use('/course-Selection_Statement-pretest',
+app.use('/course-Selection_Statements-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest/5_1_Selection-pretest.route')
+  require('./routes/student/pretest/5_Selection_Statements-pretest.route')
 );
-app.use('/course-Loop_Statement-pretest',
+/**app.use('/course-Loop_Statement-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest/5_2_Loop-course-pretest.route')
@@ -262,6 +262,11 @@ app.use('/pretest4_check',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest_check/pretest4_check.route')
+);
+app.use('/pretest5_check',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/pretest_check/pretest5_check.route')
 );
 
 
