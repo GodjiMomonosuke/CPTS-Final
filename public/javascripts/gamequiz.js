@@ -1,3 +1,4 @@
+// Knowledge 
 //** 1 **/
 function myFunctionT1() {document.getElementById("demo1").innerHTML = "✅✅✅";}
 function myFunctionW1() {document.getElementById("demo1").innerHTML = "❌❌❌";}
@@ -38,7 +39,7 @@ function myFunctionW9() {document.getElementById("demo9").innerHTML = "❌❌❌
 function myFunctionT10() {document.getElementById("demo10").innerHTML = "✅✅✅";}
 function myFunctionW10() {document.getElementById("demo10").innerHTML = "❌❌❌";}
 
-//***** Tracing *****//
+// Tracing 
 //** 11 **/
 function myFunctionT11() {document.getElementById("demo11").innerHTML = "✅✅✅";}
 function myFunctionW11() {document.getElementById("demo11").innerHTML = "❌❌❌";}
@@ -79,7 +80,7 @@ function myFunctionW19() {document.getElementById("demo19").innerHTML = "❌❌�
 function myFunctionT20() {document.getElementById("demo20").innerHTML = "✅✅✅";}
 function myFunctionW20() {document.getElementById("demo20").innerHTML = "❌❌❌";}
 
-//Explaining 
+// Explaining 
 //** 21 **/
 function myFunctionT21() {document.getElementById("demo21").innerHTML = "✅✅✅";}
 function myFunctionW21() {document.getElementById("demo21").innerHTML = "❌❌❌";}
@@ -88,8 +89,40 @@ function myFunctionW21() {document.getElementById("demo21").innerHTML = "❌❌�
 function myFunctionT22() {document.getElementById("demo22").innerHTML = "✅✅✅";}
 function myFunctionW22() {document.getElementById("demo22").innerHTML = "❌❌❌";}
 
+//** 23 **/
+function myFunctionT23() {document.getElementById("demo23").innerHTML = "✅✅✅";}
+function myFunctionW23() {document.getElementById("demo23").innerHTML = "❌❌❌";}
+
+//** 24 **/
+function myFunctionT24() {document.getElementById("demo24").innerHTML = "✅✅✅";}
+function myFunctionW24() {document.getElementById("demo24").innerHTML = "❌❌❌";}
+
+//** 25 **/
+function myFunctionT25() {document.getElementById("demo25").innerHTML = "✅✅✅";}
+function myFunctionW25() {document.getElementById("demo25").innerHTML = "❌❌❌";}
+
+//** 26 **/
+function myFunctionT26() {document.getElementById("demo26").innerHTML = "✅✅✅";}
+function myFunctionW26() {document.getElementById("demo26").innerHTML = "❌❌❌";}
+
+//** 27 **/
+function myFunctionT27() {document.getElementById("demo27").innerHTML = "✅✅✅";}
+function myFunctionW27() {document.getElementById("demo27").innerHTML = "❌❌❌";}
+
+//** 28 **/
+function myFunctionT28() {document.getElementById("demo28").innerHTML = "✅✅✅";}
+function myFunctionW28() {document.getElementById("demo28").innerHTML = "❌❌❌";}
+
+//** 29 **/
+function myFunctionT29() {document.getElementById("demo29").innerHTML = "✅✅✅";}
+function myFunctionW29() {document.getElementById("demo29").innerHTML = "❌❌❌";}
+
+//** 30 **/
+function myFunctionT30() {document.getElementById("demo30").innerHTML = "✅✅✅";}
+function myFunctionW30() {document.getElementById("demo30").innerHTML = "❌❌❌";}
 
 
+// Writing
 function myFunction1() {
     var x = document.getElementById("myDIV1");
     if (x.style.display === "none") {
