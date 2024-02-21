@@ -429,10 +429,10 @@ router.get('/', async (req, res, next) => {
                   if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'){
                     OperatorsDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
-                  if(StudentAnswer[i].contentName ==='Selection-Quiz'){
+                  if(StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)'){
                     FlowControlDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
-                  if(StudentAnswer[i].contentName ==='Loop-Quiz'){
+                  if(StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)'){
                     LoopDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Pointers-Quiz'){
@@ -563,14 +563,14 @@ router.get('/', async (req, res, next) => {
                         OperatorsScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         OperatorsDone = 1;
                     }
-                    if (StudentAnswer[i].contentName ==='Loop-Quiz'||StudentAnswer[i].contentName ==='Selection-Quiz') {   
+                    if (StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)') {   
                         FlowControlScoreLV1 = StudentAnswer[i].scoreLV1;
                         FlowControlScoreLV2 = StudentAnswer[i].scoreLV2;
                         FlowControlScoreLV3 = StudentAnswer[i].scoreLV3;
                         FlowControlScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         FlowControlDone = 1;
                     }
-                    if (StudentAnswer[i].contentName ==='Pointers-Quiz') {   
+                    if (StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)') {   
                         PointersScoreLV1 = StudentAnswer[i].scoreLV1;
                         PointersScoreLV2 = StudentAnswer[i].scoreLV2;
                         PointersScoreLV3 = StudentAnswer[i].scoreLV3;
@@ -644,8 +644,8 @@ router.get('/', async (req, res, next) => {
                       if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'       && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Datatype and Variable",value:2});}
                       if (StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'            && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Input and Output",value:3});} 
                       if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) { ArrCourseDone.push({key:"Operators and Expressions",value:4});}
-                      if (StudentAnswer[i].contentName ==='Selection_Statement-(Post-test)'         && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Selection Statement",value:5});}
-                      if (StudentAnswer[i].contentName ==='Loop_Statement-(Post-test)'              && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Loop Statement",value:6});}
+                      if (StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)'         && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Selection Statements",value:5});}
+                      if (StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)'              && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Loop Statements",value:6});}
                       if (StudentAnswer[i].contentName ==='Array_and_String-(Post-test)'            && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Array and String",value:7});}
                       if (StudentAnswer[i].contentName ==='Function-(Post-test)'                    && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Function",value:8});}
                       
@@ -667,7 +667,7 @@ router.get('/', async (req, res, next) => {
                     // RecommendaResult[0].RecommendationType คือ วิธีแนะนำที่ผู้เรียนเลือก
  
                     var RecommendOutput = [];
-                    var CourseTotol = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statement','Loop Statement','Array and String','Function'] //เรียกจากง่ายไปยาก เปรียบเทียบที่เหมือนกับ path_left หาตัวที่ต่าง เพื่อเลือกตัวง่ายสุดแสดงผล (ไม่รวม file operation)
+                    var CourseTotol = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Array and String','Function'] //เรียกจากง่ายไปยาก เปรียบเทียบที่เหมือนกับ path_left หาตัวที่ต่าง เพื่อเลือกตัวง่ายสุดแสดงผล (ไม่รวม file operation)
                     var Course_Left = [];
                     var ArrRankStorage = []
                     
@@ -877,10 +877,10 @@ router.post('/joinclass', async (req, res, next) => {
                         if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'){
                           OperatorsDone = "YES";
                         }
-                        if(StudentAnswer[i].contentName ==='Selection_Statement-(Post-test)'){
+                        if(StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)'){
                           FlowControlDone = "YES";
                         }
-                        if(StudentAnswer[i].contentName ==='Loop_Statement-(Post-test)'){
+                        if(StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)'){
                           PointersDone = "YES";
                         }
                         if(StudentAnswer[i].contentName ==='Array_and_String-(Post-test)'){
