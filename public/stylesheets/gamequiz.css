@@ -1,7 +1,40 @@
-.scrollbtn {
+.scrollbtnK {
     height: 50px;
     width: 150px;
-    background-color: #00ffee;
+    background-color: #eaec73;
+    color: #000000;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: large;
+}
+.scrollbtnT {
+    height: 50px;
+    width: 150px;
+    background-color: #6ecfd8;
+    color: #000000;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: large;
+}
+.scrollbtnE {
+    height: 50px;
+    width: 150px;
+    background-color: #ffb8f8;
+    color: #000000;
+    padding-top: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: large;
+}
+.scrollbtnW {
+    height: 50px;
+    width: 150px;
+    background-color: #a0de87;
     color: #000000;
     padding-top: 10px;
     border-radius: 10px;
@@ -36,24 +69,26 @@
 }
 
 .question-T{
-    color: #00ffee;
+    color: #ffffff;
     font-size: 18px;
-    background-color: #37228D;
+    background-color: #30015a;
     height: auto;
+    padding: 15px;
     border-radius: 10px; 
 }
 
 .question-E{
     color: #00ffee;
     font-size: 18px;
-    background-color: #37228D;
+    background-color: #30015a;
+    padding: 15px;
     height: 400px;
     border-radius: 10px; 
 }
 h5{
     background-color: #000000;
     padding: 15px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     text-align: center;
 
 }
@@ -74,7 +109,7 @@ div.btn {
 }
 
 .gamecontent {
-    background-color: #C3C3DA;
+    background-color: #eaec73;
     height: 500px;
     width: 1200px;
     padding: 15px;
@@ -83,7 +118,7 @@ div.btn {
     margin: 20px;
 }
 .gamecontent-T {
-    background-color: #C3C3DA;
+    background-color: #6ecfd8;
     height: auto;
     width: 1200px;
     padding: 15px;
@@ -93,7 +128,7 @@ div.btn {
 }
 
 .gamecontent-E {
-    background-color: #C3C3DA;
+    background-color: #ffb8f8;
     height: 750px;
     width: 1200px;
     padding: 15px;
@@ -103,7 +138,7 @@ div.btn {
 }
 
 .gamecontent-W {
-    background-color: #C3C3DA;
+    background-color: #a0de87;
     height: auto;
     width: 1200px;
     padding: 15px;
