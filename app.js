@@ -132,10 +132,10 @@ app.use('/course-Selection_Statements',
   ensureStudent,
   require('./routes/student/course/5_Selection_Statements-course.route')
 );
-app.use('/course-Loop_Statement',
+app.use('/course-Loop_Statements',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/6_Loop_Statement-course.route')
+  require('./routes/student/course/6_Loop_Statements-course.route')
 );
 app.use('/course-Array_and_String',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -173,12 +173,12 @@ app.use('/course-Selection_Statements-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/quiz/5_Selection_Statements-quiz.route')
-);//** **/
-app.use('/course-Pointers-quiz',
+);
+app.use('/course-Loop_Statements-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/quiz/6_Pointers-quiz.route')
-);
+  require('./routes/student/quiz/6_Loop_Statements-quiz.route')
+);//** **/
 app.use('/course-Function-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
@@ -216,12 +216,12 @@ app.use('/course-Selection_Statements-pretest',
   ensureStudent,
   require('./routes/student/pretest/5_Selection_Statements-pretest.route')
 );
-/**app.use('/course-Loop_Statement-pretest',
+app.use('/course-Loop_Statements-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest/5_2_Loop-course-pretest.route')
+  require('./routes/student/pretest/6_Loop_Statements-pretest.route')
 );
-app.use('/course-Pointers-pretest',
+/**app.use('/course-Pointers-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest/6_Pointers-pretest.route')
@@ -268,7 +268,11 @@ app.use('/pretest5_check',
   ensureStudent,
   require('./routes/student/pretest_check/pretest5_check.route')
 );
-
+app.use('/pretest6_check',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/pretest_check/pretest6_check.route')
+);
 
 // ****** teacher ******** // 
 app.use('/class',
