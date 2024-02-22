@@ -340,13 +340,17 @@
                     <h2>Tracing</h2>
                     <div class="game">
                     <!--* ข้อ 11 T1 *-->
-                    <div class="gamecontent-T" style="height: 500px;">
+                    <div class="gamecontent-T" style="height: auto">
                         <div  class="question-T">
-                        <h5>ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
+                        <h5>ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
                         <p>#include < stdio.h > 
                         <br>int main() {
-                        <br>&ensp;int a = 5, b = 3;
-                        <br>&ensp;printf("%d", a + b);
+                        <br>&ensp;int age = 18;
+                        <br>&ensp;if (age >= 18) {
+                        <br>&ensp;&ensp;printf("Eligible for voting\n");
+                        <br>&ensp;} else {
+                        <br>&ensp;&ensp;printf("Not eligible for voting\n");
+                        <br>&ensp;}
                         <br>&ensp;return 0;
                         <br>}
         
@@ -356,10 +360,16 @@
                         <div class="ans">
                             <div>
                             <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionW11()">15</p>
-                                <p id="demo" class="button" onclick="myFunctionW11()">2</p>
-                                <p id="demo" class="button" onclick="myFunctionT11()">8</p>
-                                <p id="demo" class="button" onclick="myFunctionW11()">18</p>
+                                <p id="demo" class="button" onclick="myFunctionT11()">Eligible for voting</p>
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW11()">Not eligible for voting</p>
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW11()">ไม่พิมพ์อะไรเลย</p>
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW11()">ข้อความผิดพลาด</p>
                             </div>
                            
                         </div>
@@ -370,13 +380,19 @@
         
                     <div class="game">
                     <!--* ข้อ 12 T2*-->
-                    <div class="gamecontent-T" style="height: 500px;">
+                    <div class="gamecontent-T" style="height: auto">
                         <div  class="question-T">
                         <h5>ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
                         <p>#include < stdio.h >
                         <br>int main() {
-                        <br>&ensp;int a = 10, b = 4;
-                        <br>&ensp;printf("%d", a % b);
+                        <br>&ensp;int score = 85;;
+                        <br>&ensp;if (score >= 90) {
+                        <br>&ensp;&ensp;printf("Grade A");
+                        <br>&ensp;} else if (score >= 80) {
+                        <br>&ensp;&ensp;printf("Grade B");
+                        <br>&ensp;} else {
+                        <br>&ensp;&ensp;printf("Grade C");
+                        <br>&ensp;} 
                         <br>&ensp;return 0;
                         <br>}
         
@@ -387,10 +403,10 @@
                         <div class="ans">
                             <div>
                             <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionW12()">1</p>
-                                <p id="demo" class="button" onclick="myFunctionT12()">2</p>
-                                <p id="demo" class="button" onclick="myFunctionW12()">3</p>
-                                <p id="demo" class="button" onclick="myFunctionW12()">4</p>                                                                
+                                <p id="demo" class="button" onclick="myFunctionW12()">Grade A</p>
+                                <p id="demo" class="button" onclick="myFunctionT12()">Grade B</p>
+                                <p id="demo" class="button" onclick="myFunctionW12()">Grade C</p>
+                                <p id="demo" class="button" onclick="myFunctionW12()">ไม่พิมพ์อะไรเลย</p>                                                                
                             </div>
                         </div>
                             
@@ -400,13 +416,19 @@
         
                     <div class="game">
                         <!--* ข้อ 13 T3*-->
-                        <div class="gamecontent-T" style="height: 500px;">
+                        <div class="gamecontent-T" style="height: auto">
                             <div  class="question-T">
                             <h5>ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
                             <p>#include < stdio.h >
                             <br>int main() {
-                            <br>&ensp;int x = 5;
-                            <br>&ensp;printf("%d", ++x * 2);
+                            <br>&ensp;int a = 8, b = 8;
+                            <br>&ensp;if (a > b) {
+                            <br>&ensp;&ensp;printf("A is greater");
+                            <br>&ensp;} else if (a < b) {
+                            <br>&ensp;&ensp;printf("B is greater");
+                            <br>&ensp;} else {
+                            <br>&ensp;&ensp;printf("A and B are equal");
+                            <br>&ensp;}
                             <br>&ensp;return 0;
                             <br>}
             
@@ -417,10 +439,10 @@
                             <div class="ans">
                                 <div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionW13()">9</p>
-                                    <p id="demo" class="button" onclick="myFunctionW13()">10</p>
-                                    <p id="demo" class="button" onclick="myFunctionW13()">11</p>
-                                    <p id="demo" class="button" onclick="myFunctionT13()">12</p>                                                                      
+                                    <p id="demo" class="button" onclick="myFunctionW13()">A is greater</p>
+                                    <p id="demo" class="button" onclick="myFunctionW13()">B is greater</p>
+                                    <p id="demo" class="button" onclick="myFunctionT13()">A and B are equal</p>
+                                    <p id="demo" class="button" onclick="myFunctionW13()">ไม่พิมพ์อะไรเลย</p>
                                 </div>
                                 
                             </div>
@@ -431,13 +453,20 @@
         
                         <div class="game">
                             <!--* ข้อ 14 T4*-->
-                            <div class="gamecontent-T" style="height: 500px;">
+                            <div class="gamecontent-T" style="height: auto">
                                 <div  class="question-T">
                                 <h5>ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
                                 <p>#include < stdio.h >
                                 <br>int main() {
-                                <br>&ensp;float a = 8, b = 3, c = 4;
-                                <br>&ensp;printf("%.2f", a + b * c / 8);
+                                <br>&ensp;int x = 10;
+                                <br>&ensp;if (x == 10) {
+                                <br>&ensp;&ensp;if (x < 15)
+                                <br>&ensp;&ensp;&ensp;printf("x is smaller than 15 ");
+                                <br>&ensp;&ensp;if (x < 12)
+                                <br>&ensp;&ensp;&ensp;printf("x is smaller than 12 too ");
+                                <br>&ensp;&ensp;else
+                                <br>&ensp;&ensp;&ensp;printf("x is greater than 15 ");
+                                <br>&ensp;}
                                 <br>&ensp;return 0;
                                 <br>}
                 
@@ -448,10 +477,16 @@
                                 <div class="ans">
                                     <div>
                                     <div class="btn">
-                                        <p id="demo" class="button" onclick="myFunctionW14()">4.50</p>
-                                        <p id="demo" class="button" onclick="myFunctionW14()">5.50</p>
-                                        <p id="demo" class="button" onclick="myFunctionW14()">8.50</p>
-                                        <p id="demo" class="button" onclick="myFunctionT14()">9.50</p>                                                                      
+                                        <p id="demo" class="button" onclick="myFunctionW14()">x is greater than 15 x is smaller than 12 too</p>                                                                      
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW14()">x is smaller than 12 too x is smaller than 15</p>
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW14()">x is greater than 15 x is smaller than 12 too</p>
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionT14()">x is smaller than 15 x is smaller than 12 too </p>
                                     </div>
                                     
                                 </div>
@@ -462,15 +497,20 @@
         
                             <div class="game">
                                 <!--* ข้อ 15 T5*-->
-                                <div class="gamecontent-T" style="height: 500px;">
+                                <div class="gamecontent-T" style="height: auto">
                                     <div  class="question-T">
                                     <h5>ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
                                     <p>#include < stdio.h >
                                     <br>int main() {
-                                    <br>&ensp;int x = 1, y = 2, z = 3;
-                                    <br>&ensp;x += y;
-                                    <br>&ensp;y *= z;
-                                    <br>&ensp;printf("%d %d %d", x, y, z);
+                                    <br>&ensp;int num = 8;
+                                    <br>&ensp;if (num < 10) {
+                                    <br>&ensp;&ensp;if (num % 2 == 0)
+                                    <br>&ensp;&ensp;&ensp;printf("Even");
+                                    <br>&ensp;&ensp;else
+                                    <br>&ensp;&ensp;&ensp;printf("Odd");
+                                    <br>&ensp;} else {
+                                    <br>&ensp;&ensp;printf("Greater than 10");
+                                    <br>&ensp;}
                                     <br>&ensp;return 0;
                                     <br>}
                     
@@ -481,10 +521,10 @@
                                     <div class="ans">
                                         <div>
                                         <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionT15()">3 6 3</p>
-                                            <p id="demo" class="button" onclick="myFunctionW15()">1 2 3</p>
-                                            <p id="demo" class="button" onclick="myFunctionW15()">3 5 3</p>
-                                            <p id="demo" class="button" onclick="myFunctionW15()">6 5 3</p>                                                                     
+                                            <p id="demo" class="button" onclick="myFunctionT15()">Even</p>
+                                            <p id="demo" class="button" onclick="myFunctionW15()">Odd</p>
+                                            <p id="demo" class="button" onclick="myFunctionW15()">Greater than 10</p>
+                                            <p id="demo" class="button" onclick="myFunctionW15()">ไม่พิมพ์อะไรเลย</p>                                                                     
                                         </div>
                                        
                                     </div>
@@ -497,18 +537,19 @@
                                 <!--* ข้อ 16 T6*-->
                                 <div class="gamecontent-T">
                                     <div  class="question-T">
-                                    <h5>ผลลัพธ์ที่แสดงออกทางหน้าจอจะเป็นอย่างไร</h5>
+                                    <h5>ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
                                     <p>#include < stdio.h >
-                                    <br>int main()
-                                    <br>{
-                                    <br>&ensp;int x = 9;
-                                    <br>&ensp;x++;
-                                    <br>&ensp;printf("x = %d, ", x);
-                                    <br>&ensp;--x;
-                                    <br>&ensp;printf("x = %d, ", x);
-                                    <br>&ensp;int y = ++x;
-                                    <br>&ensp;printf("x = %d, ", x);
-                                    <br>&ensp;printf("y = %d", y);
+                                    <br>int main() {
+                                    <br>&ensp;int i = 20;
+                                    <br>&ensp;if (i == 10)
+                                    <br>&ensp;&ensp;printf("i is 10\n");
+                                    <br>&ensp;else if (i == 15)
+                                    <br>&ensp;&ensp;printf("i is 15\n");
+                                    <br>&ensp;else if (i == 20)
+                                    <br>&ensp;&ensp;printf("i is 20\n");
+                                    <br>&ensp;else
+                                    <br>&ensp;&ensp;printf("i is not present");
+                                    <br>&ensp;return 0;
                                     <br>}
                     
                                     </p>
@@ -518,17 +559,12 @@
                                     <div class="ans">
                                         <div>
                                         <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW16()">x = 10, x = 10, x = 10, y = 10</p>                                                                      
+                                            <p id="demo" class="button" onclick="myFunctionW16()">i is 10</p>
+                                            <p id="demo" class="button" onclick="myFunctionW16()">i is 15</p> 
+                                            <p id="demo" class="button" onclick="myFunctionW16()">i is 20</p> 
+                                            <p id="demo" class="button" onclick="myFunctionT16()">i is not present</p> 
                                         </div>
-                                        <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW16()">x = 10, x = 9, x = 9, y = 10</p>  
-                                        </div>
-                                        <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW16()">x = 9, x = 9, x = 10, y = 10</p>  
-                                        </div>
-                                        <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionT16()">x = 10, x = 9, x = 10, y = 10</p>  
-                                        </div>
+                            
                                     </div>
                                         
                                     </div>
@@ -537,14 +573,28 @@
         
                             <div class="game">
                                 <!--* ข้อ 17 T7*-->
-                                <div class="gamecontent-T" style="height: 500px;">
+                                <div class="gamecontent-T" style="height: auto">
                                     <div  class="question-T">
-                                    <h5>ค่า result ของโค้ดนี้คือเท่าใด</h5>
+                                    <h5>ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
                                     <p>#include < stdio.h >
                                     <br>int main() {
-                                    <br>&ensp;int x = 1, y = 0;
-                                    <br>&ensp;int result = x && !y;
-                                    <br>&ensp;printf("%d", result);
+                                    <br>&ensp;char grade = 'B';
+                                    <br>&ensp;switch (grade) {
+                                    <br>&ensp;&ensp;case 'A':
+                                    <br>&ensp;&ensp;&ensp;printf("Excellent\n");
+                                    <br>&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;case 'B':
+                                    <br>&ensp;&ensp;&ensp;printf("Good\n");
+                                    <br>&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;case 'C':
+                                    <br>&ensp;&ensp;&ensp;printf("Fair\n");
+                                    <br>&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;case 'D':
+                                    <br>&ensp;&ensp;&ensp;printf("Poor\n");
+                                    <br>&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;default:
+                                    <br>&ensp;&ensp;&ensp;printf("Invalid grade\n");
+                                    <br>&ensp;}
                                     <br>&ensp;return 0;
                                     <br>}
                     
@@ -555,10 +605,10 @@
                                     <div class="ans">
                                         <div>
                                         <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW17()">0</p>
-                                            <p id="demo" class="button" onclick="myFunctionT17()">1</p>
-                                            <p id="demo" class="button" onclick="myFunctionW17()">2</p>
-                                            <p id="demo" class="button" onclick="myFunctionW17()">3</p>                                                                      
+                                            <p id="demo" class="button" onclick="myFunctionW17()">Excellent</p>
+                                            <p id="demo" class="button" onclick="myFunctionT17()">Good</p>
+                                            <p id="demo" class="button" onclick="myFunctionW17()">Fair</p>
+                                            <p id="demo" class="button" onclick="myFunctionW17()">Invalid grade</p>                                                                      
                                         </div>
                                         
                                     </div>
@@ -569,14 +619,25 @@
         
                             <div class="game">
                                 <!--* ข้อ 18 T8*-->
-                                <div class="gamecontent-T" style="height: 500px;">
+                                <div class="gamecontent-T" style="height: auto">
                                     <div  class="question-T">
-                                    <h5>ค่า result ของโค้ดนี้คือเท่าใด</h5>
+                                    <h5>ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
                                     <p>#include < stdio.h >
                                     <br>int main() {
-                                    <br>&ensp;int x = 1, y = 0;
-                                    <br>&ensp;int result = (x || !y) && (x || y);
-                                    <br>&ensp;printf("%d", result);
+                                    <br>&ensp;int number = 5;
+                                    <br>&ensp;switch (number) {
+                                    <br>&ensp;&ensp;case 1:
+                                    <br>&ensp;&ensp;case 3:
+                                    <br>&ensp;&ensp;case 5:
+                                    <br>&ensp;&ensp;&ensp;printf("Odd\n");
+                                    <br>&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;case 2:
+                                    <br>&ensp;&ensp;case 4:
+                                    <br>&ensp;&ensp;&ensp;printf("Even\n");
+                                    <br>&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;default:
+                                    <br>&ensp;&ensp;&ensp;printf("Unknown\n");
+                                    <br>&ensp;}
                                     <br>&ensp;return 0;
                                     <br>}
                     
@@ -587,10 +648,10 @@
                                     <div class="ans">
                                         <div>
                                         <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW18()">0</p>
-                                            <p id="demo" class="button" onclick="myFunctionT18()">1</p>
-                                            <p id="demo" class="button" onclick="myFunctionW18()">2</p>
-                                            <p id="demo" class="button" onclick="myFunctionW18()">3</p>                                                                       
+                                            <p id="demo" class="button" onclick="myFunctionT18()">Odd</p>
+                                            <p id="demo" class="button" onclick="myFunctionW18()">Even</p>
+                                            <p id="demo" class="button" onclick="myFunctionW18()">Unknown</p>
+                                            <p id="demo" class="button" onclick="myFunctionW18()">ไม่พิมพ์อะไรเลย</p>                                                                       
                                         </div>
                                         
                                     </div>
@@ -601,20 +662,28 @@
         
                             <div class="game">
                                 <!--* ข้อ 19 T9*-->
-                                <div class="gamecontent-T">
+                                <div class="gamecontent-T" style="height: auto">
                                     <div  class="question-T">
-                                    <h5>ค่า result ของโค้ดนี้คือเท่าใด</h5>
+                                    <h5>ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
                                     <p>#include < stdio.h >
-                                    <br>int main() 
-                                    <br>{
-                                    <br>&ensp;int a = 12, b = 8;
-                                    <br>&ensp;int c = 3, d = 28;
-                                    <br>&ensp;int value1 = a > b && c < d;
-                                    <br>&ensp;printf("value1 = %d ,", value1);
-                                    <br>&ensp;int value2 = d < c || a < b;
-                                    <br>&ensp;printf("value2 = %d ,", value2);
-                                    <br>&ensp;int result = value1 || value2;
-                                    <br>&ensp;printf("result = %d ", result);
+                                    <br>int main() {
+                                    <br>&ensp;int x = 1, y = 2;
+                                    <br>&ensp;switch (x) {
+                                    <br>&ensp;&ensp;case 1:
+                                    <br>&ensp;&ensp;&ensp;switch (y) {
+                                    <br>&ensp;&ensp;&ensp;&ensp;case 2:
+                                    <br>&ensp;&ensp;&ensp;&ensp;&ensp;printf("y is 2\n");
+                                    <br>&ensp;&ensp;&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;&ensp;&ensp;default:
+                                    <br>&ensp;&ensp;&ensp;&ensp;&ensp;printf("Default\n");
+                                    <br>&ensp;&ensp;&ensp;}
+                                    <br>&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;case 2:
+                                    <br>&ensp;&ensp;&ensp;printf("x is 2\n");
+                                    <br>&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;default:
+                                    <br>&ensp;&ensp;&ensp;printf("Other\n");
+                                    <br>&ensp;}
                                     <br>&ensp;return 0;
                                     <br>}
                     
@@ -625,16 +694,10 @@
                                     <div class="ans">
                                         <div>
                                         <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW19()">value1 = 0 ,value2 = 0 ,result = 1 </p>                                                                      
-                                        </div>
-                                        <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionT19()">value1 = 1 ,value2 = 0 ,result = 1 </p>  
-                                        </div>
-                                        <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW19()">value1 = 1 ,value2 = 1 ,result = 0 </p>  
-                                        </div>
-                                        <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW19()">value1 = 1 ,value2 = 1 ,result = 1 </p>  
+                                            <p id="demo" class="button" onclick="myFunctionT19()">y is 2</p>
+                                            <p id="demo" class="button" onclick="myFunctionW19()">Default</p>
+                                            <p id="demo" class="button" onclick="myFunctionW19()">x is 2</p>
+                                            <p id="demo" class="button" onclick="myFunctionW19()">Other</p>
                                         </div>
                                     </div>
                                         
@@ -646,12 +709,25 @@
                                 <!--* ข้อ 20 T10*-->
                                 <div class="gamecontent-T">
                                     <div  class="question-T">
-                                    <h5>ถ้าผู้ใช้ป้อน Aj. NesT the Series โดยใช้ fgets() ผลลัพธ์จะเป็นอย่างไร</h5>
+                                    <h5>ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
                                     <p>#include < stdio.h >
                                     <br>int main() {
-                                    <br>&ensp;int i = 2, j = 3, k = 4;
-                                    <br>&ensp;int m = i-- + ++j + k--;
-                                    <br>&ensp;printf("i = %d, j = %d, k = %d, m = %d", i, j, k, m);
+                                    <br>&ensp;int x = 5, y = 8;
+                                    <br>&ensp;if (x > 3) {
+                                    <br>&ensp;&ensp;switch (y) {
+                                    <br>&ensp;&ensp;&ensp;case 8:
+                                    <br>&ensp;&ensp;&ensp;&ensp;x += 4;
+                                    <br>&ensp;&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;&ensp;case 9:
+                                    <br>&ensp;&ensp;&ensp;&ensp;x += 3;
+                                    <br>&ensp;&ensp;&ensp;&ensp;break;
+                                    <br>&ensp;&ensp;&ensp;default:
+                                    <br>&ensp;&ensp;&ensp;&ensp;x += 2;
+                                    <br>&ensp;&ensp;}
+                                    <br>&ensp;} else {
+                                    <br>&ensp;&ensp;x -= 2;
+                                    <br>&ensp;}
+                                    <br>&ensp;printf("%d", x);
                                     <br>&ensp;return 0;
                                     <br>}
                     
@@ -662,16 +738,16 @@
                                     <div class="ans">
                                         <div>
                                         <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW20()">i = 1, j = 4, k = 3, m = 9</p>                                                                      
+                                            <p id="demo" class="button" onclick="myFunctionW20()">โปรแกรมจะพิมพ์ค่า 3 ออกมา</p>                                                                      
                                         </div>
                                         <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW20()">i = 1, j = 3, k = 4, m = 9</p>  
+                                            <p id="demo" class="button" onclick="myFunctionW20()">โปรแกรมจะพิมพ์ค่า 8 ออกมา</p>  
                                         </div>
                                         <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionW20()">i = 1, j = 3, k = 3, m = 10</p>  
+                                            <p id="demo" class="button" onclick="myFunctionT20()">โปรแกรมจะพิมพ์ค่า 9 ออกมา</p>  
                                         </div>
                                         <div class="btn">
-                                            <p id="demo" class="button" onclick="myFunctionT20()">i = 1, j = 4, k = 3, m = 10</p>  
+                                            <p id="demo" class="button" onclick="myFunctionW20()">โปรแกรมจะพิมพ์ค่า 11 ออกมา</p>  
                                         </div>
                                     </div>
                                         
@@ -682,14 +758,15 @@
                 <BR id="Explaining"> <br><br>
                 <h2>Explaining</h2>
                 <div class="game">
-                    <!--* ข้อ 6 E1 *-->
-                    <div class="gamecontent-E" style="height: 700px;">
-                        <div  class="question-E" style="height: 300px;">
+                    <!--* ข้อ 21 E1 *-->
+                    <div class="gamecontent-E" style="height: auto">
+                        <div  class="question-E" >
                         <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
                         <p>#include < stdio.h >
                         <br>int main() {
-                        <br>&ensp;float result = 8 + 4 / 3.0;
-                        <br>&ensp;printf("%.2f", result);
+                        <br>&ensp;int a = 5;
+                        <br>&ensp;if (a < 10)
+                        <br>&ensp;&ensp;printf("A is less than 10");
                         <br>&ensp;return 0;
                         <br>}
         
@@ -700,31 +777,36 @@
                         <div class="ans">
                             <div>
                             <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมคำนวณตัวเลข 8 + 4 ได้ 11 แล้วนำ 11 / 3.0 ได้ผลลัพธ์ result แสดงเป็น 3.67</p>    
+                                <p id="demo" class="button" onclick="myFunctionT21()">โปรแกรมจะพิมพ์ "A is less than 10" เพราะเข้าเงื่อนไข a น้อยกว่า 10</p>    
                             </div>
                             <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมคำนวณตัวเลข 8 / 3.0 ได้ 2.67 แล้วนำ 2.67 + 4 ได้ผลลัพธ์ result แสดงเป็น 6.67</p>  
+                                <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมไม่พิมพ์อะไรเลย เพราะเข้าเงื่อนไข a มากกว่า 10</p>  
                             </div>
                             <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionT21()">โปรแกรมคำนวณตัวเลข 4 / 3.0 ได้ 1.33 แล้วนำ 8 + 1.33 ได้ผลลัพธ์ result แสดงเป็น 9.33</p>  
+                                <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมจะแสดงข้อผิดพลาด เพราะไม่มี else statement</p>  
                             </div>
                             <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมคำนวณตัวเลข 3.0 / 4 ได้ 0.75 แล้วนำ 8 + 0.75 ได้ผลลัพธ์ result แสดงเป็น 3.67</p>  
+                                <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมจะพิมพ์ "A is less than 10" ไม่ว่าค่า a จะเป็นเท่าใด</p>  
                             </div>
                         </div>
                             
                         </div>
                     </div></div>
                     <div class="game">
-                        <!--* ข้อ 7 E2 *-->
-                        <div class="gamecontent-E" style="height: 700px;">
-                            <div  class="question-E" style="height: 300px;">
+                        <!--* ข้อ 22 E2 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
                             <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
                             <p>#include < stdio.h > 
                             <br>int main() {
-                            <br>&ensp;int x = 10;
-                            <br>&ensp;x = x % 4 * 2;
-                            <br>&ensp;printf("%d", x);
+                            <br>&ensp;int score = 75;
+                            <br>&ensp;if (score >= 80) {
+                            <br>&ensp;&ensp;printf("Grade A");
+                            <br>&ensp;} else if (score >= 70) {
+                            <br>&ensp;&ensp;printf("Grade B");
+                            <br>&ensp;} else {
+                            <br>&ensp;&ensp;printf("Grade C");
+                            <br>&ensp;}
                             <br>&ensp;return 0;
                             <br>}
             
@@ -735,16 +817,16 @@
                             <div class="ans">
                                 <div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionW22()">โปรแกรมคำนวณตัวเลขค่า x คือ 10 / 4 ได้ 2.5 แล้วนำ 2.5 * 2 ได้ผลลัพธ์ result แสดงเป็น 5</p>    
+                                    <p id="demo" class="button" onclick="myFunctionW22()">โปรแกรมจะพิมพ์ "Grade A" เพราะคะแนน 75 มากกว่าหรือเท่ากับ 80</p>    
                                 </div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionT22()">โปรแกรมคำนวณตัวเลขค่า x คือ 10 / 4 ได้เศษ 2 แล้วนำ 2 * 2 ได้ผลลัพธ์ result แสดงเป็น 4</p>  
+                                    <p id="demo" class="button" onclick="myFunctionT22()">โปรแกรมจะพิมพ์ "Grade B" เพราะคะแนน 75 อยู่ระหว่าง 70 และ 80</p>  
                                 </div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionW22()">โปรแกรมคำนวณตัวเลข 4 * 2 ได้ 8 แล้วนำ 10 / 8 ได้เศษ 2 ผลลัพธ์ result แสดงเป็น 2</p>  
+                                    <p id="demo" class="button" onclick="myFunctionW22()">โปรแกรมจะพิมพ์ "Grade C" เพราะคะแนนน้อยกว่า 70</p>  
                                 </div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionW22()">โปรแกรมคำนวณตัวเลข 4 * 2 ได้ 8 แล้วนำ 10 / 8 ได้เศษ 2 ผลลัพธ์ result แสดงเป็น 1.25</p>  
+                                    <p id="demo" class="button" onclick="myFunctionW22()">โปรแกรมไม่พิมพ์อะไรเลย เพราะไม่มีคะแนนที่ตรงกับเงื่อนไข</p>  
                                 </div>
                             </div>
                                 
@@ -752,6 +834,379 @@
                         </div>
             
                     </div>
+                    <div class="game">
+                        <!--* ข้อ 23 E3 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int x = 10, y = 20;
+                            <br>&ensp;if (x == y)
+                            <br>&ensp;&ensp;printf("X and Y are equal");
+                            <br>&ensp;else if (x > y)
+                            <br>&ensp;&ensp;printf("X is greater than Y");
+                            <br>&ensp;else
+                            <br>&ensp;&ensp;printf("X is less than Y");
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo23"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW23()">โปรแกรมจะพิมพ์ "X and Y are equal" <br>เพราะเข้าเงื่อนไข x == y โดย x และ y มีค่าเท่ากัน</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW23()">โปรแกรมจะพิมพ์ "X is greater than Y" <br>เพราะเข้าเงื่อนไข x > y โดย x มีค่ามากกว่า y</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT23()">โปรแกรมจะพิมพ์ "X is less than Y" <br>เพราะไม่เข้าเงื่อนไขก่อนหน้าใดเลย โดย x มีค่าน้อยกว่า y</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW23()">โปรแกรมไม่พิมพ์อะไรเลย เพราะไม่มีเงื่อนไขที่ถูกต้อง</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 24 E4 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int num = 15;
+                            <br>&ensp;if (num % 2 == 0) {
+                            <br>&ensp;&ensp;printf("Even");
+                            <br>&ensp;} else {
+                            <br>&ensp;&ensp;printf("Odd");
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo24"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW24()">โปรแกรมจะพิมพ์ "Even" เพราะเข้าเงื่อนไข num % 2 == 0 <br>โดย num หารด้วย 2 ลงตัว</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT24()">โปรแกรมจะพิมพ์ "Odd" เพราะไม่เข้าเงื่อนไข num %2 == 0 <br>โดย num หารด้วย 2 ไม่ลงตัว</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW24()">โปรแกรมจะพิมพ์ "Odd" ไม่ว่าค่า num จะเป็นเท่าใด</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW24()">โปรแกรมไม่พิมพ์อะไรเลย เพราะไม่มี else statement</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 25 E5 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>อธิบายปัญหาของโค้ดนี้คืออะไร</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int a = 100;
+                            <br>&ensp;if (a > 50) {
+                            <br>&ensp;&ensp;printf("A is greater than 50 ");
+                            <br>&ensp;&ensp;if (a > 75) {
+                            <br>&ensp;&ensp;&ensp;printf("A is also greater than 75");
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo25"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT25()">โปรแกรมจะพิมพ์ "A is greater than 50" และ "A is also greater than 75" <br>เพราะเข้าเงื่อนไขที่ a มากกว่า 50 และ a มากกว่า 75</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW25()">โปรแกรมจะพิมพ์ "A is greater than 50" เท่านั้น เพราะไม่มีเงื่อนไขที่ตรงกับ a > 75</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW25()">โปรแกรมจะพิมพ์ "A is also greater than 75" เพราะเข้าเงื่อนไขที่ a มากกว่า 75</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW25()">โปรแกรมไม่พิมพ์อะไรเลย เพราะเงื่อนไขไม่ถูกต้อง.</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 26 E6 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div class="question-E">
+                            <h5>โค้ดนี้ตรวจสอบเงื่อนไขใดที่อนุญาตให้สามารถเข้าห้องสมุดได้</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int age = 20;
+                            <br>&ensp;if (age < 18) {
+                            <br>&ensp;&ensp;printf("Underage\n");
+                            <br>&ensp;} else if (age >= 18 && age <= 65) {
+                            <br>&ensp;&ensp;printf("Adult\n");
+                            <br>&ensp;} else {
+                            <br>&ensp;&ensp;printf("Senior\n");
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo26"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW26()">โปรแกรมจะพิมพ์ "Underage" เพราะเข้าเงื่อนไขที่อายุน้อยกว่า 18</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT26()">โปรแกรมจะพิมพ์ "Adult" เพราะเข้าเงื่อนไขที่อายุระหว่าง 18 ถึง 65</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW26()">โปรแกรมจะพิมพ์ "Senior" เพราะไม่เข้าเงื่อนไขก่อนหน้านี้ใดเลย โดยมีอายุมากกว่า 65</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW26()">โปรแกรมไม่พิมพ์อะไรเลย เพราะไม่มีเงื่อนไขที่ตรงกับอายุ</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 27 E7 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>โค้ดนี้ตรวจสอบเงื่อนไขใดที่อนุญาตให้จบการศึกษาก่อนกำหนดได้</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int day = 3;
+                            <br>&ensp;switch(day) {
+                            <br>&ensp;&ensp;case 1:
+                            <br>&ensp;&ensp;&ensp;printf("Monday");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 2:
+                            <br>&ensp;&ensp;&ensp;printf("Tuesday");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 3:
+                            <br>&ensp;&ensp;&ensp;printf("Wednesday");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 4:
+                            <br>&ensp;&ensp;&ensp;printf("Thursday");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 5:
+                            <br>&ensp;&ensp;&ensp;printf("Friday");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 6:
+                            <br>&ensp;&ensp;&ensp;printf("Saturday");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 7:
+                            <br>&ensp;&ensp;&ensp;printf("Sunday");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;default:
+                            <br>&ensp;&ensp;&ensp;printf("Invalid day");
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo27"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT27()">โปรแกรมจะพิมพ์ "Wednesday" เพราะเข้าเงื่อนไข case 3: เนื่องจาก day มีค่าเท่ากับ 3</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW27()">โปรแกรมจะพิมพ์ "Invalid day" เพราะไม่มีการตรงกับเงื่อนไขใดๆ</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW27()">โปรแกรมจะพิมพ์ "Monday" เพราะเข้าเงื่อนไข case 1: เนื่องจากเป็นค่าเริ่มต้น</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW27()">โปรแกรมจะไม่พิมพ์อะไรเลย เพราะไม่มี break statement</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 28 E8 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>ข้อใดอธิบายการทำงานและผลลัพธ์ของโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;char option = 'c';
+                            <br>&ensp;switch(option) {
+                            <br>&ensp;&ensp;case 'a':
+                            <br>&ensp;&ensp;&ensp;printf("Option A");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 'b':
+                            <br>&ensp;&ensp;&ensp;printf("Option B");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 'c':
+                            <br>&ensp;&ensp;&ensp;printf("Option C");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;default:
+                            <br>&ensp;&ensp;&ensp;printf("No Option");
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo28"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW28()">โปรแกรมจะพิมพ์ "Option A" เนื่องจากเป็นค่าเริ่มต้น เข้าเงื่อนไข case ‘a’</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW28()">โปรแกรมจะพิมพ์ "Option B" เพราะเป็นค่าถัดไปหลังจาก 'a' เข้าเงื่อนไข case ‘b’</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT28()">โปรแกรมจะพิมพ์ "Option C" เพราะ option มีค่าเท่ากับ 'c' เข้าเงื่อนไข case ‘c’</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW28()">โปรแกรมจะพิมพ์ "No Option" เนื่องจากไม่ตรงกับเงื่อนไขใดๆ</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 29 E9 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>ข้อใดอธิบายการทำงานและผลลัพธ์ของโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int x = 1, y = 2;
+                            <br>&ensp;switch (x) {
+                            <br>&ensp;&ensp;case 1:
+                            <br>&ensp;&ensp;&ensp;switch (y) {
+                            <br>&ensp;&ensp;&ensp;&ensp;case 2:
+                            <br>&ensp;&ensp;&ensp;&ensp;&ensp;printf("y is 2\n");
+                            <br>&ensp;&ensp;&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;&ensp;&ensp;default:
+                            <br>&ensp;&ensp;&ensp;&ensp;&ensp;printf("Default\n");
+                            <br>&ensp;&ensp;&ensp;{
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 2:
+                            <br>&ensp;&ensp;&ensp;printf("x is 2\n");
+                            <br>&ensp;&ensp;default:
+                            <br>&ensp;&ensp;&ensp;printf("Other\n");
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo29"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT29()">โปรแกรมจะพิมพ์ "Grade A" เพราะคะแนน 75 มากกว่าหรือเท่ากับ 80</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW29()">โปรแกรมจะพิมพ์ "Grade B" เพราะคะแนน 75 อยู่ระหว่าง 70 และ 80</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW29()">โปรแกรมจะพิมพ์ "Grade C" เพราะคะแนนน้อยกว่า 70</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW29()">โปรแกรมไม่พิมพ์อะไรเลย เพราะไม่มีคะแนนที่ตรงกับเงื่อนไข</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 30 E10 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int x = 5, y = 8;
+                            <br>&ensp;if (x > 3) {
+                            <br>&ensp;&ensp;switch (y) {
+                            <br>&ensp;&ensp;&ensp;case 8:
+                            <br>&ensp;&ensp;&ensp;&ensp;x += 4;
+                            <br>&ensp;&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;&ensp;case 9:
+                            <br>&ensp;&ensp;&ensp;&ensp;x += 3;
+                            <br>&ensp;&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;&ensp;default:
+                            <br>&ensp;&ensp;&ensp;&ensp;x += 2;
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;} else {
+                            <br>&ensp;&ensp;x -= 2;
+                            <br>&ensp;}
+                            <br>&ensp;printf("%d", x);
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo30"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW30()">โปรแกรมจะพิมพ์ค่า 3 ออกมา เพราะเข้าเงื่อนไข x > 3 และเข้า case 8</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW30()">โปรแกรมจะพิมพ์ค่า 9 ออกมา เพราะเข้าเงื่อนไข x > 3 และเข้า case 9</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW30()">โปรแกรมจะพิมพ์ค่า 7 ออกมา เพราะไม่เข้าเงื่อนไขใดเลย</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT30()">โปรแกรมจะพิมพ์ค่า 9 ออกมา เพราะเข้าเงื่อนไข x > 3 และเข้า case 8</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    
         
                     <!--* writing *-->
                     <BR id="Writing"> <br><br>
