@@ -18,7 +18,7 @@ router.post('/submit', async (req, res, next) => {
   var expResult16 = req.body.expResult16
   var expResult17 = req.body.expResult17
 
-  var currentProject = "TicketBookingSystem-(Project_quiz1";
+  var currentProject = "TicketBookingSystem-(Project_quiz1)";
   var timetodo = 0;
 
   //*** COMPILER */
