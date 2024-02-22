@@ -25,7 +25,6 @@
         
     </style>
     
-    <link rel='stylesheet' href='stylesheets/home.css' />
     <link rel='stylesheet' href='stylesheets/gamequiz.css' />
     <script src="javascripts/gamequiz.js"></script>
     <title>Datatype and Variable</title>
@@ -79,7 +78,7 @@
                 <iframe width="100%" height="600" src="https://www.youtube.com/embed/VKXHv_C4C9g?si=s_FD9R_4ul5xCT6v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <br><br><h4>สัญลักษณ์พิเศษ Formats and Escape Characters 🔥</h4>
                 <iframe width="100%" height="600" src="https://www.youtube.com/embed/ddbidsl_9Fc?si=ISnWVOhHQEgCnN9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                
+            </div>
         <br><br>
 
         <BR id="Knowledge"> <br><br>
@@ -95,8 +94,8 @@
                 <div class="ans">
                     <div>
                     <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionT1()">จำนวนเต็ม</p>
                         <p id="demo" class="button" onclick="myFunctionW1()">จำนวนทศนิยม</p>  
-                        <p id="demo" class="button" onclick="myFunctionT1()">จำนวนเต็ม</p>                                                                      
                     </div>
                     <div class="btn">
                         <p id="demo" class="button" onclick="myFunctionW1()">ข้อความ</p>   
@@ -118,10 +117,10 @@
                     <div>
                     <div class="btn">
                         <p id="demo" class="button" onclick="myFunctionW2()">10</p>    
-                        <p id="demo" class="button" onclick="myFunctionW2()">“Hello World”</p>                                                                      
+                        <p id="demo" class="button" onclick="myFunctionT2()">26.83</p> 
                     </div>
                     <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionT2()">26.83</p> 
+                        <p id="demo" class="button" onclick="myFunctionW2()">“Hello World”</p>  
                         <p id="demo" class="button" onclick="myFunctionW2()">A</p>  
                     </div>
                 </div>
@@ -154,7 +153,6 @@
         </div>
 
         <div class="game">
-
             <!--* ข้อ 4 K4 *-->
             <div class="gamecontent">
                 <div  class="question">
@@ -169,7 +167,7 @@
                         <p id="demo" class="button" onclick="myFunctionW4()">int x = 10.5;</p>                                                                      
                     </div>
                     <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionT4()">double x = 10.5;</p>  
+                        <p id="demo" class="button" onclick="myFunctionT4()">double x = 10.5;</p>      
                         <p id="demo" class="button" onclick="myFunctionW4()">float x = 10.5;</p>  
                     </div>
                 </div>
@@ -177,46 +175,47 @@
                 </div>
             </div>
 
-            <!--* ข้อ 5 K10*-->
-            <div class="gamecontent">
-                <div  class="question">
-                <h5>ตัวแปรที่ประกาศภายนอกฟังก์ชันและใช้งานได้ทั้งโปรแกรมนั้นเรียกว่าอะไร</h5>
-                <br><br>
-                <p style="text-align: center;" id="demo5"> </p>
-                
-                </div>
-                <div class="ans">
-                    <div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW5()">Function Variable</p>    
-                        <p id="demo" class="button" onclick="myFunctionW5()">Local Variable</p>                                                                      
+            
+                <!--* ข้อ 5 K6 *-->
+                <div class="gamecontent">
+                    <div  class="question">
+                    <h5>ตัวแปรในการเขียนโปรแกรมคืออะไร</h5>
+                    <br><br>
+                    <p style="text-align: center;" id="demo5"> </p>
                     </div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionT5()">Global Variable</p>  
-                        <p id="demo" class="button" onclick="myFunctionW5()">ถูกทุกข้อ </p>  
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW5()">ชื่อที่ใช้เรียกโปรแกรม</p>    
+                            <p id="demo" class="button" onclick="myFunctionT5()">สถานที่เก็บข้อมูล</p>                                                                      
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW5()">คำสั่งในโปรแกรม</p>     
+                            <p id="demo" class="button" onclick="myFunctionW5()">ข้อความแสดงผล</p>  
+                        </div>
+                        </div>
                     </div>
-                </div>
-                    
                 </div>
             </div>
 
-            <!--* ข้อ 6 K9*-->
+
+        <div class="game">
+            <!--* ข้อ 6 K5 *-->
             <div class="gamecontent">
-                <div class="question">
-                <h5>ตัวแปรที่ประกาศภายในฟังก์ชันและใช้งานได้เฉพาะภายในฟังก์ชันนั้นเรียกว่าอะไร</h5>
+                <div  class="question">
+                <h5>ข้อใดถูกต้องเกี่ยวกับการใช้ Format Specifier ในการรับและแสดงผลค่าของตัวแปร</h5>
                 <br><br>
                 <p style="text-align: center;" id="demo6"> </p>
-                
                 </div>
                 <div class="ans">
                     <div>
                     <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW6()">Global Variable</p>    
-                        <p id="demo" class="button" onclick="myFunctionT6()">Local Variable</p>                                                                      
+                        <p id="demo" class="button" onclick="myFunctionW6()">%f ใช้รับและแสดงค่าตัวเลขทศนิยม (%.2f คือทศนิยม 2 ตำแหน่ง %.3f คือทศนิยม 3 ตำแหน่ง)</p>                                                                      
                     </div>
                     <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW6()">Function Variable</p>  
-                        <p id="demo" class="button" onclick="myFunctionW6()">ถูกทุกข้อ </p>  
+                        <p id="demo" class="button" onclick="myFunctionW6()">%d ใช้รับและแสดงค่าตัวเลขจำนวนเต็ม</p> 
+                        <p id="demo" class="button" onclick="myFunctionW6()">%c ใช้รับและแสดงค่าของตัวอักขระ</p>     
+                        <p id="demo" class="button" onclick="myFunctionT6()">ถูกทุกข้อ</p>  
                     </div>
                 </div>
                     
@@ -224,11 +223,108 @@
             </div>
         </div>
 
+
+        <div class="game">
+            <!--* ข้อ 7 K7 *-->
+            <div class="gamecontent">
+                <div  class="question">
+                <h5>การประกาศตัวแปร int x = 9; ในภาษา C หมายความว่าอย่างไร</h5>
+                <br><br>
+                <p style="text-align: center;" id="demo7"> </p>
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW7()">สร้างฟังก์ชันชื่อ x <br> มีค่าเท่ากับ 9</p> 
+                        <p id="demo" class="button" onclick="myFunctionW7()">กำหนดค่า 0 <br> ให้กับ x</p>                                                                      
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionT7()">สร้างตัวแปรชนิด <br> int ชื่อ x มีค่าเท่ากับ 9</p>    
+                        <p id="demo" class="button" onclick="myFunctionW7()">แสดงค่า x เท่ากับ 9 <br> ออกทางหน้าจอ</p>  
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+
+            <!--* ข้อ 8 K8 *-->
+            <div class="gamecontent">
+                <div  class="question">
+                <h5>การใช้ตัวแปรประเภทค่าคงที่ เช่น const int MAX 100; หรือ  #define MAX 100 ในภาษา C มีความหมายอย่างไร </h5>
+                <br><br>
+                <p style="text-align: center;" id="demo8"> </p>
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionT8()">ตัวแปรที่ไม่สามารถ <br> เปลี่ยนแปลงค่าได้</p>  
+                        <p id="demo" class="button" onclick="myFunctionW8()">ตัวแปรที่ค่าเปลี่ยนแปลงได้ตลอดเวลา</p>                                                                      
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW8()">ตัวแปรที่ใช้สำหรับการเก็บค่าจำนวนเต็มเท่านั้น</p>   
+                        <p id="demo" class="button" onclick="myFunctionW8()">ตัวแปรที่ใช้สำหรับ <br> การเก็บข้อความ</p>  
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="game">
+            <!--* ข้อ 9 K9*-->
+            <div class="gamecontent">
+                <div class="question">
+                <h5>ตัวแปรที่ประกาศภายในฟังก์ชันและใช้งานได้เฉพาะภายในฟังก์ชันนั้นเรียกว่าอะไร</h5>
+                <br><br>
+                <p style="text-align: center;" id="demo9"> </p>
+                
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW9()">Global Variable</p>    
+                        <p id="demo" class="button" onclick="myFunctionT9()">Local Variable</p>    
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW9()">Function Variable</p>  
+                        <p id="demo" class="button" onclick="myFunctionW9()">ถูกทุกข้อ </p>  
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+
+            <!--* ข้อ 10 K10*-->
+            <div class="gamecontent">
+                <div  class="question">
+                <h5>ตัวแปรที่ประกาศภายนอกฟังก์ชันและใช้งานได้ทั้งโปรแกรมนั้นเรียกว่าอะไร</h5>
+                <br><br>
+                <p style="text-align: center;" id="demo10"> </p>
+                
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW10()">Function Variable</p>       
+                        <p id="demo" class="button" onclick="myFunctionW10()">Local Variable</p>                                                                      
+                    </div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionT10()">Global Variable</p>  
+                        <p id="demo" class="button" onclick="myFunctionW10()">ถูกทุกข้อ </p>  
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+
+            
+        </div>
+
         <BR id="Tracing"> <br><br>
         <h2>Tracing</h2> 
         <div class="game">
-
-            <!--* ข้อ 7 T1 *-->
+            <!--* ข้อ 11 T1 *-->
             <div class="gamecontent-T">
                 <div  class="question-T">
                 <h5>โปรแกรมนี้จะแสดงผลลัพธ์อะไร</h5>
@@ -240,26 +336,206 @@
                 <br>&ensp;return 0;
                 <br>}
                 </p>
-                <p style="text-align: center;" id="demo7"></p>
+                <p style="text-align: center;" id="demo11"></p>
                 </div>
                 <div class="ans">
                     <div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW7()">20</p>    
-                        <p id="demo" class="button" onclick="myFunctionT7()">30</p>                                                                      
-                        <p id="demo" class="button" onclick="myFunctionW7()">0</p>  
-                        <p id="demo" class="button" onclick="myFunctionW7()">ไม่มีผลลัพธ์</p>  
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW11()">20</p>    
+                            <p id="demo" class="button" onclick="myFunctionT11()">30</p>                                                                      
+                            <p id="demo" class="button" onclick="myFunctionW11()">0</p>  
+                            <p id="demo" class="button" onclick="myFunctionW11()">ไม่มีผลลัพธ์</p>  
+                        </div>
                     </div>
-                </div>
-                    
                 </div>
             </div>
 
-            <!--* ข้อ 8 K10*-->
+            <!--* ข้อ 12 T2 *-->
             <div class="gamecontent-T">
                 <div  class="question-T">
                 <h5>โปรแกรมนี้จะแสดงผลลัพธ์อะไร</h5>
-                <p>#include < stdio.h >
+                <p>#include < stdio.h > 
+                <br>int main() {
+                <br>&ensp;int a = 20;
+                <br>&ensp;int b = 30;
+                <br>&ensp;int c = 40
+                <br>&ensp;printf("%d", a = b);
+                <br>&ensp;printf(" %d", b = c);
+                <br>&ensp;return 0;
+                <br>}
+                </p>
+                <p style="text-align: center;" id="demo12"></p>
+                </div>
+                <div class="ans">
+                    <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW12()">5 10</p>    
+                            <p id="demo" class="button" onclick="myFunctionW12()">10 20</p>                                                                      
+                            <p id="demo" class="button" onclick="myFunctionW12()">20 30</p>  
+                            <p id="demo" class="button" onclick="myFunctionT12()">30 40</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game">
+            <!--* ข้อ 13 T3 *-->
+            <div class="gamecontent-T">
+                <div  class="question-T">
+                <h5>โปรแกรมนี้จะแสดงผลลัพธ์อะไร</h5>
+                <p>#include < stdio.h > 
+                <br>int main() {
+                <br>&ensp; int x = 5;
+                <br>&ensp; int y = 10;
+                <br>&ensp; x = y;
+                <br>&ensp; printf("%d", y);
+                <br>&ensp; printf(" %d", x);
+                <br>&ensp; return 0;
+                <br>}
+                </p>
+                <p style="text-align: center;" id="demo13"></p>
+                </div>
+                <div class="ans">
+                    <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW13()">10 5</p>    
+                            <p id="demo" class="button" onclick="myFunctionW13()">5 10</p>                                                                      
+                            <p id="demo" class="button" onclick="myFunctionT13()">10 10</p>  
+                            <p id="demo" class="button" onclick="myFunctionW13()">5 5</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--* ข้อ 14 T4 *-->
+            <div class="gamecontent-T">
+                <div  class="question-T">
+                <h5>โปรแกรมนี้เมื่อรันเสร็จค่าของตัวแปร x, y, z จะเป็นค่าอะไร</h5>
+                <p>#include < stdio.h > 
+                <br>int main() {
+                <br>&ensp;float x = 10.11;
+                <br>&ensp;float y = 20.22;
+                <br>&ensp;float z = 30.33; 
+                <br>&ensp;x = y;
+                <br>&ensp;y = z;
+                <br>&ensp;z = y;
+                <br>&ensp;printf("%.2f", x);
+                <br>&ensp;printf(" %.2f", y);
+                <br>&ensp;printf(" %.2f", z);
+                <br>&ensp;return 0;
+                <br>}
+                </p>
+                <p style="text-align: center;" id="demo14"></p>
+                </div>
+                <div class="ans">
+                    <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW14()">x = 10.11, y = 20.22, z = 30.33</p>    
+                            <p id="demo" class="button" onclick="myFunctionW14()">x = 20.11, y = 20.22, z = 30.33</p>  
+                        </div> 
+                        <div class="btn">   
+                            <p id="demo" class="button" onclick="myFunctionW14()">x = 30.11, y = 20.22, z = 30.33</p>  
+                            <p id="demo" class="button" onclick="myFunctionT14()">x = 20.22, y = 30.33, z = 30.33</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game">
+            <!--* ข้อ 15 T5 *-->
+            <div class="gamecontent-T">
+                <div  class="question-T">
+                <h5>โปรแกรมนี้จะแสดงผลลัพธ์อะไร</h5>
+                <p>#include < stdio.h > 
+                <br>#define MAX_VALUE 50
+                <br>int main() {
+                <br>&ensp;const int x = 5;
+                <br>&ensp;printf("%d, %d", MAX_VALUE, x);
+                <br>&ensp;return 0;
+                <br>}
+                </p>
+                <p style="text-align: center;" id="demo15"></p>
+                </div>
+                <div class="ans">
+                    <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW15()">50, 10</p>    
+                            <p id="demo" class="button" onclick="myFunctionW15()">100, 10</p>                                                                      
+                            <p id="demo" class="button" onclick="myFunctionT15()">50, 5 </p>  
+                            <p id="demo" class="button" onclick="myFunctionW15()">100, 5</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--* ข้อ 16 T6 *-->
+            <div class="gamecontent-T">
+                <div  class="question-T">
+                <h5>โปรแกรมนี้จะแสดงผลลัพธ์อะไร</h5>
+                <p>#include < stdio.h > 
+                <br>#define MAX_VALUE 125
+                <br>int main() {
+                <br>&ensp;const int x = 15;
+                <br>&ensp;const float y = 2.14;
+                <br>&ensp;printf("%d, ", x);
+                <br>&ensp;printf("%.2f, ", y);
+                <br>&ensp;printf("%d", MAX_VALUE);
+                <br>&ensp;return 0;
+                <br>}
+                </p>
+                <p style="text-align: center;" id="demo16"></p>
+                </div>
+                <div class="ans">
+                    <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT16()">15, 2.14, 125</p>    
+                            <p id="demo" class="button" onclick="myFunctionW16()">10, 3.14, 100</p>                                                                      
+                            <p id="demo" class="button" onclick="myFunctionW16()">15, 2.14, 100</p>  
+                            <p id="demo" class="button" onclick="myFunctionW16()">10, 3.14, 125</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game">
+            <!--* ข้อ 17 T7 *-->
+            <div class="gamecontent-T">
+                <div  class="question-T">
+                <h5>โปรแกรมนี้จะแสดงผลลัพธ์อะไร</h5>
+                <p>#include < stdio.h > 
+                <br>#define MAX_VALUE 80
+                <br>int main() {
+                <br>&ensp;const int x = 8;
+                <br>&ensp;char z = 'C';
+                <br>&ensp;z = 'A';
+                <br>&ensp;printf("%d, ", x);
+                <br>&ensp;printf("%c, ", z);
+                <br>&ensp;printf("%d", MAX_VALUE);
+                <br>&ensp;return 0;
+                <br>}
+                </p>
+                <p style="text-align: center;" id="demo17"></p>
+                </div>
+                <div class="ans">
+                    <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT17()">8, A, 80</p>    
+                            <p id="demo" class="button" onclick="myFunctionW17()">10, A, 100</p>                                                                      
+                            <p id="demo" class="button" onclick="myFunctionW17()">8, C, 80 </p>  
+                            <p id="demo" class="button" onclick="myFunctionW17()">10, C, 100</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--* ข้อ 18 T8 *-->
+            <div class="gamecontent-T">
+                <div  class="question-T">
+                <h5>โปรแกรมนี้จะแสดงผลลัพธ์อะไร</h5>
+                <p>#include < stdio.h > 
                 <br>#define MAX_VALUE 80
                 <br>int main() {
                 <br>&ensp;const int x = 8;
@@ -271,109 +547,568 @@
                 <br>&ensp;return 0;
                 <br>}
                 </p>
-                <p style="text-align: center;" id="demo8"></p>
+                <p style="text-align: center;" id="demo18"></p>
+                </div>
+                <div class="ans">
+                    <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW18()">8, C, 80</p>    
+                            <p id="demo" class="button" onclick="myFunctionW18()">10, A, 100</p>                                                                      
+                            <p id="demo" class="button" onclick="myFunctionW18()">8, C, 100</p>  
+                            <p id="demo" class="button" onclick="myFunctionT18()">Error</p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="game">
+            <!--* ข้อ 19 T9 *-->
+            <div class="gamecontent-T">
+                <div  class="question-T">
+                <h5>โปรแกรมนี้จะแสดงผลลัพธ์อะไร</h5>
+                <p>#include < stdio.h >
+                <br>int a = 30;
+                <br>int main() {
+                <br>&ensp;int b = 40;
+                <br>&ensp;int c = a;
+                <br>&ensp;printf("Local Variable: %d, ", b);
+                <br>&ensp;printf("Global Variable: %d", c);
+                <br>&ensp;return 0;
+            
+                <br>}
+                </p>
+                <p style="text-align: center;" id="demo19"></p>
                 </div>
                 <div class="ans">
                     <div>
                     <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW8()">8, C, 80</p>    
-                        <p id="demo" class="button" onclick="myFunctionW8()">10, A, 100</p>                                                                      
-                        <p id="demo" class="button" onclick="myFunctionW8()">8, C, 100</p>  
-                        <p id="demo" class="button" onclick="myFunctionT8()">Error</p>  
+                        <p id="demo" class="button" onclick="myFunctionW19()">Local Variable: 30, Global Variable: 40</p>    
+                        <p id="demo" class="button" onclick="myFunctionW19()">30, 40</p>  
+                    </div>
+                    <div class="btn">                                                                    
+                        <p id="demo" class="button" onclick="myFunctionT19()">Local Variable: 40, Global Variable: 30</p>  
+                        <p id="demo" class="button" onclick="myFunctionW19()">40, 30</p>  
+                    </div>
+                </div>
+                    
+                </div>
+            </div>  
+
+            <!--* ข้อ 20 T10 *-->
+            <div class="gamecontent-T">
+                <div  class="question-T">
+                <h5>โปรแกรมนี้จะแสดงผลลัพธ์อะไร</h5>
+                <p>#include < stdio.h >
+                <br>const int a = 30;
+                <br>int b = 40;
+                <br>int main() {
+                <br>&ensp; int b = 80;
+                <br>&ensp;int c = a;
+                <br>&ensp;int d = b;
+                <br>&ensp;printf("Local Variable: %d, ", d);
+                <br>&ensp;printf("Global Variable: %d", c);
+                <br>&ensp;return 0;
+                <br>}
+                </p>
+                <p style="text-align: center;" id="demo20"></p>
+                </div>
+                <div class="ans">
+                    <div>
+                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW20()">Local Variable: 30, Global Variable: 80</p>    
+                        <p id="demo" class="button" onclick="myFunctionW20()">30, 80</p>         
+                    </div>
+                    <div class="btn">                                                             
+                        <p id="demo" class="button" onclick="myFunctionT20()">Local Variable: 80, Global Variable: 30</p>  
+                        <p id="demo" class="button" onclick="myFunctionW20()">80, 30</p>  
                     </div>
                 </div>
                     
                 </div>
             </div>  
         </div>
+
+
 
         <BR id="Explaining"> <br><br>
         <h2>Explaining</h2> 
         <div class="game">
-
-            <!--* ข้อ 9 E8 *-->
+            <!--* ข้อ 21 E1*-->
             <div class="gamecontent-E">
                 <div  class="question-E">
-                <h5>ข้อใดอธิบายการทำงานของโค้ดนี้ได้ถูกต้อง</h5>
-                <p>#include < stdio.h > 
-                <br>#define MAX_VALUE 120
-                <br>int main() {
-                <br>&ensp;const int x = 30;
-                <br>&ensp;const char z = 'C';
-                <br>&ensp;z = 'A';
-                <br>&ensp;printf("%d, ", x);
-                <br>&ensp;printf("%c, ", z);
-                <br>&ensp;printf("%d", MAX_VALUE);
-                <br>&ensp;return 0;
-                <br>}
-                </p>
-                <p style="text-align: center;" id="demo9"></p>
+                    <h5>ข้อใดอธิบายการทำงานของ Source Code นี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h >
+                    <br>int main() {
+                    <br>&ensp;int a = 30;
+                    <br>&ensp;int b = 40;
+                    <br>&ensp;printf("%d", a = b);
+                    <br>&ensp;return 0;
+                    <br>}
+                    </p>
+                    <p style="text-align: center;" id="demo21"></p>
                 </div>
                 <div class="ans">
                     <div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW9()">โปรแกรมกำหนดค่าคงที่ MAX_VALUE เป็น 120, ประกาศตัวแปรค่าคงที่ x เป็น 30 และตัวแปรค่าคงที่ z เป็น 'C' แล้วแสดงผลลัพธ์ 30, C, 120</p>    
-                    </div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW9()">โปรแกรมจะเกิดข้อผิดพลาดในการคอมไพล์เนื่องจากไม่สามารถกำหนดค่าใหม่ให้กับ MAX_VALUE</p>  
-                    </div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionT9()">โปรแกรมจะเกิดข้อผิดพลาดในการคอมไพล์เนื่องจากพยายามเปลี่ยนค่าตัวแปร z ที่เป็น const</p>  
-                    </div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW9()">โปรแกรมจะเกิดข้อผิดพลาดในการคอมไพล์เนื่องจากไม่สามารถกำหนดค่าใหม่ให้กับ MAX_VALUE</p>  
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT21()">
+                                1: Start
+                                <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                <br>3: ประกาศตัวแปรชื่อ a เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 30
+                                <br>4: ประกาศตัวแปรชื่อ b เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 40
+                                <br>5: ใช้คำสั่ง printf แสดงค่าของ a ซึ่งกำหนดให้ a เท่ากับ b จะแสดงค่าตัวเลข 40 ออกทางหน้าจอ
+                                <br>6: End
+                                </p>    
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW21()">
+                                1: Start
+                                <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                <br>3: ประกาศตัวแปรชื่อ b เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 40
+                                <br>4: ประกาศตัวแปรชื่อ a เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 30
+                                <br>5: ใช้คำสั่ง printf แสดงค่าของ a ซึ่งกำหนดให้ a เท่ากับ b จะแสดงค่าตัวเลข 40 ออกทางหน้าจอ
+                                <br>6: End
+                            </p> 
+                        </div>
                     </div>
                 </div>
-                    
-                </div>
-            </div>
-
+            </div>     
         </div>
 
         <div class="game">
-
-            <!--* ข้อ 10 E7*-->
+        <!--* ข้อ 22 E2*-->
             <div class="gamecontent-E">
                 <div  class="question-E">
-                <h5>ข้อใดอธิบายการทำงานของโค้ดนี้ได้ถูกต้อง</h5>
-                <p>#include < stdio.h >
-                <br>#define MAX_VALUE 100
-                <br>int main() {
-                <br>&ensp;const int x = 80;
-                <br>&ensp;char z = 'C';
-                <br>&ensp;z = 'A';
-                <br>&ensp;printf("%d, ", x);
-                <br>&ensp;printf("%c, ", z);
-                <br>&ensp;printf("%d", MAX_VALUE);
-                <br>&ensp;return 0;
-                <br>}
-                </p>
-                <p style="text-align: center;" id="demo10"></p>
+                    <h5>ข้อใดอธิบายการทำงานของ Source Code นี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h >
+                    <br>int main() {
+                    <br>&ensp;int a = 60;
+                    <br>&ensp;int b = 70;
+                    <br>&ensp;int c = 80;
+                    <br>&ensp;printf("%d", a = b);
+                    <br>&ensp;printf(" %d", b = c);
+                    <br>&ensp;return 0;
+                    <br>}
+                    </p>
+                    <p style="text-align: center;" id="demo22"></p>
                 </div>
                 <div class="ans">
                     <div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW10()">โปรแกรมกำหนดค่าคงที่ MAX_VALUE เป็น 100, ประกาศตัวแปรค่าคงที่ x เป็น 80 และ z เป็น 'C' แล้วแสดงผลลัพธ์ 80, C, 100</p>    
+                        <div class="btn">
+                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW22()">
+                                1: Start
+                                <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                <br>3: ประกาศตัวแปรชื่อ b เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 70
+                                <br>4: ประกาศตัวแปรชื่อ c เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 80
+                                <br>5: ประกาศตัวแปรชื่อ a เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 60
+                                <br>6: ใช้คำสั่ง printf แสดงค่าของ b ซึ่งกำหนดให้ b เท่ากับ c จะแสดงค่าตัวเลข 80 ออกทางหน้าจอ
+                                <br>7: ใช้คำสั่ง printf แสดงค่าของ a ซึ่งกำหนดให้ a เท่ากับ b จะแสดงค่าตัวเลข 70 ออกทางหน้าจอ
+                                <br>8: End
+                            </p> 
+                        </div>    
+                        <div class="btn">
+                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT22()">
+                                1: Start
+                                <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                <br>3: ประกาศตัวแปรชื่อ a เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 60
+                                <br>4: ประกาศตัวแปรชื่อ b เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 70
+                                <br>5: ประกาศตัวแปรชื่อ c เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 80
+                                <br>6: ใช้คำสั่ง printf แสดงค่าของ a ซึ่งกำหนดให้ a เท่ากับ b จะแสดงค่าตัวเลข 70 ออกทางหน้าจอ
+                                <br>7: ใช้คำสั่ง printf แสดงค่าของ b ซึ่งกำหนดให้ b เท่ากับ c จะแสดงค่าตัวเลข 80 ออกทางหน้าจอ
+                                <br>8: End
+                            </p>    
+                        </div>
                     </div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionT10()">โปรแกรมกำหนดค่าคงที่ MAX_VALUE เป็น 100, ประกาศตัวแปรค่าคงที่ x เป็น 80 และ z เป็น 'A' แล้วแสดงผลลัพธ์ 80, A, 100</p> 
-                    </div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW10()">โปรแกรมกำหนดค่าคงที่ MAX_VALUE เป็น 100, ประกาศตัวแปรค่าคงที่ x เป็น 80 และ z เป็น 'C', แต่ไม่แสดงผลลัพธ์ใดๆ</p>    
-                    </div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW10()">โปรแกรมกำหนดค่าคงที่ MAX_VALUE เป็น 100, ประกาศตัวแปรค่าคงที่ x และ z ทั้งคู่เป็น 80 แล้วแสดงผลลัพธ์ 80, A, 100</p> 
-                    </div>
-                </div>
-                    
                 </div>
             </div>  
         </div>
 
+        <div class="game">
+            <!--* ข้อ 23 E3*-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                        <h5>ข้อใดอธิบายการทำงานของ Source Code นี้ได้ถูกต้อง</h5>
+                        <p>#include < stdio.h >
+                        <br>int main() {
+                        <br>&ensp;int x = 45;
+                        <br>&ensp;int y = 80;
+                        <br>&ensp;x = y;
+                        <br>&ensp;printf("%d", y);
+                        <br>&ensp;printf(" %d", x);
+                        <br>&ensp;return 0;
+                        <br>}
+                        </p>
+                        <p style="text-align: center;" id="demo23"></p>
+                    </div>
+                    <div class="ans">
+                        <div>
+                            <div class="btn">
+                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW23()">
+                                    1: Start
+                                    <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                    <br>3: กำหนดให้ x เท่ากับ y
+                                    <br>4: ประกาศตัวแปรชื่อ y เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 80
+                                    <br>5: ใช้คำสั่ง printf แสดงค่าของ y ซึ่งจะแสดงค่าตัวเลข 80 ออกทางหน้าจอ
+                                    <br>6: ประกาศตัวแปรชื่อ x เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 45
+                                    <br>7: ใช้คำสั่ง printf แสดงค่าของ x ซึ่งจะแสดงค่าตัวเลข 80 ออกทางหน้าจอ
+                                    <br>8: End
+                                </p> 
+                            </div>    
+                            <div class="btn">
+                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT23()">
+                                    1: Start
+                                    <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                    <br>3: ประกาศตัวแปรชื่อ x เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 45
+                                    <br>4: ประกาศตัวแปรชื่อ y เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 80
+                                    <br>5: กำหนดให้ x เท่ากับ y
+                                    <br>6: ใช้คำสั่ง printf แสดงค่าของ y ซึ่งจะแสดงค่าตัวเลข 80 ออกทางหน้าจอ
+                                    <br>7: ใช้คำสั่ง printf แสดงค่าของ x ซึ่งจะแสดงค่าตัวเลข 80 ออกทางหน้าจอ
+                                    <br>8: End
+                                </p>    
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
 
+            <div class="game">
+                <!--* ข้อ 24 E4 *-->
+                    <div class="gamecontent-E">
+                        <div  class="question-E">
+                            <h5>ข้อใดอธิบายการทำงานของ Source Code นี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h >
+                            <br>int main() {
+                            <br>&ensp;float x = 8.12;
+                            <br>&ensp;float y = 9.23;
+                            <br>&ensp;float z = 10.34; 
+                            <br>&ensp;x = y;
+                            <br>&ensp;y = z;
+                            <br>&ensp;z = y;
+                            <br>&ensp;printf("%.3f", x);
+                            <br>&ensp;printf(" %.3f", y);
+                            <br>&ensp;printf(" %.3f", z);
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo24"></p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT24()">
+                                        1: Start
+                                        <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                        <br>3: ประกาศตัวแปรชื่อ x เป็นชนิดข้อมูลที่เก็บค่าตัวเลขทศนิยม มีค่าเป็น 8.12
+                                        <br>4: ประกาศตัวแปรชื่อ y เป็นชนิดข้อมูลที่เก็บค่าตัวเลขทศนิยม มีค่าเป็น 9.23
+                                        <br>5: ประกาศตัวแปรชื่อ z เป็นชนิดข้อมูลที่เก็บค่าตัวเลขทศนิยม มีค่าเป็น 10.34
+                                        <br>6: กำหนดให้ x เท่ากับ y
+                                        <br>7: กำหนดให้ y เท่ากับ z
+                                        <br>8: กำหนดให้ z เท่ากับ y
+                                        <br>9: ใช้คำสั่ง printf แสดงค่าของ x ซึ่งจะแสดงค่าตัวเลข 9.230 ออกทางหน้าจอ
+                                        <br>10: ใช้คำสั่ง printf แสดงค่าของ y ซึ่งจะแสดงค่าตัวเลข 10.340 ออกทางหน้าจอ
+                                        <br>11: ใช้คำสั่ง printf แสดงค่าของ z ซึ่งจะแสดงค่าตัวเลข 10.340 ออกทางหน้าจอ
+                                        <br>12: End
+                                    </p> 
+                                </div>    
+                                <div class="btn">
+                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW24()">
+                                        1: Start
+                                        <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                        <br>3: ประกาศตัวแปรชื่อ x เป็นชนิดข้อมูลที่เก็บค่าตัวเลขทศนิยม มีค่าเป็น 8.12
+                                        <br>4: กำหนดให้ x เท่ากับ y
+                                        <br>5: ประกาศตัวแปรชื่อ y เป็นชนิดข้อมูลที่เก็บค่าตัวเลขทศนิยม มีค่าเป็น 9.23
+                                        <br>6: กำหนดให้ y เท่ากับ z
+                                        <br>7: ประกาศตัวแปรชื่อ z เป็นชนิดข้อมูลที่เก็บค่าตัวเลขทศนิยม มีค่าเป็น 10.34
+                                        <br>8: กำหนดให้ z เท่ากับ y
+                                        <br>9: ใช้คำสั่ง printf แสดงค่าของ x ซึ่งจะแสดงค่าตัวเลข 9.230 ออกทางหน้าจอ
+                                        <br>10: ใช้คำสั่ง printf แสดงค่าของ y ซึ่งจะแสดงค่าตัวเลข 10.340 ออกทางหน้าจอ
+                                        <br>11: ใช้คำสั่ง printf แสดงค่าของ z ซึ่งจะแสดงค่าตัวเลข 10.340 ออกทางหน้าจอ
+                                        <br>12: End
+                                    </p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
 
+            <div class="game">
+                <!--* ข้อ 25 E5 *-->
+                    <div class="gamecontent-E">
+                        <div  class="question-E">
+                            <h5>ข้อใดอธิบายการทำงานของ Source Code นี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h >
+                            <br>#define MAX_VALUE 100
+                            <br>int main() {
+                            <br>&ensp;const int x = 25;
+                            <br>&ensp;printf("%d, %d", MAX_VALUE, x);
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo25"></p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT25()">
+                                        1: Start
+                                        <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                        <br>3: ประกาศค่าคงที่ชื่อ MAX_VALUE มีค่าเป็น 100
+                                        <br>4: ประกาศตัวแปรค่าคงที่ชื่อ x เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 25
+                                        <br>5: ใช้คำสั่ง printf แสดงค่าของ MAX_VALUE ซึ่งจะแสดงค่าตัวเลข 100 และแสดงค่าของ x ซึ่งจะแสดงค่าตัวเลข 25 ออกทางหน้าจอ
+                                        <br>6: End
+                                    </p> 
+                                </div>    
+                                <div class="btn">
+                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW25()">
+                                        1: Start
+                                        <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                        <br>3: ประกาศค่าคงที่ชื่อ MAX_VALUE มีค่าเป็น 100
+                                        <br>4: ประกาศตัวแปรค่าคงที่ชื่อ x เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 25
+                                        <br>5: ใช้คำสั่ง printf แสดงค่าของ MAX_VALUE ซึ่งจะแสดงค่าตัวเลข 100 
+                                        <br>6: ใช้คำสั่ง printf แสดงค่าของ x ซึ่งจะแสดงค่าตัวเลข 25 ออกทางหน้าจอ
+                                        <br>7: End
+                                    </p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                
+            <div class="game">
+                <!--* ข้อ 26 E6 *-->
+                    <div class="gamecontent-E">
+                        <div  class="question-E">
+                            <h5>ข้อใดอธิบายการทำงานของ Source Code นี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h >
+                            <br>#define NUMBER3 325
+                            <br>int main() {
+                            <br>&ensp;const int number1 = 35;
+                            <br>&ensp;const float number2 = 8.49;
+                            <br>&ensp;printf("%d, ", number1);
+                            <br>&ensp;printf("%.2f, ", number2);
+                            <br>&ensp;printf("%d", MAX_VALUE);
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo26"></p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW26()">
+                                        1: Start
+                                        <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                        <br>3: ประกาศค่าคงที่ชื่อ MAX_VALUE มีค่าเป็น 325
+                                        <br>4: ประกาศตัวแปรค่าคงที่ชื่อ numebr1 เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 8.49
+                                        <br>5: ประกาศตัวแปรค่าคงที่ชื่อ numebr2 เป็นชนิดข้อมูลที่เก็บค่าตัวเลขทศนิยม มีค่าเป็น 35
+                                        <br>6: ใช้คำสั่ง printf แสดงค่าของ number2 ซึ่งจะแสดงค่าตัวเลข 8.49 ออกทางหน้าจอ
+                                        <br>7: ใช้คำสั่ง printf แสดงค่าของ number1 ซึ่งจะแสดงค่าตัวเลข 35 ออกทางหน้าจอ
+                                        <br>8: ใช้คำสั่ง printf แสดงค่าของ NUMBER3 ซึ่งจะแสดงค่าตัวเลข 325 ออกทางหน้าจอ
+                                        <br>9: End
+                                    </p> 
+                                </div>    
+                                <div class="btn">
+                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT26()">
+                                        1: Start
+                                        <br>2: เรียกใช้ Library ชื่อ stdio.h
+                                        <br>3: ประกาศค่าคงที่ชื่อ MAX_VALUE มีค่าเป็น 325
+                                        <br>4: ประกาศตัวแปรค่าคงที่ชื่อ numebr1 เป็นชนิดข้อมูลที่เก็บค่าจำนวนเต็ม มีค่าเป็น 35
+                                        <br>5: ประกาศตัวแปรค่าคงที่ชื่อ numebr2 เป็นชนิดข้อมูลที่เก็บค่าตัวเลขทศนิยม มีค่าเป็น 8.49
+                                        <br>6: ใช้คำสั่ง printf แสดงค่าของ number1 ซึ่งจะแสดงค่าตัวเลข 35 ออกทางหน้าจอ
+                                        <br>7: ใช้คำสั่ง printf แสดงค่าของ number2 ซึ่งจะแสดงค่าตัวเลข 8.49 ออกทางหน้าจอ
+                                        <br>8: ใช้คำสั่ง printf แสดงค่าของ NUMBER3 ซึ่งจะแสดงค่าตัวเลข 325 ออกทางหน้าจอ
+                                        <br>9: End
+                                    </p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
 
+            <div class="game">
+                <!--* ข้อ 27 E7*-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายการทำงานของโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h >
+                    <br>#define MAX_VALUE 100
+                    <br>int main() {
+                    <br>&ensp;const int x = 80;
+                    <br>&ensp;char z = 'C';
+                    <br>&ensp;z = 'A';
+                    <br>&ensp;printf("%d, ", x);
+                    <br>&ensp;printf("%c, ", z);
+                    <br>&ensp;printf("%d", MAX_VALUE);
+                    <br>&ensp;return 0;
+                    <br>}
+                    </p>
+                    <p style="text-align: center;" id="demo27"></p>
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW27()">โปรแกรมกำหนดค่าคงที่ MAX_VALUE เป็น 100, <br>ประกาศตัวแปรค่าคงที่ x เป็น 80 <br> และ z เป็น 'C' แล้วแสดงผลลัพธ์ 80, C, 100</p>    
+                        </div>
+                        <div class="btn">    
+                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT27()">โปรแกรมกำหนดค่าคงที่ MAX_VALUE เป็น 100, <br>ประกาศตัวแปรค่าคงที่ x เป็น 80 <br> และ z เป็น 'A' แล้วแสดงผลลัพธ์ 80, A, 100</p> 
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW27()">โปรแกรมกำหนดค่าคงที่ MAX_VALUE เป็น 100, <br>ประกาศตัวแปรค่าคงที่ x เป็น 80 <br> และ z เป็น 'C', แต่ไม่แสดงผลลัพธ์ใดๆ</p>    
+                        </div>
+                        <div class="btn">    
+                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW28()">โปรแกรมกำหนดค่าคงที่ MAX_VALUE เป็น 100, <br>ประกาศตัวแปรค่าคงที่ x  และ z ทั้งคู่เป็น 80 <br>แล้วแสดงผลลัพธ์ 80, A, 100</p> 
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>  
 
+                <!--* ข้อ 28 E8 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายการทำงานของโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h > 
+                    <br>#define MAX_VALUE 120
+                    <br>int main() {
+                    <br>&ensp;const int x = 30;
+                    <br>&ensp;const char z = 'C';
+                    <br>&ensp;z = 'A';
+                    <br>&ensp;printf("%d, ", x);
+                    <br>&ensp;printf("%c, ", z);
+                    <br>&ensp;printf("%d", MAX_VALUE);
+                    <br>&ensp;return 0;
+                    <br>}
+                    </p>
+                    <p style="text-align: center;" id="demo28"></p>
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW28()">โปรแกรมกำหนดค่าคงที่ MAX_VALUE เป็น 120, <br>ประกาศตัวแปรค่าคงที่ x เป็น 30 และตัวแปรค่าคงที่ z เป็น 'C' <br>แล้วแสดงผลลัพธ์ 30, C, 120</p>    
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW28()">โปรแกรมจะเกิดข้อผิดพลาดในการคอมไพล์ <br>เนื่องจากไม่สามารถกำหนดค่าใหม่ให้กับ MAX_VALUE</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT28()">โปรแกรมจะเกิดข้อผิดพลาดในการคอมไพล์ <br>เนื่องจากพยายามเปลี่ยนค่าตัวแปร z ที่เป็น const</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW28()">โปรแกรมจะเกิดข้อผิดพลาดในการคอมไพล์ <br>เนื่องจากไม่สามารถกำหนดค่าใหม่ให้กับ MAX_VALUE</p>  
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+            
+        <div class="game">
+            <!--* ข้อ 29 E9 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายการทำงานของโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h > 
+                    <br>int number1 = 23;
+                    <br>int main() {
+                    <br>&ensp;int number2 = 88;
+                    <br>&ensp;int number3 = number1;
+                    <br>&ensp;printf("Local Variable: %d, ", number2);
+                    <br>&ensp;printf("Global Variable: %d", number3);
+                    <br>&ensp;return 0;
+                    <br>}
+                    </p>
+                    <p style="text-align: center;" id="demo29"></p>
+                    </div>
+                    <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT29()">
+                                    ประกาศค่าตัวแปร Global Variable ชื่อ number1 เป็น 23 และประกาศค่าตัวแปร 
+                                    <br>Local Variable ชื่อ number2 เป็น 88 และตัวแปร number3 มีค่าเท่ากับ number1 โดยโปรแกรมจะแสดงผลลัพธ์ 
+                                    <br>Local Variable: 88, Global Variable: 23</p>    
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW29()">
+                                    โปรแกรมจะเกิดข้อผิดพลาดในการคอมไพล์เนื่องจากมีการอ้างอิงตัวแปรที่ไม่มีการประกาศ</p>  
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW29()">
+                                    ประกาศค่าตัวแปร Global Variable ชื่อ number1 เป็น 23 และประกาศค่าตัวแปร Local Variable ชื่อ number2 เป็น 88 
+                                    <br>และตัวแปร number3 มีค่าเท่ากับ number1 โดยโปรแกรมจะแสดงผลลัพธ์ Local Variable: 23, Global Variable: 88</p>  
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW29()">
+                                    โปรแกรมจะเกิดข้อผิดพลาดในการคอมไพล์เนื่องจากไม่สามารถพิมพ์ตัวแปร number3</p>  
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="game">
+                    <!--* ข้อ 30 E10 *-->
+                        <div class="gamecontent-E">
+                            <div  class="question-E">
+                            <h5>ข้อใดอธิบายการทำงานของโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>const int a = 330;
+                            <br>int b = 840;
+                            <br>int main() {
+                            <br>&ensp;int b = 100;
+                            <br>&ensp;int c = a;
+                            <br>&ensp;int d = b;
+                            <br>&ensp;printf("Local Variable: %d, ", d);
+                            <br>&ensp;printf("Global Variable: %d", c);
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo30"></p>
+                            </div>
+                            <div class="ans">
+                                    <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW30()">
+                                            ประกาศตัวแปรค่าคงที่ Global Variable ชื่อ a เป็น 330 และ b เป็น 840 
+                                            <br>และประกาศค่าตัวแปร Local Variable ชื่อ b เป็น 100 ตัวแปร c เท่ากับ a 
+                                            <br>และตัวแปร d เท่ากับ b โดยโปรแกรมจะแสดงผลลัพธ์ Local Variable: 840, 
+                                            <br>Global Variable: 330</p>    
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT30()">
+                                            ประกาศตัวแปรค่าคงที่ Global Variable ชื่อ a เป็น 330 และ b เป็น 840 
+                                            <br>และประกาศค่าตัวแปร Local Variable ชื่อ b เป็น 100 ตัวแปร c เท่ากับ a และตัวแปร d เท่ากับ b 
+                                            <br>โดยโปรแกรมจะแสดงผลลัพธ์ Local Variable: 100, Global Variable: 330</p>  
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW30()">
+                                            โปรแกรมจะเกิดข้อผิดพลาดในการคอมไพล์เนื่องจากมีการประกาศตัวแปร b ซ้ำ</p>  
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW30()">
+                                            ประกาศตัวแปรค่าคงที่ Global Variable ชื่อ a เป็น 330 และ b เป็น 840 
+                                            <br>และประกาศค่าตัวแปร Local Variable ชื่อ b เป็น 100 ตัวแปร c เท่ากับ a และตัวแปร d เท่ากับ b 
+                                            <br>โดยโปรแกรมจะแสดงผลลัพธ์ Local Variable: 330, Global Variable: 100</p>  
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            <!--* writing *-->
+            <BR id="Writing"> <br><br>
+                <h2>Writing</h2>
+                <!--* 1 *-->
+                <div class="gamecontent-W">
+                    <iframe src="https://drive.google.com/file/d/1paJ6fajACtcU8nDFjnIzL7dN-_0Af7Qr/preview" width="440" height="500" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="60%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction1()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV1" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1EgYxJU6l4qsXU6Mwe82plz8dVr05TW7p/preview" width="640" height="480" allow="autoplay"></iframe> 
+                        <iframe src="https://drive.google.com/file/d/1MVCKi40LRmw0Lmkq8VNszbFrMcv10tJ3/preview" width="400" height="480" allow="autoplay"></iframe>
+                </div></div>
 
 
     
