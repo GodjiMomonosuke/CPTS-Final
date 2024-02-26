@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/home1.css' />
+    <link rel='stylesheet' href='stylesheets/compiler_line.css' />
+    <link rel='stylesheet' href='stylesheets/Drag_Drop.css' />
+    <link rel="stylesheet" href="stylesheets/quiz.css">
+    <title>(Pre-test) Functions</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+
+<!-- MIDDLE 1 -->
+<div class="content">
+    <div id = "content" class="container">
+<!--   C Language -->
+        <div class="accordion" id="accordionParentSyntax">
+            <!--   Introduce -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h1>Functions (Pre-test)</h1>
+                
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><i href="/home" class="fa fa-home" style="font-size:16px"></i></li>
+                    <li class="breadcrumb-item active" aria-current="page">Course</li>
+                </ol>
+
+<%# START %> 
+<form action="/course-Functions-pretest/submit" method="post" autocomplete="off" >
+
+    
+
+    <%# LV1 %> <br>
+                <h3>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</h3>
+                <!-- ข้อ 1 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        1.  ฟังก์ชัน main() ในภาษาซีมีหน้าที่เป็นอย่างไร      
+                    </p>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-1">
+                        จุดเริ่มต้นของโปรแกรม
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-2">
+                        เก็บข้อมูล
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-3">
+                        คืนค่าสูงสุด
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-4">
+                        พิมพ์ข้อความ
+                    </label>
+                </div> <br>
+                <!-- ข้อ 2 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        2.  วิธีการเรียกใช้ฟังก์ชันในภาษาซีที่ถูกต้อง
+                    </p>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-1">
+                        functionName();
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-2">
+                        functionName{}
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-3">
+                        call functionName;
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-4">
+                        use functionName;
+                    </label>
+                </div><br>
+                <!-- ข้อ 3 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        3. การส่งค่าเข้าไปในฟังก์ชันผ่านพารามิเตอร์เป็นแบบใด
+                    </p>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-1">
+                        Pass by reference
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-2">
+                        Pass by value
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-3">
+                        Pass by pointer
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-4">
+                        Pass by function
+                    </label>
+                </div><br>
+                <!-- ข้อ 4 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; "> 
+                        4. ถ้าต้องใช้คำสั่ง pow(a, b) ต้องประกาศ Header File ชื่อว่าอะไร
+                    </p>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-1">
+                        string.h
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-2">
+                        math.h
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-3">
+                        stdio.h
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-4">
+                        time.h
+                    </label>
+                </div><br>
+                <!-- ข้อ 5 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        5. ข้อใดที่เป็นประโยชน์ของการใช้ User Defined Functions
+                    </p>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-1">
+                        เพิ่มความซับซ้อนของโปรแกรม
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-2">
+                        การจัดการกับความผิดพลาดเป็นไปได้ยาก
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-3">
+                        ช่วยในการแบ่งโปรแกรมออกเป็นส่วนย่อย
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-4">
+                        ทำให้โปรแกรมช้าลง
+                    </label>
+                </div><br>
+                <br>
+    <%# LV2 %>                     
+                <h3>ข้อที่ 6 - 10: วัดความสามารถด้านการติดตามโค้ด (Tracing)</h3>
+                <!-- ข้อ 6 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        6. จากโค้ดนี้ ค่า result มีค่าเท่าไร
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include< stdio.h >
+                        <br>&ensp;int add(int a, int b) {
+                        <br>&ensp;&ensp;return a + b;
+                        <br>&ensp;}
+                        <br>&ensp;int main() {
+                        <br>&ensp;&ensp;int x = 5;
+                        <br>&ensp;&ensp;int y = 3;
+                        <br>&ensp;&ensp;int result = add(x, y);
+                        <br>&ensp;&ensp;printf("%d", result);
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;}
+                    </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice6" id="option6-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-1">
+                        3
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-2">
+                        5
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-3">
+                        8
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-4">
+                        10
+                    </label>
+                </div><br>
+                <!-- ข้อ 7 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        7. จากโค้ดนี้ ผลลัพธ์ข้อใดถูกต้อง เมื่อกำหนดให้ x = 10, y = 0
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include< stdio.h >
+                        <br>&ensp;int divide(int a, int b) {
+                        <br>&ensp;&ensp;if (b == 0) {
+                        <br>&ensp;&ensp;return -1;
+                        <br>&ensp;&ensp;}
+                        <br>&ensp;&ensp;return a / b;
+                        <br>&ensp;}
+                        <br>
+                        <br>&ensp;int main() {
+                        <br>&ensp;&ensp;int x, y, result;
+                        <br>&ensp;&ensp;printf("Enter x and y: ");
+                        <br>&ensp;&ensp;scanf("%d %d", &x, &y);
+                        <br>&ensp;&ensp;result = divide(x, y);
+                        <br>&ensp;&ensp;printf("%d\n", result);
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;}
+                    </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice7" id="option7-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-1">
+                        0
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-2">
+                        -1
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-3">
+                        10
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-4">
+                        Error
+                    </label>
+                </div><br>
+                <!-- ข้อ 8 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        8. จากโค้ดนี้ ค่า c จะมีค่าเท่าไร
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include < stdio.h> 
+                        <br>&ensp;int square(int x) {
+                        <br>&ensp;&ensp;return x * x;
+                        <br>&ensp;}
+                        <br>&ensp;int main() 
+                        <br>&ensp;{ 
+                        <br>&ensp;&ensp;int a = 3;
+                        <br>&ensp;&ensp;int b = square(a);
+                        <br>&ensp;&ensp;int c = square(b);
+                        <br>&ensp;&ensp;printf("a = %d, b = %d, c = %d", a, b, c);
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;} <br> 
+                    </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice8" id="option8-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-1">
+                        3
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-2">
+                        9
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-3">
+                        27
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-4">
+                        81
+                    </label>
+                </div><br> 
+                <!-- ข้อ 9 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">   
+                        9. จากโค้ดนี้ ผลลัพธ์ข้อใดถูกต้อง 
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include < stdio.h> 
+                        <br>&ensp;void modifyArray(int arr[]) {
+                        <br>&ensp;arr[0] = 100;
+                        <br>&ensp;}
+                        <br>&ensp;int main() 
+                        <br>&ensp;{ 
+                        <br>&ensp;&ensp;int myArray[3] = {1, 2, 3};
+                        <br>&ensp;&ensp;modifyArray(myArray);
+                        <br>&ensp;&ensp;printf("%d %d %d", myArray[0], myArray[1], myArray[2]);
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;} <br> 
+
+                    </b>
+                    </p>                   
+                    <input type="radio" class="btn-check" name="choice9" id="option9-1" autocomplete="off" value="A">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-1">
+                        1 2 3
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-2">
+                        1 2 100
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-3">
+                        100 1 2
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-4">
+                        100 2 3
+                    </label>
+                </div><br>  
+                <!-- ข้อ 10 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        10. จากโค้ดนี้ ผลลัพธ์ข้อใดถูกต้อง 
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int A(int x) {
+                            <br>&ensp;return x + 1;
+                            <br>&ensp; }
+                            <br>
+                            <br>&ensp;int B(int y) {
+                            <br>&ensp;    return y * 2;
+                            <br>&ensp;}
+                            <br>
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int result = A(3) + B(4);
+                            <br>&ensp;&ensp;printf("%d", result);
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br> 
+                    </b>
+                    </p>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-1">
+                        9 
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-2">
+                        10 
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-3">
+                        11
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-4">
+                        12
+                    </label>
+                </div><br>  
+        <%# LV3 %>
+                <h2>ข้อที่ 11 - 15: วัดความสามารถด้านการอธิบายโค้ด (Explaining)</h2>
+                <!-- ข้อ 11 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        11. ข้อใดอธิบายการทำงานได้ถูกต้อง
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h >
+                            <br>&ensp;int add(int a, int b);
+                            <br>&ensp;int main() {
+                            <br>&ensp;&ensp;int x = 5;
+                            <br>&ensp;&ensp;int y = 7;
+                            <br>&ensp;&ensp;int result;
+                            <br>&ensp;&ensp;result = add(x, y);
+                            <br>&ensp;&ensp;printf("Result: %d\n", result);
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;}
+                            <br>&ensp;int add(int a, int b) {
+                            <br>&ensp;&ensp;return a + b;
+                            <br>&ensp;}<br> 
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-1">
+                        โค้ดนี้ประกาศฟังก์ชัน add เก็บข้อมูลประเภทจำนวนเต็ม และรับพารามิเตอร์ a และ b ผ่านตัวแปร x, y ในฟังก์ชัน main โดยเรียกใช้งาน add(x, y) เพื่อทำการบวก x และ y เก็บไว้ในตัวแปร result และแสดงผลลัพธ์ "Result: 12"
+                    </label>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-2">
+                        โค้ดนี้ประกาศฟังก์ชัน add เก็บข้อมูลประเภทจำนวนทศนิยม และรับพารามิเตอร์ a และ b ผ่านตัวแปร x, y ในฟังก์ชัน main โดยเรียกใช้งาน add(x, y) เพื่อทำการบวก x และ y เก็บไว้ในตัวแปร result และแสดงผลลัพธ์ "Result: 12"
+                    </label>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-3">
+                        โค้ดนี้ประกาศฟังก์ชัน add เก็บข้อมูลประเภทจำนวนเต็ม และรับพารามิเตอร์ x และ y ผ่านตัวแปร a, b ในฟังก์ชัน main โดยเรียกใช้งาน add(x, y) เพื่อทำการบวก x และ y เก็บไว้ในตัวแปร result และแสดงผลลัพธ์ "Result: 12"
+                    </label>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-4">
+                        โค้ดนี้ประกาศฟังก์ชัน add เก็บข้อมูลประเภทจำนวนเต็ม และรับพารามิเตอร์ x และ y ผ่านตัวแปร a, b ในฟังก์ชัน main โดยเรียกใช้งาน add(x, y) เพื่อทำการคูณ x และ y เก็บไว้ในตัวแปร result และแสดงผลลัพธ์ "Result: 35"
+                    </label>
+                </div><br>  
+                <!-- ข้อ 12  -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        12. ข้อใดอธิบายการทำงานด้ถูกต้อง
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;void Addition();        
+                            <br>&ensp;void main()
+                            <br>&ensp;{
+                            <br>&ensp;&ensp;printf("\n ............. \n");
+                            <br>&ensp;&ensp;Addition();                      
+                            <br>&ensp;}
+                            <br>
+                            <br>&ensp;void Addition()
+                            <br>&ensp;{
+                            <br>&ensp;&ensp;int Sum, a = 30, b = 60;  
+                            <br>&ensp;&ensp;Sum = a + b;
+                            <br>&ensp;&ensp;printf("\nSum of a = %d and b = %d is = %d", a, b, Sum);
+                            <br>&ensp;} <br>     
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-1">
+                        โค้ดนี้สร้างฟังก์ชัน Addition() โดยไม่มีการรับค่า argument ไม่มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b ด้วยฟังก์ชัน Addition()
+                    </label>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-2">
+                        โค้ดนี้สร้างฟังก์ชัน Addition() โดยมีการรับค่า argument แต่ไม่มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b ด้วยฟังก์ชัน Addition()
+                    </label>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-3">
+                        โค้ดนี้สร้างฟังก์ชัน Addition() โดยไม่มีการรับค่า argument แต่มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b ด้วยฟังก์ชัน Addition()
+                    </label>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-4">
+                        โค้ดนี้สร้างฟังก์ชัน Addition() โดยมีการรับค่า argument มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b ด้วยฟังก์ชัน Addition()
+                    </label>
+                    </div><br>  
+                <!-- ข้อ 13  -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        13. ข้อใดอธิบายการทำงานได้ถูกต้อง
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int Multiplication();        
+                            <br>&ensp;int main()
+                            <br>&ensp;{
+                            <br>&ensp;&ensp;int Multi;
+                            <br>&ensp;&ensp; Multi = Multiplication();
+                            <br>&ensp;&ensp;printf("\nMultiplication of a and b is = %d \n", Multi );     
+                            <br>&ensp;&ensp;return 0;            
+                            <br>&ensp;}
+                            <br>
+                            <br>&ensp;int Multiplication()
+                            <br>&ensp;&ensp;{
+                            <br>&ensp;&ensp;int Multi, a = 20, b = 60;  
+                            <br>&ensp;&ensp;Multi = a * b;
+                            <br>&ensp;&ensp;return Multi;
+                            <br>&ensp;} <br>     
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-1">
+                        โค้ดนี้สร้างฟังก์ชัน Multiplication() โดยไม่มีการรับค่า argument ไม่มีการ return ค่า และแสดงผลลัพธ์การคูณของ a และ b ด้วยฟังก์ชัน Multiplication()
+                    </label>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-2">
+                        โค้ดนี้สร้างฟังก์ชัน Multiplication() โดยมีการรับค่า argument ไม่มีการ return ค่า และแสดงผลลัพธ์การคูณของ a และ b ด้วยฟังก์ชัน Multiplication()
+                    </label>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-3">
+                        โค้ดนี้สร้างฟังก์ชัน Multiplication() โดยมีการรับค่า argument มีการ return ค่า และแสดงผลลัพธ์การคูณของ a และ b เมื่อผ่านฟังก์ชัน Multiplication()
+                    </label> 
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-4">
+                        โค้ดนี้สร้างฟังก์ชัน Multiplication() โดยไม่มีการรับค่า argument แต่มีการ return ค่า และแสดงผลลัพธ์การคูณของ a และ b เมื่อผ่านฟังก์ชัน Multiplication()
+                    </label>
+                    </div><br>  
+                <!-- ข้อ 14  -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        14. ข้อใดอธิบายการทำงานได้ถูกต้อง
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;void Addition(int, int);        
+                            <br>&ensp;void main()
+                            <br>&ensp;{
+                            <br>&ensp;&ensp;int a, b;
+                            <br>&ensp;&ensp;printf("Please Enter two integer values: \n");
+                            <br>&ensp;&ensp;scanf("%d %d",&a, &b);
+                            <br>&ensp;&ensp;//Calling the function with dynamic values
+                            <br>&ensp;&ensp;Addition(a, b);
+                            <br>&ensp;}
+                            <br>
+                            <br>&ensp;void Addition(int a, int b)
+                            <br>&ensp;&ensp;{
+                            <br>&ensp;&ensp;int Sum; 
+                            <br>&ensp;&ensp;Sum = a + b;
+                            <br>&ensp;&ensp;printf("\nAddition of %d and %d is = %d \n", a, b, Sum);
+                            <br>&ensp;} <br>  
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-1">
+                        โค้ดนี้สร้างฟังก์ชัน Addition() โดยมีการรับค่า argument แต่ไม่มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b ด้วยฟังก์ชัน Addition()
+                    </label>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-2">
+                        โค้ดนี้สร้างฟังก์ชัน Addition() โดยไม่มีการรับค่า argument แต่มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b เมื่อผ่านฟังก์ชัน Addition()
+                    </label>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-3">
+                        โค้ดนี้สร้างฟังก์ชัน Addition() โดยมีการรับค่า argument มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b เมื่อผ่านฟังก์ชัน Addition()
+                    </label>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-4">
+                        โค้ดนี้สร้างฟังก์ชัน Addition() โดยไม่มีการรับค่า argument ไม่มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b ด้วยฟังก์ชัน Addition()
+                    </label>
+                </div><br>  
+                <!-- ข้อ 15 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        15. ข้อใดอธิบายการทำงานได้ถูกต้อง
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int Multiplication(int, int);        
+                            <br>&ensp;int main()
+                            <br>&ensp;{
+                            <br>&ensp;&ensp; int a, b, Multi;
+                            <br>&ensp;&ensp; printf("Please Enter two integer values: \n");
+                            <br>&ensp;&ensp; scanf("%d %d",&a, &b);
+                            <br>&ensp;&ensp; //Calling the function with dynamic values
+                            <br>&ensp;&ensp; Multi = Multiplication(a, b);
+                            <br>&ensp;&ensp; printf("\nMultiplication of %d and %d is = %d \n", a, b, Multi);        
+                            <br>&ensp;&ensp; return 0;            
+                            <br>&ensp;}
+                            <br>
+                            <br>&ensp; int Multiplication(int a, int b)
+                            <br>&ensp;{
+                            <br>&ensp;&ensp; int Multi;  
+                            <br>&ensp;&ensp; Multi = a * b;
+                            <br>&ensp;&ensp;return Multi;
+                            <br>&ensp;&ensp;} <br>  
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-1">
+                        โค้ดนี้สร้างฟังก์ชัน Multiplication() โดยไม่มีการรับค่า argument แต่มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b เมื่อผ่านฟังก์ชัน Multiplication()
+                    </label>
+                        <input type="radio" class="btn-check" name="choice15" id="choice15-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-2">
+                        โค้ดนี้สร้างฟังก์ชัน Multiplication() โดยไม่มีการรับค่า argument แต่ไม่มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b ด้วยฟังก์ชัน Multiplication()
+                    </label>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-3">
+                        โค้ดนี้สร้างฟังก์ชัน Multiplication() โดยมีการรับค่า argument แต่ไม่มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b ด้วยฟังก์ชัน Multiplication()
+                    </label>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-4">
+                        โค้ดนี้สร้างฟังก์ชัน Multiplication() โดยมีการรับค่า argument มีการ return ค่า และแสดงผลลัพธ์การบวกของ a และ b เมื่อผ่านฟังก์ชัน Multiplication()
+                    </label>
+                </div><br>  
+        <%# LV4 %>                
+                <h2>ข้อที่ 16 - 20: วัดความสามารถด้านการเขียนโปรแกรม (Writing)</h2> 
+                     <br>
+
+                <!-- ข้อ 16 -->
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #363e62;">
+                    16.1 (Deployment) ให้เขียนโปรแกรมเครื่องคิดเลขที่มีการสร้างและเรียกใช้งานฟังก์ชัน ดังนี้ (3 คะแนน)
+                    <br></p>
+                <div class="group2"  style="margin: 20px;">
+                    <iframe src="<%= ADRI1  %> " width="90%" height="600" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                </div>    
+                <div class="form-group">
+                    <textarea class="form-control"  placeholder="วางโค้ดที่นี่" rows="10" cols="30" name="code" required></textarea>
+                </div>
+                
+                
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #363e62;">
+                    16.2 (Result) แสดงผลลัพธ์ที่ได้ของข้อที่ 16.1 (1 คะแนน)
+                </p>
+                    <textarea class="form-control" placeholder="คำตอบ" style="height: 100px;" rows="4" cols="30" name="expResult16" required></textarea>
+                <br>
+                <p type="text" class="list-group-item list-group-item-action"  style="color: white; background-color: #363e62;">
+                    16.3 (Improvement) ถ้าต้องการเพิ่มฟังก์ชันเลขยกกำลังเข้าไปในโปรแกรมนี้ ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)
+                    <br>** Hint. ใช้ math.h
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้)<br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="คำตอบ" name="sendLink16" type="text" rows="4" required></textarea>
+                            </div>
+                <br><br>
+
+                <!-- ข้อ 17 -->
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #8c521f;">
+                    17.1 (Deployment) ให้เขียนโปรแกรมตรวจว่าเป็นเลขคู่หรือเลขคี่ที่มีการสร้างและเรียกใช้งานฟังก์ชัน ดังนี้ (3 คะแนน)
+                    <br></p>
+                <div class="group2" style="margin: 20px;">
+                    <iframe src="<%= ADRI2  %>" width="90%" height="600" allow="autoplay"></iframe>                
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" style="height: 400px;" placeholder="วางโค้ดที่นี่" rows="4" cols="30" name="sendLink171" required></textarea>
+                </div>
+                
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #8c521f;">
+                    17.2 (Result) แสดงผลลัพธ์ที่ได้ของข้อที่ 17.1 (1 คะแนน)
+                </p>
+                    <textarea class="form-control" placeholder="คำตอบ" style="height: 100px;" rows="4" cols="30" name="expResult17" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #8c521f;">
+                    17.3 (Improvement) ถ้าต้องการเพิ่มฟังก์ชันตรวจสอบตัวเลขจำนวนเต็มบวก เต็มศูนย์ และเต็มลบ แล้วแสดงว่าเป็นเลขคู่ Even หรือเลขคี่ Odd พร้อมทั้งแสดงข้อความว่าตัวเลขนั้นเป็นจำนวนเต็มบวก Positive, 
+                    <br>จำนวนเต็มศูนย์ Zero หรือจำนวนเต็มลบ Negative เข้าไปในโปรแกรมนี้ ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="คำตอบ" name="sendLink172" type="text" rows="4" required></textarea>
+                    </div>
+                <br><br>
+
+                <!-- ข้อ 18 -->
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #366241;">
+                    18.1 (Deployment) ให้เขียนโปรแกรมคำนวณปริมาตรทรงกระบอกที่มีการสร้างและเรียกใช้งานฟังก์ชัน ดังนี้ (3 คะแนน)
+                    <br>
+                </p>
+                <div class="group2 style="margin: 20px;">
+                    <iframe src="<%= ADRI3  %>" width="90%" height="600" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                </div>
+                    <div class="form-group">
+                    <textarea class="form-control" style="height: 400px;" placeholder="วางโค้ดที่นี่" rows="4" cols="30" name="sendLink181" required></textarea>
+                </div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #366241;">
+                    18.2 (Result) แสดงผลลัพธ์ที่ได้ของข้อที่ 18.1 (1 คะแนน)
+                </p>
+                    <textarea class="form-control" placeholder="คำตอบ" style="height: 100px;" rows="4" cols="30" name="expResult18" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #366241;">
+                    18.3 (Improvement) ถ้าต้องการเพิ่มฟังก์ชันคำนวณหาปริมาตรทรงกลม เข้าไปในโปรแกรมนี้ ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="คำตอบ" rows="4" cols="30" name="sendLink182" required></textarea>
+    
+                        </div>
+                <br><br>
+
+                <!-- ข้อ 19 -->
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #453662;">
+                    19.1 (Deployment) ให้เขียนโปรแกรมคำนวณเกรดและแสดงลำดับของนักเรียนที่มีเกรด A โดยให้ทำการสร้างและเรียกใช้งานฟังก์ชัน ดังนี้ (3 คะแนน)
+                </p>
+                <div class="group2" style="margin: 20px;">
+                    <iframe src="<%= ADRI4  %>" width="90%" height="600" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                </div>    
+                <div class="form-group">
+                    <textarea class="form-control" style="height: 400px;" placeholder="วางโค้ดที่นี่" rows="4" cols="30" name="sendLink191" required></textarea>
+                </div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #453662;">
+                    19.2 (Result) แสดงผลลัพธ์ที่ได้ของข้อที่ 19.1 (1 คะแนน)
+                </p>
+                    <textarea class="form-control" placeholder="คำตอบ" style="height: 100px;" rows="4" cols="30" name="expResult19" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #453662;">
+                    19.3 (Improvement) ถ้าต้องการแก้ไขฟังก์ชัน calculateGrade ของโปรแกรมนี้ โดยให้เกรด A >= 90, B >= 80, C >= 70, D >= 60 และ F< 60 ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="คำตอบ" rows="4" cols="30" name="sendLink192" required></textarea>
+                    </div>
+                <br><br>
+
+                <!-- ข้อ 20 -->
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #687521;">
+                    20.1 (Deployment) ให้เขียนโปรแกรมเกมท้ายตัวเลข 1-100 ที่มีการสร้างและเรียกใช้งานฟังก์ชัน ดังนี้ (3 คะแนน)
+                    <br></p>
+                <div class="group2" style="margin: 20px;">
+                    <iframe src="<%= ADRI5  %>" width="90%" height="600" allow="autoplay"></iframe> 
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" style="height: 400px;" placeholder="วางโค้ดที่นี่" rows="4" cols="30" name="sendLink201" required></textarea>
+                </div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #687521;">
+                    20.2 (Result) แสดงผลลัพธ์ที่ได้ของข้อที่ 20.1 (1 คะแนน)
+                </p>
+                    <textarea class="form-control" placeholder="คำตอบ" style="height: 100px;" rows="4" cols="30" name="expResult20" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #687521;">
+                    20.3 (Improvement) ถ้าต้องการให้สุ่มตัวเลขในช่วง 3 - 80 ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="คำตอบ" rows="4" cols="30" name="sendLink202" required></textarea>
+    
+                        </div>
+                
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #465e8f;">
+                    ประเมินความมั่นใจในการทำ Pre-Test จาก 1-5 <br> (5 คือมากสุด, 1 คือน้อยสุด)
+                </p>
+                    <input type="radio" class="btn-check" name="rating" id="rating-1" autocomplete="off" value="1">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-1">
+                        1 ⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-2" autocomplete="off" value="2">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-2">
+                        2 ⭐⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-3" autocomplete="off" value="3">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-3">
+                        3 ⭐⭐⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-4" autocomplete="off" value="4">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-4">
+                        4 ⭐⭐⭐⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-5" autocomplete="off" value="5">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-5">
+                        5 ⭐⭐⭐⭐⭐
+                    </label>
+
+                    <br><br>
+
+
+
+                Language : <select name="lang"><option value="C">C</option></select>
+                <br />
+                <br>
+    <%# SUBMIT %> 
+            <!-- Button trigger modal -->
+            <div class="d-grid gap-2">
+                <button type="button" id="stop_count_up_timer" onclick="clearInterval(timerVariable)" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
+                    ส่งคำตอบ
+                </button>
+            </div>
+            
+            <!-- Modal Submit -->        
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">ส่งคำตอบ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        คุณต้องการส่งคำตอบใช่หรือไม่ ?
+                        <div id="emailHelp" class="form-text">หากยังทำโจทย์ไม่ครบ จะไม่สามารถกดส่งได้ </div>
+                        </div>
+                        
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">ไม่</button>
+                        <button type="submit" class="btn btn-dark" value="Submits" id="check" name="check">ใช่</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <br>
+
+            <!-- Modal CODE -->        
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Online compiler</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="500px"></iframe>
+                    </div>   
+          
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-lg btn-block" data-bs-dismiss="modal">ปิด</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <br>
+</form> 
+
+<%# END %> 
+
+        <br></div>
+        </div>
+    </div>
+</div>
+
+<script src="javascripts/compilerStyle.js"></script>

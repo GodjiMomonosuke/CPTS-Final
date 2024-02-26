@@ -21,8 +21,8 @@ router.get('/', async (req, res, next) => {
     var query = { email: person.email };
     dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
       if (err) throw err;
-      if(Object.keys(StudentAnswer).length < 17){
-        res.redirect('/pretest8_check')
+      if(Object.keys(StudentAnswer).length === 0){
+        res.redirect('/')
       }
       else{
         MongoClient.connect(url, function(err, db) {
@@ -32,7 +32,7 @@ router.get('/', async (req, res, next) => {
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/quiz/8_Functions-quiz', { person ,StudentAnswer,RecommendaResult,ADRI1,ADRI2,ADRI3,ADRI4,ADRI5});
+            res.render('student/pretest/8_Functions-pretest', { person ,StudentAnswer,RecommendaResult,ADRI1,ADRI2,ADRI3,ADRI4,ADRI5});
           });
         });
       }
@@ -96,7 +96,7 @@ router.post('/submit', async (req, res, next) => {
   var score14 = 0;
   var score15 = 0;
 
-  var currentQuiz = "Functions-(Post-test)" //*** */
+  var currentQuiz = "Functions-(Pre-test)" //*** */
   var timetodo = 0;
 
 /** check score */
