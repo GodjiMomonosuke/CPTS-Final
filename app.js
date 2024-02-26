@@ -268,6 +268,11 @@ app.use('/pretest6_check',
   ensureStudent,
   require('./routes/student/pretest_check/pretest6_check.route')
 );
+app.use('/pretest7_check',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/pretest_check/pretest7_check.route')
+);
 
 // ****** teacher ******** // 
 app.use('/class',
