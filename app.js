@@ -137,10 +137,10 @@ app.use('/course-Loop_Statements',
   ensureStudent,
   require('./routes/student/course/6_Loop_Statements-course.route')
 );
-app.use('/course-Array_and_String',
+app.use('/course-Arrays_and_Strings',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/7_Array_and_String-course.route')
+  require('./routes/student/course/7_Arrays_and_Strings-course.route')
 );
 app.use('/course-Functions',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -179,12 +179,12 @@ app.use('/course-Loop_Statements-quiz',
   ensureStudent,
   require('./routes/student/quiz/6_Loop_Statements-quiz.route')
 );//** **/
-app.use('/course-Function-quiz',
+app.use('/course-Arrays_and_Strings-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/quiz/7_Function-quiz.route')
+  require('./routes/student/quiz/7_Arrays_and_Strings-quiz.route')
 );
-app.use('/course-Structure-quiz',
+app.use('/course-Functions-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/quiz/8_Functions-quiz.route')
@@ -221,21 +221,16 @@ app.use('/course-Loop_Statements-pretest',
   ensureStudent,
   require('./routes/student/pretest/6_Loop_Statements-pretest.route')
 );
-/**app.use('/course-Pointers-pretest',
+app.use('/course-Arrays_and_Strings-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest/6_Pointers-pretest.route')
+  require('./routes/student/pretest/7_Arrays_and_Strings-pretest.route')
 );
-app.use('/course-Function-pretest',
+app.use('/course-Functions-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest/7_Function-pretest.route')
-);
-app.use('/course-Structure-pretest',
-  ensureLoggedIn({ redirectTo: '/auth/login' }),
-  ensureStudent,
-  require('./routes/student/pretest/8_Structure-pretest.route')
-);
+  require('./routes/student/pretest/8_Functions-pretest.route')
+);/**
 app.use('/course-Array-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
@@ -272,6 +267,16 @@ app.use('/pretest6_check',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest_check/pretest6_check.route')
+);
+app.use('/pretest7_check',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/pretest_check/pretest7_check.route')
+);
+app.use('/pretest8_check',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/pretest_check/pretest8_check.route')
 );
 
 // ****** teacher ******** // 

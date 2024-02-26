@@ -6,11 +6,11 @@ const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://admin:1234@cluster0.ormtjkb.mongodb.net";
 const mydatabase = "Cluster0";
 
-var ADRI1 = "https://drive.google.com/file/d/16qnugYivUXITQABtI-eLxPg-d2aUVbxQ/preview"
-var ADRI2 = "https://drive.google.com/file/d/1xBF-R-DvRfEAShDKDHEX1WwL2V0qZLZ4/preview"
-var ADRI3 = "https://drive.google.com/file/d/13KE2sEWwAhD4jLIZe7gldnO8pfuTcul5/preview"
-var ADRI4 = "https://drive.google.com/file/d/13JetzntboDhLFO2_miY0XzF2j0yE4y8A/preview"
-var ADRI5 = "https://drive.google.com/file/d/1sTSsirPajSIMxj3dfaJEfWG1wyu7wzNQ/preview"
+var ADRI1 = "https://drive.google.com/file/d/106i_3KSzGnwtZUVPp_lhIX5tQwsAU-kI/preview"
+var ADRI2 = "https://drive.google.com/file/d/1KQx37p5_hPIWOOtGFgU04Q7pwBgIdH8v/preview"
+var ADRI3 = "https://drive.google.com/file/d/169yfDhNWYSPaQ_d2UO_gb7VmnPgBSMRU/preview"
+var ADRI4 = "https://drive.google.com/file/d/1Y7SgRDpi4nzbDUh2YKy3hvpWVS5atL7y/preview"
+var ADRI5 = "https://drive.google.com/file/d/1AEd55yhom5bJ3rH10LmUsywpydUd_5Ho/preview"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -21,8 +21,8 @@ router.get('/', async (req, res, next) => {
     var query = { email: person.email };
     dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
       if (err) throw err;
-      if(Object.keys(StudentAnswer).length < 17){
-        res.redirect('/pretest8_check')
+      if(Object.keys(StudentAnswer).length === 0){
+        res.redirect('/')
       }
       else{
         MongoClient.connect(url, function(err, db) {
@@ -32,7 +32,7 @@ router.get('/', async (req, res, next) => {
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/quiz/8_Functions-quiz', { person ,StudentAnswer,RecommendaResult,ADRI1,ADRI2,ADRI3,ADRI4,ADRI5});
+            res.render('student/pretest/7_Arrays_and_Strings-pretest', { person ,StudentAnswer,RecommendaResult,ADRI1,ADRI2,ADRI3,ADRI4,ADRI5});
           });
         });
       }
@@ -96,7 +96,7 @@ router.post('/submit', async (req, res, next) => {
   var score14 = 0;
   var score15 = 0;
 
-  var currentQuiz = "Functions-(Post-test)" //*** */
+  var currentQuiz = "Arrays_and_Strings-(Pre-test)" //*** */
   var timetodo = 0;
 
 /** check score */
@@ -106,25 +106,25 @@ if(choice1 === 'A'){
 if(choice2 === 'A'){
   score2 = 1;
 }
-if(choice3 === 'B'){
+if(choice3 === 'A'){
   score3 = 1;
 }
 if(choice4 === 'B'){
   score4 = 1;
 }
-if(choice5 === 'C'){
+if(choice5 === 'D'){
   score5 = 1;
 }
 if(choice6 === 'C'){
   score6 = 1;
 }
-if(choice7 === 'B'){
+if(choice7 === 'D'){
   score7 = 1;
 }
 if(choice8 === 'D'){
   score8 = 1;
 }
-if(choice9 === 'D'){
+if(choice9 === 'A'){
   score9 = 1;
 }
 if(choice10 === 'D'){
@@ -139,10 +139,10 @@ if(choice12 === 'A'){
 if(choice13 === 'D'){
   score13 = 1;
 }
-if(choice14 === 'A'){
+if(choice14 === 'C'){
   score14 = 1;
 }
-if(choice15 === 'D'){
+if(choice15 === 'C'){
   score15 = 1;
 }
 
