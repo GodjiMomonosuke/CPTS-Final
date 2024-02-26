@@ -184,7 +184,7 @@ app.use('/course-Arrays_and_Strings-quiz',
   ensureStudent,
   require('./routes/student/quiz/7_Arrays_and_Strings-quiz.route')
 );
-app.use('/course-Structure-quiz',
+app.use('/course-Functions-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/quiz/8_Functions-quiz.route')
@@ -225,12 +225,12 @@ app.use('/course-Arrays_and_Strings-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest/7_Arrays_and_Strings-pretest.route')
-);/**
-app.use('/course-Structure-pretest',
+);
+app.use('/course-Functions-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest/8_Structure-pretest.route')
-);
+  require('./routes/student/pretest/8_Functions-pretest.route')
+);/**
 app.use('/course-Array-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
