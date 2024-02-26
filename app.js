@@ -137,10 +137,10 @@ app.use('/course-Loop_Statements',
   ensureStudent,
   require('./routes/student/course/6_Loop_Statements-course.route')
 );
-app.use('/course-Array_and_String',
+app.use('/course-Arrays_and_Strings',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/course/7_Array_and_String-course.route')
+  require('./routes/student/course/7_Arrays_and_Strings-course.route')
 );
 app.use('/course-Functions',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -182,7 +182,7 @@ app.use('/course-Loop_Statements-quiz',
 app.use('/course-Arrays_and_Strings-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/quiz/Arrays_and_Strings-quiz.route')
+  require('./routes/student/quiz/7_Arrays_and_Strings-quiz.route')
 );
 app.use('/course-Structure-quiz',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -224,13 +224,8 @@ app.use('/course-Loop_Statements-pretest',
 app.use('/course-Arrays_and_Strings-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/pretest/Arrays_and_Strings-pretest.route')
+  require('./routes/student/pretest/7_Arrays_and_Strings-pretest.route')
 );/**
-app.use('/course-Function-pretest',
-  ensureLoggedIn({ redirectTo: '/auth/login' }),
-  ensureStudent,
-  require('./routes/student/pretest/7_Function-pretest.route')
-);
 app.use('/course-Structure-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
