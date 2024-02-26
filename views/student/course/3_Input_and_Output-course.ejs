@@ -25,7 +25,6 @@
         
     </style>
 
-    <link rel='stylesheet' href='stylesheets/home.css' />
     <link rel='stylesheet' href='stylesheets/gamequiz.css' />
     <script src="javascripts/gamequiz.js"></script>
     <title>Input and Output</title>
@@ -100,7 +99,11 @@
                     <div>
                     <div class="btn">
                         <p id="demo" class="button" onclick="myFunctionW1()">printf("%d", &num);</p>  
+                    </div>    
+                    <div class="btn">     
                         <p id="demo" class="button" onclick="myFunctionT1()">scanf("%d", &num);</p>
+                    </div>    
+                    <div class="btn">
                         <p id="demo" class="button" onclick="myFunctionW1()">getchar();</p>   
                         <p id="demo" class="button" onclick="myFunctionW1()">cin >> num;</p>                                                                  
                     </div>
@@ -109,9 +112,7 @@
                     
                 </div>
             </div>
-            </div>
-
-            <div class="game">
+            
             <!--* ข้อ 2 K2 *-->
             <div class="gamecontent">
                 <div  class="question">
@@ -124,17 +125,18 @@
                     <div class="btn">
                         <p id="demo" class="button" onclick="myFunctionW2()">print();</p>    
                         <p id="demo" class="button" onclick="myFunctionT2()">printf();</p>
+                    </div>    
+                    <div class="btn">
                         <p id="demo" class="button" onclick="myFunctionW2()">cout <<;</p> 
+                    </div>    
+                    <div class="btn">
                         <p id="demo" class="button" onclick="myFunctionW2()">System.out.println();</p>                                                                   
                     </div>
                 </div>
                     
                 </div>
             </div>
-            </div>
             
-
-            <div class="game">
             <!--* ข้อ 3 K3 *-->
             <div class="gamecontent">
                 <div  class="question">
@@ -179,9 +181,7 @@
                 </div>
             </div>
 
-            </div>
-
-            <div class="game">
+ 
                 <!--* ข้อ 5 K5 *-->
                 <div class="gamecontent">
                     <div  class="question">
@@ -202,9 +202,10 @@
                         
                     </div>
                 </div>
-                </div>
-    
-                <div class="game">
+
+            </div>
+
+            <div class="game">
                 <!--* ข้อ 6 K6 *-->
                 <div class="gamecontent">
                     <div  class="question">
@@ -215,9 +216,13 @@
                     <div class="ans">
                         <div>
                         <div class="btn">
-                            <p id="demo" class="button" onclick="myFunctionW6()">printf("%d", num);</p>    
+                            <p id="demo" class="button" onclick="myFunctionW6()">printf("%d", num);</p>  
                             <p id="demo" class="button" onclick="myFunctionT6()">printf("%f", num);</p>
+                        </div>    
+                        <div class="btn">
                             <p id="demo" class="button" onclick="myFunctionW6()">printf("%d %d", num, num);</p>  
+                        </div>    
+                        <div class="btn">
                             <p id="demo" class="button" onclick="myFunctionW6()">printf("Number is %d", num);</p>                                                                       
                         </div>
                         
@@ -226,9 +231,7 @@
                     </div>
                 </div>
     
-                </div>
 
-                <div class="game">
                     <!--* ข้อ 7 K7 *-->
                     <div class="gamecontent">
                         <div  class="question">
@@ -241,7 +244,11 @@
                             <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW7()">scanf("%d", num);</p>    
                                 <p id="demo" class="button" onclick="myFunctionT7()">scanf("%d”, &num);</p>
+                            </div>    
+                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW7()">scanf("%f", &num);</p>  
+                            </div>    
+                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW7()">scanf("%d, %c", &num, &num);</p>                                                                    
                             </div>
                             
@@ -251,7 +258,7 @@
                     </div>
                     </div>
 
-                    <div class="game">
+                <div class="game">
                     <!--* ข้อ 8 K8 *-->
                     <div class="gamecontent">
                         <div  class="question">
@@ -275,9 +282,33 @@
                     </div>
         
                     </div>
-
                     <div class="game">
-                        <!--* ข้อ 9 K9 *-->
+                        <!--* ข้อ 9 K10 *-->
+                        <div class="gamecontent">
+                            <div  class="question">
+                            <h5>ข้อใดเป็นการใช้งาน fgets() ได้ถูกต้อง</h5>
+                            <br><br>
+                            <p style="text-align: center;" id="demo10"> </p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW10()">fgets(text);</p>    
+                                    <p id="demo" class="button" onclick="myFunctionW10()">fgets(text, stdin);</p>
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW10()">fgets(sizeof(text), text, stdin);</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT10()">fgets(text, sizeof(text), stdin);</p>                                                                    
+                                </div>
+                                
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                        <!--* ข้อ 10 K9 *-->
                         <div class="gamecontent">
                             <div  class="question">
                             <h5>ข้อใดกล่าวถึงฟังก์ชัน fgets() ได้ถูกต้อง</h5>
@@ -287,12 +318,12 @@
                             <div class="ans">
                                 <div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionW9()">รับค่าข้อความจาก Keyboard ได้เฉพาะตัวอักษรเมื่อเจอเว้นวรรคจะหยุดทำงาน</p>    
-                                    <p id="demo" class="button" onclick="myFunctionW9()">รับค่าข้อความจาก Keyboard ได้เฉพาะตัวเลข</p>                                                                      
+                                    <p id="demo" class="button" onclick="myFunctionW9()">รับค่าข้อความจาก Keyboard <br>ได้เฉพาะตัวอักษรเมื่อเจอเว้นวรรคจะหยุดทำงาน</p>   
+                                    <p id="demo" class="button" onclick="myFunctionW9()">รับค่าข้อความจาก Keyboard <br> ได้เฉพาะตัวเลข</p>                                                                      
                                 </div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionT9()">รับค่าข้อความจาก Keyboard ได้ทั้งประโยครวมถึงเว้นวรรค</p>  
-                                    <p id="demo" class="button" onclick="myFunctionW9()">รับค่าข้อความจาก Keyboard ได้ทั้งประโยคแต่ไม่รวมเว้นวรรค</p>  
+                                    <p id="demo" class="button" onclick="myFunctionT9()">รับค่าข้อความจาก Keyboard <br> ได้ทั้งประโยครวมถึงเว้นวรรค</p>  
+                                    <p id="demo" class="button" onclick="myFunctionW9()">รับค่าข้อความจาก Keyboard <br> ได้ทั้งประโยคแต่ไม่รวมเว้นวรรค</p>  
                                 </div>
                             </div>
                                 
@@ -301,29 +332,6 @@
             
                         </div>
 
-                        <div class="game">
-                            <!--* ข้อ 10 K10 *-->
-                            <div class="gamecontent">
-                                <div  class="question">
-                                <h5>ข้อใดเป็นการใช้งาน fgets() ได้ถูกต้อง</h5>
-                                <br><br>
-                                <p style="text-align: center;" id="demo10"> </p>
-                                </div>
-                                <div class="ans">
-                                    <div>
-                                    <div class="btn">
-                                        <p id="demo" class="button" onclick="myFunctionW10()">fgets(text);</p>    
-                                        <p id="demo" class="button" onclick="myFunctionW10()">fgets(text, stdin);</p>
-                                        <p id="demo" class="button" onclick="myFunctionW10()">fgets(sizeof(text), text, stdin);</p>  
-                                        <p id="demo" class="button" onclick="myFunctionT10()">fgets(text, sizeof(text), stdin);</p>                                                                    
-                                    </div>
-                                    
-                                </div>
-                                    
-                                </div>
-                            </div>
-                
-                            </div>
 
 
             <BR id="Tracing"> <br><br>
@@ -363,9 +371,7 @@
                     
                 </div>
             </div>
-            </div>
 
-            <div class="game">
             <!--* ข้อ 12 T2*-->
             <div class="gamecontent-T">
                 <div  class="question-T">
@@ -431,7 +437,7 @@
                             <p id="demo" class="button" onclick="myFunctionW13()">Enter a string: String entered: Hello Programming</p>  
                         </div>
                         <div class="btn">
-                            <p id="demo" class="button" onclick="myFunctionT13()">Enter a string: Hello Programming String entered: Hello Programming</p>  
+                            <p id="demo" class="button" onclick="myFunctionT13()">Enter a string: Hello Programming <br>String entered: Hello Programming</p>  
                         </div>
                         <div class="btn">
                             <p id="demo" class="button" onclick="myFunctionW13()">Enter a string: Hello Programming String entered: Hello</p>  
@@ -440,9 +446,7 @@
                         
                     </div>
                 </div>  
-                </div>
 
-                <div class="game">
                     <!--* ข้อ 14 T4*-->
                     <div class="gamecontent-T">
                         <div  class="question-T">
@@ -516,9 +520,7 @@
                                 
                             </div>
                         </div>  
-                    </div>
 
-                    <div class="game">
                         <!--* ข้อ 16 T6*-->
                         <div class="gamecontent-T">
                             <div  class="question-T">
@@ -592,9 +594,7 @@
                                 
                             </div>
                         </div>  
-                    </div>
 
-                    <div class="game">
                         <!--* ข้อ 18 T8*-->
                         <div class="gamecontent-T">
                             <div  class="question-T">
@@ -661,18 +661,16 @@
                                     <p id="demo" class="button" onclick="myFunctionW19()">sum 362.26</p>  
                                 </div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionT19()">Sum 362.260010</p>  
+                                    <p id="demo" class="button" onclick="myFunctionW19()">Sum 362.260010</p>  
                                 </div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionW19()">Sum 362.26</p>  
+                                    <p id="demo" class="button" onclick="myFunctionT19()">Sum 362.26</p>  
                                 </div>
                             </div>
                                 
                             </div>
                         </div>  
-                    </div>
 
-                    <div class="game">
                         <!--* ข้อ 20 T10*-->
                         <div class="gamecontent-T">
                             <div  class="question-T">
@@ -698,8 +696,6 @@
                                 <div>
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW20()">30 Elon Mark</p>                                                                      
-                                </div>
-                                <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW20()">Enter your name: 30 Elon Mark</p>  
                                 </div>
                                 <div class="btn">
@@ -717,12 +713,11 @@
         <BR id="Explaining"> <br><br>
         <h2>Explaining</h2>
         <div class="game">
-            <!--* ข้อ 6 E1 *-->
+            <!--* ข้อ 21 E1 *-->
             <div class="gamecontent-E">
                 <div  class="question-E">
                 <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
                 <p>#include < stdio.h >
-                <br>#define MAX_VALUE 120
                 <br>int main() {
                 <br>&ensp;int num;
                 <br>&ensp;printf("Enter a number: ");
@@ -738,28 +733,24 @@
                 <div class="ans">
                     <div>
                     <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมจะแสดง "Number is: " แล้วรอให้ผู้ใช้ป้อนตัวเลข</p>    
+                        <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมจะแสดง "Number is: " <br>แล้วรอให้ผู้ใช้ป้อนตัวเลข</p>    
+                        <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมจะแสดง "Enter a number: " รอให้ผู้ใช้ป้อนข้อความ แล้วจะแสดงข้อความที่ผู้ใช้ป้อน</p>                      
                     </div>
                     <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมจะแสดง "Enter a number: " แล้วแสดงตัวเลขที่ผู้ใช้ป้อน</p>  
-                    </div>
-                    <div class="btn">
-                        <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมจะแสดง "Enter a number: " รอให้ผู้ใช้ป้อนข้อความ แล้วจะแสดงข้อความที่ผู้ใช้ป้อน</p>  
-                    </div>
-                    <div class="btn">
+                        <p id="demo" class="button" onclick="myFunctionW21()">โปรแกรมจะแสดง "Enter a number: " <br>แล้วแสดงตัวเลขที่ผู้ใช้ป้อน</p>  
                         <p id="demo" class="button" onclick="myFunctionT21()">โปรแกรมจะแสดง "Enter a number: " รอให้ผู้ใช้ป้อนตัวเลข แล้วจะแสดงตัวเลขที่ผู้ใช้ป้อน</p>  
                     </div>
                 </div>
                     
                 </div>
-            </div></div>
+            </div>
+        </div>
             <div class="game">
-                <!--* ข้อ 7 E2 *-->
+                <!--* ข้อ 22 E2 *-->
                 <div class="gamecontent-E">
                     <div  class="question-E">
                     <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
                     <p>#include < stdio.h > 
-                    <br>#define MAX_VALUE 120
                     <br>int main() {
                     <br>&ensp;float temp;
                     <br>&ensp;printf("Enter temperature in Celsius: ");
@@ -776,14 +767,10 @@
                         <div>
                         <div class="btn">
                             <p id="demo" class="button" onclick="myFunctionW22()">โปรแกรมจะรับค่าตัวเลขอุณหภูมิ Fahrenheit แล้วทำการแปลงเป็น Celsius พร้อมแสดงผล</p>    
-                        </div>
-                        <div class="btn">
-                            <p id="demo" class="button" onclick="myFunctionT22()">โปรแกรมจะรับค่าตัวเลขอุณหภูมิ Celsius แล้วทำการแปลงเป็น Fahrenheit พร้อมแสดงผล</p>  
-                        </div>
-                        <div class="btn">
                             <p id="demo" class="button" onclick="myFunctionW22()">โปรแกรมจะแสดงอุณหภูมิ Celsius</p>  
                         </div>
                         <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT22()">โปรแกรมจะรับค่าตัวเลขอุณหภูมิ Celsius แล้วทำการแปลงเป็น Fahrenheit พร้อมแสดงผล</p>  
                             <p id="demo" class="button" onclick="myFunctionW22()">โปรแกรมจะแสดงอุณหภูมิ Fahrenheit</p>  
                         </div>
                     </div>
@@ -792,6 +779,302 @@
                 </div>
     
             </div>
+
+
+            <div class="game">
+                <!--* ข้อ 23 E3 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h > 
+                    <br>int main() {
+                    <br>&ensp;char str[80];
+                    <br>&ensp;printf("Enter a string: ");
+                    <br>&ensp;fgets(str, 80, stdin);
+                    <br>&ensp;printf("You entered: %s", str);
+                    <br>&ensp;return 0;
+                    <br>}
+    
+                    </p>
+                    <p style="text-align: center;" id="demo23"></p>
+
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW23()">โปรแกรมจะแสดงข้อความที่ผู้ใช้ป้อนเป็นตัวเลข</p>    
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW23()">โปรแกรมจะแสดงข้อความที่มีความยาวไม่เกิน 80 <br>ตัวอักษรแต่เมื่อเจอเครื่องหมายเว้นวรรคจะหยุด</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT23()">โปรแกรมจะรับและแสดงข้อความที่มีความยาวไม่เกิน 80 <br>ตัวอักษรรวมถึงเครื่องหมายเว้นวรรค</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW23()">โปรแกรมจะข้ามบรรทัดแรกและแสดงข้อความในบรรทัดถัดไป</p>  
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+
+                <!--* ข้อ 24 E4 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h > 
+                    <br>int main() {
+                    <br>&ensp;int num1, num2;
+                    <br>&ensp;printf("Enter two numbers separated by a space: ");
+                    <br>&ensp;scanf("%d %d", &num1, &num2);
+                    <br>&ensp;printf("The sum is: %d\n", num1 + num2);
+                    <br>&ensp;return 0;
+                    <br>}
+    
+                    </p>
+                    <p style="text-align: center;" id="demo24"></p>
+
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW24()">โปรแกรมจะอ่านสองตัวเลข คำนวณและแสดงตัวเลขผลต่าง</p>    
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW24()">โปรแกรมจะอ่านสองตัวเลข คำนวณและแสดงตัวเลขผลคูณ</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW24()">โปรแกรมจะอ่านสองตัวเลข คำนวณและแสดงตัวเลขผลหาร</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT24()">โปรแกรมจะอ่านสองตัวเลข คำนวณและแสดงตัวเลขผลรวม</p>  
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="game">
+                <!--* ข้อ 25 E5 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h > 
+                    <br>int main() {
+                    <br>&ensp;int number;
+                    <br>&ensp;printf("Enter a number: ");
+                    <br>&ensp;scanf("%d", number);
+                    <br>&ensp;printf("Number is: %d\n", number);
+                    <br>&ensp;return 0;
+                    <br>}
+    
+                    </p>
+                    <p style="text-align: center;" id="demo25"></p>
+
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW25()">ไม่มีปัญหาใด ๆ</p>    
+                            <p id="demo" class="button" onclick="myFunctionW25()">printf ใช้งานไม่ถูกต้อง ต้องใช้ &number</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW25()">ตัวแปร int number ประกาศไม่ถูกต้อง ต้องใช้เป็น float</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT25()">scanf ใช้งานไม่ถูกต้อง ต้องใช้ &number</p>  
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+
+                <!--* ข้อ 27 E7 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h > 
+                    <br>int main() {
+                    <br>&ensp;int num = 123;
+                    <br>&ensp;printf("Number is: %s\n", num);
+                    <br>&ensp;return 0;
+                    <br>}
+                    </p>
+
+                    <p style="text-align: center;" id="demo27"></p>
+
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW27()">ไม่มีปัญหาใด ๆ</p>    
+                            <p id="demo" class="button" onclick="myFunctionT27()">ใช้ %s กับตัวแปรประเภท int</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW27()">ตัวแปร num ไม่มีการกำหนดค่า</p>  
+                            <p id="demo" class="button" onclick="myFunctionW27()">ใช้ printf() ผิดวิธี</p>  
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="game">
+                <!--* ข้อ 26 E6 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h > 
+                    <br>int main() {
+                    <br>&ensp;int day, month, year;
+                    <br>&ensp;printf("Enter your birth date (DD MM YYYY): ");
+                    <br>&ensp;scanf("%d %d %d", &day, &month, &year);
+                    <br>&ensp;printf("You were born on %02d/%02d/%d\n", day, month, year);
+                    <br>&ensp;return 0;
+                    <br>}
+                    </p>
+
+                    <p style="text-align: center;" id="demo26"></p>
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW26()">โปรแกรมจะขอให้ผู้ใช้ป้อนตัวเลขวันเดือนปีเกิด<br>และแสดงผลลัพธ์ในรูปแบบ YYYY/MM/DD</p>    
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW26()">โปรแกรมจะขอให้ผู้ใช้ป้อนตัวเลขวันเดือนปีเกิด<br>และแสดงผลลัพธ์ในรูปแบบ MM/DD/YYYY</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT26()">โปรแกรมจะขอให้ผู้ใช้ป้อนตัวเลขวันเดือนปีเกิด<br>และแสดงผลลัพธ์ในรูปแบบ DD/MM/YYYY</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW26()">โปรแกรมจะขอให้ผู้ใช้ป้อนตัวเลขวันเดือนปีเกิด<br>และไม่แสดงผลลัพธ์ใด ๆ</p>  
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+
+                <!--* ข้อ 28 E8 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h > 
+                    <br>int main() {
+                    <br>&ensp;int age;
+                    <br>&ensp;char name[50];
+                    <br>&ensp;printf("Enter your age: ");
+                    <br>&ensp;scanf("%d", &age);
+                    <br>&ensp;getchar(); // ใช้เพื่อรับ newline character ที่เหลือจากการใช้งาน scanf
+                    <br>&ensp;printf("Enter your name: ");
+                    <br>&ensp;fgets(name, 50, stdin);
+                    <br>&ensp;printf("Hello, %s! You are %d years old.\n", name, age);
+                    <br>&ensp;return 0;
+                    <br>}
+                    </p>
+
+                    <p style="text-align: center;" id="demo28"></p>
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT28()">รับข้อมูลอายุและชื่อจากผู้ใช้แล้วแสดงผลทั้งสอง</p>    
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW28()">รับข้อมูลชื่อจากผู้ใช้แล้วแสดงอายุ</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW28()">แสดงชื่อและอายุที่ผู้ใช้ป้อนและแสดงข้อความต้อนรับ</p> 
+                        </div>
+                        <div class="btn"> 
+                            <p id="demo" class="button" onclick="myFunctionW28()">แสดงอายุและชื่อที่ผู้ใช้โดยผู้ใช้ไม่ต้องป้อน</p>  
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="game">
+                <!--* ข้อ 29 E9 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h > 
+                    <br>int main() {
+                    <br>&ensp;char city[50];
+                    <br>&ensp;int zipCode;
+                    <br>&ensp;printf("Enter your city: ");
+                    <br>&ensp;fgets(city, 50, stdin);
+                    <br>&ensp;printf("Enter your ZIP code: ");
+                    <br>&ensp;scanf("%d", &zipCode);
+                    <br>&ensp;printf("You live in %sZIP code: %d\n", city, zipCode);
+                    <br>&ensp;return 0;
+                    <br>}
+                    </p>
+
+                    <p style="text-align: center;" id="demo29"></p>
+
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW29()">รับข้อมูลรหัสไปรษณีย์และชื่อเมืองจากผู้ใช้แล้วแสดงผล</p>    
+                            <p id="demo" class="button" onclick="myFunctionW29()">แสดงชื่อเมืองและรหัสไปรษณีย์โดยผู้ใช้ไม่ต้องป้อน</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionT29()">รับข้อมูลชื่อเมืองและรหัสไปรษณีย์จากผู้ใช้แล้วแสดงผล</p>  
+                            <p id="demo" class="button" onclick="myFunctionW29()">แสดงรหัสไปรษณีย์และชื่อเมืองโดยผู้ใช้ไม่ต้องป้อน</p>  
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="game">
+                <!--* ข้อ 30 E10 *-->
+                <div class="gamecontent-E">
+                    <div  class="question-E">
+                    <h5>ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                    <p>#include < stdio.h > 
+                    <br>int main() {
+                    <br>&ensp;char name[50];
+                    <br>&ensp;int age;
+                    <br>&ensp;float height;
+                    <br>&ensp;printf("Enter your name: ");
+                    <br>&ensp;fgets(name, 50, stdin);
+                    <br>&ensp;printf("Enter your age and height (e.g., 30 5.75): ");
+                    <br>&ensp;scanf("%d %f", &age, &height);
+                    <br>&ensp;printf("Name: %s", name);
+                    <br>&ensp;printf("Age: %d, Height: %.2f meters\n", age, height);
+                    <br>&ensp;return 0;
+                    <br>}
+                    </p>
+
+                    <p style="text-align: center;" id="demo30"></p>
+                    </div>
+                    <div class="ans">
+                        <div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW30()">รับข้อมูลชื่อและอายุจากผู้ใช้ แล้วแสดงชื่อและความสูง</p>    
+                            <p id="demo" class="button" onclick="myFunctionW30()">รับข้อมูลชื่อและความสูงจากผู้ใช้ แล้วแสดงชื่อและอายุ</p>  
+                        </div>
+                        <div class="btn">
+                            <p id="demo" class="button" onclick="myFunctionW30()">รับข้อมูลอายุและความสูงจากผู้ใช้ แล้วแสดงชื่อและความสูง</p>  
+                            <p id="demo" class="button" onclick="myFunctionT30()">รับข้อมูลชื่อ อายุ และความสูงจากผู้ใช้ แล้วแสดงผลทั้งหมด</p>  
+                        </div>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
 
             <!--* writing *-->
             <BR id="Writing"> <br><br>
@@ -804,9 +1087,8 @@
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction1()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV1" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/1m5sm4m8Rn4A5HMtLJtRxciQj2jiYW5nQ/preview" width="640" height="480" allow="autoplay"></iframe> 
-                        <iframe src="https://drive.google.com/file/d/1SGw5IUsHrH6j-67MwaL1L9-w10bY9WqQ/preview" width="400" height="480" allow="autoplay"></iframe>
-                </div></div>
+                        <iframe src="https://drive.google.com/file/d/1m5sm4m8Rn4A5HMtLJtRxciQj2jiYW5nQ/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1SGw5IUsHrH6j-67MwaL1L9-w10bY9WqQ/preview" width="400" height="480" allow="autoplay"></iframe>                </div></div>
                 <!--* 2 *-->
                 <div class="gamecontent-W">
                     <iframe src="https://drive.google.com/file/d/1N3zOHlnLhtzIgVdhq3zyQ2b5yy2ufdM_/preview" width="540" height="500" allow="autoplay"></iframe>
@@ -815,9 +1097,9 @@
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction2()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV2" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/13DviSpS2PweOw2nMCoU_BXOP_-_kOzdc/preview" width="640" height="480" allow="autoplay"></iframe> 
+                        <iframe src="https://drive.google.com/file/d/1UE9Y1CoJ_U-RGfN2OkRp70cnrvKCSazE/preview" width="640" height="480" allow="autoplay"></iframe>
                         <iframe src="https://drive.google.com/file/d/1XRE1VdQRJHaSzU2mCujwtvXcSKiK7Lj3/preview" width="400" height="480" allow="autoplay"></iframe>
-                </div></div>
+                    </div></div>
                 <!--* 3 *-->
                 <div class="gamecontent-W">
                     <iframe src="https://drive.google.com/file/d/1rclt2KWfTh_wlSVz5aCkdQIEVveSjzER/preview" width="540" height="500" allow="autoplay"></iframe>
@@ -826,7 +1108,7 @@
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction3()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV3" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/1ZDNRPzFOhXlO7c3gIIzQZWzAWanze__a/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1UtaN7x21OznFjuIdhtRN2cf71jexwhzD/preview" width="640" height="480" allow="autoplay"></iframe>
                         <iframe src="https://drive.google.com/file/d/1cgL95bZbNM8dlralGqudNXNRxe85UbOx/preview" width="400" height="480" allow="autoplay"></iframe>
                     </div></div>
                 <!--* 4 *-->
@@ -837,9 +1119,9 @@
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction4()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV4" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/15-yP5Hea3pgJ9Bgd7fTbwIv7SAsMRohH/preview" width="640" height="480" allow="autoplay"></iframe>                
+                        <iframe src="https://drive.google.com/file/d/1-wQt6u2e6wG8MHV1D6ounBC1wV5rjRRr/preview" width="640" height="480" allow="autoplay"></iframe>
                         <iframe src="https://drive.google.com/file/d/11ExhzaoA3G0enbk7vrwylD6B0jFOdJZW/preview" width="400" height="480" allow="autoplay"></iframe>
-                </div></div>
+                    </div></div>
                 <!--* 5 *-->
                 <div class="gamecontent-W">
                     <iframe src="https://drive.google.com/file/d/1NydlFWaNi6JqLbukI-2_BOpGKTuJRbVQ/preview" width="540" height="500" allow="autoplay"></iframe>
@@ -848,13 +1130,68 @@
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction5()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV5" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/1m7bZv8HsebLpbeeqJ6whRqZ2fV4eFx4v/preview" width="640" height="480" allow="autoplay"></iframe>                
+                        <iframe src="https://drive.google.com/file/d/11aNza3L4-yMluTqhU7cWbGNqzgl8HSDX/preview" width="640" height="480" allow="autoplay"></iframe>
                         <iframe src="https://drive.google.com/file/d/1KVwUzh0kRYZuFtWklyNjXUjP7BaO745g/preview" width="400" height="480" allow="autoplay"></iframe>
-                </div></div>
+                    </div></div>
+                <!--* 6 *-->
+                <div class="gamecontent-W">
+                    <iframe src="https://drive.google.com/file/d/14hJ_KnUSpBlys--trP_EkFelvtfdKiPw/preview" width="540" height="500" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction6()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV6" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1F7XyfXkwr_lviTb5LfOxQ9RImWPsevfI/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1M64gNp3JiXpfk0wmXDrgeuipIbXGUtDj/preview" width="400" height="480" allow="autoplay"></iframe>
+                    </div></div>
+                <!--* 7 *-->
+                <div class="gamecontent-W">
+                    <iframe src="https://drive.google.com/file/d/1yWAHdlJa3NUEXct3LNRFjEz8XUFZIDXN/preview" width="540" height="500" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction7()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV7" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1UJcPsajj_23t7oBNLzF67hC-GUO-xBwu/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1skQb-Xp--uCfWWiLguJ2mixzOfLRXKiD/preview" width="400" height="480" allow="autoplay"></iframe>
+                    </div></div>
+                <!--* 8 *-->
+                <div class="gamecontent-W">
+                    <iframe src="https://drive.google.com/file/d/1oqMa68Cv4zJYohxVTi8_DVqaNCxBggxN/preview" width="540" height="500" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction8()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV8" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1QF5QopnsaI4J93GL3rxpinR1boZtQYEF/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1JJUM1Ad1k-JHvw2aXo3DRBlE72-NSCAt/preview" width="400" height="480" allow="autoplay"></iframe>
+                    </div></div>
+                <!--* 9 *-->
+                <div class="gamecontent-W">
+                    <iframe src="https://drive.google.com/file/d/1CGfw9qkwd_HKILpMeJyDzXIKpCQZfpXC/preview" width="540" height="500" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction9()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV9" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1mTNEZ6YCHNdBNERQ6KmsA5GGQt7dmD-f/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1hex8ta2XdT4guxJVSAd9-JBAXACTUY_W/preview" width="400" height="480" allow="autoplay"></iframe>
+                    </div></div>
+                <!--* 10 *-->
+                <div class="gamecontent-W">
+                    <iframe src="https://drive.google.com/file/d/17ws3NNddvNo9Z_ayKAPLbMzWi6Lp44uQ/preview" width="540" height="500" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction10()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV10" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1u9jo6PairbV-FdnSizABAR_rxOAQnvdO/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1u3UJ2zmwu7CaIZHI1LUuUITEw6WCvHsN/preview" width="400" height="480" allow="autoplay"></iframe>
+                    </div></div>
 
-        <!-- 
+        
         <button onclick="window.location.href='/course-Datatype-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" >
-        <h2><u>แบบทดสอบย่อย</h2></u></button>-->
+        <h2><u>แบบทดสอบย่อย</h2></u></button>
         
 
         
