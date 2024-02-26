@@ -110,7 +110,7 @@ div.btn {
 
 .gamecontent {
     background-color: #eaec73;
-    height: 500px;
+    height: auto;
     width: 1200px;
     padding: 15px;
     border-radius: 20px;
