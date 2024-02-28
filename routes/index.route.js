@@ -577,14 +577,14 @@ router.get('/', async (req, res, next) => {
                         PointersScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         PointersDone = 1;
                     }
-                    if (StudentAnswer[i].contentName ==='Function-Quiz') {   
+                    if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)') {   
                         FunctionScoreLV1 = StudentAnswer[i].scoreLV1;
                         FunctionScoreLV2 = StudentAnswer[i].scoreLV2;
                         FunctionScoreLV3 = StudentAnswer[i].scoreLV3;
                         FunctionScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         FunctionDone = 1;
                     }
-                    if (StudentAnswer[i].contentName ==='Structure-Quiz') {   
+                    if (StudentAnswer[i].contentName ==='Functions-(Post-test)') {   
                         StructureScoreLV1 = StudentAnswer[i].scoreLV1;
                         StructureScoreLV2 = StudentAnswer[i].scoreLV2;
                         StructureScoreLV3 = StudentAnswer[i].scoreLV3;
