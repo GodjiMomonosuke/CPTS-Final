@@ -211,9 +211,51 @@
             <h1>Project</h1>
             <a style="color: black;" href="/project-Ticket_Booking_System"> Ticket Booking System</a>
         </div>-->
+
+        <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-heatmap.min.js"></script> 
+    <style type="text/css">      
+      html, body, #container { 
+        width: 100%; margin: 0; padding: 0; 
+      } 
+    </style>
+    
+    <div id="container"></div>
+    <script>
+      anychart.onDocumentReady(function () {
+        // create a heatmap
+        let chart = anychart.heatMap(getData());
+        // name the heatmap
+        // set the container for the heatmap
+        chart.container("container");
+        // draw the heatmap
+        chart.draw();
+      });
+      // add the data
+      function getData() {
+        return [
+          {
+            x: "Monday",
+            y: "Algorithms and Flowcharts",
+            heat: <%= BasicPercent %>
+          },
+          {
+            x: "Tuesday",
+            y: "Algorithms and Flowcharts",
+            heat: 641
+          },
+          {
+            x: "Wednesday",
+            y: "Algorithms and Flowcharts",
+            heat: 465
+          }
+        ];
+      }
+    </script>
     </div>
-        
     </div>
+
+    
 
     
 

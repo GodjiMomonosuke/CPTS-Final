@@ -809,7 +809,6 @@ router.get('/', async (req, res, next) => {
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
                       TicketBooking_SystemPercent,Library_SystemPercent,RoshamboPercent,CalendarPercent,CalculatorPercent
                     });
-
                   });
                 });
 
