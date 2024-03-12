@@ -15,6 +15,20 @@
             -moz-user-select: none;
             user-select: none;
         }
+        .group2 {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 10px;
+        }
+        a.DrawIo {
+            color: black;
+            text-decoration: none;
+            background-color: #d27700;
+            padding-top: 15px;
+            height: 60px;
+            width: 600px;
+            text-align: center;
+        }
 
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
@@ -26,7 +40,7 @@
     <link rel='stylesheet' href='stylesheets/home.css' />
     <link rel='stylesheet' href='stylesheets/compiler_line.css' />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <title>Library System</title>
+    <title>Point of Sales System</title>
 </head>
 
 <body>
@@ -39,15 +53,23 @@
         
 <form action="/project-Library_System/submit" method="post" autocomplete="off" > 
         <%# LV4 %>                
-        <h2><u>Library System</u> <button type="button" style="color: black;" class="btn btn-outline-danger " data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-            ทดสอบโค้ด
-        </button></h2> 
-
-        
-        <p type="text"  class="list-group-item list-group-item-action bg-dark" style="color: white;">
-            <iframe src="<%= ADRI  %> " width="100%" height="480" allow="autoplay"></iframe>
+        <h2><u>Library System</u> </h2> 
+        <p>ให้ซื่อสัตย์ในการทำข้อสอบ
+            Project QUIZ #2 ในวิชา CE213 2/2566 <br>
+            เอกสารประกอบการเรียน https://bit.ly/ce2132024 <br>
+            อนุญาตให้เปิดเอกสาร Lectures และ Assignments ประกอบการเรียนได้เท่านั้น <br>
+            ไม่อนุญาตให้ค้นหาข้อมูลทาง Internet
         </p>
-        <br>
+        
+        <div class="group2" style="background-color: #212121;">
+            <iframe src="<%= ADRI  %> " width="600px" height="800" allow="autoplay"></iframe>
+            <div>
+                <a class="DrawIo btn" href="https://app.diagrams.net/" target="_blank">Click to go to Draw.io</a>
+
+                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="600px" height="740px"></iframe> 
+            </div>
+            
+        </div>  
 
         <div class="form-group" >
             <h3>CODE</h3>
