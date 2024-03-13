@@ -15,6 +15,14 @@
             -moz-user-select: none;
             user-select: none;
         }
+        .a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+        b {
+            color: brown;
+        }
 
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
@@ -33,13 +41,20 @@
     <!-- end of Narbar-->
 
     
- <!-- Left -->
- <%- include('../layouts/project-list') %>
- 
- <!-- End of Left-->
+
+
 <!-- MIDDLE 1 -->
 <%- include('../layouts/project-middle') %>
 <!-- END Of MIDDLE  -->
+
+
+        <div id="content" class="container"> 
+            <h3>Project</h3>
+            <b>Project Quiz 1: &ensp;</b><!--<a class="a" href="/project-Ticket_Booking_System">-->Ticket Booking System</a><br>
+            <b>Project Quiz 2: &ensp;</b><!--<a class="a" href="/project-Point_of_Sales_System">-->Point of Sales System</a>
+        </div>
+
+
     </body>
 </html>
 

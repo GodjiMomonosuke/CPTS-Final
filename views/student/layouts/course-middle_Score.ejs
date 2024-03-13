@@ -1,4 +1,20 @@
 
+<style>
+    a.a {
+        font-size: 15px;
+        color: #fff700;
+        text-shadow:#ac28ff 1px 0 2px;
+    }
+    a.a:hover { 
+        color: #6dffe7;
+        font-size: 15px;
+        text-shadow:#ac28ff 1px 0 2px;
+    }
+
+    
+</style>
+
+
 <% 
 if(Object.keys(StudentAnswer).length === 0) {   
 } 
@@ -15,19 +31,23 @@ else {
                 <th scope="col" class="col-1 text-center">ทำครั้งที่</th>
                 <th scope="col" class="col-2 text-center">เวลา</th>
                 <th scope="col" class="col-4 text-center">Quiz</th>
-                <th scope="col" class="col-1 ">Knowledge</th>
-                <th scope="col" class="col-1 ">Tracing</th>
-                <th scope="col" class="col-1 ">Explaining</th>
-                <th scope="col" class="col-1 ">Writing</th>
-                <th scope="col" class="col-1 ">ผู้ตรวจ</th>
+                <th scope="col" class="col-1 t">Knowledge</th>
+                <th scope="col" class="col-1 t"> Tracing </th>
+                <th scope="col" class="col-1 t">Explaining</th>
+                <th scope="col" class="col-1 t"> Writing </th>
+                <th scope="col" class="col-1 t">ผู้ตรวจ</th>
                 </th>
             </tr>
-            </thead>
+            </thead> 
             <tbody class="text-end">
     <%
     for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {  
         var Condition = 0;
-        var checkedLV1 = "✗" ,checkedLV2 = "✗",checkedLV3 = "✗",checkedLV4,TeacherCheck;
+        var checkedLV1 = "" ,checkedLV2 = "",checkedLV3 = "",checkedLV4,TeacherCheck;
+        var cLV1 = "background-color: white;", cLV2 = "background-color: white;", cLV3 = "background-color: white;", cLV4 = "background-color: white;";
+        var training1 = "" ,training2 = "", training3 = "", training4 = "";
+        var k = "", t = "", e = "", w = "";
+
         /* Check Content**/
         if(StudentAnswer[i].contentName === "Pre-test" ){
             Condition++;
@@ -56,21 +76,127 @@ else {
         if(typeof(StudentAnswer[i].scoreTeacher) === "string" ){
             checkedLV4 = StudentAnswer[i].scoreTeacher;
             TeacherCheck = StudentAnswer[i].checkedBy;
+            
+            if(StudentAnswer[i].scoreTeacher >= 20){
+               cLV4 = "background-color: #93c47d;" 
+            }
+            else {
+                training4 = "ทำแบบฝึกหัดเพิ่มเติม";
+                cLV4 = "background-color: #e06666;" 
+            }
+           
+
         }
         else{
             checkedLV4 = "-";
             TeacherCheck = "รอตรวจ";
         }
+
         /* Score tranfrom to Pass/Not Pass**/
-        if(StudentAnswer[i].scoreLV1 >= 4){
+        
+        if(StudentAnswer[i].scoreLV1 === 5){
             checkedLV1 = "✓";
+            cLV1 = "background-color: #93c47d;"
         }
-        if(StudentAnswer[i].scoreLV2 >= 4){
+        if(StudentAnswer[i].scoreLV1 === 4){
+            checkedLV1 = "✓";
+            cLV1 = "background-color: #93c47d;"
+        }
+        if(StudentAnswer[i].scoreLV1 === 3){
+            checkedLV1 = "✗";
+            training1 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV1 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV1 === 2){
+            checkedLV1 = "✗";
+            training1 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV1 = "background-color: #e06666;"
+            
+        }
+        if(StudentAnswer[i].scoreLV1 === 1){
+            checkedLV1 = "✗";
+            training1 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV1 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV1 === 0){
+            checkedLV1 = "✗";
+            training1 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV1 = "background-color: #e06666;"
+        }
+       
+        if(StudentAnswer[i].scoreLV2 === 5){
             checkedLV2 = "✓";
+            cLV2 = "background-color: #93c47d;"
         }
-        if(StudentAnswer[i].scoreLV3 >= 4){
+        if(StudentAnswer[i].scoreLV2 === 4){
+            checkedLV2 = "✓";
+            cLV2 = "background-color: #93c47d;"
+        }
+        if(StudentAnswer[i].scoreLV2 === 3){
+            checkedLV2 = "✗";
+            training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV2 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV2 === 2){
+            checkedLV2 = "✗";
+            training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV2 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV2 === 1){
+            checkedLV2 = "✗";
+            training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV2 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV2 === 0){
+            checkedLV2 = "✗";
+            training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV2 = "background-color: #e06666;"
+        }
+
+
+        if(StudentAnswer[i].scoreLV3 === 5){
             checkedLV3 = "✓";
+            cLV3 = "background-color: #93c47d;"
         }
+        if(StudentAnswer[i].scoreLV3 === 4){
+            checkedLV3 = "✓";
+            cLV3 = "background-color: #93c47d;"
+        }
+        if(StudentAnswer[i].scoreLV3 === 3){
+            checkedLV3 = "✗";
+            training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV3 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV3 === 2){
+            checkedLV3 = "✗";
+            training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV3 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV3 === 1){
+            checkedLV3 = "✗";
+            training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV3 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV3 === 0){
+            checkedLV3 = "✗";
+            training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV3 = "background-color: #e06666;"
+        }
+
+        if(StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Pre-test)" || StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Post-test)" ){
+            k = "/course-Algorithms_and_Flowcharts#Knowledge";
+            t = "/course-Algorithms_and_Flowcharts#Tracing";
+            e = "/course-Algorithms_and_Flowcharts#Explaining";
+            w = "/course-Algorithms_and_Flowcharts";
+        }
+        
+        if(StudentAnswer[i].contentName === "Datatype_and_Variable-(Pre-test)" || StudentAnswer[i].contentName === "Datatype_and_Variable-(Post-test)" ){
+            k = "/course-Datatype_and_Variable#Knowledge";
+            t = "/course-Datatype_and_Variable#Tracing";
+            e = "/course-Datatype_and_Variable#Explaining";
+            w = "/course-Datatype_and_Variable#Writing";
+        }
+
         else;
         /* Show Only Quiz**/
         if(Condition != 0 ){
@@ -79,10 +205,10 @@ else {
             <th scope="row" class="text-center"><%=StudentAnswer[i].timetodo%></th>
             <td class="text-center"><%=StudentAnswer[i].times%></td>
             <td class="text-center"><%=StudentAnswer[i].contentName%></td>
-            <td class="text-center"><%=checkedLV1%></td>
-            <td class="text-center"><%=checkedLV2%></td>
-            <td class="text-center"><%=checkedLV3%></td>
-            <td class="text-center"><%=checkedLV4%></td>
+            <td style="<%=cLV1%>" class="text-center"><%=checkedLV1%><br><a class="a" href="<%=k%>"><%=training1%></a></td>
+            <td style="<%=cLV2%>" class="text-center"><%=checkedLV2%><br><a class="a" href="<%=t%>"><%=training2%></a></td>
+            <td style="<%=cLV3%>" class="text-center"><%=checkedLV3%><br><a class="a" href="<%=w%>"><%=training3%></a></td>
+            <td style="<%=cLV4%>" class="text-center"><%=checkedLV4%><br><a class="a" href="<%=w%>"><%=training4%></a></td>
             <td class="text-center"><%=TeacherCheck%></td>
             
             <tr>
