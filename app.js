@@ -86,10 +86,10 @@ app.use('/project-Ticket_Booking_System',
   ensureStudent,
   require('./routes/student/project/1_TicketBookingSystem.route')
 );
-app.use('/project-Library_System',
+app.use('/project-Point_of_Sales_System',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/project/2_LibrarySystem.route')
+  require('./routes/student/project/2_PointofSalesSystem.route')
 );
 app.use('/project-Roshambo',
   ensureLoggedIn({ redirectTo: '/auth/login' }),

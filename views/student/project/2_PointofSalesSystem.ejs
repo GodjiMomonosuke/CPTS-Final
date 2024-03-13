@@ -51,12 +51,12 @@
 <br><br><br>
     <div id = "content" class="container">
         
-<form action="/project-Library_System/submit" method="post" autocomplete="off" > 
+<form action="/project-Point_of_Sales_System/submit" method="post" autocomplete="off" > 
         <%# LV4 %>                
-        <h2><u>Library System</u> </h2> 
+        <h2>Point of Sales System</h2> 
         <p>ให้ซื่อสัตย์ในการทำข้อสอบ
             Project QUIZ #2 ในวิชา CE213 2/2566 <br>
-            เอกสารประกอบการเรียน https://bit.ly/ce2132024 <br>
+            เอกสารประกอบการเรียน <a href="https://bit.ly/ce2132024" target="_blank">https://bit.ly/ce2132024</a>  <br>
             อนุญาตให้เปิดเอกสาร Lectures และ Assignments ประกอบการเรียนได้เท่านั้น <br>
             ไม่อนุญาตให้ค้นหาข้อมูลทาง Internet
         </p>
@@ -71,20 +71,33 @@
             
         </div>  
 
-        <div class="form-group" >
-            <h3>CODE</h3>
-            <textarea style="height: 400px;" class="form-control" id="lineCounter" readonly rows="10">1 </textarea>
-            <textarea style="height: 400px;" class="form-control" id="code" name="code" rows="10" required></textarea>
-        </div>
-        <h3>ผลลัพธ์ที่ได้</h3>
-        <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="expResult" required></textarea>
+        <br>
+        <div class="form-group">
+            <h3>Approach</h3>
+            <p>Flowchart ใช้ draw.io ในการวาด (3 คะแนน)</p>
+            <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="sendLink16" required></textarea>
+        </div><br>
 
-        <h3>การประยุกต์</h3>
-            <p>ผลลัพธ์ที่คาด</p>
-            <textarea class="form-control" style="height: 100px;" rows="4" name="ImproveResult" cols="50"></textarea>
-            <p>ตัวแปรที่เปลี่ยน</p>
-            <textarea class="form-control" style="height: 150px;" rows="4" name="Improvevariable" cols="50"></textarea>
-    <br>
+        <div class="form-group">
+            <h3>Deployment</h3>
+            <p> Source Code ภาษาซีที่เขียนขึ้น (5 คะแนน)</p>
+            <textarea  class="form-control"  name="code" rows="20" required></textarea>
+        </div><br>
+
+        <div class="form-group">
+            <h3>Result</h3>
+            <p>แสดงผลลัพธ์ของโปรแกรม (1 คะแนน)</p>
+            <textarea class="form-control" style="height: 100px;" rows="4" name="expResult16" cols="50"></textarea>
+        </div><br>
+        
+        <div class="form-group">
+            <h3>Improvement</h3>
+            <p>ตอบคำถาม (1 คะแนน)</p>
+            <p>ถ้าต้องการตรวจสอบว่าผู้ใช้ป้อนตัวเลือกเมนูไม่ถูกต้อง ต้องเขียนคำสั่งและแสดงข้อความอย่างไรเพื่อให้ผู้ใช้รู้ เขียนให้เข้าใจพอสังเขป</p>
+            <textarea class="form-control" style="height: 150px;" rows="4" name="expResult17" cols="50"></textarea>
+        </div><br>
+
+
         Language : <select name="lang"><option value="C">C</option></select>
         <div class="d-grid gap-2">
             <br>
