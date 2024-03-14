@@ -10,7 +10,11 @@
         font-size: 15px;
         text-shadow:#ac28ff 1px 0 2px;
     }
-
+    .boxcolor {
+        background-color: #e06666;
+        width: 20px;
+        height: 20px;
+    }
     
 </style>
 
@@ -22,7 +26,7 @@ else {
     %>
     <div id = "content" class="container">
         <h1 id = 'content'> Assignment Status </h1>   
-        <h5>ในส่วนที่ยังไม่ผ่าน (ช่องที่เป็นเครื่องหมาย x) ให้เข้าไปฝึกทำแบบฝึกหัดเพิ่มเติม</h5>
+        <h5 >ช่องที่เป็นสีแดง <button class="boxcolor">  </button> ให้คลิกเข้าไปฝึกทำแบบฝึกหัดเพิ่มเติม</h5>
 
         <div class="box bg-light  mb-5 shadow" >
         <table class="table text-center">
@@ -197,6 +201,48 @@ else {
             w = "/course-Datatype_and_Variable#Writing";
         }
 
+        if(StudentAnswer[i].contentName === "Input_and_Output-(Pre-test)" || StudentAnswer[i].contentName === "Input_and_Output-(Post-test)" ){
+            k = "/course-Input_and_Output#Knowledge";
+            t = "/course-Input_and_Output#Tracing";
+            e = "/course-Input_and_Output#Explaining";
+            w = "/course-Input_and_Output#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Operators_and_Expressions-(Pre-test)" || StudentAnswer[i].contentName === "Operators_and_Expressions-(Post-test)" ){
+            k = "/course-Operators_and_Expressions#Knowledge";
+            t = "/course-Operators_and_Expressions#Tracing";
+            e = "/course-Operators_and_Expressions#Explaining";
+            w = "/course-Operators_and_Expressions#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Selection_Statements-(Pre-test)" || StudentAnswer[i].contentName === "Selection_Statements-(Post-test)" ){
+            k = "/course-Selection_Statements#Knowledge";
+            t = "/course-Selection_Statements#Tracing";
+            e = "/course-Selection_Statements#Explaining";
+            w = "/course-Selection_Statements#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Loop_Statements-(Pre-test)" || StudentAnswer[i].contentName === "Loop_Statements-(Post-test)" ){
+            k = "/course-Loop_Statements#Knowledge";
+            t = "/course-Loop_Statements#Tracing";
+            e = "/course-Loop_Statements#Explaining";
+            w = "/course-Loop_Statements#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Arrays_and_Strings-(Pre-test)" || StudentAnswer[i].contentName === "Arrays_and_Strings-(Post-test)" ){
+            k = "/course-Arrays_and_Strings#Knowledge";
+            t = "/course-Arrays_and_Strings#Tracing";
+            e = "/course-Arrays_and_Strings#Explaining";
+            w = "/course-Arrays_and_Strings#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Functions-(Pre-test)" || StudentAnswer[i].contentName === "Functions-(Post-test)" ){
+            k = "/course-Functions#Knowledge";
+            t = "/course-Functions#Tracing";
+            e = "/course-Functions#Explaining";
+            w = "/course-Functions#Writing";
+        }
+
         else;
         /* Show Only Quiz**/
         if(Condition != 0 ){
@@ -207,7 +253,7 @@ else {
             <td class="text-center"><%=StudentAnswer[i].contentName%></td>
             <td style="<%=cLV1%>" class="text-center"><%=checkedLV1%><br><a class="a" href="<%=k%>"><%=training1%></a></td>
             <td style="<%=cLV2%>" class="text-center"><%=checkedLV2%><br><a class="a" href="<%=t%>"><%=training2%></a></td>
-            <td style="<%=cLV3%>" class="text-center"><%=checkedLV3%><br><a class="a" href="<%=w%>"><%=training3%></a></td>
+            <td style="<%=cLV3%>" class="text-center"><%=checkedLV3%><br><a class="a" href="<%=e%>"><%=training3%></a></td>
             <td style="<%=cLV4%>" class="text-center"><%=checkedLV4%><br><a class="a" href="<%=w%>"><%=training4%></a></td>
             <td class="text-center"><%=TeacherCheck%></td>
             
