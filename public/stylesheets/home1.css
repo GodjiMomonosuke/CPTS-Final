@@ -75,6 +75,23 @@ button.btn-secondary {
     background-color: aquamarine;
 }
 
+.footer {
+    margin-top: 400px;
+    padding: 10px;
+    background-color: #9C7EB7;
+    width: 400px;
+    height: 200px;
+    width: 100%;
+}
+.foot {
+    background-color: #f3f3f3;
+    display: flex;
+    border-radius: 10px;
+    height: 60px;
+    width: 150px;
+    padding: 5px;
+}
+
 /* chart */
 
   .chartMenu p {
@@ -87,7 +104,7 @@ button.btn-secondary {
     justify-content: left;
   }
   .chartBox {
-    width: 300px;
+    width: auto;
     padding: 20px;
     border-radius: 20px;
     border: solid 3px rgba(54, 162, 235, 1);
