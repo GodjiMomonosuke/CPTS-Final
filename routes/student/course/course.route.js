@@ -63,15 +63,15 @@ router.get('/', async (req, res, next) => {
                     // RecommendaResult[0].RecommendationType คือ วิธีแนะนำที่ผู้เรียนเลือก
  
                     var RecommendOutput = [];
-                    var CourseTotol = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Pointers','Function','Structure'] //เรียกจากง่ายไปยาก เปรียบเทียบที่เหมือนกับ path_left หาตัวที่ต่าง เพื่อเลือกตัวง่ายสุดแสดงผล (ไม่รวม file operation)
+                    var CourseTotol = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions'] //เรียกจากง่ายไปยาก เปรียบเทียบที่เหมือนกับ path_left หาตัวที่ต่าง เพื่อเลือกตัวง่ายสุดแสดงผล (ไม่รวม file operation)
                     var Course_Left = [];
                     var ArrRankStorage = []
                     
-                    var PathTicTacToe = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] //เรียกจากง่ายไปยาก
-                    var PathLibrary = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Structure'] 
-                    var PathRoshambo = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String','Function'] 
-                    var PathCalendar = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','Pointers','Function'] 
-                    var PathCalculator = ['Introduction','Datatype','Operators','InputOutput','Selection Statement','Loop Statement','Array','String']
+                    var PathTicTacToe   = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions'] //เรียกจากง่ายไปยาก
+                    var PathLibrary     = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions'] 
+                    var PathRoshambo    = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions'] 
+                    var PathCalendar    = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions'] 
+                    var PathCalculator  = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions']
                     //ตรวจสอบคอร์สที่ทำ กับ แต่ละ path
                     var b = new Set(CourseDoneSorted);
                     var DiffTicTacToe = [...PathTicTacToe].filter(x => !b.has(x));
@@ -87,11 +87,9 @@ router.get('/', async (req, res, next) => {
                         //***RECOMMEND : COURSE
                         if(RecommendaResult[0].RecommendationType === "Fastest Path"){
                           //ตรวจสอบว่ายังมีคอร์สเหลือไหม && เก็บข้อมูลเพื่อส่งต่อ
-                          if(DiffCalculator.length != 0){Course_Left.push({CourseName:"Calculator" ,length:DiffCalculator.length, CourseLEFT :DiffCalculator})}
-                          if(DiffTicTacToe.length != 0) {Course_Left.push({CourseName:"TicTacToe"  ,length:DiffTicTacToe.length , CourseLEFT :DiffTicTacToe})}
+                          if(DiffCalculator.length != 0){Course_Left.push({CourseName:"TicketBookingSystem-(Project_quiz1)" ,length:DiffCalculator.length, CourseLEFT :DiffCalculator})}
+                          if(DiffTicTacToe.length != 0) {Course_Left.push({CourseName:"PointofSalesSystem-(Project_quiz2)"  ,length:DiffTicTacToe.length , CourseLEFT :DiffTicTacToe})}
                           if(DiffRoshambo.length != 0)  {Course_Left.push({CourseName:"Roshambo"   ,length:DiffRoshambo.length  , CourseLEFT :DiffRoshambo})}
-                          if(DiffCalendar.length != 0)  {Course_Left.push({CourseName:"Calendar"   ,length:DiffCalendar.length  , CourseLEFT :DiffCalendar})}
-                          if(DiffLibrary.length != 0)   {Course_Left.push({CourseName:"Library"    ,length:DiffLibrary.length   , CourseLEFT :DiffLibrary})}
                           //หา path ที่น้อยที่สุด
                           var rankCourse_left = Course_Left.sort(function (a, b) {return a.length - b.length;});
                           if(rankCourse_left[1] === undefined){ //ตรวจสอบค่าเปรียบเทียบว่ามีให้เปรียบเทียบไหม
@@ -125,11 +123,10 @@ router.get('/', async (req, res, next) => {
                           }
                         }
                           //***RECOMMEND : PROJECT ถ้าเลือก path มาก็จะแนะนำ คอร์ส ที่ง่ายที่สุด
-                          else if(RecommendaResult[0].RecommendationType === "TicTacToe"  ){ RecommendOutput = DiffTicTacToe  }
-                          else if(RecommendaResult[0].RecommendationType === "Library"    ){ RecommendOutput = DiffLibrary    }
+                          else if(RecommendaResult[0].RecommendationType === "TicketBookingSystem-(Project_quiz1)"  ){ RecommendOutput = DiffTicTacToe  }
+                          else if(RecommendaResult[0].RecommendationType === "PointofSalesSystem-(Project_quiz2)"    ){ RecommendOutput = DiffLibrary    }
                           else if(RecommendaResult[0].RecommendationType === "Roshambo"   ){ RecommendOutput = DiffRoshambo   }
-                          else if(RecommendaResult[0].RecommendationType === "Calendar"   ){ RecommendOutput = DiffCalendar   }
-                          else if(RecommendaResult[0].RecommendationType === "Calculator" ){ RecommendOutput = DiffCalculator }
+                          
                           if(Object.keys(RecommendOutput).length === 0){  RecommendOutput = "โปรดเลือกการแนะนำ" } //ถ้า คอร์ส ใน path หมดแล้ว
                           else{RecommendOutput = RecommendOutput[0]}    //เลือกตัวแรกของ array = ตัวที่ง่ายที่สุด
                         
@@ -200,7 +197,7 @@ router.get('/', async (req, res, next) => {
                    //***End Of PROJECT UNLOCK */
 
 
-                var infoPrePostTest = [{ Name:["Introduction","Data Type","Operators","Selection Statement","Loop Statement","Array","Input Output","Pointers","Strings","Structure","Function","_Summary"]}]
+                var infoPrePostTest = [{ Name:["Algorithms and Flowcharts","Datatype and Variable","Input and Output","Operators and Expressions","Selection Statements","Loop Statements","Arrays and Strings","Functions","_Summary"]}]
                   for (let i = 0; i < Object.keys(StudentAnswer).length; i++){
                     var result = StudentAnswer[i];
                     
