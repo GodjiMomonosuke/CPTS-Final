@@ -790,7 +790,15 @@ router.get('/', async (req, res, next) => {
 
                     res.render('index/index_student', { person ,result,RecommendaResult,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
-                      TicketBooking_SystemPercent,PointofSales_SystemPercent,RoshamboPercent
+                      TicketBooking_SystemPercent,PointofSales_SystemPercent,RoshamboPercent,
+                      IntroductionScoreLV1,IntroductionScoreLV2,IntroductionScoreLV3,IntroductionScoreLV4,
+                      StringScoreLV1,StringScoreLV2,StringScoreLV3,StringScoreLV4,
+                      DatatypeScoreLV1,DatatypeScoreLV2,DatatypeScoreLV3,DatatypeScoreLV4,
+                      OperatorsScoreLV1,OperatorsScoreLV2,OperatorsScoreLV3,OperatorsScoreLV4,
+                      FlowControlScoreLV1,FlowControlScoreLV2,FlowControlScoreLV3,FlowControlScoreLV4,
+                      PointersScoreLV1,PointersScoreLV2,PointersScoreLV3,PointersScoreLV4,
+                      FunctionScoreLV1,FunctionScoreLV2,FunctionScoreLV3,FunctionScoreLV4,
+                      StructureScoreLV1,StructureScoreLV2,StructureScoreLV3,StructureScoreLV4
                     });
                   });
                 });
