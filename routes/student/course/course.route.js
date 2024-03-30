@@ -353,7 +353,7 @@ router.post('/posttestSubmit', async (req, res, next) => {
       db.close();
     });
   });
-  res.redirect('/course')   
+  res.redirect('/')   
  
     try {         
     } catch (error) {
