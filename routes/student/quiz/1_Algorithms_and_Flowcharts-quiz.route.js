@@ -13,7 +13,7 @@ var ADRI_Answer = "https://drive.google.com/file/d/1GfNE8Tlxo7FVYWdglVp-uikdJzch
 
 router.get('/', async (req, res, next) => { //ย่อโค้ดนี้ลงเลย
   const person = req.user;
-  // PRETEST Check
+  // PRETEST Check 
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db(mydatabase);
@@ -21,7 +21,7 @@ router.get('/', async (req, res, next) => { //ย่อโค้ดนี้ล�
     dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
       if (err) throw err;
       if(Object.keys(StudentAnswer).length < 2){
-        res.redirect('/course-Algorithms_and_Flowcharts-pretest')
+        res.redirect('/pretest1_check')
       }
       else{
         MongoClient.connect(url, function(err, db) {

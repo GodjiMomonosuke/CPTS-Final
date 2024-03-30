@@ -56,7 +56,6 @@ button.btn-secondary {
 .group2 {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding: 10px;
 }
 
 .group3 {

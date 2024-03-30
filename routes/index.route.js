@@ -9,86 +9,6 @@ const mydatabase = "Cluster0";
 router.post('/pretestSubmit', async (req, res, next) => {
   const person = req.user;
   var currentQuiz = "Ready"
-  var c11 = req.body.c11;
-  var c12 = req.body.c12;
-  var c13 = req.body.c13;
-  var c21 = req.body.c21;
-  var c22 = req.body.c22;
-  var c23 = req.body.c23;
-  var c31 = req.body.c31;
-  var c32 = req.body.c32;
-  var c33 = req.body.c33;
-  var c41 = req.body.c41;
-  var c42 = req.body.c42;
-  var c43 = req.body.c43;
-  var c51 = req.body.c51;
-  var c52 = req.body.c52;
-  var c53 = req.body.c53;
-  var c61 = req.body.c61;
-  var c62 = req.body.c62;
-  var c63 = req.body.c63;
-  var c71 = req.body.c71;
-  var c72 = req.body.c72;
-  var c73 = req.body.c73;
-  var c81 = req.body.c81;
-  var c82 = req.body.c82;
-  var c83 = req.body.c83;
-  var c91 = req.body.c91;
-  var c92 = req.body.c92;
-  var c93 = req.body.c93;
-  var c101 = req.body.c101;
-  var c102 = req.body.c102;
-  var c103 = req.body.c103;
-  var c111 = req.body.c111; //Loop Statement
-  var c112 = req.body.c112; //Loop Statement
-  var c113 = req.body.c113;  //Loop Statement
-  
-
- /* 1.Syntax */
- /*if (c11 === 'A') {scoreC1 = scoreC1 + 1;  }
- /*if (c12 === 'D') {scoreC1 = scoreC1 + 1;  }
- if (c13 === 'C') {scoreC1 = scoreC1 + 1;  }
- /* 2.Data Type, Output */
- /*if (c21 === 'C') {scoreC2 = scoreC2 + 1;  }
- /*if (c22 === 'D') {scoreC2 = scoreC2 + 1; }
- if (c23 === 'A') {scoreC2 = scoreC2 + 1;  }
- /* 3.Operators */
- /*if (c31 === 'D') {scoreC3 = scoreC3 + 1;  }
- /*if (c32 === 'B') {scoreC3 = scoreC3 + 1;  }
- if (c33 === 'D') {scoreC3 = scoreC3 + 1;  } 
- /* 4.Selection Control */
- /*if (c41 === 'A') {scoreC4 = scoreC4 + 1;  }
- /*if (c42 === 'A') {scoreC4 = scoreC4 + 1;  }
- if (c43 === 'B') {scoreC4 = scoreC4 + 1;  }
- /* 5.Array */
- /*if (c51 === 'B') {scoreC5 = scoreC5 + 1;  }
- /*if (c52 === 'C') {scoreC5 = scoreC5 + 1;  }
- if (c53 === 'A') {scoreC5 = scoreC5 + 1;  }
- /* 6.Input Output */
- /*if (c61 === 'C') {scoreC6 = scoreC6 + 1;  }
- /*if (c62 === 'C') {scoreC6 = scoreC6 + 1;  }
- if (c63 === 'A') {scoreC6 = scoreC6 + 1;  }
- /* 7.Pointers */
- /*if (c71 === 'A') {scoreC7 = scoreC7 + 1;  }
- /*if (c72 === 'A') {scoreC7 = scoreC7 + 1;  }
- if (c73 === 'C') {scoreC7 = scoreC7 + 1;  }
- /* 8.Strings */
- /*if (c81 === 'B') {scoreC8 = scoreC8 + 1;  }
- /*if (c82 === 'B') {scoreC8 = scoreC8 + 1;  }
- if (c83 === 'D') {scoreC8 = scoreC8 + 1;  }
- /* 9.Structure */
- /*if (c91 === 'A') {scoreC9 = scoreC9 + 1;  }
-/* if (c92 === 'A') {scoreC9 = scoreC9 + 1;  }
- if (c93 === 'C') {scoreC9 = scoreC9 + 1;  }
- /* 10.Function */
- /*if (c101 === 'B') {scoreC10 = scoreC10 + 1;  }
- /*if (c102 === 'C') {scoreC10 = scoreC10 + 1;  }
- if (c103 === 'A') {scoreC10 = scoreC10 + 1;  }
- /* 11.Loop */
- /*if (c111 === 'B') {scoreC11 = scoreC11 + 1;  }
- /*if (c112 === 'D') {scoreC11 = scoreC11 + 1;  }
- if (c113 === 'C') {scoreC11 = scoreC11 + 1;  }
- /** */
 
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
@@ -99,18 +19,6 @@ router.post('/pretestSubmit', async (req, res, next) => {
       email: person.email,
       role:person.role,
       contentName:currentQuiz,
-      /** 
-      scoreC1:scoreC1, //Intro
-      scoreC2:scoreC2,  //String
-      scoreC3:scoreC3,  //Datatype
-      scoreC4:scoreC4,
-      scoreC5:scoreC5,
-      scoreC6:scoreC6,
-      scoreC7:scoreC7,
-      scoreC8:scoreC8,
-      scoreC9:scoreC9,
-      scoreC10:scoreC10,  //Array
-      //scoreC11:scoreC11  //Array*/
     };
     dbo.collection("StudentAnswer").insertOne(myobj, function(err, res) {
       if (err) throw err;
@@ -369,7 +277,7 @@ router.get('/', async (req, res, next) => {
         var query = { email: person.email };
         dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
           if (err) throw err;
-          if(Object.keys(StudentAnswer).length === 0){
+          if(Object.keys(StudentAnswer).length < 0){
             res.render('student/pretest', {person});
           }
           else{
@@ -788,7 +696,7 @@ router.get('/', async (req, res, next) => {
                     
 
 
-                    res.render('index/index_student', { person ,result,RecommendaResult,
+                    res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
                       TicketBooking_SystemPercent,PointofSales_SystemPercent,RoshamboPercent,
                       IntroductionScoreLV1,IntroductionScoreLV2,IntroductionScoreLV3,IntroductionScoreLV4,
@@ -1013,5 +921,6 @@ router.post('/Recommendation_setting', async (req, res, next) => {
     next(error);
   }
 });
+
 
 module.exports = router;

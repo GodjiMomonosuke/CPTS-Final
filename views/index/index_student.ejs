@@ -55,7 +55,7 @@
         <div id="content" class="container"> 
             <thead><br>
                 <div class="item1">
-                    <p><b>Name :</b> <%= person.name%></p> 
+                    <p>Programming 1</p> 
                     <b>Class</b>
                         <% if (Object.keys(result).length != 0) { %> :
                             <%= result[0].ClassName %> 
@@ -161,8 +161,8 @@
 <!-- MID -->
     <!-- SKILLS-->
 
-    <div id="content" class="container">
-    <div class="group">
+    <div id="content" class="group2">
+
         <div>
         <% if(isNaN(BasicPercent)){ %>
 
@@ -170,7 +170,7 @@
                 <h1 id = 'content'><!--<svg height="40" width="40" viewBox="0 0 576 512">
                     <path d="M352.4 243.8l-49.83 99.5c-6.009 12-23.41 11.62-28.92-.625L216.7 216.3l-30.05 71.75L88.55 288l176.4 182.2c12.66 13.07 33.36 13.07 46.03 0l176.4-182.2l-112.1 .0052L352.4 243.8zM495.2 62.86c-54.36-46.98-137.5-38.5-187.5 13.06L288 96.25L268.3 75.92C218.3 24.36 135.2 15.88 80.81 62.86C23.37 112.5 16.84 197.6 60.18 256h105l35.93-86.25c5.508-12.88 23.66-13.12 29.54-.375l58.21 129.4l49.07-98c5.884-11.75 22.78-11.75 28.67 0l27.67 55.25h121.5C559.2 197.6 552.6 112.5 495.2 62.86z"/>
                 </svg> -->Competency </h1>   
-                <div style="height: 1000px;" class="chartMenu">
+                <div style="height: 500px;" class="chartMenu">
                     <div class="chartCard">
                         <div class="chartBox">
                         <canvas id="myChart"></canvas>
@@ -219,7 +219,7 @@
             </div>
         <% } %>
             
-        <div>
+        <!--<div>
             <table>
                     <tr>
                         <th style="width: 300px;" class="head">Lesson</th>
@@ -287,8 +287,18 @@
                     </tr>
                 
             </table>    
-        </div>   
+        </div>   -->
+        
+        
+    
+    <div>
+        <%- include('../layouts/project-middle') %>
     </div>
+    
+
+    <%- include('../layouts/course-middle') %>
+    <%- include('../layouts/course-middle_Score') %>
+    <br>
     </div>
     
     
@@ -301,20 +311,7 @@
         <noscript><a href="https://www.livechat.com/chat-with/17376438/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
 
         <!--End of LiveChat code -->
-        <!--
-    <div class="footer">
-        <b>Contact Us</b>
-        <div class="foot">
-            <div style="margin-right: 10px;">
-                <a href="https://line.me/ti/g/ZK6d49jqNq">
-                    <svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" aria-label="LINE" role="img" viewBox="0 0 512 512"  fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect width="512" height="512" rx="15%" fill="#00B900"></rect><path d="m443 231c-2 45-21 76-51 103-53 47-137 105-148 96-11-14 21-47-20-52-88-12-155-74-155-147 0-82 85-150 188-150s189 68 186 150z" fill="#ffffff"></path><path d="m371 232h-34m34-36h-36v72h36m-123 0v-72l54 72v-72m-89 72v-72m-66 0v72h37" fill="none" stroke="#00B900" stroke-linecap="round" stroke-linejoin="round" stroke-width="21"></path></g></svg>
-                </a>
-            </div>
-            <div>
-                <a href="mailto:todsapon.b@bumail.net">
-                    <svg width="50px" height="50px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="5.472" fill="#008bc7" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.336"></g><g id="SVGRepo_iconCarrier"> <g id="style=fill"> <g id="email"> <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M7 2.75C5.38503 2.75 3.92465 3.15363 2.86466 4.1379C1.79462 5.13152 1.25 6.60705 1.25 8.5V15.5C1.25 17.393 1.79462 18.8685 2.86466 19.8621C3.92465 20.8464 5.38503 21.25 7 21.25H17C18.615 21.25 20.0754 20.8464 21.1353 19.8621C22.2054 18.8685 22.75 17.393 22.75 15.5V8.5C22.75 6.60705 22.2054 5.13152 21.1353 4.1379C20.0754 3.15363 18.615 2.75 17 2.75H7ZM19.2285 8.3623C19.5562 8.10904 19.6166 7.63802 19.3633 7.31026C19.1101 6.98249 18.6391 6.9221 18.3113 7.17537L12.7642 11.4616C12.3141 11.8095 11.6858 11.8095 11.2356 11.4616L5.6886 7.17537C5.36083 6.9221 4.88982 6.98249 4.63655 7.31026C4.38328 7.63802 4.44367 8.10904 4.77144 8.3623L10.3185 12.6486C11.3089 13.4138 12.691 13.4138 13.6814 12.6486L19.2285 8.3623Z" fill="#f2f2f2"></path> </g> </g> </g></svg>
-                </a>
-            </div>-->
+        
     
 
     
@@ -419,7 +416,7 @@
     
 
 
-   
+   <script src="/public/javascripts/chart.js"></script>
 
 
   

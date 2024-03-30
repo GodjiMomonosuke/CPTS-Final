@@ -230,19 +230,14 @@ app.use('/course-Functions-pretest',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/pretest/8_Functions-pretest.route')
-);/**
-app.use('/course-Array-pretest',
-  ensureLoggedIn({ redirectTo: '/auth/login' }),
-  ensureStudent,
-  require('./routes/student/pretest/9_Array-pretest.route')
 );
-app.use('/course-InputOutput-pretest',
-  ensureLoggedIn({ redirectTo: '/auth/login' }),
-  ensureStudent,
-  require('./routes/student/v/10_InputOutput-pretest.route')
-);*/
 
 //** pretest check **//
+app.use('/pretest1_check',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/pretest_check/pretest1_check.route')
+);
 app.use('/pretest2_check',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,

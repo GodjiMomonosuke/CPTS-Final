@@ -1,0 +1,270 @@
+
+<style>
+    a.a {
+        font-size: 15px;
+        color: #fff700;
+        text-shadow:#ac28ff 1px 0 2px;
+    }
+    a.a:hover { 
+        color: #6dffe7;
+        font-size: 15px;
+        text-shadow:#ac28ff 1px 0 2px;
+    }
+    .boxcolor {
+        background-color: #e06666;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ffffff;
+    }
+    
+</style>
+
+
+<% 
+if(Object.keys(StudentAnswer).length === 0) {   
+} 
+else {
+    %>
+    <div id = "content" class="container">
+        <h1 id = 'content'> Assignment Status </h1>   
+        <h5 >ช่องที่เป็นสีแดง <button class="boxcolor">  </button> ให้คลิกเข้าไปฝึกทำแบบฝึกหัดเพิ่มเติม</h5>
+
+        <div class="box bg-light  mb-5 shadow" >
+        <table class="table text-center">
+            <thead>
+            <tr>
+                <th scope="col" class="col-4 text-center">Quiz</th>
+                <th scope="col" class="col-1 t">Knowledge</th>
+                <th scope="col" class="col-1 t"> Tracing </th>
+                <th scope="col" class="col-1 t">Explaining</th>
+                <th scope="col" class="col-1 t"> Writing </th>
+                <th scope="col" class="col-1 t">ผู้ตรวจ</th>
+                </th>
+            </tr>
+            </thead> 
+            <tbody class="text-end">
+    <%
+    for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {  
+        var Condition = 0;
+        var checkedLV1 = "" ,checkedLV2 = "",checkedLV3 = "",checkedLV4,TeacherCheck;
+        var cLV1 = "background-color: #F8F9FA;", cLV2 = "background-color: #F8F9FA;", cLV3 = "background-color: #F8F9FA;", cLV4 = "background-color: #F8F9FA;";
+        var training1 = "" ,training2 = "", training3 = "", training4 = "";
+        var k = "", t = "", e = "", w = "";
+
+        /* Check Content**/
+        if(StudentAnswer[i].contentName === "Pre-test" ){
+            Condition++;
+        }
+        if(StudentAnswer[i].contentName === "Post-test" ){
+            Condition++;
+        }
+        if(StudentAnswer[i].contentName === "TicTacToe" ){
+            Condition++;
+        }
+        if(StudentAnswer[i].contentName === "LibrarySystem" ){
+            Condition++;
+        } 
+        if(StudentAnswer[i].contentName === "Roshambo" ){
+            Condition++;
+        } 
+        if(StudentAnswer[i].contentName === "Calendar" ){
+            Condition++;
+        } 
+        if(StudentAnswer[i].contentName === "Calculator" ){
+            Condition++;
+        } 
+
+        
+        /* Check Value LV4 Score**/
+        if(typeof(StudentAnswer[i].scoreTeacher) === "string" ){
+            checkedLV4 = StudentAnswer[i].scoreTeacher;
+            TeacherCheck = StudentAnswer[i].checkedBy;
+            
+            if(StudentAnswer[i].scoreTeacher >= 20){
+               cLV4 = "background-color: #93c47d;" 
+            }
+            else {
+                training4 = "ทำแบบฝึกหัดเพิ่มเติม";
+                cLV4 = "background-color: #e06666;" 
+            }
+           
+
+        }
+        else{
+            checkedLV4 = "-";
+            TeacherCheck = "รอตรวจ";
+        }
+
+        /* Score tranfrom to Pass/Not Pass**/
+        
+        if(StudentAnswer[i].scoreLV1 === 5){
+            checkedLV1 = "✓";
+            cLV1 = "background-color: #93c47d;"
+        }
+        if(StudentAnswer[i].scoreLV1 === 4){
+            checkedLV1 = "✓";
+            cLV1 = "background-color: #93c47d;"
+        }
+        if(StudentAnswer[i].scoreLV1 === 3){
+            checkedLV1 = "✗";
+            training1 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV1 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV1 === 2){
+            checkedLV1 = "✗";
+            training1 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV1 = "background-color: #e06666;"
+            
+        }
+        if(StudentAnswer[i].scoreLV1 === 1){
+            checkedLV1 = "✗";
+            training1 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV1 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV1 === 0){
+            checkedLV1 = "✗";
+            training1 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV1 = "background-color: #e06666;"
+        }
+       
+        if(StudentAnswer[i].scoreLV2 === 5){
+            checkedLV2 = "✓";
+            cLV2 = "background-color: #93c47d;"
+        }
+        if(StudentAnswer[i].scoreLV2 === 4){
+            checkedLV2 = "✓";
+            cLV2 = "background-color: #93c47d;"
+        }
+        if(StudentAnswer[i].scoreLV2 === 3){
+            checkedLV2 = "✗";
+            training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV2 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV2 === 2){
+            checkedLV2 = "✗";
+            training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV2 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV2 === 1){
+            checkedLV2 = "✗";
+            training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV2 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV2 === 0){
+            checkedLV2 = "✗";
+            training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV2 = "background-color: #e06666;"
+        }
+
+
+        if(StudentAnswer[i].scoreLV3 === 5){
+            checkedLV3 = "✓";
+            cLV3 = "background-color: #93c47d;"
+        }
+        if(StudentAnswer[i].scoreLV3 === 4){
+            checkedLV3 = "✓";
+            cLV3 = "background-color: #93c47d;"
+        }
+        if(StudentAnswer[i].scoreLV3 === 3){
+            checkedLV3 = "✗";
+            training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV3 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV3 === 2){
+            checkedLV3 = "✗";
+            training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV3 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV3 === 1){
+            checkedLV3 = "✗";
+            training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV3 = "background-color: #e06666;"
+        }
+        if(StudentAnswer[i].scoreLV3 === 0){
+            checkedLV3 = "✗";
+            training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+            cLV3 = "background-color: #e06666;"
+        }
+
+        if(StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Pre-test)" || StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Post-test)" ){
+            k = "/course-Algorithms_and_Flowcharts#Knowledge";
+            t = "/course-Algorithms_and_Flowcharts#Tracing";
+            e = "/course-Algorithms_and_Flowcharts#Explaining";
+            w = "/course-Algorithms_and_Flowcharts";
+        }
+        
+        if(StudentAnswer[i].contentName === "Datatype_and_Variable-(Pre-test)" || StudentAnswer[i].contentName === "Datatype_and_Variable-(Post-test)" ){
+            k = "/course-Datatype_and_Variable#Knowledge";
+            t = "/course-Datatype_and_Variable#Tracing";
+            e = "/course-Datatype_and_Variable#Explaining";
+            w = "/course-Datatype_and_Variable#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Input_and_Output-(Pre-test)" || StudentAnswer[i].contentName === "Input_and_Output-(Post-test)" ){
+            k = "/course-Input_and_Output#Knowledge";
+            t = "/course-Input_and_Output#Tracing";
+            e = "/course-Input_and_Output#Explaining";
+            w = "/course-Input_and_Output#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Operators_and_Expressions-(Pre-test)" || StudentAnswer[i].contentName === "Operators_and_Expressions-(Post-test)" ){
+            k = "/course-Operators_and_Expressions#Knowledge";
+            t = "/course-Operators_and_Expressions#Tracing";
+            e = "/course-Operators_and_Expressions#Explaining";
+            w = "/course-Operators_and_Expressions#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Selection_Statements-(Pre-test)" || StudentAnswer[i].contentName === "Selection_Statements-(Post-test)" ){
+            k = "/course-Selection_Statements#Knowledge";
+            t = "/course-Selection_Statements#Tracing";
+            e = "/course-Selection_Statements#Explaining";
+            w = "/course-Selection_Statements#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Loop_Statements-(Pre-test)" || StudentAnswer[i].contentName === "Loop_Statements-(Post-test)" ){
+            k = "/course-Loop_Statements#Knowledge";
+            t = "/course-Loop_Statements#Tracing";
+            e = "/course-Loop_Statements#Explaining";
+            w = "/course-Loop_Statements#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Arrays_and_Strings-(Pre-test)" || StudentAnswer[i].contentName === "Arrays_and_Strings-(Post-test)" ){
+            k = "/course-Arrays_and_Strings#Knowledge";
+            t = "/course-Arrays_and_Strings#Tracing";
+            e = "/course-Arrays_and_Strings#Explaining";
+            w = "/course-Arrays_and_Strings#Writing";
+        }
+
+        if(StudentAnswer[i].contentName === "Functions-(Pre-test)" || StudentAnswer[i].contentName === "Functions-(Post-test)" ){
+            k = "/course-Functions#Knowledge";
+            t = "/course-Functions#Tracing";
+            e = "/course-Functions#Explaining";
+            w = "/course-Functions#Writing";
+        }
+
+        else;
+        /* Show Only Quiz**/
+        if(Condition != 0 ){
+
+        }else{%>
+            <td class="text-center"><%=StudentAnswer[i].contentName%></td>
+            <td style="<%=cLV1%>" class="text-center"><%=checkedLV1%><br><a class="a" href="<%=k%>"><%=training1%></a></td>
+            <td style="<%=cLV2%>" class="text-center"><%=checkedLV2%><br><a class="a" href="<%=t%>"><%=training2%></a></td>
+            <td style="<%=cLV3%>" class="text-center"><%=checkedLV3%><br><a class="a" href="<%=e%>"><%=training3%></a></td>
+            <td style="<%=cLV4%>" class="text-center"><%=checkedLV4%><br><a class="a" href="<%=w%>"><%=training4%></a></td>
+            <td class="text-center"><%=TeacherCheck%></td>
+            
+            <tr>
+            <%}
+    } %>
+
+                </tbody>
+            </table>       
+                       
+        
+        </div>
+    </div>
+ 
+
+ <% } %>
+
