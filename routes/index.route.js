@@ -292,7 +292,7 @@ router.get('/', async (req, res, next) => {
                 if (err) throw err;
 
                 var IntroductionDone = "ยังไม่ทำ" ,StringDone = "ยังไม่ทำ" ,OperatorsDone = "ยังไม่ทำ" ,DatatypeDone = "ยังไม่ทำ",FlowControlDone = "ยังไม่ทำ",LoopDone = "ยังไม่ทำ",PointersDone = "ยังไม่ทำ",FunctionDone = "ยังไม่ทำ",StructureDone = "ยังไม่ทำ",ArrayDone = "ยังไม่ทำ" ,InputOutputDone = "ยังไม่ทำ" ;
-                var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , RoshamboDone = "ยังไม่ทำ" ,CalendarDone = "ยังไม่ทำ" , CalculatorDone = "ยังไม่ทำ";
+                var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ" ,CalendarDone = "ยังไม่ทำ" , CalculatorDone = "ยังไม่ทำ";
                 var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "รอตรวจ";
       
                 for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
@@ -364,8 +364,8 @@ router.get('/', async (req, res, next) => {
                   if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)'&& StudentAnswer[i].scoreTeacher != undefined) {   
                     Point_of_Sales_SystemDone = StudentAnswer[i].scoreTeacher 
                   }
-                  if (StudentAnswer[i].contentName ==='Roshambo'&& StudentAnswer[i].scoreTeacher != undefined) {   
-                    RoshamboDone = StudentAnswer[i].scoreTeacher
+                  if (StudentAnswer[i].contentName ==='Project_QUIZ3'&& StudentAnswer[i].scoreTeacher != undefined) {   
+                    Project_QUIZ3Done = StudentAnswer[i].scoreTeacher
                   }
                 }
 
@@ -384,7 +384,7 @@ router.get('/', async (req, res, next) => {
                             //Project quiz
                             TicketBookingSystem:Ticket_Booking_SystemDone,
                             PointofSalesSystem:Point_of_Sales_SystemDone,
-                            Roshambo:RoshamboDone,
+                            Project_QUIZ3:Project_QUIZ3Done,
                             //Pre-Post test
                             Introduction:IntroductionDone,
                             String:StringDone,
@@ -572,13 +572,13 @@ router.get('/', async (req, res, next) => {
                     var ArrRankStorage = []
                     
                     var PathTicketBookingSystem = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions']
-                    var PathPointofSalesSystem = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions'] 
-                    var PathRoshambo          = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions'] 
+                    var PathPointofSalesSystem  = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions'] 
+                    var PathProjectQUIZ3     = ['Algorithms and Flowcharts','Datatype and Variable','Input and Output','Operators and Expressions','Selection Statements','Loop Statements','Arrays and Strings','Functions'] 
                     //ตรวจสอบคอร์สที่ทำ กับ แต่ละ path
                     var b = new Set(CourseDoneSorted);
                     var DiffTicketBookingSystem = [...PathTicketBookingSystem].filter(x => !b.has(x));
                     var DiffPointofSalesSystem = [...PathPointofSalesSystem].filter(x => !b.has(x));
-                    var DiffRoshambo = [...PathRoshambo].filter(x => !b.has(x));
+                    var DiffProjectQUIZ3 = [...PathProjectQUIZ3].filter(x => !b.has(x));
                     var DiffTotal = [...CourseTotol].filter(x => !b.has(x)); //ตรวจสอบ course ที่เหลืออยู่ทั้งหมด
                     
                     if(Object.keys(RecommendaResult).length !== 0){
@@ -587,9 +587,9 @@ router.get('/', async (req, res, next) => {
                         //***RECOMMEND : COURSE
                         if(RecommendaResult[0].RecommendationType === "Fastest Path"){
                           //ตรวจสอบว่ายังมีคอร์สเหลือไหม && เก็บข้อมูลเพื่อส่งต่อ
-                          if(DiffTicketBookingSystem.length != 0) {Course_Left.push({CourseName:"TicketBookingSystem-(Project_quiz1)"   ,length:DiffTicketBookingSystem.length ,CourseLEFT :DiffTicketBookingSystem})}
-                          if(DiffPointofSalesSystem.length != 0)   {Course_Left.push({CourseName:"PointofSalesSystem-(Project_quiz2)"   ,length:DiffPointofSalesSystem.length  ,CourseLEFT :DiffPointofSalesSystem})}
-                          if(DiffRoshambo.length != 0)  {Course_Left.push({CourseName:"Roshambo"                        ,length:DiffRoshambo.length  ,            CourseLEFT :DiffRoshambo})}
+                          if(DiffTicketBookingSystem.length != 0) {Course_Left.push({CourseName:"TicketBookingSystem-(Project_quiz1)"   ,length:DiffTicketBookingSystem.length  ,CourseLEFT :DiffTicketBookingSystem})}
+                          if(DiffPointofSalesSystem.length != 0)  {Course_Left.push({CourseName:"PointofSalesSystem-(Project_quiz2)"    ,length:DiffPointofSalesSystem.length   ,CourseLEFT :DiffPointofSalesSystem})}
+                          if(DiffProjectQUIZ3.length != 0)        {Course_Left.push({CourseName:"ProjectQUIZ3"                          ,length:DiffProjectQUIZ3.length         ,CourseLEFT :DiffProjectQUIZ3})}
 
                           //หา path ที่น้อยที่สุด
                           var rankCourse_left = Course_Left.sort(function (a, b) {return a.length - b.length;});
@@ -626,7 +626,7 @@ router.get('/', async (req, res, next) => {
                           //***RECOMMEND : PROJECT ถ้าเลือก path มาก็จะแนะนำ คอร์ส ที่ง่ายที่สุด
                           else if(RecommendaResult[0].RecommendationType === "TicketBookingSystem-(Project_quiz1)"  ){ RecommendOutput = DiffTicketBookingSystem }
                           else if(RecommendaResult[0].RecommendationType === "PointofSalesSystem-(Project_quiz2)"    ){ RecommendOutput = DiffPointofSalesSystem    }
-                          else if(RecommendaResult[0].RecommendationType === "Roshambo"   ){ RecommendOutput = DiffRoshambo   }
+                          else if(RecommendaResult[0].RecommendationType === "ProjectQUIZ3"   ){ RecommendOutput = DiffProjectQUIZ3}
                           if(Object.keys(RecommendOutput).length === 0){  RecommendOutput = "โปรดเลือกการแนะนำ" } //ถ้า คอร์ส ใน path หมดแล้ว
                           else{RecommendOutput = RecommendOutput[0]}    //เลือกตัวแรกของ array = ตัวที่ง่ายที่สุด
                         
@@ -653,7 +653,7 @@ router.get('/', async (req, res, next) => {
                     //***PROJECT UNLOCK */
                     var TicketBooking_SystemPercent = Math.round(((PathTicketBookingSystem.length-DiffTicketBookingSystem.length)/PathTicketBookingSystem.length)*100)
                     var PointofSales_SystemPercent = Math.round(((PathPointofSalesSystem.length-DiffPointofSalesSystem.length)/PathPointofSalesSystem.length)*100)
-                    var RoshamboPercent = Math.round(((PathRoshambo.length-DiffRoshambo.length)/PathRoshambo.length)*100)
+                    var ProjectQUIZ3Percent = Math.round(((PathProjectQUIZ3.length-DiffProjectQUIZ3.length)/PathProjectQUIZ3.length)*100)
 
                     MongoClient.connect(url, function(err, db) {
                       if (err) throw err;
@@ -667,7 +667,7 @@ router.get('/', async (req, res, next) => {
                           MongoClient.connect(url, function(err, db) {
                             if (err) throw err;
                             var dbo = db.db(mydatabase);
-                            var myobj = { email:person.email,TicketBooking_SystemPercent:TicketBooking_SystemPercent, PointofSales_SystemPercent:PointofSales_SystemPercent,RoshamboPercent:RoshamboPercent};
+                            var myobj = { email:person.email,TicketBooking_SystemPercent:TicketBooking_SystemPercent, PointofSales_SystemPercent:PointofSales_SystemPercent,ProjectQUIZ3Percent:ProjectQUIZ3Percent};
                             dbo.collection("StudentProject").insertOne(myobj, function(err, res) {
                               if (err) throw err;
                               db.close();
@@ -680,7 +680,7 @@ router.get('/', async (req, res, next) => {
                             if (err) throw err;
                             var dbo = db.db(mydatabase);
                             var myquery = { email: person.email };
-                            var newvalues = { $set: {TicketBooking_SystemPercent:TicketBooking_SystemPercent, PointofSales_SystemPercent:PointofSales_SystemPercent,RoshamboPercent:RoshamboPercent} };
+                            var newvalues = { $set: {TicketBooking_SystemPercent:TicketBooking_SystemPercent, PointofSales_SystemPercent:PointofSales_SystemPercent,ProjectQUIZ3Percent:ProjectQUIZ3Percent} };
                             dbo.collection("StudentProject").updateOne(myquery, newvalues, function(err, res) {
                               if (err) throw err;
                               db.close();
@@ -698,7 +698,7 @@ router.get('/', async (req, res, next) => {
 
                     res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
-                      TicketBooking_SystemPercent,PointofSales_SystemPercent,RoshamboPercent,
+                      TicketBooking_SystemPercent,PointofSales_SystemPercent,ProjectQUIZ3Percent,
                       IntroductionScoreLV1,IntroductionScoreLV2,IntroductionScoreLV3,IntroductionScoreLV4,
                       StringScoreLV1,StringScoreLV2,StringScoreLV3,StringScoreLV4,
                       DatatypeScoreLV1,DatatypeScoreLV2,DatatypeScoreLV3,DatatypeScoreLV4,
@@ -759,7 +759,7 @@ router.post('/joinclass', async (req, res, next) => {
                         if (err) throw err;
         
                         var IntroductionDone = " - " ,StringDone = " - " ,OperatorsDone = " - " ,DatatypeDone = " - ",FlowControlDone = " - ",PointersDone = " - ",FunctionDone = " - ",StructureDone = " - ",ArrayDone = " - ";
-                        var Ticket_Booking_SystemDone = " - " , Point_of_Sales_SystemDone = " - " , RoshamboDone = " - " ,CalendarDone = " - " , CalculatorDone = " - ";
+                        var Ticket_Booking_SystemDone = " - " , Point_of_Sales_SystemDone = " - " , Project_QUIZ3Done = " - " ,CalendarDone = " - " , CalculatorDone = " - ";
               
                         for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
         
@@ -795,8 +795,8 @@ router.post('/joinclass', async (req, res, next) => {
                         if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
                           Point_of_Sales_SystemDone = "YES";
                         }
-                        if (StudentAnswer[i].contentName ==='Roshambo') {   
-                          RoshamboDone = "YES";
+                        if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
+                          Project_QUIZ3Done = "YES";
                         }
 
         
@@ -815,7 +815,7 @@ router.post('/joinclass', async (req, res, next) => {
                             //Project Quiz
                             Ticket_Booking_System:Ticket_Booking_SystemDone,
                             Point_of_Sales_System:Point_of_Sales_SystemDone,
-                            Roshambo:RoshamboDone,
+                            Project_QUIZ3:ProjectQUIZ3Done,
                             //Pre-Post test
                             Introduction:IntroductionDone,
                             String:StringDone,
