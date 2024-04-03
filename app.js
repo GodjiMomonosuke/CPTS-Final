@@ -91,10 +91,10 @@ app.use('/project-Point_of_Sales_System',
   ensureStudent,
   require('./routes/student/project/2_PointofSalesSystem.route')
 );
-app.use('/project-Roshambo',
+app.use('/project-Project_QUIZ3',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
-  require('./routes/student/project/3_Roshambo.route')
+  require('./routes/student/project/3_ProjectQUIZ3.route')
 );
 app.use('/project-Calendar',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
