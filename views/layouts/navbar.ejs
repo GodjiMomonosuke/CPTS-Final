@@ -35,10 +35,8 @@
   
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="nav navbar-nav hidden-xs">
-          <li class="nav-item "><a class="nav-link" href="/" style="color: #ffffff;">Home</a></li>
-
-          <% if (user) { %>
-            
+        <li class="nav-item "><a class="nav-link" href="/" style="color: #ffffff;">Home</a></li>
+        <% if (user) { %>
             <% if (user.role === 'ADMIN') { %>
               <li class="nav-item "><a class="nav-link" href="/admin/users" style="color: #ffffff;">Manage Users</a></li>
             <% } %>
@@ -50,13 +48,13 @@
               <li class="nav-item "><a class="nav-link" href="/course" style="color: #ffffff;">Course</a></li>
               <li class="nav-item "><a class="nav-link" href="/project" style="color: #ffffff;">Project</a></li>
             <% } %>
-            <% } else { %>
+          <% } else { %>
               <li class="nav-item "><a class="nav-link"  href="/auth/register" style="color: #ffffff;">Register</a></li>
               <li class="nav-item "><a class="nav-link"  href="/auth/login" style="color: #ffffff;">Login</a></li>
           <% } %>
       </ul>
-      <ul class="navbar-collapse collapse">
-            <li class="nav-item "><a class="nav-link"  href="/auth/logout" style="color: #ffffff;"><i class="fa fa-power-off" style="font-size: 25px;;align-items: center; " ></i></a></li>
+      <ul class="navbar-nav mb-0 h5 ms-auto">
+        <li class="nav-item "><a class="nav-link"  href="/auth/logout" style="color: #ffffff;"><i class="fa fa-power-off" style="font-size: 25px;;align-items: center; " ></i></a></li>     
       </ul>
     </div>
 
