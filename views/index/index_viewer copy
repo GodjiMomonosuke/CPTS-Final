@@ -1,0 +1,199 @@
+<header>
+  <title>Computer Programming Tutoring Systems</title>
+  <link rel='stylesheet' href='stylesheets/home.css' />
+</header>
+<%- include('../layouts/navbar') %>
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+  }
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+</style>
+
+<main>
+<div class="p-3 mb-2 bg-light text-dark" >
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" style="margin: 0%; height: 100%;">
+<div class="carousel-indicators">
+  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+</div>
+<div class="carousel-inner" style="height: 100%;">
+  <div class="carousel-item active" style="height: 100%;">
+    <img class="img-viewer1" src="https://images.pexels.com/photos/4709289/pexels-photo-4709289.jpeg">
+    <div class="container">
+      <div class="carousel-caption text-start">
+        <h1 style="font-size: 100px">GeekcodeCraft</h1>
+        <p class="p-img1" style="font-size: 40px">เป็นเว็บไซต์ช่วยพัฒนาทักษะที่จำเป็นต่อการเขียนโปรแกรม</p>
+        <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item" style="height: 100%;">
+    <img class="img-viewer1" src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    <div class="container">
+      <div class="carousel-caption">
+        <h1 style="font-size: 100px">Course</h1>
+        <p class="p-img1" style="font-size: 40px">มีเนื้อหาและวิดีโอการเรียนที่ช่วยพัฒนาศักยภาพจาก Youtuber ชื่อดัง</p>
+        <!-- <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p> -->
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item" style="height: 100%;">
+    <img class="img-viewer1" src="https://images.pexels.com/photos/7241413/pexels-photo-7241413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    <div class="container">
+      <div class="carousel-caption text-end">
+        <h1 style="font-size: 100px">Competency</h1>
+        <p class="p-img1" style="font-size: 40px">ส่งเสริมสมรรถนะทั้ง 4 ด้านที่จำเป็นต่อนักศึกษา</p>
+        <!-- <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> -->
+      </div>
+    </div>
+  </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+</div>
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="p-3 mb-2 bg-light text-dark">
+<div class="container marketing" style="background-color: #E2D9E5;">
+<!-- Three columns of text below the carousel -->
+
+<!-- START THE FEATURETTES -->
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading fw-normal lh-1">Knowledge</h2>
+    <p class="lead">พัฒนาความรู้ในการเขียนโปรแกรม ทำให้ผู้เรียนมีการคิดแบบมีเหตุผลเป็นระบบ มีความคิดสร้างสรรค์ สามารถนำไปใช้ในการแก้ไขปัญหาและสามารถสร้างงานที่ดีได้</p>
+  </div>
+  <div class="col-md-5">
+    <img class="img2" src="https://images.unsplash.com/photo-1537884944318-390069bb8665?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7 order-md-2">
+    <h2 class="featurette-heading fw-normal lh-1">Tracing</h2>
+    <p class="lead">พัฒนาทักษะการติดตามการทำงานของโปรแกรม เพื่อติดตามการทำงานของโค้ดที่เขียน โดยการตามรอยของคำสั่งทีละขั้นตอนเพื่อเข้าใจว่าโปรแกรมทำงานอย่างไรในแต่ละขั้นตอนของการทำงาน</p>
+  </div>
+  <div class="col-md-5 order-md-1">
+    <img class="img2" src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7">
+    <h2 class="featurette-heading fw-normal lh-1">Explaining</h2>
+    <p class="lead">พัฒนาทักษะการอธิบายการทำงานของโปรแกรม เพื่อให้เข้าใจง่ายและชัดเจนสำหรับที่ไม่เคยเห็นโค้ดนั้นมาก่อน การอธิบายโค้ดมีประโยชน์มากในการแบ่งปันความรู้ การสอน หรือเพื่อให้ทีมทำงานร่วมกันได้เข้าใจโค้ด</p>
+  </div>
+  <div class="col-md-5">
+    <img class="img2" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">    
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-7 order-md-2">
+    <h2 class="featurette-heading fw-normal lh-1">Writing</h2>
+    <p class="lead">พัฒนาทักษะการเขียนโปรแกรม เพื่อการสร้างโค้ดที่มีความชัดเจน อ่านง่าย และทำงานได้ตามที่ต้องการ ซึ่งเป็นขั้นตอนที่สำคัญในการพัฒนาโปรแกรม</p>
+  </div>
+  <div class="col-md-5 order-md-1">
+    <img class="img2" src="https://images.pexels.com/photos/1181243/pexels-photo-1181243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+  </div>
+</div>
+
+<hr class="featurette-divider">
+
+<!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->
+</div>
+<%- include('../layouts/footer') %>

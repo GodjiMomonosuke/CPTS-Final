@@ -1,0 +1,33 @@
+body {
+    letter-spacing: 2px;
+}
+
+#tagline {
+    position: absolute;
+    width: 500px;
+    z-index: 100;
+    top: 30%;
+    right: 20%;
+}
+h1 {
+    color: white;
+}
+.get-started-btn {
+    margin-top: 25px;
+    background: white;
+    border: 0;
+    color: #084f8e;
+    width: 220px;
+    height: 40px;
+}#moon {
+    border-radius: 100%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
+    width: 200px;
+    height: 200px;
+    transition: 1s linear all;
+    animation: moon_anim 200s infinite;
+    animation-timing-function: linear;
+}
