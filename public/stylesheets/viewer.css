@@ -24,7 +24,7 @@ h1 {
     position: absolute;
     top: 30%;
     left: 20%;
-    box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 80px #ffffff99;
     width: 200px;
     height: 200px;
     transition: 1s linear all;
