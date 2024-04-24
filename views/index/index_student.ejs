@@ -18,14 +18,24 @@
         td {
             text-align: center;
             background-color: #ffffff;
+            width: 100px;
         }
         th {
             padding: 10px;
             background-color: #f1f1f1;
+            width: 250px;
         }
-        .head {
-            font-size: 20px;
-            text-align: center;
+        h1 {
+            color: #ffffff;
+        }
+        table {
+            width: 100%;
+        }
+        .pre {
+            background-color: #b8ffc5;
+        }
+        .post {
+            background-color: #ffd7b8;
         }
       
         @media (min-width: 768px) {
@@ -161,16 +171,13 @@
 <!-- MID -->
     <!-- SKILLS-->
 
-    <div id="content" class="group2">
-
+    <div  class="group2">
         <div>
         <% if(isNaN(BasicPercent)){ %>
 
         <% } else{ %>  
-                <h1 id = 'content'><!--<svg height="40" width="40" viewBox="0 0 576 512">
-                    <path d="M352.4 243.8l-49.83 99.5c-6.009 12-23.41 11.62-28.92-.625L216.7 216.3l-30.05 71.75L88.55 288l176.4 182.2c12.66 13.07 33.36 13.07 46.03 0l176.4-182.2l-112.1 .0052L352.4 243.8zM495.2 62.86c-54.36-46.98-137.5-38.5-187.5 13.06L288 96.25L268.3 75.92C218.3 24.36 135.2 15.88 80.81 62.86C23.37 112.5 16.84 197.6 60.18 256h105l35.93-86.25c5.508-12.88 23.66-13.12 29.54-.375l58.21 129.4l49.07-98c5.884-11.75 22.78-11.75 28.67 0l27.67 55.25h121.5C559.2 197.6 552.6 112.5 495.2 62.86z"/>
-                </svg> -->Competency </h1>   
-                <div style="height: 500px;" class="chartMenu">
+                <h1 id ='content'>Competency </h1>   
+                <div style="height: 400px;" class="">
                     <div class="chartCard">
                         <div class="chartBox">
                         <canvas id="myChart"></canvas>
@@ -224,90 +231,444 @@
             <p><a href="">course</a></p>
             <p><a href="">project</a></p>
         </div>
-        <div>
-            <table>
-                    <tr>
-                        <th style="width: 300px;" class="head">Lesson</th>
-                        <th style="width: 120px;" class="head">Knowledge</th>
-                        <th style="width: 120px;" class="head">Tracing</th>
-                        <th style="width: 120px;" class="head">Explaining</th>
-                        <th style="width: 120px;" class="head">Writing</th>
-                    </tr>  
-                
-                    <tr>
-                        <th>1 Algorithms and Flowcharts</th>
-                        <td><%= IntroductionScoreLV1 %></td>
-                        <td><%= IntroductionScoreLV2 %></td>
-                        <td><%= IntroductionScoreLV3 %></td>
-                        <td><%= IntroductionScoreLV4 %></td>
-                    </tr>
-                    <tr>
-                        <th>2 Datatype and Variable</th>
-                        <td><%= StringScoreLV1 %></td>
-                        <td><%= StringScoreLV2 %></td>
-                        <td><%= StringScoreLV3 %></td>
-                        <td><%= StringScoreLV4 %></td>
-                    </tr>
-                    <tr>
-                        <th>3 Input and Output</th>
-                        <td><%= DatatypeScoreLV1 %></td>
-                        <td><%= DatatypeScoreLV2 %></td>
-                        <td><%= DatatypeScoreLV3 %></td>
-                        <td><%= DatatypeScoreLV4 %></td>
-                    </tr>
-                    <tr>
-                        <th>4 Operators and Expressions</th>
-                        <td><%= OperatorsScoreLV1 %></td>
-                        <td><%= OperatorsScoreLV2 %></td>
-                        <td><%= OperatorsScoreLV3 %></td>
-                        <td><%= OperatorsScoreLV4 %></td>
-                    </tr>
-                    <tr>
-                        <th>5 Selection Statements</th>
-                        <td><%= FlowControlScoreLV1 %></td>
-                        <td><%= FlowControlScoreLV2 %></td>
-                        <td><%= FlowControlScoreLV3 %></td>
-                        <td><%= FlowControlScoreLV4 %></td>
-                    </tr>
-                    <tr>
-                        <th>6 Loop Statements</th>
-                        <td><%= PointersScoreLV1 %></td>
-                        <td><%= PointersScoreLV2 %></td>
-                        <td><%= PointersScoreLV3 %></td>
-                        <td><%= PointersScoreLV4 %></td>
-                    </tr>
-                    <tr>
-                        <th>7 Arrays and Strings</th>
-                        <td><%= FunctionScoreLV1 %></td>
-                        <td><%= FunctionScoreLV2 %></td>
-                        <td><%= FunctionScoreLV3 %></td>
-                        <td><%= FunctionScoreLV4 %></td>
-                    </tr>
-                    <tr>
-                        <th>8 Functions</th>
-                        <td><%= StructureScoreLV1 %></td>
-                        <td><%= StructureScoreLV2 %></td>
-                        <td><%= StructureScoreLV3 %></td>
-                        <td><%= StructureScoreLV4 %></td>
-                    </tr>
-                
-            </table>    
-        </div>
-      <br><br><br><br><br><br>
-    </div> 
-    
-    
-    
-    
-<!-- Start of LiveChat (www.livechat.com) code -->
-        <script>
-            window.__lc = window.__lc || {};
-            window.__lc.license = 17376438;
-            ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-        </script>
-        <noscript><a href="https://www.livechat.com/chat-with/17376438/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+    </div>
 
-        <!--End of LiveChat code -->
+        <% 
+        if(Object.keys(StudentAnswer).length === 0) {   
+        } 
+        else {
+            %>
+            <%
+            for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {  
+                var Condition = 0;
+                var checkedLV1 = "" ,checkedLV2 = "",checkedLV3 = "",checkedLV4,TeacherCheck;
+                var cLV1 = "background-color: #F8F9FA;", cLV2 = "background-color: #F8F9FA;", cLV3 = "background-color: #F8F9FA;", cLV4 = "background-color: #F8F9FA;";
+                var training1 = "" ,training2 = "", training3 = "", training4 = "";
+                var k = "", t = "", e = "", w = "";
+            
+                
+        
+                /* Check Content**/
+                if(StudentAnswer[i].contentName === "Pre-test" ){
+                    Condition++;
+                }
+                if(StudentAnswer[i].contentName === "Post-test" ){
+                    Condition++;
+                }
+                if(StudentAnswer[i].contentName === "TicTacToe" ){
+                    Condition++;
+                }
+                if(StudentAnswer[i].contentName === "LibrarySystem" ){
+                    Condition++;
+                } 
+                if(StudentAnswer[i].contentName === "Roshambo" ){
+                    Condition++;
+                } 
+              
+        
+                
+                /* Check Value LV4 Score**/
+                if(typeof(StudentAnswer[i].scoreTeacher) === "string" ){
+                    checkedLV4 = StudentAnswer[i].scoreTeacher;
+                    TeacherCheck = StudentAnswer[i].checkedBy;
+                    
+                    if(StudentAnswer[i].scoreTeacher >= 20){
+                       cLV4 = "background-color: #93c47d;" 
+                    }
+                    else {
+                        training4 = "ทำแบบฝึกหัดเพิ่มเติม";
+                        cLV4 = "background-color: #e06666;" 
+                    }
+                   
+        
+                }
+                else{
+                    checkedLV4 = "-";
+                    TeacherCheck = "รอตรวจ";
+                }
+        
+                /* Score tranfrom to Pass/Not Pass**/
+                
+                if(StudentAnswer[i].scoreLV1 === 5){
+                    cLV1 = "background-color: #93c47d;"
+                }
+                if(StudentAnswer[i].scoreLV1 === 4){
+                    cLV1 = "background-color: #93c47d;"
+                }
+                if(StudentAnswer[i].scoreLV1 === 3){
+                    cLV1 = "background-color: #e06666;"
+                }
+                if(StudentAnswer[i].scoreLV1 === 2){
+                    cLV1 = "background-color: #e06666;"
+                    
+                }
+                if(StudentAnswer[i].scoreLV1 === 1){
+                    cLV1 = "background-color: #e06666;"
+                }
+                if(StudentAnswer[i].scoreLV1 === 0){
+                    cLV1 = "background-color: #e06666;"
+                }
+               
+                if(StudentAnswer[i].scoreLV2 === 5){
+                    checkedLV2 = "✓";
+                    cLV2 = "background-color: #93c47d;"
+                }
+                if(StudentAnswer[i].scoreLV2 === 4){
+                    checkedLV2 = "✓";
+                    cLV2 = "background-color: #93c47d;"
+                }
+                if(StudentAnswer[i].scoreLV2 === 3){
+                    checkedLV2 = "✗";
+                    training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+                    cLV2 = "background-color: #e06666;"
+                }
+                if(StudentAnswer[i].scoreLV2 === 2){
+                    checkedLV2 = "✗";
+                    training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+                    cLV2 = "background-color: #e06666;"
+                }
+                if(StudentAnswer[i].scoreLV2 === 1){
+                    checkedLV2 = "✗";
+                    training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+                    cLV2 = "background-color: #e06666;"
+                }
+                if(StudentAnswer[i].scoreLV2 === 0){
+                    checkedLV2 = "✗";
+                    training2 = "ทำแบบฝึกหัดเพิ่มเติม";
+                    cLV2 = "background-color: #e06666;"
+                }
+        
+        
+                if(StudentAnswer[i].scoreLV3 === 5){
+                    checkedLV3 = "✓";
+                    cLV3 = "background-color: #93c47d;"
+                }
+                if(StudentAnswer[i].scoreLV3 === 4){
+                    checkedLV3 = "✓";
+                    cLV3 = "background-color: #93c47d;"
+                }
+                if(StudentAnswer[i].scoreLV3 === 3){
+                    checkedLV3 = "✗";
+                    training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+                    cLV3 = "background-color: #e06666;"
+                }
+                if(StudentAnswer[i].scoreLV3 === 2){
+                    checkedLV3 = "✗";
+                    training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+                    cLV3 = "background-color: #e06666;"
+                }
+                if(StudentAnswer[i].scoreLV3 === 1){
+                    checkedLV3 = "✗";
+                    training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+                    cLV3 = "background-color: #e06666;"
+                }
+                if(StudentAnswer[i].scoreLV3 === 0){
+                    checkedLV3 = "✗";
+                    training3 = "ทำแบบฝึกหัดเพิ่มเติม";
+                    cLV3 = "background-color: #e06666;"
+                }
+        
+                <!-- * Algorithms_and_Flowcharts * -->
+                if(StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Pre-test)"){
+                    var Kpre1 = StudentAnswer[i].scoreLV1
+                    var Tpre1 = StudentAnswer[i].scoreLV2
+                    var Epre1 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpre1 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpre1 = "รอตรวจ"
+                    }
+                }
+                if(StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Post-test)" ){
+                    var Kpost1 = StudentAnswer[i].scoreLV1
+                    var Tpost1 = StudentAnswer[i].scoreLV2
+                    var Epost1 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpost1 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpost1 = "รอตรวจ"
+                    }
+                }
+                <!-- * Datatype_and_Variable * -->
+                if(StudentAnswer[i].contentName === "Datatype_and_Variable-(Pre-test)"){
+                    var Kpre2 = StudentAnswer[i].scoreLV1
+                    var Tpre2 = StudentAnswer[i].scoreLV2
+                    var Epre2 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpre2 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpre2 = "รอตรวจ"
+                    }
+                }
+                if(StudentAnswer[i].contentName === "Datatype_and_Variable-(Post-test)"){
+                    var Kpost2 = StudentAnswer[i].scoreLV1
+                    var Tpost2 = StudentAnswer[i].scoreLV2
+                    var Epost2 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpost2 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpost2 = "รอตรวจ"
+                    }
+                }
+                <!-- * Input_and_Output * -->
+                if(StudentAnswer[i].contentName === "Input_and_Output-(Pre-test)"){
+                    var Kpre3 = StudentAnswer[i].scoreLV1
+                    var Tpre3 = StudentAnswer[i].scoreLV2
+                    var Epre3 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpre3 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpre3 = "รอตรวจ"
+                    }
+                }
+                if(StudentAnswer[i].contentName === "Input_and_Output-(Post-test)" ){
+                    varKpost3 = StudentAnswer[i].scoreLV1
+                    var Tpost3 = StudentAnswer[i].scoreLV2
+                    var Epost3 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpost3 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpost3 = "รอตรวจ"
+                    }
+                }
+                <!-- * Operators_and_Expressions * -->
+                if(StudentAnswer[i].contentName === "Operators_and_Expressions-(Pre-test)" ){
+                    var Kpre4 = StudentAnswer[i].scoreLV1
+                    var Tpre4 = StudentAnswer[i].scoreLV2
+                    var Epre4 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpre4 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpre4 = "รอตรวจ"
+                    }
+                }
+                if(StudentAnswer[i].contentName === "Operators_and_Expressions-(Post-test)" ){
+                    Kpost4 = StudentAnswer[i].scoreLV1
+                    Tpost4 = StudentAnswer[i].scoreLV2
+                    Epost4 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        Wpost4 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpost4 = "รอตรวจ"
+                    }
+                }
+
+                <!-- * Selection_Statements * -->
+                if(StudentAnswer[i].contentName === "Selection_Statements-(Pre-test)" ){
+                    var Kpre5 = StudentAnswer[i].scoreLV1
+                    var Tpre5 = StudentAnswer[i].scoreLV2
+                    var Epre5 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpre5 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpre5 = "รอตรวจ"
+                    }
+                }
+                if(StudentAnswer[i].contentName === "Selection_Statements-(Post-test)" ){
+                    var Kpost5 = StudentAnswer[i].scoreLV1
+                    var Tpost5 = StudentAnswer[i].scoreLV2
+                    var Epost5 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpost5 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpost5 = "รอตรวจ"
+                    }
+                }
+        
+                <!-- * Loop_Statements * -->
+                if(StudentAnswer[i].contentName === "Loop_Statements-(Pre-test)" ){
+                    var Kpre6 = StudentAnswer[i].scoreLV1
+                    var Tpre6 = StudentAnswer[i].scoreLV2
+                    var Epre6 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpre6 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpre6 = "รอตรวจ"
+                    }
+                }
+                if(StudentAnswer[i].contentName === "Loop_Statements-(Post-test)" ){
+                    var Kpost6 = StudentAnswer[i].scoreLV1
+                    var Tpost6 = StudentAnswer[i].scoreLV2
+                    var Epost6 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpost6 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpost6 = "รอตรวจ"
+                    }
+                }
+        
+                <!-- * Arrays_and_Strings * -->
+                if(StudentAnswer[i].contentName === "Arrays_and_Strings-(Pre-test)" ){
+                    var Kpre7 = StudentAnswer[i].scoreLV1
+                    var Tpre7 = StudentAnswer[i].scoreLV2
+                    var Epre7 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpre7 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpre7 = "รอตรวจ"
+                    }
+                }
+                if(StudentAnswer[i].contentName === "Arrays_and_Strings-(Post-test)" ){
+                    var Kpost7 = StudentAnswer[i].scoreLV1
+                    var Tpost7 = StudentAnswer[i].scoreLV2
+                    var Epost7 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpost7 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpost7 = "รอตรวจ"
+                    }
+                }
+        
+                <!-- * Functions * -->
+                if(StudentAnswer[i].contentName === "Functions-(Pre-test)" ){
+                    var Kpre8 = StudentAnswer[i].scoreLV1
+                    var Tpre8 = StudentAnswer[i].scoreLV2
+                    var Epre8 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpre8 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpre8 = "รอตรวจ"
+                    }
+                }
+                if(StudentAnswer[i].contentName === "Functions-(Post-test)" ){
+                    var Kpost8 = StudentAnswer[i].scoreLV1
+                    var Tpost8 = StudentAnswer[i].scoreLV2
+                    var Epost8 = StudentAnswer[i].scoreLV3
+                    if(typeof(StudentAnswer[i].scoreTeacher) === "string") {
+                        var Wpost8 = StudentAnswer[i].scoreTeacher
+                    }else{
+                        Wpost8 = "รอตรวจ"
+                    }
+                }
+                
+                
+            } %>
+        
+                    
+        
+                <div>
+                    <div>
+                        <table>
+                                <tr>
+                                    <th class="text-center">Lesson</th>
+                                    <th colspan="2" class="text-center">Knowledge</th>
+                                    <th colspan="2" class="text-center">Tracing</th>
+                                    <th colspan="2" class="text-center">Explaining</th>
+                                    <th colspan="2" class="text-center">Writing</th>
+                                </tr>  
+                                <tr>
+                                    <th></th>
+                                    <td class="pre">pre</td>
+                                    <td class="post">post</td>
+                                    <td class="pre">pre</td>
+                                    <td class="post">post</td>
+                                    <td class="pre">pre</td>
+                                    <td class="post">post</td>
+                                    <td class="pre">pre</td>
+                                    <td class="post">post</td>
+                                </tr>
+                                <tr>
+                                    <th>1 Algorithms and Flowcharts</th>
+                                    <td><%=Kpre1%></td>
+                                    <td><%=Kpost1%></td>
+                                    <td><%=Tpre1%></td>
+                                    <td><%=Tpost1%></td>
+                                    <td><%=Epre1%></td>
+                                    <td><%=Epost1%></td>
+                                    <td><%=Wpre1%></td>
+                                    <td><%=Wpost1%></td>
+                                </tr>
+                                <tr>
+                                    <th>2 Datatype and Variable</th>
+                                    <td><%=Kpre2%></td>
+                                    <td><%=Kpost2%></td>
+                                    <td><%=Tpre2%></td>
+                                    <td><%=Tpost2%></td>
+                                    <td><%=Epre2%></td>
+                                    <td><%=Epost2%></td>
+                                    <td><%=Wpre2%></td>
+                                    <td><%=Wpost2%></td>
+                                </tr>
+                                <tr>
+                                    <th>3 Input and Output</th>
+                                    <td><%=Kpre3%></td>
+                                    <td><%=Kpost3%></td>
+                                    <td><%=Tpre3%></td>
+                                    <td><%=Tpost3%></td>
+                                    <td><%=Epre3%></td>
+                                    <td><%=Epost3%></td>
+                                    <td><%=Wpre3%></td>
+                                    <td><%=Wpost3%></td>
+                                </tr>
+                                <tr>
+                                    <th>4 Operators and Expressions</th>
+                                    <td><%=Kpre4%></td>
+                                    <td><%=Kpost4%></td>
+                                    <td><%=Tpre4%></td>
+                                    <td><%=Tpost4%></td>
+                                    <td><%=Epre4%></td>
+                                    <td><%=Epost4%></td>
+                                    <td><%=Wpre4%></td>
+                                    <td><%=Wpost4%></td>
+                                </tr>
+                                <tr>
+                                    <th>5 Selection Statements</th>
+                                    <td><%=Kpre5%></td>
+                                    <td><%=Kpost5%></td>
+                                    <td><%=Tpre5%></td>
+                                    <td><%=Tpost5%></td>
+                                    <td><%=Epre5%></td>
+                                    <td><%=Epost5%></td>
+                                    <td><%=Wpre5%></td>
+                                    <td><%=Wpost5%></td>
+                                </tr>
+                                <tr>
+                                    <th>6 Loop Statements</th>
+                                    <td><%=Kpre6%></td>
+                                    <td><%=Kpost6%></td>
+                                    <td><%=Tpre6%></td>
+                                    <td><%=Tpost6%></td>
+                                    <td><%=Epre6%></td>
+                                    <td><%=Epost6%></td>
+                                    <td><%=Wpre6%></td>
+                                    <td><%=Wpost6%></td>
+                                </tr>
+                                <tr>
+                                    <th>7 Arrays and Strings</th>
+                                    <td><%=Kpre7%></td>
+                                    <td><%=Kpost7%></td>
+                                    <td><%=Tpre7%></td>
+                                    <td><%=Tpost7%></td>
+                                    <td><%=Epre7%></td>
+                                    <td><%=Epost7%></td>
+                                    <td><%=Wpre7%></td>
+                                    <td><%=Wpost7%></td>
+                                </tr>
+                                <tr>
+                                    <th>8 Functions</th>
+                                    <td><%=Kpre8%></td>
+                                    <td><%=Kpost8%></td>
+                                    <td><%=Tpre8%></td>
+                                    <td><%=Tpost8%></td>
+                                    <td><%=Epre8%></td>
+                                    <td><%=Epost8%></td>
+                                    <td><%=Wpre8%></td>
+                                    <td><%=Wpost8%></td>
+                                </tr>
+                        </table>    
+                    </div>
+                </div>
+        
+         
+         
+        
+         <% } %>
+     
+    <br><br><br><br><br><br>
+    
+    
+    
+
         
     
 

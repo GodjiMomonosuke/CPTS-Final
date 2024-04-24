@@ -758,8 +758,8 @@ router.post('/joinclass', async (req, res, next) => {
                       dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
                         if (err) throw err;
         
-                        var IntroductionDone = " - " ,StringDone = " - " ,OperatorsDone = " - " ,DatatypeDone = " - ",FlowControlDone = " - ",PointersDone = " - ",FunctionDone = " - ",StructureDone = " - ",ArrayDone = " - ";
-                        var Ticket_Booking_SystemDone = " - " , Point_of_Sales_SystemDone = " - " , Project_QUIZ3Done = " - " ,CalendarDone = " - " , CalculatorDone = " - ";
+                        var IntroductionDone = " - " ,StringDone = " - " ,OperatorsDone = " - " ,DatatypeDone = " - ",FlowControlDone = " - ",PointersDone = " - ",FunctionDone = " - ",StructureDone = " - ";
+                        var Ticket_Booking_SystemDone = " - " , Point_of_Sales_SystemDone = " - " , Project_QUIZ3Done = " - ";
               
                         for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
         
