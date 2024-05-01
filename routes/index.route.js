@@ -504,7 +504,7 @@ router.get('/', async (req, res, next) => {
                         InputOutputLV3 = StudentAnswer[i].scoreLV3;
                         InputOutputLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         InputOutputDone = 1;
-                  }
+                    }
                 }
 
                 /*** SUM */
