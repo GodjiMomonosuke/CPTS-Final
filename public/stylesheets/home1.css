@@ -1,26 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 
-html {
-    height: fit-content;
-}
-body {
-    background-color: #E2D9E5;
-    font-family: 'Quantico', sans-serif;
-    height: 100%;
-}
-main { 
-    background-color: #E2D9E5;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
-    text-align: left;
-    font-size: 20px;
-}
+
 
 .item1 {
     height: 140px;
-    background-color: #9C7EB7;
+    background-color: #ffffff;
     padding: 10px;
     width: auto;
 }

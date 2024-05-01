@@ -96,16 +96,7 @@ app.use('/project-Project_QUIZ3',
   ensureStudent,
   require('./routes/student/project/3_ProjectQUIZ3.route')
 );
-app.use('/project-Calendar',
-  ensureLoggedIn({ redirectTo: '/auth/login' }),
-  ensureStudent,
-  require('./routes/student/project/4_Calendar.route')
-);
-app.use('/project-Calculator',
-  ensureLoggedIn({ redirectTo: '/auth/login' }),
-  ensureStudent,
-  require('./routes/student/project/5_Calculator.route')
-);
+
 //** course **//
 app.use('/course-Algorithms_and_Flowcharts',
   ensureLoggedIn({ redirectTo: '/auth/login' }),

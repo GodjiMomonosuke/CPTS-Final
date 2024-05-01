@@ -277,7 +277,7 @@ router.get('/', async (req, res, next) => {
         var query = { email: person.email };
         dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
           if (err) throw err;
-          if(Object.keys(StudentAnswer).length < 0){
+          if(Object.keys(StudentAnswer).length === 0){
             res.render('student/pretest', {person});
           }
           else{
@@ -292,7 +292,7 @@ router.get('/', async (req, res, next) => {
                 if (err) throw err;
 
                 var IntroductionDone = "ยังไม่ทำ" ,StringDone = "ยังไม่ทำ" ,OperatorsDone = "ยังไม่ทำ" ,DatatypeDone = "ยังไม่ทำ",FlowControlDone = "ยังไม่ทำ",LoopDone = "ยังไม่ทำ",PointersDone = "ยังไม่ทำ",FunctionDone = "ยังไม่ทำ",StructureDone = "ยังไม่ทำ",ArrayDone = "ยังไม่ทำ" ,InputOutputDone = "ยังไม่ทำ" ;
-                var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ" ,CalendarDone = "ยังไม่ทำ" , CalculatorDone = "ยังไม่ทำ";
+                var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ";
                 var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "รอตรวจ";
       
                 for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
@@ -504,7 +504,7 @@ router.get('/', async (req, res, next) => {
                         InputOutputLV3 = StudentAnswer[i].scoreLV3;
                         InputOutputLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         InputOutputDone = 1;
-                  }
+                    }
                 }
 
                 /*** SUM */
@@ -758,8 +758,8 @@ router.post('/joinclass', async (req, res, next) => {
                       dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
                         if (err) throw err;
         
-                        var IntroductionDone = " - " ,StringDone = " - " ,OperatorsDone = " - " ,DatatypeDone = " - ",FlowControlDone = " - ",PointersDone = " - ",FunctionDone = " - ",StructureDone = " - ",ArrayDone = " - ";
-                        var Ticket_Booking_SystemDone = " - " , Point_of_Sales_SystemDone = " - " , Project_QUIZ3Done = " - " ,CalendarDone = " - " , CalculatorDone = " - ";
+                        var IntroductionDone = " - " ,StringDone = " - " ,OperatorsDone = " - " ,DatatypeDone = " - ",FlowControlDone = " - ",PointersDone = " - ",FunctionDone = " - ",StructureDone = " - ";
+                        var Ticket_Booking_SystemDone = " - " , Point_of_Sales_SystemDone = " - " , Project_QUIZ3Done = " - ";
               
                         for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
         
