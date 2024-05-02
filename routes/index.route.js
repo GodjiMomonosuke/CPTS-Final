@@ -8,7 +8,7 @@ const mydatabase = "Cluster0";
 
 router.post('/pretestSubmit', async (req, res, next) => {
   const person = req.user;
-  var currentQuiz = "Ready"
+  var currentQuiz = ""
 
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
