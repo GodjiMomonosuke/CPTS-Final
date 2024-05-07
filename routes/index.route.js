@@ -9,13 +9,15 @@ const mydatabase = "Cluster0";
 router.post('/pretestSubmit', async (req, res, next) => {
   const person = req.user;
   var currentQuiz = ""
+  var timetodo = ""
+  var times = ""
 
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db(mydatabase);
     var myobj = { 
-      timetodo:1,
-      times: new Date().toLocaleString(), 
+      timetodo:timetodo,
+      times: times, 
       email: person.email,
       role:person.role,
       contentName:currentQuiz,
@@ -291,7 +293,7 @@ router.get('/', async (req, res, next) => {
               dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
                 if (err) throw err;
 
-                var IntroductionDone = "ยังไม่ทำ" ,StringDone = "ยังไม่ทำ" ,OperatorsDone = "ยังไม่ทำ" ,DatatypeDone = "ยังไม่ทำ",FlowControlDone = "ยังไม่ทำ",LoopDone = "ยังไม่ทำ",PointersDone = "ยังไม่ทำ",FunctionDone = "ยังไม่ทำ",StructureDone = "ยังไม่ทำ",ArrayDone = "ยังไม่ทำ" ,InputOutputDone = "ยังไม่ทำ" ;
+                var Posttest1Done = "ยังไม่ทำ" ,StringDone = "ยังไม่ทำ" ,OperatorsDone = "ยังไม่ทำ" ,DatatypeDone = "ยังไม่ทำ",FlowControlDone = "ยังไม่ทำ",LoopDone = "ยังไม่ทำ",PointersDone = "ยังไม่ทำ",FunctionDone = "ยังไม่ทำ",StructureDone = "ยังไม่ทำ",InputOutputDone = "ยังไม่ทำ" ;
                 var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ";
                 var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "รอตรวจ";
       
@@ -323,7 +325,7 @@ router.get('/', async (req, res, next) => {
                 
                   //** Algorithms_and_Flowcharts */
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
-                    IntroductionDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    Posttest1Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   //** Datatype_and_Variable */
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'){
@@ -350,9 +352,6 @@ router.get('/', async (req, res, next) => {
                   }
                   if(StudentAnswer[i].contentName ==='Structure-Quiz'){
                     StructureDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                  }
-                  if(StudentAnswer[i].contentName ==='Array-Quiz'){
-                    ArrayDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='InputOutput-Quiz'){
                     InputOutputDone = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -386,7 +385,7 @@ router.get('/', async (req, res, next) => {
                             PointofSalesSystem:Point_of_Sales_SystemDone,
                             Project_QUIZ3:Project_QUIZ3Done,
                             //Pre-Post test
-                            Introduction:IntroductionDone,
+                            Algorithms_and_Flowcharts:Posttest1Done,
                             String:StringDone,
                             Datatype:DatatypeDone,
                             Operators:OperatorsDone,
@@ -395,7 +394,6 @@ router.get('/', async (req, res, next) => {
                             Pointers:PointersDone,
                             Function:FunctionDone,
                             Structure:StructureDone,
-                            Array:ArrayDone,
                             InputOutput:InputOutputDone
                           } };
                           dbo.collection("StudentClass").updateOne(myquery, newvalues, function(err, res) {
@@ -431,7 +429,7 @@ router.get('/', async (req, res, next) => {
                 var StructureScoreLV1=0,StructureScoreLV2=0,StructureScoreLV3=0,StructureScoreLV4=0;
                 var ArrayLV1=0,ArrayLV2=0,ArrayLV3=0,ArrayLV4=0;
                 var InputOutputLV1=0,InputOutputLV2=0,InputOutputLV3=0,InputOutputLV4=0;
-                var IntroductionDone = 0 ,StringDone = 0 ,OperatorsDone = 0 ,DatatypeDone = 0,FlowControlDone = 0,PointersDone = 0,FunctionDone = 0,StructureDone = 0,ArrayDone = 0 ,InputOutputDone = 0;
+                var Posttest1Done = 0 ,StringDone = 0 ,OperatorsDone = 0 ,DatatypeDone = 0,FlowControlDone = 0,PointersDone = 0,FunctionDone = 0,StructureDone = 0,InputOutputDone = 0;
         
         
                 for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {
@@ -440,7 +438,7 @@ router.get('/', async (req, res, next) => {
                         IntroductionScoreLV2 = StudentAnswer[i].scoreLV2;
                         IntroductionScoreLV3 = StudentAnswer[i].scoreLV3;
                         IntroductionScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
-                        IntroductionDone = 1;
+                        Posttest1Done = 1;
                     }      
                     if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)') {   
                         StringScoreLV1 = StudentAnswer[i].scoreLV1;
@@ -491,13 +489,6 @@ router.get('/', async (req, res, next) => {
                         StructureScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         StructureDone = 1;
                     }
-                    if (StudentAnswer[i].contentName ==='Array-Quiz') {   
-                        ArrayLV1 = StudentAnswer[i].scoreLV1;
-                        ArrayLV2 = StudentAnswer[i].scoreLV2;
-                        ArrayLV3 = StudentAnswer[i].scoreLV3;
-                        ArrayLV4 = parseInt(StudentAnswer[i].scoreTeacher);
-                        ArrayDone = 1;
-                    }
                     if (StudentAnswer[i].contentName ==='InputOutput-Quiz') {   
                         InputOutputLV1 = StudentAnswer[i].scoreLV1;
                         InputOutputLV2 = StudentAnswer[i].scoreLV2;
@@ -514,7 +505,7 @@ router.get('/', async (req, res, next) => {
                 var TraceScore = IntroductionScoreLV2+StringScoreLV2+DatatypeScoreLV2+OperatorsScoreLV2+FlowControlScoreLV2+PointersScoreLV2+FunctionScoreLV2+StructureScoreLV2+ArrayLV2+InputOutputLV2 ;
                 var ExplainScore = IntroductionScoreLV3+StringScoreLV3+DatatypeScoreLV3+OperatorsScoreLV3+FlowControlScoreLV3+PointersScoreLV3+FunctionScoreLV3+StructureScoreLV3+ArrayLV3+InputOutputLV3 ;
                 var WriteScore = IntroductionScoreLV4+StringScoreLV4+DatatypeScoreLV4+OperatorsScoreLV4+FlowControlScoreLV4+PointersScoreLV4+FunctionScoreLV4+StructureScoreLV4+ArrayLV4+InputOutputLV4 ;
-                //var CourseDone = IntroductionDone+StringDone+DatatypeDone+OperatorsDone+FlowControlDone+PointersDone+FunctionDone+StructureDone+ArrayDone+InputOutputDone;
+                // var CourseDone = Posttest1Done+StringDone+DatatypeDone+OperatorsDone+FlowControlDone+PointersDone+FunctionDone+StructureDone+InputOutputDone;
                 
                 var BasicPercent =  Math.round((BasicScore*5));
                 var TracePercent= Math.round((TraceScore*5));
@@ -698,15 +689,7 @@ router.get('/', async (req, res, next) => {
 
                     res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
-                      TicketBooking_SystemPercent,PointofSales_SystemPercent,ProjectQUIZ3Percent,
-                      IntroductionScoreLV1,IntroductionScoreLV2,IntroductionScoreLV3,IntroductionScoreLV4,
-                      StringScoreLV1,StringScoreLV2,StringScoreLV3,StringScoreLV4,
-                      DatatypeScoreLV1,DatatypeScoreLV2,DatatypeScoreLV3,DatatypeScoreLV4,
-                      OperatorsScoreLV1,OperatorsScoreLV2,OperatorsScoreLV3,OperatorsScoreLV4,
-                      FlowControlScoreLV1,FlowControlScoreLV2,FlowControlScoreLV3,FlowControlScoreLV4,
-                      PointersScoreLV1,PointersScoreLV2,PointersScoreLV3,PointersScoreLV4,
-                      FunctionScoreLV1,FunctionScoreLV2,FunctionScoreLV3,FunctionScoreLV4,
-                      StructureScoreLV1,StructureScoreLV2,StructureScoreLV3,StructureScoreLV4
+                      TicketBooking_SystemPercent,PointofSales_SystemPercent,ProjectQUIZ3Percent
                     });
                   });
                 });
@@ -813,9 +796,9 @@ router.post('/joinclass', async (req, res, next) => {
                             token: classesResult[0].token ,
                             teacher:classesResult[0].email,
                             //Project Quiz
-                            Ticket_Booking_System:Ticket_Booking_SystemDone,
-                            Point_of_Sales_System:Point_of_Sales_SystemDone,
-                            Project_QUIZ3:ProjectQUIZ3Done,
+                            TicketBookingSystem:Ticket_Booking_SystemDone,
+                            PointofSalesSystem:Point_of_Sales_SystemDone,
+                            Project_QUIZ3:Project_QUIZ3Done,
                             //Pre-Post test
                             Introduction:IntroductionDone,
                             String:StringDone,
@@ -824,8 +807,7 @@ router.post('/joinclass', async (req, res, next) => {
                             FlowControl:FlowControlDone,
                             Pointers:PointersDone,
                             Function:FunctionDone,
-                            Structure:StructureDone,
-                            Array:ArrayDone
+                            
                           };
                           dbo.collection("StudentClass").insertOne(myobj, function(err, res) {
                             if (err) throw err;
