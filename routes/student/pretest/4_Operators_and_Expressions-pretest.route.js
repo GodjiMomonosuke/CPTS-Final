@@ -230,7 +230,7 @@ if(choice15 === 'C'){
 
   try {
 
-      res.redirect('/course')    
+      res.redirect('/course-Operators_and_Expressions')    
   } catch (error) {
     next(error);
   }

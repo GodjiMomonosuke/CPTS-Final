@@ -209,7 +209,7 @@ router.post('/submit', async (req, res, next) => {
 
   try {
 
-      res.redirect('/course')    
+      res.redirect('/course-2_Datatype_and_Variable')    
   } catch (error) {
     next(error);
   }

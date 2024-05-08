@@ -230,7 +230,7 @@ if(choice15 === 'C'){
 
   try {
 
-      res.redirect('/course')    
+      res.redirect('/course-Selection_Statements')    
   } catch (error) {
     next(error);
   }

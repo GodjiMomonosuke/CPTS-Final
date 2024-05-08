@@ -222,7 +222,7 @@ router.post('/submit', async (req, res, next) => {
 
   try {
 
-      res.redirect('/course')    
+      res.redirect('/course-Algorithms_and_Flowcharts')    
   } catch (error) {
     next(error);
   }

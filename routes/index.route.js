@@ -76,103 +76,84 @@ router.get('/', async (req, res, next) => {
           
           for(let i = 0; i < studentAll; i++) {
 
-            if( StudentAnswer[i].contentName ==='Introduction-Quiz' ){
+            if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)' ){
               if(StudentAnswer[i].scoreTeacher === undefined){
-                IntroductionScore = IntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;
-              }
+                IntroductionScore = IntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
               else{
-                IntroductionScore = IntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);
-              }
+                IntroductionScore = IntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
               IntroductionCount++;
             }
-            if (StudentAnswer[i].contentName ==='String-Quiz') {   
+            if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)') {   
               if(StudentAnswer[i].scoreTeacher === undefined){
                 StringScore =StringScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
               else{
                 StringScore =StringScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
               StringCount++;
             }
-            if (StudentAnswer[i].contentName ==='Datatype-Quiz') {   
+            if (StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)') {   
               if(StudentAnswer[i].scoreTeacher === undefined){
                 DatatypeScore =DatatypeScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
               else{
                 DatatypeScore =DatatypeScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
                 DatatypeCount++;
             } 
-            if (StudentAnswer[i].contentName ==='Operators-Quiz') {   
+            if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)') {   
               if(StudentAnswer[i].scoreTeacher === undefined){
                 OperatorsScore =OperatorsScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
               else{
                 OperatorsScore =OperatorsScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
                 OperatorsCount++;
             }
-            if (StudentAnswer[i].contentName ==='FlowControl-Quiz') {   
+            if (StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)') {   
               if(StudentAnswer[i].scoreTeacher === undefined){
                 FlowControlScore =FlowControlScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
               else{
                 FlowControlScore =FlowControlScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
                 FlowControlCount++;
             }
-            if (StudentAnswer[i].contentName ==='Pointers-Quiz') {   
+            if (StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)') {   
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PointersScore = PointersScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
               else{
                 PointersScore = PointersScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
                 PointersCount++;
             }
-            if (StudentAnswer[i].contentName ==='Function-Quiz') {   
+            if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)') {   
               if(StudentAnswer[i].scoreTeacher === undefined){
                 FunctionScore = FunctionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
               else{
                 FunctionScore = FunctionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
                 FunctionCount++;
             }
-            if (StudentAnswer[i].contentName ==='Structure-Quiz') {   
+            if (StudentAnswer[i].contentName ==='Functions-(Post-test)') {   
                 if(StudentAnswer[i].scoreTeacher === undefined){
                   StructureScore = StructureScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
                 else{
                   StructureScore = StructureScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
                   StructureCount++;
             }
-            if (StudentAnswer[i].contentName ==='Array-Quiz') {   
-              if(StudentAnswer[i].scoreTeacher === undefined){
-                ArrayScore = ArrayScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
-              else{
-                ArrayScore = ArrayScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
-                ArrayCount++;
-            }
+            
             /** */
 
-            if (StudentAnswer[i].contentName ==='TicTacToe') {   
+            if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
               if(StudentAnswer[i].scoreTeacher === undefined){}
               else{
                 TicTacToeScore = TicTacToeScore+parseInt(StudentAnswer[i].scoreTeacher);}
                 TicTacToeCount++;
             }
-            if (StudentAnswer[i].contentName ==='LibrarySystem') {   
+            if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
               if(StudentAnswer[i].scoreTeacher === undefined){}
               else{
                 LibrarySystemScore = LibrarySystemScore+parseInt(StudentAnswer[i].scoreTeacher);}
                 LibrarySystemCount++;
             }
-            if (StudentAnswer[i].contentName ==='Roshambo') {   
+            if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
               if(StudentAnswer[i].scoreTeacher === undefined){}
               else{
                 RoshamboScore = RoshamboScore+parseInt(StudentAnswer[i].scoreTeacher);}
                 RoshamboCount++;
             }
-            if (StudentAnswer[i].contentName ==='Calculator') {   
-              if(StudentAnswer[i].scoreTeacher === undefined){}
-              else{
-                CalculatorScore = CalculatorScore+parseInt(StudentAnswer[i].scoreTeacher);}
-                CalculatorCount++;
-            }
-            if (StudentAnswer[i].contentName ==='Calendar') {   
-              if(StudentAnswer[i].scoreTeacher === undefined){}
-              else{
-                CalendarScore = CalendarScore+parseInt(StudentAnswer[i].scoreTeacher);}
-                CalendarCount++;
-            }
+            
            
 
             if( StudentAnswer[i].contentName ==='Introduction-Quiz' ||
@@ -520,7 +501,7 @@ router.get('/', async (req, res, next) => {
 
                     //หาคอร์สที่เรียนไป แล้วกรองไม้ให้ซ้ำกัน
                     var ArrCourseDone = [];
-                    for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {        //value คือ ความยาก ง่าย - 1 ยาก - 9
+                    for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {        //value คือ ความยาก ง่าย - 1 ยาก - 8
                       var LV1 = StudentAnswer[i].scoreLV1 , LV2 = StudentAnswer[i].scoreLV2 , LV3 = StudentAnswer[i].scoreLV3;
                       if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Algorithms and Flowcharts",value:1});} 
                       if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'       && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Datatype and Variable",value:2});}
