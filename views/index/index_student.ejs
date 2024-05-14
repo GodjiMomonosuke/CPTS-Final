@@ -170,13 +170,55 @@
 
 <!-- MID -->
     <!-- SKILLS-->
-
+    <h1>Competency</h1>
     <div  class="group2">
+        <style>
+            .col-sm-2 {
+                width: 200px;
+            }
+        </style>
+        <div>
+            <div class="box-skill">
+                <h3>Pre-test</h3>
+                <div class="box mb-5" style="background-color: #9C7EB7;">
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                        
+                        <div class="row mb-3 ">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Basic = <%= PreBasicPercent %></h5>
+                            <div class=" " style="top:10px">
+                                <progress  max="100" value=<%= PreBasicPercent %>  class="html5 "></progress>
+                            </div>
+                        </div>
+        
+                        <div class="row mb-3">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Tracing = <%= PreTracePercent %></h5>
+                             <div class="col-sm-10 " style="top:10px">
+                              <progress  max="100" value=<%= PreTracePercent %>  class="html5 "></progress>
+                            </div>
+                        </div>
+        
+                        <div class="row mb-3">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Explaining = <%= PreExplainPercent %> </h5>
+                             <div class="col-sm-10 " style="top:10px">
+                              <progress  max="100" value=<%= PreExplainPercent %>  class="html5 "></progress>
+                            </div>
+                        </div>
+        
+                        <div class="row mb-3">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Writing = <%= PreWritePercent %></h5>
+                             <div class="col-sm-10 " style="top:10px">
+                              <progress  max="100" value=<%= PreWritePercent %> class="html5 "></progress>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+                </div>
+        </div>
         <div>
         <% if(isNaN(BasicPercent)){ %>
 
         <% } else{ %>  
-                <h1 id ='content'>Competency </h1>   
+                <h3 id ='content'>Pest-test</h3>   
                 <div style="height: 400px;" class="">
                     <div class="chartCard">
                         <div class="chartBox">
@@ -226,11 +268,8 @@
             </div>
         <% } %>
             
-        <div>
-            <h1>Menu</h1>
-            <p><a href="/course">course</a></p>
-            <p><a href="/project">project</a></p>
-        </div>
+        
+        
     </div>
 
        
