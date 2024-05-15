@@ -24,12 +24,12 @@
                             
                           <% } else{ %>  
 
-                            <% if(RecommendaResult[0].TicketBooking_SystemPercent === 100) { count = count-1%> <%# Follow node %> 
+                            <% if(RecommendaResult[0].TicketBooking_SystemPercent >= 50) { count = count-1%> <%# Follow node %> 
                               <p class="wrapbox auto">
                                 <br><a href="/project-Ticket_Booking_System" style="color:black">Ticket Booking System</a>
                               </p>
                             <% } %>
-                            <% if(RecommendaResult[0].PointofSales_SystemPercent === 100) {count = count-1 %> <%# Follow node %> 
+                            <% if(RecommendaResult[0].PointofSales_SystemPercent >= 75) {count = count-1 %> <%# Follow node %> 
                               <p class="wrapbox auto">
                                 <br><a href="/project-Point_of_Sales_System" style="color:black">Point of Sales System</a>
                               </p>

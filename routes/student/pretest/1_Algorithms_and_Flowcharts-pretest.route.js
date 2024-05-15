@@ -170,7 +170,7 @@ router.post('/submit', async (req, res, next) => {
           var query = { email:person.email};
           dbo.collection("StudentAnswer").find(query).toArray(function(err, result) {
             if (err) throw err;
-            if(Object.keys(result).length >= 1){
+            if(Object.keys(result).length === 0){
               for (let i = 0; i < Object.keys(result).length; i++) {
                 //console.log(result[i].contentName)
                 if(result[i].contentName === currentQuiz) timetodo++;
