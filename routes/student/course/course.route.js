@@ -40,7 +40,7 @@ router.get('/', async (req, res, next) => {
                       if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Operators and Expressions",value:4});}
                       if (StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)'        && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Selection Statements",value:5});}
                       if (StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)'             && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Loop Statements",value:6});}
-                      if (StudentAnswer[i].contentName ==='Arrays_and_String-(Post-test)'           && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Arrays and Strings",value:7});}
+                      if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)'           && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Arrays and Strings",value:7});}
                       if (StudentAnswer[i].contentName ==='Functions-(Post-test)'                   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Functions",value:8});}
                       
                    }
@@ -235,111 +235,19 @@ router.get('/', async (req, res, next) => {
 
 router.post('/posttestSubmit', async (req, res, next) => {
   const person = req.user;
-  var currentQuiz = "Post-test"
-  var scoreC1=0,scoreC2=0,scoreC3=0,scoreC4=0,scoreC5=0,scoreC6=0,scoreC7=0,scoreC8=0,scoreC9=0,scoreC10=0,scoreC11=0;
-  var c11 = req.body.c11;
-  var c12 = req.body.c12;
-  var c13 = req.body.c13;
-  var c21 = req.body.c21;
-  var c22 = req.body.c22;
-  var c23 = req.body.c23;
-  var c31 = req.body.c31;
-  var c32 = req.body.c32;
-  var c33 = req.body.c33;
-  var c41 = req.body.c41;
-  var c42 = req.body.c42;
-  var c43 = req.body.c43;
-  var c51 = req.body.c51;
-  var c52 = req.body.c52;
-  var c53 = req.body.c53;
-  var c61 = req.body.c61;
-  var c62 = req.body.c62;
-  var c63 = req.body.c63;
-  var c71 = req.body.c71;
-  var c72 = req.body.c72;
-  var c73 = req.body.c73;
-  var c81 = req.body.c81;
-  var c82 = req.body.c82;
-  var c83 = req.body.c83;
-  var c91 = req.body.c91;
-  var c92 = req.body.c92;
-  var c93 = req.body.c93;
-  var c101 = req.body.c101;
-  var c102 = req.body.c102;
-  var c103 = req.body.c103;
-  var c111 = req.body.c111; //Loop Statement
-  var c112 = req.body.c112; //Loop Statement
-  var c113 = req.body.c113;  //Loop Statement
-
-  /* 1.Syntax */
-  if (c11 === 'C') {scoreC1 = scoreC1 + 1;}
-  if (c12 === 'B') {scoreC1 = scoreC1 + 1;}
-  if (c13 === 'C') {scoreC1 = scoreC1 + 1;}
-  /* 2.Data Type, Output */
-  if (c21 === 'C') {scoreC2 = scoreC2 + 1;}
-  if (c22 === 'D') {scoreC2 = scoreC2 + 1;}
-  if (c23 === 'A') {scoreC2 = scoreC2 + 1;}
-  /* 3.Operators */
-  if (c31 === 'B') {scoreC3 = scoreC3 + 1;}
-  if (c32 === 'A') {scoreC3 = scoreC3 + 1;}
-  if (c33 === 'D') {scoreC3 = scoreC3 + 1;} 
-  /* 4.Flow Control */
-  if (c41 === 'C') {scoreC4 = scoreC4 + 1;}
-  if (c42 === 'C') {scoreC4 = scoreC4 + 1;}
-  if (c43 === 'C') {scoreC4 = scoreC4 + 1;}
-  /* 5.Array */
-  if (c51 === 'C') {scoreC5 = scoreC5 + 1;}
-  if (c52 === 'B') {scoreC5 = scoreC5 + 1;}
-  if (c53 === 'B') {scoreC5 = scoreC5 + 1;}
-  /* 6.Input Output */
-  if (c61 === 'C') {scoreC6 = scoreC6 + 1;}
-  if (c62 === 'C') {scoreC6 = scoreC6 + 1;}
-  if (c63 === 'A') {scoreC6 = scoreC6 + 1;}
-  /* 7.Pointers */
-  if (c71 === 'A') {scoreC7 = scoreC7 + 1;}
-  if (c72 === 'C') {scoreC7 = scoreC7 + 1;}
-  if (c73 === 'A') {scoreC7 = scoreC7 + 1;}
-  /* 8.Strings */
-  if (c81 === 'B') {scoreC8 = scoreC8 + 1;}
-  if (c82 === 'C') {scoreC8 = scoreC8 + 1;}
-  if (c83 === 'A') {scoreC8 = scoreC8 + 1;}
-  /* 9.Structure */
-  if (c91 === 'C') {scoreC9 = scoreC9 + 1;}
-  if (c92 === 'D') {scoreC9 = scoreC9 + 1;}
-  if (c93 === 'B') {scoreC9 = scoreC9 + 1;}
-  /* 10.Function */
-  if (c101 === 'C') {scoreC10 = scoreC10 + 1;}
-  if (c102 === 'B') {scoreC10 = scoreC10 + 1;}
-  if (c103 === 'D') {scoreC10 = scoreC10 + 1;} 
-  /* 11.Loop */
-  if (c111 === 'B') {scoreC11 = scoreC11 + 1;  }
-  if (c112 === 'D') {scoreC11 = scoreC11 + 1;  }
-  if (c113 === 'C') {scoreC11 = scoreC11 + 1;  }
-  /** */
-
- 
-
+  var currentQuiz = ""
+  var timetodo = ""
+  var times = ""
 
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db(mydatabase);
     var myobj = { 
-      timetodo:1,
-      times: new Date().toLocaleString(), 
+      timetodo:timetodo,
+      times: times, 
       email: person.email,
       role:person.role,
       contentName:currentQuiz,
-      scoreC1:scoreC1, //Intro
-      scoreC2:scoreC2,  //String
-      scoreC3:scoreC3,  //Datatype
-      scoreC4:scoreC4,
-      scoreC5:scoreC5,
-      scoreC6:scoreC6,
-      scoreC7:scoreC7,
-      scoreC8:scoreC8,
-      scoreC9:scoreC9,
-      scoreC10:scoreC10,  //Array
-      scoreC11:scoreC11  //Array
     };
     dbo.collection("StudentAnswer").insertOne(myobj, function(err, res) {
       if (err) throw err;
