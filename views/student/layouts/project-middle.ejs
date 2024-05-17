@@ -1,4 +1,20 @@
 
+<style>
+  a{
+    text-decoration: none;
+  }
+  .projectbox{
+    width: 150px;
+    height: 200px;
+    background-color: blueviolet;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+</style>
+
 <!-- MIDDLE 1 -->
 <div class="content">
     <div id = "content" class="container">
@@ -16,37 +32,29 @@
                         <div lang="ja">
                           <% var count = 3 %>
                           <% if(Object.keys(RecommendaResult).length === 0){ %>
-                            <h2> <%= count %> โปรเจกต์ ยังไม่ปลดล็อก !</h2>
-                                <h1>เรียนรู้เพิ่มเติมเพื่อปลดล็อก</h1>
-                                <div class="d-grid gap-2">
-                                  <a href="/course" class="btn btn-outline-dark">เข้าสู่บทเรียน</a>
-                            </div>
-                            
-                          <% } else{ %>  
 
+                          <% } else{ %>  
                             <% if(RecommendaResult[0].TicketBooking_SystemPercent >= 50) { count = count-1%> <%# Follow node %> 
-                              <p class="wrapbox auto">
-                                <br><a href="/project-Ticket_Booking_System" style="color:black">Ticket Booking System</a>
-                              </p>
+                                    <div class="projectbox wrapbox">
+                                      <a href="/project-Ticket_Booking_System" style="color:rgb(255, 255, 255)">
+                                        <p>Project Quiz 1</p>
+                                      </a>
+                                    </div>
                             <% } %>
                             <% if(RecommendaResult[0].PointofSales_SystemPercent >= 75) {count = count-1 %> <%# Follow node %> 
-                              <p class="wrapbox auto">
-                                <br><a href="/project-Point_of_Sales_System" style="color:black">Point of Sales System</a>
-                              </p>
-                            <% } %>
-                            <% if(RecommendaResult[0].RoshamboPercent === 100) {count = count-1 %> <%# Follow node %> 
-                              <p class="wrapbox auto">
-                                <br><a href="/project-Project_QUIZ3" style="color:black">Roshambo</a>
-                              </p>
-                            
-                              <% } else{ %>  
-                                <h2> <%= count %> Project ยังไม่ปลดล็อก !</h2>
-                                <h1>เรียนรู้เพิ่มเติมเพื่อปลดล็อก</h1>
-                                <div class="d-grid gap-2">
-                                  <a href="/course" class="btn btn-outline-dark">เข้าสู่บทเรียน</a>
+                              <div class="projectbox wrapbox">
+                                <a href="/project-Point_of_Sales_System" style="color:rgb(255, 255, 255)">
+                                  <p>Project Quiz 2</p>
+                                </a>
                               </div>
-                             <% } %>
-                            
+                            <% } %>
+                            <% if(RecommendaResult[0].ProjectQUIZ3Percent === 100) {count = count-1 %> <%# Follow node %> 
+                              <div class="projectbox wrapbox">
+                                <a href="/project-Project_QUIZ3" style="color:rgb(255, 255, 255)">
+                                  <p>Project Quiz 3</p>
+                                </a>
+                              </div>
+                              <% } %>
                           <% } %>
                             
                              
@@ -54,7 +62,8 @@
                     </div>
                 </div>
                 <% if(count >=3 || count === 0) { %> <%# Follow node %> 
-               
+                    <h3>Project ปลดล็อกครบแล้ว!</h3>
+                    <a href="/" class="btn btn-outline-dark">กลับไปหน้าแรก</a>
                   <% } else{ %>  
                     <h3>มีอีก <%= count %> Project ที่ไม่ปลดล็อก!</h3>
                     <a href="/course" class="btn btn-outline-dark">เข้าสู่บทเรียน</a>

@@ -206,7 +206,7 @@ router.get('/', async (req, res, next) => {
                   res.render('student/course/course_main', { person ,StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest});
                 }
                 if(PostTestStatus === 1 && PostTestDone === 0){ //if all course done && post-test not done
-                  res.render('student/posttest', { person });
+                  res.render('student/course/course_main', { person ,StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest});
                 }
                 if(PostTestDone === 1){ //post-test done 
                   MongoClient.connect(url, function(err, db) {

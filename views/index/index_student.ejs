@@ -165,60 +165,44 @@
        
         <br>
         
-   
-    
+
 
 <!-- MID -->
     <!-- SKILLS-->
     <h1>Competency</h1>
     <div  class="group2">
-        <style>
-            .col-sm-2 {
-                width: 200px;
-            }
-        </style>
+        
         <div>
-            <div class="box-skill">
-                <h3>Pre-test</h3>
-                <div class="box mb-5" style="background-color: #9C7EB7;">
-                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
-                        
-                        <div class="row mb-3 ">
-                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Basic = <%= PreBasicPercent %></h5>
-                            <div class=" " style="top:10px">
-                                <progress  max="100" value=<%= PreBasicPercent %>  class="html5 "></progress>
-                            </div>
-                        </div>
-        
-                        <div class="row mb-3">
-                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Tracing = <%= PreTracePercent %></h5>
-                             <div class="col-sm-10 " style="top:10px">
-                              <progress  max="100" value=<%= PreTracePercent %>  class="html5 "></progress>
-                            </div>
-                        </div>
-        
-                        <div class="row mb-3">
-                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Explaining = <%= PreExplainPercent %> </h5>
-                             <div class="col-sm-10 " style="top:10px">
-                              <progress  max="100" value=<%= PreExplainPercent %>  class="html5 "></progress>
-                            </div>
-                        </div>
-        
-                        <div class="row mb-3">
-                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Writing = <%= PreWritePercent %></h5>
-                             <div class="col-sm-10 " style="top:10px">
-                              <progress  max="100" value=<%= PreWritePercent %> class="html5 "></progress>
-                            </div>
-                        </div>                
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js"></script>
+            <h3>Pre-test</h3> 
+            <div style="height: 400px;" class="">
+                <div class="chartCard">
+                    <div class="chartBox">
+                        <canvas id="marksChart"></canvas>
+                        <script>
+                            var marksCanvas = document.getElementById("marksChart");
+                            var marksData = {
+                            labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
+                            datasets: [{
+                                label: "Student A",
+                                backgroundColor: "rgba(200,0,0,0.2)",
+                                data: [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, <%= PreWritePercent %>]
+                            }]
+                            };
+                            var radarChart = new Chart(marksCanvas, {
+                            type: 'radar',
+                            data: marksData
+                            });
+                        </script>
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
-        <div>
-        <% if(isNaN(BasicPercent)){ %>
 
-        <% } else{ %>  
-                <h3 id ='content'>Pest-test</h3>   
+        <div>
+        
+                <h3>Post-test</h3>   
                 <div style="height: 400px;" class="">
                     <div class="chartCard">
                         <div class="chartBox">
@@ -231,22 +215,25 @@
                 const data = {
                   labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
                   datasets: [{
-                    data: [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, <%= WritePercent %>],
-                    backgroundColor: [
-                      '#ffc107', //Yellow
-                      '#11a1c1', //Blue
-                      '#fb607f', //Pink
-                      '#8bc34a' //Green
-                    ],
+                    data: [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, <%= PreWritePercent %>],
+                    label: "Pre-test",
                     borderColor: [
-                      '#fff'
+                      '#11a1c1'
                     ]
-                  }]
+                  },
+                  {
+                    data: [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, <%= WritePercent %>],
+                    label: "Post-test",
+                    borderColor: [
+                      '#ffc107'
+                    ]
+                  }
+                ]
                 };
             
                 // config 
                 const config = {
-                  type: 'polarArea',
+                  type: 'radar',
                   data,
                   options: {
                    
@@ -266,7 +253,7 @@
 
                 </div>
             </div>
-        <% } %>
+        
             
         
         
