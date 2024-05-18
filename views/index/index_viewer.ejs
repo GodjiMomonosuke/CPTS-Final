@@ -11,21 +11,37 @@
     -moz-user-select: none;
     user-select: none;
   }
-
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
   }
+  .button {
+    color: #fff;
+    background-color: #b957ce;
+    width: 150px;
+    border: solid 3px #ff4cbf;
+    border-radius: 10px;
+  }
+  .button:hover {
+    color: #38fbdb;
+    box-shadow: 0 0 15px 5px #fc0ff5;
+  }
+  body {
+    box-shadow: inset 0 0 15px 5px #ff4cbf;
+  }
+
 </style>
-<body class="" style="background-color: #0b2645; background-image: linear-gradient(#200b45, #4183a2);" >
+<body class="quantico-regular" style="background-color: #122c5a;" >
 <main>
 <%- include('../layouts/navbar-viewer') %>  
-<div id="tagline" style="width: 500px;">
-  <h1>Learn<span id="text"> Coding!</span><i class="cursor"></i></h1>
-  <button class="get-started-btn" onclick="document.location='/auth/login';">Get Started</button>
+
+<div id="tagline">
+  <h1>LearnCoding!</h1>
+  <button class="button" onclick="document.location='/auth/login';">Get Started</button>
 
 </div>
+<!--<canvas id="moon"></canvas>-->
 <img src="https://img.freepik.com/free-psd/3d-nft-icon-developer-male-illustration_629802-6.jpg?t=st=1712830382~exp=1712833982~hmac=d33182ac3e551ce030e81cea1feedf41b95303d997536c7d534fa4931e6495a4&w=1480" id="moon">
 
 <div style="position:absolute; top:100%; padding-top:100px;left:0px;right:0px; background-color: aliceblue;">
