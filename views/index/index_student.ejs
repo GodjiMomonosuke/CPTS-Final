@@ -55,7 +55,7 @@
     <title>HOME</title>
 </head>
 
-<body style="background-color: #0b2645; background-image: linear-gradient(#200b45, #4183a2);">
+<body class="quantico-regular" style="background-color: #122c5a;">
     <!-- Narbar-->
     <%- include('../layouts/navbar') %>
 
@@ -100,7 +100,7 @@
                             <br>
                             
                             <% if (TicketBooking_SystemPercent === 100 && PointofSales_SystemPercent === 100 && ProjectQUIZ3Percent === 100 ) { %> <%# ถ้า Path ครบแล้ว %> 
-                                <p>คุณได้เรียนครบแล้ว!</p>
+                                <p class="chakra-petch-regular">คุณได้เรียนครบแล้ว!</p>
                             <% } else { %>
                                 <div class="row">
                                     <% if(RecommendaResult[0].RecommendCourse === "Algorithms and Flowcharts"){ %> <%# Output จาก Recommend มาเทียบ %> 
@@ -199,6 +199,7 @@
                 </div>
             </div>
         </div>
+        
 
         <div>
         
@@ -286,8 +287,8 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="classCode" class="form-label"><b>Class Token</b></label>
-                        <input type="text" class="form-control" id="classCode" name="classToken" placeholder="Token สำหรับเข้าชั้นเรียน">
-                        <div  class="form-text">**สามารถรับโค้ดจากอาจารย์ผู้สอน</div>
+                        <input type="text" class="form-control chakra-petch-regular" style="font-size: 13px;" id="classCode" name="classToken" placeholder="Token สำหรับเข้าชั้นเรียน">
+                        <div  class="form-text chakra-petch-regular">**สามารถรับโค้ดจากอาจารย์ผู้สอน</div>
                     </div>
                 </div>
                 <div class="modal-footer">
