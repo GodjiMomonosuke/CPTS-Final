@@ -21,7 +21,7 @@
     background-color: #b957ce;
     width: 150px;
     border: solid 3px #ff4cbf;
-    border-radius: 10px;
+    box-shadow: 0 0 15px #b957ce;
   }
   .button:hover {
     color: #38fbdb;
@@ -30,36 +30,59 @@
   body {
     box-shadow: inset 0 0 15px 5px #ff4cbf;
   }
-
 </style>
 <body class="quantico-regular" style="background-color: #122c5a;" >
 <main>
 <%- include('../layouts/navbar-viewer') %>  
 
-<div id="tagline">
-  <h1>LearnCoding!</h1>
-  <button class="button" onclick="document.location='/auth/login';">Get Started</button>
 
+
+<div id="tagline">
+  <h1>Learn Coding!</h1>
+  <h2>with GeekcodeCraft</h2><br>
+  <button class="button" onclick="document.location='/auth/login';">Get Started</button>
 </div>
-<!--<canvas id="moon"></canvas>-->
-<img src="https://img.freepik.com/free-psd/3d-nft-icon-developer-male-illustration_629802-6.jpg?t=st=1712830382~exp=1712833982~hmac=d33182ac3e551ce030e81cea1feedf41b95303d997536c7d534fa4931e6495a4&w=1480" id="moon">
+
+<img id="bg" src="https://img.freepik.com/free-photo/business-network-background-connecting-dots-technology-design_53876-160283.jpg?t=st=1716092367~exp=1716095967~hmac=7cf64c52b741382dd5392378b178a1458c50b712d6337c3a9038939dc32be705&w=2000">
+<img id="moon" src="https://img.freepik.com/free-psd/3d-nft-icon-developer-male-illustration_629802-6.jpg?t=st=1712830382~exp=1712833982~hmac=d33182ac3e551ce030e81cea1feedf41b95303d997536c7d534fa4931e6495a4&w=1480">
+
+<section class="sticky">
+  <div class="bubbles">
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+    <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+  </div>
+</section>
 
 <div style="position:absolute; top:100%; padding-top:100px;left:0px;right:0px; background-color: aliceblue;">
   <div class="container">
-    <div class="row app-align-center">
+    <div class="row app-align-center" style="height: 300px;">
       <div class="col-sm-6">
- 
+        
       </div>
-
       <div class="col-sm-6">
         <h6 class="text-muted text-uppercase">What is GeekCodeCraft?</h6>
         <h3 class="m-t-0">GeekCodeCraft</h3>
         <p class="lead m-b-md">เป็นเว็บไซต์ช่วยพัฒนาทักษะที่จำเป็นต่อการเขียนโปรแกรม ส่งเสริมสมรรถนะทั้ง 4 ด้านที่จำเป็นต่อนักศึกษา</p>
-
         <br>
+      </div>
+    </div>
+    
+    <div class="row app-align-center" style="height: 300px;">
+      <div class="col-sm-6">
+        <h6 class="text-muted text-uppercase">What is GeekCodeCraft?</h6>
+        <h3 class="m-t-0">GeekCodeCraft</h3>
+        <p class="lead m-b-md">เป็นเว็บไซต์ช่วยพัฒนาทักษะที่จำเป็นต่อการเขียนโปรแกรม ส่งเสริมสมรรถนะทั้ง 4 ด้านที่จำเป็นต่อนักศึกษา</p>
+        <br>
+      </div>
+      <div class="col-sm-6">
+        
       </div>
     </div>
   </div>
 </div>
+
 
 <%- include('../layouts/footer') %>

@@ -2,64 +2,100 @@
   <title>Register</title>
   
 </header>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
 
-<%- include('../layouts/navbar') %>
+.quantico-regular {
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.contentshadow {
+    box-shadow: 0 0 15px 5px #5c58b6;
+  }
+  .button {
+    color: #fff;
+    background-color: #5c58b6;
+    width: 150px;
+    border: solid 3px #ff4cbf;
+  }
+  .button:hover {
+    color: #38fbdb;
+    box-shadow: 0 0 10px 1px #ff4cbf;
+  }
+  .group {
+    display: grid;
+    grid-template-columns: 45% 5% 45%;
+
+    }
+</style>
+<body class="quantico-regular" style="background-color: #122c5a; box-shadow: inset 0 0 15px 5px #ff4cbf;"></body>
+<%- include('../layouts/navbar-viewer') %>
 <br><br><br><br>
-
-
-
 
 <div id = "content" class="container ">
 <!-- <div class="card-text" style="padding-left: 50%;"> -->
-  <div class="card text shadow">
-      <div class="card-header text-center">
-        <h2>Register</h2>
+  <div class="card text contentshadow">
+      <div class="card-header text-center" style="background-color: #5c58b6;">
+        <h2 style="color: #38fbdb;">Register</h2>
       </div>
       <div class="card-body">
           <form action="/auth/register" method="post" class="lg-form">
+            <div class="group">
               <div class="form-group">
-                <label for="name">ชื่อ-นามสกุล</label>
-                <input  class="form-control" type="text"name="name" id="name" placeholder="" value=""/>
+                  <label for="name">ชื่อ-นามสกุล</label>
+                  <input  class="form-control" type="text"name="name" id="name" placeholder="" value=""/>
+                </div>
+                <div></div>
+                <div class="form-group">
+                  <label for="name">รหัสนักศึกษา</label>
+                  <input  class="form-control" type="text"name="studentID" id="studentID" placeholder="" value=""/>
+                </div>
+              </div>  
+              <div class="group">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input  class="form-control" type="text"name="email" id="email" aria-describedby="emailHelp" pattern="^[a-zA-Z._%+-]+@bumail\.net$" title="Use @bumail.net" placeholder="Enter @bumail.net" value="<%= locals.email ? email : '' %>"/>
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div></div>
               </div>
-              <div class="form-group">
-                <label for="name">รหัสนักศึกษา</label>
-                <input  class="form-control" type="text"name="studentID" id="studentID" placeholder="" value=""/>
+              <div class="group">
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input class="form-control" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" placeholder="Password"  />
+                  <small id="emailHelp" class="form-text text-muted">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>
+                  </div><div></div>
+                  <div class="form-group">
+                  <label for="password2">Confirm password</label>
+                  <input class="form-control" type="password" name="password2" id="password2" placeholder="Confirm password" />
+                </div>
               </div>
-
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input  class="form-control" type="text"name="email" id="email" aria-describedby="emailHelp" pattern="^[a-zA-Z._%+-]+@bumail\.net$" title="Use @bumail.net" placeholder="Enter @bumail.net" value="<%= locals.email ? email : '' %>"/>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              <div class="group">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Role</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="role">
+                      <option value="Student">Student</option>
+                      <option value="Teacher">Teacher</option> <!---->
+                      <!-- <option value="ADMIN">ADMIN</option> -->
+                    </select>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input class="form-control" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" placeholder="Password"  />
-                <small id="emailHelp" class="form-text text-muted">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</small>
-                <label for="password2">Confirm password</label>
-                <input class="form-control" type="password" name="password2" id="password2" placeholder="Confirm password" />
-              </div>
-              <div class="form-group">
-                  <label for="exampleFormControlSelect1">Role</label>
-                  <select class="form-control" id="exampleFormControlSelect1" name="role">
-                    <option value="Student">Student</option>
-                     <option value="Teacher">Teacher</option> <!---->
-                    <!-- <option value="ADMIN">ADMIN</option> -->
+                <div class="form-group ">
+                  <label for="exampleFormControlSelect2">เรียนจบสายอะไร</label>
+                  <select class="form-control" id="exampleFormControlSelect2" name="plan">
+                    <option value="วิทย์-คณิต">ม.ปลาย สายวิทย์-คณิต</option>
+                    <option value="ศิลป์-คำนวณ">ม.ปลาย สายศิลป์-คำนวณ</option>
+                    <option value="ศิลป์-ภาษา">ม.ปลาย สายศิลป์-ภาษา</option>
+                    <option value="ปวช.อุตสาหกรรม หรือวิศวกรรม">ปวช.อุตสาหกรรม หรือวิศวกรรม</option>
+                    <option value="ปวช. พาณิชย์">ปวช. พาณิชย์</option>
+                    <option value="ปวส.อุตสาหกรรม หรือวิศวกรรม">ปวส.อุตสาหกรรม หรือวิศวกรรม </option>
+                    <option value="ปวส. พาณิชย์">ปวส. พาณิชย์</option>
+                    <option value="Other">อื่น ๆ (โปรดระบุ)</option>
                   </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect2">เรียนจบสายอะไร</label>
-                <select class="form-control" id="exampleFormControlSelect2" name="plan">
-                  <option value="วิทย์-คณิต">ม.ปลาย สายวิทย์-คณิต</option>
-                  <option value="ศิลป์-คำนวณ">ม.ปลาย สายศิลป์-คำนวณ</option>
-                  <option value="ศิลป์-ภาษา">ม.ปลาย สายศิลป์-ภาษา</option>
-                  <option value="ปวช.อุตสาหกรรม หรือวิศวกรรม">ปวช.อุตสาหกรรม หรือวิศวกรรม</option>
-                  <option value="ปวช. พาณิชย์">ปวช. พาณิชย์</option>
-                  <option value="ปวส.อุตสาหกรรม หรือวิศวกรรม">ปวส.อุตสาหกรรม หรือวิศวกรรม </option>
-                  <option value="ปวส. พาณิชย์">ปวส. พาณิชย์</option>
-                  <option value="Other">อื่น ๆ (โปรดระบุ)</option>
-                </select>
-              </div>
-              <div class="form-group">
+                </div>
+              
+                <div class="form-group">
                 <input class="form-control" type="text"name="other" id="other" placeholder="อื่น ๆ ให้ระบุในช่องนี้" value="" style="margin-top: 5px;"/>
               </div>
               <div class="form-group">
@@ -105,9 +141,9 @@
                   <option value="เทียบ">เทียบวิชาได้</option>
                 </select>
               </div>
-              
+          
               <br>
-              <button input type="submit" value="Register" class="btn btn-primary" >Register</button>
+              <button style="background-color: #5c58b6;" input type="submit" value="Register" class="button" >Register</button>
           </form>
       </div>
       <div class="card-footer text-muted">
@@ -116,5 +152,5 @@
   </div>
 </div>
 </div>
-
+<br><br><br>
 <%- include('../layouts/footer') %>
