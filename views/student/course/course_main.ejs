@@ -29,22 +29,24 @@
     <title>Course</title>
 </head>
 
-<body>
+<body class="quantico-regular" style="background-color: #122c5a;">
     <!-- Narbar-->
     <%- include('../layouts/navbar') %>
     
     <!-- end of Narbar-->
 
     <main class="grid-container">
-
+        <br>
         <div class="content">
         <!-- RECOMMENDATION-->
         <% if (Object.keys(RecommendaResult).length !== 0 && RecommendaResult[0].RecommendCourse != "null"  ) { %>
             <%- include('../layouts/recommendation') %>
         <% } else { %>
         <% } %>    
-        <!-- POSTTEST  -->
-        <% if (PostTestDone === 1) { %><%- include('../layouts/post-test') %><% }%>
+
+        
+        <!-- POSTTEST  
+        <% if (TicketBooking_SystemPercent === 1) { %><%- include('../layouts/post-test') %><% }%>-->
 
         <!-- LESSON -->
         <%- include('../layouts/course-middle') %>
