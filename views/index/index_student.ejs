@@ -75,6 +75,7 @@
                                 </svg><b> Change Class</b>
                             </button>
                             <% } else{ %>  
+                            <b>คลิกเพื่อเข้าร่วม Class</b><br>
                             <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#Classjoin" style="background-color: #ffffff; " >
                                 <svg width="17.5" height="20" style="font-size: 20px;;align-items: center;" viewBox="0 0 448 512">
                                 <path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/>
@@ -86,7 +87,6 @@
             </thead>
         </div>   
         <br><br>  
-       
         <div id="content" class="container"> 
             <thead>
                 <div class="card">
@@ -176,9 +176,18 @@
             padding: 10px;
         }
     </style>
-        <div class="project" >
-            <% if (TicketBooking_SystemPercent >= 50) { %>
-                <p>Project</p>
+        <div class="project">
+            <% if (TicketBooking_SystemPercent === 50) { %>
+                <p>Project Quiz 1 ปลดล็อกแล้ว!</p>
+                <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
+            <% }%>
+            <% if (PointofSales_SystemPercent === 75) { %>
+                <p>Project Quiz 2 ปลดล็อกแล้ว!</p>
+                <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
+            <% }%>
+            <% if (ProjectQUIZ3Percent === 100) { %>
+                <p>Project Quiz 3 ปลดล็อกแล้ว!</p>
+                <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
             <% }%>
         </div>
         <div style="background-color: #ffffff;">
@@ -190,98 +199,89 @@
 
     <h1>Competency</h1>
     <div  class="group2">
-        
         <div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.js"></script>
-            <h3>***</h3> 
-            <div style="height: 400px;" class="">
-                <div class="chartCard">
-                    <div class="chartBox">
-                        <canvas id="marksChart"></canvas>
-                        <script>
-                            var marksCanvas = document.getElementById("marksChart");
-                            var marksData = {
-                            labels: ['Knowledge', 'Tracing', 'Explaining'],
-                            datasets: [{
-                                data: [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>],
-                                label: "Pre-test",
-                                borderColor: [
-                                '#11a1c1'
-                                ]
-                            },
-                            {
-                                data: [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>],
-                                label: "Post-test",
-                                borderColor: [
-                                '#ffc107'
-                                ]
-                            }]
-                            };
-                            var radarChart = new Chart(marksCanvas, {
-                            type: 'radar',
-                            data: marksData
-                            });
-                        </script>
+            <div id = "content" class="container">
+                <h1 id = 'content'><svg height="40" width="40" viewBox="0 0 576 512">
+                    <path d="M352.4 243.8l-49.83 99.5c-6.009 12-23.41 11.62-28.92-.625L216.7 216.3l-30.05 71.75L88.55 288l176.4 182.2c12.66 13.07 33.36 13.07 46.03 0l176.4-182.2l-112.1 .0052L352.4 243.8zM495.2 62.86c-54.36-46.98-137.5-38.5-187.5 13.06L288 96.25L268.3 75.92C218.3 24.36 135.2 15.88 80.81 62.86C23.37 112.5 16.84 197.6 60.18 256h105l35.93-86.25c5.508-12.88 23.66-13.12 29.54-.375l58.21 129.4l49.07-98c5.884-11.75 22.78-11.75 28.67 0l27.67 55.25h121.5C559.2 197.6 552.6 112.5 495.2 62.86z"/>
+                </svg> Skills </h1>   
+                <div class="box bg-light  mb-5 shadow" >
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                        <div class="row mb-3 ">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Basic</h5>
+                            <div class="col-sm-10 " style="top:10px">
+                                <progress  max="100" value=<%= BasicPercent %>  class="html5 "></progress>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Tracing</h5>
+                             <div class="col-sm-10 " style="top:10px">
+                              <progress  max="100" value=<%= TracePercent %>  class="html5 "></progress>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Explaining</h5>
+                             <div class="col-sm-10 " style="top:10px">
+                              <progress  max="100" value=<%= ExplainPercent, %>   class="html5 "></progress>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <h5 for="inputEmail3" class="col-sm-2 col-form-label">Writing</h5>
+                             <div class="col-sm-10 " style="top:10px">
+                              <progress  max="100" value=<%= WritePercent %>  class="html5 "></progress>
+                            </div>
+                        </div>
+                                            
                     </div>
                 </div>
             </div>
         </div>
-        
-
         <div>
-        
-                <h3>***</h3>   
-                <div style="height: 400px;" class="">
-                    <div class="chartCard">
-                        <div class="chartBox">
+            <h3>***</h3>   
+            <div style="height: 400px;" class="">
+                <div class="chartCard">
+                    <div class="chartBox">
                         <canvas id="myChart"></canvas>
-                        </div>
-                    </div>
+                     </div>
+                </div>
                 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
                 <script>
-                // setup 
-                const data = {
-                  labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
-                  datasets: [{
-                    data: [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, 100],
-                    label: "Pre-test",
-                    borderColor: [
-                      '#11a1c1'
-                    ]
-                  },
-                  {
-                    data: [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, <%= WritePercent %>],
-                    label: "Post-test",
-                    borderColor: [
-                      '#ffc107'
-                    ]
-                  }
-                ]
-                };
-            
-                // config 
-                const config = {
-                  type: 'radar',
-                  data,
-                  options: {
-                   
-                  }
-                };
-            
-                // render init block
-                const myChart = new Chart(
-                  document.getElementById('myChart'),
-                  config
-                );
-            
-                // Instantly assign Chart.js version
-                const chartVersion = document.getElementById('chartVersion');
-                chartVersion.innerText = Chart.version;
+                    // setup 
+                    const data = {
+                        labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
+                        datasets: [{
+                            data: [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, <%=PreWritePercent %>],
+                            label: "Pre-test",
+                            borderColor: [
+                            '#11a1c1'
+                            ]
+                        },
+                        {
+                            data: [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, <%= WritePercent %>],
+                            label: "Post-test",
+                            borderColor: [
+                            '#ffc107'
+                            ]
+                        }
+                        ]
+                        };
+                    // config 
+                    const config = {
+                        type: 'radar',
+                        data,
+                        options: {}
+                        };
+                    // render init block
+                    const myChart = new Chart(
+                        document.getElementById('myChart'),
+                        config
+                    );
+                    
+                    // Instantly assign Chart.js version
+                    const chartVersion = document.getElementById('chartVersion');
+                    chartVersion.innerText = Chart.version;
                 </script>
-
-                </div>
             </div>
+        </div>
         
             
         
