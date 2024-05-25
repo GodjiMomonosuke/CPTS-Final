@@ -168,19 +168,30 @@
     <!-- SKILLS-->
     <br>
     <style>
-        .project {
-            width: 400px; 
+        .boxbax {
+            width: 450px; 
             height: 100px;
             border-radius: 5px;
             background-color: #f1f1f1;
             padding: 10px;
         }
+        .progress {
+            background-color: #ffd6f1;
+            width: 300px;
+        }
+        progress[value]::-webkit-progress-value {
+            background-color: #ff4cbf;
+        }
     </style>
     <div  class="group">
-        <div class="project">
-            <p>ความคืบหน้า</p>
+        <div class="boxbax">
+            <p>Progress</p>
+            <div class="progress">
+                <progress class="progress bg-info" value="<%= TicketBooking_SystemPercent %>" max="100"></progress>
+            </div><p><%= TicketBooking_SystemPercent %>%</p>
+            
         </div>
-        <div class="project">
+        <div class="boxbax">
             <img style="width: 20px;" src="https://cdn-icons-png.flaticon.com/512/4213/4213459.png " alt="">
             <% if (TicketBooking_SystemPercent === 50) { %>
                 <b>Project Quiz 1 ปลดล็อกแล้ว!</b>
@@ -207,7 +218,7 @@
                     <div class="row mb-3 ">
                         <h5 for="inputEmail3" class="col-sm-2 col-form-label">Basic</h5>
                         <div class="col-sm-10 " style="top:10px">
-                            <progress  max="100" value=<%= PreBasicPercent %>  class="html5 "></progress>
+                            <progress  max="100" value=<%= PreBasicPercent %>  </progress>
                         </div>
                     </div>
                     <div class="row mb-3">
