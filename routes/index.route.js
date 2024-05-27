@@ -853,7 +853,9 @@ router.post('/joinclass', async (req, res, next) => {
                           var myobj = {
                             times: new Date().toLocaleString(), 
                             email: person.email,
-                            ClassName:classesResult[0].name,
+                            name: person.name,
+                            Course:classesResult[0].course,
+                            Section:classesResult[0].section,
                             token: classesResult[0].token ,
                             teacher:classesResult[0].email,
                             //Project Quiz
