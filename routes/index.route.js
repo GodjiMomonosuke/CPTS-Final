@@ -70,8 +70,6 @@ router.get('/', async (req, res, next) => {
           var TicTacToeScore=0,TicTacToeCount=0;
           var LibrarySystemScore=0,LibrarySystemCount=0;
           var RoshamboScore=0,RoshamboCount=0;
-          var CalculatorScore=0,CalculatorCount=0;
-          var CalendarScore=0,CalendarCount=0;
 
           
           for(let i = 0; i < studentAll; i++) {
@@ -156,15 +154,14 @@ router.get('/', async (req, res, next) => {
             
            
 
-            if( StudentAnswer[i].contentName ==='Introduction-Quiz' ||
-                StudentAnswer[i].contentName ==='Datatype-Quiz' || 
-                StudentAnswer[i].contentName ==='String-Quiz' ||
-                StudentAnswer[i].contentName ==='Operators-Quiz' ||
-                StudentAnswer[i].contentName ==='FlowControl-Quiz' ||
-                StudentAnswer[i].contentName ==='Pointers-Quiz' ||
-                StudentAnswer[i].contentName ==='Function-Quiz' ||
-                StudentAnswer[i].contentName ==='Structure-Quiz' ||
-                StudentAnswer[i].contentName ==='Array-Quiz' 
+            if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)' ||
+                StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)' || 
+                StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)' ||
+                StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)' ||
+                StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)' ||
+                StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)' ||
+                StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)' ||
+                StudentAnswer[i].contentName ==='Functions-(Post-test)'
               ){
                 if(StudentAnswer[i].scoreTeacher === undefined){
                   BasicScore = BasicScore+StudentAnswer[i].scoreLV1
@@ -189,27 +186,22 @@ router.get('/', async (req, res, next) => {
           if(PointersScore != 0)PointersScore = PointersScore/PointersCount;
           if(FunctionScore != 0)FunctionScore = FunctionScore/FunctionCount;
           if(StructureScore != 0)StructureScore = StructureScore/StructureCount;
-          if(ArrayScore != 0)ArrayScore = ArrayScore/ArrayCount;
 
           if(TicTacToeScore != 0) TicTacToeScore = TicTacToeScore/TicTacToeCount;
           if(LibrarySystemScore != 0) LibrarySystemScore = LibrarySystemScore/LibrarySystemCount;
           if(RoshamboScore != 0) RoshamboScore = RoshamboScore/RoshamboCount;
-          if(CalculatorScore != 0) CalculatorScore = CalculatorScore/CalculatorCount;
-          if(CalendarScore != 0) CalendarScore = CalendarScore/CalendarCount;
 
           else;  
 
           let CourseScoreObj={
-            'Introduction':{score:IntroductionScore},
-            'String':{score:StringScore},
-            'Datatype':{score:DatatypeScore},
-            'Operators':{score:OperatorsScore},
-            'Selection':{score:FlowControlScore},
-            'Loop':{score:FlowControlScore},
-            'Pointers':{score:PointersScore},
-            'Function':{score:FunctionScore},
-            'Structure':{score:StructureScore},
-            'Array':{score:ArrayScore}
+            'Algorithms and Flowcharts':{score:IntroductionScore},
+            'Datatype andVariable':{score:StringScore},
+            'Input and Output':{score:DatatypeScore},
+            'Operators and Expressions':{score:OperatorsScore},
+            'Selection Statements':{score:FlowControlScore},
+            'Loop Statements':{score:PointersScore},
+            'Arrays and Strings':{score:FunctionScore},
+            'Functions':{score:StructureScore}
           }
           
           let sortedCourse = Object.keys(CourseScoreObj);
@@ -219,11 +211,9 @@ router.get('/', async (req, res, next) => {
           });
 
           let ProjectScoreObj={
-            'TicTacToe':{score:TicTacToeScore},
-            'Library System':{score:LibrarySystemScore},
-            'Roshambo':{score:RoshamboScore},
-            'Calculator':{score:CalculatorScore},
-            'Calendar':{score:CalendarScore}
+            'Ticket Booking System':{score:TicTacToeScore},
+            'Pointof Sales System':{score:LibrarySystemScore},
+            'Project Quiz 3':{score:RoshamboScore}
           }
           let sortedProject = Object.keys(ProjectScoreObj);
           sortedProject.sort((a,b) => {
@@ -561,10 +551,10 @@ router.get('/', async (req, res, next) => {
                 var PreExplainScore = IntroductionLV3+StringLV3+DatatypeLV3+OperatorsLV3+FlowControlLV3+PointersLV3+FunctionLV3+StructureLV3 ;
                 var PreWriteScore = IntroductionLV4+StringLV4+DatatypeLV4+OperatorsLV4+FlowControlLV4+PointersLV4+FunctionLV4+StructureLV4 ;
 
-                var PreBasicPercent =  Math.round((PreBasicScore*5));
-                var PreTracePercent= Math.round((PreTraceScore*5));
-                var PreExplainPercent = Math.round((PreExplainScore*5));
-                var PreWritePercent = Math.round(PreWriteScore);
+                var PreBasicPercent =  Math.round(PreBasicScore);
+                var PreTracePercent= Math.round(PreTraceScore);
+                var PreExplainPercent = Math.round(PreExplainScore);
+                var PreWritePercent = Math.round(PreWriteScore/5);
                 PreBasicPercent = PreBasicPercent;
                 PreTracePercent = PreTracePercent;
                 PreExplainPercent = PreExplainPercent;
@@ -577,10 +567,10 @@ router.get('/', async (req, res, next) => {
                 var WriteScore = IntroductionScoreLV4+StringScoreLV4+DatatypeScoreLV4+OperatorsScoreLV4+FlowControlScoreLV4+PointersScoreLV4+FunctionScoreLV4+StructureScoreLV4 ;
                 // var CourseDone = Posttest1Done+StringDone+DatatypeDone+OperatorsDone+FlowControlDone+PointersDone+FunctionDone+StructureDone+InputOutputDone;
                 
-                var BasicPercent =  Math.round((BasicScore*5));
-                var TracePercent= Math.round((TraceScore*5));
-                var ExplainPercent = Math.round((ExplainScore*5));
-                var WritePercent = Math.round(WriteScore);
+                var BasicPercent =  Math.round(BasicScore);
+                var TracePercent= Math.round(TraceScore);
+                var ExplainPercent = Math.round(ExplainScore);
+                var WritePercent = Math.round(WriteScore/5);
                 BasicPercent = BasicPercent;
                 TracePercent = TracePercent;
                 ExplainPercent = ExplainPercent;
