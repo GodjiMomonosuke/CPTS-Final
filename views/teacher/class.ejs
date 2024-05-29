@@ -43,32 +43,14 @@
               </tr>
             </thead>
             <tbody>
-                <% 
-                    if(Object.keys(Studentresult).length === 1) {   
-                        %>
-                            <th scope="row">1</th>
-                            <td><%=Studentresult[0].email %></td>
-                            <td><%=Studentresult[0].Section %></td>
-                        <%
-                    } 
-                    else {
-                        for (let i = 0; i < Object.keys(Studentresult).length; i++) {   
-                            %>
-                                <th scope="row"><%=i+1%></th>
-                                <td><%=Studentresult[i].email %> <br><%=Studentresult[i].name %> </td>
-                                <td><%=Studentresult[i].Section %></td>
-                                </tr>
-
-
-                            <%
-                        } 
-                    }
-                %>
-
-                
-                
+                <% for (let i = 0; i < Object.keys(Studentresult).length; i++) { %>
+                    <th scope="row"><%=i+1%></th>
+                    <td><%=Studentresult[i].email %> <br><%=Studentresult[i].name %> </td>
+                    <td><%=Studentresult[i].Section %></td>
+                </tr>
+                <% } %>
             </tbody>
-        </table>
+        </table>  <!-- **** -->
     </div>
 
     <h1>Class Management</h1>
