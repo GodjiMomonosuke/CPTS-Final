@@ -252,20 +252,20 @@
                         <p>Post-test</p>
                         <div class="row mb-3 ">
                             <div class="col-sm-10 " style="top:10px">
-                                <b style="font-size: 12px;">Basic: <%= BasicPercent %> /120</b>
-                                <progress class="progress" max="100" value=<%= BasicPercent %>  </progress>
+                                <b style="font-size: 12px;">Basic: <%= BasicPercent %> /40</b>
+                                <progress class="progress" max="40" value=<%= BasicPercent %>  </progress>
                             </div>
                         </div>
                         <div class="row mb-3">
                              <div class="col-sm-10 " style="top:10px">
-                                <b style="font-size: 12px;">Tracing: <%= TracePercent %> /120</b>
-                              <progress class="progress" max="100" value=<%= TracePercent %>  class="html5 "></progress>
+                                <b style="font-size: 12px;">Tracing: <%= TracePercent %> /40</b>
+                              <progress class="progress" max="40" value=<%= TracePercent %>  class="html5 "></progress>
                             </div>
                         </div>
                         <div class="row mb-3">
                              <div class="col-sm-10 " style="top:10px">
-                                <b style="font-size: 12px;">Explaining: <%= ExplainPercent %> /120</b>
-                              <progress class="progress" max="100" value=<%= ExplainPercent, %>   class="html5 "></progress>
+                                <b style="font-size: 12px;">Explaining: <%= ExplainPercent %> /40</b>
+                              <progress class="progress" max="40" value=<%= ExplainPercent, %>   class="html5 "></progress>
                             </div>
                         </div>
                     </div>
@@ -287,14 +287,14 @@
                     const data = {
                         labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
                         datasets: [{
-                            data: [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, <%=PreWritePercent %>],
+                            data: [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, 10],
                             label: "Pre-test",
                             borderColor: [
                             '#11a1c1'
                             ]
                         },
                         {
-                            data: [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, <%= WritePercent %>],
+                            data: [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, 35],
                             label: "Post-test",
                             borderColor: [
                             '#ffc107'
