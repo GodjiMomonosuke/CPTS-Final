@@ -423,7 +423,7 @@ router.get('/', async (req, res, next) => {
                 var FunctionScoreLV1=0,FunctionScoreLV2=0,FunctionScoreLV3=0,FunctionScoreLV4=0;
                 var StructureLV1=0,StructureLV2=0,StructureLV3=0,StructureLV4=0;
                 var StructureScoreLV1=0,StructureScoreLV2=0,StructureScoreLV3=0,StructureScoreLV4=0;
-                
+                var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ";
                 var Posttest1Done = 0 ,Posttest2Done = 0 ,Posttest3Done = 0,Posttest4Done = 0 ,Posttest5Done = 0,Posttest6Done = 0,Posttest7Done = 0,Posttest8Done = 0;
         
         
@@ -541,7 +541,27 @@ router.get('/', async (req, res, next) => {
                         StructureScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         Posttest8Done = 1;
                     }
-                }
+                    //** **//
+                    var PrjQuiz1Score = "ยังไม่ได้ทำ", PrjQuiz2Score = "ยังไม่ได้ทำ", PrjQuiz3Score = "ยังไม่ได้ทำ" 
+                    if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
+                      Ticket_Booking_SystemDone = 1;
+                        if (StudentAnswer[i].scoreTeacher === undefined) {
+                          PrjQuiz1Score = "รอตรวจ"
+                        } else {PrjQuiz1Score = parseInt(StudentAnswer[i].scoreTeacher) + "/25 คะแนน";}
+                    }
+                    if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
+                        Point_of_Sales_SystemDone = 1;
+                        if (StudentAnswer[i].scoreTeacher === undefined) {
+                          PrjQuiz2Score = "รอตรวจ"
+                        } else {PrjQuiz2Score = parseInt(StudentAnswer[i].scoreTeacher) + "/25 คะแนน";}
+                    }
+                    if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
+                        Project_QUIZ3Done = 1;
+                        if (StudentAnswer[i].scoreTeacher === undefined) {
+                          PrjQuiz3Score = "รอตรวจ"
+                        } else {PrjQuiz3Score = parseInt(StudentAnswer[i].scoreTeacher) + "/25 คะแนน";}
+                    }
+                  }
 
                 /*** SUM */
 
@@ -576,7 +596,10 @@ router.get('/', async (req, res, next) => {
                 ExplainPercent = ExplainPercent;
                 WritePercent = WritePercent;
                 
-                
+                //** Project Quiz Score */
+                PrjQuiz1 = PrjQuiz1Score;
+                PrjQuiz2 = PrjQuiz1Score;
+                PrjQuiz3 = PrjQuiz1Score;
                 
                 //////********RECOMMENDATION*********** */
 
@@ -748,6 +771,7 @@ router.get('/', async (req, res, next) => {
 
 
                     res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,
+                      PrjQuiz1,PrjQuiz2,PrjQuiz3,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
                       PreBasicPercent,PreTracePercent,PreExplainPercent,PreWritePercent,
                       TicketBooking_SystemPercent,PointofSales_SystemPercent,ProjectQUIZ3Percent

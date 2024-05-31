@@ -62,18 +62,21 @@
                               <p>Project Quiz 1</p>
                               <% if(RecommendaResult[0].TicketBooking_SystemPercent >= 50) { count = count-1%> <%# Follow node %> 
                                 <a href="/project-Ticket_Booking_System" style="color:rgb(255, 255, 255)">click</a>
+                                <br><br><p><%= PrjQuiz1Score %></p>
                               <% } %>
                             </div>
                             <div class="projectbox wrapbox">
                               <p>Project Quiz 2</p>
                               <% if(RecommendaResult[0].PointofSales_SystemPercent >= 75) {count = count-1 %> <%# Follow node %> 
                                   <a href="/project-Point_of_Sales_System" style="color:rgb(255, 255, 255)">click</a>
+                                  <br><br><p><%= PrjQuiz2Score %></p>
                               <% } %>
                             </div>
                             <div class="projectbox wrapbox">
                               <p>Project Quiz 3</p>
                               <% if(RecommendaResult[0].ProjectQUIZ3Percent === 100) {count = count-1 %> <%# Follow node %> 
                                 <a href="/project-Project_QUIZ3" style="color:rgb(255, 255, 255)">click</a>
+                                <br><br><p><%= PrjQuiz3Score %></p>
                               <% } %>
                             </div>
                           <% } %>
