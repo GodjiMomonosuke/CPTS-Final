@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="box-shadow: inset 0 0 15px 5px #ff4cbf;">
 
 <head>
     <!-- Required meta tags -->
@@ -37,11 +37,9 @@
         .post {
             background-color: #ffd7b8;
         }
-      
         @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+            .bd-placeholder-img-lg {font-size: 3.5rem;}
+            html {height: 100%;}
         }
        
     </style>
@@ -55,7 +53,7 @@
     <title>HOME</title>
 </head>
 
-<body class="quantico-regular" style="background-color: #122c5a; box-shadow: inset 0 0 15px 5px #ff4cbf;">
+<body class="quantico-regular" style=" background-color: #122c5a; ">
     <!-- Narbar-->
     <%- include('../layouts/navbar') %>
     
@@ -63,8 +61,8 @@
 <!-- LEFT -->
     <main class="grid-container">
         <br><br>
-        <div id="content" class="container"> 
-            <thead><br>
+        <div id="content" class="container"><br>
+            <div class="group">
                 <div class="item1" style="border-radius: 5px;">
                     <% if (Object.keys(result).length != 0) { %>
                     <p>Course name : <%= result[0].Course %></p>  
@@ -84,258 +82,253 @@
                             
                         <% } %>
                 </div>    
-            </thead>
-        </div>   
-        <br><br>  
-        <div id="content" class="container"> 
-            <thead>
-                <div class="card">
-                    <div class="card-header">
-                        <svg height="20" width="20" viewBox="0 0 512 512">
-                            <path d="M505.2 324.8l-47.73-68.78l47.75-68.81c7.359-10.62 8.797-24.12 3.844-36.06c-4.969-11.94-15.52-20.44-28.22-22.72l-82.39-14.88l-14.89-82.41c-2.281-12.72-10.76-23.25-22.69-28.22c-11.97-4.936-25.42-3.498-36.12 3.844L256 54.49L187.2 6.709C176.5-.6016 163.1-2.039 151.1 2.896c-11.92 4.971-20.4 15.5-22.7 28.19l-14.89 82.44L31.15 128.4C18.42 130.7 7.854 139.2 2.9 151.2C-2.051 163.1-.5996 176.6 6.775 187.2l47.73 68.78l-47.75 68.81c-7.359 10.62-8.795 24.12-3.844 36.06c4.969 11.94 15.52 20.44 28.22 22.72l82.39 14.88l14.89 82.41c2.297 12.72 10.78 23.25 22.7 28.22c11.95 4.906 25.44 3.531 36.09-3.844L256 457.5l68.83 47.78C331.3 509.7 338.8 512 346.3 512c4.906 0 9.859-.9687 14.56-2.906c11.92-4.969 20.4-15.5 22.7-28.19l14.89-82.44l82.37-14.88c12.73-2.281 23.3-10.78 28.25-22.75C514.1 348.9 512.6 335.4 505.2 324.8zM456.8 339.2l-99.61 18l-18 99.63L256 399.1L172.8 456.8l-18-99.63l-99.61-18L112.9 255.1L55.23 172.8l99.61-18l18-99.63L256 112.9l83.15-57.75l18.02 99.66l99.61 18L399.1 255.1L456.8 339.2zM256 143.1c-61.85 0-111.1 50.14-111.1 111.1c0 61.85 50.15 111.1 111.1 111.1s111.1-50.14 111.1-111.1C367.1 194.1 317.8 143.1 256 143.1zM256 319.1c-35.28 0-63.99-28.71-63.99-63.99S220.7 192 256 192s63.99 28.71 63.99 63.1S291.3 319.1 256 319.1z"/>
-                        </svg><b> Recommend</b>
 
-                        <% if (Object.keys(RecommendaResult).length !== 0 && RecommendaResult[0].RecommendCourse != "null" ) { %> <%# ถ้าเลือกวิธีแนะนำแล้ว %> 
-                            <br>
-                            <%= RecommendaResult[0].RecommendationType %> <%# วิธีแนะนำคือ %> 
-                            <br>
+                <div class="item1" style="width: auto;">
+                    <svg height="20" width="20" viewBox="0 0 512 512">
+                        <path d="M505.2 324.8l-47.73-68.78l47.75-68.81c7.359-10.62 8.797-24.12 3.844-36.06c-4.969-11.94-15.52-20.44-28.22-22.72l-82.39-14.88l-14.89-82.41c-2.281-12.72-10.76-23.25-22.69-28.22c-11.97-4.936-25.42-3.498-36.12 3.844L256 54.49L187.2 6.709C176.5-.6016 163.1-2.039 151.1 2.896c-11.92 4.971-20.4 15.5-22.7 28.19l-14.89 82.44L31.15 128.4C18.42 130.7 7.854 139.2 2.9 151.2C-2.051 163.1-.5996 176.6 6.775 187.2l47.73 68.78l-47.75 68.81c-7.359 10.62-8.795 24.12-3.844 36.06c4.969 11.94 15.52 20.44 28.22 22.72l82.39 14.88l14.89 82.41c2.297 12.72 10.78 23.25 22.7 28.22c11.95 4.906 25.44 3.531 36.09-3.844L256 457.5l68.83 47.78C331.3 509.7 338.8 512 346.3 512c4.906 0 9.859-.9687 14.56-2.906c11.92-4.969 20.4-15.5 22.7-28.19l14.89-82.44l82.37-14.88c12.73-2.281 23.3-10.78 28.25-22.75C514.1 348.9 512.6 335.4 505.2 324.8zM456.8 339.2l-99.61 18l-18 99.63L256 399.1L172.8 456.8l-18-99.63l-99.61-18L112.9 255.1L55.23 172.8l99.61-18l18-99.63L256 112.9l83.15-57.75l18.02 99.66l99.61 18L399.1 255.1L456.8 339.2zM256 143.1c-61.85 0-111.1 50.14-111.1 111.1c0 61.85 50.15 111.1 111.1 111.1s111.1-50.14 111.1-111.1C367.1 194.1 317.8 143.1 256 143.1zM256 319.1c-35.28 0-63.99-28.71-63.99-63.99S220.7 192 256 192s63.99 28.71 63.99 63.1S291.3 319.1 256 319.1z"/>
+                    </svg><b> Recommend</b>
+
+                    <% if (Object.keys(RecommendaResult).length !== 0 && RecommendaResult[0].RecommendCourse != "null" ) { %> <%# ถ้าเลือกวิธีแนะนำแล้ว %> 
+                        <br>
+                        <%= RecommendaResult[0].RecommendationType %> <%# วิธีแนะนำคือ %> 
+                        <br>
                             
-                            <% if (TicketBooking_SystemPercent === 100 && PointofSales_SystemPercent === 100 && ProjectQUIZ3Percent === 100 ) { %> <%# ถ้า Path ครบแล้ว %> 
-                                <p class="chakra-petch-regular">คุณได้เรียนครบแล้ว!</p>
-                            <% } else { %>
-                                <div class="row">
-                                    <% if(RecommendaResult[0].RecommendCourse === "Algorithms and Flowcharts"){ %> <%# Output จาก Recommend มาเทียบ %> 
-                                        <div class="col-6">
-                                            <button onclick="window.location.href='/course-Algorithms_and_Flowcharts'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Algorithms and Flowcharts</button>
-                                        </div>
-                                    <% }else if(RecommendaResult[0].RecommendCourse === "Datatype and Variable"){ %>
-                                        <div class="col-6">
-                                            <button onclick="window.location.href='/course-Datatype_and_Variable'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Datatype and Variable</button>
-                                        </div>
-                                    <% }else if(RecommendaResult[0].RecommendCourse === "Input and Output"){ %>
-                                        <div class="col-6">
-                                            <button onclick="window.location.href='/course-Input_and_Output'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Input and Output</button>
-                                        </div>
-                                    <% }else if(RecommendaResult[0].RecommendCourse === "Operators and Expressions"){ %>
-                                        <div class="col-6">
-                                            <button onclick="window.location.href='/course-Operators_and_Expressions'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Operators and Expressions</button>
-                                        </div>
-                                    <% }else if(RecommendaResult[0].RecommendCourse === "Selection Statements"){ %>
-                                        <div class="col-6">
-                                            <button onclick="window.location.href='/course-Selection_Statements'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Selection Statement</button>
-                                        </div>
-                                    <% }else if(RecommendaResult[0].RecommendCourse === "Loop Statements"){ %>
-                                        <div class="col-6">
-                                            <button onclick="window.location.href='/course-Loop_Statements'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Loop Statement</button>
-                                        </div>
-                                    <% }else if(RecommendaResult[0].RecommendCourse === "Arrays and Strings"){ %>
-                                        <div class="col-6">
-                                            <button onclick="window.location.href='/course-Arrays_and_Strings'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Array and String</button>
-                                        </div>
-                                    <% }else if(RecommendaResult[0].RecommendCourse === "Functions"){ %>
-                                        <div class="col-6">
-                                            <button onclick="window.location.href='/course-Functions'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Function</button>
-                                        </div>
-                                    <% } else{ %>  <%# ถ้าไม่มีการแนะนำ คือ เรียนตาม path ที่เลือกเรียบร้อยแล้ว%> 
-                                        <h6>Finished</h6>
-                                        <div class="w-100"></div>
-                                        <div class="col-6">Next</div>
-                                        
-                                    <% } %>
+                        <% if (TicketBooking_SystemPercent === 100 && PointofSales_SystemPercent === 100 && ProjectQUIZ3Percent === 100 ) { %> <%# ถ้า Path ครบแล้ว %> 
+                            <p class="chakra-petch-regular">คุณได้เรียนครบแล้ว!</p>
+                        <% } else { %>
+                            <div class="row">
+                                <% if(RecommendaResult[0].RecommendCourse === "Algorithms and Flowcharts"){ %> <%# Output จาก Recommend มาเทียบ %> 
+                                <div class="col-6">
+                                    <button onclick="window.location.href='/course-Algorithms_and_Flowcharts'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Algorithms and Flowcharts</button>
+                                </div>
+                                <% }else if(RecommendaResult[0].RecommendCourse === "Datatype and Variable"){ %>
+                                    <div class="col-6">
+                                        <button onclick="window.location.href='/course-Datatype_and_Variable'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Datatype and Variable</button>
+                                    </div>
+                                <% }else if(RecommendaResult[0].RecommendCourse === "Input and Output"){ %>
+                                    <div class="col-6">
+                                        <button onclick="window.location.href='/course-Input_and_Output'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Input and Output</button>
+                                    </div>
+                                <% }else if(RecommendaResult[0].RecommendCourse === "Operators and Expressions"){ %>
+                                    <div class="col-6">
+                                        <button onclick="window.location.href='/course-Operators_and_Expressions'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Operators and Expressions</button>
+                                    </div>
+                                <% }else if(RecommendaResult[0].RecommendCourse === "Selection Statements"){ %>
+                                    <div class="col-6">
+                                        <button onclick="window.location.href='/course-Selection_Statements'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Selection Statement</button>
+                                    </div>
+                                <% }else if(RecommendaResult[0].RecommendCourse === "Loop Statements"){ %>
+                                    <div class="col-6">
+                                        <button onclick="window.location.href='/course-Loop_Statements'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Loop Statement</button>
+                                    </div>
+                                <% }else if(RecommendaResult[0].RecommendCourse === "Arrays and Strings"){ %>
+                                    <div class="col-6">
+                                        <button onclick="window.location.href='/course-Arrays_and_Strings'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Array and String</button>
+                                    </div>
+                                <% }else if(RecommendaResult[0].RecommendCourse === "Functions"){ %>
+                                    <div class="col-6">
+                                        <button onclick="window.location.href='/course-Functions'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Function</button>
+                                    </div>
+                                <% } else{ %>  <%# ถ้าไม่มีการแนะนำ คือ เรียนตาม path ที่เลือกเรียบร้อยแล้ว%> 
+                                    <h6>Finished</h6>
+                                    <div class="w-100"></div>
+                                    <div class="col-6">Next</div>
+                                <% } %>    
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-outline-dark btn-sm btn-block " data-bs-toggle="modal" data-bs-target="#RecommendSetting"><i class="fa fa-flag" style="font-size: 16px;;align-items: center;" ></i></button>
                                     </div>
                                 </div>
                             <% } %>
-                            
-
-                        <% } else{ %> 
+                    <% } else{ %> 
                             <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#RecommendSetting">
                                 <svg height="20" width="20" viewBox="0 0 512 512">
                                     <path d="M349.565 98.783C295.978 98.783 251.721 64 184.348 64c-24.955 0-47.309 4.384-68.045 12.013a55.947 55.947 0 0 0 3.586-23.562C118.117 24.015 94.806 1.206 66.338.048 34.345-1.254 8 24.296 8 56c0 19.026 9.497 35.825 24 45.945V488c0 13.255 10.745 24 24 24h16c13.255 0 24-10.745 24-24v-94.4c28.311-12.064 63.582-22.122 114.435-22.122 53.588 0 97.844 34.783 165.217 34.783 48.169 0 86.667-16.294 122.505-40.858C506.84 359.452 512 349.571 512 339.045v-243.1c0-23.393-24.269-38.87-45.485-29.016-34.338 15.948-76.454 31.854-116.95 31.854z"/></svg>
                                     <b> Choose</b>
                             </button>
                          <% } %>  
-                        
-                    </div>	
-            </thead>
-        </div>    
+                 </div>	
+            </div>
                 
         
 
 
-<!-- MID -->
-    <!-- SKILLS-->
-    <br>
-    <style>
-        .boxbax {
-            width: 450px; 
-            height: 100px;
-            border-radius: 5px;
-            padding: 10px;
-        }
-        .progress {
-            width: 300px;
-            background-color: #b8ffc5;
-        }
-        progress[value]::-webkit-progress-value {
-            background-color: #ff4cbf;
-        }
-        progress[value]::-webkit-progress-bar {
-            background-color: #ffdef3;
-        }
-        .b,.p {
-            color: #ffffff;
-        }
-        @media (max-width: 1000px) {
-            .group {display: block;}
-        }
+            <!-- MID -->
+                <!-- SKILLS-->
+                <br>
+                <style>
+                    .boxbax {
+                        width: 400px; 
+                        height: auto;
+                        border-radius: 5px;
+                        padding: 10px;
+                        background-color: #ffffff;
+                        margin-bottom: 10px;
+                    }.boxbax2 {
+                        width: 400px; 
+                        height: auto;
+                        color: #fff;
+                        padding: 10px;
+                        border-radius: 5px;
+                        margin-bottom: 10px;
+                    }
+                    .progress {
+                        width: 300px;
+                        background-color: #b8ffc5;
+                    }
+                    progress[value]::-webkit-progress-value {
+                        background-color: #ff4cbf;
+                    }
+                    progress[value]::-webkit-progress-bar {
+                        background-color: #ffdef3;
+                    }
+                    @media (max-width: 1000px) {
+                        .group, .group2 {display: block;}
+                        .boxbax, .item1 {width: auto; }
+                    }
+                    @media (max-width: 1500px) {
+                        .group2 {display: block;}
+                        html {height: fit-content;}
+                    }
 
-    </style>
-    <div class="group" style="background-color: #b8ffc5; border-radius: 5px;">
-        <div class="boxbax">
-            <p>Progress</p>
-            <div class="progress">
-                <progress class="progress" value="50" style="margin-right: 5px;" max="100"></progress>
-                <b><%= TicketBooking_SystemPercent %>%</b>
-            </div>
-            
-        </div>
-        <div class="boxbax" style="height: 220px;">
-            <img style="width: 20px;" src="https://cdn-icons-png.flaticon.com/512/4213/4213459.png " alt="">
-            <% if (TicketBooking_SystemPercent === 50) { %>
-                <b>Project Quiz 1 ปลดล็อกแล้ว!</b>
-                <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
-            <% }%>
-            <% if (PointofSales_SystemPercent === 75) { %>
-                <b>Project Quiz 2 ปลดล็อกแล้ว!</b>
-                <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
-            <% }%>
-            <% if (ProjectQUIZ3Percent === 100) { %>
-                <b>Project Quiz 3 ปลดล็อกแล้ว!</b>
-                <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
-            <% }%>
-            <p>Project Quiz 1 : <%= PrjQuiz1 %></p>
-            <p>Project Quiz 1 : <%= PrjQuiz1 %></p>
-            <p>Project Quiz 1 : <%= PrjQuiz1 %></p>
-        </div>
-    </div>
+                </style>
+                
+                <div class="group">
+                    <div class="boxbax">
+                        <p>Progress</p>
+                        <div class="progress">
+                            <progress class="progress" value="50" style="margin-right: 5px;" max="100"></progress>
+                            <b><%= TicketBooking_SystemPercent %>%</b>
+                        </div> <hr>
 
-    <br><br>
+                        <img style="width: 20px;" src="https://cdn-icons-png.flaticon.com/512/4213/4213459.png " alt="">
+                        <% if (TicketBooking_SystemPercent === 50) { %>
+                            <b>Project Quiz 1 ปลดล็อกแล้ว!</b>
+                            <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
+                        <% }%>
+                        <% if (PointofSales_SystemPercent === 75) { %>
+                            <b>Project Quiz 2 ปลดล็อกแล้ว!</b>
+                            <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
+                        <% }%>
+                        <% if (ProjectQUIZ3Percent === 100) { %>
+                            <b>Project Quiz 3 ปลดล็อกแล้ว!</b>
+                            <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
+                        <% }%>
+                        <p>Project Quiz 1 : <%= PrjQuiz1 %></p>
+                        <p>Project Quiz 1 : <%= PrjQuiz1 %></p>
+                        <p>Project Quiz 1 : <%= PrjQuiz1 %></p>
+                    </div>
+                    <div  class="group2">
+                        <div>
+                        <h3>***</h3> 
+                        <div>
+                            <div class="boxbax2">  
+                                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                                    <p>Pre-test</p>
+                                    <div class="row mb-3 ">
+                                        <div class="col-sm-10 " style="top:10px">
+                                            <b style="font-size: 12px;">Basic: <%= PreBasicPercent %> /40</b>
+                                            <progress class="progress" max="40" value=<%= PreBasicPercent %>  </progress>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-10 " style="top:10px">
+                                            <b style="font-size: 12px;">Tracing: <%= PreTracePercent %> /40</b>
+                                        <progress class="progress" max="40" value=<%= PreTracePercent %>  class="html5 "></progress>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-10 " style="top:10px">
+                                            <b style="font-size: 12px;">Explaining: <%= PreExplainPercent %> /40</b>
+                                        <progress class="progress" max="40" value=<%= PreExplainPercent, %>   class="html5 "></progress>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  <br>
+                            <div class="boxbax2">  
+                                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                                    <p>Post-test</p>
+                                    <div class="row mb-3 ">
+                                        <div class="col-sm-10 " style="top:10px">
+                                            <b style="font-size: 12px;">Basic: <%= BasicPercent %> /40</b>
+                                            <progress class="progress" max="40" value=<%= BasicPercent %>  </progress>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-10 " style="top:10px">
+                                            <b style="font-size: 12px;">Tracing: <%= TracePercent %> /40</b>
+                                        <progress class="progress" max="40" value=<%= TracePercent %>  class="html5 "></progress>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-10 " style="top:10px">
+                                            <b style="font-size: 12px;">Explaining: <%= ExplainPercent %> /40</b>
+                                        <progress class="progress" max="40" value=<%= ExplainPercent, %>   class="html5 "></progress>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        </div>
+                        <div>
+                            <h3>***</h3>   
+                            <div style="height: 400px;" class="">
+                                <div class="chartCard">
+                                    <div class="chartBox">
+                                        <canvas id="myChart"></canvas>
+                                    </div>
+                                </div>
+                                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+                                <script>
+                                    // setup 
 
-    <h1>Competency</h1>
-    <div  class="group2">
-        <div>
-        <h3>***</h3> 
-        <div>
-            <div class="p">  
-                <div class="" >
-                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
-                        <p>Pre-test</p>
-                        <div class="row mb-3 ">
-                            <div class="col-sm-10 " style="top:10px">
-                                <b style="font-size: 12px;">Basic: <%= PreBasicPercent %> /40</b>
-                                <progress class="progress" max="40" value=<%= PreBasicPercent %>  </progress>
+                                    Chart.defaults.borderColor = '#36A2EB';
+                                    const data = {
+                                        labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
+                                        datasets: [{
+                                            data: [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, 10],
+                                            label: "Pre-test",
+                                            borderColor: '#11a1c1',
+                                            backgroundColor: '#11a1c149',
+                                        },{
+                                            data: [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, 35],
+                                            label: "Post-test",
+                                            borderColor: '#ffc107',
+                                            fill: true,
+                                            backgroundColor: '#ffc10737',
+                                        }]
+                                    };
+                                    // config 
+                                    const config = {
+                                        type: 'radar',
+                                        data,
+                                        options: {}
+                                        };
+                                    // render init block
+                                    const myChart = new Chart(
+                                        document.getElementById('myChart'),
+                                        config
+                                    );
+                                    
+                                    // Instantly assign Chart.js version
+                                    const chartVersion = document.getElementById('chartVersion');
+                                    chartVersion.innerText = Chart.version;
+                                </script>
                             </div>
                         </div>
-                        <div class="row mb-3">
-                            <div class="col-sm-10 " style="top:10px">
-                                <b style="font-size: 12px;">Tracing: <%= PreTracePercent %> /40</b>
-                            <progress class="progress" max="40" value=<%= PreTracePercent %>  class="html5 "></progress>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <div class="col-sm-10 " style="top:10px">
-                                <b style="font-size: 12px;">Explaining: <%= PreExplainPercent %> /40</b>
-                            <progress class="progress" max="40" value=<%= PreExplainPercent, %>   class="html5 "></progress>
-                            </div>
-                        </div>
+                        
+                            <style>
+                                .pp{ color: #11a1c149;}
+                            </style>
+                        
+                        
                     </div>
                 </div>
-            </div>  <br>
-            <div class="p">  
-                <div class="" >
-                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
-                        <p>Post-test</p>
-                        <div class="row mb-3 ">
-                            <div class="col-sm-10 " style="top:10px">
-                                <b style="font-size: 12px;">Basic: <%= BasicPercent %> /40</b>
-                                <progress class="progress" max="40" value=<%= BasicPercent %>  </progress>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                             <div class="col-sm-10 " style="top:10px">
-                                <b style="font-size: 12px;">Tracing: <%= TracePercent %> /40</b>
-                              <progress class="progress" max="40" value=<%= TracePercent %>  class="html5 "></progress>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                             <div class="col-sm-10 " style="top:10px">
-                                <b style="font-size: 12px;">Explaining: <%= ExplainPercent %> /40</b>
-                              <progress class="progress" max="40" value=<%= ExplainPercent, %>   class="html5 "></progress>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </div>
-        </div>
-        <div>
-            <h3>***</h3>   
-            <div style="height: 400px;" class="">
-                <div class="chartCard">
-                    <div class="chartBox">
-                        <canvas id="myChart"></canvas>
-                     </div>
-                </div>
-                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-                <script>
-                    // setup 
-                    const data = {
-                        labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
-                        datasets: [{
-                            data: [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, 10],
-                            label: "Pre-test",
-                            borderColor: [
-                            '#11a1c1'
-                            ]
-                        },
-                        {
-                            data: [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, 35],
-                            label: "Post-test",
-                            borderColor: [
-                            '#ffc107'
-                            ]
-                        }
-                        ]
-                        };
-                    // config 
-                    const config = {
-                        type: 'radar',
-                        data,
-                        options: {}
-                        };
-                    // render init block
-                    const myChart = new Chart(
-                        document.getElementById('myChart'),
-                        config
-                    );
-                    
-                    // Instantly assign Chart.js version
-                    const chartVersion = document.getElementById('chartVersion');
-                    chartVersion.innerText = Chart.version;
-                </script>
+                
             </div>
-        </div>
-        
-            
-        
-        
-    </div>
 
        
      
-    <br><br><br><br><br><br>
+
     
     
     
