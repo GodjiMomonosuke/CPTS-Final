@@ -4,8 +4,8 @@
             <thead>
               <tr>
                 <th scope="col" class="col-1">#</th>
-                <th scope="col-1" class="col-4">Name</th>
-                <th scope="col-1" class="col-1">Class</th>
+                <th scope="col-1" class="col-4"><%=Studentresult[0].email %></th>
+                <th scope="col-1" class="col-1"><%=Studentresult[0].ClassName %></th>
                 <th scope="col" class="col-2 text-start">Project</th>
                 <th scope="col" class="col-2 text-start"> Score</th>
                 </th>
@@ -15,9 +15,7 @@
                 <% 
                     if(Object.keys(Studentresult).length === 1) {   
                         %>
-                            <th scope="row">1</th>
-                            <td><%=Studentresult[0].email %></td>
-                            <td><%=Studentresult[0].ClassName %></td>
+
                             <td class="text-start">
                                 Project QUIZ1 | <%=Studentresult[0].TicTacToe %> <br>
                                 Project QUIZ2 | <%=Studentresult[0].LibrarySystem %> <br> 
