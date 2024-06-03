@@ -598,8 +598,8 @@ router.get('/', async (req, res, next) => {
                 
                 //** Project Quiz Score */
                 PrjQuiz1 = PrjQuiz1Score;
-                PrjQuiz2 = PrjQuiz1Score;
-                PrjQuiz3 = PrjQuiz1Score;
+                PrjQuiz2 = PrjQuiz2Score;
+                PrjQuiz3 = PrjQuiz3Score;
                 
                 //////********RECOMMENDATION*********** */
 

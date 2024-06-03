@@ -48,7 +48,9 @@ router.get('/', async (req, res, next) => {
                     }
               }
               
-              res.render('student/project/project_main', { person,RecommendaResult,StudentAnswer,PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score});
+              res.render('student/project/project_main', { person,RecommendaResult,StudentAnswer,
+                PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score
+              });
 
             });
             
