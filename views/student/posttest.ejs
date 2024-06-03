@@ -44,12 +44,13 @@
     </style>
 <br><br><br>
     <div id = "content" class="container">
-    <h2><u>แบบทดสอบหลังเรียน</u></h2>
+    <h2>คุณได้เรียนครบแล้ว!</h2>
 
 <%# START %> 
 <form action="course/posttestSubmit" method="post" autocomplete="off" >
     <%# button %> 
     <div class="btn-group me-2" role="group" aria-label="Basic outlined example">
+        <!--
         <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
         class="btn btn-secondary collapsed" data-bs-target="#test1" >1</button>
         <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
@@ -72,13 +73,14 @@
         class="btn btn-secondary collapsed" data-bs-target="#test10">10</button>
         <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
         class="btn btn-secondary collapsed" data-bs-target="#test11">11</button>
+    -->
     </div>
-        <button type="submit" class="btn btn-outline-dark">ส่งคำตอบ</button>
+        <button type="submit" class="btn btn-outline-dark">หลับไปหน้า Home</button>
 
 <%# content %> 
 
     <div class="accordion accordion-flush" id="accordionMain">
-    <%# %>
+    <%# %><!---
         <div id="test0" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
             <br><h2>แบบทดสอบหลังเรียน</h2>
         </div>
@@ -1068,7 +1070,7 @@
         </div>
     </div> 
     <%# choice %> 
-</div>
+</div>-->
 
 
 <%#  END %> 

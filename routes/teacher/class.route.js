@@ -36,7 +36,8 @@ router.get('/', function(req, res, next) {
 router.post('/create', async (req, res, next) => {
   try {
     const person = req.user;
-    const createName = req.body.classname;
+    const createSection = req.body.section;
+    const createCourse = req.body.coursename;
     if(person.role === "Teacher"){
       var ClassTokenID = makeid(6);
  
@@ -44,7 +45,8 @@ router.post('/create', async (req, res, next) => {
         times: new Date().toLocaleString(),
         email:person.email,
         role: person.role,
-        name: createName,
+        course: createCourse,
+        section: createSection,
         token: ClassTokenID
       }; 
       MongoClient.connect(url, function(err, db) {

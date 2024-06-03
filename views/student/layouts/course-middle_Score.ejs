@@ -93,8 +93,13 @@ else {
 
         }
         else{
-            checkedLV4 = "-";
-            TeacherCheck = "รอตรวจ";
+            if(StudentAnswer[i].contentName === ""){
+                checkedLV4 = "";
+            TeacherCheck = "";
+            } else {
+                checkedLV4 = "-";
+                TeacherCheck = "รอตรวจ";
+            }
         }
 
         /* Score tranfrom to Pass/Not Pass**/

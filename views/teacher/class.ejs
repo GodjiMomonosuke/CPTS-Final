@@ -32,6 +32,26 @@
 
     <%- include('./class-Student') %>
 
+    <div class="box mb-5 shadow" style="background-color: #E2D9E5;">
+        <table class="table" style="background-color: #9C7EB7;">
+            <thead>
+              <tr>
+                <th scope="col" class="col-1">#</th>
+                <th scope="col-1" class="col-4">Student</th>
+                <th scope="col-1" class="col-1">Section</th>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+                <% for (let i = 0; i < Object.keys(Studentresult).length; i++) { %>
+                    <th scope="row"><%=i+1%></th>
+                    <td><%=Studentresult[i].email %> <br><%=Studentresult[i].name %> </td>
+                    <td><%=Studentresult[i].Section %></td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>  <!-- **** -->
+    </div>
 
     <h1>Class Management</h1>
     <div class="row" style="background-color: #E2D9E5">
@@ -41,14 +61,16 @@
                     <thead>
                       <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">Course</th>
+                        <th scope="col">Section</th>
                         <th scope="col">Token</th>
                       </tr>
                     </thead>
                     <tbody>
                         <% for (let i = 0; i < Object.keys(classResult).length; i++) {   %>
                             <th scope="row"><%=i+1%></th>
-                            <td><%=classResult[i].name %></td>
+                            <td><%=classResult[i].course %></td>
+                            <td><%=classResult[i].section %></td>
                             <td><%=classResult[i].token %></td>
                             <tr>
                             </tr>
@@ -83,8 +105,12 @@
             <form action="/class/create" method="post" autocomplete="off">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="classname" class="form-label"><b>Class Name</b></label>
-                        <input type="text" class="form-control" id="classname" name="classname" placeholder="ชื่อของคลาส เช่น ก154">
+                        <label for="coursename" class="form-label"><b>Course Name</b></label>
+                        <input type="text" class="form-control" id="coursename" name="coursename" placeholder="ชื่อวิชา">
+                    </div>
+                    <div class="mb-3">
+                        <label for="section" class="form-label"><b>Sectione</b></label>
+                        <input type="text" class="form-control" id="section" name="section" placeholder="section">
                     </div>
                 </div>
                 <div class="modal-footer">

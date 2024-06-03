@@ -10,7 +10,7 @@
                 <div class="w-100"></div>
                 <div class="col">
                     <% if (Object.keys(RecommendaResult[0].RecommendCourse).length !== 0) { %>
-                        <h1>บทเรียนที่แนะนำ "<%= RecommendaResult[0].RecommendCourse %>"</h1>
+                        <h1 style="color: black;">บทเรียนที่แนะนำ "<%= RecommendaResult[0].RecommendCourse %>"</h1>
                     <% } else { %>
                     <% } %>
                     
@@ -38,7 +38,7 @@
                     <% }else if(RecommendaResult[0].RecommendCourse === "Selection Statements"){ %>
                         
                             <button onclick="window.location.href='/course-Selection_Statements'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
-                    <% }else if(RecommendaResult[0].RecommendCourse === "Loop Statement"){ %>
+                    <% }else if(RecommendaResult[0].RecommendCourse === "Loop Statements"){ %>
                         
                             <button onclick="window.location.href='/course-Loop_Statements'" type="button" class="btn btn-outline-dark btn-lg btn-block mb-2"><i class="fa fa-paper-plane" style="font-size:16px"></i> เริ่ม</button>
                   

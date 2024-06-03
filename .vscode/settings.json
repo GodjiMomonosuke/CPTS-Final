@@ -2,5 +2,16 @@
     "files.associations": {
         "*.ejs": "html",
         "cs": "cpp"
-    }
+    },
+    "cSpell.ignoreWords": [
+        "Pointof",
+        "Posttest",
+        "mydatabase",
+        "myobj",
+        "myquery",
+        "newvalues",
+        "timetodo",
+        "ยังไม่ทำ",
+        "รอตรวจ"
+    ]
 }

@@ -276,6 +276,11 @@ app.use('/check',
   ensureTeacher,
   require('./routes/teacher/check.route')
 );
+app.use('/classStudent',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureTeacher,
+  require('./routes/teacher/classStudent.route')
+);
 // *************** // 
 
 // 404 Handler
