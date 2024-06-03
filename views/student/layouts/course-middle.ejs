@@ -87,7 +87,6 @@
                         <li class="breadcrumb-item active" aria-current="page">Course</li>
                     </ol>
                     <!--   ## -->
-
                     <div class="box bg-light  mb-5 shadow" >
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
                             <div lang="ja">
@@ -98,6 +97,7 @@
                                         <p>เนื้อหาบทเรียน</p>
                                         <% if(Pre1done >= 1 ){ %>
                                             <button><a href="/course-Algorithms_and_Flowcharts">เนื้อหาปลดล็อคแล้ว <br>เข้าดูได้เลย!</a></button><br>
+                                            <p>ทางลัดไปยังแบบฝึกหัด</p>
                                             <a href="/course-Algorithms_and_Flowcharts#Knowledge" class="scrollbtnK"  type="button">K</a>
                                             <a href="/course-Algorithms_and_Flowcharts#Tracing" class="scrollbtnT"  type="button">T</a>
                                             <a href="/course-Algorithms_and_Flowcharts#Explaining" class="scrollbtnE"  type="button">E</a>
@@ -117,12 +117,15 @@
                                         <p>เนื้อหาบทเรียน</p>
                                         <% if(Pre2done >= 1 ){ %>
                                             <button><a href="/course-Datatype_and_Variable">เนื้อหาปลดล็อคแล้ว <br>เข้าดูได้เลย!</a></button><br>
+                                            <div style="background-color: #d7ebff; padding: 10px;">
+                                            <h6>ทางลัดไปยังแบบฝึกหัด</h6>
                                             <a href="/course-Datatype_and_Variable#Knowledge" class="scrollbtnK"  type="button">K</a>
                                             <a href="/course-Datatype_and_Variable#Tracing" class="scrollbtnT"  type="button">T</a>
                                             <a href="/course-Datatype_and_Variable#Explaining" class="scrollbtnE"  type="button">E</a>
                                             <a href="/course-Datatype_and_Variable#Writing" class="scrollbtnW" type="button">W</a>
-                                            <hr>
+                                            </div><hr>
                                             <a href="/course-Datatype_and_Variable-quiz">แบบทดสอบหลังเรียน</a>
+                                            
                                         <% } else{ %> 
                                             <p>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
                                         <% } %>
