@@ -6,7 +6,7 @@
         color: #2a2a2a;
         text-decoration: none;
     }
-    p a:hover { 
+    a:hover { 
         color: #ac28ff;
         font-size: large;
         text-shadow:#fff700 1px 0 2px;
@@ -53,6 +53,27 @@
         margin-left: 60px;
         margin-bottom: 20px;
     }
+    .L {
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+        background-color: #a0de87;
+        border-radius: 5px;
+        border: solid;
+        margin: 5px;
+    }
+    .projectbox{
+    width: 350px;
+    height: auto;
+    background-color: #5994ce;
+    box-shadow: 0 0 10px 5px #38fbdb;
+    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
 </style>
 
 <div id = "content" class="container">
@@ -66,20 +87,26 @@
                         <li class="breadcrumb-item active" aria-current="page">Course</li>
                     </ol>
                     <!--   ## -->
+
                     <div class="box bg-light  mb-5 shadow" >
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
                             <div lang="ja">
-                                <p class="wrapbox auto">
-                                    <b>1. Algorithms and Flowcharts </b>
-                                    <br><a href="/course-Algorithms_and_Flowcharts-pretest">แบบทดสอบก่อนเรียน</a>
-                                    <br><a href="/course-Algorithms_and_Flowcharts">เนื้อหาบทเรียน</a>
-                                    <br><a href="/course-Algorithms_and_Flowcharts-quiz">แบบทดสอบหลังเรียน</a>
-                                    <br>
+                                <div class="wrapbox auto projectbox">
+                                    <b>1. Algorithms and Flowcharts </b><hr>
+                                    <div>
+                                    <a href="/course-Algorithms_and_Flowcharts-pretest">แบบทดสอบก่อนเรียน</a>
+                                    
+                                    <hr>
+                                    <a href="/course-Algorithms_and_Flowcharts">เนื้อหาบทเรียน: <%= Pre1 %></a><br>
                                     <a href="/course-Algorithms_and_Flowcharts#Knowledge" class="scrollbtnK"  type="button">K</a>
                                     <a href="/course-Algorithms_and_Flowcharts#Tracing" class="scrollbtnT"  type="button">T</a>
                                     <a href="/course-Algorithms_and_Flowcharts#Explaining" class="scrollbtnE"  type="button">E</a>
                                     <a href="/course-Algorithms_and_Flowcharts#Writing" class="scrollbtnW" type="button">W</a>
-                                </p>
+                                    <hr>
+                                    <a href="/course-Algorithms_and_Flowcharts-quiz">แบบทดสอบหลังเรียน</a>
+                                    </div>
+                                    
+                                </div>
                                 <p class="wrapbox auto">
                                     <b>2. Datatype and Variable </b>
                                     <br><a href="/course-Datatype_and_Variable-pretest">แบบทดสอบก่อนเรียน</a>

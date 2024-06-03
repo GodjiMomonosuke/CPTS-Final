@@ -40,7 +40,7 @@ router.get('/', async (req, res, next) => {
                       if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Operators and Expressions",value:4});}
                       if (StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)'        && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Selection Statements",value:5});}
                       if (StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)'             && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Loop Statements",value:6});}
-                      if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)'           && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Arrays and Strings",value:7});}
+                      if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)'          && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Arrays and Strings",value:7});}
                       if (StudentAnswer[i].contentName ==='Functions-(Post-test)'                   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Functions",value:8});}
                       
                    }
@@ -148,7 +148,7 @@ router.get('/', async (req, res, next) => {
                   //////********END RECOMMENDATION*********** */
 
                   //***PROJECT UNLOCK */
-                  var TicketBooking_SystemPercent = Math.round(((PathTicketBookingSystem.length-DiffTicketBookingSystem.length)/PathTicketBookingSystem.length)*100)
+                    var TicketBooking_SystemPercent = Math.round(((PathTicketBookingSystem.length-DiffTicketBookingSystem.length)/PathTicketBookingSystem.length)*100)
                     var PointofSales_SystemPercent = Math.round(((PathPointofSalesSystem.length-DiffPointofSalesSystem.length)/PathPointofSalesSystem.length)*100)
                     var ProjectQUIZ3Percent = Math.round(((PathProjectQUIZ3.length-DiffProjectQUIZ3.length)/PathProjectQUIZ3.length)*100)
 
@@ -189,7 +189,6 @@ router.get('/', async (req, res, next) => {
                   });
                    //***End Of PROJECT UNLOCK */
 
-
                 var infoPrePostTest = [{ Name:["Algorithms and Flowcharts","Datatype and Variable","Input and Output","Operators and Expressions","Selection Statements","Loop Statements","Arrays and Strings","Functions","_Summary"]}]
                   for (let i = 0; i < Object.keys(StudentAnswer).length; i++){
                     var result = StudentAnswer[i];
@@ -200,13 +199,26 @@ router.get('/', async (req, res, next) => {
                     if (StudentAnswer[i].contentName === "Post-test"){
                       let Sum_Posttest = result.scoreC1+result.scoreC2+result.scoreC3+result.scoreC4+result.scoreC11+result.scoreC5+result.scoreC6+result.scoreC7+result.scoreC8+result.scoreC9+result.scoreC10;
                       infoPrePostTest.push({Post:[result.scoreC1,result.scoreC2,result.scoreC3,result.scoreC4,result.scoreC11,result.scoreC5,result.scoreC6,result.scoreC7,result.scoreC8,result.scoreC9,result.scoreC10,Sum_Posttest]}),PostTestDone = 1}
-                  }
+                    if (StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Post-test)"){
+                      Pre1done = StudentAnswer[i].timetodo;
+                      if(Pre1done >= 1){
+                        Pre1 = "ยังไม่ปลดล็อค"
+                      }else{
+                        Pre1 = "ปลดล็อคแล้ว"
+                      }
+                    }
+
+                    }
 
                 if(PostTestStatus === 0 || PostTestDone === 1){ //if all course not done || post-test done 
-                  res.render('student/course/course_main', { person ,StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest});
+                  res.render('student/course/course_main', { person ,Sum_Pretest, StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest
+                    , Pre1
+                  });
                 }
                 if(PostTestStatus === 1 && PostTestDone === 0){ //if all course done && post-test not done
-                  res.render('student/course/course_main', { person ,StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest});
+                  res.render('student/course/course_main', { person , StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest
+                    , Pre1
+                  });
                 }
                 if(PostTestDone === 1){ //post-test done 
                   MongoClient.connect(url, function(err, db) {
