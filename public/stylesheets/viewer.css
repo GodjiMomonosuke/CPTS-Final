@@ -39,9 +39,10 @@ body {
     height: 200px;
 }
 #bg {
+  position: fixed;
   width: 100%;
   height: 95%;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 
 

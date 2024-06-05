@@ -93,9 +93,11 @@
                                 <div class="wrapbox auto contentbox">
                                     <b>1. Algorithms and Flowcharts </b><hr>
                                     <div>
-                                        <a href="/course-Algorithms_and_Flowcharts-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <a href="/course-Algorithms_and_Flowcharts-pretest">แบบทดสอบก่อนเรียน</a>
+                                        <p><%= pre1LV1 %></p>
+                                        <hr>
                                         <p>เนื้อหาบทเรียน</p>
-                                        <% if(Pre1done >= 1 ){ %>
+                                        <% if(pre1done >= 1 ){ %>
                                             <button><a href="/course-Algorithms_and_Flowcharts">เนื้อหาปลดล็อคแล้ว <br>เข้าดูได้เลย!</a></button><br>
                                             <p>ทางลัดไปยังแบบฝึกหัด</p>
                                             <a href="/course-Algorithms_and_Flowcharts#Knowledge" class="scrollbtnK"  type="button">K</a>
@@ -103,7 +105,7 @@
                                             <a href="/course-Algorithms_and_Flowcharts#Explaining" class="scrollbtnE"  type="button">E</a>
                                             <a href="/course-Algorithms_and_Flowcharts#Writing" class="scrollbtnW" type="button">W</a>
                                             <hr>
-                                            <a href="/course-Algorithms_and_Flowcharts-quiz">แบบทดสอบหลังเรียน</a>
+                                            <a href="/course-Algorithms_and_Flowcharts-quiz">แบบทดสอบหลังเรียน <%= post1LV1 %></a>
                                         <% } else{ %> 
                                             <p>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
                                         <% } %>
@@ -113,9 +115,9 @@
                                 <div class="wrapbox auto contentbox">
                                     <b>2. Datatype and Variable </b><hr>
                                     <div>
-                                        <a href="/course-Datatype_and_Variable-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <a href="/course-Datatype_and_Variable-pretest">แบบทดสอบก่อนเรียน </a><hr>
                                         <p>เนื้อหาบทเรียน</p>
-                                        <% if(Pre2done >= 1 ){ %>
+                                        <% if(pre2done >= 1 ){ %>
                                             <button><a href="/course-Datatype_and_Variable">เนื้อหาปลดล็อคแล้ว <br>เข้าดูได้เลย!</a></button><br>
                                             <div style="background-color: #d7ebff; padding: 10px;">
                                             <h6>ทางลัดไปยังแบบฝึกหัด</h6>

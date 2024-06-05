@@ -201,19 +201,31 @@ router.get('/', async (req, res, next) => {
                       infoPrePostTest.push({Post:[result.scoreC1,result.scoreC2,result.scoreC3,result.scoreC4,result.scoreC11,result.scoreC5,result.scoreC6,result.scoreC7,result.scoreC8,result.scoreC9,result.scoreC10,Sum_Posttest]}),PostTestDone = 1}
                     
                     if (StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Pre-test)"){
-                      var Pre1done = StudentAnswer[i].timetodo;}
+                      var pre1done = StudentAnswer[i].timetodo;
+                      var pre1LV1 = StudentAnswer[i].scoreLV1;
+                    }
+                    if (StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Post-test)"){
+                      var post1done = StudentAnswer[i].timetodo;
+                      var post1LV1 = StudentAnswer[i].scoreLV1;
+                    }
                     if (StudentAnswer[i].contentName === "Datatype_and_Variable-(Pre-test)"){
-                      var Pre2done = StudentAnswer[i].timetodo;}
+                      var pre2done = StudentAnswer[i].timetodo;}
                   }
 
                 if(PostTestStatus === 0 || PostTestDone === 1){ //if all course not done || post-test done 
                   res.render('student/course/course_main', { person ,Sum_Pretest, StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest,
-                    Pre1done, Pre2done
+                    pre1done, pre2done,
+                    pre1LV1,
+                    post1done,
+                    post1LV1
                   });
                 }
                 if(PostTestStatus === 1 && PostTestDone === 0){ //if all course done && post-test not done
                   res.render('student/course/course_main', { person , StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest,
-                    Pre1done, Pre2done
+                    pre1done, pre2done,
+                    pre1LV1,
+                    post1done,
+                    post1LV1
                   });
                 }
                 if(PostTestDone === 1){ //post-test done 
