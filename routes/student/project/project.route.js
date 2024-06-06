@@ -59,9 +59,10 @@ router.get('/', async (req, res, next) => {
 
           
         }
-
+        
       });
     });
+    
     // PRETEST Check
       
   }

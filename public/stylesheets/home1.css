@@ -59,12 +59,15 @@ button.btn-secondary {
 
 
 .btn1 {
-    background-color: #9C7EB7;
-    color: black;
-    border-radius: 5px;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #b957ce;
+    border-radius: 3px;
+    border: solid #444444;
 }
 .btn1:hover {
-    background-color: aquamarine;
+    color: #ffffff;
+    box-shadow: 0 0 10px 5px #38fbdb;
 }
 
 .footer {
@@ -86,7 +89,7 @@ button.btn-secondary {
 
 /* chart */
 
-  .chartMenu p {
+  .chartMenu {
     padding: 10px;
     font-size: 20px;
   }
@@ -138,13 +141,18 @@ button.btn-secondary {
 }
 .progress {
     width: 300px;
-    background-color: #b8ffc5;
+    background-color: aquamarine;
 }
-progress[value]::-webkit-progress-value {
-    background-color: #ff4cbf;
-}
-progress[value]::-webkit-progress-bar {
-    background-color: #ffdef3;
+
+progress[value]::-webkit-progress-value {background-color: #ff4cbf;}
+progress[value]::-webkit-progress-bar {background-color: #5a5a5a;}
+
+.bar {
+    width: 100px; 
+    height: 10px; 
+    background-color: #f7f7f7;
+    margin-top: 4px;
+    box-shadow: 0 0 5px 2px #38fbdb;
 }
 @media (max-width: 1000px) {
     .group, .group2 {display: block;}
