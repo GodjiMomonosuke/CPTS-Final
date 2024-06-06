@@ -185,6 +185,12 @@
                                 <div class="wrapbox auto contentbox">
                                     <b>2. Datatype and Variable </b><hr>
                                     <div>
+                                        <% if(post1done >= 1 ){ %>
+                                           <a class="a" href="/course-Datatype_and_Variable-pretest">แบบทดสอบก่อนเรียน</a><hr> 
+                                        <% } else{ %>
+                                            <p>แบบทดสอบก่อนเรียน <br>ต้องทำแบบทดสอบหลังเรียนบทที่ 1 ก่อน</p><hr>
+                                        <% } %>
+                                        
                                         <% if(pre2done >= 1 ){ %>
                                             <a class="a1" href="/course-Datatype_and_Variable">เนื้อหาปลดล็อคแล้ว <br>กดเข้าไปดูได้เลย!</a><br>
                                             <br><p>ทางลัดไปยังแบบฝึกหัด</p>
@@ -270,7 +276,11 @@
                                 <div class="wrapbox auto contentbox">
                                     <b>3. Input and Output</b><hr>
                                     <div>
-                                        <a class="a"  href="/course-Input_and_Output-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% if(post2done >= 1 ){ %>
+                                            <a class="a"  href="/course-Input_and_Output-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                         <% } else{ %>
+                                             <p>แบบทดสอบก่อนเรียน <br>ต้องทำแบบทดสอบหลังเรียนบทที่ 2 ก่อน</p><hr>
+                                         <% } %>
                                         <% if(pre3done >= 1 ){ %>
                                             <a class="a1"  href="/course-Input_and_Output">เนื้อหาปลดล็อคแล้ว <br>กดเข้าไปดูได้เลย!</a><br>
                                             <br><p>ทางลัดไปยังแบบฝึกหัด</p>
@@ -279,10 +289,10 @@
                                             <a href="/course-Input_and_Output#Explaining" class="scrollbtnE" type="button">E</a>
                                             <a href="/course-Input_and_Output#Writing" class="scrollbtnW" type="button">W</a>
                                             <hr>
-                                            <a class="a"  href="/course-Input_and_Output-quiz">แบบทดสอบหลังเรียน</a>
+                                            <a class="a"  href="/course-Input_and_Output-quiz">แบบทดสอบหลังเรียน</a><hr>
                                         <% } else{ %> 
-                                            <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
-                                        <% } %> <hr>
+                                            <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p><hr>
+                                        <% } %>
                                         <button class="btn btn-info" onclick="myFunction3()">กดเพื่อดูคะแนน</button>
                                         <div id="myDIV3" style="display:none;">
                                             <div class="group2">
@@ -356,7 +366,11 @@
                                 <div class="wrapbox auto contentbox">
                                     <b>4. Operators and Expressions</b><hr>
                                     <div>
-                                        <a class="a"  href="/course-Operators_and_Expressions-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% if(post3done >= 1 ){ %>
+                                            <a class="a"  href="/course-Operators_and_Expressions-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% } else{ %>
+                                            <p>แบบทดสอบก่อนเรียน <br>ต้องทำแบบทดสอบหลังเรียนบทที่ 3 ก่อน</p><hr>
+                                        <% } %>
                                         <% if(pre4done >= 1 ){ %>
                                             <a class="a1"  href="/course-Operators_and_Expressions">เนื้อหาปลดล็อคแล้ว <br>กดเข้าไปดูได้เลย!</a><br>
                                             <br><p>ทางลัดไปยังแบบฝึกหัด</p>
@@ -441,7 +455,11 @@
                                 <div class="wrapbox auto contentbox">
                                     <b>5. Selection Statements</b><hr>
                                     <div>
-                                        <a class="a"  href="/course-Selection_Statements-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% if(post4done >= 1 ){ %>
+                                            <a class="a"  href="/course-Selection_Statements-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% } else{ %>
+                                            <p>แบบทดสอบก่อนเรียน <br>ต้องทำแบบทดสอบหลังเรียนบทที่ 4 ก่อน</p><hr>
+                                        <% } %>
                                         <% if(pre5done >= 1 ){ %>
                                             <a class="a1"  href="/course-Selection_Statements">เนื้อหาปลดล็อคแล้ว <br>กดเข้าไปดูได้เลย!</a><br>
                                             <br><p>ทางลัดไปยังแบบฝึกหัด</p>
@@ -526,7 +544,11 @@
                                 <div class="wrapbox auto contentbox">
                                     <b>6. Loop Statements</b><hr>
                                     <div>
-                                        <a class="a"  href="/course-Loop_Statements-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% if(post5done >= 1 ){ %>
+                                            <a class="a"  href="/course-Loop_Statements-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% } else{ %>
+                                            <p>แบบทดสอบก่อนเรียน <br>ต้องทำแบบทดสอบหลังเรียนบทที่ 5 ก่อน</p><hr>
+                                        <% } %>
                                         <% if(pre5done >= 1 ){ %>
                                             <a class="a1"  href="/course-Loop_Statements">เนื้อหาปลดล็อคแล้ว <br>กดเข้าไปดูได้เลย!</a><br>
                                             <br><p>ทางลัดไปยังแบบฝึกหัด</p>
@@ -611,7 +633,11 @@
                                 <div class="wrapbox auto contentbox">
                                     <b>7. Array and String</b><hr>
                                     <div>
-                                        <a class="a"  href="/course-Arrays_and_Strings-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% if(post6done >= 1 ){ %>
+                                            <a class="a"  href="/course-Arrays_and_Strings-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% } else{ %>
+                                            <p>แบบทดสอบก่อนเรียน <br>ต้องทำแบบทดสอบหลังเรียนบทที่ 6 ก่อน</p><hr>
+                                        <% } %>
                                         <% if(pre5done >= 1 ){ %>
                                             <a class="a1"  href="/course-Arrays_and_Strings">เนื้อหาปลดล็อคแล้ว <br>กดเข้าไปดูได้เลย!</a><br>
                                             <br><p>ทางลัดไปยังแบบฝึกหัด</p>
@@ -696,7 +722,11 @@
                                 <div class="wrapbox auto contentbox">
                                     <b>8. Functions </b><hr>
                                     <div>
-                                        <a class="a"  href="/course-Functions-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% if(post7done >= 1 ){ %>
+                                            <a class="a"  href="/course-Functions-pretest">แบบทดสอบก่อนเรียน</a><hr>
+                                        <% } else{ %>
+                                            <p>แบบทดสอบก่อนเรียน <br>ต้องทำแบบทดสอบหลังเรียนบทที่ 7 ก่อน</p><hr>
+                                        <% } %>
                                         <% if(pre5done >= 1 ){ %>
                                             <a class="a1"  href="/course-Functions">เนื้อหาปลดล็อคแล้ว <br>กดเข้าไปดูได้เลย!</a><br>
                                             <br><p>ทางลัดไปยังแบบฝึกหัด</p>

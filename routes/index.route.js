@@ -541,9 +541,9 @@ router.get('/', async (req, res, next) => {
                         StructureScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         Posttest8Done = 1;
                     }
-                  }
+                  
                   var PrjQuiz1Score = "ยังไม่ได้ทำ", PrjQuiz2Score = "ยังไม่ได้ทำ", PrjQuiz3Score = "ยังไม่ได้ทำ" 
-                  for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {
+                 
                     if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
                       Ticket_Booking_SystemDone = 1;
                         if (StudentAnswer[i].scoreTeacher === undefined) {
