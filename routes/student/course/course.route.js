@@ -376,6 +376,7 @@ router.get('/', async (req, res, next) => {
                         post8LV4 = "⌛️"
                       }
                     }
+                    
                   }
 
                 if(PostTestStatus === 0 || PostTestDone === 1){ //if all course not done || post-test done 

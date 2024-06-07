@@ -29,17 +29,19 @@ else {
         <h1 id = 'content'> Assignment Status </h1>   
         <h5 >ช่องที่เป็นสีแดง <button class="boxcolor">  </button> ให้คลิกเข้าไปฝึกทำแบบฝึกหัดเพิ่มเติม</h5>
 
-        <div class="box bg-light  mb-5 shadow" >
+        <div class="box bg-light  mb-5 shadow" style="padding: 10px; border-radius: 5px;">
         <table class="table text-center">
             <thead>
             <tr>
                 <th scope="col" class="col-1 text-center">ทำครั้งที่</th>
                 <th scope="col" class="col-2 text-center">เวลา</th>
                 <th scope="col" class="col-4 text-center">Quiz</th>
+                <!--
                 <th scope="col" class="col-1 t">Knowledge</th>
                 <th scope="col" class="col-1 t"> Tracing </th>
                 <th scope="col" class="col-1 t">Explaining</th>
                 <th scope="col" class="col-1 t"> Writing </th>
+                -->
                 <th scope="col" class="col-1 t">ผู้ตรวจ</th>
                 </th>
             </tr>
@@ -50,6 +52,7 @@ else {
         var Condition = 0;
         var checkedLV1 = "" ,checkedLV2 = "",checkedLV3 = "",checkedLV4,TeacherCheck;
         var cLV1 = "background-color: #F8F9FA;", cLV2 = "background-color: #F8F9FA;", cLV3 = "background-color: #F8F9FA;", cLV4 = "background-color: #F8F9FA;";
+        var bgColor = "background-color: #F8F9FA;";
         var training1 = "" ,training2 = "", training3 = "", training4 = "";
         var k = "", t = "", e = "", w = "";
 
@@ -81,6 +84,7 @@ else {
         if(typeof(StudentAnswer[i].scoreTeacher) === "string" ){
             checkedLV4 = StudentAnswer[i].scoreTeacher;
             TeacherCheck = StudentAnswer[i].checkedBy;
+            bgColor = "background-color: #93c47d;"
             
             if(StudentAnswer[i].scoreTeacher >= 20){
                cLV4 = "background-color: #93c47d;" 
@@ -95,10 +99,12 @@ else {
         else{
             if(StudentAnswer[i].contentName === ""){
                 checkedLV4 = "";
+
             TeacherCheck = "";
             } else {
                 checkedLV4 = "-";
                 TeacherCheck = "รอตรวจ";
+                bgColor = "background-color: #ed9769;"
             }
         }
 
@@ -258,11 +264,13 @@ else {
             <th scope="row" class="text-center"><%=StudentAnswer[i].timetodo%></th>
             <td class="text-center"><%=StudentAnswer[i].times%></td>
             <td class="text-center"><%=StudentAnswer[i].contentName%></td>
+            <!--
             <td style="<%=cLV1%>" class="text-center"><%=checkedLV1%><br><a class="a" href="<%=k%>"><%=training1%></a></td>
             <td style="<%=cLV2%>" class="text-center"><%=checkedLV2%><br><a class="a" href="<%=t%>"><%=training2%></a></td>
             <td style="<%=cLV3%>" class="text-center"><%=checkedLV3%><br><a class="a" href="<%=e%>"><%=training3%></a></td>
             <td style="<%=cLV4%>" class="text-center"><%=checkedLV4%><br><a class="a" href="<%=w%>"><%=training4%></a></td>
-            <td class="text-center"><%=TeacherCheck%></td>
+            -->
+            <td style="<%=bgColor%>" class="text-center"><%=TeacherCheck%></td>
             
             <tr>
             <%}

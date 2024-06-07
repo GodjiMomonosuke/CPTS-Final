@@ -80,6 +80,24 @@
     text-align: center;
     margin-right: 5px;
   }
+  .scoreRed {
+    font-size: 14px;
+    width: 20px;
+    text-align: center;
+    margin-right: 5px;
+    color: rgb(207, 2, 2);
+    border-radius: 2px;
+  }
+  .button {
+    color: #000000;
+    background-color: #d272e7;
+    border: solid #000000;
+  }
+  .button:hover {
+    color: #ffb3fc;
+    border: solid #fb6ff6;
+    box-shadow: 0 0 10px 5px #fb6ff6;
+  }
 </style>
 
 <div id = "content" class="container">
@@ -98,7 +116,7 @@
                             <div lang="ja">
                                 <div class="wrapbox auto contentbox">
                                     <b>1. Algorithms and Flowcharts </b><hr>
-                                    <div>
+                                    <div> 
                                         <a class="a" href="/course-Algorithms_and_Flowcharts-pretest">แบบทดสอบก่อนเรียน</a><hr>
                                         <% if(pre1done >= 1 ){ %>
                                             <a class="a1"  href="/course-Algorithms_and_Flowcharts">เนื้อหาปลดล็อคแล้ว <br>กดเข้าไปดูได้เลย!</a><br>
@@ -112,19 +130,27 @@
                                         <% } else{ %> 
                                             <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
                                         <% } %><hr>
-                                        <button class="btn btn-info" onclick="myFunction1()">กดเพื่อดูคะแนน</button>
+                                        <button class="btn button" onclick="myFunction1()">กดเพื่อดูคะแนน</button>
                                         <div id="myDIV1" style="display:none;">
                                             <div class="group2">
                                                 <div>
                                                     <b style="font-size: 12px;">Knowledge</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre1LV1 %></b>
+                                                        <% if(pre1LV1 >= 4 ){ %>
+                                                            <b class="score"><%= pre1LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre1LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= pre1LV1*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post1LV1 %></b>
+                                                        <% if(post1LV1 >= 4 ){ %>
+                                                            <b class="score"><%= post1LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post1LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= post1LV1*20 %>px;"></div>
                                                         </div>
@@ -133,13 +159,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Tracing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre1LV2 %></b>
+                                                        <% if(pre1LV2 >= 4 ){ %>
+                                                            <b class="score"><%= pre1LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre1LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= pre1LV2*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post1LV2 %></b>
+                                                        <% if(post1LV2 >= 4 ){ %>
+                                                            <b class="score"><%= post1LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post1LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= post1LV2*20 %>px;"></div>
                                                         </div>
@@ -150,13 +184,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Explaining</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre1LV3 %></b>
+                                                        <% if(pre1LV3 >= 4 ){ %>
+                                                            <b class="score"><%= pre1LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre1LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= pre1LV3*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post1LV3 %></b>
+                                                        <% if(post1LV3 >= 4 ){ %>
+                                                            <b class="score"><%= post1LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post1LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= post1LV3*20 %>px;"></div>
                                                         </div>
@@ -165,13 +207,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Writing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre1LV4 %></b>
+                                                        <% if(pre1LV4 >= 20 ){ %>
+                                                            <b class="score"><%= pre1LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre1LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= pre1LV4*4 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post1LV4 %></b>
+                                                        <% if(post1LV4 >= 20 ){ %>
+                                                            <b class="score"><%= post1LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post1LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= post1LV4*4 %>px;"></div>
                                                         </div>
@@ -203,19 +253,27 @@
                                         <% } else{ %> 
                                             <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
                                         <% } %> <hr>
-                                        <button class="btn btn-info" onclick="myFunction2()">กดเพื่อดูคะแนน</button>
+                                        <button class="btn button" onclick="myFunction2()">กดเพื่อดูคะแนน</button>
                                         <div id="myDIV2" style="display:none;">
                                             <div class="group2">
                                                 <div>
                                                     <b style="font-size: 12px;">Knowledge</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre2LV1 %></b>
+                                                        <% if(pre2LV1 >= 4 ){ %>
+                                                            <b class="score"><%= pre2LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre2LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= pre2LV1*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post2LV1 %></b>
+                                                        <% if(post2LV1 >= 4 ){ %>
+                                                            <b class="score"><%= post2LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post2LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= post2LV1*20 %>px;"></div>
                                                         </div>
@@ -224,13 +282,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Tracing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre2LV2 %></b>
+                                                        <% if(pre2LV2 >= 4 ){ %>
+                                                            <b class="score"><%= pre2LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre2LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= pre2LV2*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post2LV2 %></b>
+                                                        <% if(post2LV2 >= 4 ){ %>
+                                                            <b class="score"><%= post2LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post2LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= post2LV2*20 %>px;"></div>
                                                         </div>
@@ -241,13 +307,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Explaining</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre2LV3 %></b>
+                                                        <% if(pre2LV3 >= 4 ){ %>
+                                                            <b class="score"><%= pre2LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre2LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= pre2LV3*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post2LV3 %></b>
+                                                        <% if(post2LV3 >= 4 ){ %>
+                                                            <b class="score"><%= post2LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post2LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= post2LV3*20 %>px;"></div>
                                                         </div>
@@ -256,13 +330,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Writing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre2LV4 %></b>
+                                                        <% if(pre2LV4 >= 4 ){ %>
+                                                            <b class="score"><%= pre2LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre2LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= pre2LV4*4 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post2LV4 %></b>
+                                                        <% if(post2LV4 >= 4 ){ %>
+                                                            <b class="score"><%= post2LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post2LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= post2LV4*4 %>px;"></div>
                                                         </div>
@@ -293,19 +375,27 @@
                                         <% } else{ %> 
                                             <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p><hr>
                                         <% } %>
-                                        <button class="btn btn-info" onclick="myFunction3()">กดเพื่อดูคะแนน</button>
+                                        <button class="btn button" onclick="myFunction3()">กดเพื่อดูคะแนน</button>
                                         <div id="myDIV3" style="display:none;">
                                             <div class="group2">
                                                 <div>
                                                     <b style="font-size: 12px;">Knowledge</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre3LV1 %></b>
+                                                        <% if(pre3LV1 >= 4 ){ %>
+                                                            <b class="score"><%= pre3LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre3LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= pre3LV1*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post3LV1 %></b>
+                                                        <% if(post3LV1 >= 4 ){ %>
+                                                            <b class="score"><%= post3LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post3LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= post3LV1*20 %>px;"></div>
                                                         </div>
@@ -314,13 +404,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Tracing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre3LV2 %></b>
+                                                        <% if(pre3LV2 >= 4 ){ %>
+                                                            <b class="score"><%= pre3LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre3LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= pre3LV2*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post3LV2 %></b>
+                                                        <% if(post3LV2 >= 4 ){ %>
+                                                            <b class="score">*<%= post3LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post3LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= post3LV2*20 %>px;"></div>
                                                         </div>
@@ -331,13 +429,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Explaining</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre3LV3 %></b>
+                                                        <% if(pre3LV3 >= 4 ){ %>
+                                                            <b class="score"><%= pre3LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre3LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= pre3LV3*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post3LV3 %></b>
+                                                        <% if(post3LV3 >= 4 ){ %>
+                                                            <b class="score"><%= post3LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post3LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= post3LV3*20 %>px;"></div>
                                                         </div>
@@ -346,13 +452,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Writing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre3LV4 %></b>
+                                                        <% if(pre3LV4 >= 4 ){ %>
+                                                            <b class="score"><%= pre3LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre3LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= pre3LV4*4 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post3LV4 %></b>
+                                                        <% if(post3LV4 >= 4 ){ %>
+                                                            <b class="score"><%= post3LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post3LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= post3LV4*4 %>px;"></div>
                                                         </div>
@@ -383,19 +497,27 @@
                                         <% } else{ %> 
                                             <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
                                         <% } %> <hr>
-                                        <button class="btn btn-info" onclick="myFunction4()">กดเพื่อดูคะแนน</button>
+                                        <button class="btn button" onclick="myFunction4()">กดเพื่อดูคะแนน</button>
                                         <div id="myDIV4" style="display:none;">
                                             <div class="group2">
                                                 <div>
                                                     <b style="font-size: 12px;">Knowledge</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre4LV1 %></b>
+                                                        <% if(pre4LV1 >= 4 ){ %>
+                                                            <b class="score"><%= pre4LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre4LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= pre4LV1*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post4LV1 %></b>
+                                                        <% if(post4LV1 >= 4 ){ %>
+                                                            <b class="score"><%= post4LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post4LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= post4LV1*20 %>px;"></div>
                                                         </div>
@@ -404,13 +526,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Tracing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre4LV2 %></b>
+                                                        <% if(pre4LV2 >= 4 ){ %>
+                                                            <b class="score"><%= pre4LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre4LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= pre4LV2*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post4LV2 %></b>
+                                                        <% if(post4LV2 >= 4 ){ %>
+                                                            <b class="score"><%= post4LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post4LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= post4LV2*20 %>px;"></div>
                                                         </div>
@@ -421,13 +551,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Explaining</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre4LV3 %></b>
+                                                        <% if(pre4LV3 >= 4 ){ %>
+                                                            <b class="score"><%= pre4LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre4LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= pre4LV3*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post4LV3 %></b>
+                                                        <% if(post4LV3 >= 4 ){ %>
+                                                            <b class="score"><%= post4LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post4LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= post4LV3*20 %>px;"></div>
                                                         </div>
@@ -436,13 +574,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Writing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre4LV4 %></b>
+                                                        <% if(pre4LV4 >= 4 ){ %>
+                                                            <b class="score"><%= pre4LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre4LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= pre4LV4*4 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post4LV4 %></b>
+                                                        <% if(post4LV4 >= 4 ){ %>
+                                                            <b class="score"><%= post4LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post4LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= post4LV4*4 %>px;"></div>
                                                         </div>
@@ -472,19 +618,27 @@
                                         <% } else{ %> 
                                             <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
                                         <% } %> <hr>
-                                        <button class="btn btn-info" onclick="myFunction5()">กดเพื่อดูคะแนน</button>
+                                        <button class="btn button" onclick="myFunction5()">กดเพื่อดูคะแนน</button>
                                         <div id="myDIV5" style="display:none;">
                                             <div class="group2">
                                                 <div>
                                                     <b style="font-size: 12px;">Knowledge</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre5LV1 %></b>
+                                                        <% if(pre5LV1 >= 4 ){ %>
+                                                            <b class="score"><%= pre5LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre5LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= pre5LV1*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post5LV1 %></b>
+                                                        <% if(post5LV1 >= 4 ){ %>
+                                                            <b class="score"><%= post5LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post5LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= post5LV1*20 %>px;"></div>
                                                         </div>
@@ -493,13 +647,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Tracing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre5LV2 %></b>
+                                                        <% if(pre5LV2 >= 4 ){ %>
+                                                            <b class="score"><%= pre5LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre5LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= pre5LV2*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post5LV2 %></b>
+                                                        <% if(post5LV2 >= 4 ){ %>
+                                                            <b class="score"><%= post5LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post5LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= post5LV2*20 %>px;"></div>
                                                         </div>
@@ -510,13 +672,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Explaining</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre5LV3 %></b>
+                                                        <% if(pre5LV3 >= 4 ){ %>
+                                                            <b class="score"><%= pre5LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre5LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= pre5LV3*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post5LV3 %></b>
+                                                        <% if(post5LV3 >= 4 ){ %>
+                                                            <b class="score"><%= post5LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post5LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= post5LV3*20 %>px;"></div>
                                                         </div>
@@ -525,13 +695,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Writing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre5LV4 %></b>
+                                                        <% if(pre5LV4 >= 4 ){ %>
+                                                            <b class="score"><%= pre5LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre5LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= pre5LV4*4 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post5LV4 %></b>
+                                                        <% if(post5LV4 >= 4 ){ %>
+                                                            <b class="score"><%= post5LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post5LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= post5LV4*4 %>px;"></div>
                                                         </div>
@@ -561,19 +739,27 @@
                                         <% } else{ %> 
                                             <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
                                         <% } %> <hr>
-                                        <button class="btn btn-info" onclick="myFunction6()">กดเพื่อดูคะแนน</button>
+                                        <button class="btn button" onclick="myFunction6()">กดเพื่อดูคะแนน</button>
                                         <div id="myDIV6" style="display:none;">
                                             <div class="group2">
                                                 <div>
                                                     <b style="font-size: 12px;">Knowledge</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre6LV1 %></b>
+                                                        <% if(pre6LV1 >= 4 ){ %>
+                                                            <b class="score"><%= pre6LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre6LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= pre6LV1*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post6LV1 %></b>
+                                                        <% if(post6LV1 >= 4 ){ %>
+                                                            <b class="score"><%= post6LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post6LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= post6LV1*20 %>px;"></div>
                                                         </div>
@@ -582,13 +768,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Tracing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre6LV2 %></b>
+                                                        <% if(pre6LV2 >= 4 ){ %>
+                                                            <b class="score"><%= pre6LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre6LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= pre6LV2*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post6LV2 %></b>
+                                                        <% if(post6LV2 >= 4 ){ %>
+                                                            <b class="score"><%= post6LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post6LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= post6LV2*20 %>px;"></div>
                                                         </div>
@@ -599,13 +793,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Explaining</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre6LV3 %></b>
+                                                        <% if(pre6LV3 >= 4 ){ %>
+                                                            <b class="score"><%= pre6LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre6LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= pre6LV3*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post6LV3 %></b>
+                                                        <% if(post6LV3 >= 4 ){ %>
+                                                            <b class="score"><%= post6LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post6LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= post6LV3*20 %>px;"></div>
                                                         </div>
@@ -614,13 +816,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Writing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre6LV4 %></b>
+                                                        <% if(pre6LV4 >= 4 ){ %>
+                                                            <b class="score"><%= pre6LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre6LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= pre6LV4*4 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post6LV4 %></b>
+                                                        <% if(post6LV4 >= 4 ){ %>
+                                                            <b class="score"><%= post6LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post6LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= post6LV4*4 %>px;"></div>
                                                         </div>
@@ -650,19 +860,27 @@
                                         <% } else{ %> 
                                             <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
                                         <% } %> <hr>
-                                        <button class="btn btn-info" onclick="myFunction7()">กดเพื่อดูคะแนน</button>
+                                        <button class="btn button" onclick="myFunction7()">กดเพื่อดูคะแนน</button>
                                         <div id="myDIV7" style="display:none;">
                                             <div class="group2">
                                                 <div>
                                                     <b style="font-size: 12px;">Knowledge</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre7LV1 %></b>
+                                                        <% if(pre7LV1 >= 4 ){ %>
+                                                            <b class="score"><%= pre7LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre7LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= pre7LV1*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post7LV1 %></b>
+                                                        <% if(post7LV1 >= 4 ){ %>
+                                                            <b class="score"><%= post7LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post7LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= post7LV1*20 %>px;"></div>
                                                         </div>
@@ -671,13 +889,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Tracing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre7LV2 %></b>
+                                                        <% if(pre7LV2 >= 4 ){ %>
+                                                            <b class="score"><%= pre7LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre7LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= pre7LV2*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post7LV2 %></b>
+                                                        <% if(post7LV2 >= 4 ){ %>
+                                                            <b class="score"><%= post7LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post7LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= post7LV2*20 %>px;"></div>
                                                         </div>
@@ -688,13 +914,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Explaining</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre7LV3 %></b>
+                                                        <% if(pre7LV3 >= 4 ){ %>
+                                                            <b class="score"><%= pre7LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre7LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= pre7LV3*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post7LV3 %></b>
+                                                        <% if(post7LV3 >= 4 ){ %>
+                                                            <b class="score"><%= post7LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post7LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= post7LV3*20 %>px;"></div>
                                                         </div>
@@ -703,13 +937,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Writing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre7LV4 %></b>
+                                                        <% if(pre7LV4 >= 4 ){ %>
+                                                            <b class="score"><%= pre7LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre7LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= pre7LV4*4 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post7LV4 %></b>
+                                                        <% if(post7LV4 >= 4 ){ %>
+                                                            <b class="score"><%= post7LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post7LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= post7LV4*4 %>px;"></div>
                                                         </div>
@@ -739,19 +981,27 @@
                                         <% } else{ %> 
                                             <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
                                         <% } %> <hr>
-                                        <button class="btn btn-info" onclick="myFunction8()">กดเพื่อดูคะแนน</button>
+                                        <button class="btn button" onclick="myFunction8()">กดเพื่อดูคะแนน</button>
                                         <div id="myDIV8" style="display:none;">
                                             <div class="group2">
                                                 <div>
                                                     <b style="font-size: 12px;">Knowledge</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre8LV1 %></b>
+                                                        <% if(pre8LV1 >= 4 ){ %>
+                                                            <b class="score"><%= pre8LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre8LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= pre8LV1*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post8LV1 %></b>
+                                                        <% if(post8LV1 >= 4 ){ %>
+                                                            <b class="score"><%= post8LV1 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post8LV1 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb26f; height: 10px; width: <%= post8LV1*20 %>px;"></div>
                                                         </div>
@@ -760,13 +1010,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Tracing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre8LV2 %></b>
+                                                        <% if(pre8LV2 >= 4 ){ %>
+                                                            <b class="score"><%= pre8LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre8LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= pre8LV2*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post8LV2 %></b>
+                                                        <% if(post8LV2 >= 4 ){ %>
+                                                            <b class="score"><%= post8LV2 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post8LV2 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #38fbdb; height: 10px; width: <%= post8LV2*20 %>px;"></div>
                                                         </div>
@@ -777,13 +1035,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Explaining</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre8LV3 %></b>
+                                                        <% if(pre8LV3 >= 4 ){ %>
+                                                            <b class="score"><%= pre8LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre8LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= pre8LV3*20 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post8LV3 %></b>
+                                                        <% if(post8LV3 >= 4 ){ %>
+                                                            <b class="score"><%= post8LV3 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post8LV3 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #ffb8f8; height: 10px; width: <%= post8LV3*20 %>px;"></div>
                                                         </div>
@@ -792,13 +1058,21 @@
                                                 <div>
                                                     <b style="font-size: 12px;">Writing</b>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= pre8LV4 %></b>
+                                                        <% if(pre8LV4 >= 4 ){ %>
+                                                            <b class="score">*<%= pre8LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= pre8LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= pre8LV4*4 %>px;"></div>
                                                         </div>
                                                     </div>
                                                     <div style="display: flex;">
-                                                        <b class="score"><%= post8LV4 %></b>
+                                                        <% if(post8LV4 >= 4 ){ %>
+                                                            <b class="score"><%= post8LV4 %></b>
+                                                        <% } else{ %> 
+                                                            <b class="scoreRed"><%= post8LV4 %></b>
+                                                        <% } %>
                                                         <div class="bar">
                                                             <div style="background-color: #a0de87; height: 10px; width: <%= post8LV4*4 %>px;"></div>
                                                         </div>
