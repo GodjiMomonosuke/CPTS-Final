@@ -541,8 +541,9 @@ router.get('/', async (req, res, next) => {
                         StructureScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
                         Posttest8Done = 1;
                     }
-                    //** **//
-                    var PrjQuiz1Score = "ยังไม่ได้ทำ", PrjQuiz2Score = "ยังไม่ได้ทำ", PrjQuiz3Score = "ยังไม่ได้ทำ" 
+                  
+                  var PrjQuiz1Score = "ยังไม่ได้ทำ", PrjQuiz2Score = "ยังไม่ได้ทำ", PrjQuiz3Score = "ยังไม่ได้ทำ" 
+                 
                     if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
                       Ticket_Booking_SystemDone = 1;
                         if (StudentAnswer[i].scoreTeacher === undefined) {
@@ -561,7 +562,7 @@ router.get('/', async (req, res, next) => {
                           PrjQuiz3Score = "รอตรวจ"
                         } else {PrjQuiz3Score = parseInt(StudentAnswer[i].scoreTeacher) + "/25 คะแนน";}
                     }
-                  }
+              }
 
                 /*** SUM */
 
@@ -597,9 +598,7 @@ router.get('/', async (req, res, next) => {
                 WritePercent = WritePercent;
                 
                 //** Project Quiz Score */
-                PrjQuiz1 = PrjQuiz1Score;
-                PrjQuiz2 = PrjQuiz1Score;
-                PrjQuiz3 = PrjQuiz1Score;
+               
                 
                 //////********RECOMMENDATION*********** */
 
@@ -771,7 +770,7 @@ router.get('/', async (req, res, next) => {
 
 
                     res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,
-                      PrjQuiz1,PrjQuiz2,PrjQuiz3,
+                      PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
                       PreBasicPercent,PreTracePercent,PreExplainPercent,PreWritePercent,
                       TicketBooking_SystemPercent,PointofSales_SystemPercent,ProjectQUIZ3Percent

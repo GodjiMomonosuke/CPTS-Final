@@ -194,30 +194,217 @@ router.get('/', async (req, res, next) => {
                     var result = StudentAnswer[i];
                     
                     if (StudentAnswer[i].contentName === "Pre-test"){
-                      let Sum_Pretest = result.scoreC1+result.scoreC2+result.scoreC3+result.scoreC4+result.scoreC11+result.scoreC5+result.scoreC6+result.scoreC7+result.scoreC8+result.scoreC9+result.scoreC10;
+                      var Sum_Pretest = result.scoreC1+result.scoreC2+result.scoreC3+result.scoreC4+result.scoreC11+result.scoreC5+result.scoreC6+result.scoreC7+result.scoreC8+result.scoreC9+result.scoreC10;
                       infoPrePostTest.push({Pre:[result.scoreC1,result.scoreC2,result.scoreC3,result.scoreC4,result.scoreC11,result.scoreC5,result.scoreC6,result.scoreC7,result.scoreC8,result.scoreC9,result.scoreC10,Sum_Pretest]})}
                     if (StudentAnswer[i].contentName === "Post-test"){
-                      let Sum_Posttest = result.scoreC1+result.scoreC2+result.scoreC3+result.scoreC4+result.scoreC11+result.scoreC5+result.scoreC6+result.scoreC7+result.scoreC8+result.scoreC9+result.scoreC10;
+                      var Sum_Posttest = result.scoreC1+result.scoreC2+result.scoreC3+result.scoreC4+result.scoreC11+result.scoreC5+result.scoreC6+result.scoreC7+result.scoreC8+result.scoreC9+result.scoreC10;
                       infoPrePostTest.push({Post:[result.scoreC1,result.scoreC2,result.scoreC3,result.scoreC4,result.scoreC11,result.scoreC5,result.scoreC6,result.scoreC7,result.scoreC8,result.scoreC9,result.scoreC10,Sum_Posttest]}),PostTestDone = 1}
-                    if (StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Post-test)"){
-                      Pre1done = StudentAnswer[i].timetodo;
-                      if(Pre1done >= 1){
-                        Pre1 = "ยังไม่ปลดล็อค"
+                    
+                    if (StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Pre-test)"){
+                      var pre1done = StudentAnswer[i].timetodo;
+                      var pre1LV1 = StudentAnswer[i].scoreLV1;
+                      var pre1LV2 = StudentAnswer[i].scoreLV2;
+                      var pre1LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var pre1LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
-                        Pre1 = "ปลดล็อคแล้ว"
+                        pre1LV4 = "⌛️"
                       }
                     }
-
+                    if (StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Post-test)"){
+                      var post1done = StudentAnswer[i].timetodo;
+                      var post1LV1 = StudentAnswer[i].scoreLV1;
+                      var post1LV2 = StudentAnswer[i].scoreLV2;
+                      var post1LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var post1LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        post1LV4 = "⌛️"
+                      }
                     }
+                    if (StudentAnswer[i].contentName === "Datatype_and_Variable-(Pre-test)"){
+                      var pre2done = StudentAnswer[i].timetodo;
+                      var pre2LV1 = StudentAnswer[i].scoreLV1;
+                      var pre2LV2 = StudentAnswer[i].scoreLV2;
+                      var pre2LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var pre2LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        pre2LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Datatype_and_Variable-(Post-test)"){
+                      var post2done = StudentAnswer[i].timetodo;
+                      var post2LV1 = StudentAnswer[i].scoreLV1;
+                      var post2LV2 = StudentAnswer[i].scoreLV2;
+                      var post2LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var post2LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        post2LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Input_and_Output-(Pre-test)"){
+                      var pre3done = StudentAnswer[i].timetodo;
+                      var pre3LV1 = StudentAnswer[i].scoreLV1;
+                      var pre3LV2 = StudentAnswer[i].scoreLV2;
+                      var pre3LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var pre3LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        pre3LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Input_and_Output-(Post-test)"){
+                      var post3done = StudentAnswer[i].timetodo;
+                      var post3LV1 = StudentAnswer[i].scoreLV1;
+                      var post3LV2 = StudentAnswer[i].scoreLV2;
+                      var post3LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var post3LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        post3LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Operators_and_Expressions-(Pre-test)"){
+                      var pre4done = StudentAnswer[i].timetodo;
+                      var pre4LV1 = StudentAnswer[i].scoreLV1;
+                      var pre4LV2 = StudentAnswer[i].scoreLV2;
+                      var pre4LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var pre4LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        pre4LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Operators_and_Expressions-(Post-test)"){
+                      var post4done = StudentAnswer[i].timetodo;
+                      var post4LV1 = StudentAnswer[i].scoreLV1;
+                      var post4LV2 = StudentAnswer[i].scoreLV2;
+                      var post4LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var post4LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        post4LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Selection_Statements-(Pre-test)"){
+                      var pre5done = StudentAnswer[i].timetodo;
+                      var pre5LV1 = StudentAnswer[i].scoreLV1;
+                      var pre5LV2 = StudentAnswer[i].scoreLV2;
+                      var pre5LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var pre5LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        pre5LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Selection_Statements-(Post-test)"){
+                      var post5done = StudentAnswer[i].timetodo;
+                      var post5LV1 = StudentAnswer[i].scoreLV1;
+                      var post5LV2 = StudentAnswer[i].scoreLV2;
+                      var post5LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var post5LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        post5LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Loop_Statements-(Pre-test)"){
+                      var pre6done = StudentAnswer[i].timetodo;
+                      var pre6LV1 = StudentAnswer[i].scoreLV1;
+                      var pre6LV2 = StudentAnswer[i].scoreLV2;
+                      var pre6LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var pre6LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        pre6LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Loop_Statements-(Post-test)"){
+                      var post6done = StudentAnswer[i].timetodo;
+                      var post6LV1 = StudentAnswer[i].scoreLV1;
+                      var post6LV2 = StudentAnswer[i].scoreLV2;
+                      var post6LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var post6LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        post6LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Arrays_and_Strings-(Pre-test)"){
+                      var pre7done = StudentAnswer[i].timetodo;
+                      var pre7LV1 = StudentAnswer[i].scoreLV1;
+                      var pre7LV2 = StudentAnswer[i].scoreLV2;
+                      var pre7LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var pre7LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        pre7LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Arrays_and_Strings-(Post-test)"){
+                      var post7done = StudentAnswer[i].timetodo;
+                      var post7LV1 = StudentAnswer[i].scoreLV1;
+                      var post7LV2 = StudentAnswer[i].scoreLV2;
+                      var post7LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var post7LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        post7LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Functions-(Pre-test)"){
+                      var pre8done = StudentAnswer[i].timetodo;
+                      var pre8LV1 = StudentAnswer[i].scoreLV1;
+                      var pre8LV2 = StudentAnswer[i].scoreLV2;
+                      var pre8LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var pre8LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        pre8LV4 = "⌛️"
+                      }
+                    }
+                    if (StudentAnswer[i].contentName === "Functions-(Post-test)"){
+                      var post8done = StudentAnswer[i].timetodo;
+                      var post8LV1 = StudentAnswer[i].scoreLV1;
+                      var post8LV2 = StudentAnswer[i].scoreLV2;
+                      var post8LV3 = StudentAnswer[i].scoreLV3;
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                        var post8LV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{
+                        post8LV4 = "⌛️"
+                      }
+                    }
+                    
+                  }
 
                 if(PostTestStatus === 0 || PostTestDone === 1){ //if all course not done || post-test done 
-                  res.render('student/course/course_main', { person ,Sum_Pretest, StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest
-                    , Pre1
+                  res.render('student/course/course_main', { person ,Sum_Pretest, StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest,
+                    pre1done,pre2done,pre3done,pre4done,pre5done,pre6done,pre7done,pre8done,
+                    pre1LV1,pre2LV1,pre3LV1,pre4LV1,pre5LV1,pre6LV1,pre7LV1,pre8LV1,
+                    pre1LV2,pre2LV2,pre3LV2,pre4LV2,pre5LV2,pre6LV2,pre7LV2,pre8LV2,
+                    pre1LV3,pre2LV3,pre3LV3,pre4LV3,pre5LV3,pre6LV3,pre7LV3,pre8LV3,
+                    pre1LV4,pre2LV4,pre3LV4,pre4LV4,pre5LV4,pre6LV4,pre7LV4,pre8LV4,
+                    post1done,post2done,post3done,post4done,post5done,post6done,post7done,post8done,
+                    post1LV1,post2LV1,post3LV1,post4LV1,post5LV1,post6LV1,post7LV1,post8LV1,
+                    post1LV2,post2LV2,post3LV2,post4LV2,post5LV2,post6LV2,post7LV2,post8LV2,
+                    post1LV3,post2LV3,post3LV3,post4LV3,post5LV3,post6LV3,post7LV3,post8LV3,
+                    post1LV4,post2LV4,post3LV4,post4LV4,post5LV4,post6LV4,post7LV4,post8LV4
                   });
                 }
                 if(PostTestStatus === 1 && PostTestDone === 0){ //if all course done && post-test not done
-                  res.render('student/course/course_main', { person , StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest
-                    , Pre1
+                  res.render('student/course/course_main', { person , StudentAnswer,RecommendaResult ,PostTestDone,infoPrePostTest,
+                    pre1done,pre2done,pre3done,pre4done,pre5done,pre6done,pre7done,pre8done,
+                    pre1LV1,pre2LV1,pre3LV1,pre4LV1,pre5LV1,pre6LV1,pre7LV1,pre8LV1,
+                    pre1LV2,pre2LV2,pre3LV2,pre4LV2,pre5LV2,pre6LV2,pre7LV2,pre8LV2,
+                    pre1LV3,pre2LV3,pre3LV3,pre4LV3,pre5LV3,pre6LV3,pre7LV3,pre8LV3,
+                    pre1LV4,pre2LV4,pre3LV4,pre4LV4,pre5LV4,pre6LV4,pre7LV4,pre8LV4,
+                    post1done,post2done,post3done,post4done,post5done,post6done,post7done,post8done,
+                    post1LV1,post2LV1,post3LV1,post4LV1,post5LV1,post6LV1,post7LV1,post8LV1,
+                    post1LV2,post2LV2,post3LV2,post4LV2,post5LV2,post6LV2,post7LV2,post8LV2,
+                    post1LV3,post2LV3,post3LV3,post4LV3,post5LV3,post6LV3,post7LV3,post8LV3,
+                    post1LV4,post2LV4,post3LV4,post4LV4,post5LV4,post6LV4,post7LV4,post8LV4
                   });
                 }
                 if(PostTestDone === 1){ //post-test done 
