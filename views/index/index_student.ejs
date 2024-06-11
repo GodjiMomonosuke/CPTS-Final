@@ -25,7 +25,7 @@
             background-color: #f1f1f1;
             width: 250px;
         }
-        h1,h3 {
+        h1,h4 {
             color: #ffffff;
         }
         table {
@@ -183,7 +183,7 @@
                     </div>
                     <div  class="group2">
                         <div>
-                        <h3>***</h3> 
+                        <h4 class="chakra-petch-regular">Total score</h4> 
                         <div>
                             <div class="boxbax2">  
                                 <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
@@ -234,7 +234,7 @@
                         </div>
                         </div>
                         <div>
-                            <h3>***</h3>   
+                            <h4 class="chakra-petch-regular">Skill</h4>   
                             <div style="height: 400px;" class="">
                                 <div class="chartCard">
                                     <div class="chartBox">
@@ -244,17 +244,18 @@
                                 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
                                 <script>
                                     // setup 
-
+                                    // [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, <%= PreWritePercent %>]
+                                    // [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, <%= WritePercent %>]
                                     Chart.defaults.borderColor = '#36A2EB';
                                     const data = {
                                         labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
                                         datasets: [{
-                                            data: [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, 10],
+                                            data: [15,20,15,30],
                                             label: "Pre-test",
                                             borderColor: '#11a1c1',
                                             backgroundColor: '#11a1c149',
                                         },{
-                                            data: [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, 35],
+                                            data: [50,55,45,40],
                                             label: "Post-test",
                                             borderColor: '#ffc107',
                                             fill: true,

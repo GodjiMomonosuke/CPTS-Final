@@ -85,11 +85,11 @@
                           </div>
                     </div>
                 </div>
-                <% if(count >=3 || count === 0) { %> <%# Follow node %> 
+                <% if(count === 0) { %> <%# Follow node %> 
                     <h3>Project ปลดล็อกครบแล้ว!</h3>
                     <a href="/" class="btn button">กลับไปหน้าแรก</a>
                   <% } else{ %>  
-                    <h3>มีอีก <%= count %> Project ที่ไม่ปลดล็อก!</h3>
+                    <h3>มีอีก <%= count %> Project ที่ยังไม่ปลดล็อก!</h3>
                     <a href="/course" class="btn button">เข้าสู่บทเรียน</a>
                  <% } %>
                 
