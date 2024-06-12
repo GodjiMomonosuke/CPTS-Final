@@ -13,15 +13,17 @@
 
 .item1 {
     height: 140px;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 10px;
     width: 400px; 
     border-radius: 5px;
     margin-bottom: 10px;
+    box-shadow: 0 0 10px 5px #38fbdb;
+
 }
 .item2 {
     height: 160px;
-    background-color: #E2D9E5;
+    background-color: #fff;
     padding: 10px;
     width: auto;
 }
@@ -120,8 +122,9 @@ button.btn-secondary {
     height: auto;
     border-radius: 5px;
     padding: 10px;
-    background-color: #ffffff;
+    background-color: #fff;
     margin-bottom: 10px;
+    box-shadow: 0 0 10px 5px #38fbdb;
 }
 .boxbax2 {
     width: 400px; 
@@ -145,7 +148,7 @@ button.btn-secondary {
 }
 
 progress[value]::-webkit-progress-value {background-color: #ff4cbf;}
-progress[value]::-webkit-progress-bar {background-color: #5a5a5a;}
+progress[value]::-webkit-progress-bar {background-color: #dadada;}
 
 .bar {
     width: 100px; 
