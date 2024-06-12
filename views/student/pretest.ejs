@@ -22,10 +22,19 @@
                 font-size: 3.5rem;
             }
         }
+        .button {
+            background-color: #fff;
+            color: black;
+            height: 30px;
+            width: 150px;
+            text-align: center;
+            border-radius: 5px;
+            border: solid black;
+        }
     </style>
 
     
-    <title>Ready</title>
+    <title>Guide</title>
 </head>
 
 <body>
@@ -44,13 +53,12 @@
     </style>
 <br><br><br>
     <div id = "content" class="container">
-    <h2>พร้อมเริ่มเรียนมั้ยเอ่ย?</h2>
+    <h2>แนะนำการใช้งาน</h2>
 
 <%# START %> 
 <form action="/pretestSubmit" method="post" autocomplete="off" >
     <%# button %> 
     <div class="btn-group me-2" role="group" aria-label="Basic outlined example">
-        <!--
         <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
         class="btn btn-secondary collapsed" data-bs-target="#test1" >1</button>      
         <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
@@ -82,409 +90,88 @@
         <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
         class="btn btn-secondary collapsed" data-bs-target="#test10">14</button>
         <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
-        class="btn btn-secondary collapsed" data-bs-target="#test10">15</button>-->
+        class="btn btn-secondary collapsed" data-bs-target="#test10">15</button>
+        <button type="submit" class="btn btn-outline-dark">ข้าม</button>
     </div>
-        <button type="submit" class="btn btn-outline-dark">พร้อม!!!!</button>
+        
 
 <%# content %> 
 
     <div class="accordion accordion-flush" id="accordionMain">
-    <%# %>
-        <div id="test0" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-            
-        </div>
-<!--
+<%# %>
+    <div id="test0" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+        <br>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test1" >แนะนำการใข้งาน</button>  
+        <button type="submit" class="btn btn-outline-dark">ข้าม</button>
+    </div>
+
 <%# test1 %>
+<br>
     <div id="test1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-        <%# choice %> 
-        <div class="row align-items-start">
-            <div>
-            <b>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</b>
-            </div>
-            <div class="col">
-              <%# test %>         
-                <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        1. Algorithm คืออะไร
+        <div class="item1" style="border-radius: 5px;">
+                    <b>คลิกเพื่อเข้าร่วม Class</b><br>
+                    <p type="" class="button" >
+                        <svg width="17.5" height="20" style="font-size: 20px;;align-items: center;" viewBox="0 0 448 512">
+                        <path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/>
+                        </svg><b> Join Class</b>
                     </p>
-                    
-                    <input type="radio" class="btn-check" name="c11" id="c11o1" autocomplete="off" value="A" required >
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c11o1">
-                        โปรแกรมที่ถูกคอมไพล์แล้วเสร็จสิ้น
-                    </label>
-                    <input type="radio" class="btn-check" name="c11" id="c11o2" autocomplete="off" value="B">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c11o2">
-                        หน่วยวัดประสิทธิภาพของโปรแกรม
-                    </label>
-                    <input type="radio" class="btn-check" name="c11" id="c11o3" autocomplete="off" value="C">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c11o3">
-                        ขั้นตอนหรือวิธีการเพื่อแก้ปัญหาหรือดำเนินการในรูปแบบที่เข้าใจง่าย
-                    </label>
-                    <input type="radio" class="btn-check" name="c11" id="c11o4" autocomplete="off" value="D">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c11o4">
-                        ภาษาที่ใช้ในการเขียนโปรแกรม
-                    </label>
-                </div>
-            </div>
-            
-
-
-        </div>
-        <%# choice %> 
+        </div>  <br>
+        <p>รับโค้ดจากอาจารย์ผู้สอน และคลิก Join Class</p>
+        <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+        class="btn btn-secondary collapsed" data-bs-target="#test2" >Next</button>
     </div>
     
 <%# test2 %>
-    <div id="test2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-        <%# choice %> 
-        <div class="row align-items-start">
-            <div>
-                <b>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</b>
-                </div>
-            <div class="col">
-              <%# test %>         
-                <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        โค้ดที่เขียนลงในกระดาษ
-                    </p>
-
-                    <input type="radio" class="btn-check" name="c21" id="c21o1" autocomplete="off" value="A" required>
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c21o1">
-                        ภาษาที่ใช้สร้างเว็บไซต์
-                    </label>
-                    <input type="radio" class="btn-check" name="c21" id="c21o2" autocomplete="off" value="B">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c21o2">
-                        โค้ดที่เขียนลงในกระดาษ
-                    </label>
-                    <input type="radio" class="btn-check" name="c21" id="c21o3" autocomplete="off" value="C">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c21o3">
-                        ขั้นตอนและลอจิคของโปรแกรมเขียนอย่างง่าย ๆ ในรูปแบบของภาษาธรรมดา
-                    </label>
-                    <input type="radio" class="btn-check" name="c21" id="c21o4" autocomplete="off" value="D">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c21o4">
-                        ภาษาที่ใช้ในการเขียนโปรแกรมจริง ๆ
-                    </label>
-                </div>
-            </div>
-            
-        </div>
-        <%# choice %> 
+        <div id="test2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+            <div class="item1" style="width: auto;">
+                <svg height="20" width="20" viewBox="0 0 512 512">
+                    <path d="M505.2 324.8l-47.73-68.78l47.75-68.81c7.359-10.62 8.797-24.12 3.844-36.06c-4.969-11.94-15.52-20.44-28.22-22.72l-82.39-14.88l-14.89-82.41c-2.281-12.72-10.76-23.25-22.69-28.22c-11.97-4.936-25.42-3.498-36.12 3.844L256 54.49L187.2 6.709C176.5-.6016 163.1-2.039 151.1 2.896c-11.92 4.971-20.4 15.5-22.7 28.19l-14.89 82.44L31.15 128.4C18.42 130.7 7.854 139.2 2.9 151.2C-2.051 163.1-.5996 176.6 6.775 187.2l47.73 68.78l-47.75 68.81c-7.359 10.62-8.795 24.12-3.844 36.06c4.969 11.94 15.52 20.44 28.22 22.72l82.39 14.88l14.89 82.41c2.297 12.72 10.78 23.25 22.7 28.22c11.95 4.906 25.44 3.531 36.09-3.844L256 457.5l68.83 47.78C331.3 509.7 338.8 512 346.3 512c4.906 0 9.859-.9687 14.56-2.906c11.92-4.969 20.4-15.5 22.7-28.19l14.89-82.44l82.37-14.88c12.73-2.281 23.3-10.78 28.25-22.75C514.1 348.9 512.6 335.4 505.2 324.8zM456.8 339.2l-99.61 18l-18 99.63L256 399.1L172.8 456.8l-18-99.63l-99.61-18L112.9 255.1L55.23 172.8l99.61-18l18-99.63L256 112.9l83.15-57.75l18.02 99.66l99.61 18L399.1 255.1L456.8 339.2zM256 143.1c-61.85 0-111.1 50.14-111.1 111.1c0 61.85 50.15 111.1 111.1 111.1s111.1-50.14 111.1-111.1C367.1 194.1 317.8 143.1 256 143.1zM256 319.1c-35.28 0-63.99-28.71-63.99-63.99S220.7 192 256 192s63.99 28.71 63.99 63.1S291.3 319.1 256 319.1z"/>
+                </svg><b> Recommend</b>
+                <div class="button">
+                    <svg height="20" width="20" viewBox="0 0 512 512">
+                        <path d="M349.565 98.783C295.978 98.783 251.721 64 184.348 64c-24.955 0-47.309 4.384-68.045 12.013a55.947 55.947 0 0 0 3.586-23.562C118.117 24.015 94.806 1.206 66.338.048 34.345-1.254 8 24.296 8 56c0 19.026 9.497 35.825 24 45.945V488c0 13.255 10.745 24 24 24h16c13.255 0 24-10.745 24-24v-94.4c28.311-12.064 63.582-22.122 114.435-22.122 53.588 0 97.844 34.783 165.217 34.783 48.169 0 86.667-16.294 122.505-40.858C506.84 359.452 512 349.571 512 339.045v-243.1c0-23.393-24.269-38.87-45.485-29.016-34.338 15.948-76.454 31.854-116.95 31.854z"/></svg>
+                        <b> Choose</b>
+                    </div>
+            </div> <br>
+            <p>คลิก Choose เพื่อเลือกเส้นทางการแนะนำบทเรียน</p>
+            <button type="button"  data-bs-toggle="collapse" aria-expanded="false" aria-controls="flush-collapseOne" 
+            class="btn btn-secondary collapsed" data-bs-target="#test3" >Next</button>
+        </div>	
+        
     </div>
 <%# test3 %>
     <div id="test3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-        <%# choice %> 
-        <div class="row align-items-start">
-            <div>
-                <b>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</b>
-                </div>
-            <div class="col">
-              <%# test %>         
-                <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        3. หลักการในการเขียน Pseudo Code คืออะไร
-                    </p>
 
-                    <input type="radio" class="btn-check" name="c31" id="c31o1" autocomplete="off" value="A" required>
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c31o1">
-                        ความเข้าใจและความชัดเจนของขั้นตอน
-                    </label>
-                    <input type="radio" class="btn-check" name="c31" id="c31o2" autocomplete="off" value="B">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c31o2">
-                        การใช้ข้อมูลที่น้อยที่สุด
-                    </label>
-                    <input type="radio" class="btn-check" name="c31" id="c31o3" autocomplete="off" value="C">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c31o3">
-                        ความถูกต้องของ Syntax
-                    </label>
-                    <input type="radio" class="btn-check" name="c31" id="c31o4" autocomplete="off" value="D">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c31o4">
-                        ความเร็วในการทำงาน
-                    </label>
-                </div>
-            </div>
-            
-        </div>
-        <%# choice %> 
     </div>
 <%# test4 %>
     <div id="test4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-        <%# choice %> 
-        <div class="row align-items-start">
-            <div>
-                <b>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</b>
-                </div>
-            <div class="col">
-              <%# test %>         
-                <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        4. Flowchart คืออะไร
-                    </p>
 
-                    <input type="radio" class="btn-check" name="c41" id="c41o1" autocomplete="off" value="A" required>
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c41o1">
-                        รหัสที่ได้จากการคอมไพล์โปรแกรม
-                    </label>
-                    <input type="radio" class="btn-check" name="c41" id="c41o2" autocomplete="off" value="B">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c41o2">
-                        การวาดรูปภาพเพื่อแสดงขั้นตอนและลำดับการทำงานของโปรแกรม
-                    </label>
-                    <input type="radio" class="btn-check" name="c41" id="c41o3" autocomplete="off" value="C">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c41o3">
-                        การแสดงผลของโปรแกรมในรูปแบบข้อความ
-                    </label>
-                    <input type="radio" class="btn-check" name="c41" id="c41o4" autocomplete="off" value="D">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c41o4">
-                        เครื่องมือในการวัดประสิทธิภาพของโปรแกรม
-                    </label>
-                </div>
-            </div>
-        
-        </div>
-        <%# choice %> 
     </div>
 <%# test5 %>
     <div id="test5" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-        <%# choice %> 
-        <div class="row align-items-start">
-            <div>
-                <b>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</b>
-                </div>
-            <div class="col">
-              <%# test %>         
-                <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        5. Flowchart หลัก ๆ ใช้ในส่วนไหนของการพัฒนาโปรแกรม
-                    </p>
 
-                    <input type="radio" class="btn-check" name="c51" id="c51o1" autocomplete="off" value="A" required>
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c51o1">
-                        การออกแบบและการวางแผน
-                    </label>
-                    <input type="radio" class="btn-check" name="c51" id="c51o2" autocomplete="off" value="B">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c51o2">
-                        การทดสอบและการดีบั๊ก
-                    </label>
-                    <input type="radio" class="btn-check" name="c51" id="c51o3" autocomplete="off" value="C">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c51o3">
-                        การประเมินประสิทธิภาพ
-                    </label>
-                    <input type="radio" class="btn-check" name="c51" id="c51o4" autocomplete="off" value="D">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c51o4">
-                        การเขียนโค้ด
-                    </label>
-                </div>
-            </div>
-            
-        </div>
-        <%# choice %> 
     </div>
 <%# test6 %>
     <div id="test6" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-        <%# choice %> 
-        <div class="row align-items-start">
-            <div>
-            <b>ข้อที่ 6 - 10: วัดความสามารถด้านการติดตามโค้ด (Tracing)</b>
-            </div>
-            <div class="col">
-              <%# test %>         
-                <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        6. Pseudo Code ต่อไปนี้จะพิมพ์อะไรออกมา <br> 
-                       <b style="color: aquamarine; font-weight: lighter;" > &ensp;FOR i FROM 1 TO 3 <br> 
-                        &ensp;PRINT i <br> 
-                        &ensp;END FOR </b>
-                    </p>
 
-                    <input type="radio" class="btn-check" name="c61" id="c61o1" autocomplete="off" value="A" required>
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c61o1">
-                        1 2 
-                    </label>
-                    <input type="radio" class="btn-check" name="c61" id="c61o2" autocomplete="off" value="B">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c61o2">
-                        2 3 4
-                    </label>
-                    <input type="radio" class="btn-check" name="c61" id="c61o3" autocomplete="off" value="C">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c61o3">
-                        1 2 3	
-                    </label>
-                    <input type="radio" class="btn-check" name="c61" id="c61o4" autocomplete="off" value="D">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c61o4">
-                        0 1 2
-                    </label>
-                </div>
-            </div>
-            
-        </div>
-        <%# choice %> 
     </div>
 <%# test7 %>
     <div id="test7" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-        <%# choice %> 
-        <div class="row align-items-start">
-            <div>
-                <b>ข้อที่ 6 - 10: วัดความสามารถด้านการติดตามโค้ด (Tracing)</b>
-                </div>
-            <div class="col">
-              <%# test %>         
-                <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        7. Pseudo Code ต่อไปนี้จะพิมพ์อะไรออกมา? <br>
-                        <b style="color: aquamarine; font-weight: lighter;" >
-                            &ensp;x = 10<br>
-                            &ensp;y = 5<br>
-                            &ensp;IF x > y<br>
-                            &ensp;&ensp;IF y > 0<br>
-                            &ensp;&ensp;&ensp;PRINT "A"<br>
-                            &ensp;&ensp;ELSE<br>
-                            &ensp;&ensp;&ensp;PRINT "B"<br>
-                            &ensp;&ensp;END IF<br>
-                            &ensp;ELSE<br>
-                            &ensp;&ensp;PRINT "C"<br>
-                            &ensp;END IF<br> </b>
-                    </p>
 
-                    <input type="radio" class="btn-check" name="c71" id="c71o1" autocomplete="off" value="A" required>
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c71o1">
-                        ERROR
-                    </label>
-                    <input type="radio" class="btn-check" name="c71" id="c71o2" autocomplete="off" value="B">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c71o2">
-                        A
-                    </label>
-                    <input type="radio" class="btn-check" name="c71" id="c71o3" autocomplete="off" value="C">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c71o3">
-                        B
-                    </label>
-                    <input type="radio" class="btn-check" name="c71" id="c71o4" autocomplete="off" value="D">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c71o4">
-                        C
-                    </label>
-                </div>
-            </div>
-            
-        </div>
-        <%# choice %> 
     </div>
 <%# test8 %>
     <div id="test8" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-        <%# choice %> 
-        <div class="row align-items-start">
-            <div>
-                <b>ข้อที่ 6 - 10: วัดความสามารถด้านการติดตามโค้ด (Tracing)</b>
-                </div>
-            <div class="col">
-              <%# test %>         
-                <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        8. Pseudo Code ต่อไปนี้จะคืนค่าเป็นอะไร <br>
-                        <b style="color: aquamarine; font-weight: lighter;" >
-                            &ensp;FUNCTION add(a, b)<br>
-                            &ensp;&ensp;RETURN a + b<br>
-                            &ensp;END FUNCTION<br><br>
-                        
-                            &ensp;x = add(2, 3)<br>
-                            &ensp;PRINT x <br> </b>
-                    </p>
 
-                    <input type="radio" class="btn-check" name="c81" id="c81o1" autocomplete="off" value="A" required>
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c81o1">
-                        5
-                    </label>
-                    <input type="radio" class="btn-check" name="c81" id="c81o2" autocomplete="off" value="B">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c81o2">
-                        6
-                    </label>
-                    <input type="radio" class="btn-check" name="c81" id="c81o3" autocomplete="off" value="C">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c81o3">
-                        3
-                    </label>
-                    <input type="radio" class="btn-check" name="c81" id="c81o4" autocomplete="off" value="D">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c81o4">
-                        2
-                    </label>
-                </div>
-            </div>
-            
-        </div>
-        <%# choice %> 
     </div>
 <%# test9 %>
     <div id="test9" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-        <%# choice %> 
-        <div class="row align-items-start">
-            <div>
-            <b>ข้อที่ 6 - 10: วัดความสามารถด้านการติดตามโค้ด (Tracing)</b>
-            </div>
-            <div class="col">
-                <img src="https://lh6.googleusercontent.com/C4tU7K9i7TqqmqHN0-mYb6udFeOC3cx7g08NK8RoDBgzEWly_pjRJRYcXO-aYpC6a7jzK-G8QNB9OFZfRUC53SihsZrE76ym72XrqG-HqnFtB14jhQoYViOlc49wfrc2Wg=w739" class="img-thumbnail rounded"  >
-            </div>
-            <div class="col">
-              <%# test %>         
-                <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        9. Flowchart ต่อไปนี้ เมื่อกำหนดให้ Number เป็น 8 จะแสดงผลเป็นอะไร
-                    </p>
 
-                    <input type="radio" class="btn-check" name="c91" id="c91o1" autocomplete="off" value="A" required>
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c91o1">
-                        Even
-                    </label>
-                    <input type="radio" class="btn-check" name="c91" id="c91o2" autocomplete="off" value="B">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c91o2">
-                        8
-                    </label>
-                    <input type="radio" class="btn-check" name="c91" id="c91o3" autocomplete="off" value="C">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c91o3">
-                        End
-                    </label>
-                    <input type="radio" class="btn-check" name="c91" id="c91o4" autocomplete="off" value="D">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c91o4">
-                        Odd
-                    </label>
-                </div>
-            </div>
-            
-        </div>
-        <%# choice %> 
     </div>
 <%# test10 %>
     <div id="test10" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
-        <%# choice %> 
-        <div class="row align-items-start">
-            <div>
-            <b>ข้อที่ 6 - 10: วัดความสามารถด้านการติดตามโค้ด (Tracing)</b>          
-            </div>
-            <div class="col">
-                <img src="https://lh5.googleusercontent.com/nHjjsYWTlZ_POk4wTQaqDuWZ0wQzLli6UzZ_13k4AXP7jSBrMijpJOem8h4sU_pMX244rY8bAmi7V7rQKE5dryuC-CpayHT1mzEGxiKO-Z9cEYbgQ5hslZ-6nxj7HpwHmg=w365" class="img-thumbnail rounded"  >
-            </div>
-            <div class="col">
-              <%# test %>         
-                <div class="list-group">
-                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
-                        10. Flowchart ต่อไปนี้ ถ้ากำหนดให้ n = 10 จะแสดงผลเป็นเลขอะไร
 
-                    </p>
-
-                    <input type="radio" class="btn-check" name="c101" id="c101o1" autocomplete="off" value="A" required>
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c101o1">
-                        2 4 6 8 10
-                    </label>
-                    <input type="radio" class="btn-check" name="c101" id="c101o2" autocomplete="off" value="B">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c101o2">
-                        1 2 3 4 5 6 7 8 9 10
-                    </label>
-                    <input type="radio" class="btn-check" name="c101" id="c101o3" autocomplete="off" value="C">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c101o3">
-                        2 4 6 8 9 10
-                    </label>
-                    <input type="radio" class="btn-check" name="c101" id="c101o4" autocomplete="off" value="D">
-                    <label class="list-group-item btn-outline-dark list-group-item-action" for="c101o4">
-                        1 3 5 7 9
-                    </label>
-                </div>
-            </div>
-        </div> 
-        <%# choice %> 
-    </div>-->
+    </div>
 
 
 
