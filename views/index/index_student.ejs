@@ -41,7 +41,12 @@
             .bd-placeholder-img-lg {font-size: 3.5rem;}
             html {height: 100%;}
         }
-       
+        #bg {
+            position: fixed;
+            width: 100%;
+            height: 95%;
+            opacity: 0.6;
+        }
     </style>
 
     <link rel='stylesheet' href='stylesheets/home1.css' />
@@ -54,12 +59,13 @@
 </head>
 
 <body class="quantico-regular" style=" background-color: #122c5a; ">
+    
     <!-- Narbar-->
     <%- include('../layouts/navbar') %>
     
     <!-- end of Narbar-->
 <!-- LEFT -->
-    <main class="grid-container">
+    <div class="grid-container">
         <br><br>
         <div id="content" class="container"><br>
             <div class="group">
@@ -293,17 +299,6 @@
                 
             </div>
 
-       
-     
-
-    
-    
-    
-
-        
-    
-
-    
 
 
     <!-- Modal -->
@@ -402,14 +397,15 @@
     
           </div>
         </div>
+
     </div>
 
-    
-
+</div>
+</div>
 
    <script src="/public/javascripts/chart.js"></script>
 
-
+   
   
-
+   
 <%- include('../layouts/footer') %>
