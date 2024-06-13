@@ -14,50 +14,20 @@
         color: #38fbdb;
         font-size: large;
     }
-    
-
+    b{margin-right: 5px;}
     p {margin: 0;}
     
-    .scrollbtnK {
+    .scrollbtn {
         color: #2a2a2a;
         width: 40px;
         text-align: center;
-        background-color: #ffb26f;
+        background-color: #ffffff;
         border-radius: 5px;
         border: solid;
         margin-right: 5px;
         margin-top: 5px;
     }
-    .scrollbtnT {
-        color: #2a2a2a;
-        width: 40px;
-        text-align: center;
-        background-color: #6ecfd8;
-        border-radius: 5px;
-        border: solid;
-        margin-right: 5px;
-        margin-top: 5px;
-    }
-    .scrollbtnE {
-        color: #2a2a2a;
-        width: 40px;
-        text-align: center;
-        background-color: #ffb8f8;
-        border-radius: 5px;
-        border: solid;
-        margin-right: 5px;
-        margin-top: 5px;
-    }
-    .scrollbtnW {
-        color: #2a2a2a;
-        width: 40px;
-        text-align: center;
-        background-color: #a0de87;
-        border-radius: 5px;
-        border: solid;
-        margin-right: 5px;
-        margin-top: 5px;
-    }
+  
     .wrapbox.auto {
         margin-left: 60px;
         margin-bottom: 20px;
@@ -65,8 +35,7 @@
     .contentbox{
     width: 350px;
     height: auto;
-    background-color: #5994ce;
-    box-shadow: 0 0 10px 5px #38fbdb;
+    background-color: #bd7b67;
     margin: 10px;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -118,113 +87,61 @@
                                         <% if(pre1done >= 1 ){ %>
                                             <a class="a1"  href="/course-Algorithms_and_Flowcharts">เนื้อหาปลดล็อคแล้ว <br>กดเข้าไปดูได้เลย!</a><br>
                                             <br><p>ทางลัดไปยังแบบฝึกหัด</p>
-                                            <a href="/course-Algorithms_and_Flowcharts#Knowledge" class="scrollbtnK"  type="button">K</a>
-                                            <a href="/course-Algorithms_and_Flowcharts#Tracing" class="scrollbtnT"  type="button">T</a>
-                                            <a href="/course-Algorithms_and_Flowcharts#Explaining" class="scrollbtnE"  type="button">E</a>
-                                            <a href="/course-Algorithms_and_Flowcharts#Writing" class="scrollbtnW" type="button">W</a>
+                                            <a href="/course-Algorithms_and_Flowcharts#Knowledge" class="scrollbtn"  type="button">K</a>
+                                            <a href="/course-Algorithms_and_Flowcharts#Tracing" class="scrollbtn"  type="button">T</a>
+                                            <a href="/course-Algorithms_and_Flowcharts#Explaining" class="scrollbtn"  type="button">E</a>
+                                            <a href="/course-Algorithms_and_Flowcharts#Writing" class="scrollbtn" type="button">W</a>
                                             <hr>
                                             <a class="a" href="/course-Algorithms_and_Flowcharts-quiz">แบบทดสอบหลังเรียน</a>
                                         <% } else{ %> 
                                             <p>เนื้อหาบทเรียนยังไม่ปลดล็อค <br>ต้องทำแบบทดสอบก่อนเรียนก่อน</p>
                                         <% } %><hr>
                                         <button class="btn button" onclick="myFunction1()">กดเพื่อดูคะแนน</button>
-                                        <div id="myDIV1" style="display:none;">
-                                            <div class="group2">
-                                                <div>
-                                                    <b style="font-size: 12px;">Knowledge</b>
-                                                    <div style="display: flex;">
-                                                        <% if(pre1LV1 >= 4 ){ %>
-                                                            <b class="score"><%= pre1LV1 %></b>
-                                                        <% } else{ %> 
-                                                            <b class="scoreRed"><%= pre1LV1 %></b>
-                                                        <% } %>
-                                                        <div class="bar">
-                                                            <div style="background-color: #ffb26f; height: 10px; width: <%= pre1LV1*20 %>px;"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div style="display: flex;">
-                                                        <% if(post1LV1 >= 4 ){ %>
-                                                            <b class="score"><%= post1LV1 %></b>
-                                                        <% } else{ %> 
-                                                            <b class="scoreRed"><%= post1LV1 %></b>
-                                                        <% } %>
-                                                        <div class="bar">
-                                                            <div style="background-color: #ffb26f; height: 10px; width: <%= post1LV1*20 %>px;"></div>
-                                                        </div>
-                                                    </div>
+                                        <div id="myDIV1" style="display:none; margin-top: 10px;">
+                                            <div class="group3">
+                                                <b style="font-size: 12px; text-align: end;">Knowledge</b>
+                                                 <div class="bar">
+                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre1LV1*20 %>px;"></div>
                                                 </div>
-                                                <div>
-                                                    <b style="font-size: 12px;">Tracing</b>
-                                                    <div style="display: flex;">
-                                                        <% if(pre1LV2 >= 4 ){ %>
-                                                            <b class="score"><%= pre1LV2 %></b>
-                                                        <% } else{ %> 
-                                                            <b class="scoreRed"><%= pre1LV2 %></b>
-                                                        <% } %>
-                                                        <div class="bar">
-                                                            <div style="background-color: #38fbdb; height: 10px; width: <%= pre1LV2*20 %>px;"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div style="display: flex;">
-                                                        <% if(post1LV2 >= 4 ){ %>
-                                                            <b class="score"><%= post1LV2 %></b>
-                                                        <% } else{ %> 
-                                                            <b class="scoreRed"><%= post1LV2 %></b>
-                                                        <% } %>
-                                                        <div class="bar">
-                                                            <div style="background-color: #38fbdb; height: 10px; width: <%= post1LV2*20 %>px;"></div>
-                                                        </div>
-                                                    </div>
+                                                <div class="bar">
+                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post1LV1*20 %>px;"></div>
                                                 </div>
                                             </div>
-                                            <div class="group2">
-                                                <div>
-                                                    <b style="font-size: 12px;">Explaining</b>
-                                                    <div style="display: flex;">
-                                                        <% if(pre1LV3 >= 4 ){ %>
-                                                            <b class="score"><%= pre1LV3 %></b>
-                                                        <% } else{ %> 
-                                                            <b class="scoreRed"><%= pre1LV3 %></b>
-                                                        <% } %>
-                                                        <div class="bar">
-                                                            <div style="background-color: #ffb8f8; height: 10px; width: <%= pre1LV3*20 %>px;"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div style="display: flex;">
-                                                        <% if(post1LV3 >= 4 ){ %>
-                                                            <b class="score"><%= post1LV3 %></b>
-                                                        <% } else{ %> 
-                                                            <b class="scoreRed"><%= post1LV3 %></b>
-                                                        <% } %>
-                                                        <div class="bar">
-                                                            <div style="background-color: #ffb8f8; height: 10px; width: <%= post1LV3*20 %>px;"></div>
-                                                        </div>
-                                                    </div>
+                                            <div class="group3">
+                                                <b style="font-size: 12px; text-align: end;">Tracing</b>
+                                                <div class="bar">
+                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre1LV2*20 %>px;"></div>
                                                 </div>
-                                                <div>
-                                                    <b style="font-size: 12px;">Writing</b>
-                                                    <div style="display: flex;">
-                                                        <% if(pre1LV4 >= 20 ){ %>
-                                                            <b class="score"><%= pre1LV4 %></b>
-                                                        <% } else{ %> 
-                                                            <b class="scoreRed"><%= pre1LV4 %></b>
-                                                        <% } %>
-                                                        <div class="bar">
-                                                            <div style="background-color: #a0de87; height: 10px; width: <%= pre1LV4*4 %>px;"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div style="display: flex;">
-                                                        <% if(post1LV4 >= 20 ){ %>
-                                                            <b class="score"><%= post1LV4 %></b>
-                                                        <% } else{ %> 
-                                                            <b class="scoreRed"><%= post1LV4 %></b>
-                                                        <% } %>
-                                                        <div class="bar">
-                                                            <div style="background-color: #a0de87; height: 10px; width: <%= post1LV4*4 %>px;"></div>
-                                                        </div>
-                                                    </div>
+                                                <div class="bar">
+                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post1LV2*20 %>px;"></div>
                                                 </div>
                                             </div>
+                                            <div class="group3">
+                                                <b style="font-size: 12px; text-align: end;">Explaining</b>
+                                                <div class="bar">
+                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre1LV3*20 %>px;"></div>
+                                                </div>
+                                                <div class="bar">
+                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post1LV3*20 %>px;"></div>
+                                                </div> 
+                                            </div>       
+                                            <div class="group3"> 
+                                                <b style="font-size: 12px; text-align: end;">Writing</b>
+                                                <div class="bar">
+                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre1LV4*4 %>px;"></div>
+                                                </div>
+                                                   <div class="bar">
+                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post1LV4*4 %>px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        </div>       
+                                           
+                                            
                                             
                                         </div>
                                     </div>

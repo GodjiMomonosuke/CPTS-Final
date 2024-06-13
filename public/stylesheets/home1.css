@@ -18,8 +18,6 @@
     width: 400px; 
     border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 0 0 10px 5px #38fbdb;
-
 }
 .item2 {
     height: 160px;
@@ -55,8 +53,7 @@ button.btn-secondary {
 
 .group3 {
     display: grid;
-    grid-template-columns: 5% 30% 65%;
-    padding: 10px;
+    grid-template-columns: 80px 110px auto;
 }
 
 
@@ -122,14 +119,13 @@ button.btn-secondary {
     height: auto;
     border-radius: 5px;
     padding: 10px;
-    background-color: #fff;
+
     margin-bottom: 10px;
-    box-shadow: 0 0 10px 5px #38fbdb;
 }
 .boxbax2 {
     width: 400px; 
     height: auto;
-    color: #fff;
+    color: black;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -147,15 +143,15 @@ button.btn-secondary {
     background-color: aquamarine;
 }
 
-progress[value]::-webkit-progress-value {background-color: #ff4cbf;}
-progress[value]::-webkit-progress-bar {background-color: #dadada;}
+progress[value]::-webkit-progress-value {background-color: #bd7b67;}
+progress[value]::-webkit-progress-bar {background-color: #e2ddc8;}
+progress{border: solid #96534a;}
 
 .bar {
     width: 100px; 
     height: 10px; 
     background-color: #f7f7f7;
     margin-top: 4px;
-    box-shadow: 0 0 5px 2px #38fbdb;
 }
 @media (max-width: 1000px) {
     .group, .group2 {display: block;}
