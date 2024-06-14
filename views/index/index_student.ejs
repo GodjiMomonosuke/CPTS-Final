@@ -244,7 +244,7 @@
                             <h4 class="chakra-petch-regular">Skill</h4>   
                             <div style="height: 400px;">
                                 <div class="chartCard">
-                                    <div class="chartBox" style="background-color: #cad19f; border: solid #96534a;">
+                                    <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff;">
                                         <canvas id="myChart"></canvas>
                                     </div>
                                 </div>
@@ -253,20 +253,20 @@
                                     // setup 
                                     // [<%= PreBasicPercent %>, <%= PreTracePercent %>, <%= PreExplainPercent %>, <%= PreWritePercent %>]
                                     // [<%= BasicPercent %>, <%= TracePercent %>, <%= ExplainPercent %>, <%= WritePercent %>]
-                                    Chart.defaults.borderColor = '#96534a';
+                                    Chart.defaults.borderColor = '#fff';
                                     const data = {
                                         labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
                                         datasets: [{
                                             data: [15,20,15,30],
                                             label: "Pre-test",
-                                            borderColor: '#11a1c1',
-                                            backgroundColor: '#11a1c149',
+                                            borderColor: '#80599f',
+                                            backgroundColor: '#80599f49',
                                         },{
                                             data: [50,55,45,40],
                                             label: "Post-test",
-                                            borderColor: '#ffc107',
+                                            borderColor: '#d272e7',
                                             fill: true,
-                                            backgroundColor: '#ffc10737',
+                                            backgroundColor: '#d272e737',
                                         }]
                                     };
                                     // config 
