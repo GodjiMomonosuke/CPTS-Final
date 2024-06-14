@@ -210,6 +210,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         pre1LV4 = "⌛️"
                       }
+                      var sumpre1 = pre1LV1+pre1LV2+pre1LV3+pre1LV4;
                     }
                     if (StudentAnswer[i].contentName === "Algorithms_and_Flowcharts-(Post-test)"){
                       var post1done = StudentAnswer[i].timetodo;
@@ -221,6 +222,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         post1LV4 = "⌛️"
                       }
+                      var sumpost1 = post1LV1+post1LV2+post1LV3+post1LV4;
                     }
                     if (StudentAnswer[i].contentName === "Datatype_and_Variable-(Pre-test)"){
                       var pre2done = StudentAnswer[i].timetodo;
@@ -232,6 +234,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         pre2LV4 = "⌛️"
                       }
+                      var sumpre2 = pre2LV1+pre2LV2+pre2LV3+pre2LV4;
                     }
                     if (StudentAnswer[i].contentName === "Datatype_and_Variable-(Post-test)"){
                       var post2done = StudentAnswer[i].timetodo;
@@ -243,6 +246,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         post2LV4 = "⌛️"
                       }
+                      var sumpost2 = post2LV1+post2LV2+post2LV3+post2LV4;
                     }
                     if (StudentAnswer[i].contentName === "Input_and_Output-(Pre-test)"){
                       var pre3done = StudentAnswer[i].timetodo;
@@ -254,6 +258,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         pre3LV4 = "⌛️"
                       }
+                      var sumpre3 = pre3LV1+pre3LV2+pre3LV3+pre3LV4;
                     }
                     if (StudentAnswer[i].contentName === "Input_and_Output-(Post-test)"){
                       var post3done = StudentAnswer[i].timetodo;
@@ -265,6 +270,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         post3LV4 = "⌛️"
                       }
+                      var sumpost3 = post3LV1+post3LV2+post3LV3+post3LV4;
                     }
                     if (StudentAnswer[i].contentName === "Operators_and_Expressions-(Pre-test)"){
                       var pre4done = StudentAnswer[i].timetodo;
@@ -276,6 +282,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         pre4LV4 = "⌛️"
                       }
+                      var sumpre4 = pre4LV1+pre4LV2+pre4LV3+pre4LV4;
                     }
                     if (StudentAnswer[i].contentName === "Operators_and_Expressions-(Post-test)"){
                       var post4done = StudentAnswer[i].timetodo;
@@ -287,6 +294,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         post4LV4 = "⌛️"
                       }
+                      var sumpost4 = post4LV1+post4LV2+post4LV3+post4LV4;
                     }
                     if (StudentAnswer[i].contentName === "Selection_Statements-(Pre-test)"){
                       var pre5done = StudentAnswer[i].timetodo;
@@ -298,6 +306,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         pre5LV4 = "⌛️"
                       }
+                      var sumpre5 = pre5LV1+pre5LV2+pre5LV3+pre5LV4;
                     }
                     if (StudentAnswer[i].contentName === "Selection_Statements-(Post-test)"){
                       var post5done = StudentAnswer[i].timetodo;
@@ -309,6 +318,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         post5LV4 = "⌛️"
                       }
+                      var sumpost5 = post5LV1+post5LV2+post5LV3+post5LV4;
                     }
                     if (StudentAnswer[i].contentName === "Loop_Statements-(Pre-test)"){
                       var pre6done = StudentAnswer[i].timetodo;
@@ -320,6 +330,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         pre6LV4 = "⌛️"
                       }
+                      var sumpre6 = pre6LV1+pre6LV2+pre6LV3+pre6LV4;
                     }
                     if (StudentAnswer[i].contentName === "Loop_Statements-(Post-test)"){
                       var post6done = StudentAnswer[i].timetodo;
@@ -331,6 +342,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         post6LV4 = "⌛️"
                       }
+                      var sumpost6 = post6LV1+post6LV2+post6LV3+post6LV4;
                     }
                     if (StudentAnswer[i].contentName === "Arrays_and_Strings-(Pre-test)"){
                       var pre7done = StudentAnswer[i].timetodo;
@@ -342,6 +354,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         pre7LV4 = "⌛️"
                       }
+                      var sumpre7 = pre7LV1+pre7LV2+pre7LV3+pre7LV4;
                     }
                     if (StudentAnswer[i].contentName === "Arrays_and_Strings-(Post-test)"){
                       var post7done = StudentAnswer[i].timetodo;
@@ -353,6 +366,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         post7LV4 = "⌛️"
                       }
+                      var sumpost7 = post7LV1+post7LV2+post7LV3+post7LV4;
                     }
                     if (StudentAnswer[i].contentName === "Functions-(Pre-test)"){
                       var pre8done = StudentAnswer[i].timetodo;
@@ -364,6 +378,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         pre8LV4 = "⌛️"
                       }
+                      var sumpre8 = pre8LV1+pre8LV2+pre8LV3+pre8LV4;
                     }
                     if (StudentAnswer[i].contentName === "Functions-(Post-test)"){
                       var post8done = StudentAnswer[i].timetodo;
@@ -375,6 +390,7 @@ router.get('/', async (req, res, next) => {
                       }else{
                         post8LV4 = "⌛️"
                       }
+                      var sumpost8 = post8LV1+post8LV2+post8LV3+post8LV4;
                     }
                     
                   }
@@ -390,7 +406,9 @@ router.get('/', async (req, res, next) => {
                     post1LV1,post2LV1,post3LV1,post4LV1,post5LV1,post6LV1,post7LV1,post8LV1,
                     post1LV2,post2LV2,post3LV2,post4LV2,post5LV2,post6LV2,post7LV2,post8LV2,
                     post1LV3,post2LV3,post3LV3,post4LV3,post5LV3,post6LV3,post7LV3,post8LV3,
-                    post1LV4,post2LV4,post3LV4,post4LV4,post5LV4,post6LV4,post7LV4,post8LV4
+                    post1LV4,post2LV4,post3LV4,post4LV4,post5LV4,post6LV4,post7LV4,post8LV4,
+                    sumpre1,sumpre2,sumpre3,sumpre4,sumpre5,sumpre6,sumpre7,sumpre8,
+                    sumpost1,sumpost2,sumpost3,sumpost4,sumpost5,sumpost6,sumpost7,sumpost8
                   });
                 }
                 if(PostTestStatus === 1 && PostTestDone === 0){ //if all course done && post-test not done
@@ -404,7 +422,9 @@ router.get('/', async (req, res, next) => {
                     post1LV1,post2LV1,post3LV1,post4LV1,post5LV1,post6LV1,post7LV1,post8LV1,
                     post1LV2,post2LV2,post3LV2,post4LV2,post5LV2,post6LV2,post7LV2,post8LV2,
                     post1LV3,post2LV3,post3LV3,post4LV3,post5LV3,post6LV3,post7LV3,post8LV3,
-                    post1LV4,post2LV4,post3LV4,post4LV4,post5LV4,post6LV4,post7LV4,post8LV4
+                    post1LV4,post2LV4,post3LV4,post4LV4,post5LV4,post6LV4,post7LV4,post8LV4,
+                    sumpre1,sumpre2,sumpre3,sumpre4,sumpre5,sumpre6,sumpre7,sumpre8,
+                    sumpost1,sumpost2,sumpost3,sumpost4,sumpost5,sumpost6,sumpost7,sumpost8
                   });
                 }
                 if(PostTestDone === 1){ //post-test done 
