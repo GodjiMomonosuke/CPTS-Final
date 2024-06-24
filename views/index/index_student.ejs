@@ -166,11 +166,15 @@
                 <div class="group">
                     <div>
                         <div class="boxbax">
-                            <p>Progress</p>
-                            <div class="progress">
-                                <progress class="progress" value="<%= TicketBooking_SystemPercent %>" max="100"></progress>
-                            </div> <b><%= TicketBooking_SystemPercent %>%</b>
-                            <b style="font-size: 14px;">ความคืบหน้าในการทำแบบทดสอบเพื่อปลดล็อค Project Quiz</b>
+                            <p style="margin: 0;">Progress</p>
+                            <p style="font-size: 12px;">ความคืบหน้าในการทำแบบทดสอบ</p>
+                            <div style="display: flex;">
+                                <div class="progress">
+                                    <progress class="progress" value="<%= TicketBooking_SystemPercent %>" max="100"></progress>
+                                </div> 
+                                <b style="font-size: 12px; margin-left: 5px;"><%= TicketBooking_SystemPercent %>%</b>
+                            </div>
+                            
                             <hr>
     
                             <img style="width: 20px;" src="https://cdn-icons-png.flaticon.com/512/4213/4213459.png " alt="">
@@ -214,9 +218,33 @@
                                 </div>
                             </div>
                         </div>  <br>-->
-                        <div class="boxbax2">  
+                        <div class="boxbax2">  <!-- *ถ้าตัดส่วนนี้ออก? เพราะยังไงก็ดูจาก Radar Chart อยู่แล้ว* -->
                             <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
-                                <p>Post-test</p>
+                                <p style="margin: 0;">Post-test</p>
+                                <% if (TicketBooking_SystemPercent === 13) { %>
+                                    <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบล่าสุด<br> (1 แบบทดสอบ)</p>
+                                <% }%>
+                                <% if (TicketBooking_SystemPercent === 25) { %>
+                                    <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบล่าสุด<br><br> (2 แบบทดสอบ)</p>
+                                <% }%>
+                                <% if (TicketBooking_SystemPercent === 38) { %>
+                                    <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบล่าสุด (3 แบบทดสอบ)</p>
+                                <% }%>
+                                <% if (TicketBooking_SystemPercent === 50) { %>
+                                    <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบล่าสุด<br> (4 แบบทดสอบ)</p>
+                                <% }%>
+                                <% if (TicketBooking_SystemPercent === 63) { %>
+                                    <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบล่าสุด<br><br> (5 แบบทดสอบ)</p>
+                                <% }%>
+                                <% if (TicketBooking_SystemPercent === 75) { %>
+                                    <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบล่าสุด (6 แบบทดสอบ)</p>
+                                <% }%>
+                                <% if (TicketBooking_SystemPercent === 88) { %>
+                                    <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบล่าสุด<br> (7 แบบทดสอบ)</p>
+                                <% }%>
+                                <% if (TicketBooking_SystemPercent === 100) { %>
+                                    <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบล่าสุด<br> (8 แบบทดสอบ)</p>
+                                <% }%>
                                 <div class="row mb-3 ">
                                     <div class="col-sm-10 " style="top:10px">
                                         <b style="font-size: 12px;">Knowledge: <%= BasicPercent %> /40</b>
@@ -241,7 +269,7 @@
                     <div  class="group2">
                         <div></div>
                         <div>
-                            <h4 class="chakra-petch-regular">Skill</h4>   
+                            <h4 class="chakra-petch-regular">Compitency</h4>   
                             <div style="height: 400px;">
                                 <div class="chartCard">
                                     <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff;">
