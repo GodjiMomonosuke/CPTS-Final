@@ -153,9 +153,15 @@ progress{border: solid #96534a;}
 
 .bar {
     width: 100px; 
-    height: 10px; 
+    height: 13px; 
     background-color: #f7f7f7;
     margin-top: 4px;
+}
+.barValue {
+    height: 13px;
+    font-size: 10px; 
+    text-align: start;
+    padding-left: 3px;
 }
 @media (max-width: 1000px) {
     .group, .group2 {display: block;}
