@@ -87,11 +87,13 @@ else {
             bgColor = "background-color: #93c47d;"
             
             if(StudentAnswer[i].scoreTeacher >= 20){
-               cLV4 = "background-color: #93c47d;" 
+                checkedLV4 = "✓"
+                cLV4 = "background-color: #93c47d;" 
             }
             else {
                 training4 = "ทำแบบฝึกหัดเพิ่มเติม";
                 cLV4 = "background-color: #e06666;" 
+                checkedLV4 = "✗"
             }
            
 
@@ -102,8 +104,8 @@ else {
 
             TeacherCheck = "";
             } else {
-                checkedLV4 = "-";
-                TeacherCheck = "รอตรวจ";
+                checkedLV4 = "รอตรวจ"
+                TeacherCheck = "";
                 bgColor = "background-color: #ed9769;"
             }
         }
