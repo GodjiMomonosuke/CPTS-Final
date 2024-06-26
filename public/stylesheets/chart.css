@@ -179,7 +179,7 @@
       -webkit-linear-gradient( top,
                               rgba(255, 255, 255, .25),
                               rgba(0,0,0,.2)),
-       -webkit-linear-gradient( left, rgb(81, 87, 88), rgb(255, 255, 255));
+       -webkit-linear-gradient( left, rgb(236, 16, 232), rgb(255, 255, 255));
   }
   
   .html5::-moz-progress-bar{
