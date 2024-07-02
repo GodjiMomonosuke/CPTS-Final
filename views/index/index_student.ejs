@@ -171,12 +171,15 @@
                             <div style="display: flex;">
                                 <div class="progress">
                                     <progress class="progress" value="<%= TicketBooking_SystemPercent %>" max="100"></progress>
+                                    <% if (TicketBooking_SystemPercent === 50) { %>
+                                        
+                                    <% }%>
                                 </div> 
                                 <b style="font-size: 12px; margin-left: 5px;"><%= TicketBooking_SystemPercent %>%</b>
                             </div>
                             <hr>
                             <% if (TicketBooking_SystemPercent === 50) { %>
-                                <p style="margin: 0;">Project Quiz 1 ปลดล็อกแล้ว!</ย>
+                                <p style="margin: 0;">Project Quiz 1 ปลดล็อกแล้ว!</p>
                             <% }%>
                             <% if (TicketBooking_SystemPercent === 75) { %>
                                 <p style="margin: 0;">Project Quiz 1 ปลดล็อกแล้ว!</p>
