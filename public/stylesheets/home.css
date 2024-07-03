@@ -112,3 +112,21 @@ body {
     margin-top: 7rem;
   }
 }
+
+.chartBox {
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  border: solid 3px rgba(54, 162, 235, 1);
+  background: white;
+}
+
+.chartCard {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.group2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
