@@ -167,13 +167,34 @@
                     <div>
                         <div class="boxbax">
                             <p style="margin: 0;">Progress</p>
-                            <p style="font-size: 12px;">ความคืบหน้าในการเรียน</p>
+                            <% if (TicketBooking_SystemPercent === 13) { %>
+                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 1</p>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 25) { %>
+                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 2</p>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 38) { %>
+                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 3</p>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 50) { %>
+                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 4</p>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 63) { %>
+                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 5</p>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 75) { %>
+                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 6</p>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 88) { %>
+                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 7</p>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 100) { %>
+                                <p style="font-size: 12px;">ทำแบบทดสอบครบทั้ง 8 บทแล้ว</p>
+                            <% }%>
                             <div style="display: flex;">
                                 <div class="progress">
                                     <progress class="progress" value="<%= TicketBooking_SystemPercent %>" max="100"></progress>
-                                    <% if (TicketBooking_SystemPercent === 50) { %>
-                                        
-                                    <% }%>
+                                    
                                 </div> 
                                 <b style="font-size: 12px; margin-left: 5px;"><%= TicketBooking_SystemPercent %>%</b>
                             </div>
@@ -182,10 +203,10 @@
                                 <p style="margin: 0;">Project Quiz 1 ปลดล็อกแล้ว!</p>
                             <% }%>
                             <% if (TicketBooking_SystemPercent === 75) { %>
-                                <p style="margin: 0;">Project Quiz 1 ปลดล็อกแล้ว!</p>
+                                <p style="margin: 0;">Project Quiz 2 ปลดล็อกแล้ว!</p>
                             <% }%>
                             <% if (TicketBooking_SystemPercent === 100) { %>
-                                <p style="margin: 0;">Project Quiz 1 ปลดล็อกแล้ว!</p>
+                                <p style="margin: 0;">Project Quiz 3 ปลดล็อกแล้ว!</p>
                             <% }%>
                             <p style="margin: 0;">คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p> <br>
 
@@ -254,7 +275,6 @@
                     </div>
                 </div>
                 <div class="group2" style="width: 800px;">
-                    <hr><hr>
                     <div class="boxbax2">  
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
                             <p style="margin: 0;">Pre-test</p>
@@ -273,6 +293,12 @@
                             <div class="row mb-3">
                                 <div class="col-sm-10 " style="top:10px">
                                     <b style="font-size: 12px;">Explaining: <%= PreExplainPercent %> /40</b>
+                                <progress class="progress" max="40" value=<%= PreExplainPercent, %>   class="html5 "></progress>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-10 " style="top:10px">
+                                    <b style="font-size: 12px;">Writing: <%= PreWritePercent %> /40</b>
                                 <progress class="progress" max="40" value=<%= PreExplainPercent, %>   class="html5 "></progress>
                                 </div>
                             </div>
@@ -298,6 +324,12 @@
                                 <div class="col-sm-10 " style="top:10px">
                                     <b style="font-size: 12px;">Explaining: <%= ExplainPercent %> /40</b>
                                     <progress class="progress" max="40" value=<%= ExplainPercent, %> </progress>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-10 " style="top:10px">
+                                    <b style="font-size: 12px;">Writing: <%= WritePercent %> /40</b>
+                                    <progress class="progress" max="40" value=<%= WritePercent, %> </progress>
                                 </div>
                             </div>
                         </div>
