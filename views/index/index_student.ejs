@@ -242,12 +242,12 @@
                                     const data = {
                                         labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
                                         datasets: [{
-                                            data: [15,20,15,30],
+                                            data: [<%= PreBasicPercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,<%= PreWritePercent %>],
                                             label: "Pre-test",
                                             borderColor: '#80599f',
                                             backgroundColor: '#80599f49',
                                         },{
-                                            data: [50,55,45,40],
+                                            data: [<%= BasicPercent %>,<%= TracePercent %>,<%= ExplainPercent %>,<%= WritePercent %>],
                                             label: "Post-test",
                                             borderColor: '#d272e7',
                                             fill: true,
@@ -310,26 +310,26 @@
                             <p style="margin: 0;">Post-test</p>
                             <div class="row mb-3 ">
                                 <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Knowledge: <%= BasicPercent %> /40</b>
-                                    <progress class="progress" max="40" value=<%= BasicPercent %>  </progress>
+                                    <b style="font-size: 12px;">Knowledge: <%= Basic %> /40</b>
+                                    <progress class="progress" max="40" value=<%= Basic %>  </progress>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Tracing: <%= TracePercent %> /40</b>
-                                    <progress class="progress" max="40" value=<%= TracePercent %> </progress>
+                                    <b style="font-size: 12px;">Tracing: <%= Trace %> /40</b>
+                                    <progress class="progress" max="40" value=<%= Trace %> </progress>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Explaining: <%= ExplainPercent %> /40</b>
-                                    <progress class="progress" max="40" value=<%= ExplainPercent, %> </progress>
+                                    <b style="font-size: 12px;">Explaining: <%= Explain %> /40</b>
+                                    <progress class="progress" max="40" value=<%= Explain, %> </progress>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Writing: <%= WritePercent %> /40</b>
-                                    <progress class="progress" max="40" value=<%= WritePercent, %> </progress>
+                                    <b style="font-size: 12px;">Writing: <%= Write %> /40</b>
+                                    <progress class="progress" max="40" value=<%= Write, %> </progress>
                                 </div>
                             </div>
                         </div>
