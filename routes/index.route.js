@@ -588,14 +588,19 @@ router.get('/', async (req, res, next) => {
                 var WriteScore = IntroductionScoreLV4+StringScoreLV4+DatatypeScoreLV4+OperatorsScoreLV4+FlowControlScoreLV4+PointersScoreLV4+FunctionScoreLV4+StructureScoreLV4 ;
                 // var CourseDone = Posttest1Done+StringDone+DatatypeDone+OperatorsDone+FlowControlDone+PointersDone+FunctionDone+StructureDone+InputOutputDone;
                 
-                var BasicPercent =  Math.round(BasicScore);
-                var TracePercent= Math.round(TraceScore);
-                var ExplainPercent = Math.round(ExplainScore);
-                var WritePercent = Math.round(WriteScore);
-                BasicPercent = BasicPercent;
-                TracePercent = TracePercent;
-                ExplainPercent = ExplainPercent;
-                WritePercent = WritePercent;
+                var Basic =  Math.round(BasicScore);
+                var Trace= Math.round(TraceScore);
+                var Explain = Math.round(ExplainScore);
+                var Write = Math.round(WriteScore);
+                Basic = Basic;
+                Trace = Trace;
+                Explain = Explain;
+                Write = Write;
+
+                BasicPercent = Math.round((BasicScore/40)*100);
+                TracePercent = Math.round((TraceScore/40)*100);
+                ExplainPercent = Math.round((ExplainScore/40)*100);
+                WritePercent = Math.round((WriteScore/200)*100);
                 
                 //** Project Quiz Score */
                
@@ -771,6 +776,7 @@ router.get('/', async (req, res, next) => {
 
                     res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,
                       PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score,
+                      Basic,Trace,Explain,Write,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
                       PreBasicPercent,PreTracePercent,PreExplainPercent,PreWritePercent,
                       TicketBooking_SystemPercent,PointofSales_SystemPercent,ProjectQUIZ3Percent
