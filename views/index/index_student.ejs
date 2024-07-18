@@ -193,7 +193,7 @@
                             <% }%>
                             <div style="display: flex;">
                                 <div class="progress">
-                                    <progress class="progress" value="<%= TicketBooking_SystemPercent %>" max="100"></progress>
+                                    <progress class="progressvalue" value="<%= TicketBooking_SystemPercent %>" max="100"></progress>
                                     
                                 </div> 
                                 <b style="font-size: 12px; margin-left: 5px;"><%= TicketBooking_SystemPercent %>%</b>
@@ -215,6 +215,13 @@
                                 <p style="font-size: 14px; margin: 3px;">Quiz 1 : <%= PrjQuiz1Score %></p>
                                 <p style="font-size: 14px; margin: 3px;">Quiz 2 : <%= PrjQuiz2Score %></p>
                                 <p style="font-size: 14px; margin: 3px;">Quiz 3 : <%= PrjQuiz3Score %></p>
+
+                                <div class="col">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Calculator</h5>
+                                        <div class="pie animate" style="--p:<%=100 %>;--c:#6c757d"> </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     
@@ -278,62 +285,66 @@
                     <div class="boxbax2">  
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
                             <p style="margin: 0;">Pre-test</p>
-                            <div class="row mb-3 ">
-                                <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Knowledge: <%= PreBasicPercent %> /40</b>
-                                    <progress class="progress" max="40" value=<%= PreBasicPercent %>  </progress>
+                            <b style="font-size: 12px;">Knowledge: <%= PreBasic %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= PreBasicPercent %>%;" class="progressvalue">
+                                    <%= PreBasicPercent %>%
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Tracing: <%= PreTracePercent %> /40</b>
-                                <progress class="progress" max="40" value=<%= PreTracePercent %>  class="html5 "></progress>
+                            <b style="font-size: 12px;">Tracing: <%= PreTrace %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= PreTracePercent %>%;" class="progressvalue">
+                                    <%= PreTracePercent %>%
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Explaining: <%= PreExplainPercent %> /40</b>
-                                <progress class="progress" max="40" value=<%= PreExplainPercent, %>   class="html5 "></progress>
+                            <b style="font-size: 12px;">Explaining: <%= PreExplain %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= PreExplainPercent %>%;" class="progressvalue">
+                                    <%= PreExplainPercent %>%
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Writing: <%= PreWritePercent %> /40</b>
-                                <progress class="progress" max="40" value=<%= PreExplainPercent, %>   class="html5 "></progress>
+                            <b style="font-size: 12px;">Writing: <%= PreWrite %> /200</b>
+                            <div class="progress"style="background-color: #e2ddc8;">
+                                <div style=" width: <%= PreWritePercent %>%;" class="progressvalue">
+                                    <%= PreWritePercent %>%
                                 </div>
+                            </div>
                             </div>
                         </div>
-                    </div> 
+              
 
                     <div class="boxbax2">
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
                             <p style="margin: 0;">Post-test</p>
-                            <div class="row mb-3 ">
-                                <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Knowledge: <%= Basic %> /40</b>
-                                    <progress class="progress" max="40" value=<%= Basic %>  </progress>
+                            <b style="font-size: 12px;">Knowledge: <%= Basic %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= BasicPercent %>%;" class="progressvalue">
+                                    <%= BasicPercent %>%
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Tracing: <%= Trace %> /40</b>
-                                    <progress class="progress" max="40" value=<%= Trace %> </progress>
+                            </div>
+                            <b style="font-size: 12px;">Tracing: <%= Trace %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= TracePercent %>%;" class="progressvalue">
+                                    <%= TracePercent %>%
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Explaining: <%= Explain %> /40</b>
-                                    <progress class="progress" max="40" value=<%= Explain, %> </progress>
+                            <b style="font-size: 12px;">Explaining: <%= Explain %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= ExplainPercent %>%;" class="progressvalue">
+                                    <%= ExplainPercent %>%
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-10 " style="top:10px">
-                                    <b style="font-size: 12px;">Writing: <%= Write %> /40</b>
-                                    <progress class="progress" max="40" value=<%= Write, %> </progress>
+                            <b style="font-size: 12px;">Writing: <%= Write %> /200</b>
+                            <div class="progress"style="background-color: #e2ddc8;">
+                                <div style="width:  <%= WritePercent %>%;" class="progressvalue">
+                                    <%= WritePercent %>%
                                 </div>
                             </div>
+
                         </div>
-                    </div>  
+                    </div>
+          
                     <div style="margin-left: 10px;">
                     <% if (TicketBooking_SystemPercent === 13) { %>
                         <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (1 แบบทดสอบ)</p>
