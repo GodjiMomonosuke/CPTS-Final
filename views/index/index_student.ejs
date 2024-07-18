@@ -212,14 +212,14 @@
 
                             <p style="margin: 3px;">คะแนน Project Quiz</p>
                             <div style="margin-left: 15px;">
-                                <p style="font-size: 14px; margin: 3px;">Quiz 1 : <%= PrjQuiz1Score %></p>
+                                <p style="font-size: 14px; margin: 3px;">Quiz 1 : <%= PrjQuiz1Score %>/25 คะแนน</p>
                                 <p style="font-size: 14px; margin: 3px;">Quiz 2 : <%= PrjQuiz2Score %></p>
                                 <p style="font-size: 14px; margin: 3px;">Quiz 3 : <%= PrjQuiz3Score %></p>
 
                                 <div class="col">
                                     <div class="card-body">
-                                        <h5 class="card-title">Calculator</h5>
-                                        <div class="pie animate" style="--p:<%=100 %>;--c:#6c757d"> </div>
+                                        <h5 class="card-title">Quiz 1</h5>
+                                        <div class="pie animate" style="--p:<%= PrjQuiz1Score*4 %>;--c:#6c757d; font-size: 14px;"> <%= PrjQuiz1Score %>/25</div>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +256,7 @@
                                         },{
                                             data: [<%= BasicPercent %>,<%= TracePercent %>,<%= ExplainPercent %>,<%= WritePercent %>],
                                             label: "Post-test",
-                                            borderColor: '#d272e7',
+                                            borderColor: '#e5b524',
                                             fill: true,
                                             backgroundColor: '#d272e737',
                                         }]
