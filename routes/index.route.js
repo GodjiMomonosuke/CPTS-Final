@@ -572,10 +572,19 @@ router.get('/', async (req, res, next) => {
                 var PreExplainScore = IntroductionLV3+StringLV3+DatatypeLV3+OperatorsLV3+FlowControlLV3+PointersLV3+FunctionLV3+StructureLV3 ;
                 var PreWriteScore = IntroductionLV4+StringLV4+DatatypeLV4+OperatorsLV4+FlowControlLV4+PointersLV4+FunctionLV4+StructureLV4 ;
 
-                var PreBasicPercent =  Math.round(PreBasicScore);
-                var PreTracePercent= Math.round(PreTraceScore);
-                var PreExplainPercent = Math.round(PreExplainScore);
-                var PreWritePercent = Math.round(PreWriteScore/5);
+                var PreBasic =  Math.round(PreBasicScore);
+                var PreTrace= Math.round(PreTraceScore);
+                var PreExplain = Math.round(PreExplainScore);
+                var PreWrite = Math.round(PreWriteScore);
+                PreBasic = PreBasic;
+                PreTrace = PreTrace;
+                PreExplain = PreExplain;
+                PreWrite = PreWrite;
+
+                var PreBasicPercent = Math.round((PreBasicScore/40)*100);
+                var PreTracePercent = Math.round((PreTraceScore/40)*100);
+                var PreExplainPercent = Math.round((PreExplainScore/40)*100);
+                var PreWritePercent = Math.round((PreWriteScore/200)*100);
                 PreBasicPercent = PreBasicPercent;
                 PreTracePercent = PreTracePercent;
                 PreExplainPercent = PreExplainPercent;
@@ -597,10 +606,14 @@ router.get('/', async (req, res, next) => {
                 Explain = Explain;
                 Write = Write;
 
-                BasicPercent = Math.round((BasicScore/40)*100);
-                TracePercent = Math.round((TraceScore/40)*100);
-                ExplainPercent = Math.round((ExplainScore/40)*100);
-                WritePercent = Math.round((WriteScore/200)*100);
+                var BasicPercent = Math.round((BasicScore/40)*100);
+                var TracePercent = Math.round((TraceScore/40)*100);
+                var ExplainPercent = Math.round((ExplainScore/40)*100);
+                var WritePercent = Math.round((WriteScore/200)*100);
+                BasicPercent = BasicPercent;
+                TracePercent = TracePercent;
+                ExplainPercent = ExplainPercent;
+                WritePercent = WritePercent;
                 
                 //** Project Quiz Score */
                
@@ -776,9 +789,10 @@ router.get('/', async (req, res, next) => {
 
                     res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,
                       PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score,
-                      Basic,Trace,Explain,Write,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
                       PreBasicPercent,PreTracePercent,PreExplainPercent,PreWritePercent,
+                      Basic,Trace,Explain,Write,
+                      PreBasic,PreTrace,PreExplain,PreWrite,
                       TicketBooking_SystemPercent,PointofSales_SystemPercent,ProjectQUIZ3Percent
                     });
                   });
