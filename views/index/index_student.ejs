@@ -212,16 +212,21 @@
 
                             <p style="margin: 3px;">คะแนน Project Quiz</p>
                             <div style="margin-left: 15px;">
-                                <p style="font-size: 14px; margin: 3px;">Quiz 1 : <%= PrjQuiz1Score %>/25 คะแนน</p>
-                                <p style="font-size: 14px; margin: 3px;">Quiz 2 : <%= PrjQuiz2Score %></p>
-                                <p style="font-size: 14px; margin: 3px;">Quiz 3 : <%= PrjQuiz3Score %></p>
-
-                                <div class="col">
+                                <div class="col" style="display: flex;">
                                     <div class="card-body">
                                         <h5 class="card-title">Quiz 1</h5>
-                                        <div class="pie animate" style="--p:<%= PrjQuiz1Score*4 %>;--c:#6c757d; font-size: 14px;"> <%= PrjQuiz1Score %>/25</div>
+                                        <div class="pie animate" style="--p:<%= Quiz1Score*4 %>;--c:#6c757d; font-size: 14px;"> <%= Quiz3Score %>/25</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quiz 2</h5>
+                                        <div class="pie animate" style="--p:<%= Quiz1Score*4 %>;--c:#6c757d; font-size: 14px;"> <%= Quiz2Score %>/25</div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quiz 3</h5>
+                                        <div class="pie animate" style="--p:<%= Quiz1Score*4 %>;--c:#6c757d; font-size: 14px;"> <%= Quiz3Score %>/25</div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     

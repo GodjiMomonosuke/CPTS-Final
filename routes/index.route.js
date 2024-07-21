@@ -543,24 +543,29 @@ router.get('/', async (req, res, next) => {
                     }
                   
                   var PrjQuiz1Score = "ยังไม่ได้ทำ", PrjQuiz2Score = "ยังไม่ได้ทำ", PrjQuiz3Score = "ยังไม่ได้ทำ" 
-                 
+                  var Quiz1Score = "", Quiz2Score = "", Quiz3Score = "" 
+   
                     if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
                       Ticket_Booking_SystemDone = 1;
                         if (StudentAnswer[i].scoreTeacher === undefined) {
                           PrjQuiz1Score = "รอตรวจ"
-                        } else {PrjQuiz1Score = parseInt(StudentAnswer[i].scoreTeacher)}
+                        } else {PrjQuiz1Score = parseInt(StudentAnswer[i].scoreTeacher)+"/25 คะแนน";
+                          Quiz1Score = parseInt(StudentAnswer[i].scoreTeacher)
+                        }
                     }
                     if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
                         Point_of_Sales_SystemDone = 1;
                         if (StudentAnswer[i].scoreTeacher === undefined) {
                           PrjQuiz2Score = "รอตรวจ"
-                        } else {PrjQuiz2Score = parseInt(StudentAnswer[i].scoreTeacher)}
+                        } else {PrjQuiz2Score = parseInt(StudentAnswer[i].scoreTeacher)+"/25 คะแนน";
+                          Quiz2Score = parseInt(StudentAnswer[i].scoreTeacher)}
                     }
                     if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
                         Project_QUIZ3Done = 1;
                         if (StudentAnswer[i].scoreTeacher === undefined) {
                           PrjQuiz3Score = "รอตรวจ"
-                        } else {PrjQuiz3Score = parseInt(StudentAnswer[i].scoreTeacher)}
+                        } else {PrjQuiz3Score = parseInt(StudentAnswer[i].scoreTeacher)+"/25 คะแนน";
+                          Quiz3Score = parseInt(StudentAnswer[i].scoreTeacher)+"kkkk"}
                     }
               }
 
@@ -789,6 +794,7 @@ router.get('/', async (req, res, next) => {
 
                     res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,
                       PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score,
+                      Quiz1Score,Quiz2Score,Quiz3Score,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
                       PreBasicPercent,PreTracePercent,PreExplainPercent,PreWritePercent,
                       Basic,Trace,Explain,Write,
