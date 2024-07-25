@@ -6,19 +6,20 @@
             <thead>
               <tr>
                 
-                <th scope="col" class="col-1">#</th>
-                <th scope="col-1" class="col-4"><%=Studentresult[0].email %></th>
+                <th scope="col" class="col-0">#</th>
+                <th scope="col-1" class="col-1"><%=Studentresult[0].email %></th>
                 <th scope="col-1" class="col-1"><%=Studentresult[0].ClassName %></th>
-                <th scope="col" class="col-2 text-start">Project</th>
-                <th scope="col" class="col-2 text-start"> Score</th>
-                </th>
+                <th scope="col" class="col-3 text-start">Project</th>
+                <th scope="col" class="col-2 text-start">Score</th>
+                <th scope="col" class="col-5 text-start">Chart</th>
+                
               </tr>
             </thead>
             <tbody>
                 <% 
                     if(Object.keys(Studentresult).length === 1) {   
                         %>
-
+                          
                             <td class="text-start">
                                 Project QUIZ1 | <%=Studentresult[0].TicTacToe %> <br>
                                 Project QUIZ2 | <%=Studentresult[0].LibrarySystem %> <br> 
@@ -45,6 +46,11 @@
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[0].Function %> <br>                                 
                                 <% } %>
                             </td>
+                            <td class="text-start">
+                                Project QUIZ1 | <%=Studentresult[0].TicTacToe %> <br>
+                                Project QUIZ2 | <%=Studentresult[0].LibrarySystem %> <br> 
+                                Project QUIZ3 | <%=Studentresult[0].Roshambo %> <br>
+                            </td>
                         <%
                     } 
                     else {
@@ -57,8 +63,8 @@
                                     Project QUIZ1 | <%=Studentresult[i].TicTacToe %> <br>
                                     Project QUIZ2 | <%=Studentresult[i].LibrarySystem %> <br> 
                                     Project QUIZ3 | <%=Studentresult[i].Roshambo %> <br>
-                                
                                 </td>
+                                
                                 <td class="text-end">
                                     <% if(Studentresult[i].infoPrePostTest != undefined){ %>
                                 <% } else{ %>  
@@ -80,6 +86,42 @@
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Function %> <br>
                                 <% } %>
                             </td>
+                            <td>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                                <body>
+                                
+                                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                                
+                                <script>
+                                const xValues = ["Knowledge", "Tracing", "Explaining", "Writing"];
+                                const yValues = [55, 49, 44, 24];
+                                const barColors = [
+                                  "#b91d47",
+                                  "#00aba9",
+                                  "#2b5797",
+                                  "#e8c3b9",
+                                  "#1e7145"
+                                ];
+                                
+                                new Chart("myChart", {
+                                  type: "pie",
+                                  data: {
+                                    labels: xValues,
+                                    datasets: [{
+                                      backgroundColor: barColors,
+                                      data: yValues
+                                    }]
+                                  },
+                                  options: {
+                                    title: {
+                                      display: true,
+                                      text: "Compatency"
+                                    }
+                                  }
+                                });
+                                </script>
+                                
+                                </body></td>
                                 </tr>
                             <%
                         } 
@@ -87,4 +129,5 @@
                 %>
             </tbody>
         </table>
+        
     </div>
