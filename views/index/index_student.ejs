@@ -167,37 +167,123 @@
                     <div>
                         <div class="boxbax">
                             <p style="margin: 0;">Progress</p>
-                            <% if (TicketBooking_SystemPercent === 13) { %>
-                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 1</p>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 25) { %>
-                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 2</p>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 38) { %>
-                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 3</p>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 50) { %>
-                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 4</p>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 63) { %>
-                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 5</p>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 75) { %>
-                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 6</p>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 88) { %>
-                                <p style="font-size: 12px;">ปัจจุบันทำถึงบทที่ 7</p>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 100) { %>
-                                <p style="font-size: 12px;">ทำแบบทดสอบครบทั้ง 8 บทแล้ว</p>
-                            <% }%>
                             <div style="display: flex;">
-                                <div class="progress">
-                                    <progress class="progressvalue" value="<%= TicketBooking_SystemPercent %>" max="100"></progress>
+                                <div class="progress" style="background-color: #e2ddc8;">
+                                    <div style=" width: <%= TicketBooking_SystemPercent %>%;" class="progressvalue"></div>
                                     
                                 </div> 
                                 <b style="font-size: 12px; margin-left: 5px;"><%= TicketBooking_SystemPercent %>%</b>
                             </div>
+                            <% if (TicketBooking_SystemPercent === 0) { %>
+                                <div style="display: flex;">
+                                    <p class="station_w">1</p>
+                                    <p class="station_w">2</p>
+                                    <p class="station_w">3</p>
+                                    <p class="station_w">4</p>
+                                    <p class="station_w">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 13) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station_w">2</p>
+                                    <p class="station_w">3</p>
+                                    <p class="station_w">4</p>
+                                    <p class="station_w">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 25) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station_w">3</p>
+                                    <p class="station_w">4</p>
+                                    <p class="station_w">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 38) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station_w">4</p>
+                                    <p class="station_w">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 50) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station">4</p>
+                                    <p class="station_w">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 63) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station">4</p>
+                                    <p class="station">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 75) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station">4</p>
+                                    <p class="station">5</p>
+                                    <p class="station">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 88) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station">4</p>
+                                    <p class="station">5</p>
+                                    <p class="station">6</p>
+                                    <p class="station">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 100) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station">4</p>
+                                    <p class="station">5</p>
+                                    <p class="station">6</p>
+                                    <p class="station">7</p>
+                                    <p class="station">8</p>
+                                </div>
+                                
+                            <% }%>
+                            
                             <hr>
                             <% if (TicketBooking_SystemPercent === 50) { %>
                                 <p style="margin: 0;">Project Quiz 1 ปลดล็อกแล้ว!</p>
@@ -212,16 +298,21 @@
 
                             <p style="margin: 3px;">คะแนน Project Quiz</p>
                             <div style="margin-left: 15px;">
-                                <p style="font-size: 14px; margin: 3px;">Quiz 1 : <%= PrjQuiz1Score %></p>
-                                <p style="font-size: 14px; margin: 3px;">Quiz 2 : <%= PrjQuiz2Score %></p>
-                                <p style="font-size: 14px; margin: 3px;">Quiz 3 : <%= PrjQuiz3Score %></p>
-
-                                <div class="col">
+                                <div class="col" style="display: flex;">
                                     <div class="card-body">
-                                        <h5 class="card-title">Calculator</h5>
-                                        <div class="pie animate" style="--p:<%=100 %>;--c:#6c757d"> </div>
+                                        <h5 class="card-title">Quiz 1</h5>
+                                        <div class="pie animate" style="--p:<%= Quiz1Score*4 %>;--c:#bd7b67; font-size: 14px;"> <%= PrjQuiz1Score %></div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quiz 2</h5>
+                                        <div class="pie animate" style="--p:<%= Quiz2Score*4 %>;--c:#bd7b67; font-size: 14px;"> <%= PrjQuiz2Score %></div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quiz 3</h5>
+                                        <div class="pie animate" style="--p:<%= Quiz3Score*4 %>;--c:#bd7b67; font-size: 14px;"> <%= PrjQuiz3Score %></div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     
@@ -236,7 +327,7 @@
                             <h4 class="chakra-petch-regular">Competency</h4>   
                             <div style="height: 400px;">
                                 <div class="chartCard">
-                                    <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff;">
+                                    <div class="chartBox" style="background-color: #ffffff37; border: solid #fff;">
                                         <canvas id="myChart"></canvas>
                                     </div>
                                 </div>
@@ -249,16 +340,16 @@
                                     const data = {
                                         labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
                                         datasets: [{
-                                            data: [<%= PreBasicPercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,<%= PreWritePercent %>],
+                                            data: [<%= PreBasicPercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,10],
                                             label: "Pre-test",
-                                            borderColor: '#80599f',
-                                            backgroundColor: '#80599f49',
+                                            borderColor: '#2F3C3D',
+                                            backgroundColor: '#66B7BDcf',
                                         },{
-                                            data: [<%= BasicPercent %>,<%= TracePercent %>,<%= ExplainPercent %>,<%= WritePercent %>],
+                                            data: [<%= BasicPercent %>,<%= TracePercent %>,<%= ExplainPercent %>,40],
                                             label: "Post-test",
-                                            borderColor: '#d272e7',
+                                            borderColor: '#2F3C3D',
                                             fill: true,
-                                            backgroundColor: '#d272e737',
+                                            backgroundColor: '#bd7b67cf',
                                         }]
                                     };
                                     // config 
@@ -372,7 +463,7 @@
                     <% }%></div>
                 </div>
             </div>
-
+            <br>
 
 
     <!-- Modal -->
