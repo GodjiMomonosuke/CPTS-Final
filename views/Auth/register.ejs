@@ -11,17 +11,17 @@
     font-style: normal;
 }
 .contentshadow {
-    box-shadow: 0 0 15px 5px #5c58b6;
+    box-shadow: 0 0 15px 5px #bd7b67;
   }
   .button {
     color: #fff;
-    background-color: #5c58b6;
+    background-color: #bd7b67;
     width: 150px;
-    border: solid 3px #ff4cbf;
+    border: solid 3px #000;
   }
   .button:hover {
-    color: #38fbdb;
-    box-shadow: 0 0 10px 1px #ff4cbf;
+    color: #fff;
+    box-shadow: 0 0 10px 1px #bd7b67;
   }
   .group {
     display: grid;
@@ -29,15 +29,15 @@
 
     }
 </style>
-<body class="quantico-regular" style="background-color: #122c5a; box-shadow: inset 0 0 15px 5px #ff4cbf;"></body>
+<body class="quantico-regular" style="background-color: #cad19f;"></body>
 <%- include('../layouts/navbar-viewer') %>
 <br><br><br><br>
 
 <div id = "content" class="container ">
 <!-- <div class="card-text" style="padding-left: 50%;"> -->
   <div class="card text contentshadow">
-      <div class="card-header text-center" style="background-color: #5c58b6;">
-        <h2 style="color: #38fbdb;">Register</h2>
+      <div class="card-header text-center" style="background-color: #bd7b67;">
+        <h2 style="color: #fff;">Register</h2>
       </div>
       <div class="card-body">
           <form action="/auth/register" method="post" class="lg-form">
@@ -143,7 +143,7 @@
               </div>
           
               <br>
-              <button style="background-color: #5c58b6;" input type="submit" value="Register" class="button" >Register</button>
+              <button style="background-color: #bd7b67;" input type="submit" value="Register" class="button" >Register</button>
           </form>
       </div>
       <div class="card-footer text-muted">

@@ -70,13 +70,12 @@
   
   .button {
     color: #000000;
-    background-color: #d272e7;
+    background-color: #cad19f;
     border: solid #000000;
   }
   .button:hover {
-    color: #ffb3fc;
-    border: solid #fb6ff6;
-    box-shadow: 0 0 10px 5px #fc0ff5;
+    border: solid #bd7b67;
+    box-shadow: 0 0 10px 5px #fff;
   }
 </style>
 
@@ -85,7 +84,7 @@
             <div class="accordion" id="accordionParentSyntax">
                 <!--   Introduce -->
                 <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
-                    <h1>Lesson</h1>
+                    <h1 style="color: #000;">Lesson</h1>
                     
                     <!--   ## -->
                     <div class="box bg-light  mb-5 shadow" style="border-radius: 5px;">
@@ -136,47 +135,55 @@
                                         <div id="myDIV1" style="display:none; margin-top: 10px;">
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: start;">Knowledge</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre1LV1 %></b>
+                                                <b style="font-size: 12px; text-align: start;"><%= pre1LV1 %>/5 </b>
                                                  <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre1LV1*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre1LV1*20 %>px;" class="barValue">
+                                                        <%= pre1LV1*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post1LV1 %></b>
+                                                <p style="font-size: 12px; text-align: start;"><%= post1LV1 %>/5 </p>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post1LV1*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post1LV1*20 %>px;" class="barValue">
+                                                        <%= post1LV1*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: start;">Tracing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre1LV2 %></b>
+                                                <b style="font-size: 12px; text-align: start;"><%= pre1LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre1LV2*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre1LV2*20 %>%;" class="barValue">
+                                                        <%= pre1LV2*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post1LV2 %></b>
+                                                <p style="font-size: 12px; text-align: start;"><%= post1LV2 %>/5</p>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post1LV2*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post1LV2*20 %>%;" class="barValue">
+                                                        <%= post1LV2*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: start;">Explaining</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre1LV3 %></b>
+                                                <b style="font-size: 12px; text-align: start; color"><%= pre1LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre1LV3*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre1LV3*20 %>%;" class="barValue">
+                                                        <%= pre1LV3*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post1LV3 %></b>
+                                                <p style="font-size: 12px; text-align: start;"><%= post1LV3 %>/5</p>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post1LV3*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post1LV3*20 %>%;" class="barValue">
+                                                        <%= post1LV3*20 %>%</div>
                                                 </div> 
                                             </div>       
                                             <div class="group5"> 
                                                 <b style="font-size: 12px; text-align: start;">Writing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre1LV4 %></b>
+                                                <b style="font-size: 12px; text-align: start;"><%= pre1LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre1LV4*4 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre1LV4*4 %>%;" class="barValue">
+                                                        <%= pre1LV4*4 %>%</div>
                                                 </div>
 
-                                                <b style="font-size: 12px; text-align: center;"><%= post1LV4 %></b>
+                                                <p style="font-size: 12px; text-align: start;"><%= post1LV4 %>/25</p>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post1LV4*4 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post1LV4*4 %>%;" class="barValue">
+                                                        <%= post1LV4*4 %>%</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -229,47 +236,47 @@
                                         <button class="btn button" onclick="myFunction2()">กดเพื่อดูคะแนน</button>
                                         <div id="myDIV2" style="display:none; margin-top: 10px;">
                                             <div class="group5">
-                                                <b style="font-size: 12px; text-align: end;">Knowledge</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre2LV1 %></b>
+                                                <b style="font-size: 12px; text-align: start;">Knowledge</b>
+                                                <b style="font-size: 12px; text-align: start;"><%= pre2LV1 %>/5</b>
                                                  <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre2LV1*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre2LV1*20 %>%;" class="barValue"><%= pre2LV1*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post2LV1 %></b>
+                                                <b style="font-size: 12px; text-align: start;"><%= post2LV1 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post2LV1*20 %>px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="group5">
-                                                <b style="font-size: 12px; text-align: end;">Tracing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre2LV2 %></b>
-                                                <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre2LV2*20 %>px;"></div>
-                                                </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post2LV2 %></b>
-                                                <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post2LV2*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post2LV1*20 %>%;" class="barValue"><%= post2LV1*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
-                                                <b style="font-size: 12px; text-align: end;">Explaining</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre2LV3 %></b>
+                                                <b style="font-size: 12px; text-align: start;">Tracing</b>
+                                                <b style="font-size: 12px; text-align: start;"><%= pre2LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre2LV3*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre2LV2*20 %>%;" class="barValue"><%= pre2LV2*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post2LV3 %></b>
+                                                <b style="font-size: 12px; text-align: start;"><%= post2LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post2LV3*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post2LV2*20 %>%;" class="barValue"><%= post2LV2*20 %>%</div>
+                                                </div>
+                                            </div>
+                                            <div class="group5">
+                                                <b style="font-size: 12px; text-align: start;">Explaining</b>
+                                                <b style="font-size: 12px; text-align: start;"><%= pre2LV3 %>/5</b>
+                                                <div class="bar">
+                                                    <div style="background-color: #a0de87; width: <%= pre2LV3*20 %>%;" class="barValue"><%= pre2LV3*20 %>%</div>
+                                                </div>
+                                                <b style="font-size: 12px; text-align: start;"><%= post2LV3 %>/5</b>
+                                                <div class="bar">
+                                                    <div style="background-color: #ffb26f; width: <%= post2LV3*20 %>%;" class="barValue"><%= post2LV3*20 %>%</div>
                                                 </div> 
                                             </div>       
                                             <div class="group5"> 
-                                                <b style="font-size: 12px; text-align: end;">Writing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre2LV4 %></b>
+                                                <b style="font-size: 12px; text-align: start;">Writing</b>
+                                                <b style="font-size: 12px; text-align: start;"><%= pre2LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre2LV4*4 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre2LV4*4 %>%;" class="barValue"><%= pre2LV4*4 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post2LV4 %></b>
+                                                <b style="font-size: 12px; text-align: start;"><%= post2LV4 %>/25</b>
                                                    <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post2LV4*4 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post2LV4*4 %>%;" class="barValue"><%= post2LV4*4 %>%</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -324,55 +331,51 @@
                                         <div id="myDIV3" style="display:none; margin-top: 10px;">
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Knowledge</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre3LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre3LV1 %>/5</b>
                                                  <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre3LV1*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre3LV1*20 %>%;" class="barValue"><%= pre3LV1*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post3LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post3LV1 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post3LV1*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post3LV1*20 %>%;" class="barValue"><%= post3LV1*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Tracing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre3LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre3LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre3LV2*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre3LV2*20 %>%;" class="barValue"><%= pre3LV2*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post3LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post3LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post3LV2*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post3LV2*20 %>%;" class="barValue"><%= post3LV2*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Explaining</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre3LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre3LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre3LV3*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre3LV3*20 %>%;" class="barValue"><%= pre3LV3*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post3LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post3LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post3LV3*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post3LV3*20 %>%;" class="barValue"><%= post3LV3*20 %>%</div>
                                                 </div> 
                                             </div>       
                                             <div class="group5"> 
                                                 <b style="font-size: 12px; text-align: end;">Writing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre3LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre3LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre3LV4*4 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre3LV4*4 %>%;" class="barValue"><%= pre3LV4*4 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post3LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post3LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post3LV4*4 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post3LV4*4 %>%;" class="barValue"><%= post3LV4*4 %>%</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                                 
-                                
                                 <div class="wrapbox auto contentbox">
                                     <b>4. Operators and Expressions</b><hr>
                                     <div>
@@ -421,46 +424,47 @@
                                         <div id="myDIV4" style="display:none; margin-top: 10px;">
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Knowledge</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre4LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre4LV1 %>/5</b>
+                                                
                                                  <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre4LV1*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre4LV1*20 %>%;" class="barValue"><%= pre4LV1*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post4LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post4LV1 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post4LV1*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post4LV1*20 %>%;" class="barValue"><%= post4LV1*20 %>%</div> 
                                                 </div>
-                                            </div>
+                                            </div>  
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Tracing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre4LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre4LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre4LV2*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre4LV2*20 %>%;" class="barValue" ><%= pre4LV2*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post4LV2 %></b>
-                                                <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post4LV2*20 %>px;"></div>
+                                                <b style="font-size: 12px; text-align: center;"><%= post4LV2 %>/5</b>
+                                                <div class="bar"> 
+                                                    <div style="background-color: #ffb26f; width: <%= post4LV2*20 %>%;" class="barValue"><%= post4LV2*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Explaining</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre4LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre4LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre4LV3*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre4LV3*20 %>%;" class="barValue" ><%= pre4LV3*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post4LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post4LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post4LV3*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post4LV3*20 %>%;" class="barValue"><%= post4LV3*20 %>%</div>
                                                 </div> 
                                             </div>       
                                             <div class="group5"> 
                                                 <b style="font-size: 12px; text-align: end;">Writing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre4LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre4LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre4LV4*4 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre4LV4*4 %>%;" class="barValue"><%= pre4LV4*4 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post4LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post4LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post4LV4*4 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post4LV4*4 %>%;" class="barValue" ><%= post4LV4*4 %>%</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -514,46 +518,46 @@
                                         <div id="myDIV5" style="display:none; margin-top: 10px;">
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Knowledge</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre5LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre5LV1 %>/5</b>
                                                  <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre5LV1*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre5LV1*20 %>%;" class="barValue"><%= pre5LV1*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post5LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post5LV1 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post5LV1*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post5LV1*20 %>%;" class="barValue"><%= post5LV1*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Tracing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre5LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre5LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre5LV2*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre5LV2*20 %>%;" class="barValue"><%= pre5LV2*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post5LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post5LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post5LV2*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post5LV2*20 %>%;" class="barValue"><%= post5LV2*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Explaining</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre5LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre5LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre5LV3*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre5LV3*20 %>%;" class="barValue"><%= pre5LV3*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post5LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post5LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post5LV3*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post5LV3*20 %>%;" class="barValue"><%= post5LV3*20 %>%</div>
                                                 </div> 
                                             </div>       
                                             <div class="group5"> 
                                                 <b style="font-size: 12px; text-align: end;">Writing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre5LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre5LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre5LV4*4 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre5LV4*4 %>%;" class="barValue"><%= pre5LV4*4 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post5LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post5LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post5LV4*4 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post5LV4*4 %>%;" class="barValue"><%= post5LV4*4 %>%</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -607,46 +611,46 @@
                                         <div id="myDIV6" style="display:none; margin-top: 10px;">
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Knowledge</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre6LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre6LV1 %>/5</b>
                                                  <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre6LV1*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre6LV1*20 %>%;" class="barValue"><%= pre6LV1*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post6LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post6LV1 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post6LV1*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post6LV1*20 %>%;" class="barValue"><%= post6LV1*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Tracing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre6LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre6LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre6LV2*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre6LV2*20 %>%;" class="barValue"><%= pre6LV2*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post6LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post6LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post6LV2*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post6LV2*20 %>%;" class="barValue"><%= post6LV2*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Explaining</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre6LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%=pre6LV3 %>/5 </b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre6LV3*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre6LV3*20 %>%;" class="barValue"><%= pre6LV3*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post6LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post6LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post6LV3*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post6LV3*20 %>%;" class="barValue"><%= post6LV3*20 %>%</div>
                                                 </div> 
                                             </div>       
                                             <div class="group5"> 
                                                 <b style="font-size: 12px; text-align: end;">Writing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre6LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%=pre6LV4 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre6LV4*4 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre6LV4*4 %>%;" class="barValue"><%= pre6LV4*4 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post6LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%=post6LV4 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post6LV4*4 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post6LV4*4 %>%;" class="barValue"><%= post6LV4*4 %>%</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -701,46 +705,46 @@
                                         <div id="myDIV7" style="display:none; margin-top: 10px;">
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Knowledge</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre7LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre7LV1 %>/5</b>
                                                  <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre7LV1*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre7LV1*20 %>%;" class="barValue"><%= pre7LV1*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post7LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post7LV1 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post7LV1*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post7LV1*20 %>%;" class="barValue"><%= post7LV1*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Tracing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre7LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre7LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre7LV2*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre7LV2*20 %>%;" class="barValue"><%= pre7LV2 %>/5</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post7LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post7LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post7LV2*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post7LV2*20 %>%;" class="barValue"><%= post7LV2 %>/5</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Explaining</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre7LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre7LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre7LV3*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre7LV3*20 %>%;" class="barValue"><%= pre7LV3 %>/5</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post7LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post7LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post7LV3*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post7LV3*20 %>%;" class="barValue"><%= post7LV3 %>/5</div>
                                                 </div> 
                                             </div>       
                                             <div class="group5"> 
                                                 <b style="font-size: 12px; text-align: end;">Writing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre7LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre7LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre7LV4*4 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre7LV4*4 %>%;" class="barValue"><%= pre7LV4 %>/25</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post7LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post7LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post7LV4*4 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post7LV4*4 %>%;" class="barValue"><%= post7LV4 %>/25</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -794,51 +798,64 @@
                                         <div id="myDIV8" style="display:none; margin-top: 10px;">
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Knowledge</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre8LV1 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre8LV1 %>/5</b>
                                                  <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre8LV1*20 %>px;"></div>
-                                                </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post8LV1 %></b>
+                                                    <div style="background-color: #a0de87; width: <%= pre8LV1*20 %>%;" class="barValue">
+                                                        <%= pre8LV1*20 %>%</div>
+                                                    </div>
+                                                <b style="font-size: 12px; text-align: center;"><%= post8LV1 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post8LV1*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post8LV1*20 %>%;" class="barValue">
+                                                        <%= post8LV1*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Tracing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre8LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre8LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre8LV2*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre8LV2*20 %>%;" class="barValue">
+                                                        <%= pre8LV2*20 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post8LV2 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post8LV2 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post8LV2*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post8LV2*20 %>%;" class="barValue">
+                                                        <%= post8LV2*20 %>%</div>
                                                 </div>
                                             </div>
                                             <div class="group5">
                                                 <b style="font-size: 12px; text-align: end;">Explaining</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre8LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre8LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre8LV3*20 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre8LV3*20 %>%;" class="barValue">
+                                                        <%= pre8LV3*20 %>%;</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post8LV3 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post8LV3 %>/5</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post8LV3*20 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post8LV3*20 %>%;" class="barValue">
+                                                        <%= post8LV3*20 %>%</div>
                                                 </div> 
                                             </div>       
                                             <div class="group5"> 
                                                 <b style="font-size: 12px; text-align: end;">Writing</b>
-                                                <b style="font-size: 12px; text-align: center;"><%= pre8LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= pre8LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #a0de87; height: 10px; width: <%= pre8LV4*4 %>px;"></div>
+                                                    <div style="background-color: #a0de87; width: <%= pre8LV4*4 %>%;" class="barValue"> 
+                                                        <%= pre8LV4*4 %>%</div>
                                                 </div>
-                                                <b style="font-size: 12px; text-align: center;"><%= post8LV4 %></b>
+                                                <b style="font-size: 12px; text-align: center;"><%= post8LV4 %>/25</b>
                                                 <div class="bar">
-                                                    <div style="background-color: #ffb26f; height: 10px; width: <%= post8LV4*4 %>px;"></div>
+                                                    <div style="background-color: #ffb26f; width: <%= post8LV4*4 %>%;" class="barValue">
+                                                        <%= post8LV4*4 %>%</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                                 
+                                
+                                
                                 
                                 
                               </div>

@@ -3,6 +3,9 @@
   a{
     text-decoration: none;
   }
+  a:hover {
+    color: #000000;
+  }
   .projectbox{
     width: 150px;
     height: 200px;
@@ -14,9 +17,6 @@
     border-radius: 10px;
     font-size: 18px;
     text-align: center;
-  }
-  .projectbox:hover {
-    box-shadow: 0 0 10px 5px #ffb3fc;
   }
   .quantico-regular {
     font-family: "Quantico", sans-serif;
@@ -30,13 +30,15 @@
   }
   .button {
     color: #000000;
-    background-color: #b957ce;
+    background-color: #cad19f;
     border: solid #000000;
   }
   .button:hover {
-    color: #ffb3fc;
-    border: solid #fb6ff6;
-    box-shadow: 0 0 15px 5px #fc0ff5;
+    border: solid #bd7b67;
+    box-shadow: 0 0 15px 5px #fff;
+  }
+  p { color: #000000;}
+  a {color: #96534a;
   }
 </style>
 
@@ -46,7 +48,7 @@
 <!--   C Language -->
         <div class="accordion" id="accordionParentSyntax">
             <!--   Introduce -->
-            <div id="collapseIntroduce" class="accordion-collapse show project" style="background-color: #bd7b67; box-shadow: 0 0 15px 5px #38fbdb;" data-bs-parent="#accordionParentSyntax">
+            <div id="collapseIntroduce" class="accordion-collapse show project shadow" style="background-color: #bd7b67;" data-bs-parent="#accordionParentSyntax">
                 <h1>Project</h1> <!--
                 <ol class="breadcrumb" style="background-color: #3a4e93;">
                     <li class="breadcrumb-item"><i href="/home" class="fa fa-home" style="font-size:16px"></i></li>
@@ -62,23 +64,32 @@
                             <div class="projectbox wrapbox">
                               <p>Project Quiz 1</p>
                               <% if(RecommendaResult[0].TicketBooking_SystemPercent >= 50) { count = count-1%> <%# Follow node %> 
-                                <a href="/project-Ticket_Booking_System" style="color:rgb(255, 255, 255)">click</a>
+                                <div style="background-color: #fff;"><a href="/project-Ticket_Booking_System">Click</a></div>
                                 <br><br><p><%= PrjQuiz1Score %></p>
-                              <% } %>
+                              <% }else{ %>
+                                <p style="font-size: 14px; color: #535353;">ทำแบบทดสอบบทที่ 1-4 เพื่อปลดล็อก</p>
+                                <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                <% } %>
                             </div>
                             <div class="projectbox wrapbox">
                               <p>Project Quiz 2</p>
                               <% if(RecommendaResult[0].PointofSales_SystemPercent >= 75) {count = count-1 %> <%# Follow node %> 
-                                  <a href="/project-Point_of_Sales_System" style="color:rgb(255, 255, 255)">click</a>
+                                  <div style="background-color: #fff;"><a href="/project-Point_of_Sales_System">Click</a></div>
                                   <br><br><p><%= PrjQuiz2Score %></p>
-                              <% } %>
+                                  <% }else{ %>
+                                    <p style="font-size: 14px; color: #535353;">ทำแบบทดสอบบทที่ 5-6 เพื่อปลดล็อก</p>
+                                    <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    <% } %>
                             </div>
                             <div class="projectbox wrapbox">
                               <p>Project Quiz 3</p>
                               <% if(RecommendaResult[0].ProjectQUIZ3Percent === 100) {count = count-1 %> <%# Follow node %> 
-                                <a href="/project-Project_QUIZ3" style="color:rgb(255, 255, 255)">click</a>
+                                <div style="background-color: #fff;"><a href="/project-Project_QUIZ3">Click</a></div>
                                 <br><br><p><%= PrjQuiz3Score %></p>
-                              <% } %>
+                                <% }else{ %>
+                                  <p style="font-size: 14px; color: #535353;">ทำแบบทดสอบบทที่ 7-8 เพื่อปลดล็อก</p>
+                                  <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="#535353" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                  <% } %>
                             </div>
                           <% } %>
                             

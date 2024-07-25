@@ -57,7 +57,7 @@ button.btn-secondary {
 }
 .group5 {
     display: grid;
-    grid-template-columns: 70px 20px 110px 20px 110px;
+    grid-template-columns: 70px 40px 90px 40px 110px;
 }
 
 
@@ -142,21 +142,70 @@ button.btn-secondary {
     background-color: #ffffff;
     margin-bottom: 10px;
 }
+
+
+progress[value]::-webkit-progress-value {
+    background-color: #bd7b67;
+}
+progress[value]::-webkit-progress-bar {
+    background-color: #e2ddc8;
+    width: 400px;
+}
+
+
 .progress {
-    width: 300px;
-    background-color: aquamarine;
+    width: 300px; 
+    height: 13px; 
+    background-color: #e2ddc8;
+    border: solid 1px#96534a;
 }
-
-progress[value]::-webkit-progress-value {background-color: #bd7b67;}
-progress[value]::-webkit-progress-bar {background-color: #e2ddc8;}
-progress{border: solid #96534a;}
-
+.progressvalue {
+    color: #fff;
+    height: 14px;
+    font-size: 10px; 
+    text-align: start;
+    background-color: #bd7b67;
+    padding-left: 5px;
+}
 .bar {
-    width: 100px; 
-    height: 10px; 
+    width: 80px; 
+    height: 13px; 
     background-color: #f7f7f7;
-    margin-top: 4px;
+    margin-top: 1px;
 }
+.barValue {
+    height: 13px;
+    font-size: 10px; 
+    text-align: start;
+    padding-left: 3px;
+}
+
+.station {
+  width: 30px;
+  height: 30px;
+  background-color: #66B7BD;
+  border-radius: 100%;
+  padding-top: 1px;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: 10px;
+  color: #000;
+  border: solid 2px #ffffff;
+}
+.station_w {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+  padding-top: 1px;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: 10px;
+  color: #000;
+  border: solid 2px #66B7BD;
+}
+
+
 @media (max-width: 1000px) {
     .group, .group2 {display: block;}
     .boxbax, .item1 {width: auto; }
@@ -165,3 +214,59 @@ progress{border: solid #96534a;}
     .group2 {display: block;}
     html {height: fit-content;}
 }
+
+
+@property --p{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  .pie {
+    --p:20;
+    --b:15px;
+    --c:darkred;
+    --w:80px;
+    
+    width:var(--w);
+    aspect-ratio:1;
+    position:relative;
+    display:inline-grid;
+    margin:5px;
+    place-content:center;
+    font-size:25px;
+    font-weight:bold;
+    font-family:sans-serif;
+  }
+  .pie:before,
+  .pie:after {
+    content:"";
+    position:absolute;
+    border-radius:50%;
+  }
+  .pie:before {
+    inset:0;
+    background:
+      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+  .pie:after {
+    inset:calc(50% - var(--b)/2);
+    background:var(--c);
+    transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  .animate {
+    animation:p 1s .5s both;
+  }
+  .no-round:before {
+    background-size:0 0,auto;
+  }
+  .no-round:after {
+    content:none;
+  }
+  @keyframes p {
+    from{--p:0}
+  }
+  

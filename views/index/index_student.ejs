@@ -166,85 +166,168 @@
                 <div class="group">
                     <div>
                         <div class="boxbax">
-                            <p>Progress</p>
-                            <div class="progress">
-                                <progress class="progress" value="<%= TicketBooking_SystemPercent %>" max="100"></progress>
-                            </div> <b><%= TicketBooking_SystemPercent %>%</b>
-                            <b style="font-size: 14px;">ความคืบหน้าในการทำแบบทดสอบเพื่อปลดล็อค Project Quiz</b>
-                            <hr>
-    
-                            <img style="width: 20px;" src="https://cdn-icons-png.flaticon.com/512/4213/4213459.png " alt="">
+                            <p style="margin: 0;">Progress</p>
+                            <div style="display: flex;">
+                                <div class="progress" style="background-color: #e2ddc8;">
+                                    <div style=" width: <%= TicketBooking_SystemPercent %>%;" class="progressvalue"></div>
+                                    
+                                </div> 
+                                <b style="font-size: 12px; margin-left: 5px;"><%= TicketBooking_SystemPercent %>%</b>
+                            </div>
+                            <% if (TicketBooking_SystemPercent === 0) { %>
+                                <div style="display: flex;">
+                                    <p class="station_w">1</p>
+                                    <p class="station_w">2</p>
+                                    <p class="station_w">3</p>
+                                    <p class="station_w">4</p>
+                                    <p class="station_w">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 13) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station_w">2</p>
+                                    <p class="station_w">3</p>
+                                    <p class="station_w">4</p>
+                                    <p class="station_w">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 25) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station_w">3</p>
+                                    <p class="station_w">4</p>
+                                    <p class="station_w">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 38) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station_w">4</p>
+                                    <p class="station_w">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
                             <% if (TicketBooking_SystemPercent === 50) { %>
-                                <b>Project Quiz 1 ปลดล็อกแล้ว!</b>
-                                <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station">4</p>
+                                    <p class="station_w">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
                             <% }%>
-                            <% if (PointofSales_SystemPercent === 75) { %>
-                                <b>Project Quiz 2 ปลดล็อกแล้ว!</b>
-                                <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
+                            <% if (TicketBooking_SystemPercent === 63) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station">4</p>
+                                    <p class="station">5</p>
+                                    <p class="station_w">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
                             <% }%>
-                            <% if (ProjectQUIZ3Percent === 100) { %>
-                                <b>Project Quiz 3 ปลดล็อกแล้ว!</b>
-                                <p>คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p>
+                            <% if (TicketBooking_SystemPercent === 75) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station">4</p>
+                                    <p class="station">5</p>
+                                    <p class="station">6</p>
+                                    <p class="station_w">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
                             <% }%>
-                            <p>Project Quiz 1 : <%= PrjQuiz1Score %></p>
-                            <p>Project Quiz 2 : <%= PrjQuiz2Score %></p>
-                            <p>Project Quiz 3 : <%= PrjQuiz3Score %></p>
+                            <% if (TicketBooking_SystemPercent === 88) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station">4</p>
+                                    <p class="station">5</p>
+                                    <p class="station">6</p>
+                                    <p class="station">7</p>
+                                    <p class="station_w">8</p>
+                                </div>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 100) { %>
+                                <div style="display: flex;">
+                                    <p class="station">1</p>
+                                    <p class="station">2</p>
+                                    <p class="station">3</p>
+                                    <p class="station">4</p>
+                                    <p class="station">5</p>
+                                    <p class="station">6</p>
+                                    <p class="station">7</p>
+                                    <p class="station">8</p>
+                                </div>
+                                
+                            <% }%>
+                            
+                            <hr>
+                            <% if (TicketBooking_SystemPercent === 50) { %>
+                                <p style="margin: 0;">Project Quiz 1 ปลดล็อกแล้ว!</p>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 75) { %>
+                                <p style="margin: 0;">Project Quiz 2 ปลดล็อกแล้ว!</p>
+                            <% }%>
+                            <% if (TicketBooking_SystemPercent === 100) { %>
+                                <p style="margin: 0;">Project Quiz 3 ปลดล็อกแล้ว!</p>
+                            <% }%>
+                            <p style="margin: 0;">คลิก<a href="/project"> Project </a>เพื่อดูเพิ่มเติม</p> <br>
+
+                            <p style="margin: 3px;">คะแนน Project Quiz</p>
+                            <div style="margin-left: 15px;">
+                                <div class="col" style="display: flex;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quiz 1</h5>
+                                        <div class="pie animate" style="--p:<%= Quiz1Score*4 %>;--c:#bd7b67; font-size: 14px;"> <%= PrjQuiz1Score %></div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quiz 2</h5>
+                                        <div class="pie animate" style="--p:<%= Quiz2Score*4 %>;--c:#bd7b67; font-size: 14px;"> <%= PrjQuiz2Score %></div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Quiz 3</h5>
+                                        <div class="pie animate" style="--p:<%= Quiz3Score*4 %>;--c:#bd7b67; font-size: 14px;"> <%= PrjQuiz3Score %></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
-                        <!--
-                        <div class="boxbax2">  
-                            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
-                                <p>Pre-test</p>
-                                <div class="row mb-3 ">
-                                    <div class="col-sm-10 " style="top:10px">
-                                        <b style="font-size: 12px;">Knowledge: <%= PreBasicPercent %> /40</b>
-                                        <progress class="progress" max="40" value=<%= PreBasicPercent %>  </progress>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-sm-10 " style="top:10px">
-                                        <b style="font-size: 12px;">Tracing: <%= PreTracePercent %> /40</b>
-                                    <progress class="progress" max="40" value=<%= PreTracePercent %>  class="html5 "></progress>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-sm-10 " style="top:10px">
-                                        <b style="font-size: 12px;">Explaining: <%= PreExplainPercent %> /40</b>
-                                    <progress class="progress" max="40" value=<%= PreExplainPercent, %>   class="html5 "></progress>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  <br>-->
-                        <div class="boxbax2">  
-                            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
-                                <p>Post-test</p>
-                                <div class="row mb-3 ">
-                                    <div class="col-sm-10 " style="top:10px">
-                                        <b style="font-size: 12px;">Knowledge: <%= BasicPercent %> /40</b>
-                                        <progress class="progress" max="40" value=<%= BasicPercent %>  </progress>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-sm-10 " style="top:10px">
-                                        <b style="font-size: 12px;">Tracing: <%= TracePercent %> /40</b>
-                                        <progress class="progress" max="40" value=<%= TracePercent %> </progress>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-sm-10 " style="top:10px">
-                                        <b style="font-size: 12px;">Explaining: <%= ExplainPercent %> /40</b>
-                                        <progress class="progress" max="40" value=<%= ExplainPercent, %> </progress>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
+                    
+                        
+                        
+                         <br>
+                        
                     </div>
                     <div  class="group2">
                         <div></div>
                         <div>
-                            <h4 class="chakra-petch-regular">Skill</h4>   
+                            <h4 class="chakra-petch-regular">Competency</h4>   
                             <div style="height: 400px;">
                                 <div class="chartCard">
-                                    <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff;">
+                                    <div class="chartBox" style="background-color: #ffffff37; border: solid #fff;">
                                         <canvas id="myChart"></canvas>
                                     </div>
                                 </div>
@@ -257,16 +340,16 @@
                                     const data = {
                                         labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
                                         datasets: [{
-                                            data: [15,20,15,30],
+                                            data: [<%= PreBasicPercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,10],
                                             label: "Pre-test",
-                                            borderColor: '#80599f',
-                                            backgroundColor: '#80599f49',
+                                            borderColor: '#2F3C3D',
+                                            backgroundColor: '#66B7BDcf',
                                         },{
-                                            data: [50,55,45,40],
+                                            data: [<%= BasicPercent %>,<%= TracePercent %>,<%= ExplainPercent %>,40],
                                             label: "Post-test",
-                                            borderColor: '#d272e7',
+                                            borderColor: '#2F3C3D',
                                             fill: true,
-                                            backgroundColor: '#d272e737',
+                                            backgroundColor: '#bd7b67cf',
                                         }]
                                     };
                                     // config 
@@ -289,8 +372,98 @@
                         </div>                        
                     </div>
                 </div>
-            </div>
+                <div class="group2" style="width: 800px;">
+                    <div class="boxbax2">  
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                            <p style="margin: 0;">Pre-test</p>
+                            <b style="font-size: 12px;">Knowledge: <%= PreBasic %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= PreBasicPercent %>%;" class="progressvalue">
+                                    <%= PreBasicPercent %>%
+                                </div>
+                            </div>
+                            <b style="font-size: 12px;">Tracing: <%= PreTrace %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= PreTracePercent %>%;" class="progressvalue">
+                                    <%= PreTracePercent %>%
+                                </div>
+                            </div>
+                            <b style="font-size: 12px;">Explaining: <%= PreExplain %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= PreExplainPercent %>%;" class="progressvalue">
+                                    <%= PreExplainPercent %>%
+                                </div>
+                            </div>
+                            <b style="font-size: 12px;">Writing: <%= PreWrite %> /200</b>
+                            <div class="progress"style="background-color: #e2ddc8;">
+                                <div style=" width: <%= PreWritePercent %>%;" class="progressvalue">
+                                    <%= PreWritePercent %>%
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+              
 
+                    <div class="boxbax2">
+                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                            <p style="margin: 0;">Post-test</p>
+                            <b style="font-size: 12px;">Knowledge: <%= Basic %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= BasicPercent %>%;" class="progressvalue">
+                                    <%= BasicPercent %>%
+                                </div>
+                            </div>
+                            </div>
+                            <b style="font-size: 12px;">Tracing: <%= Trace %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= TracePercent %>%;" class="progressvalue">
+                                    <%= TracePercent %>%
+                                </div>
+                            </div>
+                            <b style="font-size: 12px;">Explaining: <%= Explain %> /40</b>
+                            <div class="progress" style="background-color: #e2ddc8;">
+                                <div style=" width: <%= ExplainPercent %>%;" class="progressvalue">
+                                    <%= ExplainPercent %>%
+                                </div>
+                            </div>
+                            <b style="font-size: 12px;">Writing: <%= Write %> /200</b>
+                            <div class="progress"style="background-color: #e2ddc8;">
+                                <div style="width:  <%= WritePercent %>%;" class="progressvalue">
+                                    <%= WritePercent %>%
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+          
+                    <div style="margin-left: 10px;">
+                    <% if (TicketBooking_SystemPercent === 13) { %>
+                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (1 แบบทดสอบ)</p>
+                    <% }%>
+                    <% if (TicketBooking_SystemPercent === 25) { %>
+                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br><br> (2 แบบทดสอบ)</p>
+                    <% }%>
+                    <% if (TicketBooking_SystemPercent === 38) { %>
+                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด (3 แบบทดสอบ)</p>
+                    <% }%>
+                    <% if (TicketBooking_SystemPercent === 50) { %>
+                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (4 แบบทดสอบ)</p>
+                    <% }%>
+                    <% if (TicketBooking_SystemPercent === 63) { %>
+                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br><br> (5 แบบทดสอบ)</p>
+                    <% }%>
+                    <% if (TicketBooking_SystemPercent === 75) { %>
+                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด (6 แบบทดสอบ)</p>
+                    <% }%>
+                    <% if (TicketBooking_SystemPercent === 88) { %>
+                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (7 แบบทดสอบ)</p>
+                    <% }%>
+                    <% if (TicketBooking_SystemPercent === 100) { %>
+                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (8 แบบทดสอบ)</p>
+                    <% }%></div>
+                </div>
+            </div>
+            <br>
 
 
     <!-- Modal -->
