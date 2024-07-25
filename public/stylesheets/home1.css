@@ -180,6 +180,31 @@ progress[value]::-webkit-progress-bar {
     padding-left: 3px;
 }
 
+.station {
+  width: 30px;
+  height: 30px;
+  background-color: #66B7BD;
+  border-radius: 100%;
+  padding-top: 1px;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: 10px;
+  color: #000;
+  border: solid 2px #ffffff;
+}
+.station_w {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 100%;
+  padding-top: 1px;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: 10px;
+  color: #000;
+  border: solid 2px #66B7BD;
+}
+
 
 @media (max-width: 1000px) {
     .group, .group2 {display: block;}
