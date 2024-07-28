@@ -49,7 +49,8 @@ router.get('/', async (req, res, next) => {
               }
               
               res.render('student/project/project_main', { person,RecommendaResult,StudentAnswer,
-                PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score
+                PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score,
+                Ticket_Booking_SystemDone,Point_of_Sales_SystemDone,Project_QUIZ3Done
               });
 
             });
