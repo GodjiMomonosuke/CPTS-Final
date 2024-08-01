@@ -29,19 +29,19 @@ router.get('/', async (req, res, next) => {
               var PrjQuiz1Score = "ยังไม่ได้ทำ", PrjQuiz2Score = "ยังไม่ได้ทำ", PrjQuiz3Score = "ยังไม่ได้ทำ" 
               for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {
                     if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
-                      Ticket_Booking_SystemDone = 1;
+                      var Ticket_Booking_SystemDone = 1;
                         if (StudentAnswer[i].scoreTeacher === undefined) {
                           PrjQuiz1Score = "รอตรวจ"
                         } else {PrjQuiz1Score = parseInt(StudentAnswer[i].scoreTeacher) + "/25 คะแนน";}
                     }
                     if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
-                        Point_of_Sales_SystemDone = 1;
+                        var Point_of_Sales_SystemDone = 1;
                         if (StudentAnswer[i].scoreTeacher === undefined) {
                           PrjQuiz2Score = "รอตรวจ"
                         } else {PrjQuiz2Score = parseInt(StudentAnswer[i].scoreTeacher) + "/25 คะแนน";}
                     }
                     if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
-                        Project_QUIZ3Done = 1;
+                        var Project_QUIZ3Done = 1;
                         if (StudentAnswer[i].scoreTeacher === undefined) {
                           PrjQuiz3Score = "รอตรวจ"
                         } else {PrjQuiz3Score = parseInt(StudentAnswer[i].scoreTeacher) + "/25 คะแนน";}
