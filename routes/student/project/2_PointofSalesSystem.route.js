@@ -3,7 +3,7 @@ var compiler = require('compilex');
 var options = {stats : true}; //prints stats on console 
 compiler.init(options);
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
+const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net/";
 const mydatabase = "Cluster0";
 
 var ADRI = "https://drive.google.com/file/d/1Lc9NMPH1fpHMb-GTLUmBYXFI9DGfMqY3/preview"
