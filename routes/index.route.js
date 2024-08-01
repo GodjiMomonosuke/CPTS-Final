@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
+const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net/";
 
 
 
@@ -195,7 +195,7 @@ router.get('/', async (req, res, next) => {
 
           let CourseScoreObj={
             'Algorithms and Flowcharts':{score:IntroductionScore},
-            'Datatype andVariable':{score:StringScore},
+            'Datatype and Variable':{score:StringScore},
             'Input and Output':{score:DatatypeScore},
             'Operators and Expressions':{score:OperatorsScore},
             'Selection Statements':{score:FlowControlScore},
