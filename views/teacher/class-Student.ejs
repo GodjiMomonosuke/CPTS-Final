@@ -14,67 +14,36 @@
             </thead>  
             <tbody>
                 <% 
-                    if(Object.keys(Studentresult).length === 1) {   
-                        %>
-
-                            <td class="text-start">
-                                Project QUIZ1 | <%=Studentresult[0].TicTacToe %> <br>
-                                Project QUIZ2 | <%=Studentresult[0].LibrarySystem %> <br> 
-                                Project QUIZ3 | <%=Studentresult[0].Roshambo %> <br>
-                            </td>
-                            <td class="text-start">
-                                <% if(Studentresult[0].infoPrePostTest != undefined){ %>
-                                <% } else{ %>  
-                                    Algorithms and Flowcharts :
-                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Introduction %> <br>
-                                    Datatype and Variable :
-                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].String %> <br>
-                                    Input and Output :
-                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Datatype %> <br> 
-                                    Operators and Expressions :
-                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Operators %> <br>
-                                    Selection Statements  :
-                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].FlowControl %> <br> 
-                                    Loop Statements  :
-                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Loop %> <br> 
-                                    Arrays and Strings :
-                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Pointers %> <br>
-                                    Functions : 
-                                    <br> &nbsp &nbspQuiz | <%=Studentresult[0].Function %> <br>                                 
-                                <% } %>
-                            </td>
-                        <%
-                    } 
-                    else {
+                    
                         for (let i = 0; i < Object.keys(Studentresult).length; i++) {   
                             %>
                                 <th scope="row"><%=i+1%></th>
                                 <td><%=Studentresult[i].email %></td>
                                 <td><%=Studentresult[i].ClassName %></td>
-                                <td class="text-end">
+                                <td class="text-start">
                                     Project QUIZ1 | <%=Studentresult[i].TicTacToe %> <br>
                                     Project QUIZ2 | <%=Studentresult[i].LibrarySystem %> <br> 
                                     Project QUIZ3 | <%=Studentresult[i].Roshambo %> <br>
                                 
                                 </td>
-                                <td class="text-end">
+                                <td class="text-start">
                                     <% if(Studentresult[i].infoPrePostTest != undefined){ %>
                                 <% } else{ %>  
                                     Algorithms and Flowcharts :
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Introduction %> <br>
-                                    String :
+                                    Datatype and Variable :
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].String %> <br>
-                                    Datatype :
+                                    Input and Output :
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Datatype %> <br> 
-                                    Operators :
+                                    Operators and Expressions :
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Operators %> <br>
-                                    Selection  :
+                                    Selection Statements  :
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].FlowControl %> <br> 
-                                    Loop  :
+                                    Loop Statements  :
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Loop %> <br> 
-                                    Pointers :
+                                    Arrays and Strings :
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Pointers %> <br>
-                                    Function : 
+                                    Functions : 
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Function %> <br>
                                 <% } %>
                             </td>
@@ -117,7 +86,7 @@
                                 </td>
                                 </tr>
                             <%
-                        } 
+                        
                     }
                 %>
             </tbody>

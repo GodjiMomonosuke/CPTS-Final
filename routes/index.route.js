@@ -195,7 +195,7 @@ router.get('/', async (req, res, next) => {
 
           let CourseScoreObj={
             'Algorithms and Flowcharts':{score:IntroductionScore},
-            'Datatype andVariable':{score:StringScore},
+            'Datatype and Variable':{score:StringScore},
             'Input and Output':{score:DatatypeScore},
             'Operators and Expressions':{score:OperatorsScore},
             'Selection Statements':{score:FlowControlScore},
