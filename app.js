@@ -302,10 +302,10 @@ const PORT = process.env.PORT || 3000;
 mongoose
   .connect(process.env.MONGODB_URI, {
     dbName: process.env.DB_NAME,
-    //useNewUrlParser: true,
-    //useUnifiedTopology: true,
-    //useCreateIndex: true,
-    //useFindAndModify: false,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
   })
   .then(() => {
     console.log('💾 connected...');
