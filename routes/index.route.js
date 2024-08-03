@@ -235,7 +235,9 @@ router.get('/', async (req, res, next) => {
           console.log("\nCHECKSUM : " ,checksumper); //100
 
           res.render('index/index_teacher', { person ,sortedCourse,sortedProject,
-            BasicPercent,TracePercent,ExplainPercent,WritePercent
+            BasicPercent,TracePercent,ExplainPercent,WritePercent,
+            TicTacToeScore,LibrarySystemScore,RoshamboScore,
+            IntroductionScore,StringScore,DatatypeScore,OperatorsScore,FlowControlScore,PointersScore,StructureScore
           })
 
           });
