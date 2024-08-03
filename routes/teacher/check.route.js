@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId; 
-const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net/";
+const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 
