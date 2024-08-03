@@ -284,14 +284,11 @@ app.use('/classStudent',
 // *************** // 
 
 // 404 Handler
-app.use((req, res, next) => {
-  next(createHttpError.NotFound());
-});
-
-// Error Handler
-app.use((error, req, res, next) => {
-  error.status = error.status || 500;
-  res.status(error.status);
+app.get('/error', (req, res) => {
+  const error = {
+      status: 404,
+      message: 'Page not found'
+  };
   res.render('error_40x', { error });
 });
 
@@ -301,15 +298,11 @@ const PORT = process.env.PORT || 3000;
 // Making a connection to MongoDB
 mongoose
   .connect(process.env.MONGODB_URI, {
-<<<<<<< HEAD
-  
-=======
     dbName: process.env.DB_NAME,
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false,
->>>>>>> parent of 331e0ca (Merge branch 'main' into too3)
   })
   .then(() => {
     console.log('💾 connected...');
