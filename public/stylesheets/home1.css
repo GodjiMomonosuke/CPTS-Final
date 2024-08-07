@@ -180,6 +180,21 @@ progress[value]::-webkit-progress-bar {
     padding-left: 3px;
 }
 
+.TeacherBar {
+  width: 100px; 
+  height: 20px; 
+  background-color: #f7f7f7;
+  margin-top: 3px;
+}
+.TeacherBarValue {
+  height: 20px;
+  font-size: 14px; 
+  text-align: start;
+  padding-left: 3px;
+  --w:0px;
+  width:var(--w);
+}
+
 .station {
   width: 30px;
   height: 30px;
@@ -216,11 +231,13 @@ progress[value]::-webkit-progress-bar {
 }
 
 
+
 @property --p{
     syntax: '<number>';
     inherits: true;
     initial-value: 0;
   }
+  
   
   .pie {
     --p:20;
