@@ -7,9 +7,11 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 /**โจทย์ข้อที่ 4 (ข้อที่ต้องเขียนโค้ด)*/
-var ADRI = "https://drive.google.com/file/d/1wQOAcBxYwUJix_06JzJJ48aqGBKDN7WF/preview" 
-var ADRI_Expect = "เขียนโปรแกรม C เพื่อพิมพ์ 'A-Z' ตัวใหญ่ โดยเลือก 1 ตัวอักษร (ยกเว้นตัว C)" 
-var ADRI_Answer = "https://drive.google.com/file/d/1GfNE8Tlxo7FVYWdglVp-uikdJzchQSUj/preview"
+var ADRI1 = "https://drive.google.com/file/d/1MPevV4k9LkzOjqrxAHvA08qs27XNpqxk/preview" 
+var ADRI2 = "https://drive.google.com/file/d/1y_OuR6vmKvC7ucsPYgurPV43a350W4-D/preview"
+var ADRI3 = "https://drive.google.com/file/d/1lYWF0-KxUkVRufld0_ECkov6fIpVfPL0/preview"
+var ADRI4 = "https://drive.google.com/file/d/1w737Hm85h6icIA0eL-N75Ul4Sca8sQtH/preview"
+var ADRI5 = "https://drive.google.com/file/d/163DxCROxDpO2yF6jer4NJRhdMo1uS1VR/preview"
  
 
 
@@ -33,7 +35,7 @@ router.get('/', async (req, res, next) => { //ย่อโค้ดนี้ล�
           dbo.collection("StudentRecommendation").find(query).toArray(function(err, RecommendaResult) {
             if (err) throw err;
 
-            res.render('student/pretest/1_Algorithms_and_Flowcharts-pretest', { person ,StudentAnswer,RecommendaResult,ADRI,ADRI_Expect});
+            res.render('student/pretest/1_Algorithms_and_Flowcharts-pretest', { person ,StudentAnswer,RecommendaResult,ADRI1,ADRI2,ADRI3,ADRI4,ADRI5});
           });
         });
         
@@ -80,8 +82,8 @@ router.post('/submit', async (req, res, next) => {
   var sendLink201 = req.body.sendLink201
   var sendLink202 = req.body.sendLink202
 
-  var ImproveResult = ADRI_Expect
-  var Improvevariable = req.body.Improvevariable
+  //var ImproveResult = ADRI_Expect
+  //var Improvevariable = req.body.Improvevariable
 
   var score1 = 0;
   var score2 = 0;
@@ -220,9 +222,13 @@ router.post('/submit', async (req, res, next) => {
                 expResult20:expResult20,
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
+                ADRI1:ADRI1,
+                ADRI2:ADRI2,
+                ADRI3:ADRI3,
+                ADRI4:ADRI4,
+                ADRI5:ADRI5
                 /**ImproveResult:ImproveResult,
                 Improvevariable:Improvevariable,
-                ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };
               dbo.collection("StudentAnswer").insertOne(myobj, function(err, res) {

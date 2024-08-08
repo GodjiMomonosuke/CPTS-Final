@@ -70,7 +70,7 @@
     border: none;
     
     /* Add dimensions */
-    width: 100%; height: 20px;
+    width: 100px; height: 20px;
     
     /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
       background-color: whiteSmoke;
@@ -80,7 +80,7 @@
     color: royalblue;
     
     position: relative;
-    margin: 0 0 1.5em; 
+    margin: 10px 0 0; 
   }
   
   

@@ -215,6 +215,11 @@ if(choice15 === 'D'){
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
                 rating:rating,
+                ADRI1:ADRI1,
+                ADRI2:ADRI2,
+                ADRI3:ADRI3,
+                ADRI4:ADRI4,
+                ADRI5:ADRI5
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };

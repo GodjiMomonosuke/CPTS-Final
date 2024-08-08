@@ -194,14 +194,14 @@ router.get('/', async (req, res, next) => {
           else;  
 
           let CourseScoreObj={
-            'Algorithms and Flowcharts':{score:IntroductionScore},
-            'Datatype and Variable':{score:StringScore},
-            'Input and Output':{score:DatatypeScore},
-            'Operators and Expressions':{score:OperatorsScore},
-            'Selection Statements':{score:FlowControlScore},
-            'Loop Statements':{score:PointersScore},
-            'Arrays and Strings':{score:FunctionScore},
-            'Functions':{score:StructureScore}
+            'Lab1 Algorithms and Flowcharts':{score:IntroductionScore},
+            'Lab2 Datatype and Variable':{score:StringScore},
+            'Lab3 Input and Output':{score:DatatypeScore},
+            'Lab4 Operators and Expressions':{score:OperatorsScore},
+            'Lab5 Selection Statements':{score:FlowControlScore},
+            'Lab6 Loop Statements':{score:PointersScore},
+            'Lab7 Arrays and Strings':{score:FunctionScore},
+            'Lab8 Functions':{score:StructureScore}
           }
           
           let sortedCourse = Object.keys(CourseScoreObj);
@@ -209,6 +209,7 @@ router.get('/', async (req, res, next) => {
             //sort by score
             return CourseScoreObj[b].score - CourseScoreObj[a].score ;
           });
+          
 
           let ProjectScoreObj={
             'Ticket Booking System':{score:TicTacToeScore},
@@ -237,7 +238,7 @@ router.get('/', async (req, res, next) => {
           res.render('index/index_teacher', { person ,sortedCourse,sortedProject,
             BasicPercent,TracePercent,ExplainPercent,WritePercent,
             TicTacToeScore,LibrarySystemScore,RoshamboScore,
-            IntroductionScore,StringScore,DatatypeScore,OperatorsScore,FlowControlScore,PointersScore,StructureScore
+            IntroductionScore,StringScore,DatatypeScore,OperatorsScore,FlowControlScore,PointersScore,FunctionScore,StructureScore
           })
 
           });
@@ -283,13 +284,13 @@ router.get('/', async (req, res, next) => {
                     StudentAnswerLV3 = "✓"
                   }
                   //** */
-                  if(StudentAnswer[i].scoreLV1 === 0 &&  StudentAnswer[i].scoreLV1 != undefined){
+                  if(StudentAnswer[i].scoreLV1 <= 3 &&  StudentAnswer[i].scoreLV1 != undefined){
                     StudentAnswerLV1 = "✗"
                   }
-                  if(StudentAnswer[i].scoreLV2 === 0 &&  StudentAnswer[i].scoreLV2 != undefined){
+                  if(StudentAnswer[i].scoreLV2 <= 3 &&  StudentAnswer[i].scoreLV2 != undefined){
                     StudentAnswerLV2 = "✗"
                   }
-                  if(StudentAnswer[i].scoreLV3 === 0 &&  StudentAnswer[i].scoreLV3 != undefined){
+                  if(StudentAnswer[i].scoreLV3 <= 3 &&  StudentAnswer[i].scoreLV3 != undefined){
                     StudentAnswerLV3 = "✗"
                   }
                   //** */
