@@ -284,13 +284,13 @@ router.get('/', async (req, res, next) => {
                     StudentAnswerLV3 = "✓"
                   }
                   //** */
-                  if(StudentAnswer[i].scoreLV1 === 0 &&  StudentAnswer[i].scoreLV1 != undefined){
+                  if(StudentAnswer[i].scoreLV1 <= 3 &&  StudentAnswer[i].scoreLV1 != undefined){
                     StudentAnswerLV1 = "✗"
                   }
-                  if(StudentAnswer[i].scoreLV2 === 0 &&  StudentAnswer[i].scoreLV2 != undefined){
+                  if(StudentAnswer[i].scoreLV2 <= 3 &&  StudentAnswer[i].scoreLV2 != undefined){
                     StudentAnswerLV2 = "✗"
                   }
-                  if(StudentAnswer[i].scoreLV3 === 0 &&  StudentAnswer[i].scoreLV3 != undefined){
+                  if(StudentAnswer[i].scoreLV3 <= 3 &&  StudentAnswer[i].scoreLV3 != undefined){
                     StudentAnswerLV3 = "✗"
                   }
                   //** */
