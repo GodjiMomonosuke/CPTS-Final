@@ -57,7 +57,7 @@ router.get('/', async (req, res, next) => {
           var WriteScore =0;
           var studentAll = Object.keys(StudentAnswer).length;
           
-          var IntroductionScore=0,IntroductionCount=0;
+          var IntroductionScore=0,IntroductionCount=0 ,PreIntroductionScore=0,PreIntroductionCount=0;
           var StringScore=0,StringCount=0;
           var DatatypeScore=0,DatatypeCount=0;
           var OperatorsScore=0,OperatorsCount=0;
@@ -73,6 +73,14 @@ router.get('/', async (req, res, next) => {
 
           
           for(let i = 0; i < studentAll; i++) {
+
+            if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)' ){
+              if(StudentAnswer[i].scoreTeacher === undefined){
+                PreIntroductionScore = PreIntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+              else{
+                PreIntroductionScore = PreIntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreIntroductionCount++;
+            }
 
             if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)' ){
               if(StudentAnswer[i].scoreTeacher === undefined){
@@ -238,7 +246,8 @@ router.get('/', async (req, res, next) => {
           res.render('index/index_teacher', { person ,sortedCourse,sortedProject,
             BasicPercent,TracePercent,ExplainPercent,WritePercent,
             TicTacToeScore,LibrarySystemScore,RoshamboScore,
-            IntroductionScore,StringScore,DatatypeScore,OperatorsScore,FlowControlScore,PointersScore,FunctionScore,StructureScore
+            IntroductionScore,StringScore,DatatypeScore,OperatorsScore,FlowControlScore,PointersScore,FunctionScore,StructureScore,
+            PreIntroductionScore
           })
 
           });
