@@ -189,6 +189,7 @@ router.post('/submit', async (req, res, next) => {
                 timetodo:timetodo+1,
                 times: new Date().toLocaleString(), 
                 email: person.email,
+                name: person.name,
                 role:person.role,
                 contentName:currentQuiz,
                 c1:score1,
