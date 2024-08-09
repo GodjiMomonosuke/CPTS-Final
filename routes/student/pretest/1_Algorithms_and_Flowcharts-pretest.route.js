@@ -1,5 +1,6 @@
 const router = require('express').Router();
 var compiler = require('compilex');
+const { name } = require('ejs');
 var options = {stats : true}; //prints stats on console 
 compiler.init(options);
 const MongoClient = require('mongodb').MongoClient;
@@ -172,7 +173,7 @@ router.post('/submit', async (req, res, next) => {
           var query = { email:person.email};
           dbo.collection("StudentAnswer").find(query).toArray(function(err, result) {
             if (err) throw err;
-            if(Object.keys(result).length === 0){
+            if(Object.keys(result).length >= 1){
               for (let i = 0; i < Object.keys(result).length; i++) {
                 //console.log(result[i].contentName)
                 if(result[i].contentName === currentQuiz) timetodo++;
@@ -185,6 +186,7 @@ router.post('/submit', async (req, res, next) => {
                 timetodo:timetodo+1,
                 times: new Date().toLocaleString(), 
                 email: person.email,
+                name: person.name,
                 role:person.role,
                 contentName:currentQuiz,
                 c1:score1,
