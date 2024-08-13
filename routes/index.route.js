@@ -437,7 +437,8 @@ router.get('/', async (req, res, next) => {
                 var StructureScoreLV1=0,StructureScoreLV2=0,StructureScoreLV3=0,StructureScoreLV4=0;
                 var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ";
                 var Posttest1Done = 0 ,Posttest2Done = 0 ,Posttest3Done = 0,Posttest4Done = 0 ,Posttest5Done = 0,Posttest6Done = 0,Posttest7Done = 0,Posttest8Done = 0;
-        
+                var PretestScore1 = "",PretestScore2 = "",PretestScore3 = "",PretestScore4 = "",PretestScore5 = "",PretestScore6 = "",PretestScore7 = "",PretestScore8 = "";
+                var PosttestScore1 = "",PosttestScore2 = "",PosttestScore3 = "",PosttestScore4 = "",PosttestScore5 = "",PosttestScore6 = "",PosttestScore7 = "",PosttestScore8 = "";
         
                 for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {
                   if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)') {   
@@ -445,6 +446,7 @@ router.get('/', async (req, res, next) => {
                       IntroductionLV2 = StudentAnswer[i].scoreLV2;
                       IntroductionLV3 = StudentAnswer[i].scoreLV3;
                       IntroductionLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      PretestScore1 = IntroductionLV1+IntroductionLV1+IntroductionLV3+IntroductionLV4;
                       Pretest1Done = 1;
                   }      
                   if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)') {   
@@ -452,6 +454,7 @@ router.get('/', async (req, res, next) => {
                       StringLV2 = StudentAnswer[i].scoreLV2;
                       StringLV3 = StudentAnswer[i].scoreLV3;
                       StringLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      PretestScore2 = StringLV1+StringLV2+StringLV3+StringLV4;
                       Pretest2Done = 1;
                   } 
                   if (StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)') {   
@@ -459,6 +462,7 @@ router.get('/', async (req, res, next) => {
                       DatatypeLV2 = StudentAnswer[i].scoreLV2;
                       DatatypeLV3 = StudentAnswer[i].scoreLV3;
                       DatatypeLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      PretestScore3 = DatatypeLV1+DatatypeLV2+DatatypeLV3+DatatypeLV4;
                       Pretest3Done = 1;
                   } 
                   if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)') {   
@@ -466,6 +470,7 @@ router.get('/', async (req, res, next) => {
                       OperatorsLV2 = StudentAnswer[i].scoreLV2;
                       OperatorsLV3 = StudentAnswer[i].scoreLV3;
                       OperatorsLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      PretestScore4 = OperatorsLV1+OperatorsLV2+OperatorsLV3+OperatorsLV4;
                       Pretest4Done = 1;
                   }
                   if (StudentAnswer[i].contentName ==='Selection_Statements-(Pre-test)') {   
@@ -473,6 +478,7 @@ router.get('/', async (req, res, next) => {
                       FlowControlLV2 = StudentAnswer[i].scoreLV2;
                       FlowControlLV3 = StudentAnswer[i].scoreLV3;
                       FlowControlLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      PretestScore5 = FlowControlLV1+FlowControlLV2+FlowControlLV3+FlowControlLV4;
                       Pretest5Done = 1;
                   }
                   if (StudentAnswer[i].contentName ==='Loop_Statements-(Pre-test)') {   
@@ -480,6 +486,7 @@ router.get('/', async (req, res, next) => {
                       PointersLV2 = StudentAnswer[i].scoreLV2;
                       PointersLV3 = StudentAnswer[i].scoreLV3;
                       PointersLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      PretestScore6 = PointersLV1+PointersLV2+PointersLV3+PointersLV4;
                       Pretest6Done = 1;
                   }
                   if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Pre-test)') {   
@@ -487,6 +494,7 @@ router.get('/', async (req, res, next) => {
                       FunctionLV2 = StudentAnswer[i].scoreLV2;
                       FunctionLV3 = StudentAnswer[i].scoreLV3;
                       FunctionLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      PretestScore7 = FunctionLV1+FunctionLV2+FunctionLV3+FunctionLV4;
                       Pretest7Done = 1;
                   }
                   if (StudentAnswer[i].contentName ==='Functions-(Pre-test)') {   
@@ -494,6 +502,7 @@ router.get('/', async (req, res, next) => {
                       StructureLV2 = StudentAnswer[i].scoreLV2;
                       StructureLV3 = StudentAnswer[i].scoreLV3;
                       StructureLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      PretestScore8 = StructureLV1+StructureLV2+StructureLV3+StructureLV4;
                       Pretest8Done = 1;
                   }
                 /** Post-test */
@@ -502,6 +511,7 @@ router.get('/', async (req, res, next) => {
                         IntroductionScoreLV2 = StudentAnswer[i].scoreLV2;
                         IntroductionScoreLV3 = StudentAnswer[i].scoreLV3;
                         IntroductionScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        PosttestScore1 = IntroductionScoreLV1+IntroductionScoreLV2+IntroductionScoreLV3+IntroductionScoreLV4;
                         Posttest1Done = 1;
                     }      
                     if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)') {   
@@ -509,6 +519,7 @@ router.get('/', async (req, res, next) => {
                         StringScoreLV2 = StudentAnswer[i].scoreLV2;
                         StringScoreLV3 = StudentAnswer[i].scoreLV3;
                         StringScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        PosttestScore2 = StringScoreLV1+StringScoreLV2+StringScoreLV3+StringScoreLV4;
                         Posttest2Done = 1;
                     } 
                     if (StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)') {   
@@ -516,6 +527,7 @@ router.get('/', async (req, res, next) => {
                         DatatypeScoreLV2 = StudentAnswer[i].scoreLV2;
                         DatatypeScoreLV3 = StudentAnswer[i].scoreLV3;
                         DatatypeScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        PosttestScore3 = DatatypeScoreLV1+DatatypeScoreLV2+DatatypeScoreLV3+DatatypeScoreLV4;
                         Posttest3Done = 1;
                     } 
                     if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)') {   
@@ -523,6 +535,7 @@ router.get('/', async (req, res, next) => {
                         OperatorsScoreLV2 = StudentAnswer[i].scoreLV2;
                         OperatorsScoreLV3 = StudentAnswer[i].scoreLV3;
                         OperatorsScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        PosttestScore4 = OperatorsScoreLV1+OperatorsScoreLV2+OperatorsScoreLV3+OperatorsScoreLV4;
                         Posttest4Done = 1;
                     }
                     if (StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)') {   
@@ -530,6 +543,7 @@ router.get('/', async (req, res, next) => {
                         FlowControlScoreLV2 = StudentAnswer[i].scoreLV2;
                         FlowControlScoreLV3 = StudentAnswer[i].scoreLV3;
                         FlowControlScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        PosttestScore5 = FlowControlScoreLV1+FlowControlScoreLV2+FlowControlScoreLV3+FlowControlScoreLV4;
                         Posttest5Done = 1;
                     }
                     if (StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)') {   
@@ -537,6 +551,7 @@ router.get('/', async (req, res, next) => {
                         PointersScoreLV2 = StudentAnswer[i].scoreLV2;
                         PointersScoreLV3 = StudentAnswer[i].scoreLV3;
                         PointersScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        PosttestScore6 = PointersScoreLV1+PointersScoreLV3+PointersScoreLV3+PointersScoreLV4;
                         Posttest6Done = 1;
                     }
                     if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)') {   
@@ -544,6 +559,7 @@ router.get('/', async (req, res, next) => {
                         FunctionScoreLV2 = StudentAnswer[i].scoreLV2;
                         FunctionScoreLV3 = StudentAnswer[i].scoreLV3;
                         FunctionScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        PosttestScore7 = FunctionScoreLV1+FunctionScoreLV2+FunctionScoreLV3+FunctionScoreLV4;
                         Posttest7Done = 1;
                     }
                     if (StudentAnswer[i].contentName ==='Functions-(Post-test)') {   
@@ -551,6 +567,7 @@ router.get('/', async (req, res, next) => {
                         StructureScoreLV2 = StudentAnswer[i].scoreLV2;
                         StructureScoreLV3 = StudentAnswer[i].scoreLV3;
                         StructureScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        PosttestScore8 = StructureScoreLV1+StructureScoreLV2+StructureScoreLV3+StructureScoreLV4;
                         Posttest8Done = 1;
                     }
                   
@@ -815,7 +832,10 @@ router.get('/', async (req, res, next) => {
                       PreBasicPercent,PreTracePercent,PreExplainPercent,PreWritePercent,
                       Basic,Trace,Explain,Write,
                       PreBasic,PreTrace,PreExplain,PreWrite,
-                      TicketBooking_SystemPercent,PointofSales_SystemPercent,ProjectQUIZ3Percent
+                      TicketBooking_SystemPercent,PointofSales_SystemPercent,ProjectQUIZ3Percent,
+
+                      PretestScore1 ,PretestScore2 ,PretestScore3 ,PretestScore4 ,PretestScore5 ,PretestScore6 ,PretestScore7 ,PretestScore8,
+                      PosttestScore1 ,PosttestScore2 ,PosttestScore3 ,PosttestScore4 ,PosttestScore5 ,PosttestScore6 ,PosttestScore7 ,PosttestScore8
                     });
                   });
                 });
