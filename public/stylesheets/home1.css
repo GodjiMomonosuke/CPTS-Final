@@ -59,6 +59,10 @@ button.btn-secondary {
     display: grid;
     grid-template-columns: 70px 40px 90px 40px 110px;
 }
+.group6 {
+  display: grid;
+  grid-template-columns: 800px auto;
+}
 
 
 .btn1 {
