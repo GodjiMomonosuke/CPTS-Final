@@ -1,182 +1,138 @@
-@property --p{
-    syntax: '<number>';
-    inherits: true;
-    initial-value: 0;
-  }
-  
-  .pie {
-    --p:20;
-    --b:22px;
-    --c:darkred;
-    --w:150px;
-    
-    width:var(--w);
-    aspect-ratio:1;
-    position:relative;
-    display:inline-grid;
-    margin:5px;
-    place-content:center;
-    font-size:25px;
-    font-weight:bold;
-    font-family:sans-serif;
-  }
-  .pie:before,
-  .pie:after {
-    content:"";
-    position:absolute;
-    border-radius:50%;
-  }
-  .pie:before {
-    inset:0;
-    background:
-      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
-      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
-    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
-            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
-  }
-  .pie:after {
-    inset:calc(50% - var(--b)/2);
-    background:var(--c);
-    transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
-  }
-  .animate {
-    animation:p 1s .5s both;
-  }
-  .no-round:before {
-    background-size:0 0,auto;
-  }
-  .no-round:after {
-    content:none;
-  }
-  @keyframes p {
-    from{--p:0}
-  }
-  
-  @import url(https://fonts.googleapis.com/css?family=Expletus+Sans);
+.pie {
+  position:absolute;
+  width:100px;
+  height:200px;
+  overflow:hidden;
+  left:150px;
+  -moz-transform-origin:left center;
+  -ms-transform-origin:left center;
+  -o-transform-origin:left center;
+  -webkit-transform-origin:left center;
+  transform-origin:left center;
+}
+/*
+unless the piece represents more than 50% of the whole chart.
+then make it a square, and ensure the transform origin is
+back in the center.
 
-  /* Styling an indeterminate progress bar */
+NOTE: since this is only ever a single piece, you could
+move this to a piece specific rule and remove the extra class
+*/
+.pie.big {
+  width:200px;
+  height:200px;
+  left:50px;
+  -moz-transform-origin:center center;
+  -ms-transform-origin:center center;
+  -o-transform-origin:center center;
+  -webkit-transform-origin:center center;
+  transform-origin:center center;
+}
+/*
+this is the actual visible part of the pie. 
+Give it the same dimensions as the regular piece.
+Use border radius make it a half circle.
+move transform origin to the middle of the right side.
+Push it out to the left of the containing box.
+*/
+.pie:BEFORE {
+  content:"";
+  position:absolute;
+  width:100px;
+  height:200px;
+  left:-100px;
+  border-radius:100px 0 0 100px;
+  -moz-transform-origin:right center;
+  -ms-transform-origin:right center;
+  -o-transform-origin:right center;
+  -webkit-transform-origin:right center;
+  transform-origin:right center;
   
-  progress:not(value) {
-    /* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
-  }
-  
-  /* Styling the determinate progress element */
-  
-  progress[value] {
-    /* Get rid of the default appearance */
-    appearance: none;
-    
-    /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
-    border: none;
-    
-    /* Add dimensions */
-    width: 100px; height: 20px;
-    
-    /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
-      background-color: whiteSmoke;
-      border-radius: 3px;
-      box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-  
-    color: royalblue;
-    
-    position: relative;
-    margin: 10px 0 0; 
-  }
-  
-  
-  progress[value]::-webkit-progress-bar {
-    background-color: whiteSmoke;
-    border-radius: 3px;
-    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-  }
-  
-  progress[value]::-webkit-progress-value {
-    position: relative;
-    
-    background-size: 35px 20px, 100% 100%, 100% 100%;
-    border-radius:3px;
-    
-    /* Let's animate this */
-    animation: animate-stripes 5s linear infinite;
-  }
-  
-  @keyframes animate-stripes { 100% { background-position: -100px 0; } }
-  
-  /* Let's spice up things little bit by using pseudo elements. */
-  
-  progress[value]::-webkit-progress-value:after {
-    /* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
-    content: '';
-    position: absolute;
-    
-    width:5px; height:5px;
-    top:7px; right:7px;
-    
-    background-color: white;
-    border-radius: 100%;
-  }
-  
-  /* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
-  
-  progress[value]::-moz-progress-bar {
-    /* Gradient background with Stripes */
-    background-image:
-    -moz-linear-gradient( 135deg,
-                             transparent,
-                             transparent 33%,
-                             rgba(0,0,0,.1) 33%,
-                             rgba(0,0,0,.1) 66%,
-                             transparent 66%),
-      -moz-linear-gradient( top,
-                              rgba(255, 255, 255, .25),
-                              rgba(0,0,0,.2)),
-       -moz-linear-gradient( left, #09c, #f44);
-    
-    background-size: 35px 20px, 100% 100%, 100% 100%;
-    border-radius:3px;
-    
-    /* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
-  }
-  
-  /* Fallback technique styles */
-  .progress-bar {
-    background-color: whiteSmoke;
-    border-radius: 3px;
-    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
-  
-    /* Dimensions should be similar to the parent progress element. */
-    width: 100%; height:20px;
-  }
-  
-  .progress-bar span {
-    background-color: royalblue;
-    border-radius: 3px;
-    
-    display: block;
-    text-indent: -9999px;
-  }
-  
-  p[data-value] { 
-    
-    position: relative; 
-  }
-  
-  /* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
-  
-  p[data-value]:after {
-    content: attr(data-value) '%';
-    position: absolute; right:0;
-  }
-  
-  .html5::-webkit-progress-value {
-    background-color: #bd7b67;
-    border: solid #96534a;
-  }
-  
-  .html5::-moz-progress-bar{
-    background-color: #e2ddc8;
-    
-  }
-  
+}
+/* if it's part of a big piece, bring it back into the square */
+.pie.big:BEFORE {
+  left:0px;
+}
+/* 
+big pieces will also need a second semicircle, pointed in the
+opposite direction to hide the first part behind.
+*/
+.pie.big:AFTER {
+  content:"";
+  position:absolute;
+  width:100px;
+  height:200px;
+  left:100px;
+  border-radius:0 100px 100px 0;
+}
+/*
+add colour to each piece.
+*/
+.pie:nth-of-type(1):BEFORE,
+.pie:nth-of-type(1):AFTER {
+  background-color:blue;  
+}
+.pie:nth-of-type(2):AFTER,
+.pie:nth-of-type(2):BEFORE {
+  background-color:green; 
+}
+.pie:nth-of-type(3):AFTER,
+.pie:nth-of-type(3):BEFORE {
+  background-color:red;   
+}
+.pie:nth-of-type(4):AFTER,
+.pie:nth-of-type(4):BEFORE {
+  background-color:orange;    
+}
+/*
+now rotate each piece based on their cumulative starting
+position
+*/
+.pie[data-start="30"] {
+  -moz-transform: rotate(30deg); /* Firefox */
+  -ms-transform: rotate(30deg); /* IE */
+  -webkit-transform: rotate(30deg); /* Safari and Chrome */
+  -o-transform: rotate(30deg); /* Opera */
+  transform:rotate(30deg);
+}
+.pie[data-start="60"] {
+  -moz-transform: rotate(60deg); /* Firefox */
+  -ms-transform: rotate(60deg); /* IE */
+  -webkit-transform: rotate(60deg); /* Safari and Chrome */
+  -o-transform: rotate(60deg); /* Opera */
+  transform:rotate(60deg);
+}
+.pie[data-start="100"] {
+  -moz-transform: rotate(100deg); /* Firefox */
+  -ms-transform: rotate(100deg); /* IE */
+  -webkit-transform: rotate(100deg); /* Safari and Chrome */
+  -o-transform: rotate(100deg); /* Opera */
+  transform:rotate(100deg);
+}
+/*
+and rotate the amount of the pie that's showing.
 
-  
+NOTE: add an extra degree to all but the final piece, 
+to fill in unsightly gaps.
+*/
+.pie[data-value="30"]:BEFORE {
+  -moz-transform: rotate(31deg); /* Firefox */
+  -ms-transform: rotate(31deg); /* IE */
+  -webkit-transform: rotate(31deg); /* Safari and Chrome */
+  -o-transform: rotate(31deg); /* Opera */
+  transform:rotate(31deg);
+}
+.pie[data-value="40"]:BEFORE {
+  -moz-transform: rotate(41deg); /* Firefox */
+  -ms-transform: rotate(41deg); /* IE */
+  -webkit-transform: rotate(41deg); /* Safari and Chrome */
+  -o-transform: rotate(41deg); /* Opera */
+  transform:rotate(41deg);
+}
+.pie[data-value="260"]:BEFORE {
+  -moz-transform: rotate(260deg); /* Firefox */
+  -ms-transform: rotate(260deg); /* IE */
+  -webkit-transform: rotate(260deg); /* Safari and Chrome */
+  -o-transform: rotate(260deg); /* Opera */
+  transform:rotate(260deg);
+}

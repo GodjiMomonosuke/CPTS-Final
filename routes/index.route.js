@@ -65,7 +65,6 @@ router.get('/', async (req, res, next) => {
           var PointersScore=0,PointersCount=0;
           var FunctionScore=0,FunctionCount=0;
           var StructureScore=0,StructureCount=0;
-          var ArrayScore=0,ArrayCount=0;
 
           var TicTacToeScore=0,TicTacToeCount=0;
           var LibrarySystemScore=0,LibrarySystemCount=0;
@@ -252,6 +251,8 @@ router.get('/', async (req, res, next) => {
 
           });
         });
+
+        
       }
             
     if(person.role === "Student"){
