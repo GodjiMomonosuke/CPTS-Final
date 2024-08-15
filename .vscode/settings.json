@@ -13,7 +13,8 @@
         "sumpre",
         "timetodo",
         "ยังไม่ทำ",
-        "รอตรวจ"
+        "รอตรวจ",
+        "Studentresult","coursename","cpts","mycollection","makeid","classid","APPT"
     ],
     "liveServer.settings.port": 5501
 }

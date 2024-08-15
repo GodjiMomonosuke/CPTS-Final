@@ -285,23 +285,23 @@ router.get('/', async (req, res, next) => {
                 for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
 
                   if(StudentAnswer[i].scoreLV1 >= 4){
-                    StudentAnswerLV1 = "✓"
+                    StudentAnswerLV1 = StudentAnswer[i].scoreLV1
                   }
                   if(StudentAnswer[i].scoreLV2 >= 4){
-                    StudentAnswerLV2 = "✓"
+                    StudentAnswerLV2 = StudentAnswer[i].scoreLV2
                   }
                   if(StudentAnswer[i].scoreLV3 >= 4){
-                    StudentAnswerLV3 = "✓"
+                    StudentAnswerLV3 = StudentAnswer[i].scoreLV3
                   }
                   //** */
                   if(StudentAnswer[i].scoreLV1 <= 3 &&  StudentAnswer[i].scoreLV1 != undefined){
-                    StudentAnswerLV1 = "✗"
+                    StudentAnswerLV1 = StudentAnswer[i].scoreLV1
                   }
                   if(StudentAnswer[i].scoreLV2 <= 3 &&  StudentAnswer[i].scoreLV2 != undefined){
-                    StudentAnswerLV2 = "✗"
+                    StudentAnswerLV2 = StudentAnswer[i].scoreLV2 
                   }
                   if(StudentAnswer[i].scoreLV3 <= 3 &&  StudentAnswer[i].scoreLV3 != undefined){
-                    StudentAnswerLV3 = "✗"
+                    StudentAnswerLV3 = StudentAnswer[i].scoreLV3
                   }
                   //** */
                   if(StudentAnswer[i].scoreTeacher != undefined){
@@ -312,12 +312,24 @@ router.get('/', async (req, res, next) => {
                   //** Pre-test */
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)'){
                     Pretest1Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var pre1lv1 = StudentAnswerLV1;
+                    var pre1lv2 = StudentAnswerLV2;
+                    var pre1lv3 = StudentAnswerLV3;
+                    var pre1lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)'){
                     Pretest2Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var post1lv1 = StudentAnswerLV1;
+                    var post1lv2 = StudentAnswerLV2;
+                    var post1lv3 = StudentAnswerLV3;
+                    var post1lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)'){
                     Pretest3Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var post2lv1 = StudentAnswerLV1;
+                    var post2lv2 = StudentAnswerLV2;
+                    var post2lv3 = StudentAnswerLV3;
+                    var post2lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)'){
                     Pretest4Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -372,6 +384,8 @@ router.get('/', async (req, res, next) => {
                   }
                 }
 
+
+
                 MongoClient.connect(url, function(err, db) {
                   if (err) throw err;
                   var dbo = db.db(mydatabase);
@@ -390,6 +404,7 @@ router.get('/', async (req, res, next) => {
                             Project_QUIZ3:Project_QUIZ3Done,
                             //Post test
                             Algorithms_and_Flowcharts:Posttest1Done,
+
                             Datatype_and_Variable:Posttest2Done,
                             Input_and_Output:Posttest3Done,
                             Operators_and_Expressions:Posttest4Done,
