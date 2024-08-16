@@ -84,10 +84,10 @@
         
         <div>
             
-            <h4 class="chakra-petch-regular" style="width: 100px;">Skill</h4>   
-            <div>
+            <h4 class="chakra-petch-regular">Skill</h4>   
+            <div> <!-- chart -->
                 <div class="chartCard">
-                    <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff; width: 400px;">
+                    <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff; width: 300px;">
                         <canvas id="myChart"></canvas>
                     </div>
                 </div>
@@ -130,108 +130,174 @@
                 </script>
             </div>
         </div>
-        </div>
-        <div class="row" >
-            <div class="col-sm" >
-                <div class="box  mb-5" style="background-color: #cad19f;">
-                    <div lang="ja">
-                        <p class="wrapbox auto">
-                            <ol>
-                                <h4>แบบทดสอบที่ผู้เรียนทำคะแนนได้มากสุด</h4>
-                                <li><%= sortedCourse[0] %></li>
-                                <li><%= sortedCourse[1] %></li>
-                                <li><%= sortedCourse[2] %></li>
-                                <li><%= sortedCourse[3] %></li>
-                                <li><%= sortedCourse[4] %></li>
-                                <li><%= sortedCourse[5] %></li>
-                                <li><%= sortedCourse[6] %></li>
-                                <li><%= sortedCourse[7] %></li>
-                            </ol>
-                        </p>
+        </div><hr>
+        <div class="row" > 
+            <div class="group"> <!-- แบบทดสอบที่ผู้เรียนทำคะแนนได้มากสุด -->
+                <div class="col-sm" > <!-- sortedCourse -->
+                    <div class="box  mb-5" style="background-color: #cad19f;">
+                        <h4>แบบทดสอบที่ผู้เรียนทำคะแนนได้มากสุด</h4>
+                        <div lang="ja">
+                                <ol>
+                                    
+                                    <li><%= sortedCourse[0] %></li>
+                                    <li><%= sortedCourse[1] %></li>
+                                    <li><%= sortedCourse[2] %></li>
+                                    <li><%= sortedCourse[3] %></li>
+                                    <li><%= sortedCourse[4] %></li>
+                                    <li><%= sortedCourse[5] %></li>
+                                    <li><%= sortedCourse[6] %></li>
+                                    <li><%= sortedCourse[7] %></li>
+                                </ol>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="group2"> <!-- Score -->
+                    <div style="margin-left: 15px;"> <!-- Pre-test Score -->
+                        <div class="col">
+                            <b>Pre-test</b>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 1</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= PreIntroductionScore %>%; " class="TeacherBarValue">
+                                        <%= PreIntroductionScore %>
+                                    </div>
+                                </div>
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 2</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= StringScore %>%; " class="TeacherBarValue">
+                                        <%= StringScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 3</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= DatatypeScore %>%; " class="TeacherBarValue">
+                                        <%= DatatypeScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 4</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= OperatorsScore %>%; " class="TeacherBarValue">
+                                        <%= OperatorsScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 5</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= FlowControlScore %>%; " class="TeacherBarValue">
+                                        <%= FlowControlScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 6</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= PointersScore %>%; " class="TeacherBarValue">
+                                        <%= PointersScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 7</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= FunctionScore %>%; " class="TeacherBarValue">
+                                        <%= FunctionScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 8</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= StructureScore %>%; " class="TeacherBarValue">
+                                        <%= StructureScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div style="margin-left: 15px;"> <!-- Post-test Score -->
+                        <div class="col">
+                            <b>Post-test</b>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 1</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= PreIntroductionScore %>%; " class="TeacherBarValue">
+                                        <%= PreIntroductionScore %>
+                                    </div>
+                                </div>
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 2</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= StringScore %>%; " class="TeacherBarValue">
+                                        <%= StringScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 3</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= DatatypeScore %>%; " class="TeacherBarValue">
+                                        <%= DatatypeScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 4</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= OperatorsScore %>%; " class="TeacherBarValue">
+                                        <%= OperatorsScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 5</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= FlowControlScore %>%; " class="TeacherBarValue">
+                                        <%= FlowControlScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 6</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= PointersScore %>%; " class="TeacherBarValue">
+                                        <%= PointersScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 7</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= FunctionScore %>%; " class="TeacherBarValue">
+                                        <%= FunctionScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                            <div  style="display: flex;">
+                                <p class="card-title" style="width: 50px;">Lab 8</p>
+                                <div class="TeacherBar">
+                                    <div style="background-color: #66B7BD; --w :<%= StructureScore %>%; " class="TeacherBarValue">
+                                        <%= StructureScore %>
+                                    </div>
+                                </div>                    
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
-            <div style="margin-left: 15px;">
-                <div class="col">
-                    <div  style="display: flex;">
-                        <p class="card-title" style="width: 50px;">Lab 1 Pre</p>
-                        <div class="TeacherBar">
-                            <div style="background-color: #bd7b67; --w :<%= PreIntroductionScore %>%; " class="TeacherBarValue">
-                                <%= PreIntroductionScore %>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div  style="display: flex;">
-                        <p class="card-title" style="width: 50px;">Lab 1</p>
-                        <div class="TeacherBar">
-                            <div style="background-color: #bd7b67; --w :<%= IntroductionScore %>%; " class="TeacherBarValue">
-                                <%= IntroductionScore %>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div  style="display: flex;">
-                        <p class="card-title" style="width: 50px;">Lab 2</p>
-                        <div class="TeacherBar">
-                            <div style="background-color: #bd7b67; --w :<%= StringScore %>%; " class="TeacherBarValue">
-                                <%= StringScore %>
-                            </div>
-                        </div>                    
-                    </div>
-                    <div  style="display: flex;">
-                        <p class="card-title" style="width: 50px;">Lab 3</p>
-                        <div class="TeacherBar">
-                            <div style="background-color: #bd7b67; --w :<%= DatatypeScore %>%; " class="TeacherBarValue">
-                                <%= DatatypeScore %>
-                            </div>
-                        </div>                    
-                    </div>
-                    <div  style="display: flex;">
-                        <p class="card-title" style="width: 50px;">Lab 4</p>
-                        <div class="TeacherBar">
-                            <div style="background-color: #bd7b67; --w :<%= OperatorsScore %>%; " class="TeacherBarValue">
-                                <%= OperatorsScore %>
-                            </div>
-                        </div>                    
-                    </div>
-                    <div  style="display: flex;">
-                        <p class="card-title" style="width: 50px;">Lab 5</p>
-                        <div class="TeacherBar">
-                            <div style="background-color: #bd7b67; --w :<%= FlowControlScore %>%; " class="TeacherBarValue">
-                                <%= FlowControlScore %>
-                            </div>
-                        </div>                    
-                    </div>
-                    <div  style="display: flex;">
-                        <p class="card-title" style="width: 50px;">Lab 6</p>
-                        <div class="TeacherBar">
-                            <div style="background-color: #bd7b67; --w :<%= PointersScore %>%; " class="TeacherBarValue">
-                                <%= PointersScore %>
-                            </div>
-                        </div>                    
-                    </div>
-                    <div  style="display: flex;">
-                        <p class="card-title" style="width: 50px;">Lab 7</p>
-                        <div class="TeacherBar">
-                            <div style="background-color: #bd7b67; --w :<%= FunctionScore %>%; " class="TeacherBarValue">
-                                <%= FunctionScore %>
-                            </div>
-                        </div>                    
-                    </div>
-                    <div  style="display: flex;">
-                        <p class="card-title" style="width: 50px;">Lab 8</p>
-                        <div class="TeacherBar">
-                            <div style="background-color: #bd7b67; --w :<%= StructureScore %>%; " class="TeacherBarValue">
-                                <%= StructureScore %>
-                            </div>
-                        </div>                    
-                    </div>
-                </div>
-                
-        </div>
-            <div class="col-sm" >
-                <div class="box mb-5 " style="background-color: #cad19f">
+            <hr>
+            <div class="col-sm" > <!-- โปรเจคที่ผู้เรียนทำคะแนนได้มากสุด -->
+                <div class="group" style="background-color: #cad19f">
                     <div lang="ja">
                         <p class="wrapbox auto">
                             <ol>

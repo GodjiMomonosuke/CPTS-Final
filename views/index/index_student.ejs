@@ -311,20 +311,14 @@
                                         <div class="pie animate" style="--p:<%= Quiz3Score*4 %>;--c:#bd7b67; font-size: 14px;"> <%= PrjQuiz3Score %></div>
                                     </div>
                                 </div>
-                                
                             </div>
-                        </div>
-                    
-                        
-                        
-                         <br>
-                        
+                        </div><br>
                     </div>
-                    <div  class="group2">
+                    <div  class="group2"> <!-- Competency chart -->
                         <div></div>
                         <div>
                             <h4 class="chakra-petch-regular">Competency</h4>   
-                            <div style="height: 400px;">
+                            <div>
                                 <div class="chartCard">
                                     <div class="chartBox" style="background-color: #ffffff37; border: solid #fff;">
                                         <canvas id="myChart"></canvas>
@@ -371,97 +365,139 @@
                         </div>                        
                     </div>
                 </div>
-                <div class="group2" style="width: 800px;">
-                    <div class="boxbax2">  
-                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
-                            <p style="margin: 0;">Lab Pre-test</p>
-                            <b style="font-size: 12px;">Knowledge: <%= PreBasic %> /40</b>
-                            <div class="progress" style="background-color: #e2ddc8;">
-                                <div style=" width: <%= PreBasicPercent %>%;" class="progressvalue">
-                                    <%= PreBasicPercent %>%
+                <div class="group6">
+                    <div class="boxbax2" style="width: 800px;">
+                        <div style="margin: 0;">
+                                <div>คะแนนรวม Lab</div>
+                                <div>
+                                    <% if (TicketBooking_SystemPercent === 13) { %>
+                                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (1 แบบทดสอบ)</p>
+                                    <% }%>
+                                    <% if (TicketBooking_SystemPercent === 25) { %>
+                                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br><br> (2 แบบทดสอบ)</p>
+                                    <% }%>
+                                    <% if (TicketBooking_SystemPercent === 38) { %>
+                                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด (3 แบบทดสอบ)</p>
+                                    <% }%>
+                                    <% if (TicketBooking_SystemPercent === 50) { %>
+                                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (4 แบบทดสอบ)</p>
+                                    <% }%>
+                                    <% if (TicketBooking_SystemPercent === 63) { %>
+                                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br><br> (5 แบบทดสอบ)</p>
+                                    <% }%>
+                                    <% if (TicketBooking_SystemPercent === 75) { %>
+                                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด (6 แบบทดสอบ)</p>
+                                    <% }%>
+                                    <% if (TicketBooking_SystemPercent === 88) { %>
+                                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (7 แบบทดสอบ)</p>
+                                    <% }%>
+                                    <% if (TicketBooking_SystemPercent === 100) { %>
+                                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (8 แบบทดสอบ)</p>
+                                    <% }%>
                                 </div>
-                            </div>
-                            <b style="font-size: 12px;">Tracing: <%= PreTrace %> /40</b>
-                            <div class="progress" style="background-color: #e2ddc8;">
-                                <div style=" width: <%= PreTracePercent %>%;" class="progressvalue">
-                                    <%= PreTracePercent %>%
-                                </div>
-                            </div>
-                            <b style="font-size: 12px;">Explaining: <%= PreExplain %> /40</b>
-                            <div class="progress" style="background-color: #e2ddc8;">
-                                <div style=" width: <%= PreExplainPercent %>%;" class="progressvalue">
-                                    <%= PreExplainPercent %>%
-                                </div>
-                            </div>
-                            <b style="font-size: 12px;">Writing: <%= PreWrite %> /200</b>
-                            <div class="progress"style="background-color: #e2ddc8;">
-                                <div style=" width: <%= PreWritePercent %>%;" class="progressvalue">
-                                    <%= PreWritePercent %>%
-                                </div>
-                            </div>
-                            </div>
                         </div>
-              
-
-                    <div class="boxbax2">
-                        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
-                            <p style="margin: 0;">Lab Post-test</p>
-                            <b style="font-size: 12px;">Knowledge: <%= Basic %> /40</b>
-                            <div class="progress" style="background-color: #e2ddc8;">
-                                <div style=" width: <%= BasicPercent %>%;" class="progressvalue">
-                                    <%= BasicPercent %>%
-                                </div>
+                        <div class="group2">
+                            <div>  
+                                    
+                                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                                        <p style="margin: 0;">Lab Pre-test</p>
+                                        <b style="font-size: 12px;">Knowledge: <%= PreBasic %> /40</b>
+                                        <div class="progress" style="background-color: #e2ddc8;">
+                                            <div style=" width: <%= PreBasicPercent %>%;" class="progressvalue">
+                                                <%= PreBasicPercent %>%
+                                            </div>
+                                        </div>
+                                        <b style="font-size: 12px;">Tracing: <%= PreTrace %> /40</b>
+                                        <div class="progress" style="background-color: #e2ddc8;">
+                                            <div style=" width: <%= PreTracePercent %>%;" class="progressvalue">
+                                                <%= PreTracePercent %>%
+                                            </div>
+                                        </div>
+                                        <b style="font-size: 12px;">Explaining: <%= PreExplain %> /40</b>
+                                        <div class="progress" style="background-color: #e2ddc8;">
+                                            <div style=" width: <%= PreExplainPercent %>%;" class="progressvalue">
+                                                <%= PreExplainPercent %>%
+                                            </div>
+                                        </div>
+                                        <b style="font-size: 12px;">Writing: <%= PreWrite %> /200</b>
+                                        <div class="progress"style="background-color: #e2ddc8;">
+                                            <div style=" width: <%= PreWritePercent %>%;" class="progressvalue">
+                                                <%= PreWritePercent %>%
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
+                            <div>
+                                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;">
+                                        <p style="margin: 0;">Lab Post-test</p>
+                                        <b style="font-size: 12px;">Knowledge: <%= Basic %> /40</b>
+                                        <div class="progress" style="background-color: #e2ddc8;">
+                                            <div style=" width: <%= BasicPercent %>%;" class="progressvalue">
+                                                <%= BasicPercent %>%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <b style="font-size: 12px;">Tracing: <%= Trace %> /40</b>
+                                    <div class="progress" style="background-color: #e2ddc8;">
+                                        <div style=" width: <%= TracePercent %>%;" class="progressvalue">
+                                            <%= TracePercent %>%
+                                        </div>
+                                    </div>
+                                    <b style="font-size: 12px;">Explaining: <%= Explain %> /40</b>
+                                    <div class="progress" style="background-color: #e2ddc8;">
+                                        <div style=" width: <%= ExplainPercent %>%;" class="progressvalue">
+                                            <%= ExplainPercent %>%
+                                        </div>
+                                    </div>
+                                    <b style="font-size: 12px;">Writing: <%= Write %> /200</b>
+                                    <div class="progress"style="background-color: #e2ddc8;">
+                                        <div style="width:  <%= WritePercent %>%;" class="progressvalue">
+                                            <%= WritePercent %>%
+                                        </div>
+                                    </div>
                             </div>
-                            <b style="font-size: 12px;">Tracing: <%= Trace %> /40</b>
-                            <div class="progress" style="background-color: #e2ddc8;">
-                                <div style=" width: <%= TracePercent %>%;" class="progressvalue">
-                                    <%= TracePercent %>%
-                                </div>
-                            </div>
-                            <b style="font-size: 12px;">Explaining: <%= Explain %> /40</b>
-                            <div class="progress" style="background-color: #e2ddc8;">
-                                <div style=" width: <%= ExplainPercent %>%;" class="progressvalue">
-                                    <%= ExplainPercent %>%
-                                </div>
-                            </div>
-                            <b style="font-size: 12px;">Writing: <%= Write %> /200</b>
-                            <div class="progress"style="background-color: #e2ddc8;">
-                                <div style="width:  <%= WritePercent %>%;" class="progressvalue">
-                                    <%= WritePercent %>%
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-          
-                    <div style="margin-left: 10px;">
-                    <% if (TicketBooking_SystemPercent === 13) { %>
-                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (1 แบบทดสอบ)</p>
-                    <% }%>
-                    <% if (TicketBooking_SystemPercent === 25) { %>
-                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br><br> (2 แบบทดสอบ)</p>
-                    <% }%>
-                    <% if (TicketBooking_SystemPercent === 38) { %>
-                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด (3 แบบทดสอบ)</p>
-                    <% }%>
-                    <% if (TicketBooking_SystemPercent === 50) { %>
-                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (4 แบบทดสอบ)</p>
-                    <% }%>
-                    <% if (TicketBooking_SystemPercent === 63) { %>
-                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br><br> (5 แบบทดสอบ)</p>
-                    <% }%>
-                    <% if (TicketBooking_SystemPercent === 75) { %>
-                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด (6 แบบทดสอบ)</p>
-                    <% }%>
-                    <% if (TicketBooking_SystemPercent === 88) { %>
-                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (7 แบบทดสอบ)</p>
-                    <% }%>
-                    <% if (TicketBooking_SystemPercent === 100) { %>
-                        <p style="font-size: 12px;">คะแนนรวมแบบทดสอบบทแรกถึงแบบทดสอบที่ทำล่าสุด<br> (8 แบบทดสอบ)</p>
-                    <% }%></div>
+                    <div class="boxbax2">
+                        คะแนนแต่ละ Lab
+                        <div class="group2">
+                            <style>
+                            .Pscore {
+                                margin: 0;
+                                width: 100px;
+                                background-color: #66B7BD;
+                                border: solid 2px #f5feff;
+                                margin: 3px;
+                                padding: 2px;
+                                font-size: 14px;
+                            }
+                            </style>
+                            <div>
+                                <p style="margin: 0;">Pre-test</p>
+                                <div class="Pscore">Lab 1 : <%= PretestScore1 %></div>
+                                <div class="Pscore">Lab 2 : <%= PretestScore2 %></div>
+                                <div class="Pscore">Lab 3 : <%= PretestScore3 %></div>
+                                <div class="Pscore">Lab 4 : <%= PretestScore4 %></div>
+                                <div class="Pscore">Lab 5 : <%= PretestScore5 %></div>
+                                <div class="Pscore">Lab 6 : <%= PretestScore6 %></div>
+                                <div class="Pscore">Lab 7 : <%= PretestScore7 %></div>
+                                <div class="Pscore">Lab 8 : <%= PretestScore8 %></div>
+                            </div>
+                            <div>
+                                <p style="margin: 0;">Post-test</p>
+                                <div class="Pscore">Lab 1 : <%= PosttestScore1 %></div>
+                                <div class="Pscore">Lab 2 : <%= PosttestScore2 %></div>
+                                <div class="Pscore">Lab 3 : <%= PosttestScore3 %></div>
+                                <div class="Pscore">Lab 4 : <%= PosttestScore4 %></div>
+                                <div class="Pscore">Lab 5 : <%= PosttestScore5 %></div>
+                                <div class="Pscore">Lab 6 : <%= PosttestScore6 %></div>
+                                <div class="Pscore">Lab 7 : <%= PosttestScore7 %></div>
+                                <div class="Pscore">Lab 8 : <%= PosttestScore8 %></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div> 
             <br>
 
 
