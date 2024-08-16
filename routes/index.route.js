@@ -319,17 +319,17 @@ router.get('/', async (req, res, next) => {
                   }
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)'){
                     Pretest2Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var post1lv1 = StudentAnswerLV1;
-                    var post1lv2 = StudentAnswerLV2;
-                    var post1lv3 = StudentAnswerLV3;
-                    var post1lv4 = StudentAnswerLV4;
+                    var pre2lv1 = StudentAnswerLV1;
+                    var pre2lv2 = StudentAnswerLV2;
+                    var pre2lv3 = StudentAnswerLV3;
+                    var pre2lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)'){
                     Pretest3Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var post2lv1 = StudentAnswerLV1;
-                    var post2lv2 = StudentAnswerLV2;
-                    var post2lv3 = StudentAnswerLV3;
-                    var post2lv4 = StudentAnswerLV4;
+                    var pre3lv1 = StudentAnswerLV1;
+                    var pre3lv2 = StudentAnswerLV2;
+                    var pre3lv3 = StudentAnswerLV3;
+                    var pre3lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)'){
                     Pretest4Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -349,9 +349,17 @@ router.get('/', async (req, res, next) => {
                   //** Post-test */
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
                     Posttest1Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var post1lv1 = StudentAnswerLV1;
+                    var post1lv2 = StudentAnswerLV2;
+                    var post1lv3 = StudentAnswerLV3;
+                    var post1lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'){
                     Posttest2Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var post2lv1 = StudentAnswerLV1;
+                    var post2lv2 = StudentAnswerLV2;
+                    var post2lv3 = StudentAnswerLV3;
+                    var post2lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'){
                     Posttest3Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -404,8 +412,10 @@ router.get('/', async (req, res, next) => {
                             Project_QUIZ3:Project_QUIZ3Done,
                             //Post test
                             Algorithms_and_Flowcharts:Posttest1Done,
+                            post1lv1:post1lv1,
 
                             Datatype_and_Variable:Posttest2Done,
+                            post2lv1:post2lv1,
                             Input_and_Output:Posttest3Done,
                             Operators_and_Expressions:Posttest4Done,
                             Selection_Statements:Posttest5Done,

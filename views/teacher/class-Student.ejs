@@ -5,8 +5,8 @@
             <thead>
               <tr>
                 <th scope="col" class="col-1">#</th>
-                <th scope="col-1" class="col-1">email</th>
-                <th scope="col-1" class="col-1">Class</th>
+                <th scope="col" class="col-3">Student</th>
+                <!--<th scope="col-1" class="col-2">Class</th>-->
                 <th scope="col" class="col-2 text-start">Project</th>
                 <th scope="col" class="col-2 text-start">Score</th>
                 <th scope="col" class="col-4 text-start">Chart</th>
@@ -16,8 +16,12 @@
             <tbody>
                 <% for (let i = 0; i < Object.keys(Studentresult).length; i++) {   %>
                                 <th scope="row"><%=i+1%></th>
-                                <td><%=Studentresult[i].email %></td>
-                                <td><%=Studentresult[i].ClassName %></td>
+                                <td>Email: <%=Studentresult[i].email %> <br>
+                                    Name: <%=Studentresult[i].name %> <br>
+                                    Course: <%=Studentresult[i].Course %> <br>
+                                    Section: <%=Studentresult[i].Section %>
+                                </td>
+                                
                                 <td class="text-start">
                                     Project QUIZ1 
                                     <br> &nbsp &nbsp| <%=Studentresult[i].TicketBookingSystem %> <br>
@@ -49,7 +53,10 @@
                                 <% } %>
                             </td>
                                 <td>
-                                  
+                                  2: <%=Studentresult[i].post2lv1 %> <br>
+                                  1: <%=Studentresult[i].post1lv1 %> <br>
+                                  <%= Studentresult[i].post1lv1+Studentresult[i].post2lv1 %>
+                                  <progress  max="10" value=<%=Studentresult[i].post2lv1+Studentresult[i].post2lv1 %>  class="html5 "></progress>
                                   <div class="pie" data-start="0" data-value="30"></div>
                                   <div class="pie highlight" data-start="30" data-value="30"></div>
                                   <div class="pie" data-start="60" data-value="40"></div>
