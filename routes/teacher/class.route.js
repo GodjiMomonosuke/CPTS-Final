@@ -22,8 +22,9 @@ router.get('/', function(req, res, next) {
         var query = {teacher:person.email };
         dbo.collection("StudentClass").find(query).toArray(function(err, Studentresult) {
           if (err) throw err;
-         // console.log(Object.keys(Studentresult).length);
-          res.render('teacher/class', {person,classResult,Studentresult});
+          // console.log(Object.keys(Studentresult).length);
+          res.render('teacher/class', {person,classResult,Studentresult,
+          });
         });
         });
       });
