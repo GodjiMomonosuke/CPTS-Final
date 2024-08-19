@@ -262,7 +262,7 @@ progress[value]::-webkit-progress-value {
 }
 progress[value]::-webkit-progress-bar {
   background-color: #e2ddc8;
-  width: 400px;
+  width: 200px;
 }
 
 

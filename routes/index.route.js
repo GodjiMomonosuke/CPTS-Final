@@ -305,7 +305,9 @@ router.get('/', async (req, res, next) => {
                   }
                   //** */
                   if(StudentAnswer[i].scoreTeacher != undefined){
-                    StudentAnswerLV4 = StudentAnswer[i].scoreTeacher;
+                    StudentAnswerLV4 = parseInt(StudentAnswer[i].scoreTeacher)
+                  }else{
+                    StudentAnswerLV4 = 0;
                   }
                 
 
@@ -333,18 +335,38 @@ router.get('/', async (req, res, next) => {
                   }
                   if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)'){
                     Pretest4Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var pre4lv1 = StudentAnswerLV1;
+                    var pre4lv2 = StudentAnswerLV2;
+                    var pre4lv3 = StudentAnswerLV3;
+                    var pre4lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Selection_Statements-(Pre-test)'){
                     Pretest5Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var pre5lv1 = StudentAnswerLV1;
+                    var pre5lv2 = StudentAnswerLV2;
+                    var pre5lv3 = StudentAnswerLV3;
+                    var pre5lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Loop_Statements-(Pre-test)'){
                     Pretest6Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var pre6lv1 = StudentAnswerLV1;
+                    var pre6lv2 = StudentAnswerLV2;
+                    var pre6lv3 = StudentAnswerLV3;
+                    var pre6lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Arrays_and_Strings-(Pre-test)'){
                     Pretest7Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var pre7lv1 = StudentAnswerLV1;
+                    var pre7lv2 = StudentAnswerLV2;
+                    var pre7lv3 = StudentAnswerLV3;
+                    var pre7lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Functions-(Pre-test)'){
                     Pretest8Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var pre8lv1 = StudentAnswerLV1;
+                    var pre8lv2 = StudentAnswerLV2;
+                    var pre8lv3 = StudentAnswerLV3;
+                    var pre8lv4 = StudentAnswerLV4;
                   }
                   //** Post-test */
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
@@ -363,21 +385,45 @@ router.get('/', async (req, res, next) => {
                   }
                   if(StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'){
                     Posttest3Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var post3lv1 = StudentAnswerLV1;
+                    var post3lv2 = StudentAnswerLV2;
+                    var post3lv3 = StudentAnswerLV3;
+                    var post3lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'){
                     Posttest4Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var post4lv1 = StudentAnswerLV1;
+                    var post4lv2 = StudentAnswerLV2;
+                    var post4lv3 = StudentAnswerLV3;
+                    var post4lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)'){
                     Posttest5Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var post5lv1 = StudentAnswerLV1;
+                    var post5lv2 = StudentAnswerLV2;
+                    var post5lv3 = StudentAnswerLV3;
+                    var post5lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)'){
                     Posttest6Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var post6lv1 = StudentAnswerLV1;
+                    var post6lv2 = StudentAnswerLV2;
+                    var post6lv3 = StudentAnswerLV3;
+                    var post6lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)'){
                     Posttest7Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var post7lv1 = StudentAnswerLV1;
+                    var post7lv2 = StudentAnswerLV2;
+                    var post7lv3 = StudentAnswerLV3;
+                    var post7lv4 = StudentAnswerLV4;
                   }
                   if(StudentAnswer[i].contentName ==='Functions-(Post-test)'){
                     Posttest8Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
+                    var post8lv1 = StudentAnswerLV1;
+                    var post8lv2 = StudentAnswerLV2;
+                    var post8lv3 = StudentAnswerLV3;
+                    var post8lv4 = StudentAnswerLV4;
                   }
                   
                   //** Project-quiz */
@@ -412,16 +458,37 @@ router.get('/', async (req, res, next) => {
                             Project_QUIZ3:Project_QUIZ3Done,
                             //Post test
                             Algorithms_and_Flowcharts:Posttest1Done,
-                            post1lv1:post1lv1,
+                            pre1lv1:pre1lv1,pre1lv2:pre1lv2,pre1lv3:pre1lv3,pre1lv4:pre1lv4,
+                            post1lv1:post1lv1,post1lv2:post1lv2,post1lv3:post1lv3,post1lv4:post1lv4,
 
                             Datatype_and_Variable:Posttest2Done,
-                            post2lv1:post2lv1,
+                            pre2lv1:pre2lv1,pre2lv2:pre2lv2,pre2lv3:pre2lv3,pre2lv4:pre2lv4,
+                            post2lv1:post2lv1,post2lv2:post2lv2,post2lv3:post2lv3,post2lv4:post2lv4,
+
                             Input_and_Output:Posttest3Done,
+                            pre3lv1:pre3lv1,pre3lv2:pre3lv2,pre3lv3:pre3lv3,pre3lv4:pre3lv4,
+                            post3lv1:post3lv1,post3lv2:post3lv2,post3lv3:post3lv3,post3lv4:post3lv4,
+
                             Operators_and_Expressions:Posttest4Done,
+                            pre4lv1:pre4lv1,pre4lv2:pre4lv2,pre4lv3:pre4lv3,pre4lv4:pre4lv4,
+                            post4lv1:post4lv1,post4lv2:post4lv2,post4lv3:post4lv3,post4lv4:post4lv4,
+
                             Selection_Statements:Posttest5Done,
+                            pre5lv1:pre5lv1,pre5lv2:pre5lv2,pre5lv3:pre5lv3,pre5lv4:pre5lv4,
+                            post5lv1:post5lv1,post5lv2:post5lv2,post5lv3:post5lv3,post5lv4:post5lv4,
+
                             Loop_Statements:Posttest6Done,
+                            pre6lv1:pre6lv1,pre6lv2:pre6lv2,pre6lv3:pre6lv3,pre6lv4:pre6lv4,
+                            post6lv1:post6lv1,post6lv2:post6lv2,post6lv3:post6lv3,post6lv4:post6lv4,
+
                             Arrays_and_Strings:Posttest7Done,
+                            pre7lv1:pre7lv1,pre7lv2:pre7lv2,pre7lv3:pre7lv3,pre7lv4:pre7lv4,
+                            post7lv1:post7lv1,post7lv2:post7lv2,post7lv3:post7lv3,post7lv4:post7lv4,
+
                             Functions:Posttest8Done,
+                            pre8lv1:pre8lv1,pre8lv2:pre8lv2,pre8lv3:pre8lv3,pre8lv4:pre8lv4,
+                            post8lv1:post8lv1,post8lv2:post8lv2,post8lv3:post8lv3,post8lv4:post8lv4,
+
                           } };
                           dbo.collection("StudentClass").updateOne(myquery, newvalues, function(err, res) {
                             if (err) throw err;
