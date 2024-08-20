@@ -8,7 +8,7 @@
                 <th scope="col" class="col-3">Student</th>
                 <!--<th scope="col-1" class="col-2">Class</th>-->
                 <th scope="col" class="col-2 text-start">Project</th>
-                <th scope="col" class="col-2 text-start">Score</th>
+                <th scope="col" class="col-3 text-start">Score</th>
                 <th scope="col" class="col-4 text-start">Chart</th>
                 </th>
               </tr>
@@ -16,69 +16,80 @@
             <tbody>
                 <% for (let i = 0; i < Object.keys(Studentresult).length; i++) {   %>
                                 <th scope="row"><%=i+1%></th>
-                                <td>Email: <%=Studentresult[i].email %> <br>
-                                    Name: <%=Studentresult[i].name %> <br>
-                                    Course: <%=Studentresult[i].Course %> <br>
-                                    Section: <%=Studentresult[i].Section %>
+                                <td><div class="info">Email</div> <%=Studentresult[i].email %> <br>
+                                    <div class="info">Name</div> <%=Studentresult[i].name %> <br>
+                                    <div class="info">Course</div> <%=Studentresult[i].Course %> <br>
+                                    <div class="info">Section</div> <%=Studentresult[i].Section %>
                                 </td>
                                 
                                 <td class="text-start">
-                                    Project QUIZ1 
+                                    <span class="quiz">Project QUIZ1 </span>
                                     <br> &nbsp &nbsp| <%=Studentresult[i].TicketBookingSystem %> <br>
-                                    Project QUIZ2 
+                                    <span class="quiz">Project QUIZ2 </span>
                                     <br> &nbsp &nbsp| <%=Studentresult[i].PointofSalesSystem %> <br> 
-                                    Project QUIZ3 
+                                    <span class="quiz">Project QUIZ3 </span>
                                     <br> &nbsp &nbsp| <%=Studentresult[i].Project_QUIZ3 %> <br>
                                 
                                 </td>
                                 <td class="text-start">
                                     <% if(Studentresult[i].infoPrePostTest != undefined){ %>
                                 <% } else{ %>  
-                                    Algorithms and Flowcharts
+                                    <span class="quiz">Algorithms and Flowcharts</span>
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Algorithms_and_Flowcharts %> <br>
-                                    Datatype and Variable
+                                    <span class="quiz">Datatype and Variable</span>
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Datatype_and_Variable %> <br>
-                                    Input and Output
+                                    <span class="quiz">Input and Output</span>
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Input_and_Output %> <br> 
-                                    Operators and Expressions
+                                    <span class="quiz">Operators and Expressions</span>
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Operators_and_Expressions %> <br>
-                                    Selection Statements 
+                                    <span class="quiz">Selection Statements </span>
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Selection_Statements %> <br> 
-                                    Loop Statements
+                                    <span class="quiz">Loop Statements</span>
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Loop_Statements %> <br> 
-                                    Arrays and Strings
+                                    <span class="quiz">Arrays and Strings</span>
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Arrays_and_Strings %> <br>
-                                    Functions 
+                                    <span class="quiz">Functions</span> 
                                     <br> &nbsp &nbspQuiz | <%=Studentresult[i].Functions %> <br>
                                 <% } %>
                             </td>
                                 <td>
-                                  <%= Studentresult.length %> <br>
-                                  K <%= Studentresult[i].pre1lv1+Studentresult[i].pre2lv1+Studentresult[i].pre3lv1+Studentresult[i].pre4lv1+Studentresult[i].pre5lv1+Studentresult[i].pre6lv1+Studentresult[i].pre7lv1+Studentresult[i].pre8lv1 %>
-                                  <progress  max="10" value=<%= Studentresult[i].pre1lv1+Studentresult[i].pre2lv1+Studentresult[i].pre3lv1+Studentresult[i].pre4lv1+Studentresult[i].pre5lv1+Studentresult[i].pre6lv1+Studentresult[i].pre7lv1+Studentresult[i].pre8lv1 %>  class="html5 "></progress>
-                                  
-                                  <br>
-                                  K <%= (Studentresult[i].post1lv1+Studentresult[i].post2lv1+Studentresult[i].post3lv1+Studentresult[i].post4lv1+Studentresult[i].post5lv1+Studentresult[i].post6lv1+Studentresult[i].post7lv1+Studentresult[i].post8lv1)*10 %>
-                                  <progress  max="10" value=<%= Studentresult[i].post1lv1+Studentresult[i].post2lv1+Studentresult[i].post3lv1+Studentresult[i].post4lv1+Studentresult[i].post5lv1+Studentresult[i].post6lv1+Studentresult[i].post7lv1+Studentresult[i].post8lv1 %>  class="html5 "></progress>
-                                  <br>
-                                  T <%= Studentresult[i].pre1lv2+Studentresult[i].pre2lv2+Studentresult[i].pre3lv2+Studentresult[i].pre4lv2+Studentresult[i].pre5lv2+Studentresult[i].pre6lv2+Studentresult[i].pre7lv2+Studentresult[i].pre8lv2 %>
-                                  <progress  max="10" value=<%= Studentresult[i].pre1lv2+Studentresult[i].pre2lv2+Studentresult[i].pre3lv2+Studentresult[i].pre4lv2+Studentresult[i].pre5lv2+Studentresult[i].pre6lv2+Studentresult[i].pre7lv2+Studentresult[i].pre8lv2 %>  class="html5 "></progress>
-                                  <br>
-                                  T <%= Studentresult[i].post1lv2+Studentresult[i].post2lv2+Studentresult[i].post3lv2+Studentresult[i].post4lv2+Studentresult[i].post5lv2+Studentresult[i].post6lv2+Studentresult[i].post7lv2+Studentresult[i].post8lv2 %>
-                                  <progress  max="10" value=<%= Studentresult[i].post1lv2+Studentresult[i].post2lv2+Studentresult[i].post3lv2+Studentresult[i].post4lv2+Studentresult[i].post5lv2+Studentresult[i].post6lv2+Studentresult[i].post7lv2+Studentresult[i].post8lv2 %>  class="html5 "></progress>
-                                  <br>
-                                  E <%= Studentresult[i].pre1lv3+Studentresult[i].pre2lv3+Studentresult[i].pre3lv3+Studentresult[i].pre4lv3+Studentresult[i].pre5lv3+Studentresult[i].pre6lv3+Studentresult[i].pre7lv3+Studentresult[i].pre8lv3 %>
-                                  <progress  max="10" value=<%= Studentresult[i].pre1lv3+Studentresult[i].pre2lv3+Studentresult[i].pre3lv3+Studentresult[i].pre4lv3+Studentresult[i].pre5lv3+Studentresult[i].pre6lv3+Studentresult[i].pre7lv3+Studentresult[i].pre8lv3 %>  class="html5 "></progress>
-                                  <br>
-                                  E <%= Studentresult[i].post1lv3+Studentresult[i].post2lv3+Studentresult[i].post3lv3+Studentresult[i].post4lv3+Studentresult[i].post5lv3+Studentresult[i].post6lv3+Studentresult[i].post7lv3+Studentresult[i].post8lv3 %>
-                                  <progress  max="10" value=<%= Studentresult[i].post1lv3+Studentresult[i].post2lv3+Studentresult[i].post3lv3+Studentresult[i].post4lv3+Studentresult[i].post5lv3+Studentresult[i].post6lv3+Studentresult[i].post7lv3+Studentresult[i].post8lv3 %>  class="html5 "></progress>
-                                  <br>
-                                  W <%= Studentresult[i].pre1lv4+Studentresult[i].pre2lv4+Studentresult[i].pre3lv4+Studentresult[i].pre4lv4+Studentresult[i].pre5lv4+Studentresult[i].pre6lv4+Studentresult[i].pre7lv4+Studentresult[i].pre8lv4 %>
-                                  <progress  max="10" value=<%= Studentresult[i].pre1lv4+Studentresult[i].pre2lv4+Studentresult[i].pre3lv4+Studentresult[i].pre4lv4+Studentresult[i].pre5lv4+Studentresult[i].pre6lv4+Studentresult[i].pre7lv4+Studentresult[i].pre8lv4 %>  class="html5 "></progress>
-                                  <br>
-                                  W <%= Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4 %>
-                                  <progress  max="10" value=<%= Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4 %>  class="html5 "></progress>
-                                  <br>
+                                    <div></div>
+                                    <div style="display: flex;">
+                                        <div style="width: 70px;">K <%= Math.round(((Studentresult[i].pre1lv1+Studentresult[i].pre2lv1+Studentresult[i].pre3lv1+Studentresult[i].pre4lv1+Studentresult[i].pre5lv1+Studentresult[i].pre6lv1+Studentresult[i].pre7lv1+Studentresult[i].pre8lv1)/40)*100) %>%</div>
+                                        <progress  max="100" value=<%= Studentresult[i].pre1lv1+Studentresult[i].pre2lv1+Studentresult[i].pre3lv1+Studentresult[i].pre4lv1+Studentresult[i].pre5lv1+Studentresult[i].pre6lv1+Studentresult[i].pre7lv1+Studentresult[i].pre8lv1 %>  class="bar1 "></progress>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <div style="width: 70px;">K <%= Math.round(((Studentresult[i].post1lv1+Studentresult[i].post2lv1+Studentresult[i].post3lv1+Studentresult[i].post4lv1+Studentresult[i].post5lv1+Studentresult[i].post6lv1+Studentresult[i].post7lv1+Studentresult[i].post8lv1)/40)*100) %>%</div>
+                                        <progress  max="100" value=<%= Studentresult[i].post1lv1+Studentresult[i].post2lv1+Studentresult[i].post3lv1+Studentresult[i].post4lv1+Studentresult[i].post5lv1+Studentresult[i].post6lv1+Studentresult[i].post7lv1+Studentresult[i].post8lv1 %>  class="bar2 "></progress>
+                                    </div>
+                                    <br>
+                                    <div style="display: flex;">
+                                        <div style="width: 70px;">T <%= Math.round(((Studentresult[i].pre1lv2+Studentresult[i].pre2lv2+Studentresult[i].pre3lv2+Studentresult[i].pre4lv2+Studentresult[i].pre5lv2+Studentresult[i].pre6lv2+Studentresult[i].pre7lv2+Studentresult[i].pre8lv2)/40)*100) %>%</div>
+                                        <progress  max="100" value=<%= Studentresult[i].pre1lv2+Studentresult[i].pre2lv2+Studentresult[i].pre3lv2+Studentresult[i].pre4lv2+Studentresult[i].pre5lv2+Studentresult[i].pre6lv2+Studentresult[i].pre7lv2+Studentresult[i].pre8lv2 %>  class="bar1 "></progress>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <div style="width: 70px;">T <%= Math.round(((Studentresult[i].post1lv2+Studentresult[i].post2lv2+Studentresult[i].post3lv2+Studentresult[i].post4lv2+Studentresult[i].post5lv2+Studentresult[i].post6lv2+Studentresult[i].post7lv2+Studentresult[i].post8lv2)/40)*100) %>%</div>
+                                        <progress  max="100" value=<%= Studentresult[i].post1lv2+Studentresult[i].post2lv2+Studentresult[i].post3lv2+Studentresult[i].post4lv2+Studentresult[i].post5lv2+Studentresult[i].post6lv2+Studentresult[i].post7lv2+Studentresult[i].post8lv2 %>  class="bar2 "></progress>
+                                    </div>
+                                    <br>
+                                    <div style="display: flex;">
+                                        <div style="width: 70px;">E <%= Math.round(((Studentresult[i].pre1lv3+Studentresult[i].pre2lv3+Studentresult[i].pre3lv3+Studentresult[i].pre4lv3+Studentresult[i].pre5lv3+Studentresult[i].pre6lv3+Studentresult[i].pre7lv3+Studentresult[i].pre8lv3)/40)*100) %>%</div>
+                                        <progress  max="100" value=<%= Studentresult[i].pre1lv3+Studentresult[i].pre2lv3+Studentresult[i].pre3lv3+Studentresult[i].pre4lv3+Studentresult[i].pre5lv3+Studentresult[i].pre6lv3+Studentresult[i].pre7lv3+Studentresult[i].pre8lv3 %>  class="bar1 "></progress>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <div style="width: 70px;">E <%= Math.round(((Studentresult[i].post1lv3+Studentresult[i].post2lv3+Studentresult[i].post3lv3+Studentresult[i].post4lv3+Studentresult[i].post5lv3+Studentresult[i].post6lv3+Studentresult[i].post7lv3+Studentresult[i].post8lv3)/40)*100) %>%</div>
+                                        <progress  max="100" value=<%= Studentresult[i].post1lv3+Studentresult[i].post2lv3+Studentresult[i].post3lv3+Studentresult[i].post4lv3+Studentresult[i].post5lv3+Studentresult[i].post6lv3+Studentresult[i].post7lv3+Studentresult[i].post8lv3 %>  class="bar2 "></progress>
+                                    </div>
+                                    <br>
+                                    <div style="display: flex;">
+                                        <div style="width: 70px;">W <%= Math.round(((Studentresult[i].pre1lv4+Studentresult[i].pre2lv4+Studentresult[i].pre3lv4+Studentresult[i].pre4lv4+Studentresult[i].pre5lv4+Studentresult[i].pre6lv4+Studentresult[i].pre7lv4+Studentresult[i].pre8lv4)/200)*100) %>%</div>
+                                        <progress  max="100" value=<%= Studentresult[i].pre1lv4+Studentresult[i].pre2lv4+Studentresult[i].pre3lv4+Studentresult[i].pre4lv4+Studentresult[i].pre5lv4+Studentresult[i].pre6lv4+Studentresult[i].pre7lv4+Studentresult[i].pre8lv4 %>  class="bar1 "></progress>                                       
+                                    </div>
+                                    <div style="display: flex;">
+                                        <div style="width: 70px;">W <%= Math.round(((Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4)/200)*100) %>%</div>
+                                        <progress  max="100" value=<%= Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4 %>  class="bar2 "></progress>
+                                    </div>
+                                    <br>
 
                                   
                                     

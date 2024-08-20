@@ -64,7 +64,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Course</th>
                         <th scope="col">Section</th>
-                        <th scope="col">Token</th>
+                        <th scope="col" class="col-4 text-start" >Token</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -72,7 +72,34 @@
                             <th scope="row"><%=i+1%></th>
                             <td><%=classResult[i].course %></td>
                             <td><%=classResult[i].section %></td>
-                            <td><%=classResult[i].token %></td>
+                            <td><div><%=classResult[i].token %><button onclick="status(this)" class="button">Copy</button></div></td>
+                            <script>
+                                function status(clickedBtn) {
+                                    clickedBtn.value = "Copied to clipboard";
+                                    clickedBtn.disabled = true;
+                                    clickedBtn.style.color = 'white';
+                                    clickedBtn.style.background = 'gray';
+
+                                    //New Code
+                                    copyToCliboard(clickedBtn.previousSibling);
+                                    }
+                                    function copyToCliboard(el) {
+                                    if (document.body.createTextRange) {
+                                        var range = document.body.createTextRange();
+                                        range.moveToElementText(el);
+                                        range.select();
+                                    } else {
+                                        var selection = window.getSelection();
+                                        var range = document.createRange();
+                                        range.selectNodeContents(el);
+                                        selection.removeAllRanges();
+                                        selection.addRange(range);
+                                    }
+                                    document.execCommand("copy");
+                                    window.getSelection().removeAllRanges();
+                                    
+                                }
+                            </script>
                             <tr>
                             </tr>
                         <%} %>
