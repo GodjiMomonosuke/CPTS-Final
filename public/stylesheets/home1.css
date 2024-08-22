@@ -117,7 +117,8 @@ button.btn-secondary {
     padding: 10px;
     position: fixed;
     width: 300px;
-    background-color: aquamarine;
+    height: auto;
+    background-color: #ce9a8a;
     border-radius: 5px;
 }
 
@@ -290,6 +291,4 @@ progress[value]::-webkit-progress-bar {
   @keyframes p {
     from{--p:0}
   }
-  
-
   

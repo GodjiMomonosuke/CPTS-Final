@@ -7,10 +7,25 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 var ADRI1 = "https://drive.google.com/file/d/1NCFVwnLT9L4WsbNvJUipqavLCad1zx8v/preview" 
+var ADRI1_1 = "ให้เขียนโปรแกรมแสดงสูตรคูณ รับค่าของตัวแปร สร้างเงื่อนไขใช้คำสั่ง for และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI1_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 16.1 (1 คะแนน)"
+var ADRI1_3 = "เพิ่มเติมโค้ดให้สามารถตรวจสอบค่าของตัวเลข number ที่ป้อนว่าเป็นจำนวนเต็มบวกหรือไม่ ถ้าไม่ใช่ให้แจ้งเตือนแสดงข้อความ 'Please enter a positive integer.' (1 คะแนน)"
 var ADRI2 = "https://drive.google.com/file/d/1X6IaInO0TTEDlarsfj-gCaptJIluu3_X/preview"
+var ADRI2_1 = "ให้เขียนโปรแกรมแสดงผลรวมของตัวเลขตามจำนวนที่กำหนด โดยให้รับค่าของตัวแปร สร้างเงื่อนไขใช้คำสั่ง while และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI2_2 = "แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 17.1 (1 คะแนน)"
+var ADRI2_3 = "ให้แก้ไขโค้ดนี้เปลี่ยนจากการใช้ while loop เป็น for loop แทน (1 คะแนน)"
 var ADRI3 = "https://drive.google.com/file/d/1bIYtpUKh3pY2FphsoVlpUguKvZiT2pUo/preview"
+var ADRI3_1 = "เขียนโปรแกรมท้ายตัวเลข 1-100 โดยให้รับค่าของตัวแปร สร้างเงื่อนไขใช้คำสั่ง do while และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI3_2 = "แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 18.1 (1 คะแนน)"
+var ADRI3_3 = "แก้ไขเป็นใช้ while loop แทน (1 คะแนน)"
 var ADRI4 = "https://drive.google.com/file/d/1g8Y5MN3Oc5CZ8bw1klvBXM_Vlnfra-sn/preview"
-var ADRI5 = "https://drive.google.com/file/d/18m5dAMVApWRctWDXnIn1gfL8f-e8wIpv/preview"
+var ADRI4_1 = "เขียนโปรแกรมสร้างรูปสามเหลี่ยม โดยรับค่าของตัวแปร สร้างเงื่อนไขใช้คำสั่ง Nested Loops (for ซ้อน for) และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI4_2 = "แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 19.1 (1 คะแนน)"
+var ADRI4_3 = "อ้างอิงโค้ดเดิมให้เขียนโปรแกรมใหม่โดยให้สร้างเป็นรูปสี่เหลี่ยม (1 คะแนน)"
+var ADRI5 = "https://drive.google.com/file/d/1a8y56ondTbiB1PyJec7fVR0ylyGIhJTe/preview"
+var ADRI5_1 = "เขียนโปรแกรมการคำนวณเกรดนักเรียน โดยให้รับค่าของตัวแปร สร้างเงื่อนไขวนลูป และแสดงค่าของข้อมูลดังนี้ คำอธิบายโปรแกรมนี้จะให้ผู้ใช้ป้อนคะแนนที่ได้ในการสอบหลายรายวิชา แล้วคำนวณแสดงเกรด ผลรวมของคะแนนทุกวิชา และค่าเฉลี่ยรวมของคะแนนที่ได้ของนักเรียน โดยใช้เกณฑ์คะแนนตามที่กำหนด โดยเกรดมี A ( >= 80), B (>= 70),  C (>= 60), D (>= 50) และ F (< 50)"
+var ADRI5_2 = "แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 20.1 (1 คะแนน)"
+var ADRI5_3 = "แก้ไขโค้ดโดยเพิ่มเติมให้มีการตรวจสอบค่าคะแนนของ score ต้องอยู่ในช่วง 0 - 100 เท่านั้น ถ้าไม่ใช่ให้มีการแจ้งเตือนเป็นข้อความ 'Please enter a score between 0 and 100. ' (1 คะแนน)"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -216,10 +231,25 @@ if(choice15 === 'C'){
                 sendLink202:sendLink202,
                 rating:rating,
                 ADRI1:ADRI1,
+                ADRI1_1:ADRI1_1,
+                ADRI1_2:ADRI1_2,
+                ADRI1_3:ADRI1_3,
                 ADRI2:ADRI2,
+                ADRI2_1:ADRI2_1,
+                ADRI2_2:ADRI2_2,
+                ADRI2_3:ADRI2_3,
                 ADRI3:ADRI3,
+                ADRI3_1:ADRI3_1,
+                ADRI3_2:ADRI3_2,
+                ADRI3_3:ADRI3_3,
                 ADRI4:ADRI4,
-                ADRI5:ADRI5
+                ADRI4_1:ADRI4_1,
+                ADRI4_2:ADRI4_2,
+                ADRI4_3:ADRI4_3,
+                ADRI5:ADRI5,
+                ADRI5_1:ADRI5_1,
+                ADRI5_2:ADRI5_2,
+                ADRI5_3:ADRI5_3
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };

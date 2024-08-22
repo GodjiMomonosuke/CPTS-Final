@@ -7,11 +7,26 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 /**โจทย์ข้อที่ 4 (ข้อที่ต้องเขียนโค้ด)*/
-var ADRI1 = "https://drive.google.com/file/d/1MPevV4k9LkzOjqrxAHvA08qs27XNpqxk/preview" 
+var ADRI1 = "https://drive.google.com/file/d/1MPevV4k9LkzOjqrxAHvA08qs27XNpqxk/preview"
+var ADRI1_1 = "ให้เขียน Algorithm การทำงานของ Flowchart ต่อไปนี้ แบบ Step by Step ให้ถูกต้อง และเขียนตอบคำถามว่า โปรแกรมนี้คือโปรแกรคำนวณค่าอะไร (3 คะแนน) "
+var ADRI1_2 = "ผลลัพธ์ของโปรแกรมนี้คืออะไร เมื่อกำหนดให้ base = 8 และ height = 10 (1 คะแนน)"
+var ADRI1_3 = "ถ้าต้องคำรนวณหาปริมาตรของพีระมิดต้องแก้ไข Algorithms และ Flowcharts อย่างไร (1 คะแนน)"
 var ADRI2 = "https://drive.google.com/file/d/1y_OuR6vmKvC7ucsPYgurPV43a350W4-D/preview"
+var ADRI2_1 = "ให้วาดรูป Flowchart ของ Algorithm โปรแกรมแปลงอุณหภูมิ Celsius (C) เป็น Fahrenheit (F) ต่อไปนี้ให้ถูกต้อง (3 คะแนน) "
+var ADRI2_2 = "ผลลัพธ์ของโปรแกรมนี้คืออะไร เมื่อกำหนดให้ C เท่ากับ 36 (1 คะแนน)"
+var ADRI2_3 = "ถ้าต้องแปลงอุณหภูมิจาก Fahrenheit (F) เป็น Celsius (C) ต้องแก้ไข Flowcharts อย่างไร (1 คะแนน)"
 var ADRI3 = "https://drive.google.com/file/d/1lYWF0-KxUkVRufld0_ECkov6fIpVfPL0/preview"
+var ADRI3_1 = "ให้เขียน Flowchart ของโปรแกรมตัดเกรด โดยให้มีการรับค่าของตัวแปร และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI3_2 = "ผลลัพธ์ของโปรแกรมนี้คืออะไร เมื่อกำหนดให้ คะแนนเท่ากับ 80 (1 คะแนน)"
+var ADRI3_3 = "ถ้าต้องการให้มีการแสดงข้อความแจ้งเตือนว่า 'Please Enter 0 - 100: ' เมื่อใส่ข้อมูลที่ไม่ใช่ตัวเลข 0 - 100 ต้องแก้ไข Flowcharts อย่างไร (1 คะแนน)"
 var ADRI4 = "https://drive.google.com/file/d/1w737Hm85h6icIA0eL-N75Ul4Sca8sQtH/preview"
+var ADRI4_1 = "ให้เขียน Flowchart ของโปรแกรมแปลงอุณหภูมิ พิมพ์  F คือการแปลง Celcius เป็น Fahrenheit และพิมพ์ C คือการแปลง Fahrenheit เป็น Celcius โดยรับค่าของตัวแปร ทำการคำนวณ และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI4_2 = "ผลลัพธ์ของโปรแกรมนี้คืออะไร เมื่อพิมพ์ F และใส่ค่า C เป็น 36 (1 คะแนน)"
+var ADRI4_3 = "ถ้าต้องการให้เพิ่มเงื่อนไขจากโปรแกรมเดิม โดยให้พิมพ์ K ทำการแปลงอุณภูมิ Celsius เป็น Kelvin ต้องแก้ไข Flowchart อย่างไร กำหนดให้สูตร Kelvin = Celsius + 273.15 (1 คะแนน)"
 var ADRI5 = "https://drive.google.com/file/d/163DxCROxDpO2yF6jer4NJRhdMo1uS1VR/preview"
+var ADRI5_1 = "ให้เขียน Flowchart โปรแกรมคำนวณดอกเบี้ยเงินฝากธนาคารจากโจทย์ที่กำหนดให้ (3 คะแนน)"
+var ADRI5_2 = "ถ้ากำหนดให้ฝากเงินเริ่มต้นที่ 20,000 บาท เมื่อครบ 3 เดือน จะได้ดอกเบี้ยหลังหักภาษีเท่าไร (1 คะแนน)"
+var ADRI5_3 = "ถ้าต้องการให้คิดดอกเบี้ยเงินฝากประจำเป็น 6 เดือน จะแก้ไข Flowchart อย่างไร (1 คะแนน)"
 
 router.get('/', async (req, res, next) => { //ย่อโค้ดนี้ลงเลย
   const person = req.user;
@@ -228,10 +243,25 @@ router.post('/submit', async (req, res, next) => {
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
                 ADRI1:ADRI1,
+                ADRI1_1:ADRI1_1,
+                ADRI1_2:ADRI1_2,
+                ADRI1_3:ADRI1_3,
                 ADRI2:ADRI2,
+                ADRI2_1:ADRI2_1,
+                ADRI2_2:ADRI2_2,
+                ADRI2_3:ADRI2_3,
                 ADRI3:ADRI3,
+                ADRI3_1:ADRI3_1,
+                ADRI3_2:ADRI3_2,
+                ADRI3_3:ADRI3_3,
                 ADRI4:ADRI4,
-                ADRI5:ADRI5
+                ADRI4_1:ADRI4_1,
+                ADRI4_2:ADRI4_2,
+                ADRI4_3:ADRI4_3,
+                ADRI5:ADRI5,
+                ADRI5_1:ADRI5_1,
+                ADRI5_2:ADRI5_2,
+                ADRI5_3:ADRI5_3
                 /**ImproveResult:ImproveResult,
                 Improvevariable:Improvevariable,
                 

@@ -76,9 +76,10 @@ p[data-value]:after {
   margin-bottom: 3px;
 }
 .quiz {
-  background-color: #cdc0d6;
+  background-color: #cccccc;
   display: inline-flex;
   padding: 0 3px 0 3px;
+  width: 100%;
 }
 
 .button {

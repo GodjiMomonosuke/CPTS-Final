@@ -7,10 +7,25 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 var ADRI1 = "https://drive.google.com/file/d/1HzFgWUmyDx56mIiblOg8yUOAixuuQpKg/preview"
+var ADRI1_1 = "ให้เขียนโปรแกรมรับค่าของตัวแปรและแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI1_2 = "แสดงผลลัพธ์ที่ได้ ของข้อที่ 16.1 (1 คะแนน)"
+var ADRI1_3 = "ถ้าต้องการให้ผลลัพธ์ของ a และ b มีค่าเท่ากับ 10 จะเขียนโค้ดเพิ่มอย่างไร ให้ใช้ Unary Operators คือ ++ หรือ -- (1 คะแนน)"
 var ADRI2 = "https://drive.google.com/file/d/1VFbeJRnLZHIU6P_wuDwtpxphq3X6Ur6Z/preview"
+var ADRI2_1 = "ให้เขียนโปรแกรมรับค่าของตัวแปรและแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI2_2 = "แสดงผลลัพธ์ที่ได้ ของข้อที่ 17.1 (1 คะแนน)"
+var ADRI2_3 = "ถ้าต้องการแสดงค่า x, y, z, n ของการคำนวณสมการ x = y * 2 - 1 / z % 3 + n จะต้องแก้ไขโค้ดอย่างไร กำหนดให้ใส่ค่า x = 10, y = 20, z = 30 และ n = 40 (1 คะแนน)"
 var ADRI3 = "https://drive.google.com/file/d/1TmBJbXa8_wAY7ODfsQihN8G8ctXCzb2V/preview"
+var ADRI3_1 = "ให้เขียนโปรแกรมรับค่าของตัวแปรและแสดงผลลัพธ์ของสมการ a + b^(2n) - (4c - 5) สำหรับการยกกำลังให้ใช้ Library math.h (3 คะแนน)"
+var ADRI3_2 = "แสดงผลลัพธ์ที่ได้ ของข้อที่ 18.1 (1 คะแนน)"
+var ADRI3_3 = "ให้เขียนโปรแกรมรับค่าตัวแปร a, b, c จาก Keyboard เพื่อหาค่า x ของสมการดังนี้ (1 คะแนน) กำหนดให้ a = 1, b = -1, c = -6 และให้แสดงค่า x ทั้งสมการที่เป็นเครื่องหมาย + และที่เป็นเครื่องหมาย -"
 var ADRI4 = "https://drive.google.com/file/d/1-91TH7mkgYYod5LGWU7IC5174T1pL0xd/preview"
+var ADRI4_1 = "ให้เขียนโปรแกรมรับค่าของตัวแปรและแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI4_2 = "แสดงผลลัพธ์ที่ได้ ของข้อที่ 19.1 (1 คะแนน)"
+var ADRI4_3 = "ถ้าต้องการให้ค่าผลลัพธ์ของ a > b && b < c เป็น 0 (เป็นเท็จ) และของ a == 10 || c == 20 เป็น 1 (เป็นจริง) จะต้องแก้ Operators ของทั้ง 2 คำสั่งอย่างไร โดยกำหนดให้ a = 20, b = 8, c = 43 เหมือนเดิม (1 คะแนน)"
 var ADRI5 = "https://drive.google.com/file/d/1WtMD_X4lmzUvNvY9uyyjUsAF1rNTuXc_/preview"
+var ADRI5_1 = "ให้เขียนโปรแกรม Point of Sale คำนวณราคาสินค้าพร้อมส่วนลด โดยให้รับค่าของตัวแปรและแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI5_2 = "แสดงผลลัพธ์ที่ได้ ของข้อที่ 20.1 (1 คะแนน)"
+var ADRI5_3 = "ถ้าต้องการเพิ่มสินค้าที่ 4 และในการแสดงใบเสร็จให้แสดง ชื่อ นาสกุล ของลูกค้า โดยให้รับค่าข้อมูลทาง Keyboard จะเขียนโปรแกรมอย่างไร สามารถกำหนดข้อมูลได้เอง (1 คะแนน)"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -216,10 +231,25 @@ if(choice15 === 'C'){
                 sendLink202:sendLink202,
                 rating:rating,
                 ADRI1:ADRI1,
+                ADRI1_1:ADRI1_1,
+                ADRI1_2:ADRI1_2,
+                ADRI1_3:ADRI1_3,
                 ADRI2:ADRI2,
+                ADRI2_1:ADRI2_1,
+                ADRI2_2:ADRI2_2,
+                ADRI2_3:ADRI2_3,
                 ADRI3:ADRI3,
+                ADRI3_1:ADRI3_1,
+                ADRI3_2:ADRI3_2,
+                ADRI3_3:ADRI3_3,
                 ADRI4:ADRI4,
-                ADRI5:ADRI5
+                ADRI4_1:ADRI4_1,
+                ADRI4_2:ADRI4_2,
+                ADRI4_3:ADRI4_3,
+                ADRI5:ADRI5,
+                ADRI5_1:ADRI5_1,
+                ADRI5_2:ADRI5_2,
+                ADRI5_3:ADRI5_3
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };
