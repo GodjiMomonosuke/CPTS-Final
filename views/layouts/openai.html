@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/public/javascripts/openai.js"></script>
+    <title>Chat Pop-Up Example</title>
+    <style>
+        #chat-box {
+            display: none; /* ซ่อนกล่องข้อความเริ่มต้น */
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            max-height: 400px;
+            background: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h2 {
+            margin: 0;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+        }
+
+        .chat-footer {
+            display: flex;
+        }
+
+        .chat-footer input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .chat-footer button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .chat-footer button:hover {
+            background-color: #0056b3;
+        }
+
+        /* ปุ่มเปิด chat box */
+        #open-chat-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #open-chat-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- ปุ่มเปิด chat box -->
+    <button id="open-chat-btn">Open Chat</button>
+
+    <!-- กล่องข้อความแบบป๊อปอัพ -->
+    <div id="chat-box" class="chat-box">
+        <div class="chat-header">
+            <h2>Chat with us</h2>
+            <button id="close-chat-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="chat-body">
+            <!-- แสดงข้อความที่นี่ -->
+            <div id="messages"></div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openChatBtn = document.getElementById('open-chat-btn');
+            const closeChatBtn = document.getElementById('close-chat-btn');
+            const chatBox = document.getElementById('chat-box');
+            const sendBtn = document.getElementById('send-btn');
+            const userInput = document.getElementById('user-input');
+            const messages = document.getElementById('messages');
+
+            // เปิดกล่องข้อความ
+            openChatBtn.addEventListener('click', () => {
+                chatBox.style.display = 'flex';
+                userInput.focus(); // ให้เคอร์เซอร์ไปที่ input ทันที
+            });
+
+            // ปิดกล่องข้อความ
+            closeChatBtn.addEventListener('click', () => {
+                chatBox.style.display = 'none';
+            });
+
+            // ส่งข้อความ
+            async function sendMessage() {
+                const message = userInput.value.trim();
+                if (!message) return; // ตรวจสอบข้อความว่าง
+
+                messages.innerHTML += `<p>You: ${message}</p>`;
+
+                try {
+                    const response = await fetch('/chat', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ message }),
+                    });
+
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    
+                    const data = await response.json();
+                    messages.innerHTML += `<p>Bot: ${data.response}</p>`;
+                    chatBox.scrollTop = chatBox.scrollHeight; // เลื่อนลงไปที่ข้อความล่าสุด
+                } catch (error) {
+                    console.error('Error:', error);
+                    messages.innerHTML += `<p>Error: Unable to get response.</p>`;
+                    chatBox.scrollTop = chatBox.scrollHeight; // เลื่อนลงไปที่ข้อความล่าสุด
+                }
+
+                userInput.value = ''; // ล้างข้อความที่พิมพ์
+            }
+
+            // กดปุ่มส่ง
+            sendBtn.addEventListener('click', sendMessage);
+
+            // กด Enter เพื่อส่งข้อความ
+            userInput.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
+                    event.preventDefault(); // ป้องกันการสร้างบรรทัดใหม่
+                    sendMessage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
