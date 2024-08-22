@@ -20,6 +20,18 @@
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
+
+        .button {
+            padding: 5px;
+            color: #ffffff;
+            background-color: #b5db9a;
+            border-radius: 3px;
+            border: solid #444444;
+            width: 100px;
+            height: 40px;
+            margin: 4px 0 0;
+            color: #444444;
+        }
             
         }
     </style>
@@ -43,14 +55,8 @@
 
         <div class="row align-items-start">
             <div class="col-8">
-                <h1>Student answer
-                    <button type="button"  class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-                        ทดสอบโค้ด
-                    </button>
-                </h1>
-                
+                <h1>Student answer</h1>
             </div>
-            
         </div>
         
         <%# START %> 
@@ -86,45 +92,39 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="container1" >
-                                        <div class="col d-flex " >
-                                            <p><b>คะแนน</b></p>
+                                <div class="container1">
+                                    <button type="button" class="btn btn-outline-dark" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+                                        ทดสอบโค้ด
+                                    </button><br><br>
+                                    <p style="font-size: 16px; margin: 0;">กรอกคะแนน</p>
+                                        <div class="col d-flex ">
+                                            <div class="col1">
+                                            <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="25" step="0.5" name="studentScore" id="studentScore1" value="" placeholder="0">
+                                            <label class="form-check-label " for="studentScore1" title="เงื่อนไข ครบเล็กน้อย"></label>
+                                            </div>
+                                            <button type="submit"  class="button btn-outline-dark" >ส่งคะแนน</button>
                                         </div>
-                                        <div class="col1">
-                                            <input class="form-check-input" style="width: 100px; height: 50px;" type="number" min="0" max="25" step="0.5" name="studentScore" id="studentScore1" value="">
-                                            <label class="form-check-label " for="studentScore1" title="เงื่อนไข ครบเล็กน้อย"> คะแนน</label>
-                                        </div>
+                                        
                                 </div>
                             </div>
                         </div>
                         <!--ข้อที่ 16-->
                         <div class="">
-                            <span class="input-group-text"><b>โจทย์ 16</b></span>
+                            <span class="input-group-text"><b>ข้อ 16</b></span>
                             <iframe src=" <%= student[0].ADRI1 %> " width="50%" height="480" allow="autoplay"></iframe>
                         </div>
-                       
-                        <div class="row">
-                            <div class="col-sm">
-                            <div class="form-group" >
-                                <span ><b>โค้ด (Deployment)</b></span>
-                                <textarea style="height: 400px; background-color: #cacdcf;" class="form-control" id="lineCounter" readonly rows="10"> </textarea>
-                                <textarea style="height: 400px;" class="form-control" id="code" name="code" rows="10" ><%= student[0].code %></textarea>
-                                <br>
-                            </div>
-                            </div>
-                            
-                            <div class="col-3">
-                            <span ><b>ผลลัพธ์จากระบบ (Result)</b></span>
-                                <textarea style="height: 400px;" class="form-control" id="code" name="code" rows="10" > <%= student[0].output %></textarea>
-                            </div>
-                        </div>
-                      
-                        <br>
-                        <div class="row">
-                            <span ><b>การประยุกต์ (Improvement)</b></span>
+                        
                             <div class="col-sm"> 
                                 <div class="card-body shadow rounded">
-                                    <span ><b>ข้อ 16.2</b></span>
+                                    <span ><b>ข้อ 16.1</b> <%= student[0].ADRI1_1 %> </span>
+                                    <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].code%></textarea>
+                                    <br>
+                                </div>
+                            </div>
+                        <div class="row">
+                            <div class="col-sm"> 
+                                <div class="card-body shadow rounded">
+                                    <span ><b>ข้อ 16.2</b> <%= student[0].ADRI1_2 %></span>
                                     <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].expResult16%></textarea>
                                     <br>
                                 </div>
@@ -138,7 +138,7 @@
                             -->
                             <div class="col-sm">
                             <div class="card-body shadow rounded">
-                                <span ><b>ข้อ 16.3</b></span>
+                                <span ><b>ข้อ 16.3</b> <%= student[0].ADRI1_3 %></span>
                                 <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink16%></textarea>
                                 <br>
                             </div>
@@ -149,32 +149,28 @@
                         <br>
                         <!--ข้อที่ 17-->
                         <div class="">
-                            <span class="input-group-text"><b>โจทย์ 17</b></span>
+                            <span class="input-group-text"><b>ข้อ 17</b></span>
                             <iframe src=" <%= student[0].ADRI2  %> " width="50%" height="480" allow="autoplay"></iframe>
                         </div>
-                        
                     
-                   
-                    
-                    <div class="row">
-                        <span ><b>การประยุกต์ (Improvement)</b></span>
                         <div class="col-sm"> 
                             <div class="card-body shadow rounded">
-                                <span ><b>ข้อ 17.1</b></span>
+                                <span ><b>ข้อ 17.1</b> <%= student[0].ADRI2_1 %></span>
                                 <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink171%></textarea>
                                 <br>
                             </div>
                         </div>
+                    <div class="row">    
                         <div class="col-sm"> 
                             <div class="card-body shadow rounded">
-                                <span ><b>ข้อ 17.2</b></span>
+                                <span ><b>ข้อ 17.2</b> <%= student[0].ADRI2_2 %></span>
                                 <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].expResult17%></textarea>
                                 <br>
                             </div>
                         </div>
                         <div class="col-sm">
                         <div class="card-body shadow rounded">
-                            <span ><b>ข้อ 17.3</b></span>
+                            <span ><b>ข้อ 17.3</b> <%= student[0].ADRI2_3 %></span>
                             <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink172%></textarea>
                             <br>
                         </div>
@@ -185,32 +181,29 @@
                     <br>
                     <!--ข้อที่ 18-->
                     <div class="">
-                        <span class="input-group-text"><b>โจทย์ 18</b></span>
+                        <span class="input-group-text"><b>ข้อ 18</b></span>
                         <iframe src=" <%= student[0].ADRI3  %> " width="50%" height="480" allow="autoplay"></iframe>
                     </div>
-                    
+
                 
-                
-          
-                <div class="row">
-                    <span ><b>การประยุกต์ (Improvement)</b></span>
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
-                            <span ><b>ข้อ 18.1</b></span>
+                            <span ><b>ข้อ 18.1</b> <%= student[0].ADRI3_1 %></span>
                             <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink181%></textarea>
                             <br>
                         </div>
                     </div>
+                <div class="row">    
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
-                            <span ><b>ข้อ 18.2</b></span>
+                            <span ><b>ข้อ 18.2</b> <%= student[0].ADRI3_2 %></span>
                             <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].expResult18%></textarea>
                             <br>
                         </div>
                     </div>
                     <div class="col-sm">
                     <div class="card-body shadow rounded">
-                        <span ><b>ข้อ 18.3</b></span>
+                        <span ><b>ข้อ 18.3</b> <%= student[0].ADRI3_3 %></span>
                         <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink182%></textarea>
                         <br>
                     </div>
@@ -221,29 +214,29 @@
                 <br>
                 <!--ข้อที่ 19-->
                 <div class="">
-                    <span class="input-group-text"><b>โจทย์ 19</b></span>
+                    <span class="input-group-text"><b>ข้อ 19</b></span>
                     <iframe src=" <%= student[0].ADRI4  %> " width="50%" height="480" allow="autoplay"></iframe>
                 </div>
 
-                <div class="row">
-                    <span ><b>การประยุกต์ (Improvement)</b></span>
+                
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
-                            <span ><b>ข้อ 19.1</b></span>
+                            <span ><b>ข้อ 19.1</b> <%= student[0].ADRI4_1 %></span>
                             <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink191%></textarea>
                             <br>
                         </div>
                     </div>
+                <div class="row">    
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
-                            <span ><b>ข้อ 19.2</b></span>
+                            <span ><b>ข้อ 19.2</b> <%= student[0].ADRI4_2 %></span>
                             <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].expResult19%></textarea>
                             <br>
                         </div>
                     </div>
                     <div class="col-sm">
                     <div class="card-body shadow rounded">
-                        <span ><b>ข้อ 19.3</b></span>
+                        <span ><b>ข้อ 19.3</b> <%= student[0].ADRI4_3 %></span>
                         <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink192%></textarea>
                         <br>
                     </div>
@@ -254,21 +247,21 @@
                 <br>
                 <!--ข้อที่ 20-->
                 <div class="">
-                    <span class="input-group-text"><b>โจทย์ 20</b></span>
+                    <span class="input-group-text"><b>ข้อ 20</b></span>
                     <iframe src=" <%= student[0].ADRI5  %> " width="50%" height="480" allow="autoplay"></iframe>
                 </div>
-                <div class="row">
-                <span ><b>การประยุกต์ (Improvement)</b></span>
+                
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
-                            <span ><b>ข้อ 20.1</b></span>
+                            <span ><b>ข้อ 20.1</b> <%= student[0].ADRI5_1 %></span>
                             <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink201%></textarea>
                             <br>
                         </div>
                     </div>
+                <div class="row">    
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
-                            <span ><b>ข้อ 20.2</b></span>
+                            <span ><b>ข้อ 20.2</b> <%= student[0].ADRI5_2 %></span>
                             <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].expResult20%></textarea>
                             <br>
                         </div>
@@ -276,15 +269,15 @@
                 </div>
                 <div class="col-sm">
                     <div class="card-body shadow rounded">
-                        <span ><b>ข้อ 20.3</b></span>
+                        <span ><b>ข้อ 20.3</b> <%= student[0].ADRI5_3 %></span>
                         <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink202%></textarea>
                         <br>
                     </div>
                 </div>
 
-                <div class="">
-                    <h1><button type="submit"  class="btn btn-outline-success " >ส่งคะแนน</button></h1>
-                </div>
+                
+                    
+                
             </div>
         </div>
     </div>    

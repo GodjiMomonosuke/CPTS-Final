@@ -7,10 +7,25 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 var ADRI1 = "https://drive.google.com/file/d/1TzxSd-3BQJWSP3_mhcOfkbZ6upXz4miL/preview"
+var ADRI1_1 = "ให้เขียนโปรแกรมรับค่าของตัวแปร สร้างเงื่อนไข และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI1_2 = "แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 16.1 (1 คะแนน)"
+var ADRI1_3 = "ถ้าต้องการให้อายุเท่าไรก็ได้ แต่ขอให้มีใบขับขี่ ให้แสดงข้อความ Can Drive ต้องแก้ไขอย่างไร (1 คะแนน)"
 var ADRI2 = "https://drive.google.com/file/d/1vLX8I5lnKCB3Mhiw13mkPFTJFO4A7YjJ/preview"
+var ADRI2_1 = "ให้เขียนโปรแกรมตัดเกรด โดยให้มีการรับค่าของตัวแปร และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI2_2 = "แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 17.1 (1 คะแนน)"
+var ADRI2_3 = "ถ้าต้องการให้ใส่คะแนนได้เฉพาะตัวเลขจำนวนเต็ม ต้องแก้ไขอย่างไร (1 คะแนน)"
 var ADRI3 = "https://drive.google.com/file/d/1pQr8wLNTTtauCa83cvg7bhRDn2zrA572/preview"
+var ADRI3_1 = "ให้เขียนโปรแกรมแปลงอุณหภูมิ พิมพ์  F คือการแปลง Celcius เป็น Fahrenheit และพิมพ์ C คือการแปลง Fahrenheit เป็น Celcius โดยรับค่าของตัวแปร ทำการคำนวณ และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI3_2 = "แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 18.1 (1 คะแนน)"
+var ADRI3_3 = "ถ้าต้องการให้เพิ่มเงื่อนไขจากโค้ดเดิม โดยให้พิมพ์ K ทำการแปลงอุณภูมิ Celsius เป็น Kelvin ต้องแก้ไขอย่างไร กำหนดให้สูตร Kelvin = Celsius + 273.15 (1 คะแนน)"
 var ADRI4 = "https://drive.google.com/file/d/16881Ni6lSdoS2gU3dH3EUKYBvPEs4uHn/preview"
+var ADRI4_1 = "ให้เขียนโปรแกรมแสดงเลขคู่ (Even) และเลขคี่ (Odd) ของจำนวนเต็มบวก (Positive) จำนวนเต็มลบ (Negative) และจำนวนเต็มศูนย์ (Zero) โดยทำการรับค่าของตัวแปร สร้างเงื่อนไข และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI4_2 = "แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 19.1 (1 คะแนน)"
+var ADRI4_3 = "ถ้าต้องการให้มีการตรวจเช็คกรณีที่ number ไม่ได้ใส่ค่าที่เป็นตัวเลข ให้แจ้งเตือนแสดงข้อความว่า 'Please Enter a number' ต้องแก้ไขอย่างไร (1 คะแนน)"
 var ADRI5 = "https://drive.google.com/file/d/1Rp1Lh2rVBOTnu9G0YwzlnaApwg9mu5yZ/preview"
+var ADRI5_1 = "ให้เขียนโปรแกรมเครื่องคิดเลข โดยให้เลือกโหมด 1: Addition, 2: Substraction, 3: Multiplication, 4: Divison, 5: Modulus โดยทำการรับค่าของตัวแปร สร้างเงื่อนไข (ใช้ switch case เป็นหลัก ร่วมกับ if else) ทำการคำนวณ และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI5_2 = "แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 20.1 (1 คะแนน)"
+var ADRI5_3 = "ถ้าต้องการให้มีการตรวจเช็คกรณีที่รับค่าของ mode แล้ว ไม่ใช่เลข 1 - 5 ให้แจ้งเตือนแสดงข้อความว่า 'Please Enter 1 - 5' ก่อนที่จะมีการรับค่าตัวแปรของตัวเลข ต้องแก้ไขอย่างไร (1 คะแนน)"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -216,10 +231,25 @@ if(choice15 === 'C'){
                 sendLink202:sendLink202,
                 rating:rating,
                 ADRI1:ADRI1,
+                ADRI1_1:ADRI1_1,
+                ADRI1_2:ADRI1_2,
+                ADRI1_3:ADRI1_3,
                 ADRI2:ADRI2,
+                ADRI2_1:ADRI2_1,
+                ADRI2_2:ADRI2_2,
+                ADRI2_3:ADRI2_3,
                 ADRI3:ADRI3,
+                ADRI3_1:ADRI3_1,
+                ADRI3_2:ADRI3_2,
+                ADRI3_3:ADRI3_3,
                 ADRI4:ADRI4,
-                ADRI5:ADRI5
+                ADRI4_1:ADRI4_1,
+                ADRI4_2:ADRI4_2,
+                ADRI4_3:ADRI4_3,
+                ADRI5:ADRI5,
+                ADRI5_1:ADRI5_1,
+                ADRI5_2:ADRI5_2,
+                ADRI5_3:ADRI5_3
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };

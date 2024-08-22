@@ -7,10 +7,25 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 var ADRI1 = "https://drive.google.com/file/d/16qnugYivUXITQABtI-eLxPg-d2aUVbxQ/preview"
+var ADRI1_1 = "ให้เขียนโปรแกรมเครื่องคิดเลขที่มีการสร้างและเรียกใช้งานฟังก์ชัน ดังนี้ (3 คะแนน)"
+var ADRI1_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 16.1 (1 คะแนน)"
+var ADRI1_3 = "ถ้าต้องการเพิ่มฟังก์ชันเลขยกกำลังเข้าไปในโปรแกรมนี้ ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)"
 var ADRI2 = "https://drive.google.com/file/d/1xBF-R-DvRfEAShDKDHEX1WwL2V0qZLZ4/preview"
+var ADRI2_1 = "ให้เขียนโปรแกรมตรวจว่าเป็นเลขคู่หรือเลขคี่ที่มีการสร้างและเรียกใช้งานฟังก์ชัน ดังนี้ (3 คะแนน)"
+var ADRI2_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 17.1 (1 คะแนน)"
+var ADRI2_3 = "ถ้าต้องการเพิ่มฟังก์ชันตรวจสอบตัวเลขจำนวนเต็มบวก เต็มศูนย์ และเต็มลบ แล้วแสดงว่าเป็นเลขคู่ Even หรือเลขคี่ Odd พร้อมทั้งแสดงข้อความว่าตัวเลขนั้นเป็นจำนวนเต็มบวก Positive, จำนวนเต็มศูนย์ Zero หรือจำนวนเต็มลบ Negative เข้าไปในโปรแกรมนี้ ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)"
 var ADRI3 = "https://drive.google.com/file/d/13KE2sEWwAhD4jLIZe7gldnO8pfuTcul5/preview"
+var ADRI3_1 = "ให้เขียนโปรแกรมคำนวณปริมาตรทรงกระบอกที่มีการสร้างและเรียกใช้งานฟังก์ชัน ดังนี้ (3 คะแนน)"
+var ADRI3_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 18.1 (1 คะแนน)"
+var ADRI3_3 = "ถ้าต้องการเพิ่มฟังก์ชันคำนวณหาปริมาตรทรงกลม เข้าไปในโปรแกรมนี้ ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)"
 var ADRI4 = "https://drive.google.com/file/d/13JetzntboDhLFO2_miY0XzF2j0yE4y8A/preview"
+var ADRI4_1 = "ให้เขียนโปรแกรมคำนวณเกรดและแสดงลำดับของนักเรียนที่มีเกรด A โดยให้ทำการสร้างและเรียกใช้งานฟังก์ชัน ดังนี้ (3 คะแนน)"
+var ADRI4_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 19.1 (1 คะแนน)"
+var ADRI4_3 = "ถ้าต้องการแก้ไขฟังก์ชัน calculateGrade ของโปรแกรมนี้ โดยให้เกรด A >= 90, B >= 80, C >= 70, D >= 60 และ F< 60 ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)"
 var ADRI5 = "https://drive.google.com/file/d/1sTSsirPajSIMxj3dfaJEfWG1wyu7wzNQ/preview"
+var ADRI5_1 = "ให้เขียนโปรแกรมเกมท้ายตัวเลข 1-100 ที่มีการสร้างและเรียกใช้งานฟังก์ชัน ดังนี้ (3 คะแนน)"
+var ADRI5_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 20.1 (1 คะแนน)"
+var ADRI5_3 = "ถ้าต้องการให้สุ่มตัวเลขในช่วง 3 - 80 ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -215,11 +230,25 @@ if(choice15 === 'D'){
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
                 rating:rating,
-                ADRI1:ADRI1,
+                ADRI1_1:ADRI1_1,
+                ADRI1_2:ADRI1_2,
+                ADRI1_3:ADRI1_3,
                 ADRI2:ADRI2,
+                ADRI2_1:ADRI2_1,
+                ADRI2_2:ADRI2_2,
+                ADRI2_3:ADRI2_3,
                 ADRI3:ADRI3,
+                ADRI3_1:ADRI3_1,
+                ADRI3_2:ADRI3_2,
+                ADRI3_3:ADRI3_3,
                 ADRI4:ADRI4,
-                ADRI5:ADRI5
+                ADRI4_1:ADRI4_1,
+                ADRI4_2:ADRI4_2,
+                ADRI4_3:ADRI4_3,
+                ADRI5:ADRI5,
+                ADRI5_1:ADRI5_1,
+                ADRI5_2:ADRI5_2,
+                ADRI5_3:ADRI5_3
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };

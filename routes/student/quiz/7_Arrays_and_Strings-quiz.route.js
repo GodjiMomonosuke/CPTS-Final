@@ -7,10 +7,25 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 var ADRI1 = "https://drive.google.com/file/d/106i_3KSzGnwtZUVPp_lhIX5tQwsAU-kI/preview"
+var ADRI1_1 = "ให้เขียนโปรแกรมกำหนดและแสดงข้อข้อมูลด้วยการใช้ Array 1 มิติ ดังนี้ (3 คะแนน)"
+var ADRI1_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 16.1 (1 คะแนน)"
+var ADRI1_3 = "ถ้าต้องการเก็บข้อมูลและแสดงข้อมูลจำนวน 20 ค่า พร้อมทั้งแสดงข้อมูลตำแหน่ง Index ที่ 18 ต้องแก้ไขโปรแกรมอย่างไร (1 คะแนน)"
 var ADRI2 = "https://drive.google.com/file/d/1KQx37p5_hPIWOOtGFgU04Q7pwBgIdH8v/preview"
+var ADRI2_1 = "ให้เขียนโปรแกรมกำหนดและแสดงข้อข้อมูลด้วยการใช้ Array 2 มิติ ดังนี้ (3 คะแนน)"
+var ADRI2_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 17.1 (1 คะแนน)"
+var ADRI2_3 = "ถ้าต้องการเก็บข้อมูล Matrix ขนาด 3 x 3 พร้อมทั้งแสดงข้อมูลตำแหน่ง [2][2] ต้องแก้ไขโปรแกรมอย่างไร และได้ค่าข้อมูลใด โดยให้โปรแกรมสามารถรับค่าจากผู้ใช้ได้ (1 คะแนน"
 var ADRI3 = "https://drive.google.com/file/d/169yfDhNWYSPaQ_d2UO_gb7VmnPgBSMRU/preview"
+var ADRI3_1 = "ให้เขียนโปรแกรมกำหนดและแสดงข้อข้อมูลด้วยการใช้ Array 3 มิติ ขนาด 3 x 3 x 3 ดังนี้ (3 คะแนน)"
+var ADRI3_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 18.1 (1 คะแนน)"
+var ADRI3_3 = "ถ้าต้องการเก็บข้อมูล Matrix ขนาด 3 x 3 x 3 พร้อมทั้งแสดงข้อมูลตำแหน่ง [2][2][2] โดยให้โปรแกรมสามารถรับค่าจากผู้ใช้ได้ (1 คะแนน)"
 var ADRI4 = "https://drive.google.com/file/d/1Y7SgRDpi4nzbDUh2YKy3hvpWVS5atL7y/preview"
+var ADRI4_1 = "ให้เขียนโปรแกรมตามที่กำหนด โดยใช้ฟังก์ชันต่าง ๆ ของ string.h ดังนี้ (3 คะแนน)"
+var ADRI4_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 19.1 (1 คะแนน)"
+var ADRI4_3 = "จากโปรแกรมข้างต้นให้เขียนโปรแกรมใหม่ทำการเพิ่มตัวแปรชื่อ name เก็บชื่อ นามสกุล โดยให้รับค่าข้อมูลจาก Keyboard และให้ใช้ฟังก์ชันต่าง ๆ ของ String เพื่อให้แสดงข้อความดังนี้ 1) ชื่อ นามสกุล Computer Engineering 2) แสดงจำนวนความยาวของข้อความข้อ 1) 3) ทำการสลับค่าข้อความจาก ชื่อ นามสกุล Computer Engineering เป็น Computer Engineering ชื่อ นามสกุล (โดยใช้ฟังก์ชันของ String มาช่วยในการเก็บค่าและแสดง) (1 คะแนน)"
 var ADRI5 = "https://drive.google.com/file/d/1AEd55yhom5bJ3rH10LmUsywpydUd_5Ho/preview"
+var ADRI5_1 = "ให้เขียนโปรแกรมตามที่กำหนด โดยใช้ฟังก์ชันต่าง ๆ ของ string.h ดังนี้ (3 คะแนน)"
+var ADRI5_2 = "แสดงผลลัพธ์ที่ได้ของข้อที่ 20.1 (1 คะแนน)"
+var ADRI5_3 = "จากโปรแกรมข้างต้นให้เขียนโปรแกรมต่อจากเดิม โดยเมื่อ i มากกว่าเท่ากับ 0 เป็นเท็จ ให้ทำการ Reverse Text ของ inputSpring อีกครั้งเพื่อให้แสดงข้อความกลับเป็นข้อความเดิม หลังจากนั้นให้จบการทำงาน (1 คะแนน)"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -215,11 +230,25 @@ if(choice15 === 'C'){
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
                 rating:rating,
-                ADRI1:ADRI1,
+                ADRI1_1:ADRI1_1,
+                ADRI1_2:ADRI1_2,
+                ADRI1_3:ADRI1_3,
                 ADRI2:ADRI2,
+                ADRI2_1:ADRI2_1,
+                ADRI2_2:ADRI2_2,
+                ADRI2_3:ADRI2_3,
                 ADRI3:ADRI3,
+                ADRI3_1:ADRI3_1,
+                ADRI3_2:ADRI3_2,
+                ADRI3_3:ADRI3_3,
                 ADRI4:ADRI4,
-                ADRI5:ADRI5
+                ADRI4_1:ADRI4_1,
+                ADRI4_2:ADRI4_2,
+                ADRI4_3:ADRI4_3,
+                ADRI5:ADRI5,
+                ADRI5_1:ADRI5_1,
+                ADRI5_2:ADRI5_2,
+                ADRI5_3:ADRI5_3
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };

@@ -7,10 +7,25 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 var ADRI1 = "https://drive.google.com/file/d/1pBIrINpZGRsPmonHCMpD6Vrobal8vX5q/preview"
+var ADRI1_1 = "ให้เขียนโปรแกรมรับค่าของตัวแปรและแสดงค่าของข้อมูลดังนี้ (3 คะแนน)"
+var ADRI1_2 = "แสดงผลลัพธ์ที่ได้ ของข้อที่ 16.1 (1 คะแนน)"
+var ADRI1_3 = "ถ้าต้องการรับค่าข้อมูลเป็นข้อความเป็นชื่อเล่นของตนเอง ต้องแก้ไขอย่างไร และได้ผลลัพธ์อย่างไร (1 คะแนน)"
 var ADRI2 = "https://drive.google.com/file/d/1o0XCMzQm7WUNV639rhytCrxdZaYoLbuw/preview"
+var ADRI2_1 = "ให้เขียนโปรแกรมคำนวณหาปริมาตรทรงกรวย โดยกำหนดให้รับค่าตัวแปร radius และ height (3 คะแนน)"
+var ADRI2_2 = "แสดงผลลัพธ์ที่ได้ ของข้อที่ 17.1 (1 คะแนน)"
+var ADRI2_3 = "ถ้าต้องการหาพื้นที่สามเหลี่ยม โดยกำหนดให้รับค่าตัวแปร Base (ใส่เป็น 8.3) และ Height (ใส่เป็น 10.9) และได้ผลลัพธ์เท่าไร (1 คะแนน)"
 var ADRI3 = "https://drive.google.com/file/d/1CX7kBXlcwnKMsxnXpHWhnEWqrS51hWxc/preview"
+var ADRI3_1 = "ให้เขียนโปรแกรมแปลงอุณหภูมิ Celsius (C) เป็น Fahrenheit (F) โดยให้รับค่าตัวแปร C (3 คะแนน)"
+var ADRI3_2 = "แสดงผลลัพธ์ที่ได้ ของข้อที่ 18.1 (1 คะแนน)"
+var ADRI3_3 = "ถ้าต้องการให้แปลงอุณหภูมิ Fahrenheit (F) เป็น Celsius (C) จะต้องเขียนโปรแกรมโดยให้รับค่าตัวแปร F (ใส่ค่าเป็น 93) และได้ผลลัพธ์เท่าไร (1 คะแนน)"
 var ADRI4 = "https://drive.google.com/file/d/1O_bv7V3TGVRSRU5wWClBmtI4fcOfZ5ia/preview"
+var ADRI4_1 = "ให้เขียนโปรแกรมคำนวณยอดขายสินค้ารวมภาษี โดยให้รับค่าตัวแปร และให้ใส่ค่าของตัวแปรดังนี้ ภาษี VAT = 7% ราคาสินค้า A = 400, B = 600, C = 800 (3 คะแนน)"
+var ADRI4_2 = "แสดงผลลัพธ์ที่ได้ ของข้อที่ 19.1 (1 คะแนน)"
+var ADRI4_3 = "ถ้าต้องการรับค่าตัวแปรและใส่ค่าของตัวแปร ดังนี้ สินค้า D = 1000 และ E = 2000 จะต้องแก้ไขส่วนใดบ้าง และได้ผลลัพธ์เท่าไร (1 คะแนน)"
 var ADRI5 = "https://drive.google.com/file/d/11TahBnBjiHp-YtvHoeBw2eblzJECsOra/preview"
+var ADRI5_1 = "ให้เขียนโปรแกรมแสดงประวัติของผู้เรียน โดยให้รับค่าตัวแปร nickname, age, address (3 คะแนน)"
+var ADRI5_2 = "แสดงผลลัพธ์ที่ได้ ของข้อที่ 20.1 (1 คะแนน)"
+var ADRI5_3 = "ถ้าต้องการแสดงข้อมูลงานอดิเรก Hobby เพิ่มโดยใช้คำสั่ง fgets() ต้องเขียนโปรแกรมรับค่าตัวแปรอย่างไร และให้แสดงผลลัพธ์ที่ได้ (1 คะแนน)"
 
 router.get('/', async (req, res, next) => {
   const person = req.user;
@@ -214,10 +229,25 @@ router.post('/submit', async (req, res, next) => {
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
                 ADRI1:ADRI1,
+                ADRI1_1:ADRI1_1,
+                ADRI1_2:ADRI1_2,
+                ADRI1_3:ADRI1_3,
                 ADRI2:ADRI2,
+                ADRI2_1:ADRI2_1,
+                ADRI2_2:ADRI2_2,
+                ADRI2_3:ADRI2_3,
                 ADRI3:ADRI3,
+                ADRI3_1:ADRI3_1,
+                ADRI3_2:ADRI3_2,
+                ADRI3_3:ADRI3_3,
                 ADRI4:ADRI4,
-                ADRI5:ADRI5
+                ADRI4_1:ADRI4_1,
+                ADRI4_2:ADRI4_2,
+                ADRI4_3:ADRI4_3,
+                ADRI5:ADRI5,
+                ADRI5_1:ADRI5_1,
+                ADRI5_2:ADRI5_2,
+                ADRI5_3:ADRI5_3
                 /**ADRI:ADRI,
                 ADRI_Answer:ADRI_Answer*/
               };
