@@ -91,194 +91,203 @@
                                     <span class="input-group-text text-uppercase"><%= student[0].timetodo %></span>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="container1">
-                                    <button type="button" class="btn btn-outline-dark" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-                                        ทดสอบโค้ด
-                                    </button><br><br>
-                                    <p style="font-size: 16px; margin: 0;">กรอกคะแนน</p>
-                                        <div class="col d-flex ">
-                                            <div class="col1">
-                                            <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="25" step="0.5" name="studentScore" id="studentScore1" value="" placeholder="0">
-                                            <label class="form-check-label " for="studentScore1" title="เงื่อนไข ครบเล็กน้อย"></label>
-                                            </div>
-                                            <button type="submit"  class="button btn-outline-dark" >ส่งคะแนน</button>
-                                        </div>
-                                        
-                                </div>
-                            </div>
+                            
                         </div>
+                        <script>
+                            const textarea = document.querySelector("textarea");
+                            textarea.addEventListener("keyup", e =>{
+                              textarea.style.height = "63px";
+                              let scHeight = e.target.scrollHeight;
+                              textarea.style.height = `${scHeight}px`;
+                            });
+                          </script>
                         <!--ข้อที่ 16-->
-                        <div class="">
-                            <span class="input-group-text"><b>ข้อ 16</b></span>
-                            <iframe src=" <%= student[0].ADRI1 %> " width="50%" height="480" allow="autoplay"></iframe>
+                        <span class="input-group-text"><b>ข้อ 16</b></span>
+                        <div class="group2">
+                            <iframe src=" <%= student[0].ADRI1 %> " width="100%" height="100%" allow="autoplay"></iframe>
+                            <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
                         </div>
                         
                             <div class="col-sm"> 
                                 <div class="card-body shadow rounded">
                                     <span ><b>ข้อ 16.1</b> <%= student[0].ADRI1_1 %> </span>
-                                    <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].code%></textarea>
+                                    <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].code%></textarea>
                                     <br>
                                 </div>
+                                <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="3" step="0.5" name="studentScore16_1" id="studentScore" value="" placeholder="ข้อ 16.1">
                             </div>
                         <div class="row">
                             <div class="col-sm"> 
                                 <div class="card-body shadow rounded">
                                     <span ><b>ข้อ 16.2</b> <%= student[0].ADRI1_2 %></span>
-                                    <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].expResult16%></textarea>
+                                    <textarea style="height: 100%" class="form-control wrapper" name="code" rows="15" ><%= student[0].expResult16%></textarea>
                                     <br>
                                 </div>
+                                <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="1" step="0.5" name="studentScore16_2" id="studentScore" value="" placeholder="ข้อ 16.2">
                             </div>
-                           <!-- <div class="col-sm"> 
-                                <div class="card-body shadow rounded">
-                                    <span ><b>ผลลัพธ์ที่คาด</b></span>
-                                    <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].ImproveResult%></textarea>
-                                </div>
-                            </div>
-                            -->
                             <div class="col-sm">
-                            <div class="card-body shadow rounded">
-                                <span ><b>ข้อ 16.3</b> <%= student[0].ADRI1_3 %></span>
-                                <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink16%></textarea>
-                                <br>
-                            </div>
+                                <div class="card-body shadow rounded">
+                                    <span ><b>ข้อ 16.3</b> <%= student[0].ADRI1_3 %></span>
+                                    <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].sendLink16%></textarea>
+                                    <br>
+                                </div>
+                                <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="1" step="0.5" name="studentScore16_3" id="studentScore" value="" placeholder="ข้อ 16.3">
                             </div>
                         </div>
 
 
                         <br>
                         <!--ข้อที่ 17-->
-                        <div class="">
-                            <span class="input-group-text"><b>ข้อ 17</b></span>
-                            <iframe src=" <%= student[0].ADRI2  %> " width="50%" height="480" allow="autoplay"></iframe>
+                        <span class="input-group-text"><b>ข้อ 17</b></span>
+                        <div class="group2">
+                            <iframe src=" <%= student[0].ADRI2  %> " width="100%" height="100%" allow="autoplay"></iframe>
+                            <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
                         </div>
                     
                         <div class="col-sm"> 
                             <div class="card-body shadow rounded">
                                 <span ><b>ข้อ 17.1</b> <%= student[0].ADRI2_1 %></span>
-                                <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink171%></textarea>
+                                <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].sendLink171%></textarea>
                                 <br>
                             </div>
+                            <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="3" step="0.5" name="studentScore17_1" id="studentScore" value="" placeholder="ข้อ 17.1">
                         </div>
                     <div class="row">    
                         <div class="col-sm"> 
                             <div class="card-body shadow rounded">
                                 <span ><b>ข้อ 17.2</b> <%= student[0].ADRI2_2 %></span>
-                                <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].expResult17%></textarea>
+                                <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].expResult17%></textarea>
                                 <br>
                             </div>
+                            <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="1" step="0.5" name="studentScore17_2" id="studentScore" value="" placeholder="ข้อ 17.2">
                         </div>
                         <div class="col-sm">
-                        <div class="card-body shadow rounded">
-                            <span ><b>ข้อ 17.3</b> <%= student[0].ADRI2_3 %></span>
-                            <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink172%></textarea>
-                            <br>
-                        </div>
+                            <div class="card-body shadow rounded">
+                                <span ><b>ข้อ 17.3</b> <%= student[0].ADRI2_3 %></span>
+                                <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].sendLink172%></textarea>
+                                <br>
+                            </div>
+                            <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="1" step="0.5" name="studentScore17_3" id="studentScore" value="" placeholder="ข้อ 17.3">
                         </div>
                     </div>
 
 
                     <br>
                     <!--ข้อที่ 18-->
-                    <div class="">
-                        <span class="input-group-text"><b>ข้อ 18</b></span>
-                        <iframe src=" <%= student[0].ADRI3  %> " width="50%" height="480" allow="autoplay"></iframe>
+                    <span class="input-group-text"><b>ข้อ 18</b></span>
+                    <div class="group2">
+                        <iframe src=" <%= student[0].ADRI3  %> " width="100%" height="100%" allow="autoplay"></iframe>
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
                     </div>
 
                 
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
                             <span ><b>ข้อ 18.1</b> <%= student[0].ADRI3_1 %></span>
-                            <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink181%></textarea>
+                            <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].sendLink181%></textarea>
                             <br>
                         </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="3" step="0.5" name="studentScore18_1" id="studentScore" value="" placeholder="ข้อ 18.1">
                     </div>
                 <div class="row">    
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
                             <span ><b>ข้อ 18.2</b> <%= student[0].ADRI3_2 %></span>
-                            <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].expResult18%></textarea>
+                            <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].expResult18%></textarea>
                             <br>
                         </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="1" step="0.5" name="studentScore18_2" id="studentScore" value="" placeholder="ข้อ 18.2">
                     </div>
                     <div class="col-sm">
-                    <div class="card-body shadow rounded">
-                        <span ><b>ข้อ 18.3</b> <%= student[0].ADRI3_3 %></span>
-                        <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink182%></textarea>
-                        <br>
-                    </div>
+                        <div class="card-body shadow rounded">
+                            <span ><b>ข้อ 18.3</b> <%= student[0].ADRI3_3 %></span>
+                            <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].sendLink182%></textarea>
+                            <br>
+                        </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="1" step="0.5" name="studentScore18_3" id="studentScore" value="" placeholder="ข้อ 18.3">
                     </div>
                 </div>
 
                 
                 <br>
                 <!--ข้อที่ 19-->
-                <div class="">
-                    <span class="input-group-text"><b>ข้อ 19</b></span>
-                    <iframe src=" <%= student[0].ADRI4  %> " width="50%" height="480" allow="autoplay"></iframe>
+                <span class="input-group-text"><b>ข้อ 19</b></span>
+                <div class="group2">
+                    <iframe src=" <%= student[0].ADRI4  %> " width="100%" height="100%" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
                 </div>
 
                 
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
                             <span ><b>ข้อ 19.1</b> <%= student[0].ADRI4_1 %></span>
-                            <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink191%></textarea>
+                            <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].sendLink191%></textarea>
                             <br>
                         </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="3" step="0.5" name="studentScore19_1" id="studentScore" value="" placeholder="ข้อ 19.1">
                     </div>
                 <div class="row">    
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
                             <span ><b>ข้อ 19.2</b> <%= student[0].ADRI4_2 %></span>
-                            <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].expResult19%></textarea>
+                            <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].expResult19%></textarea>
                             <br>
                         </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="1" step="0.5" name="studentScore19_2" id="studentScore" value="" placeholder="ข้อ 19.2">
                     </div>
                     <div class="col-sm">
-                    <div class="card-body shadow rounded">
-                        <span ><b>ข้อ 19.3</b> <%= student[0].ADRI4_3 %></span>
-                        <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink192%></textarea>
-                        <br>
-                    </div>
+                        <div class="card-body shadow rounded">
+                            <span ><b>ข้อ 19.3</b> <%= student[0].ADRI4_3 %></span>
+                            <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].sendLink192%></textarea>
+                            <br>
+                        </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="1" step="0.5" name="studentScore19_3" id="studentScore" value="" placeholder="ข้อ 19.3">
                     </div>
                 </div>
 
 
                 <br>
                 <!--ข้อที่ 20-->
-                <div class="">
-                    <span class="input-group-text"><b>ข้อ 20</b></span>
-                    <iframe src=" <%= student[0].ADRI5  %> " width="50%" height="480" allow="autoplay"></iframe>
+                <span class="input-group-text"><b>ข้อ 20</b></span>
+                <div class="group2">
+                    <iframe src=" <%= student[0].ADRI5  %> " width="100%" height="100%" allow="autoplay"></iframe>
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
                 </div>
                 
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
                             <span ><b>ข้อ 20.1</b> <%= student[0].ADRI5_1 %></span>
-                            <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink201%></textarea>
+                            <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].sendLink201%></textarea>
                             <br>
                         </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="3" step="0.5" name="studentScore20_1" id="studentScore" value="" placeholder="ข้อ 20.1">
                     </div>
                 <div class="row">    
                     <div class="col-sm"> 
                         <div class="card-body shadow rounded">
                             <span ><b>ข้อ 20.2</b> <%= student[0].ADRI5_2 %></span>
-                            <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].expResult20%></textarea>
+                            <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].expResult20%></textarea>
                             <br>
                         </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="1" step="0.5" name="studentScore20_2" id="studentScore" value="" placeholder="ข้อ 20.2">
                     </div>
                     <div class="col-sm">
                         <div class="card-body shadow rounded">
                             <span ><b>ข้อ 20.3</b> <%= student[0].ADRI5_3 %></span>
-                            <textarea style="height: 100%" class="form-control" id="code" name="code" rows="10" ><%= student[0].sendLink202%></textarea>
+                            <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].sendLink202%></textarea>
                             <br>
                         </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="1" step="0.5" name="studentScore20_3" id="studentScore" value="" placeholder="ข้อ 20.3">
                     </div>
                 </div>
-                
-                    
-                
             </div>
+
+            
         </div>
+        <br>
+        <p style="font-size: 16px; margin: 0;">กด "เสร็จสิ้น"เพื่อส่งคะแนน</p>
+        <button type="submit"  class="button btn-outline-dark" >เสร็จสิ้น</button>
+
     </div>    
 
         <% } %>
