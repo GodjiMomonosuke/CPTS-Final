@@ -58,13 +58,13 @@ router.get('/', async (req, res, next) => {
           var studentAll = Object.keys(StudentAnswer).length;
           
           var IntroductionScore=0,IntroductionCount=0 ,PreIntroductionScore=0,PreIntroductionCount=0;
-          var StringScore=0,StringCount=0;
-          var DatatypeScore=0,DatatypeCount=0;
-          var OperatorsScore=0,OperatorsCount=0;
-          var FlowControlScore=0,FlowControlCount =0;
-          var PointersScore=0,PointersCount=0;
-          var FunctionScore=0,FunctionCount=0;
-          var StructureScore=0,StructureCount=0;
+          var StringScore=0,StringCount=0,PreStringScore=0,PreStringCount=0;
+          var DatatypeScore=0,DatatypeCount=0,PreDatatypeScore=0,PreDatatypeCount=0;
+          var OperatorsScore=0,OperatorsCount=0,PreOperatorsScore=0,PreOperatorsCount=0;
+          var FlowControlScore=0,FlowControlCount=0,PreFlowControlScore=0,PreFlowControlCount=0;
+          var PointersScore=0,PointersCount=0,PrePointersScore=0,PrePointersCount=0;
+          var FunctionScore=0,FunctionCount=0,PreFunctionScore=0,PreFunctionCount=0;
+          var StructureScore=0,StructureCount=0,PreStructureScore=0,PreStructureCount=0;
 
           var TicTacToeScore=0,TicTacToeCount=0;
           var LibrarySystemScore=0,LibrarySystemCount=0;
@@ -79,6 +79,55 @@ router.get('/', async (req, res, next) => {
               else{
                 PreIntroductionScore = PreIntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
                 PreIntroductionCount++;
+            }
+            if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)') {   
+              if(StudentAnswer[i].scoreTeacher === undefined){
+                PreStringScore =PreStringScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+              else{
+                PreStringScore =PreStringScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreStringCount++;
+            }
+            if (StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)') {   
+              if(StudentAnswer[i].scoreTeacher === undefined){
+                PreDatatypeScore =PreDatatypeScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+              else{
+                PreDatatypeScore =PreDatatypeScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreDatatypeCount++;
+            } 
+            if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)') {   
+              if(StudentAnswer[i].scoreTeacher === undefined){
+                PreOperatorsScore =PreOperatorsScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+              else{
+                PreOperatorsScore =PreOperatorsScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreOperatorsCount++;
+            }
+            if (StudentAnswer[i].contentName ==='Selection_Statements-(Pre-test)') {   
+              if(StudentAnswer[i].scoreTeacher === undefined){
+                PreFlowControlScore =PreFlowControlScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+              else{
+                PreFlowControlScore =PreFlowControlScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreFlowControlCount++;
+            }
+            if (StudentAnswer[i].contentName ==='Loop_Statements-(Pre-test)') {   
+              if(StudentAnswer[i].scoreTeacher === undefined){
+                PrePointersScore = PrePointersScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+              else{
+                PrePointersScore = PrePointersScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PrePointersCount++;
+            }
+            if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Pre-test)') {   
+              if(StudentAnswer[i].scoreTeacher === undefined){
+                PreFunctionScore = PreFunctionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+              else{
+                PreFunctionScore = PreFunctionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreFunctionCount++;
+            }
+            if (StudentAnswer[i].contentName ==='Functions-(Pre-test)') {   
+                if(StudentAnswer[i].scoreTeacher === undefined){
+                  PreStructureScore = PreStructureScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                else{
+                  PreStructureScore = PreStructureScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                  PreStructureCount++;
             }
 
             if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)' ){
@@ -457,35 +506,43 @@ router.get('/', async (req, res, next) => {
                             PointofSalesSystem:Point_of_Sales_SystemDone,
                             Project_QUIZ3:Project_QUIZ3Done,
                             //Post test
-                            Algorithms_and_Flowcharts:Posttest1Done,
+                            pre_Algorithms_and_Flowcharts:Pretest1Done,
+                            post_Algorithms_and_Flowcharts:Posttest1Done,
                             pre1lv1:pre1lv1,pre1lv2:pre1lv2,pre1lv3:pre1lv3,pre1lv4:pre1lv4,
                             post1lv1:post1lv1,post1lv2:post1lv2,post1lv3:post1lv3,post1lv4:post1lv4,
 
-                            Datatype_and_Variable:Posttest2Done,
+                            pre_Datatype_and_Variable:Pretest2Done,
+                            post_Datatype_and_Variable:Posttest2Done,
                             pre2lv1:pre2lv1,pre2lv2:pre2lv2,pre2lv3:pre2lv3,pre2lv4:pre2lv4,
                             post2lv1:post2lv1,post2lv2:post2lv2,post2lv3:post2lv3,post2lv4:post2lv4,
 
-                            Input_and_Output:Posttest3Done,
+                            pre_Input_and_Output:Pretest3Done,
+                            post_Input_and_Output:Posttest3Done,
                             pre3lv1:pre3lv1,pre3lv2:pre3lv2,pre3lv3:pre3lv3,pre3lv4:pre3lv4,
                             post3lv1:post3lv1,post3lv2:post3lv2,post3lv3:post3lv3,post3lv4:post3lv4,
 
-                            Operators_and_Expressions:Posttest4Done,
+                            pre_Operators_and_Expressions:Pretest4Done,
+                            post_Operators_and_Expressions:Posttest4Done,
                             pre4lv1:pre4lv1,pre4lv2:pre4lv2,pre4lv3:pre4lv3,pre4lv4:pre4lv4,
                             post4lv1:post4lv1,post4lv2:post4lv2,post4lv3:post4lv3,post4lv4:post4lv4,
 
-                            Selection_Statements:Posttest5Done,
+                            pre_Selection_Statements:Pretest5Done,
+                            post_Selection_Statements:Posttest5Done,
                             pre5lv1:pre5lv1,pre5lv2:pre5lv2,pre5lv3:pre5lv3,pre5lv4:pre5lv4,
                             post5lv1:post5lv1,post5lv2:post5lv2,post5lv3:post5lv3,post5lv4:post5lv4,
 
-                            Loop_Statements:Posttest6Done,
+                            pre_Loop_Statements:Pretest6Done,
+                            post_Loop_Statements:Posttest6Done,
                             pre6lv1:pre6lv1,pre6lv2:pre6lv2,pre6lv3:pre6lv3,pre6lv4:pre6lv4,
                             post6lv1:post6lv1,post6lv2:post6lv2,post6lv3:post6lv3,post6lv4:post6lv4,
 
-                            Arrays_and_Strings:Posttest7Done,
+                            pre_Arrays_and_Strings:Pretest7Done,
+                            post_Arrays_and_Strings:Posttest7Done,
                             pre7lv1:pre7lv1,pre7lv2:pre7lv2,pre7lv3:pre7lv3,pre7lv4:pre7lv4,
                             post7lv1:post7lv1,post7lv2:post7lv2,post7lv3:post7lv3,post7lv4:post7lv4,
 
-                            Functions:Posttest8Done,
+                            pre_Functions:Pretest8Done,
+                            post_Functions:Posttest8Done,
                             pre8lv1:pre8lv1,pre8lv2:pre8lv2,pre8lv3:pre8lv3,pre8lv4:pre8lv4,
                             post8lv1:post8lv1,post8lv2:post8lv2,post8lv3:post8lv3,post8lv4:post8lv4,
 
@@ -980,11 +1037,37 @@ router.post('/joinclass', async (req, res, next) => {
                       dbo.collection("StudentAnswer").find(query).toArray(function(err, StudentAnswer) {
                         if (err) throw err;
         
+                        var Pretest1Done = " - " ,Pretest2Done = " - ",Pretest3Done = " - " ,Pretest4Done = " - " ,Pretest5Done = " - ",Pretest6Done = " - ",Pretest7Done = " - ",Pretest8Done = " - ";
                         var Posttest1Done = " - " ,Posttest2Done = " - ",Posttest3Done = " - " ,Posttest4Done = " - " ,Posttest5Done = " - ",Posttest6Done = " - ",Posttest7Done = " - ",Posttest8Done = " - ";
                         var Ticket_Booking_SystemDone = " - " , Point_of_Sales_SystemDone = " - " , Project_QUIZ3Done = " - ";
               
                         for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
         
+                        if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)'){
+                          Pretest1Done = "YES";
+                        }
+                        if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)'){
+                          Pretest2Done = "YES";
+                        }
+                        if(StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)'){
+                          Pretest3Done = "YES";
+                        }
+                        if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)'){
+                          Pretest4Done = "YES";
+                        }
+                        if(StudentAnswer[i].contentName ==='Selection_Statements-(Pre-test)'){
+                          Pretest5Done = "YES";
+                        }
+                        if(StudentAnswer[i].contentName ==='Loop_Statements-(Pre-test)'){
+                          Pretest6Done = "YES";
+                        }
+                        if(StudentAnswer[i].contentName ==='Arrays_and_Strings-(Pre-test)'){
+                          Pretest7Done = "YES";
+                        }
+                        if(StudentAnswer[i].contentName ==='Functions-(Pre-test)'){
+                          Pretest8Done = "YES";
+                        }
+
                         if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
                           Posttest1Done = "YES";
                         }

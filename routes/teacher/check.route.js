@@ -35,7 +35,23 @@ router.get('/', async (req, res, next) => {
 router.post('/submit', async (req, res, next) => {
     const person = req.user;
     
-    var score = req.body.studentScore;
+    var score16_1 = parseInt(req.body.studentScore16_1);
+    var score16_2 = parseInt(req.body.studentScore16_2);
+    var score16_3 = parseInt(req.body.studentScore16_3);
+    var score17_1 = parseInt(req.body.studentScore17_1);
+    var score17_2 = parseInt(req.body.studentScore17_2);
+    var score17_3 = parseInt(req.body.studentScore17_3);
+    var score18_1 = parseInt(req.body.studentScore18_1);
+    var score18_2 = parseInt(req.body.studentScore18_2);
+    var score18_3 = parseInt(req.body.studentScore18_3);
+    var score19_1 = parseInt(req.body.studentScore19_1);
+    var score19_2 = parseInt(req.body.studentScore19_2);
+    var score19_3 = parseInt(req.body.studentScore19_3);
+    var score20_1 = parseInt(req.body.studentScore20_1);
+    var score20_2 = parseInt(req.body.studentScore20_2);
+    var score20_3 = parseInt(req.body.studentScore20_3);
+
+    var score = score16_1+score16_2+score16_3+score17_1+score17_2+score17_3+score18_1+score18_2+score18_3+score19_1+score19_2+score19_3+score20_1+score20_2+score20_3;
     var idStudent = req.body.idStudent;
     
     if(idStudent === ""){}
