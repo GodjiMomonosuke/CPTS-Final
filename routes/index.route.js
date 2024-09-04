@@ -294,8 +294,12 @@ router.get('/', async (req, res, next) => {
           res.render('index/index_teacher', { person ,sortedCourse,sortedProject,
             BasicPercent,TracePercent,ExplainPercent,WritePercent,
             TicTacToeScore,LibrarySystemScore,RoshamboScore,
+            
             IntroductionScore,StringScore,DatatypeScore,OperatorsScore,FlowControlScore,PointersScore,FunctionScore,StructureScore,
-            PreIntroductionScore
+            IntroductionCount,StringCount,DatatypeCount,OperatorsCount,FlowControlCount,PointersCount,FunctionCount,StructureCount,
+            
+            PreIntroductionScore,PreStringScore,PreDatatypeScore,PreOperatorsScore,PreFlowControlScore,PrePointersScore,PreFunctionScore,PreStructureScore,
+            PreIntroductionCount,PreStringCount,PreDatatypeCount,PreOperatorsCount,PreFlowControlCount,PrePointersCount,PreFunctionCount,PreStructureCount
           })
 
           });
