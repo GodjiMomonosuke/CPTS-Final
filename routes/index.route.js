@@ -294,6 +294,7 @@ router.get('/', async (req, res, next) => {
           res.render('index/index_teacher', { person ,sortedCourse,sortedProject,
             BasicPercent,TracePercent,ExplainPercent,WritePercent,
             TicTacToeScore,LibrarySystemScore,RoshamboScore,
+            TicTacToeCount,LibrarySystemCount,RoshamboCount,
             
             IntroductionScore,StringScore,DatatypeScore,OperatorsScore,FlowControlScore,PointersScore,FunctionScore,StructureScore,
             IntroductionCount,StringCount,DatatypeCount,OperatorsCount,FlowControlCount,PointersCount,FunctionCount,StructureCount,
