@@ -366,12 +366,15 @@ router.get('/', async (req, res, next) => {
                 
 
                   //** Pre-test */
+                  var pre1=0,pre2=0,pre3=0,pre4=0,pre5=0,pre6=0,pre7=0,pre8=0;
+                  var post1=0,post2=0,post3=0,post4=0,post5=0,post6=0,post7=0,post8=0;
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)'){
                     Pretest1Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
                     var pre1lv1 = StudentAnswerLV1;
                     var pre1lv2 = StudentAnswerLV2;
                     var pre1lv3 = StudentAnswerLV3;
                     var pre1lv4 = StudentAnswerLV4;
+                    pre1 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)'){
                     Pretest2Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -379,6 +382,7 @@ router.get('/', async (req, res, next) => {
                     var pre2lv2 = StudentAnswerLV2;
                     var pre2lv3 = StudentAnswerLV3;
                     var pre2lv4 = StudentAnswerLV4;
+                    pre2 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)'){
                     Pretest3Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -386,6 +390,7 @@ router.get('/', async (req, res, next) => {
                     var pre3lv2 = StudentAnswerLV2;
                     var pre3lv3 = StudentAnswerLV3;
                     var pre3lv4 = StudentAnswerLV4;
+                    pre3 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)'){
                     Pretest4Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -393,6 +398,7 @@ router.get('/', async (req, res, next) => {
                     var pre4lv2 = StudentAnswerLV2;
                     var pre4lv3 = StudentAnswerLV3;
                     var pre4lv4 = StudentAnswerLV4;
+                    pre4 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Selection_Statements-(Pre-test)'){
                     Pretest5Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -400,6 +406,7 @@ router.get('/', async (req, res, next) => {
                     var pre5lv2 = StudentAnswerLV2;
                     var pre5lv3 = StudentAnswerLV3;
                     var pre5lv4 = StudentAnswerLV4;
+                    pre5 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Loop_Statements-(Pre-test)'){
                     Pretest6Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -407,6 +414,7 @@ router.get('/', async (req, res, next) => {
                     var pre6lv2 = StudentAnswerLV2;
                     var pre6lv3 = StudentAnswerLV3;
                     var pre6lv4 = StudentAnswerLV4;
+                    pre6 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Arrays_and_Strings-(Pre-test)'){
                     Pretest7Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -414,6 +422,7 @@ router.get('/', async (req, res, next) => {
                     var pre7lv2 = StudentAnswerLV2;
                     var pre7lv3 = StudentAnswerLV3;
                     var pre7lv4 = StudentAnswerLV4;
+                    pre7 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Functions-(Pre-test)'){
                     Pretest8Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -421,6 +430,7 @@ router.get('/', async (req, res, next) => {
                     var pre8lv2 = StudentAnswerLV2;
                     var pre8lv3 = StudentAnswerLV3;
                     var pre8lv4 = StudentAnswerLV4;
+                    pre8 = 1;
                   }
                   //** Post-test */
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
@@ -429,6 +439,7 @@ router.get('/', async (req, res, next) => {
                     var post1lv2 = StudentAnswerLV2;
                     var post1lv3 = StudentAnswerLV3;
                     var post1lv4 = StudentAnswerLV4;
+                    post1 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'){
                     Posttest2Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -436,6 +447,7 @@ router.get('/', async (req, res, next) => {
                     var post2lv2 = StudentAnswerLV2;
                     var post2lv3 = StudentAnswerLV3;
                     var post2lv4 = StudentAnswerLV4;
+                    post2 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'){
                     Posttest3Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -443,6 +455,7 @@ router.get('/', async (req, res, next) => {
                     var post3lv2 = StudentAnswerLV2;
                     var post3lv3 = StudentAnswerLV3;
                     var post3lv4 = StudentAnswerLV4;
+                    post3 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'){
                     Posttest4Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -450,6 +463,7 @@ router.get('/', async (req, res, next) => {
                     var post4lv2 = StudentAnswerLV2;
                     var post4lv3 = StudentAnswerLV3;
                     var post4lv4 = StudentAnswerLV4;
+                    post4 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)'){
                     Posttest5Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -457,6 +471,7 @@ router.get('/', async (req, res, next) => {
                     var post5lv2 = StudentAnswerLV2;
                     var post5lv3 = StudentAnswerLV3;
                     var post5lv4 = StudentAnswerLV4;
+                    post5 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)'){
                     Posttest6Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -464,6 +479,7 @@ router.get('/', async (req, res, next) => {
                     var post6lv2 = StudentAnswerLV2;
                     var post6lv3 = StudentAnswerLV3;
                     var post6lv4 = StudentAnswerLV4;
+                    post6 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)'){
                     Posttest7Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -471,6 +487,7 @@ router.get('/', async (req, res, next) => {
                     var post7lv2 = StudentAnswerLV2;
                     var post7lv3 = StudentAnswerLV3;
                     var post7lv4 = StudentAnswerLV4;
+                    post7 = 1;
                   }
                   if(StudentAnswer[i].contentName ==='Functions-(Post-test)'){
                     Posttest8Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
@@ -478,6 +495,7 @@ router.get('/', async (req, res, next) => {
                     var post8lv2 = StudentAnswerLV2;
                     var post8lv3 = StudentAnswerLV3;
                     var post8lv4 = StudentAnswerLV4;
+                    post8 = 1;
                   }
                   
                   //** Project-quiz */
@@ -551,6 +569,8 @@ router.get('/', async (req, res, next) => {
                             pre8lv1:pre8lv1,pre8lv2:pre8lv2,pre8lv3:pre8lv3,pre8lv4:pre8lv4,
                             post8lv1:post8lv1,post8lv2:post8lv2,post8lv3:post8lv3,post8lv4:post8lv4,
 
+                            pre1,pre2,pre3,pre4,pre5,pre6,pre7,pre8,
+                            post1,post2,post3,post4,post5,post6,post7,post8
                           } };
                           dbo.collection("StudentClass").updateOne(myquery, newvalues, function(err, res) {
                             if (err) throw err;

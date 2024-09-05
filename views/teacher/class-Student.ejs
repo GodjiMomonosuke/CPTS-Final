@@ -1,4 +1,19 @@
-
+<style>
+    .status_w {
+        width: 70px;
+        height: 25px;
+        background-color: #fff;
+        margin-right: 5px;
+        text-align: center;
+    }
+    .status {
+        width: 70px;
+        height: 25px;
+        background-color: #66B7BD;
+        margin-right: 5px;
+        text-align: center;
+    }
+</style>
 <h1>Student</h1>
     <div class="box mb-5 shadow" style="background-color: #bd7b67;;">
         <table class="table" style="background-color: #eaeaea;">
@@ -35,8 +50,30 @@
                                     <% if(Studentresult[i].infoPrePostTest != undefined){ %>
                                 <% } else{ %>  
                                     <span class="quiz">Algorithms and Flowcharts</span>
-                                    <br> &nbsp &nbspPretest | <%=Studentresult[i].pre_Algorithms_and_Flowcharts %> --- Total:<%=Studentresult[i].pre1lv1+Studentresult[i].pre1lv2+Studentresult[i].pre1lv3+Studentresult[i].pre1lv4 %>
-                                    <br> &nbsp &nbspPosttest | <%=Studentresult[i].post_Algorithms_and_Flowcharts %> --- Total:<%=Studentresult[i].post1lv1+Studentresult[i].post1lv2+Studentresult[i].post1lv3+Studentresult[i].post1lv4 %>
+                                    <% if (Studentresult[i].pre_Algorithms_and_Flowcharts === "ยังไม่ได้ทำ") { %>
+                                        <div style="display: flex;">
+                                            <div class="status_w">Pretest</div>
+                                            <%=Studentresult[i].pre_Algorithms_and_Flowcharts %> --- Total:<%=Studentresult[i].pre1lv1+Studentresult[i].pre1lv2+Studentresult[i].pre1lv3+Studentresult[i].pre1lv4 %>
+                                        </div> 
+                                    <% }else{ %>
+                                        <div style="display: flex;">
+                                            <div class="status">Pretest</div>
+                                            <%=Studentresult[i].pre_Algorithms_and_Flowcharts %> --- Total:<%=Studentresult[i].pre1lv1+Studentresult[i].pre1lv2+Studentresult[i].pre1lv3+Studentresult[i].pre1lv4 %>
+                                        </div> 
+                                    <% }%>
+                                    <% if (Studentresult[i].post_Algorithms_and_Flowcharts === "ยังไม่ได้ทำ") { %>
+                                        <div style="display: flex;">
+                                            <div class="status_w">Posttest</div>
+                                            <%=Studentresult[i].post_Algorithms_and_Flowcharts %> --- Total:<%=Studentresult[i].post1lv1+Studentresult[i].post1lv2+Studentresult[i].post1lv3+Studentresult[i].post1lv4 %>
+                                        </div> 
+                                        <% }else{ %>
+                                            <div style="display: flex;">
+                                                <div class="status">Posttest</div>
+                                                <%=Studentresult[i].post_Algorithms_and_Flowcharts %> --- Total:<%=Studentresult[i].post1lv1+Studentresult[i].post1lv2+Studentresult[i].post1lv3+Studentresult[i].post1lv4 %>
+                                            </div> 
+                                        <% }%>
+                                    
+                                    
                                     <span class="quiz">Datatype and Variable</span>
                                     <br> &nbsp &nbspPretest | <%=Studentresult[i].pre_Datatype_and_Variable %> --- Total:<%=Studentresult[i].pre2lv1+Studentresult[i].pre2lv2+Studentresult[i].pre2lv3+Studentresult[i].pre2lv4 %>
                                     <br> &nbsp &nbspPosttest | <%=Studentresult[i].post_Datatype_and_Variable %>  --- Total:<%=Studentresult[i].post2lv1+Studentresult[i].post2lv2+Studentresult[i].post2lv3+Studentresult[i].post2lv4 %>
@@ -106,10 +143,7 @@
                                         <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4)/200)*100) %>%</div>
                                     </div>
                                     <br>
-
-                                  
                                     
-
                                 </td>
                                 </tr>
                           <% } %>
