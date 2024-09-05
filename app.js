@@ -344,3 +344,5 @@ function ensureTeacher(req, res, next) {
     res.redirect('/');
   }
 }
+
+
