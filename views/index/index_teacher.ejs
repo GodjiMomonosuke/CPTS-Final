@@ -46,16 +46,19 @@
 <br><br><br>
     <div id = "content" class="container" >
         <div  class="group2">
-        <div class="box-skill" style="background-color: #cad19f;" >
+        <!--
+            <div class="box-skill" style="background-color: #cad19f;" >
         <h1>Student Summary Skills</h1>
         <div class="box mb-5" style="background-color: #cad19f">
             <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;" >
                 
                 <div class="row mb-3 ">
-                    <h5 for="inputEmail3" class="col-sm-2 col-form-label">Knowledge</h5>
-                    <div class="col-sm-10 " style="top:10px">
+                    <h5 for="inputEmail3" class="col-sm-2 col-form-label">Knowledge </h5>
+                    <div class="col-sm-10 " style="top:10px;">
                         <progress  max="100" value=<%= BasicPercent %>  class="html5 "></progress>
+                        <p><%= BasicScore %></p>
                     </div>
+                    
                 </div>
 
                 <div class="row mb-3">
@@ -76,11 +79,13 @@
                     <h5 for="inputEmail3" class="col-sm-2 col-form-label">Writing</h5>
                      <div class="col-sm-10 " style="top:10px">
                       <progress  max="100" value=<%= WritePercent %> class="html5 "></progress>
+                      <p><%= WritePercent %></p>
                     </div>
                 </div>                
             </div>
         </div>
         </div>
+        -->
         
         <div>
             
@@ -312,7 +317,7 @@
                         <div  style="display: flex;">
                             <p class="card-title" style="width: 50px;">Quiz 1</p>
                             <div class="TeacherBar">
-                                <div style="background-color: #bd7b67; --w :<%= ((TicTacToeScore)) %>%; " class="TeacherBarValue">
+                                <div style="background-color: #bd7b67; --w :<%= ((TicTacToeScore/TicTacToeCount)/40)*100 %>%; " class="TeacherBarValue">
                                     <%= TicTacToeScore/TicTacToeCount %>
                                 </div>
                             </div>                    
@@ -320,7 +325,7 @@
                         <div  style="display: flex;">
                             <p class="card-title" style="width: 50px;">Quiz 2</p>
                             <div class="TeacherBar">
-                                <div style="background-color: #bd7b67; --w :<%= LibrarySystemScore %>%; " class="TeacherBarValue">
+                                <div style="background-color: #bd7b67; --w :<%= ((LibrarySystemScore/LibrarySystemCount)/40)*100 %>%; " class="TeacherBarValue">
                                     <%= LibrarySystemScore/LibrarySystemCount %>
                                 </div>
                             </div>                    
@@ -328,7 +333,7 @@
                         <div  style="display: flex;">
                             <p class="card-title" style="width: 50px;">Quiz 3</p>
                             <div class="TeacherBar">
-                                <div style="background-color: #bd7b67; --w :<%= RoshamboScore %>%; " class="TeacherBarValue">
+                                <div style="background-color: #bd7b67; --w :<%= ((RoshamboScore/RoshamboCount)/40)*100 %>%; " class="TeacherBarValue">
                                     <%= RoshamboScore/RoshamboCount %>
                                 </div>
                             </div>                    

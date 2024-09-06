@@ -134,8 +134,7 @@ router.get('/', async (req, res, next) => {
               if(StudentAnswer[i].scoreTeacher === undefined){
                 IntroductionScore = IntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
               else{
-                IntroductionScore = IntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);
-              var name = StudentAnswer[i].name}
+                IntroductionScore = IntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
               IntroductionCount++;
             }
             if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)') {   
