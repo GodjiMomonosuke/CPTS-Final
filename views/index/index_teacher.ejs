@@ -46,41 +46,7 @@
 <br><br><br>
     <div id = "content" class="container" >
         <div  class="group2">
-        <div class="box-skill" style="background-color: #cad19f;" >
-        <h1>Student Summary Skills</h1>
-        <div class="box mb-5" style="background-color: #cad19f">
-            <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="width: 100%;" >
-                
-                <div class="row mb-3 ">
-                    <h5 for="inputEmail3" class="col-sm-2 col-form-label">Knowledge</h5>
-                    <div class="col-sm-10 " style="top:10px">
-                        <progress  max="100" value=<%= BasicPercent %>  class="html5 "></progress>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <h5 for="inputEmail3" class="col-sm-2 col-form-label">Tracing</h5>
-                     <div class="col-sm-10 " style="top:10px">
-                      <progress  max="100" value=<%= TracePercent %>  class="html5 "></progress>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <h5 for="inputEmail3" class="col-sm-2 col-form-label">Explaining</h5>
-                     <div class="col-sm-10 " style="top:10px">
-                      <progress  max="100" value= <%= ExplainPercent %>  class="html5 "></progress>
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <h5 for="inputEmail3" class="col-sm-2 col-form-label">Writing</h5>
-                     <div class="col-sm-10 " style="top:10px">
-                      <progress  max="100" value=<%= WritePercent %> class="html5 "></progress>
-                    </div>
-                </div>                
-            </div>
-        </div>
-        </div>
+        
         
         <div>
             
@@ -159,64 +125,105 @@
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 1</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= PreIntroductionScore %>%; " class="TeacherBarValue">
-                                        <%= PreIntroductionScore %>
+                                    <div style="--c: <%= PreIntroductionBG %>; --w :<%= ((PreIntroductionScore/PreIntroductionCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (PreIntroductionCount === 0) { %>
+                                            <%= Math.round(PreIntroductionScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(PreIntroductionScore/PreIntroductionCount) %>/40
+                                        <% }%>
+                                    </div>
+                                </div>
+                                <div class="TeacherBar">
+                                    <div style="--c: <%= PreIntroductionBG %>; --w :<%= ((PreIntroductionLv1/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                        <% if (PreIntroductionCount === 0) { %>
+                                            <%= Math.round(PreIntroductionLv1/1)%>
+                                        <% } else { %>
+                                            <%= Math.round(PreIntroductionLv1/PreIntroductionCount) %>
+                                        <% }%>
                                     </div>
                                 </div>
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 2</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= StringScore %>%; " class="TeacherBarValue">
-                                        <%= StringScore %>
+                                    <div style="--c:<%= PreStringBG %> ; --w :<%= ((PreStringScore/PreStringCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (PreStringCount === 0) { %>
+                                            <%= Math.round(PreStringScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(PreStringScore/PreStringCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 3</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= DatatypeScore %>%; " class="TeacherBarValue">
-                                        <%= DatatypeScore %>
+                                    <div style="--c:<%= PreDatatypeBG %> ; --w :<%= ((PreDatatypeScore/PreDatatypeCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (PreDatatypeCount === 0) { %>
+                                            <%= Math.round(PreDatatypeScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(PreDatatypeScore/PreDatatypeCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 4</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= OperatorsScore %>%; " class="TeacherBarValue">
-                                        <%= OperatorsScore %>
+                                    <div style="--c: <%= PreOperatorsBG %>; --w :<%= ((PreOperatorsScore/PreOperatorsCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (PreOperatorsCount === 0) { %>
+                                            <%= Math.round(PreOperatorsScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(PreOperatorsScore/PreOperatorsCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 5</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= FlowControlScore %>%; " class="TeacherBarValue">
-                                        <%= FlowControlScore %>
+                                    <div style="--c: <%= PreFlowControlBG %>; --w :<%= ((PreFlowControlScore/PreFlowControlCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (PreFlowControlCount === 0) { %>
+                                            <%= Math.round(PreFlowControlScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(PreFlowControlScore/PreFlowControlCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 6</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= PointersScore %>%; " class="TeacherBarValue">
-                                        <%= PointersScore %>
+                                    <div style="--c: <%= PrePointersBG %>; --w :<%= ((PrePointersScore/PrePointersCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (PrePointersCount === 0) { %>
+                                            <%= Math.round(PrePointersScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(PrePointersScore/PrePointersCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 7</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= FunctionScore %>%; " class="TeacherBarValue">
-                                        <%= FunctionScore %>
+                                    <div style="--c: <%= PreFunctionBG %>; --w :<%= ((PreFunctionScore/PreFunctionCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (PreFunctionCount === 0) { %>
+                                            <%= Math.round(PreFunctionScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(PreFunctionScore/PreFunctionCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 8</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= StructureScore %>%; " class="TeacherBarValue">
-                                        <%= StructureScore %>
+                                    <div style="--c: <%= PreStructureBG %>; --w :<%= ((PreStructureScore/PreStructureCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (PreStructureCount === 0) { %>
+                                            <%= Math.round(PreStructureScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(PreStructureScore/PreStructureCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
@@ -229,64 +236,96 @@
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 1</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= PreIntroductionScore %>%; " class="TeacherBarValue">
-                                        <%= PreIntroductionScore %>
+                                    <div style="--c: <%= IntroductionBG %>; --w :<%= ((IntroductionScore/IntroductionCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (IntroductionCount === 0) { %>
+                                            <%= Math.round(IntroductionScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(IntroductionScore/IntroductionCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 2</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= StringScore %>%; " class="TeacherBarValue">
-                                        <%= StringScore %>
+                                    <div style="--c: <%= StringBG %>; --w :<%= ((StringScore/StringCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (StringCount === 0) { %>
+                                            <%= Math.round(StringScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(StringScore/StringCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 3</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= DatatypeScore %>%; " class="TeacherBarValue">
-                                        <%= DatatypeScore %>
+                                    <div style="--c: <%= DatatypeBG %>; --w :<%= ((DatatypeScore/DatatypeCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (DatatypeCount === 0) { %>
+                                            <%= Math.round(DatatypeScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(DatatypeScore/DatatypeCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 4</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= OperatorsScore %>%; " class="TeacherBarValue">
-                                        <%= OperatorsScore %>
+                                    <div style="--c: <%= OperatorsBG %>; --w :<%= ((OperatorsScore/OperatorsCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (OperatorsCount === 0) { %>
+                                            <%= Math.round(OperatorsScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(OperatorsScore/OperatorsCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 5</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= FlowControlScore %>%; " class="TeacherBarValue">
-                                        <%= FlowControlScore %>
+                                    <div style="--c: <%= FlowControlBG %>; --w :<%= ((FlowControlScore/FlowControlCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (FlowControlCount === 0) { %>
+                                            <%= Math.round(FlowControlScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(FlowControlScore/FlowControlCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 6</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= PointersScore %>%; " class="TeacherBarValue">
-                                        <%= PointersScore %>
+                                    <div style="--c: <%= PointersBG %>; --w :<%= ((PointersScore/PointersCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (PointersCount === 0) { %>
+                                            <%= Math.round(PointersScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(PointersScore/PointersCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 7</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= FunctionScore %>%; " class="TeacherBarValue">
-                                        <%= FunctionScore %>
+                                    <div style="--c: <%= FunctionBG %>; --w :<%= ((FunctionScore/FunctionCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (FunctionCount === 0) { %>
+                                            <%= Math.round(FunctionScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(FunctionScore/FunctionCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
                             <div  style="display: flex;">
                                 <p class="card-title" style="width: 50px;">Lab 8</p>
                                 <div class="TeacherBar">
-                                    <div style="background-color: #66B7BD; --w :<%= StructureScore %>%; " class="TeacherBarValue">
-                                        <%= StructureScore %>
+                                    <div style="--c: <%= StructureBG %>; --w :<%= ((StructureScore/StructureCount)/40)*100 %>px; " class="TeacherBarValue">
+                                        <% if (StructureCount === 0) { %>
+                                            <%= Math.round(StructureScore/1)%> /40
+                                        <% } else { %>
+                                            <%= Math.round(StructureScore/StructureCount) %>/40
+                                        <% }%>
                                     </div>
                                 </div>                    
                             </div>
@@ -312,24 +351,36 @@
                         <div  style="display: flex;">
                             <p class="card-title" style="width: 50px;">Quiz 1</p>
                             <div class="TeacherBar">
-                                <div style="background-color: #bd7b67; --w :<%= TicTacToeScore %>%; " class="TeacherBarValue">
-                                    <%= TicTacToeScore %>
+                                <div style="--c: <%= TicTacToeBG %>; --w :<%= ((TicTacToeScore/TicTacToeCount)/40)*100 %>%; " class="TeacherBarValue">
+                                    <% if (TicTacToeCount === 0) { %>
+                                        <%= Math.round(TicTacToeScore/1)%>
+                                    <% } else { %>
+                                        <%= Math.round(TicTacToeScore/TicTacToeCount) %>
+                                    <% }%>
                                 </div>
                             </div>                    
                         </div>
                         <div  style="display: flex;">
                             <p class="card-title" style="width: 50px;">Quiz 2</p>
                             <div class="TeacherBar">
-                                <div style="background-color: #bd7b67; --w :<%= LibrarySystemScore %>%; " class="TeacherBarValue">
-                                    <%= LibrarySystemScore %>
+                                <div style="--c: <%= LibrarySystemBG %>; --w :<%= ((LibrarySystemScore/LibrarySystemCount)/40)*100 %>%; " class="TeacherBarValue">
+                                    <% if (LibrarySystemCount === 0) { %>
+                                        <%= Math.round(LibrarySystemScore/1)%>
+                                    <% } else { %>
+                                        <%= Math.round(LibrarySystemScore/LibrarySystemCount) %>
+                                    <% }%>
                                 </div>
                             </div>                    
                         </div>
                         <div  style="display: flex;">
                             <p class="card-title" style="width: 50px;">Quiz 3</p>
                             <div class="TeacherBar">
-                                <div style="background-color: #bd7b67; --w :<%= RoshamboScore %>%; " class="TeacherBarValue">
-                                    <%= RoshamboScore %>
+                                <div style="--c: <%= RoshamboBG %>; --w :<%= ((RoshamboScore/RoshamboCount)/40)*100 %>%; " class="TeacherBarValue">
+                                    <% if (RoshamboCount === 0) { %>
+                                        <%= Math.round(RoshamboScore/1)%>
+                                    <% } else { %>
+                                        <%= Math.round(RoshamboScore/RoshamboCount) %>
+                                    <% }%>
                                 </div>
                             </div>                    
                         </div>

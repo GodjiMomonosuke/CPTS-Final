@@ -198,6 +198,8 @@ progress[value]::-webkit-progress-bar {
   padding-left: 3px;
   --w:0px;
   width:var(--w);
+  --c:#fff;
+  background-color: var(--c);
 }
 
 .station {

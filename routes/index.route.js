@@ -51,7 +51,11 @@ router.get('/', async (req, res, next) => {
           if (err) throw err;
           db.close();
 
-          var BasicScore =0;
+          var PreKnowledgeScore =0;
+          var PreTraceScore =0;
+          var PreExplainScore =0;
+          var PreWriteScore =0;
+          var KnowledgeScore =0;
           var TraceScore =0;
           var ExplainScore =0;
           var WriteScore =0;
@@ -72,143 +76,264 @@ router.get('/', async (req, res, next) => {
 
           
           for(let i = 0; i < studentAll; i++) {
-
             if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)' ){
+              var PreIntroductionLv1 = StudentAnswer[i].scoreLV1;
+              var PreIntroductionLv2 = StudentAnswer[i].scoreLV2;
+              var PreIntroductionLv3 = StudentAnswer[i].scoreLV3;
+              var PreIntroductionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreIntroductionBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreIntroductionScore = PreIntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                PreIntroductionScore = PreIntroductionScore+PreIntroductionLv1+PreIntroductionLv2+PreIntroductionLv3;}
               else{
-                PreIntroductionScore = PreIntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreIntroductionScore = PreIntroductionScore+PreIntroductionLv1+PreIntroductionLv2+PreIntroductionLv3+PreIntroductionLv4;}
+                PreIntroductionBG = "#66B7BD"
                 PreIntroductionCount++;
             }
             if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)') {   
+              var PreStringLv1 = StudentAnswer[i].scoreLV1;
+              var PreStringLv2 = StudentAnswer[i].scoreLV2;
+              var PreStringLv3 = StudentAnswer[i].scoreLV3;
+              var PreStringLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreStringBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreStringScore =PreStringScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                PreStringScore = PreStringScore+PreStringLv1+PreStringLv2+PreStringLv3;}
               else{
-                PreStringScore =PreStringScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreStringScore = PreStringScore+PreStringLv1+PreStringLv2+PreStringLv3+PreStringLv4;}
+                PreStringBG = "#66B7BD"
                 PreStringCount++;
             }
             if (StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)') {   
+              var PreDatatypeLv1 = StudentAnswer[i].scoreLV1;
+              var PreDatatypeLv2 = StudentAnswer[i].scoreLV2;
+              var PreDatatypeLv3 = StudentAnswer[i].scoreLV3;
+              var PreDatatypeLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreDatatypeBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreDatatypeScore =PreDatatypeScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                PreDatatypeScore = PreDatatypeScore+PreDatatypeLv1+PreDatatypeLv2+PreDatatypeLv3;}
               else{
-                PreDatatypeScore =PreDatatypeScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreDatatypeScore = PreDatatypeScore+PreDatatypeLv1+PreDatatypeLv2+PreDatatypeLv3+PreDatatypeLv4;}
+                PreDatatypeBG = "#66B7BD"
                 PreDatatypeCount++;
             } 
             if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)') {   
+              var PreOperatorsLv1 = StudentAnswer[i].scoreLV1;
+              var PreOperatorsLv2 = StudentAnswer[i].scoreLV2;
+              var PreOperatorsLv3 = StudentAnswer[i].scoreLV3;
+              var PreOperatorsLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreOperatorsBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreOperatorsScore =PreOperatorsScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                PreOperatorsScore = PreOperatorsScore+PreOperatorsLv1+PreOperatorsLv2+PreOperatorsLv3;}
               else{
-                PreOperatorsScore =PreOperatorsScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreOperatorsScore = PreOperatorsScore+PreOperatorsLv1+PreOperatorsLv2+PreOperatorsLv3+PreOperatorsLv4;}
+                PreOperatorsBG = "#66B7BD"
                 PreOperatorsCount++;
             }
             if (StudentAnswer[i].contentName ==='Selection_Statements-(Pre-test)') {   
+              var PreFlowControlLv1 = StudentAnswer[i].scoreLV1;
+              var PreFlowControlLv2 = StudentAnswer[i].scoreLV2;
+              var PreFlowControlLv3 = StudentAnswer[i].scoreLV3;
+              var PreFlowControlLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreFlowControlBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreFlowControlScore =PreFlowControlScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                PreFlowControlScore = PreFlowControlScore+PreFlowControlLv1+PreFlowControlLv2+PreFlowControlLv3;}
               else{
-                PreFlowControlScore =PreFlowControlScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreFlowControlScore = PreFlowControlScore+PreFlowControlLv1+PreFlowControlLv2+PreFlowControlLv3+PreFlowControlLv4;}
+                PreFlowControlBG = "#66B7BD"
                 PreFlowControlCount++;
             }
             if (StudentAnswer[i].contentName ==='Loop_Statements-(Pre-test)') {   
+              var PrePointersLv1 = StudentAnswer[i].scoreLV1;
+              var PrePointersLv2 = StudentAnswer[i].scoreLV2;
+              var PrePointersLv3 = StudentAnswer[i].scoreLV3;
+              var PrePointersLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PrePointersBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PrePointersScore = PrePointersScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                PrePointersScore = PrePointersScore+PrePointersLv1+PrePointersLv2+PrePointersLv3;}
               else{
-                PrePointersScore = PrePointersScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PrePointersScore = PrePointersScore+PrePointersLv1+PrePointersLv2+PrePointersLv3+PrePointersLv4;}
+                PrePointersBG = "#66B7BD"
                 PrePointersCount++;
             }
             if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Pre-test)') {   
+              var PreFunctionLv1 = StudentAnswer[i].scoreLV1;
+              var PreFunctionLv2 = StudentAnswer[i].scoreLV2;
+              var PreFunctionLv3 = StudentAnswer[i].scoreLV3;
+              var PreFunctionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreFunctionBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreFunctionScore = PreFunctionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                PreFunctionScore = PreFunctionScore+PreFunctionLv1+PreFunctionLv2+PreFunctionLv3;}
               else{
-                PreFunctionScore = PreFunctionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PreFunctionScore = PreFunctionScore+PreFunctionLv1+PreFunctionLv2+PreFunctionLv3+PreFunctionLv4;}
+                PreFunctionBG = "#66B7BD"
                 PreFunctionCount++;
             }
             if (StudentAnswer[i].contentName ==='Functions-(Pre-test)') {   
-                if(StudentAnswer[i].scoreTeacher === undefined){
-                  PreStructureScore = PreStructureScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
-                else{
-                  PreStructureScore = PreStructureScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
-                  PreStructureCount++;
-            }
-
-            if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)' ){
+              var PreStructureLv1 = StudentAnswer[i].scoreLV1;
+              var PreStructureLv2 = StudentAnswer[i].scoreLV2;
+              var PreStructureLv3 = StudentAnswer[i].scoreLV3;
+              var PreStructureLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreStructureBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                IntroductionScore = IntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                PreStructureScore = PreStructureScore+PreStructureLv1+PreStructureLv2+PreStructureLv3;}
               else{
-                IntroductionScore = IntroductionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
-              IntroductionCount++;
+                PreStructureScore = PreStructureScore+PreStructureLv1+PreStructureLv2+PreStructureLv3+PreStructureLv4;}
+                PreStructureBG = "#66B7BD"
+                PreStructureCount++;
+            }
+            if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)' ){
+              var IntroductionLv1 = StudentAnswer[i].scoreLV1;
+              var IntroductionLv2 = StudentAnswer[i].scoreLV2;
+              var IntroductionLv3 = StudentAnswer[i].scoreLV3;
+              var IntroductionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var IntroductionBG;
+              if(StudentAnswer[i].scoreTeacher === undefined){
+                IntroductionScore = IntroductionScore+IntroductionLv1+IntroductionLv2+IntroductionLv3;}
+              else{
+                IntroductionScore = IntroductionScore+IntroductionLv1+IntroductionLv2+IntroductionLv3+IntroductionLv4;}
+                IntroductionBG = "#66B7BD"
+                IntroductionCount++;
             }
             if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)') {   
+              var StringLv1 = StudentAnswer[i].scoreLV1;
+              var StringLv2 = StudentAnswer[i].scoreLV2;
+              var StringLv3 = StudentAnswer[i].scoreLV3;
+              var StringLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var StringBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                StringScore =StringScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                StringScore = StringScore+StringLv1+StringLv2+StringLv3;}
               else{
-                StringScore =StringScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
-              StringCount++;
+                StringScore = StringScore+StringLv1+StringLv2+StringLv3+StringLv4;}
+                StringBG = "#66B7BD"
+                StringCount++;
             }
             if (StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)') {   
+              var DatatypeLv1 = StudentAnswer[i].scoreLV1;
+              var DatatypeLv2 = StudentAnswer[i].scoreLV2;
+              var DatatypeLv3 = StudentAnswer[i].scoreLV3;
+              var DatatypeLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var DatatypeBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                DatatypeScore =DatatypeScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                DatatypeScore = DatatypeScore+DatatypeLv1+DatatypeLv2+DatatypeLv3;}
               else{
-                DatatypeScore =DatatypeScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                DatatypeScore = DatatypeScore+DatatypeLv1+DatatypeLv2+DatatypeLv3+DatatypeLv4;}
+                DatatypeBG = "#66B7BD"
                 DatatypeCount++;
             } 
             if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)') {   
+              var OperatorsLv1 = StudentAnswer[i].scoreLV1;
+              var OperatorsLv2 = StudentAnswer[i].scoreLV2;
+              var OperatorsLv3 = StudentAnswer[i].scoreLV3;
+              var OperatorsLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var OperatorsBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                OperatorsScore =OperatorsScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                OperatorsScore = OperatorsScore+OperatorsLv1+OperatorsLv2+OperatorsLv3;}
               else{
-                OperatorsScore =OperatorsScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                OperatorsScore = OperatorsScore+OperatorsLv1+OperatorsLv2+OperatorsLv3+OperatorsLv4;}
+                OperatorsBG = "#66B7BD"
                 OperatorsCount++;
             }
             if (StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)') {   
+              var FlowControlLv1 = StudentAnswer[i].scoreLV1;
+              var FlowControlLv2 = StudentAnswer[i].scoreLV2;
+              var FlowControlLv3 = StudentAnswer[i].scoreLV3;
+              var FlowControlLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var FlowControlBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                FlowControlScore =FlowControlScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                FlowControlScore = FlowControlScore+FlowControlLv1+FlowControlLv2+FlowControlLv3;}
               else{
-                FlowControlScore =FlowControlScore+ StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                FlowControlScore = FlowControlScore+FlowControlLv1+FlowControlLv2+FlowControlLv3+FlowControlLv4;}
+                FlowControlBG = "#66B7BD"
                 FlowControlCount++;
             }
             if (StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)') {   
+              var PointersLv1 = StudentAnswer[i].scoreLV1;
+              var PointersLv2 = StudentAnswer[i].scoreLV2;
+              var PointersLv3 = StudentAnswer[i].scoreLV3;
+              var PointersLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PointersBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PointersScore = PointersScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                PointersScore = PointersScore+PointersLv1+PointersLv2+PointersLv3;}
               else{
-                PointersScore = PointersScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                PointersScore = PointersScore+PointersLv1+PointersLv2+PointersLv3+PointersLv4;}
+                PointersBG = "#66B7BD"
                 PointersCount++;
             }
             if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)') {   
+              var FunctionLv1 = StudentAnswer[i].scoreLV1;
+              var FunctionLv2 = StudentAnswer[i].scoreLV2;
+              var FunctionLv3 = StudentAnswer[i].scoreLV3;
+              var FunctionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var FunctionBG;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                FunctionScore = FunctionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
+                FunctionScore = FunctionScore+FunctionLv1+FunctionLv2+FunctionLv3;}
               else{
-                FunctionScore = FunctionScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
+                FunctionScore = FunctionScore+FunctionLv1+FunctionLv2+FunctionLv3+FunctionLv4;}
+                FunctionBG = "#66B7BD"
                 FunctionCount++;
             }
             if (StudentAnswer[i].contentName ==='Functions-(Post-test)') {   
-                if(StudentAnswer[i].scoreTeacher === undefined){
-                  StructureScore = StructureScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3;}
-                else{
-                  StructureScore = StructureScore+StudentAnswer[i].scoreLV1+StudentAnswer[i].scoreLV2+StudentAnswer[i].scoreLV3+parseInt(StudentAnswer[i].scoreTeacher);}
-                  StructureCount++;
+              var StructureLv1 = StudentAnswer[i].scoreLV1;
+              var StructureLv2 = StudentAnswer[i].scoreLV2;
+              var StructureLv3 = StudentAnswer[i].scoreLV3;
+              var StructureLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var StructureBG;
+              if(StudentAnswer[i].scoreTeacher === undefined){
+                StructureScore = StructureScore+StructureLv1+StructureLv2+StructureLv3;}
+              else{
+                StructureScore = StructureScore+StructureLv1+StructureLv2+StructureLv3+StructureLv4;}
+                StructureBG = "#66B7BD"
+                StructureCount++;
             }
             
             /** */
 
             if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
+              var TicTacToeBG;
               if(StudentAnswer[i].scoreTeacher === undefined){}
               else{
                 TicTacToeScore = TicTacToeScore+parseInt(StudentAnswer[i].scoreTeacher);}
+                TicTacToeBG = "#bd7b67"
                 TicTacToeCount++;
             }
             if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
+              var LibrarySystemBG;
               if(StudentAnswer[i].scoreTeacher === undefined){}
               else{
                 LibrarySystemScore = LibrarySystemScore+parseInt(StudentAnswer[i].scoreTeacher);}
+                LibrarySystemBG = "#bd7b67"
                 LibrarySystemCount++;
             }
             if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
+              var RoshamboBG;
               if(StudentAnswer[i].scoreTeacher === undefined){}
               else{
                 RoshamboScore = RoshamboScore+parseInt(StudentAnswer[i].scoreTeacher);}
+                RoshamboBG = "#bd7b67"
                 RoshamboCount++;
             }
             
-           
+            if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)' ||
+              StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)' || 
+              StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)' ||
+              StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)' ||
+              StudentAnswer[i].contentName ==='Selection_Statements-(Pre-test)' ||
+              StudentAnswer[i].contentName ==='Loop_Statements-(Pre-test)' ||
+              StudentAnswer[i].contentName ==='Arrays_and_Strings-(Pre-test)' ||
+              StudentAnswer[i].contentName ==='Functions-(Pre-test)'
+            ){
+              if(StudentAnswer[i].scoreTeacher === undefined){
+                PreKnowledgeScore = PreKnowledgeScore+StudentAnswer[i].scoreLV1
+                PreTraceScore = PreTraceScore+StudentAnswer[i].scoreLV2
+                PreExplainScore = PreExplainScore+StudentAnswer[i].scoreLV3
+                PreWriteScore = 0;
+              }
+              else{
+                PreKnowledgeScore = PreKnowledgeScore+StudentAnswer[i].scoreLV1
+                PreTraceScore = PreTraceScore+StudentAnswer[i].scoreLV2
+                PreExplainScore = PreExplainScore+StudentAnswer[i].scoreLV3
+                PreWriteScore = PreWriteScore+parseInt(StudentAnswer[i].scoreTeacher);
+              }
+            }
 
             if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)' ||
                 StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)' || 
@@ -220,12 +345,13 @@ router.get('/', async (req, res, next) => {
                 StudentAnswer[i].contentName ==='Functions-(Post-test)'
               ){
                 if(StudentAnswer[i].scoreTeacher === undefined){
-                  BasicScore = BasicScore+StudentAnswer[i].scoreLV1
+                  KnowledgeScore = KnowledgeScore+StudentAnswer[i].scoreLV1
                   TraceScore = TraceScore+StudentAnswer[i].scoreLV2
                   ExplainScore = ExplainScore+StudentAnswer[i].scoreLV3
+                  WriteScore = 0;
                 }
                 else{
-                  BasicScore = BasicScore+StudentAnswer[i].scoreLV1
+                  KnowledgeScore = KnowledgeScore+StudentAnswer[i].scoreLV1
                   TraceScore = TraceScore+StudentAnswer[i].scoreLV2
                   ExplainScore = ExplainScore+StudentAnswer[i].scoreLV3
                   WriteScore = WriteScore+parseInt(StudentAnswer[i].scoreTeacher);
@@ -233,6 +359,8 @@ router.get('/', async (req, res, next) => {
               }
           }
 
+          
+ 
 
           if(IntroductionScore != 0) IntroductionScore = IntroductionScore/IntroductionCount;
           if(StringScore != 0) StringScore = StringScore/StringCount;
@@ -278,24 +406,58 @@ router.get('/', async (req, res, next) => {
             return ProjectScoreObj[b].score - ProjectScoreObj[a].score;
           });
 
-          var BasicPercent =  Math.round(((BasicScore/(studentAll*10))*100));
-          var TracePercent= Math.round(((TraceScore/(studentAll*20))*100))
-          var ExplainPercent = Math.round(((ExplainScore/(studentAll*30))*100))
-          var WritePercent = Math.round(((WriteScore/(studentAll*4))*100))
+          var PreKnowledgePercent =  Math.round(PreKnowledgeScore);
+          var PreTracePercent= Math.round(PreTraceScore);
+          var PreExplainPercent = Math.round(PreExplainScore);
+          var PreWritePercent = Math.round(PreWriteScore);
+          
+          var KnowledgePercent =  Math.round(KnowledgeScore);
+          var TracePercent= Math.round(TraceScore);
+          var ExplainPercent = Math.round(ExplainScore);
+          var WritePercent = Math.round(WriteScore);
 
-          BasicPercent = BasicPercent;
+          PreKnowledgePercent = PreKnowledgePercent;
+          PreTracePercent = PreTracePercent;
+          PreExplainPercent = PreExplainPercent;
+          PreWritePercent = PreWritePercent;
+
+          KnowledgePercent = KnowledgePercent;
           TracePercent = TracePercent;
           ExplainPercent = ExplainPercent;
-          WritePercent = WritePercent*10;
+          WritePercent = WritePercent;
 
-          var checksumper = BasicPercent+TracePercent+ExplainPercent+WritePercent
+          var checksumper = KnowledgePercent+TracePercent+ExplainPercent+WritePercent
           console.log("\nCHECKSUM : " ,checksumper); //100
 
           res.render('index/index_teacher', { person ,sortedCourse,sortedProject,
-            BasicPercent,TracePercent,ExplainPercent,WritePercent,
-            TicTacToeScore,LibrarySystemScore,RoshamboScore,
-            IntroductionScore,StringScore,DatatypeScore,OperatorsScore,FlowControlScore,PointersScore,FunctionScore,StructureScore,
-            PreIntroductionScore
+            PreKnowledgePercent,PreTracePercent,PreExplainPercent,PreWritePercent,
+            KnowledgePercent,TracePercent,ExplainPercent,WritePercent,
+
+            TicTacToeScore,TicTacToeBG,
+            LibrarySystemScore,LibrarySystemBG,
+            RoshamboScore,RoshamboBG,
+            TicTacToeCount,LibrarySystemCount,RoshamboCount,
+            
+            IntroductionScore,IntroductionLv1,IntroductionLv2,IntroductionLv3,IntroductionLv4,IntroductionBG,
+            StringScore,StringLv1,StringLv2,StringLv3,StringLv4,StringBG,
+            DatatypeScore,DatatypeLv1,DatatypeLv2,DatatypeLv3,DatatypeLv4,DatatypeBG,
+            OperatorsScore,OperatorsLv1,OperatorsLv2,OperatorsLv3,OperatorsLv4,OperatorsBG,
+            FlowControlScore,FlowControlLv1,FlowControlLv2,FlowControlLv3,FlowControlLv4,FlowControlBG,
+            PointersScore,PointersLv1,PointersLv2,PointersLv3,PointersLv4,PointersBG,
+            FunctionScore,FunctionLv1,FunctionLv2,FunctionLv3,FunctionLv4,FunctionBG,
+            StructureScore,StructureLv1,StructureLv2,StructureLv3,StructureLv4,StructureBG,
+            
+            PreIntroductionScore,PreIntroductionLv1,PreIntroductionLv2,PreIntroductionLv3,PreIntroductionLv4,PreIntroductionBG,
+            PreStringScore,PreStringLv1,PreStringLv2,PreStringLv3,PreStringLv4,PreStringBG,
+            PreDatatypeScore,PreDatatypeLv1,PreDatatypeLv2,PreDatatypeLv3,PreDatatypeLv4,PreDatatypeBG,
+            PreOperatorsScore,PreOperatorsLv1,PreOperatorsLv2,PreOperatorsLv3,PreOperatorsLv4,PreOperatorsBG,
+            PreFlowControlScore,PreFlowControlLv1,PreFlowControlLv2,PreFlowControlLv3,PreFlowControlLv4,PreFlowControlBG,
+            PrePointersScore,PrePointersLv1,PrePointersLv2,PrePointersLv3,PrePointersLv4,PrePointersBG,
+            PreFunctionScore,PreFunctionLv1,PreFunctionLv2,PreFunctionLv3,PreFunctionLv4,PreFunctionBG,
+            PreStructureScore,PreStructureLv1,PreStructureLv2,PreStructureLv3,PreStructureLv4,PreStructureBG,
+
+            IntroductionCount,StringCount,DatatypeCount,OperatorsCount,FlowControlCount,PointersCount,FunctionCount,StructureCount,
+            PreIntroductionCount,PreStringCount,PreDatatypeCount,PreOperatorsCount,PreFlowControlCount,PrePointersCount,PreFunctionCount,PreStructureCount
           })
 
           });
@@ -478,12 +640,15 @@ router.get('/', async (req, res, next) => {
                   //** Project-quiz */
                   if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)' && StudentAnswer[i].scoreTeacher != undefined) {   
                     Ticket_Booking_SystemDone = StudentAnswer[i].scoreTeacher
+                    var TicketBookingSystemScore = StudentAnswerLV4;
                   }
                   if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)'&& StudentAnswer[i].scoreTeacher != undefined) {   
                     Point_of_Sales_SystemDone = StudentAnswer[i].scoreTeacher 
+                    var Point_of_Sales_SystemScore = StudentAnswerLV4;
                   }
                   if (StudentAnswer[i].contentName ==='Project_QUIZ3'&& StudentAnswer[i].scoreTeacher != undefined) {   
                     Project_QUIZ3Done = StudentAnswer[i].scoreTeacher
+                    var Project_QUIZ3Score = StudentAnswerLV4;
                   }
                 }
 
@@ -503,8 +668,13 @@ router.get('/', async (req, res, next) => {
                           var newvalues = { $set: {
                             //Project quiz
                             TicketBookingSystem:Ticket_Booking_SystemDone,
+                            TicketBookingSystemScore:TicketBookingSystemScore,
+
                             PointofSalesSystem:Point_of_Sales_SystemDone,
+                            Point_of_Sales_SystemScore:Point_of_Sales_SystemScore,
+
                             Project_QUIZ3:Project_QUIZ3Done,
+                            Project_QUIZ3Score:Project_QUIZ3Score,
                             //Post test
                             pre_Algorithms_and_Flowcharts:Pretest1Done,
                             post_Algorithms_and_Flowcharts:Posttest1Done,
@@ -544,8 +714,7 @@ router.get('/', async (req, res, next) => {
                             pre_Functions:Pretest8Done,
                             post_Functions:Posttest8Done,
                             pre8lv1:pre8lv1,pre8lv2:pre8lv2,pre8lv3:pre8lv3,pre8lv4:pre8lv4,
-                            post8lv1:post8lv1,post8lv2:post8lv2,post8lv3:post8lv3,post8lv4:post8lv4,
-
+                            post8lv1:post8lv1,post8lv2:post8lv2,post8lv3:post8lv3,post8lv4:post8lv4
                           } };
                           dbo.collection("StudentClass").updateOne(myquery, newvalues, function(err, res) {
                             if (err) throw err;
