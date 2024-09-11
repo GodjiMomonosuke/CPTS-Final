@@ -61,14 +61,29 @@ router.get('/', async (req, res, next) => {
           var WriteScore =0;
           var studentAll = Object.keys(StudentAnswer).length;
           
-          var IntroductionScore=0,IntroductionCount=0 ,PreIntroductionScore=0,PreIntroductionCount=0;
-          var StringScore=0,StringCount=0,PreStringScore=0,PreStringCount=0;
-          var DatatypeScore=0,DatatypeCount=0,PreDatatypeScore=0,PreDatatypeCount=0;
-          var OperatorsScore=0,OperatorsCount=0,PreOperatorsScore=0,PreOperatorsCount=0;
-          var FlowControlScore=0,FlowControlCount=0,PreFlowControlScore=0,PreFlowControlCount=0;
-          var PointersScore=0,PointersCount=0,PrePointersScore=0,PrePointersCount=0;
-          var FunctionScore=0,FunctionCount=0,PreFunctionScore=0,PreFunctionCount=0;
-          var StructureScore=0,StructureCount=0,PreStructureScore=0,PreStructureCount=0;
+          var IntroductionScore=0,IntroductionCount=0 ,PreIntroductionScore=0,PreIntroductionCount=0,
+          PreIntroductionLv1=0,PreIntroductionLv2=0,PreIntroductionLv3=0,PreIntroductionLv4=0,IntroductionLv1=0,IntroductionLv2=0,IntroductionLv3=0,IntroductionLv4=0;
+
+          var StringScore=0,StringCount=0,PreStringScore=0,PreStringCount=0,
+          PreStringLv1=0,PreStringLv2=0,PreStringLv3=0,PreStringLv4=0,StringLv1=0,StringLv2=0,StringLv3=0,StringLv4=0;
+
+          var DatatypeScore=0,DatatypeCount=0,PreDatatypeScore=0,PreDatatypeCount=0,
+          PreDatatypeLv1=0,PreDatatypeLv2=0,PreDatatypeLv3=0,PreDatatypeLv4=0,DatatypeLv1=0,DatatypeLv2=0,DatatypeLv3=0,DatatypeLv4=0;
+
+          var OperatorsScore=0,OperatorsCount=0,PreOperatorsScore=0,PreOperatorsCount=0,
+          PreOperatorsLv1=0,PreOperatorsLv2=0,PreOperatorsLv3=0,PreOperatorsLv4=0,OperatorsLv1=0,OperatorsLv2=0,OperatorsLv3=0,OperatorsLv4=0;
+
+          var FlowControlScore=0,FlowControlCount=0,PreFlowControlScore=0,PreFlowControlCount=0,
+          PreFlowControlLv1=0,PreFlowControlLv2=0,PreFlowControlLv3=0,PreFlowControlLv4=0,FlowControlLv1=0,FlowControlLv2=0,FlowControlLv3=0,FlowControlLv4=0;
+
+          var PointersScore=0,PointersCount=0,PrePointersScore=0,PrePointersCount=0,
+          PrePointersLv1=0,PrePointersLv2=0,PrePointersLv3=0,PrePointersLv4=0,PointersLv1=0,PointersLv2=0,PointersLv3=0,PointersLv4=0;
+
+          var FunctionScore=0,FunctionCount=0,PreFunctionScore=0,PreFunctionCount=0,
+          PreFunctionLv1=0,PreFunctionLv2=0,PreFunctionLv3=0,PreFunctionLv4=0,FunctionLv1=0,FunctionLv2=0,FunctionLv3=0,FunctionLv4=0;
+
+          var StructureScore=0,StructureCount=0,PreStructureScore=0,PreStructureCount=0,
+          PreStructureLv1=0,PreStructureLv2=0,PreStructureLv3=0,PreStructureLv4=0,StructureLv1=0,StructureLv2=0,StructureLv3=0,StructureLv4=0;
 
           var TicTacToeScore=0,TicTacToeCount=0;
           var LibrarySystemScore=0,LibrarySystemCount=0;
@@ -77,211 +92,227 @@ router.get('/', async (req, res, next) => {
           
           for(let i = 0; i < studentAll; i++) {
             if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)' ){
-              var PreIntroductionLv1 = StudentAnswer[i].scoreLV1;
-              var PreIntroductionLv2 = StudentAnswer[i].scoreLV2;
-              var PreIntroductionLv3 = StudentAnswer[i].scoreLV3;
-              var PreIntroductionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var PreIntroductionBG;
+              PreIntroductionLv1 = StudentAnswer[i].scoreLV1;
+              PreIntroductionLv2 = StudentAnswer[i].scoreLV2;
+              PreIntroductionLv3 = StudentAnswer[i].scoreLV3;
+              PreIntroductionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreIntroductionBG,PreIntroductionBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreIntroductionScore = PreIntroductionScore+PreIntroductionLv1+PreIntroductionLv2+PreIntroductionLv3;}
               else{
                 PreIntroductionScore = PreIntroductionScore+PreIntroductionLv1+PreIntroductionLv2+PreIntroductionLv3+PreIntroductionLv4;}
                 PreIntroductionBG = "#66B7BD"
+                PreIntroductionBG2 = "#bd7b67"
                 PreIntroductionCount++;
             }
             if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)') {   
-              var PreStringLv1 = StudentAnswer[i].scoreLV1;
-              var PreStringLv2 = StudentAnswer[i].scoreLV2;
-              var PreStringLv3 = StudentAnswer[i].scoreLV3;
-              var PreStringLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var PreStringBG;
+              PreStringLv1 = StudentAnswer[i].scoreLV1;
+              PreStringLv2 = StudentAnswer[i].scoreLV2;
+              PreStringLv3 = StudentAnswer[i].scoreLV3;
+              PreStringLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreStringBG,PreStringBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreStringScore = PreStringScore+PreStringLv1+PreStringLv2+PreStringLv3;}
               else{
                 PreStringScore = PreStringScore+PreStringLv1+PreStringLv2+PreStringLv3+PreStringLv4;}
                 PreStringBG = "#66B7BD"
+                PreStringBG2 = "#bd7b67"
                 PreStringCount++;
             }
             if (StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)') {   
-              var PreDatatypeLv1 = StudentAnswer[i].scoreLV1;
-              var PreDatatypeLv2 = StudentAnswer[i].scoreLV2;
-              var PreDatatypeLv3 = StudentAnswer[i].scoreLV3;
-              var PreDatatypeLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var PreDatatypeBG;
+              PreDatatypeLv1 = StudentAnswer[i].scoreLV1;
+              PreDatatypeLv2 = StudentAnswer[i].scoreLV2;
+              PreDatatypeLv3 = StudentAnswer[i].scoreLV3;
+              PreDatatypeLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreDatatypeBG,PreDatatypeBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreDatatypeScore = PreDatatypeScore+PreDatatypeLv1+PreDatatypeLv2+PreDatatypeLv3;}
               else{
                 PreDatatypeScore = PreDatatypeScore+PreDatatypeLv1+PreDatatypeLv2+PreDatatypeLv3+PreDatatypeLv4;}
                 PreDatatypeBG = "#66B7BD"
+                PreDatatypeBG2 = "#bd7b67"
                 PreDatatypeCount++;
             } 
             if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)') {   
-              var PreOperatorsLv1 = StudentAnswer[i].scoreLV1;
-              var PreOperatorsLv2 = StudentAnswer[i].scoreLV2;
-              var PreOperatorsLv3 = StudentAnswer[i].scoreLV3;
-              var PreOperatorsLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var PreOperatorsBG;
+              PreOperatorsLv1 = StudentAnswer[i].scoreLV1;
+              PreOperatorsLv2 = StudentAnswer[i].scoreLV2;
+              PreOperatorsLv3 = StudentAnswer[i].scoreLV3;
+              PreOperatorsLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreOperatorsBG,PreOperatorsBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreOperatorsScore = PreOperatorsScore+PreOperatorsLv1+PreOperatorsLv2+PreOperatorsLv3;}
               else{
                 PreOperatorsScore = PreOperatorsScore+PreOperatorsLv1+PreOperatorsLv2+PreOperatorsLv3+PreOperatorsLv4;}
                 PreOperatorsBG = "#66B7BD"
+                PreOperatorsBG2 = "#bd7b67"
                 PreOperatorsCount++;
             }
             if (StudentAnswer[i].contentName ==='Selection_Statements-(Pre-test)') {   
-              var PreFlowControlLv1 = StudentAnswer[i].scoreLV1;
-              var PreFlowControlLv2 = StudentAnswer[i].scoreLV2;
-              var PreFlowControlLv3 = StudentAnswer[i].scoreLV3;
-              var PreFlowControlLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var PreFlowControlBG;
+              PreFlowControlLv1 = StudentAnswer[i].scoreLV1;
+              PreFlowControlLv2 = StudentAnswer[i].scoreLV2;
+              PreFlowControlLv3 = StudentAnswer[i].scoreLV3;
+              PreFlowControlLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreFlowControlBG,PreFlowControlBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreFlowControlScore = PreFlowControlScore+PreFlowControlLv1+PreFlowControlLv2+PreFlowControlLv3;}
               else{
                 PreFlowControlScore = PreFlowControlScore+PreFlowControlLv1+PreFlowControlLv2+PreFlowControlLv3+PreFlowControlLv4;}
                 PreFlowControlBG = "#66B7BD"
+                PreFlowControlBG2 = "#bd7b67"
                 PreFlowControlCount++;
             }
             if (StudentAnswer[i].contentName ==='Loop_Statements-(Pre-test)') {   
-              var PrePointersLv1 = StudentAnswer[i].scoreLV1;
-              var PrePointersLv2 = StudentAnswer[i].scoreLV2;
-              var PrePointersLv3 = StudentAnswer[i].scoreLV3;
-              var PrePointersLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var PrePointersBG;
+              PrePointersLv1 = StudentAnswer[i].scoreLV1;
+              PrePointersLv2 = StudentAnswer[i].scoreLV2;
+              PrePointersLv3 = StudentAnswer[i].scoreLV3;
+              PrePointersLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PrePointersBG,PrePointersBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PrePointersScore = PrePointersScore+PrePointersLv1+PrePointersLv2+PrePointersLv3;}
               else{
                 PrePointersScore = PrePointersScore+PrePointersLv1+PrePointersLv2+PrePointersLv3+PrePointersLv4;}
                 PrePointersBG = "#66B7BD"
+                PrePointersBG2 = "#bd7b67"
                 PrePointersCount++;
             }
             if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Pre-test)') {   
-              var PreFunctionLv1 = StudentAnswer[i].scoreLV1;
-              var PreFunctionLv2 = StudentAnswer[i].scoreLV2;
-              var PreFunctionLv3 = StudentAnswer[i].scoreLV3;
-              var PreFunctionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var PreFunctionBG;
+              PreFunctionLv1 = StudentAnswer[i].scoreLV1;
+              PreFunctionLv2 = StudentAnswer[i].scoreLV2;
+              PreFunctionLv3 = StudentAnswer[i].scoreLV3;
+              PreFunctionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreFunctionBG,PreFunctionBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreFunctionScore = PreFunctionScore+PreFunctionLv1+PreFunctionLv2+PreFunctionLv3;}
               else{
                 PreFunctionScore = PreFunctionScore+PreFunctionLv1+PreFunctionLv2+PreFunctionLv3+PreFunctionLv4;}
                 PreFunctionBG = "#66B7BD"
+                PreFunctionBG2 = "#bd7b67"
                 PreFunctionCount++;
             }
             if (StudentAnswer[i].contentName ==='Functions-(Pre-test)') {   
-              var PreStructureLv1 = StudentAnswer[i].scoreLV1;
-              var PreStructureLv2 = StudentAnswer[i].scoreLV2;
-              var PreStructureLv3 = StudentAnswer[i].scoreLV3;
-              var PreStructureLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var PreStructureBG;
+              PreStructureLv1 = StudentAnswer[i].scoreLV1;
+              PreStructureLv2 = StudentAnswer[i].scoreLV2;
+              PreStructureLv3 = StudentAnswer[i].scoreLV3;
+              PreStructureLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PreStructureBG,PreStructureBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreStructureScore = PreStructureScore+PreStructureLv1+PreStructureLv2+PreStructureLv3;}
               else{
                 PreStructureScore = PreStructureScore+PreStructureLv1+PreStructureLv2+PreStructureLv3+PreStructureLv4;}
                 PreStructureBG = "#66B7BD"
+                PreStructureBG2 = "#bd7b67"
                 PreStructureCount++;
             }
             if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)' ){
-              var IntroductionLv1 = StudentAnswer[i].scoreLV1;
-              var IntroductionLv2 = StudentAnswer[i].scoreLV2;
-              var IntroductionLv3 = StudentAnswer[i].scoreLV3;
-              var IntroductionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var IntroductionBG;
+              IntroductionLv1 = StudentAnswer[i].scoreLV1;
+              IntroductionLv2 = StudentAnswer[i].scoreLV2;
+              IntroductionLv3 = StudentAnswer[i].scoreLV3;
+              IntroductionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var IntroductionBG,IntroductionBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 IntroductionScore = IntroductionScore+IntroductionLv1+IntroductionLv2+IntroductionLv3;}
               else{
                 IntroductionScore = IntroductionScore+IntroductionLv1+IntroductionLv2+IntroductionLv3+IntroductionLv4;}
                 IntroductionBG = "#66B7BD"
+                IntroductionBG2 = "#bd7b67"
                 IntroductionCount++;
             }
             if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)') {   
-              var StringLv1 = StudentAnswer[i].scoreLV1;
-              var StringLv2 = StudentAnswer[i].scoreLV2;
-              var StringLv3 = StudentAnswer[i].scoreLV3;
-              var StringLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var StringBG;
+              StringLv1 = StudentAnswer[i].scoreLV1;
+              StringLv2 = StudentAnswer[i].scoreLV2;
+              StringLv3 = StudentAnswer[i].scoreLV3;
+              StringLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var StringBG,StringBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 StringScore = StringScore+StringLv1+StringLv2+StringLv3;}
               else{
                 StringScore = StringScore+StringLv1+StringLv2+StringLv3+StringLv4;}
                 StringBG = "#66B7BD"
+                StringBG2 = "#bd7b67"
                 StringCount++;
             }
             if (StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)') {   
-              var DatatypeLv1 = StudentAnswer[i].scoreLV1;
-              var DatatypeLv2 = StudentAnswer[i].scoreLV2;
-              var DatatypeLv3 = StudentAnswer[i].scoreLV3;
-              var DatatypeLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var DatatypeBG;
+              DatatypeLv1 = StudentAnswer[i].scoreLV1;
+              DatatypeLv2 = StudentAnswer[i].scoreLV2;
+              DatatypeLv3 = StudentAnswer[i].scoreLV3;
+              DatatypeLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var DatatypeBG,DatatypeBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 DatatypeScore = DatatypeScore+DatatypeLv1+DatatypeLv2+DatatypeLv3;}
               else{
                 DatatypeScore = DatatypeScore+DatatypeLv1+DatatypeLv2+DatatypeLv3+DatatypeLv4;}
                 DatatypeBG = "#66B7BD"
+                DatatypeBG2 = "#bd7b67"
                 DatatypeCount++;
             } 
             if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)') {   
-              var OperatorsLv1 = StudentAnswer[i].scoreLV1;
-              var OperatorsLv2 = StudentAnswer[i].scoreLV2;
-              var OperatorsLv3 = StudentAnswer[i].scoreLV3;
-              var OperatorsLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var OperatorsBG;
+              OperatorsLv1 = StudentAnswer[i].scoreLV1;
+              OperatorsLv2 = StudentAnswer[i].scoreLV2;
+              OperatorsLv3 = StudentAnswer[i].scoreLV3;
+              OperatorsLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var OperatorsBG,OperatorsBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 OperatorsScore = OperatorsScore+OperatorsLv1+OperatorsLv2+OperatorsLv3;}
               else{
                 OperatorsScore = OperatorsScore+OperatorsLv1+OperatorsLv2+OperatorsLv3+OperatorsLv4;}
                 OperatorsBG = "#66B7BD"
+                OperatorsBG2 = "#bd7b67"
                 OperatorsCount++;
             }
             if (StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)') {   
-              var FlowControlLv1 = StudentAnswer[i].scoreLV1;
-              var FlowControlLv2 = StudentAnswer[i].scoreLV2;
-              var FlowControlLv3 = StudentAnswer[i].scoreLV3;
-              var FlowControlLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var FlowControlBG;
+              FlowControlLv1 = StudentAnswer[i].scoreLV1;
+              FlowControlLv2 = StudentAnswer[i].scoreLV2;
+              FlowControlLv3 = StudentAnswer[i].scoreLV3;
+              FlowControlLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var FlowControlBG,FlowControlBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 FlowControlScore = FlowControlScore+FlowControlLv1+FlowControlLv2+FlowControlLv3;}
               else{
                 FlowControlScore = FlowControlScore+FlowControlLv1+FlowControlLv2+FlowControlLv3+FlowControlLv4;}
                 FlowControlBG = "#66B7BD"
+                FlowControlBG2 = "#bd7b67"
                 FlowControlCount++;
             }
             if (StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)') {   
-              var PointersLv1 = StudentAnswer[i].scoreLV1;
-              var PointersLv2 = StudentAnswer[i].scoreLV2;
-              var PointersLv3 = StudentAnswer[i].scoreLV3;
-              var PointersLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var PointersBG;
+              PointersLv1 = StudentAnswer[i].scoreLV1;
+              PointersLv2 = StudentAnswer[i].scoreLV2;
+              PointersLv3 = StudentAnswer[i].scoreLV3;
+              PointersLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var PointersBG,PointersBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PointersScore = PointersScore+PointersLv1+PointersLv2+PointersLv3;}
               else{
                 PointersScore = PointersScore+PointersLv1+PointersLv2+PointersLv3+PointersLv4;}
                 PointersBG = "#66B7BD"
+                PointersBG2 = "#bd7b67"
                 PointersCount++;
             }
             if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)') {   
-              var FunctionLv1 = StudentAnswer[i].scoreLV1;
-              var FunctionLv2 = StudentAnswer[i].scoreLV2;
-              var FunctionLv3 = StudentAnswer[i].scoreLV3;
-              var FunctionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var FunctionBG;
+              FunctionLv1 = StudentAnswer[i].scoreLV1;
+              FunctionLv2 = StudentAnswer[i].scoreLV2;
+              FunctionLv3 = StudentAnswer[i].scoreLV3;
+              FunctionLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var FunctionBG,FunctionBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 FunctionScore = FunctionScore+FunctionLv1+FunctionLv2+FunctionLv3;}
               else{
                 FunctionScore = FunctionScore+FunctionLv1+FunctionLv2+FunctionLv3+FunctionLv4;}
                 FunctionBG = "#66B7BD"
+                FunctionBG2 = "#bd7b67"
                 FunctionCount++;
             }
             if (StudentAnswer[i].contentName ==='Functions-(Post-test)') {   
-              var StructureLv1 = StudentAnswer[i].scoreLV1;
-              var StructureLv2 = StudentAnswer[i].scoreLV2;
-              var StructureLv3 = StudentAnswer[i].scoreLV3;
-              var StructureLv4 = parseInt(StudentAnswer[i].scoreTeacher);
-              var StructureBG;
+              StructureLv1 = StudentAnswer[i].scoreLV1;
+              StructureLv2 = StudentAnswer[i].scoreLV2;
+              StructureLv3 = StudentAnswer[i].scoreLV3;
+              StructureLv4 = parseInt(StudentAnswer[i].scoreTeacher);
+              var StructureBG,StructureBG2;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 StructureScore = StructureScore+StructureLv1+StructureLv2+StructureLv3;}
               else{
                 StructureScore = StructureScore+StructureLv1+StructureLv2+StructureLv3+StructureLv4;}
                 StructureBG = "#66B7BD"
+                StructureBG2 = "#bd7b67"
                 StructureCount++;
             }
             
@@ -322,15 +353,15 @@ router.get('/', async (req, res, next) => {
               StudentAnswer[i].contentName ==='Functions-(Pre-test)'
             ){
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreKnowledgeScore = PreKnowledgeScore+StudentAnswer[i].scoreLV1
-                PreTraceScore = PreTraceScore+StudentAnswer[i].scoreLV2
-                PreExplainScore = PreExplainScore+StudentAnswer[i].scoreLV3
+                PreKnowledgeScore = PreKnowledgeScore+StudentAnswer[i].scoreLV1*5
+                PreTraceScore = PreTraceScore+StudentAnswer[i].scoreLV2*5
+                PreExplainScore = PreExplainScore+StudentAnswer[i].scoreLV3*5
                 PreWriteScore = 0;
               }
               else{
-                PreKnowledgeScore = PreKnowledgeScore+StudentAnswer[i].scoreLV1
-                PreTraceScore = PreTraceScore+StudentAnswer[i].scoreLV2
-                PreExplainScore = PreExplainScore+StudentAnswer[i].scoreLV3
+                PreKnowledgeScore = PreKnowledgeScore+StudentAnswer[i].scoreLV1*5
+                PreTraceScore = PreTraceScore+StudentAnswer[i].scoreLV2*5
+                PreExplainScore = PreExplainScore+StudentAnswer[i].scoreLV3*5
                 PreWriteScore = PreWriteScore+parseInt(StudentAnswer[i].scoreTeacher);
               }
             }
@@ -345,15 +376,15 @@ router.get('/', async (req, res, next) => {
                 StudentAnswer[i].contentName ==='Functions-(Post-test)'
               ){
                 if(StudentAnswer[i].scoreTeacher === undefined){
-                  KnowledgeScore = KnowledgeScore+StudentAnswer[i].scoreLV1
-                  TraceScore = TraceScore+StudentAnswer[i].scoreLV2
-                  ExplainScore = ExplainScore+StudentAnswer[i].scoreLV3
+                  KnowledgeScore = KnowledgeScore+StudentAnswer[i].scoreLV1*5
+                  TraceScore = TraceScore+StudentAnswer[i].scoreLV2*5
+                  ExplainScore = ExplainScore+StudentAnswer[i].scoreLV3*5
                   WriteScore = 0;
                 }
                 else{
-                  KnowledgeScore = KnowledgeScore+StudentAnswer[i].scoreLV1
-                  TraceScore = TraceScore+StudentAnswer[i].scoreLV2
-                  ExplainScore = ExplainScore+StudentAnswer[i].scoreLV3
+                  KnowledgeScore = KnowledgeScore+StudentAnswer[i].scoreLV1*5
+                  TraceScore = TraceScore+StudentAnswer[i].scoreLV2*5
+                  ExplainScore = ExplainScore+StudentAnswer[i].scoreLV3*5
                   WriteScore = WriteScore+parseInt(StudentAnswer[i].scoreTeacher);
                 }
               }
@@ -438,23 +469,23 @@ router.get('/', async (req, res, next) => {
             RoshamboScore,RoshamboBG,
             TicTacToeCount,LibrarySystemCount,RoshamboCount,
             
-            IntroductionScore,IntroductionLv1,IntroductionLv2,IntroductionLv3,IntroductionLv4,IntroductionBG,
-            StringScore,StringLv1,StringLv2,StringLv3,StringLv4,StringBG,
-            DatatypeScore,DatatypeLv1,DatatypeLv2,DatatypeLv3,DatatypeLv4,DatatypeBG,
-            OperatorsScore,OperatorsLv1,OperatorsLv2,OperatorsLv3,OperatorsLv4,OperatorsBG,
-            FlowControlScore,FlowControlLv1,FlowControlLv2,FlowControlLv3,FlowControlLv4,FlowControlBG,
-            PointersScore,PointersLv1,PointersLv2,PointersLv3,PointersLv4,PointersBG,
-            FunctionScore,FunctionLv1,FunctionLv2,FunctionLv3,FunctionLv4,FunctionBG,
-            StructureScore,StructureLv1,StructureLv2,StructureLv3,StructureLv4,StructureBG,
+            IntroductionScore,IntroductionLv1,IntroductionLv2,IntroductionLv3,IntroductionLv4,IntroductionBG,IntroductionBG2,
+            StringScore,StringLv1,StringLv2,StringLv3,StringLv4,StringBG,StringBG2,
+            DatatypeScore,DatatypeLv1,DatatypeLv2,DatatypeLv3,DatatypeLv4,DatatypeBG,DatatypeBG2,
+            OperatorsScore,OperatorsLv1,OperatorsLv2,OperatorsLv3,OperatorsLv4,OperatorsBG,OperatorsBG2,
+            FlowControlScore,FlowControlLv1,FlowControlLv2,FlowControlLv3,FlowControlLv4,FlowControlBG,FlowControlBG2,
+            PointersScore,PointersLv1,PointersLv2,PointersLv3,PointersLv4,PointersBG,PointersBG2,
+            FunctionScore,FunctionLv1,FunctionLv2,FunctionLv3,FunctionLv4,FunctionBG,FunctionBG2,
+            StructureScore,StructureLv1,StructureLv2,StructureLv3,StructureLv4,StructureBG,StructureBG2,
             
-            PreIntroductionScore,PreIntroductionLv1,PreIntroductionLv2,PreIntroductionLv3,PreIntroductionLv4,PreIntroductionBG,
-            PreStringScore,PreStringLv1,PreStringLv2,PreStringLv3,PreStringLv4,PreStringBG,
-            PreDatatypeScore,PreDatatypeLv1,PreDatatypeLv2,PreDatatypeLv3,PreDatatypeLv4,PreDatatypeBG,
-            PreOperatorsScore,PreOperatorsLv1,PreOperatorsLv2,PreOperatorsLv3,PreOperatorsLv4,PreOperatorsBG,
-            PreFlowControlScore,PreFlowControlLv1,PreFlowControlLv2,PreFlowControlLv3,PreFlowControlLv4,PreFlowControlBG,
-            PrePointersScore,PrePointersLv1,PrePointersLv2,PrePointersLv3,PrePointersLv4,PrePointersBG,
-            PreFunctionScore,PreFunctionLv1,PreFunctionLv2,PreFunctionLv3,PreFunctionLv4,PreFunctionBG,
-            PreStructureScore,PreStructureLv1,PreStructureLv2,PreStructureLv3,PreStructureLv4,PreStructureBG,
+            PreIntroductionScore,PreIntroductionLv1,PreIntroductionLv2,PreIntroductionLv3,PreIntroductionLv4,PreIntroductionBG,PreIntroductionBG2,
+            PreStringScore,PreStringLv1,PreStringLv2,PreStringLv3,PreStringLv4,PreStringBG,PreStringBG2,
+            PreDatatypeScore,PreDatatypeLv1,PreDatatypeLv2,PreDatatypeLv3,PreDatatypeLv4,PreDatatypeBG,PreDatatypeBG2,
+            PreOperatorsScore,PreOperatorsLv1,PreOperatorsLv2,PreOperatorsLv3,PreOperatorsLv4,PreOperatorsBG,PreOperatorsBG2,
+            PreFlowControlScore,PreFlowControlLv1,PreFlowControlLv2,PreFlowControlLv3,PreFlowControlLv4,PreFlowControlBG,PreFlowControlBG2,
+            PrePointersScore,PrePointersLv1,PrePointersLv2,PrePointersLv3,PrePointersLv4,PrePointersBG,PrePointersBG2,
+            PreFunctionScore,PreFunctionLv1,PreFunctionLv2,PreFunctionLv3,PreFunctionLv4,PreFunctionBG,PreFunctionBG2,
+            PreStructureScore,PreStructureLv1,PreStructureLv2,PreStructureLv3,PreStructureLv4,PreStructureBG,PreStructureBG2,
 
             IntroductionCount,StringCount,DatatypeCount,OperatorsCount,FlowControlCount,PointersCount,FunctionCount,StructureCount,
             PreIntroductionCount,PreStringCount,PreDatatypeCount,PreOperatorsCount,PreFlowControlCount,PrePointersCount,PreFunctionCount,PreStructureCount
