@@ -58,9 +58,6 @@ async function runChat(userInput) {
   return response.text();
 }
 
-app.get('/views/index/index_student.ejs', (req, res) => {
-  res.sendFile(__dirname + '/index_ai.ejs');
-});
 app.get('/public/images/loader.gif', (req, res) => {
   res.sendFile(__dirname + '/loader.gif');
 });
@@ -78,8 +75,4 @@ app.post('/chat', async (req, res) => {
     console.error('Error in chat endpoint:', error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
-});
-
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
 });

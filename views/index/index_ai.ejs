@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chatbot</title>
   <style>
     body {
@@ -9,68 +11,80 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-color: #f0f0f0;
-      position: relative;
+      background-color: #f7f7f7;
+      margin: 0;
     }
-    
+
     #chat-container {
-      background-color: #fff;
+      background-color: #ffffff;
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      width: 400px;
-      display: none; /* Hidden by default */
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      width: 500px;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
     }
-    
+
     h1 {
       text-align: center;
       margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
     }
-    
+
     #chat-history {
-      height: 300px;
-      overflow-y: scroll;
+      flex-grow: 1;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 10px;
       margin-bottom: 20px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
     }
-    
+
+    .user-message, .bot-message {
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      max-width: 75%;
+    }
+
     .user-message {
-      text-align: right;
-      padding: 10px;
-      background-color: #f0f0f0;
-      border-radius: 10px;
-      margin-bottom: 5px;
+      align-self: flex-end;
+      background-color: #e0f7fa;
     }
-    
+
     .bot-message {
-      text-align: left;
-      padding: 10px;
-      background-color: #e0f0e0;
-      border-radius: 10px;
-      margin-bottom: 5px;
+      align-self: flex-start;
+      background-color: #f0f0f0;
     }
-    
+
     form {
       display: flex;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
     }
-    
+
     input {
       flex-grow: 1;
-      margin-right: 10px;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      margin-right: 10px;
     }
-    
+
     button {
       background-color: #4CAF50;
       color: white;
       border: none;
-      padding: 10px 15px;
+      padding: 10px 20px;
       border-radius: 5px;
       cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
     }
 
     #loader {
@@ -79,21 +93,6 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-    }
-
-    /* Style for popup button */
-    #chat-popup-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 15px;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -113,24 +112,10 @@
     <img src="loader.gif" width="150px" alt="Loading...">
   </div>
 
-  <!-- Popup button -->
-  <button id="chat-popup-btn">💬</button>
-
   <script>
     const chatHistory = document.getElementById('chat-history');
     const userInput = document.getElementById('user-input');
     const form = document.getElementById('chat-form');
-    const chatContainer = document.getElementById('chat-container');
-    const popupBtn = document.getElementById('chat-popup-btn');
-
-    // Toggle chat popup
-    popupBtn.addEventListener('click', () => {
-      if (chatContainer.style.display === 'none' || chatContainer.style.display === '') {
-        chatContainer.style.display = 'block'; // Show the chat window
-      } else {
-        chatContainer.style.display = 'none'; // Hide the chat window
-      }
-    });
 
     async function sendMessage() {
       const userMessage = userInput.value;
@@ -147,7 +132,7 @@
         const data = await response.json();
         const botMessage = data.response;
 
-        // Add chat message to the chat history
+        // Add user message and bot response to the chat history
         chatHistory.innerHTML += `<div class="user-message">${userMessage}</div>`;
         chatHistory.innerHTML += `<div class="bot-message">${botMessage}</div>`;
 
@@ -160,11 +145,7 @@
 
     form.addEventListener('submit', (event) => {
       event.preventDefault(); // Prevent form submission
-      const loader = document.getElementById('loader');
-      loader.style.display = 'block'; // Show the loader
-      sendMessage().finally(() => {
-        loader.style.display = 'none'; // Hide the loader after the message is sent
-      });
+      sendMessage();
     });
   </script>
 </body>

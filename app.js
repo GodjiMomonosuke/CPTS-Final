@@ -97,6 +97,12 @@ app.use('/project-Project_QUIZ3',
   require('./routes/student/project/3_ProjectQUIZ3.route')
 );
 
+// ******* AI ******** // 
+
+app.get('/index-ai', (req, res) => {
+  res.render('index/index_ai');
+});
+
 //** course **//
 app.use('/course-Algorithms_and_Flowcharts',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -281,7 +287,7 @@ app.use('/classStudent',
   ensureTeacher,
   require('./routes/teacher/classStudent.route')
 );
-// *************** // 
+
 
 // 404 Handler
 app.get('/error', (req, res) => {
