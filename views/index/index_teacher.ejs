@@ -26,6 +26,24 @@
             width: 600px;
             background-color: #9C7EB7;
         }
+        .score_title {
+            width: 50px;
+            margin: 0;
+        }
+        .card_title {
+            display: flex;
+        }
+        .card_box {
+            background-color: #e2e2e2; 
+            padding: 5px; 
+            margin-bottom: 5px;
+            border: solid 1px #747474;
+            width: 600px;
+        }
+        .quiz_box {
+            width: 100px;
+            margin-right: 10px;
+        }
 
     </style>
 
@@ -46,60 +64,306 @@
 <br><br><br>
     <div id = "content" class="container" >
         <div  class="group2">
-        
-        
-        <div>
-            
-            <h4 class="chakra-petch-regular">Skill</h4>   
-            <div> <!-- chart -->
-                <div class="chartCard">
-                    <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff; width: 300px;">
-                        <canvas id="myChart"></canvas>
-                    </div>
+            <div>
+            <h4 class="chakra-petch-regular">Progress</h4>  
+        แบบฝึกหัดที่นักเรียนทำไปแล้ว 
+         <div><!-- pretest progress-->
+            Pre-test
+            <% if (pretest_progress === 0) { %>
+                <div style="display: flex;">
+                    <p class="station_w">1</p>
+                    <p class="station_w">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
                 </div>
-                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-                <script>
-                
-                       
-                    
-                    Chart.defaults.borderColor = '#fff';
-                    const data = {
-                        labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
-                        datasets: [{
-                            data: [15,20,15,30],
-                            label: "Pre-test",
-                            borderColor: '#2F3C3D',
-                            backgroundColor: '#66B7BDcf',
-                        },{
-                            data: [50,55,45,40],
-                            label: "Post-test",
-                            borderColor: '#2F3C3D',
-                            fill: true,
-                            backgroundColor: '#bd7b67cf',
-                        }]
-                    };
-                    // config 
-                    const config = {
-                        type: 'radar',
-                        data,
-                        options: {}
-                        };
-                    // render init block
-                    const myChart = new Chart(
-                        document.getElementById('myChart'),
-                        config
-                    );
-                    
-                    // Instantly assign Chart.js version
-                    const chartVersion = document.getElementById('chartVersion');
-                    chartVersion.innerText = Chart.version;
-                </script>
-            </div>
+            <% }%>
+            <% if (pretest_progress === 1) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station_w">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 2) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 3) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 4) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 5) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 6) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 7) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 8) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station">7</p>
+                    <p class="station">8</p>
+                </div>
+            <% }%>
         </div>
+
+        <div><!-- posttest progress-->
+            Post-test
+            <% if (posttest_progress === 0) { %>
+                <div style="display: flex;">
+                    <p class="station_w">1</p>
+                    <p class="station_w">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 1) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station_w">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 2) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 3) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 4) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 5) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 6) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 7) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 8) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station">7</p>
+                    <p class="station">8</p>
+                </div>
+            <% }%>
+        </div>
+        </div>
+            <div>
+                <h4 class="chakra-petch-regular">Skill</h4>   
+                <div> <!-- chart -->
+                    <div class="chartCard">
+                        <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff; width: 300px;">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+                    <script>
+                    
+                        
+                        
+                        Chart.defaults.borderColor = '#fff';
+                        const data = {
+                            labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
+                            datasets: [{
+                                data: [<%= KnowledgePercent %>,<%= TracePercent %>,<%= ExplainPercent %>,<%= WritePercent %>],
+                                label: "Post-test",
+                                borderColor: '#2F3C3D',
+                                fill: true,
+                                backgroundColor: '#bd7b677e',
+                            },
+                                
+                            {
+                                data: [<%= PreKnowledgePercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,<%= PreWritePercent %>],
+                                label: "Pre-test",
+                                borderColor: '#2F3C3D',
+                                backgroundColor: '#66b7bd83',
+                            }]
+                        };
+                        // config 
+                        const config = {
+                            type: 'radar',
+                            data,
+                            options: {}
+                            };
+                        // render init block
+                        const myChart = new Chart(
+                            document.getElementById('myChart'),
+                            config
+                        );
+                        
+                        // Instantly assign Chart.js version
+                        const chartVersion = document.getElementById('chartVersion');
+                        chartVersion.innerText = Chart.version;
+                    </script>
+                </div>
+            </div>
+            <div>
+                <h4 class="chakra-petch-regular">Project-Quiz</h4>  <br>
+                <div style="display: flex;">
+                    <div class="quiz_box">
+                        <p class="score_title">Quiz 1</p>
+                        <div class="pie animate" style="--p:<%= (TicTacToeScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= TicTacToeScore %></div>
+                    </div>
+
+                    <div class="quiz_box">
+                        <p class="score_title">Quiz 2</p>
+                        <div class="pie animate" style="--p:<%= (LibrarySystemScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= LibrarySystemScore %></div>
+                    </div>                                   
+                    <div class="quiz_box">
+                        <p class="score_title">Quiz 3</p>
+                        <div class="pie animate" style="--p:<%= (RoshamboScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= RoshamboScore %></div>                  
+                    </div> 
+                </div>
+                
+            </div>
+        
         </div><hr>
         <div class="row" > 
-            <div class="group"> <!-- แบบทดสอบที่ผู้เรียนทำคะแนนได้มากสุด -->
-                <div class="col-sm" > <!-- sortedCourse -->
+            <div class="group2"> <!-- แบบทดสอบที่ผู้เรียนทำคะแนนได้มากสุด -->
+                <!--<div class="col-sm" >  sortedCourse 
                     <div class="box  mb-5" style="background-color: #cad19f;">
                         <h4>แบบทดสอบที่ผู้เรียนทำคะแนนได้มากสุด</h4>
                         <div lang="ja">
@@ -117,227 +381,841 @@
                          
                         </div>
                     </div>
-                </div>
-                <div class="group2"> <!-- Score -->
-                    <div style="margin-left: 15px;"> <!-- Pre-test Score -->
-                        <div class="col">
+                </div>-->
+               
+                     <!-- Pre-test Score -->
+                     <h4 class="chakra-petch-regular">Score</h4>
+                      <div></div>
+                        <div>
                             <b>Pre-test</b>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 1</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= PreIntroductionBG %>; --w :<%= ((PreIntroductionScore/PreIntroductionCount)/40)*100 %>px; " class="TeacherBarValue">
+                            <div class="card_box"><!-- Lab 1-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 1</p>
+                                    <div class="pie animate" style="--p:<%= (PreIntroductionScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PreIntroductionCount === 0) { %>
-                                            <%= Math.round(PreIntroductionScore/1)%> /40
+                                            <%= Math.round(PreIntroductionScore/1)%>
                                         <% } else { %>
-                                            <%= Math.round(PreIntroductionScore/PreIntroductionCount) %>/40
+                                            <%= Math.round(PreIntroductionScore/PreIntroductionCount) %>
                                         <% }%>
                                     </div>
-                                </div>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= PreIntroductionBG %>; --w :<%= ((PreIntroductionLv1/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
-                                        <% if (PreIntroductionCount === 0) { %>
-                                            <%= Math.round(PreIntroductionLv1/1)%>
-                                        <% } else { %>
-                                            <%= Math.round(PreIntroductionLv1/PreIntroductionCount) %>
-                                        <% }%>
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreIntroductionLv1/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
+                                                    K: <%= Math.round(PreIntroductionLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(PreIntroductionLv1/PreIntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreIntroductionLv2/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
+                                                    T: <%= Math.round(PreIntroductionLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(PreIntroductionLv2/PreIntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreIntroductionLv3/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
+                                                    E: <%= Math.round(PreIntroductionLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(PreIntroductionLv3/PreIntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreIntroductionLv4/PreIntroductionCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
+                                                    W: <%= Math.round(PreIntroductionLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(PreIntroductionLv4/PreIntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 2</p>
-                                <div class="TeacherBar">
-                                    <div style="--c:<%= PreStringBG %> ; --w :<%= ((PreStringScore/PreStringCount)/40)*100 %>px; " class="TeacherBarValue">
+
+                            <div class="card_box"><!-- Lab 2-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 2</p>
+                                    <div class="pie animate" style="--p:<%= (PreStringScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PreStringCount === 0) { %>
-                                            <%= Math.round(PreStringScore/1)%> /40
+                                            <%= Math.round(PreStringScore/1)%>
                                         <% } else { %>
-                                            <%= Math.round(PreStringScore/PreStringCount) %>/40
+                                            <%= Math.round(PreStringScore/PreStringCount) %>
                                         <% }%>
                                     </div>
-                                </div>                    
-                            </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 3</p>
-                                <div class="TeacherBar">
-                                    <div style="--c:<%= PreDatatypeBG %> ; --w :<%= ((PreDatatypeScore/PreDatatypeCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (PreDatatypeCount === 0) { %>
-                                            <%= Math.round(PreDatatypeScore/1)%> /40
-                                        <% } else { %>
-                                            <%= Math.round(PreDatatypeScore/PreDatatypeCount) %>/40
-                                        <% }%>
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 4</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= PreOperatorsBG %>; --w :<%= ((PreOperatorsScore/PreOperatorsCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (PreOperatorsCount === 0) { %>
-                                            <%= Math.round(PreOperatorsScore/1)%> /40
-                                        <% } else { %>
-                                            <%= Math.round(PreOperatorsScore/PreOperatorsCount) %>/40
-                                        <% }%>
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 5</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= PreFlowControlBG %>; --w :<%= ((PreFlowControlScore/PreFlowControlCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (PreFlowControlCount === 0) { %>
-                                            <%= Math.round(PreFlowControlScore/1)%> /40
-                                        <% } else { %>
-                                            <%= Math.round(PreFlowControlScore/PreFlowControlCount) %>/40
-                                        <% }%>
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 6</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= PrePointersBG %>; --w :<%= ((PrePointersScore/PrePointersCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (PrePointersCount === 0) { %>
-                                            <%= Math.round(PrePointersScore/1)%> /40
-                                        <% } else { %>
-                                            <%= Math.round(PrePointersScore/PrePointersCount) %>/40
-                                        <% }%>
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 7</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= PreFunctionBG %>; --w :<%= ((PreFunctionScore/PreFunctionCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (PreFunctionCount === 0) { %>
-                                            <%= Math.round(PreFunctionScore/1)%> /40
-                                        <% } else { %>
-                                            <%= Math.round(PreFunctionScore/PreFunctionCount) %>/40
-                                        <% }%>
-                                    </div>
-                                </div>                    
-                            </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 8</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= PreStructureBG %>; --w :<%= ((PreStructureScore/PreStructureCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (PreStructureCount === 0) { %>
-                                            <%= Math.round(PreStructureScore/1)%> /40
-                                        <% } else { %>
-                                            <%= Math.round(PreStructureScore/PreStructureCount) %>/40
-                                        <% }%>
-                                    </div>
-                                </div>                    
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div style="margin-left: 15px;"> <!-- Post-test Score -->
-                        <div class="col">
-                            <b>Post-test</b>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 1</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= IntroductionBG %>; --w :<%= ((IntroductionScore/IntroductionCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (IntroductionCount === 0) { %>
-                                            <%= Math.round(IntroductionScore/1)%> /40
-                                        <% } else { %>
-                                            <%= Math.round(IntroductionScore/IntroductionCount) %>/40
-                                        <% }%>
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv1/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
+                                                    K: <%= Math.round(PreStringLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(PreStringLv1/PreStringCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv2/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
+                                                    T: <%= Math.round(PreStringLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(PreStringLv2/PreIntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv3/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
+                                                    E: <%= Math.round(PreStringLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(PreStringLv3/PreIntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv4/PreIntroductionCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
+                                                    W: <%= Math.round(PreStringLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(PreStringLv4/PreIntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 2</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= StringBG %>; --w :<%= ((StringScore/StringCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (StringCount === 0) { %>
-                                            <%= Math.round(StringScore/1)%> /40
+
+                            <div class="card_box"><!-- Lab 3-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 3</p>
+                                    <div class="pie animate" style="--p:<%= (PreDatatypeScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (PreDatatypeCount === 0) { %>
+                                            <%= Math.round(PreDatatypeScore/1)%>
                                         <% } else { %>
-                                            <%= Math.round(StringScore/StringCount) %>/40
+                                            <%= Math.round(PreDatatypeScore/PreDatatypeCount) %>
                                         <% }%>
+                                    </div>                   
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreDatatypeBG2 %>; --w :<%= ((PreDatatypeLv1/PreDatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreDatatypeCount === 0) { %>
+                                                    K: <%= Math.round(PreDatatypeLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(PreDatatypeLv1/PreDatatypeCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreDatatypeBG2 %>; --w :<%= ((PreDatatypeLv2/PreDatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreDatatypeCount === 0) { %>
+                                                    T: <%= Math.round(PreDatatypeLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(PreDatatypeLv2/PreDatatypeCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreDatatypeBG2 %>; --w :<%= ((PreDatatypeLv3/PreDatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreDatatypeCount === 0) { %>
+                                                    E: <%= Math.round(PreDatatypeLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(PreDatatypeLv3/PreDatatypeCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreDatatypeBG2 %>; --w :<%= ((PreDatatypeLv4/PreDatatypeCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreDatatypeCount === 0) { %>
+                                                    W: <%= Math.round(PreDatatypeLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(PreDatatypeLv4/PreDatatypeCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>                    
+                                </div>
                             </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 3</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= DatatypeBG %>; --w :<%= ((DatatypeScore/DatatypeCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (DatatypeCount === 0) { %>
-                                            <%= Math.round(DatatypeScore/1)%> /40
+
+                            <div class="card_box"><!-- Lab 4-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 4</p>
+                                    <div class="pie animate" style="--p:<%= (PreOperatorsScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (PreOperatorsCount === 0) { %>
+                                            <%= Math.round(PreOperatorsScore/1)%>
                                         <% } else { %>
-                                            <%= Math.round(DatatypeScore/DatatypeCount) %>/40
+                                            <%= Math.round(PreOperatorsScore/PreOperatorsCount) %>
                                         <% }%>
+                                    </div>                    
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreOperatorsBG2 %>; --w :<%= ((PreOperatorsLv1/PreOperatorsCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreOperatorsCount === 0) { %>
+                                                    K: <%= Math.round(PreOperatorsLv1/1)%>
+                                                <% } else { %>
+                                                    K:<%= Math.round(PreOperatorsLv1/PreOperatorsCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreOperatorsBG2 %>; --w :<%= ((PreOperatorsLv2/PreOperatorsCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreOperatorsCount === 0) { %>
+                                                    T: <%= Math.round(PreOperatorsLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(PreOperatorsLv2/PreOperatorsCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreOperatorsBG2 %>; --w :<%= ((PreOperatorsLv3/PreOperatorsCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreOperatorsCount === 0) { %>
+                                                    E: <%= Math.round(PreOperatorsLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(PreOperatorsLv3/PreOperatorsCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreOperatorsBG2 %>; --w :<%= ((PreOperatorsLv4/PreOperatorsCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreOperatorsCount === 0) { %>
+                                                    W: <%= Math.round(PreOperatorsLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(PreOperatorsLv4/PreOperatorsCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>                    
+                                </div>
                             </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 4</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= OperatorsBG %>; --w :<%= ((OperatorsScore/OperatorsCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (OperatorsCount === 0) { %>
-                                            <%= Math.round(OperatorsScore/1)%> /40
+
+                            <div class="card_box"><!-- Lab 5-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 5</p>
+                                    <div class="pie animate" style="--p:<%= (PreFlowControlScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (PreFlowControlCount === 0) { %>
+                                            <%= Math.round(PreFlowControlScore/1)%>
                                         <% } else { %>
-                                            <%= Math.round(OperatorsScore/OperatorsCount) %>/40
+                                            <%= Math.round(PreFlowControlScore/PreFlowControlCount) %>
                                         <% }%>
+                                    </div>                        
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreFlowControlBG2 %>; --w :<%= ((PreFlowControlLv1/PreFlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreFlowControlCount === 0) { %>
+                                                    K: <%= Math.round(PreFlowControlLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(PreFlowControlLv1/PreFlowControlCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreFlowControlBG2 %>; --w :<%= ((PreFlowControlLv2/PreFlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreFlowControlCount === 0) { %>
+                                                    T: <%= Math.round(PreFlowControlLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(PreFlowControlLv2/PreFlowControlCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreFlowControlBG2 %>; --w :<%= ((PreFlowControlLv3/PreFlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreFlowControlCount === 0) { %>
+                                                    E: <%= Math.round(PreFlowControlLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(PreFlowControlLv3/PreFlowControlCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreFlowControlBG2 %>; --w :<%= ((PreFlowControlLv4/PreFlowControlCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreFlowControlCount === 0) { %>
+                                                    W: <%= Math.round(PreFlowControlLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(PreFlowControlLv4/PreFlowControlCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>  
                                     </div>
-                                </div>                    
+                                </div>
                             </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 5</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= FlowControlBG %>; --w :<%= ((FlowControlScore/FlowControlCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (FlowControlCount === 0) { %>
-                                            <%= Math.round(FlowControlScore/1)%> /40
+
+                            <div class="card_box"><!-- Lab 6-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 6</p>
+                                    <div class="pie animate" style="--p:<%= (PrePointersScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (PrePointersCount === 0) { %>
+                                            <%= Math.round(PrePointersScore/1)%>
                                         <% } else { %>
-                                            <%= Math.round(FlowControlScore/FlowControlCount) %>/40
+                                            <%= Math.round(PrePointersScore/PrePointersCount) %>
                                         <% }%>
+                                    </div>   
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PrePointersBG2 %>; --w :<%= ((PrePointersLv1/PrePointersCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PrePointersCount === 0) { %>
+                                                    K: <%= Math.round(PrePointersLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(PrePointersLv1/PrePointersCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PrePointersBG2 %>; --w :<%= ((PrePointersLv2/PrePointersCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PrePointersCount === 0) { %>
+                                                    T: <%= Math.round(PrePointersLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(PrePointersLv2/PrePointersCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PrePointersBG2 %>; --w :<%= ((PrePointersLv3/PrePointersCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PrePointersCount === 0) { %>
+                                                    E: <%= Math.round(PrePointersLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(PrePointersLv3/PrePointersCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PrePointersBG2 %>; --w :<%= ((PrePointersLv4/PrePointersCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PrePointersCount === 0) { %>
+                                                    W: <%= Math.round(PrePointersLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(PrePointersLv4/PrePointersCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>                    
+                                </div>
                             </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 6</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= PointersBG %>; --w :<%= ((PointersScore/PointersCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (PointersCount === 0) { %>
-                                            <%= Math.round(PointersScore/1)%> /40
+                            
+                            <div class="card_box"><!-- Lab 7-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 7</p>
+                                    <div class="pie animate" style="--p:<%= (PreFunctionScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (PreFunctionCount === 0) { %>
+                                            <%= Math.round(PreFunctionScore/1)%>
                                         <% } else { %>
-                                            <%= Math.round(PointersScore/PointersCount) %>/40
+                                            <%= Math.round(PreFunctionScore/PreFunctionCount) %>
                                         <% }%>
-                                    </div>
-                                </div>                    
+                                    </div>                    
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreFunctionBG2 %>; --w :<%= ((PreFunctionLv1/PreFunctionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreFunctionCount === 0) { %>
+                                                    K: <%= Math.round(PreFunctionLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(PreFunctionLv1/PreFunctionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreFunctionBG2 %>; --w :<%= ((PreFunctionLv2/PreFunctionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreFunctionCount === 0) { %>
+                                                    T: <%= Math.round(PreFunctionLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(PreFunctionLv2/PreFunctionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreFunctionBG2 %>; --w :<%= ((PreFunctionLv3/PreFunctionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreFunctionCount === 0) { %>
+                                                    E: <%= Math.round(PreFunctionLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(PreFunctionLv3/PreFunctionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreFunctionBG2 %>; --w :<%= ((PreFunctionLv4/PreFunctionCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreFunctionCount === 0) { %>
+                                                    W: <%= Math.round(PreFunctionLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(PreFunctionLv4/PreFunctionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                </div>
+                            
                             </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 7</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= FunctionBG %>; --w :<%= ((FunctionScore/FunctionCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (FunctionCount === 0) { %>
-                                            <%= Math.round(FunctionScore/1)%> /40
+                            </div>
+                            
+                            <div class="card_box"><!-- Lab 8-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 8</p>
+                                    <div class="pie animate" style="--p:<%= (PreStructureScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (PreStructureCount === 0) { %>
+                                            <%= Math.round(PreStructureScore/1)%>
                                         <% } else { %>
-                                            <%= Math.round(FunctionScore/FunctionCount) %>/40
+                                            <%= Math.round(PreStructureScore/PreStructureCount) %>
                                         <% }%>
+                                    </div>                 
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreStructureBG2 %>; --w :<%= ((PreStructureLv1/PreStructureCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreStructureCount === 0) { %>
+                                                    K: <%= Math.round(PreStructureLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(PreStructureLv1/PreStructureCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreStructureBG2 %>; --w :<%= ((PreStructureLv2/PreStructureCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreStructureCount === 0) { %>
+                                                    T: <%= Math.round(PreStructureLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(PreStructureLv2/PreStructureCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreStructureBG2 %>; --w :<%= ((PreStructureLv3/PreStructureCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreStructureCount === 0) { %>
+                                                    E: <%= Math.round(PreStructureLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(PreStructureLv3/PreStructureCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PreStructureBG2 %>; --w :<%= ((PreStructureLv4/PreStructureCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreStructureCount === 0) { %>
+                                                    W: <%= Math.round(PreStructureLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(PreStructureLv4/PreStructureCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>                    
+                                </div>
                             </div>
-                            <div  style="display: flex;">
-                                <p class="card-title" style="width: 50px;">Lab 8</p>
-                                <div class="TeacherBar">
-                                    <div style="--c: <%= StructureBG %>; --w :<%= ((StructureScore/StructureCount)/40)*100 %>px; " class="TeacherBarValue">
-                                        <% if (StructureCount === 0) { %>
-                                            <%= Math.round(StructureScore/1)%> /40
-                                        <% } else { %>
-                                            <%= Math.round(StructureScore/StructureCount) %>/40
-                                        <% }%>
-                                    </div>
-                                </div>                    
-                            </div>
+                            
                         </div>
                         
-                    </div>
-                </div>
+                     <!-- Post-test Score -->
+                        <div>
+                            <b>Post-test</b>
+                            <div class="card_box"><!-- Lab 1-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 1</p>
+                                    <div class="pie animate" style="--p:<%= (IntroductionScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (IntroductionCount === 0) { %>
+                                            <%= Math.round(IntroductionScore/1)%>
+                                        <% } else { %>
+                                            <%= Math.round(IntroductionScore/IntroductionCount) %>
+                                        <% }%>
+                                    </div>
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= IntroductionBG2 %>; --w :<%= ((IntroductionLv1/IntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (IntroductionCount === 0) { %>
+                                                    K: <%= Math.round(IntroductionLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(IntroductionLv1/IntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= IntroductionBG2 %>; --w :<%= ((IntroductionLv2/IntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (IntroductionCount === 0) { %>
+                                                    T: <%= Math.round(IntroductionLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(IntroductionLv2/IntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= IntroductionBG2 %>; --w :<%= ((IntroductionLv3/IntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (IntroductionCount === 0) { %>
+                                                    E: <%= Math.round(IntroductionLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(IntroductionLv3/IntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= IntroductionBG2 %>; --w :<%= ((IntroductionLv4/IntroductionCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (IntroductionCount === 0) { %>
+                                                    W: <%= Math.round(IntroductionLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(IntroductionLv4/IntroductionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_box"><!-- Lab 2-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 2</p>
+                                    <div class="pie animate" style="--p:<%= (StringScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (StringCount === 0) { %>
+                                            <%= Math.round(StringScore/1)%>
+                                        <% } else { %>
+                                            <%= Math.round(StringScore/StringCount) %>
+                                        <% }%>
+                                    </div>    
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= StringBG2 %>; --w :<%= ((StringLv1/StringCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (StringCount === 0) { %>
+                                                    K: <%= Math.round(StringLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(StringLv1/StringCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= StringBG2 %>; --w :<%= ((StringLv2/StringCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (StringCount === 0) { %>
+                                                    T: <%= Math.round(StringLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(StringLv2/StringCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= StringBG2 %>; --w :<%= ((StringLv3/StringCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (StringCount === 0) { %>
+                                                    E: <%= Math.round(StringLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(StringLv3/StringCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= StringBG2 %>; --w :<%= ((StringLv4/StringCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (StringCount === 0) { %>
+                                                    W: <%= Math.round(StringLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(StringLv4/StringCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>                   
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card_box"><!-- Lab 3-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 3</p>
+                                    <div class="pie animate" style="--p:<%= (DatatypeScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (DatatypeCount === 0) { %>
+                                            <%= Math.round(DatatypeScore/1)%>
+                                        <% } else { %>
+                                            <%= Math.round(DatatypeScore/DatatypeCount) %>
+                                        <% }%>
+                                    </div>    
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= DatatypeBG2 %>; --w :<%= ((DatatypeLv1/DatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (DatatypeCount === 0) { %>
+                                                    K: <%= Math.round(DatatypeLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(DatatypeLv1/DatatypeCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= DatatypeBG2 %>; --w :<%= ((DatatypeLv2/DatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (DatatypeCount === 0) { %>
+                                                    T: <%= Math.round(DatatypeLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(DatatypeLv2/DatatypeCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= DatatypeBG2 %>; --w :<%= ((DatatypeLv3/DatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (DatatypeCount === 0) { %>
+                                                    E: <%= Math.round(DatatypeLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(DatatypeLv3/DatatypeCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= DatatypeBG2 %>; --w :<%= ((DatatypeLv4/DatatypeCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (DatatypeCount === 0) { %>
+                                                    W: <%= Math.round(DatatypeLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(DatatypeLv4/DatatypeCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>                   
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_box"><!-- Lab 4-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 4</p>
+                                    <div class="pie animate" style="--p:<%= (OperatorsScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (OperatorsCount === 0) { %>
+                                            <%= Math.round(OperatorsScore/1)%>
+                                        <% } else { %>
+                                            <%= Math.round(OperatorsScore/OperatorsCount) %>
+                                        <% }%>
+                                    </div>   
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= OperatorsBG2 %>; --w :<%= ((OperatorsLv1/OperatorsCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (OperatorsCount === 0) { %>
+                                                    K: <%= Math.round(OperatorsLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(OperatorsLv1/OperatorsCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= OperatorsBG2 %>; --w :<%= ((OperatorsLv2/OperatorsCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (OperatorsCount === 0) { %>
+                                                    T: <%= Math.round(OperatorsLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(OperatorsLv2/OperatorsCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= OperatorsBG2 %>; --w :<%= ((OperatorsLv3/OperatorsCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (OperatorsCount === 0) { %>
+                                                    E: <%= Math.round(OperatorsLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(OperatorsLv3/OperatorsCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= OperatorsBG2 %>; --w :<%= ((OperatorsLv4/OperatorsCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (OperatorsCount === 0) { %>
+                                                    W: <%= Math.round(OperatorsLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(OperatorsLv4/OperatorsCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_box"><!-- Lab 5-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 5</p>
+                                    <div class="pie animate" style="--p:<%= (FlowControlScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (FlowControlCount === 0) { %>
+                                            <%= Math.round(FlowControlScore/1)%>
+                                        <% } else { %>
+                                            <%= Math.round(FlowControlScore/FlowControlCount) %>
+                                        <% }%>
+                                    </div>     
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= FlowControlBG2 %>; --w :<%= ((FlowControlLv1/FlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (FlowControlCount === 0) { %>
+                                                    K: <%= Math.round(FlowControlLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(FlowControlLv1/FlowControlCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= FlowControlBG2 %>; --w :<%= ((FlowControlLv2/FlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (FlowControlCount === 0) { %>
+                                                    T: <%= Math.round(FlowControlLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(FlowControlLv2/FlowControlCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= FlowControlBG2 %>; --w :<%= ((FlowControlLv3/FlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (FlowControlCount === 0) { %>
+                                                    E: <%= Math.round(FlowControlLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(FlowControlLv3/FlowControlCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= FlowControlBG2 %>; --w :<%= ((FlowControlLv4/FlowControlCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (FlowControlCount === 0) { %>
+                                                    W: <%= Math.round(FlowControlLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(FlowControlLv4/FlowControlCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="card_box"><!-- Lab 6-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 6</p>
+                                    <div class="pie animate" style="--p:<%= (PointersScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (PointersCount === 0) { %>
+                                            <%= Math.round(PointersScore/1)%>
+                                        <% } else { %>
+                                            <%= Math.round(PointersScore/PointersCount) %>
+                                        <% }%>
+                                    </div>  
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PointersBG2 %>; --w :<%= ((PointersLv1/PointersCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PointersCount === 0) { %>
+                                                K: <%= Math.round(PointersLv1/1)%>
+                                                <% } else { %>
+                                                K: <%= Math.round(PointersLv1/PointersCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PointersBG2 %>; --w :<%= ((PointersLv2/PointersCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PointersCount === 0) { %>
+                                                    T: <%= Math.round(PointersLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(PointersLv2/PointersCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PointersBG2 %>; --w :<%= ((PointersLv3/PointersCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PointersCount === 0) { %>
+                                                    E: <%= Math.round(PointersLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(PointersLv3/PointersCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= PointersBG2 %>; --w :<%= ((PointersLv4/PointersCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PointersCount === 0) { %>
+                                                    W: <%= Math.round(PointersLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(PointersLv4/PointersCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_box"><!-- Lab 7-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 7</p>
+                                    <div class="pie animate" style="--p:<%= (FunctionScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (FunctionCount === 0) { %>
+                                            <%= Math.round(FunctionScore/1)%>
+                                        <% } else { %>
+                                            <%= Math.round(FunctionScore/FunctionCount) %>
+                                        <% }%>
+                                    </div>     
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= FunctionBG2 %>; --w :<%= ((FunctionLv1/FunctionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (FunctionCount === 0) { %>
+                                                    K: <%= Math.round(FunctionLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(FunctionLv1/FunctionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= FunctionBG2 %>; --w :<%= ((FunctionLv2/FunctionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (FunctionCount === 0) { %>
+                                                    T: <%= Math.round(FunctionLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(FunctionLv2/FunctionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= FunctionBG2 %>; --w :<%= ((FunctionLv3/FunctionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (FunctionCount === 0) { %>
+                                                    E: <%= Math.round(FunctionLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(FunctionLv3/FunctionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= FunctionBG2 %>; --w :<%= ((FunctionLv4/FunctionCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (FunctionCount === 0) { %>
+                                                    W: <%= Math.round(FunctionLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(FunctionLv4/FunctionCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>                     
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card_box"> <!-- Lab 8-->
+                                <div class="card_title">
+                                    <p class="score_title">Lab 8</p>
+                                    <div class="pie animate" style="--p:<%= (StructureScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                        <% if (StructureCount === 0) { %>
+                                            <%= Math.round(StructureScore/1)%>
+                                        <% } else { %>
+                                            <%= Math.round(StructureScore/StructureCount) %>
+                                        <% }%>
+                                    </div> 
+                                    <div class="TeacherBar">
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= StructureBG2 %>; --w :<%= ((StructureLv1/StructureCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (StructureCount === 0) { %>
+                                                    K: <%= Math.round(StructureLv1/1)%>
+                                                <% } else { %>
+                                                    K: <%= Math.round(StructureLv1/StructureCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= StructureBG2 %>; --w :<%= ((StructureLv2/StructureCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (StructureCount === 0) { %>
+                                                    T: <%= Math.round(StructureLv2/1)%>
+                                                <% } else { %>
+                                                    T: <%= Math.round(StructureLv2/StructureCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= StructureBG2 %>; --w :<%= ((StructureLv3/StructureCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (StructureCount === 0) { %>
+                                                    E: <%= Math.round(StructureLv3/1)%>
+                                                <% } else { %>
+                                                    E: <%= Math.round(StructureLv3/StructureCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>
+                                        <div class="TeacherBarr">
+                                            <div style="--c: <%= StructureBG2 %>; --w :<%= ((StructureLv4/StructureCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (StructureCount === 0) { %>
+                                                    W: <%= Math.round(StructureLv4/1)%>
+                                                <% } else { %>
+                                                    W: <%= Math.round(StructureLv4/StructureCount) %>
+                                                <% }%>
+                                            </div>
+                                        </div>                   
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
             </div>
-            <hr>
+        </div>
             <div class="col-sm" > <!-- โปรเจคที่ผู้เรียนทำคะแนนได้มากสุด -->
                 <div class="group" style="background-color: #cad19f">
-                    <div lang="ja">
+                    <!--<div lang="ja">
                         <p class="wrapbox auto">
                             <ol>
                                 <h4>โปรเจคที่ผู้เรียนทำคะแนนได้มากสุด</h4>
@@ -346,53 +1224,11 @@
                                 <li><%= sortedProject[2] %></li>
                               </ol>
                         </p>
-                    </div>
-                    <div style="margin-left: 15px;">
-                        <div  style="display: flex;">
-                            <p class="card-title" style="width: 50px;">Quiz 1</p>
-                            <div class="TeacherBar">
-                                <div style="--c: <%= TicTacToeBG %>; --w :<%= ((TicTacToeScore/TicTacToeCount)/40)*100 %>%; " class="TeacherBarValue">
-                                    <% if (TicTacToeCount === 0) { %>
-                                        <%= Math.round(TicTacToeScore/1)%>
-                                    <% } else { %>
-                                        <%= Math.round(TicTacToeScore/TicTacToeCount) %>
-                                    <% }%>
-                                </div>
-                            </div>                    
-                        </div>
-                        <div  style="display: flex;">
-                            <p class="card-title" style="width: 50px;">Quiz 2</p>
-                            <div class="TeacherBar">
-                                <div style="--c: <%= LibrarySystemBG %>; --w :<%= ((LibrarySystemScore/LibrarySystemCount)/40)*100 %>%; " class="TeacherBarValue">
-                                    <% if (LibrarySystemCount === 0) { %>
-                                        <%= Math.round(LibrarySystemScore/1)%>
-                                    <% } else { %>
-                                        <%= Math.round(LibrarySystemScore/LibrarySystemCount) %>
-                                    <% }%>
-                                </div>
-                            </div>                    
-                        </div>
-                        <div  style="display: flex;">
-                            <p class="card-title" style="width: 50px;">Quiz 3</p>
-                            <div class="TeacherBar">
-                                <div style="--c: <%= RoshamboBG %>; --w :<%= ((RoshamboScore/RoshamboCount)/40)*100 %>%; " class="TeacherBarValue">
-                                    <% if (RoshamboCount === 0) { %>
-                                        <%= Math.round(RoshamboScore/1)%>
-                                    <% } else { %>
-                                        <%= Math.round(RoshamboScore/RoshamboCount) %>
-                                    <% }%>
-                                </div>
-                            </div>                    
-                        </div>
-                        
-                        
-                </div>
+                    </div>-->
+                    
             </div>
-
         </div>
-        
-    </div>
-<br>
+    </div><br>
 
 
 <!-- <script src="/javascripts/chart_teacher.js"></script> -->
