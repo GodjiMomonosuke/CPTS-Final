@@ -193,7 +193,7 @@ progress[value]::-webkit-progress-bar {
 .TeacherBarr {
   width: 100px; 
   height: 20px; 
-  background-color: #fff;
+  background-color: #c3c3c3;
   margin-top: 3px;
 }
 .TeacherBarValue {

@@ -15,6 +15,7 @@
     }
 </style>
 <h1>Student</h1>
+
     <div class="box mb-5 shadow" style="background-color: #bd7b67;;">
         <table class="table" style="background-color: #eaeaea;">
             <thead>
@@ -32,12 +33,12 @@
             <tbody>
                 <% for (let i = 0; i < Object.keys(Studentresult).length; i++) {   %>
                                 <th scope="row"><%=i+1%></th>
-                                <td><div class="info">Email</div> <%=Studentresult[i].email %> <br>
+                                <td>
+                                    <div class="info">Email</div> <%=Studentresult[i].email %> <br>
                                     <div class="info">Name</div> <%=Studentresult[i].name %> <br>
                                     <div class="info">Course</div> <%=Studentresult[i].Course %> <br>
                                     <div class="info">Section</div> <%=Studentresult[i].Section %>
                                 </td>
-                                
                                 <td class="text-start">
                                     <span class="quiz">Project QUIZ1 </span>
                                     <div>
@@ -289,7 +290,7 @@
 
 
                                 <% } %>
-                            </td>
+                                </td>
                                 <td>
                                     <div style="font-size: 12px;">K = Knowledge, T = Tracing, <br>E = Explaining, W = Writing</div> <br>
                                     <div style="display: flex;">

@@ -34,10 +34,11 @@
             display: flex;
         }
         .card_box {
-            background-color: #d6d3d3; 
+            background-color: #e2e2e2; 
             padding: 5px; 
             margin-bottom: 5px;
             border: solid 1px #747474;
+            width: 600px;
         }
         .quiz_box {
             width: 100px;
@@ -63,74 +64,301 @@
 <br><br><br>
     <div id = "content" class="container" >
         <div  class="group2">
-        <div>
-            <h4 class="chakra-petch-regular">Skill</h4>   
-            <div> <!-- chart -->
-                <div class="chartCard">
-                    <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff; width: 300px;">
-                        <canvas id="myChart"></canvas>
-                    </div>
+            <div>
+            <h4 class="chakra-petch-regular">Progress</h4>  
+        แบบฝึกหัดที่นักเรียนทำไปแล้ว 
+         <div><!-- pretest progress-->
+            Pre-test
+            <% if (pretest_progress === 0) { %>
+                <div style="display: flex;">
+                    <p class="station_w">1</p>
+                    <p class="station_w">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
                 </div>
-                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-                <script>
-                
-                       
-                    
-                    Chart.defaults.borderColor = '#fff';
-                    const data = {
-                        labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
-                        datasets: [{
-                            data: [<%= KnowledgePercent %>,<%= TracePercent %>,<%= ExplainPercent %>,<%= WritePercent %>],
-                            label: "Post-test",
-                            borderColor: '#2F3C3D',
-                            fill: true,
-                            backgroundColor: '#bd7b677e',
-                        },
-                            
-                        {
-                            data: [<%= PreKnowledgePercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,<%= PreWritePercent %>],
-                            label: "Pre-test",
-                            borderColor: '#2F3C3D',
-                            backgroundColor: '#66b7bd83',
-                        }]
-                    };
-                    // config 
-                    const config = {
-                        type: 'radar',
-                        data,
-                        options: {}
-                        };
-                    // render init block
-                    const myChart = new Chart(
-                        document.getElementById('myChart'),
-                        config
-                    );
-                    
-                    // Instantly assign Chart.js version
-                    const chartVersion = document.getElementById('chartVersion');
-                    chartVersion.innerText = Chart.version;
-                </script>
-            </div>
+            <% }%>
+            <% if (pretest_progress === 1) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station_w">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 2) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 3) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 4) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 5) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 6) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 7) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (pretest_progress === 8) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station">7</p>
+                    <p class="station">8</p>
+                </div>
+            <% }%>
         </div>
-        <div>
-            <h4 class="chakra-petch-regular">Project-Quiz</h4>  <br>
-            <div style="display: flex;">
-                <div class="quiz_box">
-                    <p class="score_title">Quiz 1</p>
-                    <div class="pie animate" style="--p:<%= (TicTacToeScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= TicTacToeScore %></div>
-                </div>
 
-                <div class="quiz_box">
-                    <p class="score_title">Quiz 2</p>
-                    <div class="pie animate" style="--p:<%= (LibrarySystemScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= LibrarySystemScore %></div>
-                </div>                                   
-                <div class="quiz_box">
-                    <p class="score_title">Quiz 3</p>
-                    <div class="pie animate" style="--p:<%= (RoshamboScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= RoshamboScore %></div>                  
-                </div> 
-            </div>
-            
+        <div><!-- posttest progress-->
+            Post-test
+            <% if (posttest_progress === 0) { %>
+                <div style="display: flex;">
+                    <p class="station_w">1</p>
+                    <p class="station_w">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 1) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station_w">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 2) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station_w">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 3) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station_w">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 4) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station_w">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 5) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station_w">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 6) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station_w">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 7) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station">7</p>
+                    <p class="station_w">8</p>
+                </div>
+            <% }%>
+            <% if (posttest_progress === 8) { %>
+                <div style="display: flex;">
+                    <p class="station">1</p>
+                    <p class="station">2</p>
+                    <p class="station">3</p>
+                    <p class="station">4</p>
+                    <p class="station">5</p>
+                    <p class="station">6</p>
+                    <p class="station">7</p>
+                    <p class="station">8</p>
+                </div>
+            <% }%>
         </div>
+        </div>
+            <div>
+                <h4 class="chakra-petch-regular">Skill</h4>   
+                <div> <!-- chart -->
+                    <div class="chartCard">
+                        <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff; width: 300px;">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+                    <script>
+                    
+                        
+                        
+                        Chart.defaults.borderColor = '#fff';
+                        const data = {
+                            labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
+                            datasets: [{
+                                data: [<%= KnowledgePercent %>,<%= TracePercent %>,<%= ExplainPercent %>,<%= WritePercent %>],
+                                label: "Post-test",
+                                borderColor: '#2F3C3D',
+                                fill: true,
+                                backgroundColor: '#bd7b677e',
+                            },
+                                
+                            {
+                                data: [<%= PreKnowledgePercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,<%= PreWritePercent %>],
+                                label: "Pre-test",
+                                borderColor: '#2F3C3D',
+                                backgroundColor: '#66b7bd83',
+                            }]
+                        };
+                        // config 
+                        const config = {
+                            type: 'radar',
+                            data,
+                            options: {}
+                            };
+                        // render init block
+                        const myChart = new Chart(
+                            document.getElementById('myChart'),
+                            config
+                        );
+                        
+                        // Instantly assign Chart.js version
+                        const chartVersion = document.getElementById('chartVersion');
+                        chartVersion.innerText = Chart.version;
+                    </script>
+                </div>
+            </div>
+            <div>
+                <h4 class="chakra-petch-regular">Project-Quiz</h4>  <br>
+                <div style="display: flex;">
+                    <div class="quiz_box">
+                        <p class="score_title">Quiz 1</p>
+                        <div class="pie animate" style="--p:<%= (TicTacToeScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= TicTacToeScore %></div>
+                    </div>
+
+                    <div class="quiz_box">
+                        <p class="score_title">Quiz 2</p>
+                        <div class="pie animate" style="--p:<%= (LibrarySystemScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= LibrarySystemScore %></div>
+                    </div>                                   
+                    <div class="quiz_box">
+                        <p class="score_title">Quiz 3</p>
+                        <div class="pie animate" style="--p:<%= (RoshamboScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= RoshamboScore %></div>                  
+                    </div> 
+                </div>
+                
+            </div>
         
         </div><hr>
         <div class="row" > 
@@ -156,6 +384,8 @@
                 </div>-->
                
                      <!-- Pre-test Score -->
+                     <h4 class="chakra-petch-regular">Score</h4>
+                      <div></div>
                         <div>
                             <b>Pre-test</b>
                             <div class="card_box"><!-- Lab 1-->
@@ -221,8 +451,8 @@
                                     </div>
                                     <div class="TeacherBar">
                                         <div class="TeacherBarr">
-                                            <div style="--c: <%= PreStringBG2 %>; --w :<%= ((PreStringLv1/PreStringCount)/5)*100 %>px; " class="TeacherBarValue">
-                                                <% if (PreStringCount === 0) { %>
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv1/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
                                                     K: <%= Math.round(PreStringLv1/1)%>
                                                 <% } else { %>
                                                     K: <%= Math.round(PreStringLv1/PreStringCount) %>
@@ -230,29 +460,29 @@
                                             </div>
                                         </div>
                                         <div class="TeacherBarr">
-                                            <div style="--c: <%= PreStringBG2 %>; --w :<%= ((PreStringLv2/PreStringCount)/5)*100 %>px; " class="TeacherBarValue">
-                                                <% if (PreStringCount === 0) { %>
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv2/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
                                                     T: <%= Math.round(PreStringLv2/1)%>
                                                 <% } else { %>
-                                                    T: <%= Math.round(PreStringLv2/PreStringCount) %>
+                                                    T: <%= Math.round(PreStringLv2/PreIntroductionCount) %>
                                                 <% }%>
                                             </div>
                                         </div>
                                         <div class="TeacherBarr">
-                                            <div style="--c: <%= PreStringBG2 %>; --w :<%= ((PreStringLv3/PreStringCount)/5)*100 %>px; " class="TeacherBarValue">
-                                                <% if (PreStringCount === 0) { %>
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv3/PreIntroductionCount)/5)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
                                                     E: <%= Math.round(PreStringLv3/1)%>
                                                 <% } else { %>
-                                                    E: <%= Math.round(PreStringLv3/PreStringCount) %>
+                                                    E: <%= Math.round(PreStringLv3/PreIntroductionCount) %>
                                                 <% }%>
                                             </div>
                                         </div>
                                         <div class="TeacherBarr">
-                                            <div style="--c: <%= PreStringBG2 %>; --w :<%= ((PreStringLv4/PreStringCount)/25)*100 %>px; " class="TeacherBarValue">
-                                                <% if (PreStringCount === 0) { %>
+                                            <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv4/PreIntroductionCount)/25)*100 %>px; " class="TeacherBarValue">
+                                                <% if (PreIntroductionCount === 0) { %>
                                                     W: <%= Math.round(PreStringLv4/1)%>
                                                 <% } else { %>
-                                                    W: <%= Math.round(PreStringLv4/PreStringCount) %>
+                                                    W: <%= Math.round(PreStringLv4/PreIntroductionCount) %>
                                                 <% }%>
                                             </div>
                                         </div>
@@ -983,7 +1213,6 @@
                         </div>
             </div>
         </div>
-        <hr>
             <div class="col-sm" > <!-- โปรเจคที่ผู้เรียนทำคะแนนได้มากสุด -->
                 <div class="group" style="background-color: #cad19f">
                     <!--<div lang="ja">
@@ -999,7 +1228,7 @@
                     
             </div>
         </div>
-    </div>9-<br>
+    </div><br>
 
 
 <!-- <script src="/javascripts/chart_teacher.js"></script> -->
