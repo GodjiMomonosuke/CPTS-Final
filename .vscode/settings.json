@@ -4,18 +4,25 @@
         "cs": "cpp"
     },
     "cSpell.ignoreWords": [
+        "APPT",
         "Pointof",
         "Posttest",
+        "Roshambo",
+        "Studentresult",
+        "classid",
+        "coursename",
+        "cpts",
+        "makeid",
+        "mycollection",
         "mydatabase",
         "myobj",
         "myquery",
         "newvalues",
+        "prelv",
         "sumpre",
         "timetodo",
         "ยังไม่ทำ",
-        "รอตรวจ",
-        "Roshambo",
-        "Studentresult","coursename","cpts","mycollection","makeid","classid","APPT"
+        "รอตรวจ"
     ],
     "liveServer.settings.port": 5501
 }

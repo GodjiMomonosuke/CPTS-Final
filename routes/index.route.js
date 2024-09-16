@@ -543,8 +543,30 @@ router.get('/', async (req, res, next) => {
 
                 var Posttest1Done = "ยังไม่ทำ" , Posttest2Done = "ยังไม่ทำ", Posttest3Done = "ยังไม่ทำ" ,Posttest4Done = "ยังไม่ทำ" ,Posttest5Done = "ยังไม่ทำ",Posttest6Done = "ยังไม่ทำ",Posttest7Done = "ยังไม่ทำ",Posttest8Done = "ยังไม่ทำ" ;
                 var Pretest1Done = "ยังไม่ทำ" , Pretest2Done = "ยังไม่ทำ", Pretest3Done = "ยังไม่ทำ" ,Pretest4Done = "ยังไม่ทำ" ,Pretest5Done = "ยังไม่ทำ",Pretest6Done = "ยังไม่ทำ",Pretest7Done = "ยังไม่ทำ",Pretest8Done = "ยังไม่ทำ" ;
+                var pre1=0,pre2=0,pre3=0,pre4=0,pre5=0,pre6=0,pre7=0,pre8=0;
+                var post1=0,post2=0,post3=0,post4=0,post5=0,post6=0,post7=0,post8=0;
+                var pre1lv1=0,pre1lv2=0,pre1lv3=0,pre1lv4=0,
+                    pre2lv1=0,pre2lv2=0,pre2lv3=0,pre2lv4=0,
+                    pre3lv1=0,pre3lv2=0,pre3lv3=0,pre3lv4=0,
+                    pre4lv1=0,pre4lv2=0,pre4lv3=0,pre4lv4=0,
+                    pre5lv1=0,pre5lv2=0,pre5lv3=0,pre5lv4=0,
+                    pre6lv1=0,pre6lv2=0,pre6lv3=0,pre6lv4=0,
+                    pre7lv1=0,pre7lv2=0,pre7lv3=0,pre7lv4=0,
+                    pre8lv1=0,pre8lv2=0,pre8lv3=0,pre8lv4=0;
+                var post1lv1=0,post1lv2=0,post1lv3=0,post1lv4=0,
+                    post2lv1=0,post2lv2=0,post2lv3=0,post2lv4=0,
+                    post3lv1=0,post3lv2=0,post3lv3=0,post3lv4=0,
+                    post4lv1=0,post4lv2=0,post4lv3=0,post4lv4=0,
+                    post5lv1=0,post5lv2=0,post5lv3=0,post5lv4=0,
+                    post6lv1=0,post6lv2=0,post6lv3=0,post6lv4=0,
+                    post7lv1=0,post7lv2=0,post7lv3=0,post7lv4=0,
+                    post8lv1=0,post8lv2=0,post8lv3=0,post8lv4=0;
+        
+                var Pretest1=0,Pretest2=0,Pretest3=0,Pretest4=0,Pretest5=0,Pretest6=0,Pretest7=0,Pretest8=0;
+                var Posttest1=0,Posttest2=0,Posttest3=0,Posttest4=0,Posttest5=0,Posttest6=0,Posttest7=0,Posttest8=0;
+                
                 var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ";
-                var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "รอตรวจ";
+                var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "";
       
                 for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
 
@@ -569,127 +591,187 @@ router.get('/', async (req, res, next) => {
                   }
                   //** */
                   if(StudentAnswer[i].scoreTeacher != undefined){
-                    StudentAnswerLV4 = parseInt(StudentAnswer[i].scoreTeacher)
+                    StudentAnswerLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                    var StudentAnswerLV4W = parseInt(StudentAnswer[i].scoreTeacher);
                   }else{
+                    StudentAnswerLV4W= "รอตรวจ";
                     StudentAnswerLV4 = 0;
                   }
                 
 
                   //** Pre-test */
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)'){
-                    Pretest1Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var pre1lv1 = StudentAnswerLV1;
-                    var pre1lv2 = StudentAnswerLV2;
-                    var pre1lv3 = StudentAnswerLV3;
-                    var pre1lv4 = StudentAnswerLV4;
+                    Pretest1Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    pre1lv1 = StudentAnswerLV1;
+                    pre1lv2 = StudentAnswerLV2;
+                    pre1lv3 = StudentAnswerLV3;
+                    pre1lv4 = StudentAnswerLV4;
+                    Pretest1 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Pretest1S = StudentAnswerLV4W;
+                    pre1=1;
                   }
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)'){
-                    Pretest2Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var pre2lv1 = StudentAnswerLV1;
-                    var pre2lv2 = StudentAnswerLV2;
-                    var pre2lv3 = StudentAnswerLV3;
-                    var pre2lv4 = StudentAnswerLV4;
+                    Pretest2Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    pre2lv1 = StudentAnswerLV1;
+                    pre2lv2 = StudentAnswerLV2;
+                    pre2lv3 = StudentAnswerLV3;
+                    pre2lv4 = StudentAnswerLV4;
+                    Pretest2 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Pretest2S = StudentAnswerLV4W;
+                    pre2=1;
                   }
                   if(StudentAnswer[i].contentName ==='Input_and_Output-(Pre-test)'){
-                    Pretest3Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var pre3lv1 = StudentAnswerLV1;
-                    var pre3lv2 = StudentAnswerLV2;
-                    var pre3lv3 = StudentAnswerLV3;
-                    var pre3lv4 = StudentAnswerLV4;
+                    Pretest3Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    pre3lv1 = StudentAnswerLV1;
+                    pre3lv2 = StudentAnswerLV2;
+                    pre3lv3 = StudentAnswerLV3;
+                    pre3lv4 = StudentAnswerLV4;
+                    Pretest3 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Pretest3S = StudentAnswerLV4W;
+                    pre3=1;
                   }
                   if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Pre-test)'){
-                    Pretest4Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var pre4lv1 = StudentAnswerLV1;
-                    var pre4lv2 = StudentAnswerLV2;
-                    var pre4lv3 = StudentAnswerLV3;
-                    var pre4lv4 = StudentAnswerLV4;
+                    Pretest4Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    pre4lv1 = StudentAnswerLV1;
+                    pre4lv2 = StudentAnswerLV2;
+                    pre4lv3 = StudentAnswerLV3;
+                    pre4lv4 = StudentAnswerLV4;
+                    Pretest4 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Pretest4S = StudentAnswerLV4W;
+                    pre4=1;
                   }
                   if(StudentAnswer[i].contentName ==='Selection_Statements-(Pre-test)'){
-                    Pretest5Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var pre5lv1 = StudentAnswerLV1;
-                    var pre5lv2 = StudentAnswerLV2;
-                    var pre5lv3 = StudentAnswerLV3;
-                    var pre5lv4 = StudentAnswerLV4;
+                    Pretest5Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    pre5lv1 = StudentAnswerLV1;
+                    pre5lv2 = StudentAnswerLV2;
+                    pre5lv3 = StudentAnswerLV3;
+                    pre5lv4 = StudentAnswerLV4;
+                    Pretest5 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Pretest5S = StudentAnswerLV4W;
+                    pre5=1;
                   }
                   if(StudentAnswer[i].contentName ==='Loop_Statements-(Pre-test)'){
-                    Pretest6Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var pre6lv1 = StudentAnswerLV1;
-                    var pre6lv2 = StudentAnswerLV2;
-                    var pre6lv3 = StudentAnswerLV3;
-                    var pre6lv4 = StudentAnswerLV4;
+                    Pretest6Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    pre6lv1 = StudentAnswerLV1;
+                    pre6lv2 = StudentAnswerLV2;
+                    pre6lv3 = StudentAnswerLV3;
+                    pre6lv4 = StudentAnswerLV4;
+                    Pretest6 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Pretest6S = StudentAnswerLV4W;
+                    pre6=1;
                   }
                   if(StudentAnswer[i].contentName ==='Arrays_and_Strings-(Pre-test)'){
-                    Pretest7Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var pre7lv1 = StudentAnswerLV1;
-                    var pre7lv2 = StudentAnswerLV2;
-                    var pre7lv3 = StudentAnswerLV3;
-                    var pre7lv4 = StudentAnswerLV4;
+                    Pretest7Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    pre7lv1 = StudentAnswerLV1;
+                    pre7lv2 = StudentAnswerLV2;
+                    pre7lv3 = StudentAnswerLV3;
+                    pre7lv4 = StudentAnswerLV4;
+                    Pretest7 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Pretest7S = StudentAnswerLV4W;
+                    pre7=1;
                   }
                   if(StudentAnswer[i].contentName ==='Functions-(Pre-test)'){
-                    Pretest8Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var pre8lv1 = StudentAnswerLV1;
-                    var pre8lv2 = StudentAnswerLV2;
-                    var pre8lv3 = StudentAnswerLV3;
-                    var pre8lv4 = StudentAnswerLV4;
+                    Pretest8Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    pre8lv1 = StudentAnswerLV1;
+                    pre8lv2 = StudentAnswerLV2;
+                    pre8lv3 = StudentAnswerLV3;
+                    pre8lv4 = StudentAnswerLV4;
+                    Pretest8 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Pretest8S = StudentAnswerLV4W;
+                    pre8=1;
                   }
                   //** Post-test */
                   if(StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'){
-                    Posttest1Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var post1lv1 = StudentAnswerLV1;
-                    var post1lv2 = StudentAnswerLV2;
-                    var post1lv3 = StudentAnswerLV3;
-                    var post1lv4 = StudentAnswerLV4;
+                    Posttest1Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    post1lv1 = StudentAnswerLV1;
+                    post1lv2 = StudentAnswerLV2;
+                    post1lv3 = StudentAnswerLV3;
+                    post1lv4 = StudentAnswerLV4;
+                    Posttest1 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Posttest1S = StudentAnswerLV4W;
+                    post1=1;
                   }
                   if(StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'){
-                    Posttest2Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var post2lv1 = StudentAnswerLV1;
-                    var post2lv2 = StudentAnswerLV2;
-                    var post2lv3 = StudentAnswerLV3;
-                    var post2lv4 = StudentAnswerLV4;
+                    Posttest2Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    post2lv1 = StudentAnswerLV1;
+                    post2lv2 = StudentAnswerLV2;
+                    post2lv3 = StudentAnswerLV3;
+                    post2lv4 = StudentAnswerLV4;
+                    Posttest2 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Posttest2S = StudentAnswerLV4W;
+                    post2=1;
                   }
                   if(StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'){
-                    Posttest3Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var post3lv1 = StudentAnswerLV1;
-                    var post3lv2 = StudentAnswerLV2;
-                    var post3lv3 = StudentAnswerLV3;
-                    var post3lv4 = StudentAnswerLV4;
+                    Posttest3Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    post3lv1 = StudentAnswerLV1;
+                    post3lv2 = StudentAnswerLV2;
+                    post3lv3 = StudentAnswerLV3;
+                    post3lv4 = StudentAnswerLV4;
+                    Posttest3 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Posttest3S = StudentAnswerLV4W;
+                    post3=1;
                   }
                   if(StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'){
-                    Posttest4Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var post4lv1 = StudentAnswerLV1;
-                    var post4lv2 = StudentAnswerLV2;
-                    var post4lv3 = StudentAnswerLV3;
-                    var post4lv4 = StudentAnswerLV4;
+                    Posttest4Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    post4lv1 = StudentAnswerLV1;
+                    post4lv2 = StudentAnswerLV2;
+                    post4lv3 = StudentAnswerLV3;
+                    post4lv4 = StudentAnswerLV4;
+                    Posttest4 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Posttest4S = StudentAnswerLV4W;
+                    post4=1;
                   }
                   if(StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)'){
-                    Posttest5Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var post5lv1 = StudentAnswerLV1;
-                    var post5lv2 = StudentAnswerLV2;
-                    var post5lv3 = StudentAnswerLV3;
-                    var post5lv4 = StudentAnswerLV4;
+                    Posttest5Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    post5lv1 = StudentAnswerLV1;
+                    post5lv2 = StudentAnswerLV2;
+                    post5lv3 = StudentAnswerLV3;
+                    post5lv4 = StudentAnswerLV4;
+                    Posttest5 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Posttest5S = StudentAnswerLV4W;
+                    post5=1;
                   }
                   if(StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)'){
-                    Posttest6Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var post6lv1 = StudentAnswerLV1;
-                    var post6lv2 = StudentAnswerLV2;
-                    var post6lv3 = StudentAnswerLV3;
-                    var post6lv4 = StudentAnswerLV4;
+                    Posttest6Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    post6lv1 = StudentAnswerLV1;
+                    post6lv2 = StudentAnswerLV2;
+                    post6lv3 = StudentAnswerLV3;
+                    post6lv4 = StudentAnswerLV4;
+                    Posttest6 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Posttest6S = StudentAnswerLV4W;
+                    post6=1;
                   }
                   if(StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)'){
-                    Posttest7Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var post7lv1 = StudentAnswerLV1;
-                    var post7lv2 = StudentAnswerLV2;
-                    var post7lv3 = StudentAnswerLV3;
-                    var post7lv4 = StudentAnswerLV4;
+                    Posttest7Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    post7lv1 = StudentAnswerLV1;
+                    post7lv2 = StudentAnswerLV2;
+                    post7lv3 = StudentAnswerLV3;
+                    post7lv4 = StudentAnswerLV4;
+                    Posttest7 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Posttest7S = StudentAnswerLV4W;
+                    post7=1;
                   }
                   if(StudentAnswer[i].contentName ==='Functions-(Post-test)'){
-                    Posttest8Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4;
-                    var post8lv1 = StudentAnswerLV1;
-                    var post8lv2 = StudentAnswerLV2;
-                    var post8lv3 = StudentAnswerLV3;
-                    var post8lv4 = StudentAnswerLV4;
+                    Posttest8Done = StudentAnswerLV1+"-"+StudentAnswerLV2+"-"+StudentAnswerLV3+"-"+StudentAnswerLV4W;
+                    post8lv1 = StudentAnswerLV1;
+                    post8lv2 = StudentAnswerLV2;
+                    post8lv3 = StudentAnswerLV3;
+                    post8lv4 = StudentAnswerLV4;
+                    Posttest8 = StudentAnswerLV1+StudentAnswerLV2+StudentAnswerLV3+StudentAnswerLV4;
+                    var Posttest8S = StudentAnswerLV4W;
+                    post8=1;
                   }
-                  
+
+
+                  var post_k = post1lv1+post2lv1+post3lv1+post4lv1+post5lv1+post6lv1+post7lv1+post8lv1;
+                  var post_t = post1lv2+post2lv2+post3lv2+post4lv2+post5lv2+post6lv2+post7lv2+post8lv2;
+                  var post_e = post1lv3+post2lv3+post3lv3+post4lv3+post5lv3+post6lv3+post7lv3+post8lv3;
+                  var post_w =  Math.round((post1lv4+post2lv4+post3lv4+post4lv4+post5lv4+post6lv4+post7lv4+post8lv4)/5);
+
+
+                  var pre = pre1+pre2+pre3+pre4+pre5+pre6+pre7+pre8;
+                  var post = post1+post2+post3+post4+post5+post6+post7+post8;
+
                   //** Project-quiz */
                   if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)' && StudentAnswer[i].scoreTeacher != undefined) {   
                     Ticket_Booking_SystemDone = StudentAnswer[i].scoreTeacher
@@ -718,7 +800,14 @@ router.get('/', async (req, res, next) => {
                           if (err) throw err;
                           var dbo = db.db(mydatabase);
                           var myquery = { email: person.email};
-                          var newvalues = { $set: {
+                          var newvalues = { $set: { 
+                            pre:pre,
+                            post:post,
+                            post_k:post_k,
+                            post_t:post_t,
+                            post_e:post_e,
+                            post_w:post_w,
+
                             //Project quiz
                             TicketBookingSystem:Ticket_Booking_SystemDone,
                             TicketBookingSystemScore:TicketBookingSystemScore,
@@ -730,42 +819,58 @@ router.get('/', async (req, res, next) => {
                             Project_QUIZ3Score:Project_QUIZ3Score,
                             //Post test
                             pre_Algorithms_and_Flowcharts:Pretest1Done,
+                            Pretest1:Pretest1,Pretest1S:Pretest1S,
                             post_Algorithms_and_Flowcharts:Posttest1Done,
+                            Posttest1:Posttest1,Posttest1S:Posttest1S,
                             pre1lv1:pre1lv1,pre1lv2:pre1lv2,pre1lv3:pre1lv3,pre1lv4:pre1lv4,
                             post1lv1:post1lv1,post1lv2:post1lv2,post1lv3:post1lv3,post1lv4:post1lv4,
 
                             pre_Datatype_and_Variable:Pretest2Done,
+                            Pretest2:Pretest2,Pretest2S:Pretest2S,
                             post_Datatype_and_Variable:Posttest2Done,
+                            Posttest2:Posttest2,Posttest2S:Posttest2S,
                             pre2lv1:pre2lv1,pre2lv2:pre2lv2,pre2lv3:pre2lv3,pre2lv4:pre2lv4,
                             post2lv1:post2lv1,post2lv2:post2lv2,post2lv3:post2lv3,post2lv4:post2lv4,
 
                             pre_Input_and_Output:Pretest3Done,
+                            Pretest3:Pretest3,Pretest3S:Pretest3S,
                             post_Input_and_Output:Posttest3Done,
+                            Posttest3:Posttest3,Posttest3S:Posttest3S,
                             pre3lv1:pre3lv1,pre3lv2:pre3lv2,pre3lv3:pre3lv3,pre3lv4:pre3lv4,
                             post3lv1:post3lv1,post3lv2:post3lv2,post3lv3:post3lv3,post3lv4:post3lv4,
 
                             pre_Operators_and_Expressions:Pretest4Done,
+                            Pretest4:Pretest4,Pretest4S:Pretest4S,
                             post_Operators_and_Expressions:Posttest4Done,
+                            Posttest4:Posttest4,Posttest4S:Posttest4S,
                             pre4lv1:pre4lv1,pre4lv2:pre4lv2,pre4lv3:pre4lv3,pre4lv4:pre4lv4,
                             post4lv1:post4lv1,post4lv2:post4lv2,post4lv3:post4lv3,post4lv4:post4lv4,
 
                             pre_Selection_Statements:Pretest5Done,
+                            Pretest5:Pretest5,Pretest5S:Pretest5S,
                             post_Selection_Statements:Posttest5Done,
+                            Posttest5:Posttest5,Posttest5S:Posttest5S,
                             pre5lv1:pre5lv1,pre5lv2:pre5lv2,pre5lv3:pre5lv3,pre5lv4:pre5lv4,
                             post5lv1:post5lv1,post5lv2:post5lv2,post5lv3:post5lv3,post5lv4:post5lv4,
 
                             pre_Loop_Statements:Pretest6Done,
+                            Pretest6:Pretest6,Pretest6S:Pretest6S,
                             post_Loop_Statements:Posttest6Done,
+                            Posttest6:Posttest6,Posttest6S:Posttest6S,
                             pre6lv1:pre6lv1,pre6lv2:pre6lv2,pre6lv3:pre6lv3,pre6lv4:pre6lv4,
                             post6lv1:post6lv1,post6lv2:post6lv2,post6lv3:post6lv3,post6lv4:post6lv4,
 
                             pre_Arrays_and_Strings:Pretest7Done,
+                            Pretest7:Pretest7,Pretest7S:Pretest7S,
                             post_Arrays_and_Strings:Posttest7Done,
+                            Posttest7:Posttest7,Posttest7S:Posttest7S,
                             pre7lv1:pre7lv1,pre7lv2:pre7lv2,pre7lv3:pre7lv3,pre7lv4:pre7lv4,
                             post7lv1:post7lv1,post7lv2:post7lv2,post7lv3:post7lv3,post7lv4:post7lv4,
 
                             pre_Functions:Pretest8Done,
+                            Pretest8:Pretest8,Pretest8S:Pretest8S,
                             post_Functions:Posttest8Done,
+                            Posttest8:Posttest8,Posttest8S:Posttest8S,
                             pre8lv1:pre8lv1,pre8lv2:pre8lv2,pre8lv3:pre8lv3,pre8lv4:pre8lv4,
                             post8lv1:post8lv1,post8lv2:post8lv2,post8lv3:post8lv3,post8lv4:post8lv4
                           } };
