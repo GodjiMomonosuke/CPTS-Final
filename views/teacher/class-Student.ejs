@@ -1,8 +1,15 @@
 <style>
-    .status_w {
+    .status_n {
         width: 70px;
         height: 25px;
         background-color: #fff;
+        margin-right: 5px;
+        text-align: center;
+    }
+    .status_w {
+        width: 70px;
+        height: 25px;
+        background-color: #ffd75e;
         margin-right: 5px;
         text-align: center;
     }
@@ -31,9 +38,9 @@
                 <th scope="col" class="col-1">#</th>
                 <th scope="col" class="col-3">Student</th>
                 <!--<th scope="col-1" class="col-2">Class</th>-->
-                <th scope="col" class="col-2 text-start">Project</th>
-                <th scope="col" class="col-3 text-start">Score</th>
-                <th scope="col" class="col-4 text-start">Chart</th>
+                <th scope="col" class="col-2 text-start">Project Quiz</th>
+                <th scope="col" class="col-3 text-start">Lab Score</th>
+                <th scope="col" class="col-4 text-start">Average Score</th>
                 </th>
               </tr>
             </thead>  
@@ -47,16 +54,63 @@
                                     <div class="info">Course</div> <%=Studentresult[i].Course %> <br>
                                     <div class="info">Section</div> <%=Studentresult[i].Section %> <br><br><br>
                                     <div> 
-                                        <% if (Studentresult[i].postlv1 > Studentresult[i].postlv2 > Studentresult[i].postlv3 > Studentresult[i].postlv4) { %>
-                                            <img src="https://cdn-icons-png.freepik.com/512/13110/13110742.png?ga=GA1.1.1569106277.1716032243" alt=""> 
-                                        <% } %>
-                                        <% if (Studentresult[i].postlv4 > Studentresult[i].postlv1 > Studentresult[i].postlv3 > Studentresult[i].postlv2) { %>
-                                            <img src="https://cdn-icons-png.freepik.com/512/13110/13110734.png?ga=GA1.1.1569106277.1716032243" alt=""> 
-                                        <% }%>
-                                        <%=Studentresult[i].pre1lv4 %>
+                                        <div class="info" style="width: auto;">Character</div> <br>
+                                        <!-- k -->
+                                        <% if(Studentresult[i].post_k > Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
+                                            k
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_k === Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
+                                            k = t
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_k > Studentresult[i].post_t && Studentresult[i].post_k === Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
+                                            k = e
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_k > Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k === Studentresult[i].post_w){ %>
+                                            k = w
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_k === Studentresult[i].post_t && Studentresult[i].post_k === Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
+                                            k = t = e
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_k === Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k === Studentresult[i].post_w){ %>
+                                            k = t = w
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_k > Studentresult[i].post_t && Studentresult[i].post_k === Studentresult[i].post_e && Studentresult[i].post_k === Studentresult[i].post_w){ %>
+                                            k = e = w
+                                        <% } %> 
+                                        
+                                        <!-- t -->
+                                        <% if(Studentresult[i].post_t > Studentresult[i].post_k && Studentresult[i].post_t > Studentresult[i].post_e && Studentresult[i].post_t > Studentresult[i].post_w){ %>
+                                            t
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_t > Studentresult[i].post_k && Studentresult[i].post_t === Studentresult[i].post_e && Studentresult[i].post_t > Studentresult[i].post_w){ %>
+                                            t = e
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_t > Studentresult[i].post_k && Studentresult[i].post_t > Studentresult[i].post_e && Studentresult[i].post_t === Studentresult[i].post_w){ %>
+                                            t = w
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_t > Studentresult[i].post_k && Studentresult[i].post_t === Studentresult[i].post_e && Studentresult[i].post_t === Studentresult[i].post_w){ %>
+                                            t = e = w
+                                        <% } %> 
+
+                                        <!-- e -->
+                                        <% if(Studentresult[i].post_e > Studentresult[i].post_k && Studentresult[i].post_e > Studentresult[i].post_t && Studentresult[i].post_e > Studentresult[i].post_w){ %>
+                                            e
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_e > Studentresult[i].post_k && Studentresult[i].post_e > Studentresult[i].post_t && Studentresult[i].post_e === Studentresult[i].post_w){ %>
+                                            e = w
+                                        <% } %> 
+
+                                        <!-- w -->
+                                        <% if(Studentresult[i].post_w > Studentresult[i].post_k && Studentresult[i].post_w > Studentresult[i].post_t && Studentresult[i].post_w > Studentresult[i].post_e){ %>
+                                            w
+                                        <% } %> 
+                                        <% if(Studentresult[i].post_w === Studentresult[i].post_k && Studentresult[i].post_w === Studentresult[i].post_t && Studentresult[i].post_w === Studentresult[i].post_e){ %>
+                                            k = t = e = w
+                                        <% } %> 
+
                                     </div>
                                 </td>
-                                <td class="text-start">
+                                <td class="text-start"> <!-- Project Quiz -->
                                     <span class="quiz">Project QUIZ1 </span>
                                     <div>
                                         <% if (Studentresult[i].TicketBookingSystemScore != undefined) { %>
@@ -66,7 +120,7 @@
                                             </div> 
                                         <% }else{ %>
                                             <div style="display: flex;">
-                                                <div class="status_w">Pretest</div>
+                                                <div class="status_n">Pretest</div>
                                                 <%=Studentresult[i].TicketBookingSystem %>
                                             </div> 
                                         <% }%>
@@ -80,7 +134,7 @@
                                             </div> 
                                         <% }else{ %>
                                             <div style="display: flex;">
-                                                <div class="status_w">Pretest</div>
+                                                <div class="status_n">Pretest</div>
                                                 <%=Studentresult[i].PointofSalesSystem %>
                                             </div> 
                                         <% }%>
@@ -94,37 +148,51 @@
                                             </div> 
                                         <% }else{ %>
                                             <div style="display: flex;">
-                                                <div class="status_w">Pretest</div>
+                                                <div class="status_n">Pretest</div>
                                                 <%=Studentresult[i].Project_QUIZ3 %>
                                             </div> 
                                         <% }%>
                                     </div>
                                 
                                 </td>
-                                <td class="text-start">
+                                <td class="text-start"> <!-- Lab Score -->
                                     <% if(Studentresult[i].infoPrePostTest != undefined){ %>
-                                <% } else{ %>  
+                                    <% } else{ %>  
                                     <span class="quiz">Algorithms and Flowcharts</span>
                                     <div>
-                                    <% if (Studentresult[i].Pretest1 != undefined) { %>
-                                        <div style="display: flex;">
-                                            <div class="status">Pretest</div>
-                                            <%=Studentresult[i].pre_Algorithms_and_Flowcharts %> --- Total: <%=Studentresult[i].Pretest1 %>
-                                        </div> 
+                                    <% if (Studentresult[i].Pretest1 != undefined) { %> 
+                                        <% if (Studentresult[i].Pretest1S === "รอตรวจ") { %>
+                                            <div style="display: flex;">
+                                                <div class="status_w">Pretest</div>
+                                                <%=Studentresult[i].pre_Algorithms_and_Flowcharts %> --- Total: <%=Studentresult[i].Pretest1 %>
+                                            </div> 
+                                        <% }else{ %>
+                                            <div style="display: flex;">
+                                                <div class="status">Pretest</div>
+                                                <%=Studentresult[i].pre_Algorithms_and_Flowcharts %> --- Total: <%=Studentresult[i].Pretest1 %>
+                                            </div> 
+                                        <% }%>
                                     <% }else{ %>
                                         <div style="display: flex;">
-                                            <div class="status_w">Pretest</div>
+                                            <div class="status_n">Pretest</div>
                                             <%=Studentresult[i].pre_Algorithms_and_Flowcharts %> --- Total: <%=Studentresult[i].Pretest1 %>
                                         </div> 
                                     <% }%>
                                     <% if (Studentresult[i].Posttest1 != undefined) { %>
-                                        <div style="display: flex;">
-                                            <div class="status">Posttest</div>
-                                            <%=Studentresult[i].post_Algorithms_and_Flowcharts %> --- Total: <%=Studentresult[i].Posttest1 %>
-                                        </div> 
-                                        <% }else{ %>
+                                        <% if (Studentresult[i].Posttest1S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
+                                                <%=Studentresult[i].post_Algorithms_and_Flowcharts %> --- Total: <%=Studentresult[i].Posttest1 %>
+                                            </div> 
+                                        <% }else{ %>
+                                            <div style="display: flex;">
+                                                <div class="status">Posttest</div>
+                                                <%=Studentresult[i].post_Algorithms_and_Flowcharts %> --- Total: <%=Studentresult[i].Posttest1 %>
+                                            </div> 
+                                        <% }%>
+                                    <% }else{ %>
+                                            <div style="display: flex;">
+                                                <div class="status_n">Posttest</div>
                                                 <%=Studentresult[i].post_Algorithms_and_Flowcharts %> --- Total: <%=Studentresult[i].Posttest1 %>
                                             </div> 
                                         <% }%>
@@ -132,49 +200,77 @@
                                     <span class="quiz">Datatype and Variable</span>
                                     <div>
                                         <% if (Studentresult[i].Pretest2 != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Pretest</div>
-                                                <%=Studentresult[i].pre_Datatype_and_Variable %> --- Total:<%=Studentresult[i].Pretest2 %>
-                                            </div> 
-                                        <% }else{ %>
+                                            <% if (Studentresult[i].Pretest2S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
+                                                <%=Studentresult[i].pre_Datatype_and_Variable %> --- Total:<%=Studentresult[i].Pretest2 %>
+                                            </div> 
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status">Pretest</div>
+                                                    <%=Studentresult[i].pre_Datatype_and_Variable %> --- Total: <%=Studentresult[i].Pretest2 %>
+                                                </div> 
+                                            <% }%>
+                                        <% }else{ %>
+                                            <div style="display: flex;">
+                                                <div class="status_n">Pretest</div>
                                                 <%=Studentresult[i].pre_Datatype_and_Variable %> --- Total:<%=Studentresult[i].Pretest2 %>
                                             </div> 
                                         <% }%>
                                         <% if (Studentresult[i].Posttest2 != undefined) { %>
+                                            <% if (Studentresult[i].Posttest2S === "รอตรวจ") { %>
                                             <div style="display: flex;">
-                                                <div class="status">Posttest</div>
+                                                <div class="status_w">Posttest</div>
                                                 <%=Studentresult[i].post_Datatype_and_Variable %>  --- Total:<%=Studentresult[i].Posttest2 %>
                                             </div> 
                                             <% }else{ %>
                                                 <div style="display: flex;">
-                                                    <div class="status_w">Posttest</div>
-                                                    <%=Studentresult[i].post_Datatype_and_Variable %>  --- Total:<%=Studentresult[i].Posttest2 %>
+                                                    <div class="status">Posttest</div>
+                                                    <%=Studentresult[i].post_Datatype_and_Variable %> --- Total: <%=Studentresult[i].Posttest2 %>
                                                 </div> 
                                             <% }%>
+                                        <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status_n">Posttest</div>
+                                                    <%=Studentresult[i].post_Datatype_and_Variable %>  --- Total:<%=Studentresult[i].Posttest2 %>
+                                                </div> 
+                                        <% }%>
                                     </div>
                                     <span class="quiz">Input and Output</span>
                                     <div>
                                         <% if (Studentresult[i].Pretest3 != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Pretest</div>
-                                                <%=Studentresult[i].pre_Input_and_Output %> --- Total:<%=Studentresult[i].Pretest3 %>
-                                            </div> 
-                                        <% }else{ %>
+                                            <% if (Studentresult[i].Pretest3S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
                                                 <%=Studentresult[i].pre_Input_and_Output %> --- Total:<%=Studentresult[i].Pretest3 %>
                                             </div> 
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status">Pretest</div>
+                                                    <%=Studentresult[i].pre_Input_and_Output %> --- Total: <%=Studentresult[i].Pretest3 %>
+                                                </div> 
+                                            <% }%>
+                                        <% }else{ %>
+                                            <div style="display: flex;">
+                                                <div class="status_n">Pretest</div>
+                                                <%=Studentresult[i].pre_Input_and_Output %> --- Total:<%=Studentresult[i].Pretest3 %>
+                                            </div> 
                                         <% }%>
                                         <% if (Studentresult[i].Posttest3 != undefined) { %>
+                                            <% if (Studentresult[i].Posttest3S === "รอตรวจ") { %>
                                             <div style="display: flex;">
-                                                <div class="status">Posttest</div>
+                                                <div class="status_w">Posttest</div>
                                                 <%=Studentresult[i].post_Input_and_Output %> --- Total:<%=Studentresult[i].Posttest3 %>
                                             </div> 
                                             <% }else{ %>
                                                 <div style="display: flex;">
-                                                    <div class="status_w">Posttest</div>
+                                                    <div class="status">Posttest</div>
+                                                    <%=Studentresult[i].post_Input_and_Output %> --- Total: <%=Studentresult[i].Posttest3 %>
+                                                </div> 
+                                            <% }%>
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status_n">Posttest</div>
                                                     <%=Studentresult[i].post_Input_and_Output %> --- Total:<%=Studentresult[i].Posttest3 %>
                                                 </div> 
                                             <% }%>
@@ -182,24 +278,39 @@
                                     <span class="quiz">Operators and Expressions</span>
                                     <div>
                                         <% if (Studentresult[i].Pretest4 != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Pretest</div>
-                                                <%=Studentresult[i].pre_Operators_and_Expressions %> --- Total:<%=Studentresult[i].Pretest4 %>
-                                            </div> 
-                                        <% }else{ %>
+                                            <% if (Studentresult[i].Pretest4S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
                                                 <%=Studentresult[i].pre_Operators_and_Expressions %> --- Total:<%=Studentresult[i].Pretest4 %>
                                             </div> 
-                                        <% }%>
-                                        <% if (Studentresult[i].Posttest4 != undefined) { %>
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status">Pretest</div>
+                                                    <%=Studentresult[i].pre_Operators_and_Expressions %> --- Total: <%=Studentresult[i].Pretest4 %>
+                                                </div> 
+                                            <% }%>
+                                        <% }else{ %>
                                             <div style="display: flex;">
-                                                <div class="status">Posttest</div>
+                                                <div class="status_n">Pretest</div>
+                                                <%=Studentresult[i].pre_Operators_and_Expressions %> --- Total:<%=Studentresult[i].Pretest4 %>
+                                            </div> 
+                                        <% }%>
+
+                                        <% if (Studentresult[i].Posttest4 != undefined) { %>
+                                            <% if (Studentresult[i].Posttest4S === "รอตรวจ") { %>
+                                            <div style="display: flex;">
+                                                <div class="status_w">Posttest</div>
                                                 <%=Studentresult[i].post_Operators_and_Expressions %> --- Total:<%=Studentresult[i].Posttest4 %>
                                             </div> 
                                             <% }else{ %>
                                                 <div style="display: flex;">
-                                                    <div class="status_w">Posttest</div>
+                                                    <div class="status">Posttest</div>
+                                                    <%=Studentresult[i].post_Operators_and_Expressions %> --- Total: <%=Studentresult[i].Posttest4 %>
+                                                </div> 
+                                            <% }%>
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status_n">Posttest</div>
                                                     <%=Studentresult[i].post_Operators_and_Expressions %> --- Total:<%=Studentresult[i].Posttest4 %>
                                                 </div> 
                                             <% }%>
@@ -207,24 +318,40 @@
                                     <span class="quiz">Selection Statements </span>
                                     <div>
                                         <% if (Studentresult[i].Pretest5 != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Pretest</div>
-                                                <%=Studentresult[i].pre_Selection_Statements %> --- Total:<%=Studentresult[i].Pretest5 %>
-                                            </div> 
-                                        <% }else{ %>
+                                            <% if (Studentresult[i].Pretest5S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
                                                 <%=Studentresult[i].pre_Selection_Statements %> --- Total:<%=Studentresult[i].Pretest5 %>
                                             </div> 
-                                        <% }%>
-                                        <% if (Studentresult[i].Posttest5 != undefined) { %>
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status">Pretest</div>
+                                                    <%=Studentresult[i].pre_Selection_Statements %> --- Total: <%=Studentresult[i].Pretest5 %>
+                                                </div> 
+                                            <% }%>
+                                        <% }else{ %>
                                             <div style="display: flex;">
-                                                <div class="status">Posttest</div>
+                                                <div class="status_n">Pretest</div>
+                                                <%=Studentresult[i].pre_Selection_Statements %> --- Total:<%=Studentresult[i].Pretest5 %>
+                                            </div> 
+                                        <% }%>
+
+
+                                        <% if (Studentresult[i].Posttest5 != undefined) { %>
+                                            <% if (Studentresult[i].Posttest5S === "รอตรวจ") { %>
+                                            <div style="display: flex;">
+                                                <div class="status_w">Posttest</div>
                                                 <%=Studentresult[i].post_Selection_Statements %> --- Total:<%=Studentresult[i].Posttest5 %>
                                             </div> 
                                             <% }else{ %>
                                                 <div style="display: flex;">
-                                                    <div class="status_w">Posttest</div>
+                                                    <div class="status">Posttest</div>
+                                                    <%=Studentresult[i].post_Selection_Statements %> --- Total: <%=Studentresult[i].Posttest5 %>
+                                                </div> 
+                                            <% }%>
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status_n">Posttest</div>
                                                     <%=Studentresult[i].post_Selection_Statements %> --- Total:<%=Studentresult[i].Posttest5 %>
                                                 </div> 
                                             <% }%>
@@ -232,24 +359,40 @@
                                     <span class="quiz">Loop Statements</span>
                                     <div>
                                         <% if (Studentresult[i].Pretest6 != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Pretest</div>
-                                                <%=Studentresult[i].pre_Loop_Statements %> --- Total:<%=Studentresult[i].Pretest6 %>
-                                            </div> 
-                                        <% }else{ %>
+                                            <% if (Studentresult[i].Pretest6S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
                                                 <%=Studentresult[i].pre_Loop_Statements %> --- Total:<%=Studentresult[i].Pretest6 %>
                                             </div> 
-                                        <% }%>
-                                        <% if (Studentresult[i].Posttest6 != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Posttest</div>
-                                                <%=Studentresult[i].post_Loop_Statements %> --- Total:<%=Studentresult[i].Posttest6 %>
-                                            </div> 
                                             <% }else{ %>
                                                 <div style="display: flex;">
+                                                    <div class="status">Pretest</div>
+                                                    <%=Studentresult[i].pre_Loop_Statements %> --- Total:<%=Studentresult[i].Pretest6 %>
+                                                </div> 
+                                                <% }%>
+                                        <% }else{ %>
+                                            <div style="display: flex;">
+                                                <div class="status_n">Pretest</div>
+                                                <%=Studentresult[i].pre_Loop_Statements %> --- Total:<%=Studentresult[i].Pretest6 %>
+                                            </div> 
+                                        <% }%>
+
+
+                                        <% if (Studentresult[i].Posttest6 != undefined) { %>
+                                            <% if (Studentresult[i].Posttest6S === "รอตรวจ") { %>
+                                                <div style="display: flex;">
                                                     <div class="status_w">Posttest</div>
+                                                    <%=Studentresult[i].post_Loop_Statements %> --- Total:<%=Studentresult[i].Posttest6 %>
+                                                </div> 
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status">Posttest</div>
+                                                    <%=Studentresult[i].post_Loop_Statements %> --- Total:<%=Studentresult[i].Posttest6 %>
+                                                </div> 
+                                                <% } %>
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status_n">Posttest</div>
                                                     <%=Studentresult[i].post_Loop_Statements %> --- Total:<%=Studentresult[i].Posttest6 %>
                                                 </div> 
                                             <% }%>
@@ -257,24 +400,40 @@
                                     <span class="quiz">Arrays and Strings</span>
                                     <div>
                                         <% if (Studentresult[i].Pretest7 != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Pretest</div>
-                                                <%=Studentresult[i].pre_Arrays_and_Strings %> --- Total:<%=Studentresult[i].Pretest7 %>
-                                            </div> 
-                                        <% }else{ %>
+                                            <% if (Studentresult[i].Pretest7S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
                                                 <%=Studentresult[i].pre_Arrays_and_Strings %> --- Total:<%=Studentresult[i].Pretest7 %>
                                             </div> 
-                                        <% }%>
-                                        <% if (Studentresult[i].Posttest7 != undefined) { %>
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status">Pretest</div>
+                                                    <%=Studentresult[i].pre_Arrays_and_Strings %> --- Total: <%=Studentresult[i].Pretest7 %>
+                                                </div> 
+                                            <% }%>
+                                        <% }else{ %>
                                             <div style="display: flex;">
-                                                <div class="status">Posttest</div>
+                                                <div class="status_n">Pretest</div>
+                                                <%=Studentresult[i].pre_Arrays_and_Strings %> --- Total:<%=Studentresult[i].Pretest7 %>
+                                            </div> 
+                                        <% }%>
+
+
+                                        <% if (Studentresult[i].Posttest7 != undefined) { %>
+                                            <% if (Studentresult[i].Posttest7S === "รอตรวจ") { %>
+                                            <div style="display: flex;">
+                                                <div class="status_w">Posttest</div>
                                                 <%=Studentresult[i].post_Arrays_and_Strings %> --- Total:<%=Studentresult[i].Posttest7 %>
                                             </div> 
                                             <% }else{ %>
                                                 <div style="display: flex;">
-                                                    <div class="status_w">Posttest</div>
+                                                    <div class="status">Posttest</div>
+                                                    <%=Studentresult[i].post_Arrays_and_Strings %> --- Total: <%=Studentresult[i].Posttest7 %>
+                                                </div> 
+                                            <% }%>
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status_n">Posttest</div>
                                                     <%=Studentresult[i].post_Arrays_and_Strings %> --- Total:<%=Studentresult[i].Posttest7 %>
                                                 </div> 
                                             <% }%>
@@ -282,24 +441,40 @@
                                     <span class="quiz">Functions</span> 
                                     <div>
                                         <% if (Studentresult[i].Pretest8 != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Pretest</div>
-                                                <%=Studentresult[i].pre_Functions %> --- Total:<%=Studentresult[i].Pretest8 %>
-                                            </div> 
-                                        <% }else{ %>
+                                            <% if (Studentresult[i].Pretest8S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
                                                 <%=Studentresult[i].pre_Functions %> --- Total:<%=Studentresult[i].Pretest8 %>
                                             </div> 
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status">Pretest</div>
+                                                    <%=Studentresult[i].pre_Functions %> --- Total: <%=Studentresult[i].Pretest8 %>
+                                                </div> 
+                                            <% }%>
+                                        <% }else{ %>
+                                            <div style="display: flex;">
+                                                <div class="status_n">Pretest</div>
+                                                <%=Studentresult[i].pre_Functions %> --- Total:<%=Studentresult[i].Pretest8 %>
+                                            </div> 
                                         <% }%>
+
+
                                         <% if (Studentresult[i].Posttest8 != undefined) { %>
+                                            <% if (Studentresult[i].Posttest8S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status">Posttest</div>
                                                 <%=Studentresult[i].post_Functions %> --- Total:<%=Studentresult[i].Posttest8 %>
                                             </div> 
                                             <% }else{ %>
                                                 <div style="display: flex;">
-                                                    <div class="status_w">Posttest</div>
+                                                    <div class="status">Posttest</div>
+                                                    <%=Studentresult[i].post_Functions %> --- Total: <%=Studentresult[i].Posttest8 %>
+                                                </div> 
+                                            <% }%>
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status_n">Posttest</div>
                                                     <%=Studentresult[i].post_Functions %> --- Total:<%=Studentresult[i].Posttest8 %>
                                                 </div> 
                                             <% }%>
@@ -308,60 +483,59 @@
 
                                 <% } %>
                                 </td>
-                                <td>
+                                <td> <!-- Average Score -->
                                     <div style="font-size: 12px;">K = Knowledge, T = Tracing, <br>E = Explaining, W = Writing</div> <br>
                                     <div class="head">คะแนน Pre-test</div>
                                     <div style="display: flex;"> 
-                                        <div style="width: 70px;">&ensp;K</div>
-                                        <div style="font-size: 12px;"></div><progress  max="100" value=<%= Studentresult[i].pre1lv1+Studentresult[i].pre2lv1+Studentresult[i].pre3lv1+Studentresult[i].pre4lv1+Studentresult[i].pre5lv1+Studentresult[i].pre6lv1+Studentresult[i].pre7lv1+Studentresult[i].pre8lv1 %>  class="bar1 "></progress>
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].pre1lv1+Studentresult[i].pre2lv1+Studentresult[i].pre3lv1+Studentresult[i].pre4lv1+Studentresult[i].pre5lv1+Studentresult[i].pre6lv1+Studentresult[i].pre7lv1+Studentresult[i].pre8lv1))) %></div>
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].pre1lv1+Studentresult[i].pre2lv1+Studentresult[i].pre3lv1+Studentresult[i].pre4lv1+Studentresult[i].pre5lv1+Studentresult[i].pre6lv1+Studentresult[i].pre7lv1+Studentresult[i].pre8lv1)/40)*100) %>%</div>
+                                        <div style="width: 50px;">&ensp;K</div>
+                                        <div style="font-size: 12px;"></div>
+                                        <progress  max="100" value=<%= ((((Studentresult[i].pre1lv1+Studentresult[i].pre2lv1+Studentresult[i].pre3lv1+Studentresult[i].pre4lv1+Studentresult[i].pre5lv1+Studentresult[i].pre6lv1+Studentresult[i].pre7lv1+Studentresult[i].pre8lv1)/Studentresult[i].pre)/5)*100) %>  class="bar1 "></progress>
+                                        <div style="margin-left: 5px;"><%= (((Studentresult[i].pre1lv1+Studentresult[i].pre2lv1+Studentresult[i].pre3lv1+Studentresult[i].pre4lv1+Studentresult[i].pre5lv1+Studentresult[i].pre6lv1+Studentresult[i].pre7lv1+Studentresult[i].pre8lv1)/Studentresult[i].pre)) %>/5</div>
+                                        <div style="margin-left: 5px;">(<%= ((((Studentresult[i].pre1lv1+Studentresult[i].pre2lv1+Studentresult[i].pre3lv1+Studentresult[i].pre4lv1+Studentresult[i].pre5lv1+Studentresult[i].pre6lv1+Studentresult[i].pre7lv1+Studentresult[i].pre8lv1)/Studentresult[i].pre)/5)*100) %>%)</div>
                                     </div>
                                     <div style="display: flex;">
-                                        <div style="width: 70px;">&ensp;T</div>
-                                        <progress  max="100" value=<%= Studentresult[i].pre1lv2+Studentresult[i].pre2lv2+Studentresult[i].pre3lv2+Studentresult[i].pre4lv2+Studentresult[i].pre5lv2+Studentresult[i].pre6lv2+Studentresult[i].pre7lv2+Studentresult[i].pre8lv2 %>  class="bar1 "></progress>
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].pre1lv2+Studentresult[i].pre2lv2+Studentresult[i].pre3lv2+Studentresult[i].pre4lv2+Studentresult[i].pre5lv2+Studentresult[i].pre6lv2+Studentresult[i].pre7lv2+Studentresult[i].pre8lv2))) %></div>
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].pre1lv2+Studentresult[i].pre2lv2+Studentresult[i].pre3lv2+Studentresult[i].pre4lv2+Studentresult[i].pre5lv2+Studentresult[i].pre6lv2+Studentresult[i].pre7lv2+Studentresult[i].pre8lv2)/40)*100) %>%</div>
+                                        <div style="width: 50px;">&ensp;T</div>
+                                        <progress  max="100" value=<%= ((((Studentresult[i].pre1lv2+Studentresult[i].pre2lv2+Studentresult[i].pre3lv2+Studentresult[i].pre4lv2+Studentresult[i].pre5lv2+Studentresult[i].pre6lv2+Studentresult[i].pre7lv2+Studentresult[i].pre8lv2)/Studentresult[i].pre)/5)*100) %>  class="bar1 "></progress>
+                                        <div style="margin-left: 5px;"><%= (((Studentresult[i].pre1lv2+Studentresult[i].pre2lv2+Studentresult[i].pre3lv2+Studentresult[i].pre4lv2+Studentresult[i].pre5lv2+Studentresult[i].pre6lv2+Studentresult[i].pre7lv2+Studentresult[i].pre8lv2)/Studentresult[i].pre)) %>/5</div>
+                                        <div style="margin-left: 5px;">(<%= ((((Studentresult[i].pre1lv2+Studentresult[i].pre2lv2+Studentresult[i].pre3lv2+Studentresult[i].pre4lv2+Studentresult[i].pre5lv2+Studentresult[i].pre6lv2+Studentresult[i].pre7lv2+Studentresult[i].pre8lv2)/Studentresult[i].pre)/5)*100) %>%)</div>
                                     </div>
                                     <div style="display: flex;">
-                                        <div style="width: 70px;">&ensp;E</div>
-                                        <progress  max="100" value=<%= Studentresult[i].pre1lv3+Studentresult[i].pre2lv3+Studentresult[i].pre3lv3+Studentresult[i].pre4lv3+Studentresult[i].pre5lv3+Studentresult[i].pre6lv3+Studentresult[i].pre7lv3+Studentresult[i].pre8lv3 %>  class="bar1 "></progress>
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].pre1lv3+Studentresult[i].pre2lv3+Studentresult[i].pre3lv3+Studentresult[i].pre4lv3+Studentresult[i].pre5lv3+Studentresult[i].pre6lv3+Studentresult[i].pre7lv3+Studentresult[i].pre8lv3))) %></div>
-                                        <div style="margin-left: 5px;">(<%= Math.round(((Studentresult[i].pre1lv3+Studentresult[i].pre2lv3+Studentresult[i].pre3lv3+Studentresult[i].pre4lv3+Studentresult[i].pre5lv3+Studentresult[i].pre6lv3+Studentresult[i].pre7lv3+Studentresult[i].pre8lv3)/40)*100) %>%)</div>
+                                        <div style="width: 50px;">&ensp;E</div>
+                                        <progress  max="100" value=<%= ((((Studentresult[i].pre1lv3+Studentresult[i].pre2lv3+Studentresult[i].pre3lv3+Studentresult[i].pre4lv3+Studentresult[i].pre5lv3+Studentresult[i].pre6lv3+Studentresult[i].pre7lv3+Studentresult[i].pre8lv3)/Studentresult[i].pre)/5)*100) %>  class="bar1 "></progress>
+                                        <div style="margin-left: 5px;"><%= (((Studentresult[i].pre1lv3+Studentresult[i].pre2lv3+Studentresult[i].pre3lv3+Studentresult[i].pre4lv3+Studentresult[i].pre5lv3+Studentresult[i].pre6lv3+Studentresult[i].pre7lv3+Studentresult[i].pre8lv3)/Studentresult[i].pre)) %>/5</div>
+                                        <div style="margin-left: 5px;">(<%= ((((Studentresult[i].pre1lv3+Studentresult[i].pre2lv3+Studentresult[i].pre3lv3+Studentresult[i].pre4lv3+Studentresult[i].pre5lv3+Studentresult[i].pre6lv3+Studentresult[i].pre7lv3+Studentresult[i].pre8lv3)/Studentresult[i].pre)/5)*100) %>%)</div>
                                     </div>
                                     <div style="display: flex;">
-                                        <div style="width: 70px;">&ensp;W</div>
-                                        <progress  max="100" value=<%= Studentresult[i].pre1lv4+Studentresult[i].pre2lv4+Studentresult[i].pre3lv4+Studentresult[i].pre4lv4+Studentresult[i].pre5lv4+Studentresult[i].pre6lv4+Studentresult[i].pre7lv4+Studentresult[i].pre8lv4 %>  class="bar1 "></progress>     
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].pre1lv4+Studentresult[i].pre2lv4+Studentresult[i].pre3lv4+Studentresult[i].pre4lv4+Studentresult[i].pre5lv4+Studentresult[i].pre6lv4+Studentresult[i].pre7lv4+Studentresult[i].pre8lv4))) %></div>                                  
-                                        <div style="margin-left: 5px;">(<%= Math.round(((Studentresult[i].pre1lv4+Studentresult[i].pre2lv4+Studentresult[i].pre3lv4+Studentresult[i].pre4lv4+Studentresult[i].pre5lv4+Studentresult[i].pre6lv4+Studentresult[i].pre7lv4+Studentresult[i].pre8lv4)/200)*100) %>%)</div>   
+                                        <div style="width: 50px;">&ensp;W</div>
+                                        <progress  max="100" value=<%= ((((Studentresult[i].pre1lv4+Studentresult[i].pre2lv4+Studentresult[i].pre3lv4+Studentresult[i].pre4lv4+Studentresult[i].pre5lv4+Studentresult[i].pre6lv4+Studentresult[i].pre7lv4+Studentresult[i].pre8lv4)/Studentresult[i].pre)/25)*100) %>  class="bar1 "></progress>     
+                                        <div style="margin-left: 5px;"><%= (((Studentresult[i].pre1lv4+Studentresult[i].pre2lv4+Studentresult[i].pre3lv4+Studentresult[i].pre4lv4+Studentresult[i].pre5lv4+Studentresult[i].pre6lv4+Studentresult[i].pre7lv4+Studentresult[i].pre8lv4)/Studentresult[i].pre)) %>/25</div>                                  
+                                        <div style="margin-left: 5px;">(<%= ((((Studentresult[i].pre1lv4+Studentresult[i].pre2lv4+Studentresult[i].pre3lv4+Studentresult[i].pre4lv4+Studentresult[i].pre5lv4+Studentresult[i].pre6lv4+Studentresult[i].pre7lv4+Studentresult[i].pre8lv4)/Studentresult[i].pre)/25)*100) %>%)</div>   
                                     </div>
                                     <br>
                                     <div class="head">คะแนน Post-test</div>
                                     <div style="display: flex;">
-                                        <div style="width: 70px;">&ensp;K</div>
-                                        <progress  max="100" value=<%= Studentresult[i].post1lv1+Studentresult[i].post2lv1+Studentresult[i].post3lv1+Studentresult[i].post4lv1+Studentresult[i].post5lv1+Studentresult[i].post6lv1+Studentresult[i].post7lv1+Studentresult[i].post8lv1 %>  class="bar2 "></progress>
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].post1lv1+Studentresult[i].post2lv1+Studentresult[i].post3lv1+Studentresult[i].post4lv1+Studentresult[i].post5lv1+Studentresult[i].post6lv1+Studentresult[i].post7lv1+Studentresult[i].post8lv1))) %></div>
-                                        <div style="margin-left: 5px;">(<%= Math.round(((Studentresult[i].post1lv1+Studentresult[i].post2lv1+Studentresult[i].post3lv1+Studentresult[i].post4lv1+Studentresult[i].post5lv1+Studentresult[i].post6lv1+Studentresult[i].post7lv1+Studentresult[i].post8lv1)/40)*100) %>%)</div>
+                                        <div style="width: 50px;">&ensp;K</div>
+                                        <progress  max="100" value=<%= ((((Studentresult[i].post1lv1+Studentresult[i].post2lv1+Studentresult[i].post3lv1+Studentresult[i].post4lv1+Studentresult[i].post5lv1+Studentresult[i].post6lv1+Studentresult[i].post7lv1+Studentresult[i].post8lv1)/Studentresult[i].post)/5)*100) %>  class="bar2 "></progress>
+                                        <div style="margin-left: 5px;"><%= (((Studentresult[i].post1lv1+Studentresult[i].post2lv1+Studentresult[i].post3lv1+Studentresult[i].post4lv1+Studentresult[i].post5lv1+Studentresult[i].post6lv1+Studentresult[i].post7lv1+Studentresult[i].post8lv1)/Studentresult[i].post)) %>/5</div>
+                                        <div style="margin-left: 5px;">(<%= ((((Studentresult[i].post1lv1+Studentresult[i].post2lv1+Studentresult[i].post3lv1+Studentresult[i].post4lv1+Studentresult[i].post5lv1+Studentresult[i].post6lv1+Studentresult[i].post7lv1+Studentresult[i].post8lv1)/Studentresult[i].post)/5)*100) %>%)</div>
                                     </div>
                                     <div style="display: flex;">
-                                        <div style="width: 70px;">&ensp;T</div>
-                                        <progress  max="100" value=<%= Studentresult[i].post1lv2+Studentresult[i].post2lv2+Studentresult[i].post3lv2+Studentresult[i].post4lv2+Studentresult[i].post5lv2+Studentresult[i].post6lv2+Studentresult[i].post7lv2+Studentresult[i].post8lv2 %>  class="bar2 "></progress>
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].post1lv2+Studentresult[i].post2lv2+Studentresult[i].post3lv2+Studentresult[i].post4lv2+Studentresult[i].post5lv2+Studentresult[i].post6lv2+Studentresult[i].post7lv2+Studentresult[i].post8lv2))) %></div>
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].post1lv2+Studentresult[i].post2lv2+Studentresult[i].post3lv2+Studentresult[i].post4lv2+Studentresult[i].post5lv2+Studentresult[i].post6lv2+Studentresult[i].post7lv2+Studentresult[i].post8lv2)/40)*100) %>%</div>
+                                        <div style="width: 50px;">&ensp;T</div>
+                                        <progress  max="100" value=<%= ((((Studentresult[i].post1lv2+Studentresult[i].post2lv2+Studentresult[i].post3lv2+Studentresult[i].post4lv2+Studentresult[i].post5lv2+Studentresult[i].post6lv2+Studentresult[i].post7lv2+Studentresult[i].post8lv2)/Studentresult[i].post)/5)*100) %>  class="bar2 "></progress>
+                                        <div style="margin-left: 5px;"><%= (((Studentresult[i].post1lv2+Studentresult[i].post2lv2+Studentresult[i].post3lv2+Studentresult[i].post4lv2+Studentresult[i].post5lv2+Studentresult[i].post6lv2+Studentresult[i].post7lv2+Studentresult[i].post8lv2)/Studentresult[i].post)) %>/5</div>
+                                        <div style="margin-left: 5px;"><%= ((((Studentresult[i].post1lv2+Studentresult[i].post2lv2+Studentresult[i].post3lv2+Studentresult[i].post4lv2+Studentresult[i].post5lv2+Studentresult[i].post6lv2+Studentresult[i].post7lv2+Studentresult[i].post8lv2)/Studentresult[i].post)/5)*100) %>%</div>
                                     </div>
-                                    
                                     <div style="display: flex;">
-                                        <div style="width: 70px;">&ensp;E</div>
-                                        <progress  max="100" value=<%= Studentresult[i].post1lv3+Studentresult[i].post2lv3+Studentresult[i].post3lv3+Studentresult[i].post4lv3+Studentresult[i].post5lv3+Studentresult[i].post6lv3+Studentresult[i].post7lv3+Studentresult[i].post8lv3 %>  class="bar2 "></progress>
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].post1lv3+Studentresult[i].post2lv3+Studentresult[i].post3lv3+Studentresult[i].post4lv3+Studentresult[i].post5lv3+Studentresult[i].post6lv3+Studentresult[i].post7lv3+Studentresult[i].post8lv3))) %></div>
-                                        <div style="margin-left: 5px;">(<%= Math.round(((Studentresult[i].post1lv3+Studentresult[i].post2lv3+Studentresult[i].post3lv3+Studentresult[i].post4lv3+Studentresult[i].post5lv3+Studentresult[i].post6lv3+Studentresult[i].post7lv3+Studentresult[i].post8lv3)/40)*100) %>%)</div>
+                                        <div style="width: 50px;">&ensp;E</div>
+                                        <progress  max="100" value=<%= ((((Studentresult[i].post1lv3+Studentresult[i].post2lv3+Studentresult[i].post3lv3+Studentresult[i].post4lv3+Studentresult[i].post5lv3+Studentresult[i].post6lv3+Studentresult[i].post7lv3+Studentresult[i].post8lv3)/Studentresult[i].post)/5)*100) %>  class="bar2 "></progress>
+                                        <div style="margin-left: 5px;"><%= (((Studentresult[i].post1lv3+Studentresult[i].post2lv3+Studentresult[i].post3lv3+Studentresult[i].post4lv3+Studentresult[i].post5lv3+Studentresult[i].post6lv3+Studentresult[i].post7lv3+Studentresult[i].post8lv3)/Studentresult[i].post)) %>/5</div>
+                                        <div style="margin-left: 5px;">(<%= ((((Studentresult[i].post1lv3+Studentresult[i].post2lv3+Studentresult[i].post3lv3+Studentresult[i].post4lv3+Studentresult[i].post5lv3+Studentresult[i].post6lv3+Studentresult[i].post7lv3+Studentresult[i].post8lv3)/Studentresult[i].post)/5)*100) %>%)</div>
                                     </div>
-                                    
                                     <div style="display: flex;">
-                                        <div style="width: 70px;">&ensp;W</div>
-                                        <progress  max="100" value=<%= Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4 %>  class="bar2 "></progress>
-                                        <div style="margin-left: 5px;"><%= Math.round(((Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4))) %></div>
-                                        <div style="margin-left: 5px;">(<%= Math.round(((Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4)/200)*100) %>%)</div>
+                                        <div style="width: 50px;">&ensp;W</div>
+                                        <progress  max="100" value=<%= ((((Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4)/Studentresult[i].post)/25)*100) %>  class="bar2 "></progress>
+                                        <div style="margin-left: 5px;"><%= (((Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4)/Studentresult[i].post)) %>/25</div>
+                                        <div style="margin-left: 5px;">(<%= ((((Studentresult[i].post1lv4+Studentresult[i].post2lv4+Studentresult[i].post3lv4+Studentresult[i].post4lv4+Studentresult[i].post5lv4+Studentresult[i].post6lv4+Studentresult[i].post7lv4+Studentresult[i].post8lv4)/Studentresult[i].post)/25)*100) %>%)</div>
                                     </div>
                                     <br>
                                     
