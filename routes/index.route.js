@@ -369,18 +369,19 @@ router.get('/', async (req, res, next) => {
               StudentAnswer[i].contentName ==='Functions-(Pre-test)'
             ){
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreKnowledgeScore = PreKnowledgeScore+StudentAnswer[i].scoreLV1*5
-                PreTraceScore = PreTraceScore+StudentAnswer[i].scoreLV2*5
-                PreExplainScore = PreExplainScore+StudentAnswer[i].scoreLV3*5
+                PreKnowledgeScore = PreKnowledgeScore+StudentAnswer[i].scoreLV1
+                PreTraceScore = PreTraceScore+StudentAnswer[i].scoreLV2
+                PreExplainScore = PreExplainScore+StudentAnswer[i].scoreLV3
                 PreWriteScore = 0;
               }
               else{
-                PreKnowledgeScore = PreKnowledgeScore+StudentAnswer[i].scoreLV1*5
-                PreTraceScore = PreTraceScore+StudentAnswer[i].scoreLV2*5
-                PreExplainScore = PreExplainScore+StudentAnswer[i].scoreLV3*5
+                PreKnowledgeScore = PreKnowledgeScore+StudentAnswer[i].scoreLV1
+                PreTraceScore = PreTraceScore+StudentAnswer[i].scoreLV2
+                PreExplainScore = PreExplainScore+StudentAnswer[i].scoreLV3
                 PreWriteScore = PreWriteScore+parseInt(StudentAnswer[i].scoreTeacher);
               }
             }
+            
 
             if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)' ||
                 StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)' || 
@@ -392,15 +393,15 @@ router.get('/', async (req, res, next) => {
                 StudentAnswer[i].contentName ==='Functions-(Post-test)'
               ){
                 if(StudentAnswer[i].scoreTeacher === undefined){
-                  KnowledgeScore = KnowledgeScore+StudentAnswer[i].scoreLV1*5
-                  TraceScore = TraceScore+StudentAnswer[i].scoreLV2*5
-                  ExplainScore = ExplainScore+StudentAnswer[i].scoreLV3*5
+                  KnowledgeScore = KnowledgeScore+StudentAnswer[i].scoreLV1
+                  TraceScore = TraceScore+StudentAnswer[i].scoreLV2
+                  ExplainScore = ExplainScore+StudentAnswer[i].scoreLV3
                   WriteScore = 0;
                 }
                 else{
-                  KnowledgeScore = KnowledgeScore+StudentAnswer[i].scoreLV1*5
-                  TraceScore = TraceScore+StudentAnswer[i].scoreLV2*5
-                  ExplainScore = ExplainScore+StudentAnswer[i].scoreLV3*5
+                  KnowledgeScore = KnowledgeScore+StudentAnswer[i].scoreLV1
+                  TraceScore = TraceScore+StudentAnswer[i].scoreLV2
+                  ExplainScore = ExplainScore+StudentAnswer[i].scoreLV3
                   WriteScore = WriteScore+parseInt(StudentAnswer[i].scoreTeacher);
                 }
               }
@@ -453,14 +454,14 @@ router.get('/', async (req, res, next) => {
             return ProjectScoreObj[b].score - ProjectScoreObj[a].score;
           });
 
-          var PreKnowledgePercent =  Math.round(PreKnowledgeScore);
-          var PreTracePercent= Math.round(PreTraceScore);
-          var PreExplainPercent = Math.round(PreExplainScore);
+          var PreKnowledgePercent =  Math.round(PreKnowledgeScore*5);
+          var PreTracePercent= Math.round(PreTraceScore*5);
+          var PreExplainPercent = Math.round(PreExplainScore*5);
           var PreWritePercent = Math.round(PreWriteScore);
           
-          var KnowledgePercent =  Math.round(KnowledgeScore);
-          var TracePercent= Math.round(TraceScore);
-          var ExplainPercent = Math.round(ExplainScore);
+          var KnowledgePercent =  Math.round(KnowledgeScore*5);
+          var TracePercent= Math.round(TraceScore*5);
+          var ExplainPercent = Math.round(ExplainScore*5);
           var WritePercent = Math.round(WriteScore);
 
           PreKnowledgePercent = PreKnowledgePercent;

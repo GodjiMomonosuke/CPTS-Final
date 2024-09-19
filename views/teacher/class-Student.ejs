@@ -160,7 +160,7 @@
                                     <% } else{ %>  
                                     <span class="quiz">Algorithms and Flowcharts</span>
                                     <div>
-                                    <% if (Studentresult[i].Pretest1 != undefined) { %> 
+                                    <% if (Studentresult[i].Pretest1 != 0) { %> 
                                         <% if (Studentresult[i].Pretest1S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -178,7 +178,8 @@
                                             <%=Studentresult[i].pre_Algorithms_and_Flowcharts %> --- Total: <%=Studentresult[i].Pretest1 %>
                                         </div> 
                                     <% }%>
-                                    <% if (Studentresult[i].Posttest1 != undefined) { %>
+                                    
+                                    <% if (Studentresult[i].Posttest1 != 0) { %>
                                         <% if (Studentresult[i].Posttest1S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -199,7 +200,7 @@
                                     </div>
                                     <span class="quiz">Datatype and Variable</span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest2 != undefined) { %>
+                                        <% if (Studentresult[i].Pretest2 != 0) { %>
                                             <% if (Studentresult[i].Pretest2S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -217,7 +218,7 @@
                                                 <%=Studentresult[i].pre_Datatype_and_Variable %> --- Total:<%=Studentresult[i].Pretest2 %>
                                             </div> 
                                         <% }%>
-                                        <% if (Studentresult[i].Posttest2 != undefined) { %>
+                                        <% if (Studentresult[i].Posttest2 != 0) { %>
                                             <% if (Studentresult[i].Posttest2S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -238,7 +239,7 @@
                                     </div>
                                     <span class="quiz">Input and Output</span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest3 != undefined) { %>
+                                        <% if (Studentresult[i].Pretest3 != 0) { %>
                                             <% if (Studentresult[i].Pretest3S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -256,7 +257,7 @@
                                                 <%=Studentresult[i].pre_Input_and_Output %> --- Total:<%=Studentresult[i].Pretest3 %>
                                             </div> 
                                         <% }%>
-                                        <% if (Studentresult[i].Posttest3 != undefined) { %>
+                                        <% if (Studentresult[i].Posttest3 != 0) { %>
                                             <% if (Studentresult[i].Posttest3S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -277,7 +278,7 @@
                                     </div>
                                     <span class="quiz">Operators and Expressions</span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest4 != undefined) { %>
+                                        <% if (Studentresult[i].Pretest4 != 0) { %>
                                             <% if (Studentresult[i].Pretest4S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -296,7 +297,7 @@
                                             </div> 
                                         <% }%>
 
-                                        <% if (Studentresult[i].Posttest4 != undefined) { %>
+                                        <% if (Studentresult[i].Posttest4 != 0) { %>
                                             <% if (Studentresult[i].Posttest4S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -317,7 +318,7 @@
                                     </div>
                                     <span class="quiz">Selection Statements </span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest5 != undefined) { %>
+                                        <% if (Studentresult[i].Pretest5 != 0) { %>
                                             <% if (Studentresult[i].Pretest5S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -337,7 +338,7 @@
                                         <% }%>
 
 
-                                        <% if (Studentresult[i].Posttest5 != undefined) { %>
+                                        <% if (Studentresult[i].Posttest5 != 0) { %>
                                             <% if (Studentresult[i].Posttest5S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -358,7 +359,7 @@
                                     </div>
                                     <span class="quiz">Loop Statements</span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest6 != undefined) { %>
+                                        <% if (Studentresult[i].Pretest6 != 0) { %>
                                             <% if (Studentresult[i].Pretest6S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -378,7 +379,7 @@
                                         <% }%>
 
 
-                                        <% if (Studentresult[i].Posttest6 != undefined) { %>
+                                        <% if (Studentresult[i].Posttest6 != 0) { %>
                                             <% if (Studentresult[i].Posttest6S === "รอตรวจ") { %>
                                                 <div style="display: flex;">
                                                     <div class="status_w">Posttest</div>
@@ -399,7 +400,7 @@
                                     </div>
                                     <span class="quiz">Arrays and Strings</span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest7 != undefined) { %>
+                                        <% if (Studentresult[i].Pretest7 != 0) { %>
                                             <% if (Studentresult[i].Pretest7S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -419,7 +420,7 @@
                                         <% }%>
 
 
-                                        <% if (Studentresult[i].Posttest7 != undefined) { %>
+                                        <% if (Studentresult[i].Posttest7 != 0) { %>
                                             <% if (Studentresult[i].Posttest7S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -440,7 +441,7 @@
                                     </div>
                                     <span class="quiz">Functions</span> 
                                     <div>
-                                        <% if (Studentresult[i].Pretest8 != undefined) { %>
+                                        <% if (Studentresult[i].Pretest8 != 0) { %>
                                             <% if (Studentresult[i].Pretest8S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -460,7 +461,7 @@
                                         <% }%>
 
 
-                                        <% if (Studentresult[i].Posttest8 != undefined) { %>
+                                        <% if (Studentresult[i].Posttest8 != 0) { %>
                                             <% if (Studentresult[i].Posttest8S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status">Posttest</div>
