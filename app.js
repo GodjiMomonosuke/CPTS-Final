@@ -97,12 +97,6 @@ app.use('/project-Project_QUIZ3',
   require('./routes/student/project/3_ProjectQUIZ3.route')
 );
 
-// ******* AI ******** // 
-
-app.get('/index-ai', (req, res) => {
-  res.render('index/index_ai');
-});
-
 //** course **//
 app.use('/course-Algorithms_and_Flowcharts',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -351,4 +345,11 @@ function ensureTeacher(req, res, next) {
   }
 }
 
+
+// ... AI
+
+// Routes
+app.get('/index_ai', (req, res) => {
+  res.render('index_ai'); // ไม่จำเป็นต้องใส่ 'views/' เพราะ Express จะมองหาในโฟลเดอร์ 'views' โดยอัตโนมัติ
+});
 
