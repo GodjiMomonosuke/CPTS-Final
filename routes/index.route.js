@@ -99,9 +99,9 @@ router.get('/', async (req, res, next) => {
               var PreIntroductionBG,PreIntroductionBG2;
               PreIntroduction=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreIntroductionScore = PreIntroductionScore+PreIntroductionLv1+PreIntroductionLv2+PreIntroductionLv3;}
+                PreIntroductionScore = PreIntroductionLv1+PreIntroductionLv2+PreIntroductionLv3;}
               else{
-                PreIntroductionScore = PreIntroductionScore+PreIntroductionLv1+PreIntroductionLv2+PreIntroductionLv3+PreIntroductionLv4;}
+                PreIntroductionScore = PreIntroductionLv1+PreIntroductionLv2+PreIntroductionLv3+PreIntroductionLv4;}
                 PreIntroductionBG = "#66B7BD"
                 PreIntroductionBG2 = "#bd7b67"
                 PreIntroductionCount++;
@@ -114,9 +114,9 @@ router.get('/', async (req, res, next) => {
               var PreStringBG,PreStringBG2;
               PreString = 1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreStringScore = PreStringScore+PreStringLv1+PreStringLv2+PreStringLv3;}
+                PreStringScore = PreStringLv1+PreStringLv2+PreStringLv3;}
               else{
-                PreStringScore = PreStringScore+PreStringLv1+PreStringLv2+PreStringLv3+PreStringLv4;}
+                PreStringScore = PreStringLv1+PreStringLv2+PreStringLv3+PreStringLv4;}
                 PreStringBG = "#66B7BD"
                 PreStringBG2 = "#bd7b67"
                 PreStringCount++;
@@ -129,9 +129,9 @@ router.get('/', async (req, res, next) => {
               var PreDatatypeBG,PreDatatypeBG2;
               PreDatatype = 1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreDatatypeScore = PreDatatypeScore+PreDatatypeLv1+PreDatatypeLv2+PreDatatypeLv3;}
+                PreDatatypeScore = PreDatatypeLv1+PreDatatypeLv2+PreDatatypeLv3;}
               else{
-                PreDatatypeScore = PreDatatypeScore+PreDatatypeLv1+PreDatatypeLv2+PreDatatypeLv3+PreDatatypeLv4;}
+                PreDatatypeScore = PreDatatypeLv1+PreDatatypeLv2+PreDatatypeLv3+PreDatatypeLv4;}
                 PreDatatypeBG = "#66B7BD"
                 PreDatatypeBG2 = "#bd7b67"
                 PreDatatypeCount++;
@@ -144,9 +144,9 @@ router.get('/', async (req, res, next) => {
               var PreOperatorsBG,PreOperatorsBG2;
               PreOperators = 1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreOperatorsScore = PreOperatorsScore+PreOperatorsLv1+PreOperatorsLv2+PreOperatorsLv3;}
+                PreOperatorsScore = PreOperatorsLv1+PreOperatorsLv2+PreOperatorsLv3;}
               else{
-                PreOperatorsScore = PreOperatorsScore+PreOperatorsLv1+PreOperatorsLv2+PreOperatorsLv3+PreOperatorsLv4;}
+                PreOperatorsScore = PreOperatorsLv1+PreOperatorsLv2+PreOperatorsLv3+PreOperatorsLv4;}
                 PreOperatorsBG = "#66B7BD"
                 PreOperatorsBG2 = "#bd7b67"
                 PreOperatorsCount++;
@@ -159,9 +159,9 @@ router.get('/', async (req, res, next) => {
               var PreFlowControlBG,PreFlowControlBG2;
               PreFlowControl =1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreFlowControlScore = PreFlowControlScore+PreFlowControlLv1+PreFlowControlLv2+PreFlowControlLv3;}
+                PreFlowControlScore = PreFlowControlLv1+PreFlowControlLv2+PreFlowControlLv3;}
               else{
-                PreFlowControlScore = PreFlowControlScore+PreFlowControlLv1+PreFlowControlLv2+PreFlowControlLv3+PreFlowControlLv4;}
+                PreFlowControlScore = PreFlowControlLv1+PreFlowControlLv2+PreFlowControlLv3+PreFlowControlLv4;}
                 PreFlowControlBG = "#66B7BD"
                 PreFlowControlBG2 = "#bd7b67"
                 PreFlowControlCount++;
@@ -174,9 +174,9 @@ router.get('/', async (req, res, next) => {
               var PrePointersBG,PrePointersBG2;
               PrePointers=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PrePointersScore = PrePointersScore+PrePointersLv1+PrePointersLv2+PrePointersLv3;}
+                PrePointersScore = PrePointersLv1+PrePointersLv2+PrePointersLv3;}
               else{
-                PrePointersScore = PrePointersScore+PrePointersLv1+PrePointersLv2+PrePointersLv3+PrePointersLv4;}
+                PrePointersScore = PrePointersLv1+PrePointersLv2+PrePointersLv3+PrePointersLv4;}
                 PrePointersBG = "#66B7BD"
                 PrePointersBG2 = "#bd7b67"
                 PrePointersCount++;
@@ -189,9 +189,9 @@ router.get('/', async (req, res, next) => {
               var PreFunctionBG,PreFunctionBG2;
               PreFunction=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreFunctionScore = PreFunctionScore+PreFunctionLv1+PreFunctionLv2+PreFunctionLv3;}
+                PreFunctionScore = PreFunctionLv1+PreFunctionLv2+PreFunctionLv3;}
               else{
-                PreFunctionScore = PreFunctionScore+PreFunctionLv1+PreFunctionLv2+PreFunctionLv3+PreFunctionLv4;}
+                PreFunctionScore = PreFunctionLv1+PreFunctionLv2+PreFunctionLv3+PreFunctionLv4;}
                 PreFunctionBG = "#66B7BD"
                 PreFunctionBG2 = "#bd7b67"
                 PreFunctionCount++;
@@ -204,9 +204,9 @@ router.get('/', async (req, res, next) => {
               var PreStructureBG,PreStructureBG2;
               PreStructure=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PreStructureScore = PreStructureScore+PreStructureLv1+PreStructureLv2+PreStructureLv3;}
+                PreStructureScore = PreStructureLv1+PreStructureLv2+PreStructureLv3;}
               else{
-                PreStructureScore = PreStructureScore+PreStructureLv1+PreStructureLv2+PreStructureLv3+PreStructureLv4;}
+                PreStructureScore = PreStructureLv1+PreStructureLv2+PreStructureLv3+PreStructureLv4;}
                 PreStructureBG = "#66B7BD"
                 PreStructureBG2 = "#bd7b67"
                 PreStructureCount++;
@@ -219,9 +219,9 @@ router.get('/', async (req, res, next) => {
               var IntroductionBG,IntroductionBG2;
               Introduction=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                IntroductionScore = IntroductionScore+IntroductionLv1+IntroductionLv2+IntroductionLv3;}
+                IntroductionScore = IntroductionLv1+IntroductionLv2+IntroductionLv3;}
               else{
-                IntroductionScore = IntroductionScore+IntroductionLv1+IntroductionLv2+IntroductionLv3+IntroductionLv4;}
+                IntroductionScore = IntroductionLv1+IntroductionLv2+IntroductionLv3+IntroductionLv4;}
                 IntroductionBG = "#66B7BD"
                 IntroductionBG2 = "#bd7b67"
                 IntroductionCount++;
@@ -234,9 +234,9 @@ router.get('/', async (req, res, next) => {
               var StringBG,StringBG2;
               String=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                StringScore = StringScore+StringLv1+StringLv2+StringLv3;}
+                StringScore = StringLv1+StringLv2+StringLv3;}
               else{
-                StringScore = StringScore+StringLv1+StringLv2+StringLv3+StringLv4;}
+                StringScore = StringLv1+StringLv2+StringLv3+StringLv4;}
                 StringBG = "#66B7BD"
                 StringBG2 = "#bd7b67"
                 StringCount++;
@@ -249,9 +249,9 @@ router.get('/', async (req, res, next) => {
               var DatatypeBG,DatatypeBG2;
               Datatype=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                DatatypeScore = DatatypeScore+DatatypeLv1+DatatypeLv2+DatatypeLv3;}
+                DatatypeScore = DatatypeLv1+DatatypeLv2+DatatypeLv3;}
               else{
-                DatatypeScore = DatatypeScore+DatatypeLv1+DatatypeLv2+DatatypeLv3+DatatypeLv4;}
+                DatatypeScore = DatatypeLv1+DatatypeLv2+DatatypeLv3+DatatypeLv4;}
                 DatatypeBG = "#66B7BD"
                 DatatypeBG2 = "#bd7b67"
                 DatatypeCount++;
@@ -264,9 +264,9 @@ router.get('/', async (req, res, next) => {
               var OperatorsBG,OperatorsBG2;
               Operators=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                OperatorsScore = OperatorsScore+OperatorsLv1+OperatorsLv2+OperatorsLv3;}
+                OperatorsScore = OperatorsLv1+OperatorsLv2+OperatorsLv3;}
               else{
-                OperatorsScore = OperatorsScore+OperatorsLv1+OperatorsLv2+OperatorsLv3+OperatorsLv4;}
+                OperatorsScore = OperatorsLv1+OperatorsLv2+OperatorsLv3+OperatorsLv4;}
                 OperatorsBG = "#66B7BD"
                 OperatorsBG2 = "#bd7b67"
                 OperatorsCount++;
@@ -279,9 +279,9 @@ router.get('/', async (req, res, next) => {
               var FlowControlBG,FlowControlBG2;
               FlowControl=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                FlowControlScore = FlowControlScore+FlowControlLv1+FlowControlLv2+FlowControlLv3;}
+                FlowControlScore = FlowControlLv1+FlowControlLv2+FlowControlLv3;}
               else{
-                FlowControlScore = FlowControlScore+FlowControlLv1+FlowControlLv2+FlowControlLv3+FlowControlLv4;}
+                FlowControlScore = FlowControlLv1+FlowControlLv2+FlowControlLv3+FlowControlLv4;}
                 FlowControlBG = "#66B7BD"
                 FlowControlBG2 = "#bd7b67"
                 FlowControlCount++;
@@ -294,9 +294,9 @@ router.get('/', async (req, res, next) => {
               var PointersBG,PointersBG2;
               Pointers=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                PointersScore = PointersScore+PointersLv1+PointersLv2+PointersLv3;}
+                PointersScore = PointersLv1+PointersLv2+PointersLv3;}
               else{
-                PointersScore = PointersScore+PointersLv1+PointersLv2+PointersLv3+PointersLv4;}
+                PointersScore = PointersLv1+PointersLv2+PointersLv3+PointersLv4;}
                 PointersBG = "#66B7BD"
                 PointersBG2 = "#bd7b67"
                 PointersCount++;
@@ -309,9 +309,9 @@ router.get('/', async (req, res, next) => {
               var FunctionBG,FunctionBG2;
               Function=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                FunctionScore = FunctionScore+FunctionLv1+FunctionLv2+FunctionLv3;}
+                FunctionScore = FunctionLv1+FunctionLv2+FunctionLv3;}
               else{
-                FunctionScore = FunctionScore+FunctionLv1+FunctionLv2+FunctionLv3+FunctionLv4;}
+                FunctionScore = FunctionLv1+FunctionLv2+FunctionLv3+FunctionLv4;}
                 FunctionBG = "#66B7BD"
                 FunctionBG2 = "#bd7b67"
                 FunctionCount++;
@@ -324,9 +324,9 @@ router.get('/', async (req, res, next) => {
               var StructureBG,StructureBG2;
               Structure=1;
               if(StudentAnswer[i].scoreTeacher === undefined){
-                StructureScore = StructureScore+StructureLv1+StructureLv2+StructureLv3;}
+                StructureScore = StructureLv1+StructureLv2+StructureLv3;}
               else{
-                StructureScore = StructureScore+StructureLv1+StructureLv2+StructureLv3+StructureLv4;}
+                StructureScore = StructureLv1+StructureLv2+StructureLv3+StructureLv4;}
                 StructureBG = "#66B7BD"
                 StructureBG2 = "#bd7b67"
                 StructureCount++;

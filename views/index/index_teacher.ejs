@@ -315,18 +315,19 @@
                         const data = {
                             labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
                             datasets: [{
+                                data: [<%= PreKnowledgePercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,<%= PreWritePercent %>],
+                                label: "Pre-test",
+                                borderColor: '#2F3C3D',
+                                backgroundColor: '#66b7bd83',
+                                
+                            },
+                                
+                            {
                                 data: [<%= KnowledgePercent %>,<%= TracePercent %>,<%= ExplainPercent %>,<%= WritePercent %>],
                                 label: "Post-test",
                                 borderColor: '#2F3C3D',
                                 fill: true,
                                 backgroundColor: '#bd7b677e',
-                            },
-                                
-                            {
-                                data: [<%= PreKnowledgePercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,<%= PreWritePercent %>],
-                                label: "Pre-test",
-                                borderColor: '#2F3C3D',
-                                backgroundColor: '#66b7bd83',
                             }]
                         };
                         // config 
@@ -398,11 +399,11 @@
                             <div class="card_box"><!-- Lab 1-->
                                 <div class="card_title">
                                     <p class="score_title">Lab 1</p>
-                                    <div class="pie animate" style="--p:<%= (PreIntroductionScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                    <div class="pie animate" style="--p:<%= ((PreIntroductionScore/PreIntroductionCount)*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PreIntroductionCount === 0) { %>
-                                            <%= Math.round(PreIntroductionScore/1)%>
+                                            <%= (PreIntroductionScore/1)%>
                                         <% } else { %>
-                                            <%= Math.round(PreIntroductionScore/PreIntroductionCount) %>
+                                            <%= (PreIntroductionScore/PreIntroductionCount) %>
                                         <% }%>
                                     </div>
                                     <div class="TeacherBar">
@@ -474,7 +475,7 @@
                                                 <% if (PreIntroductionCount === 0) { %>
                                                     <%= ((PreIntroductionLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((PreIntroductionLv4/PreIntroductionCount)/25)*100 %>%
+                                                    <%= Math.round(((PreIntroductionLv4/PreIntroductionCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -561,7 +562,7 @@
                                                 <% if (PreStringCount === 0) { %>
                                                     <%= ((PreStringLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((PreStringLv4/PreStringCount)/25)*100 %>%
+                                                    <%= Math.round(((PreStringLv4/PreStringCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -648,7 +649,7 @@
                                                 <% if (PreDatatypeCount === 0) { %>
                                                     <%= ((PreDatatypeLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((PreDatatypeLv4/PreDatatypeCount)/25)*100 %>%
+                                                    <%= Math.round(((PreDatatypeLv4/PreDatatypeCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -735,7 +736,7 @@
                                                 <% if (PreOperatorsCount === 0) { %>
                                                     <%= ((PreOperatorsLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((PreOperatorsLv4/PreOperatorsCount)/25)*100 %>%
+                                                    <%= Math.round(((PreOperatorsLv4/PreOperatorsCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -822,7 +823,7 @@
                                                 <% if (PreFlowControlCount === 0) { %>
                                                     <%= ((PreFlowControlLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((PreFlowControlLv4/PreFlowControlCount)/25)*100 %>%
+                                                    <%= Math.round(((PreFlowControlLv4/PreFlowControlCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -909,7 +910,7 @@
                                                 <% if (PrePointersCount === 0) { %>
                                                     <%= ((PrePointersLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((PrePointersLv4/PrePointersCount)/25)*100 %>%
+                                                    <%= Math.round(((PrePointersLv4/PrePointersCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -996,7 +997,7 @@
                                                 <% if (PreFunctionCount === 0) { %>
                                                     <%= ((PreFunctionLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((PreFunctionLv4/PreFunctionCount)/25)*100 %>%
+                                                    <%= Math.round(((PreFunctionLv4/PreFunctionCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1083,7 +1084,7 @@
                                                 <% if (PreStructureCount === 0) { %>
                                                     <%= ((PreStructureLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((PreStructureLv4/PreStructureCount)/25)*100 %>%
+                                                    <%= Math.round(((PreStructureLv4/PreStructureCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1094,16 +1095,16 @@
                         </div>
                         
                      <!-- Post-test Score -->
-                        <div><%= (PreStringCount)%>
+                        <div>
                             <b>Post-test</b>
                             <div class="card_box"><!-- Lab 1-->
                                 <div class="card_title">
                                     <p class="score_title">Lab 1</p>
-                                    <div class="pie animate" style="--p:<%= (IntroductionScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
+                                    <div class="pie animate" style="--p:<%= ((IntroductionScore)*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (IntroductionCount === 0) { %>
                                             <%= (IntroductionScore/1)%>
                                         <% } else { %>
-                                            <%= (IntroductionScore/IntroductionCount) %>
+                                            <%= (IntroductionScore) %>
                                         <% }%>
                                     </div>
                                     <div class="TeacherBar">
@@ -1175,7 +1176,7 @@
                                                 <% if (IntroductionCount === 0) { %>
                                                     <%= ((IntroductionLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((IntroductionLv4/IntroductionCount)/25)*100 %>%
+                                                    <%= Math.round(((IntroductionLv4/IntroductionCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1190,7 +1191,7 @@
                                         <% if (StringCount === 0) { %>
                                             <%= (StringScore/1)%>
                                         <% } else { %>
-                                            <%= (StringScore/StringCount) %>
+                                            <%= (StringScore) %>
                                         <% }%>
                                     </div>    
                                     <div class="TeacherBar">
@@ -1262,7 +1263,7 @@
                                                 <% if (StringCount === 0) { %>
                                                     <%= ((StringLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((StringLv4/StringCount)/25)*100 %>%
+                                                    <%= Math.round(((StringLv4/StringCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>                
@@ -1277,7 +1278,7 @@
                                         <% if (DatatypeCount === 0) { %>
                                             <%= (DatatypeScore/1)%>
                                         <% } else { %>
-                                            <%= (DatatypeScore/DatatypeCount) %>
+                                            <%= (DatatypeScore) %>
                                         <% }%>
                                     </div>    
                                     <div class="TeacherBar">
@@ -1349,7 +1350,7 @@
                                                 <% if (DatatypeCount === 0) { %>
                                                     <%= ((DatatypeLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((DatatypeLv4/DatatypeCount)/25)*100 %>%
+                                                    <%= Math.round(((DatatypeLv4/DatatypeCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>             
@@ -1364,7 +1365,7 @@
                                         <% if (OperatorsCount === 0) { %>
                                             <%= (OperatorsScore/1)%>
                                         <% } else { %>
-                                            <%= (OperatorsScore/OperatorsCount) %>
+                                            <%= (OperatorsScore) %>
                                         <% }%>
                                     </div>   
                                     <div class="TeacherBar">
@@ -1436,10 +1437,10 @@
                                                 <% if (OperatorsCount === 0) { %>
                                                     <%= ((OperatorsLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((OperatorsLv4/OperatorsCount)/25)*100 %>%
+                                                    <%= Math.round(((OperatorsLv4/OperatorsCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
-                                        </div>   
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1451,7 +1452,7 @@
                                         <% if (FlowControlCount === 0) { %>
                                             <%= (FlowControlScore/1)%>
                                         <% } else { %>
-                                            <%= (FlowControlScore/FlowControlCount) %>
+                                            <%= (FlowControlScore) %>
                                         <% }%>
                                     </div>     
                                     <div class="TeacherBar">
@@ -1523,7 +1524,7 @@
                                                 <% if (FlowControlCount === 0) { %>
                                                     <%= ((FlowControlLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((FlowControlLv4/FlowControlCount)/25)*100 %>%
+                                                    <%= Math.round(((FlowControlLv4/FlowControlCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1538,7 +1539,7 @@
                                         <% if (PointersCount === 0) { %>
                                             <%= (PointersScore/1)%>
                                         <% } else { %>
-                                            <%= (PointersScore/PointersCount) %>
+                                            <%= (PointersScore) %>
                                         <% }%>
                                     </div>  
                                     <div class="TeacherBar">
@@ -1610,7 +1611,7 @@
                                                 <% if (PointersCount === 0) { %>
                                                     <%= ((PointersLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((PointersLv4/PointersCount)/25)*100 %>%
+                                                    <%= Math.round(((PointersLv4/PointersCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1625,7 +1626,7 @@
                                         <% if (FunctionCount === 0) { %>
                                             <%= (FunctionScore/1)%>
                                         <% } else { %>
-                                            <%= (FunctionScore/FunctionCount) %>
+                                            <%= (FunctionScore) %>
                                         <% }%>
                                     </div>     
                                     <div class="TeacherBar">
@@ -1697,7 +1698,7 @@
                                                 <% if (FunctionCount === 0) { %>
                                                     <%= ((FunctionLv4/1)/25)*100%>%
                                                 <% } else { %>
-                                                    <%= ((FunctionLv4/FunctionCount)/25)*100 %>%
+                                                    <%= Math.round(((FunctionLv4/FunctionCount)/25)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>                  
@@ -1712,7 +1713,7 @@
                                         <% if (StructureCount === 0) { %>
                                             <%= (StructureScore/1)%>
                                         <% } else { %>
-                                            <%= (StructureScore/StructureCount) %>
+                                            <%= (StructureScore) %>
                                         <% }%>
                                     </div> 
                                     <div class="TeacherBar">
@@ -1784,7 +1785,7 @@
                                                 <% if (StructureCount === 0) { %>
                                                     <%= ((StructureLv4/1)/5)*100%>%
                                                 <% } else { %>
-                                                    <%= ((StructureLv4/StructureCount)/5)*100 %>%
+                                                    <%= Math.round(((StructureLv4/StructureCount)/5)*100) %>%
                                                 <% }%>
                                             </div>   
                                         </div>          
