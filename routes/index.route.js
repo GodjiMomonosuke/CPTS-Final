@@ -91,6 +91,10 @@ router.get('/', async (req, res, next) => {
 
           
           for(let i = 0; i < studentAll; i++) {
+            if( StudentAnswer[i].contentName ==='question' ){
+              var answer = "";
+              answer = StudentAnswer[i].question;
+            }
             if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)' ){
               PreIntroductionLv1 = PreIntroductionLv1+StudentAnswer[i].scoreLV1;
               PreIntroductionLv2 = PreIntroductionLv2+StudentAnswer[i].scoreLV2;
@@ -482,7 +486,7 @@ router.get('/', async (req, res, next) => {
           var checksumper = KnowledgePercent+TracePercent+ExplainPercent+WritePercent
           console.log("\nCHECKSUM : " ,checksumper); //100
 
-          res.render('index/index_teacher', { person ,sortedCourse,sortedProject,
+          res.render('index/index_teacher', { person ,sortedCourse,sortedProject,answer,
             pretest_progress,posttest_progress,
             PreKnowledgePercent,PreTracePercent,PreExplainPercent,PreWritePercent,
             KnowledgePercent,TracePercent,ExplainPercent,WritePercent,
@@ -919,6 +923,10 @@ router.get('/', async (req, res, next) => {
                 var PosttestScore1 = "",PosttestScore2 = "",PosttestScore3 = "",PosttestScore4 = "",PosttestScore5 = "",PosttestScore6 = "",PosttestScore7 = "",PosttestScore8 = "";
         
                 for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {
+                  if( StudentAnswer[i].contentName ==='question' ){
+                    var answer = "";
+                    answer = StudentAnswer[i].question;
+                  }
                   if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)') {   
                       IntroductionLV1 = StudentAnswer[i].scoreLV1;
                       IntroductionLV2 = StudentAnswer[i].scoreLV2;
@@ -1303,7 +1311,7 @@ router.get('/', async (req, res, next) => {
                     
 
 
-                    res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,
+                    res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,answer,
                       PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score,
                       Quiz1Score,Quiz2Score,Quiz3Score,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,

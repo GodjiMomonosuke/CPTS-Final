@@ -75,6 +75,7 @@ app.use('/course',
   ensureStudent,
   require('./routes/student/course/course.route')
 );
+
 /** project */
 app.use('/project',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -265,6 +266,16 @@ app.use('/pretest8_check',
   require('./routes/student/pretest_check/pretest8_check.route')
 );
 
+
+
+app.use('/question',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/question.route')
+);
+
+
+
 // ****** teacher ******** // 
 app.use('/class',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -275,6 +286,11 @@ app.use('/check',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureTeacher,
   require('./routes/teacher/check.route')
+);
+app.use('/answer',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureTeacher,
+  require('./routes/teacher/answer.route')
 );
 app.use('/classStudent',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
