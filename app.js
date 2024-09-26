@@ -12,6 +12,8 @@ const { roles } = require('./utils/constants');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 
+const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require('@google/generative-ai');
+
 // Initialization
 const app = express();
 app.use(morgan('dev'));
@@ -19,6 +21,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(express.json());
+const MODEL_NAME = "gemini-pro";
+const API_KEY = process.env.API_KEY;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -351,5 +357,107 @@ function ensureTeacher(req, res, next) {
 // Routes
 app.get('/index_ai', (req, res) => {
   res.render('index_ai'); // ไม่จำเป็นต้องใส่ 'views/' เพราะ Express จะมองหาในโฟลเดอร์ 'views' โดยอัตโนมัติ
+});
+
+// AI
+async function runChat(userInput) {
+  const genAI = new GoogleGenerativeAI(API_KEY);
+  const model = genAI.getGenerativeModel({ model: MODEL_NAME });
+
+  const generationConfig = {
+    temperature: 0.9,
+    topK: 1,
+    topP: 1,
+    maxOutputTokens: 1000,
+  };
+
+  const safetySettings = [
+    {
+      category: HarmCategory.HARM_CATEGORY_HARASSMENT,
+      threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+    },
+    // ... other safety settings
+  ];
+
+  const chat = model.startChat({
+    generationConfig,
+    safetySettings,
+    history: [
+      {
+        role: "user",
+        parts: [
+          {text: "hi"},
+        ],
+      },
+      {
+        role: "model",
+        parts: [
+          {text: "สวัสดีค่ะ \n\nมีอะไรให้ฉันช่วยไหมคะ  \n"},
+        ],
+      },
+      {
+        role: "user",
+        parts: [
+          {text: "hello"},
+        ],
+      },
+      {
+        role: "model",
+        parts: [
+          {text: "สวัสดีค่ะ \n\nยินดีที่ได้คุยด้วย  มีอะไรให้ช่วยไหมคะ \n"},
+        ],
+      },
+      {
+        role: "user",
+        parts: [
+          {text: "สวัสดี"},
+        ],
+      },
+      {
+        role: "model",
+        parts: [
+          {text: "สวัสดีค่ะ ยินดีที่ได้คุยด้วยเช่นกัน \n\nมีอะไรให้ฉันช่วยไหมเอ่ย? \n"},
+        ],
+      },
+      {
+        role: "user",
+        parts: [
+          {text: "CPTS คือ"},
+        ],
+      },
+      {
+        role: "model",
+        parts: [
+          {text: "CPTS คือ website ช่วยในการเรียนรู้การเขียนโปรแกรม\n"},
+        ],
+      },
+    ],
+  });
+
+  const result = await chat.sendMessage(userInput);
+  const response = result.response;
+  return response.text();
+}
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index_ai');
+});
+app.get('/loader.gif', (req, res) => {
+  res.sendFile(__dirname + '/loader.gif');
+});
+app.post('/chat', async (req, res) => {
+  try {
+    const userInput = req.body?.userInput;
+    console.log('incoming /chat req', userInput)
+    if (!userInput) {
+      return res.status(400).json({ error: 'Invalid request body' });
+    }
+
+    const response = await runChat(userInput);
+    res.json({ response });
+  } catch (error) {
+    console.error('Error in chat endpoint:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 

@@ -11,90 +11,71 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-color: #f7f7f7;
-      margin: 0;
+      background-color: #f0f0f0;
     }
-
+    
     #chat-container {
-      background-color: #ffffff;
+      background-color: #fff;
       border-radius: 10px;
       padding: 20px;
-      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-      width: 500px;
-      height: 600px;
-      display: flex;
-      flex-direction: column;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      width: 400px;
     }
-
+    
     h1 {
       text-align: center;
       margin-bottom: 20px;
-      font-size: 24px;
-      color: #333;
     }
-
+    
     #chat-history {
-      flex-grow: 1;
-      overflow-y: auto;
-      border: 1px solid #ddd;
-      padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      background-color: #f9f9f9;
+      height: 300px;
+      overflow-y: scroll;
     }
-
-    .user-message, .bot-message {
-      padding: 10px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      max-width: 75%;
-    }
-
+    
     .user-message {
-      align-self: flex-end;
-      background-color: #e0f7fa;
-    }
-
-    .bot-message {
-      align-self: flex-start;
+      text-align: right;
+      padding: 10px;
       background-color: #f0f0f0;
+      border-radius: 10px;
+      margin-bottom: 5px;
     }
-
+    
+    .bot-message {
+      text-align: left;
+      padding: 10px;
+      background-color: #e0f0e0;
+      border-radius: 10px;
+      margin-bottom: 5px;
+    }
+    
     form {
       display: flex;
-      border-top: 1px solid #ddd;
-      padding-top: 10px;
     }
-
+    
     input {
       flex-grow: 1;
+      margin-right: 10px;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      margin-right: 10px;
     }
-
+    
     button {
       background-color: #4CAF50;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
     }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
     #loader {
-      display: none; /* Hide by default */
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  </style>
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+    </style>
 </head>
 <body>
   <!-- Chat container -->
@@ -109,7 +90,7 @@
 
   <!-- Loader -->
   <div id="loader">
-    <img src="loader.gif" width="150px" alt="Loading...">
+    <img src="/images/loader.gif" width="150px" alt="Loading...">
   </div>
 
   <script>
@@ -145,7 +126,11 @@
 
     form.addEventListener('submit', (event) => {
       event.preventDefault(); // Prevent form submission
-      sendMessage();
+      const loader = document.getElementById('loader');
+      loader.style.display = 'block'; // Show the loader
+      sendMessage().finally(() => {
+      loader.style.display = 'none'; // Hide the loader after the message is sent
+    });;
     });
   </script>
 </body>
