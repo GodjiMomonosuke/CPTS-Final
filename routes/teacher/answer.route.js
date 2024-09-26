@@ -17,14 +17,18 @@ router.get('/', async (req, res, next) => {
             if (err) throw err;
             var student = []
             for (let i = 0; i < Object.keys(result).length; i++) {
-                if(result[i].TeacherAnswer === undefined){
-                    student.push(result[i])
-                }
+                if(result[i].contentName === "question") {
+                    if(result[i].scoreTeacher === undefined){
+                        
+                            student.push(result[i])
+                    }
+                        
+                    }
             }
             if(Object.keys(student).length === 0){
                 student.push("null")
             }
-            res.render('index/teacher', { person ,student});
+            res.render('teacher/answer', { person ,student});
             db.close();
         });
       });

@@ -70,6 +70,27 @@
 
 <br><br><br>
     <div id = "content" class="container" >
+        <%- include('../teacher/answer') %>
+
+                        <div id = "content" class="container">
+                            <h4 style="color: #000;" id = 'content'>Question Board</h4>   
+                            <div class="box bg-light  mb-5 shadow" style="padding: 10px; border-radius: 5px;">
+                                <table class="table text-center">
+                                    <tbody class="text-end">
+                                        <% if (contentName  === 0) { %>
+                        
+                                       
+                                        <% }%>
+                                
+                                                <td style="width: 10px;"><%=answer%> </td>
+                                              
+                                                <tr>
+                                         
+                                    </tbody>
+                                </table>       
+                            </div>
+                        </div>
+               
         <div  class="group2">
             <div>
             <h4 class="chakra-petch-regular">Progress</h4>  
@@ -348,27 +369,28 @@
                     </script>
                 </div>
             </div>
-            <div>
+            <div><!-- Project score-->
                 <h4 class="chakra-petch-regular">Project-Quiz</h4>  <br>
                 <div style="display: flex;">
                     <div class="quiz_box">
                         <p class="score_title">Quiz 1</p>
-                        <div class="pie animate" style="--p:<%= (TicTacToeScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= TicTacToeScore %></div>
+                        <div class="pie animate" style="--p:<%= TicTacToeScore*4 %>;--c:#bd7b67; font-size: 14px;"> <%= TicTacToeScore %></div>
                     </div>
 
                     <div class="quiz_box">
                         <p class="score_title">Quiz 2</p>
-                        <div class="pie animate" style="--p:<%= (LibrarySystemScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= LibrarySystemScore %></div>
+                        <div class="pie animate" style="--p:<%= LibrarySystemScore*4 %>;--c:#bd7b67; font-size: 14px;"> <%= LibrarySystemScore %></div>
                     </div>                                   
                     <div class="quiz_box">
                         <p class="score_title">Quiz 3</p>
-                        <div class="pie animate" style="--p:<%= (RoshamboScore*5)/2 %>;--c:#bd7b67; font-size: 14px;"> <%= RoshamboScore %></div>                  
+                        <div class="pie animate" style="--p:<%= RoshamboScore*4 %>;--c:#bd7b67; font-size: 14px;"> <%= RoshamboScore %></div>                  
                     </div> 
                 </div>
                 
             </div>
         
         </div><hr>
+        
         <div class="row" > 
             <div class="group2"> <!-- แบบทดสอบที่ผู้เรียนทำคะแนนได้มากสุด -->
                 <!--<div class="col-sm" >  sortedCourse 
@@ -392,8 +414,7 @@
                 </div>-->
                
                      <!-- Pre-test Score -->
-                     <h4 class="chakra-petch-regular">Score</h4>
-                      <div></div>
+                     <h4 class="chakra-petch-regular">Score</h4><div></div>
                         <div>
                             <b>Pre-test</b>
                             <div class="card_box"><!-- Lab 1-->
