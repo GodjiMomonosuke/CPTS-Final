@@ -92,8 +92,8 @@ router.get('/', async (req, res, next) => {
           
           for(let i = 0; i < studentAll; i++) {
             if( StudentAnswer[i].contentName ==='question' ){
-              var answer = "";
-              answer = StudentAnswer[i].question;
+              var question = StudentAnswer[i].question;
+              var answer = StudentAnswer[i].scoreTeacher;
             }
             if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)' ){
               PreIntroductionLv1 = PreIntroductionLv1+StudentAnswer[i].scoreLV1;
@@ -486,7 +486,7 @@ router.get('/', async (req, res, next) => {
           var checksumper = KnowledgePercent+TracePercent+ExplainPercent+WritePercent
           console.log("\nCHECKSUM : " ,checksumper); //100
 
-          res.render('index/index_teacher', { person ,sortedCourse,sortedProject,answer,
+          res.render('index/index_teacher', { person ,sortedCourse,sortedProject,answer,question,
             pretest_progress,posttest_progress,
             PreKnowledgePercent,PreTracePercent,PreExplainPercent,PreWritePercent,
             KnowledgePercent,TracePercent,ExplainPercent,WritePercent,
@@ -922,6 +922,7 @@ router.get('/', async (req, res, next) => {
                 var PretestScore1 = "",PretestScore2 = "",PretestScore3 = "",PretestScore4 = "",PretestScore5 = "",PretestScore6 = "",PretestScore7 = "",PretestScore8 = "";
                 var PosttestScore1 = "",PosttestScore2 = "",PosttestScore3 = "",PosttestScore4 = "",PosttestScore5 = "",PosttestScore6 = "",PosttestScore7 = "",PosttestScore8 = "";
         
+                
                 for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {
                   if( StudentAnswer[i].contentName ==='question' ){
                     var answer = "";

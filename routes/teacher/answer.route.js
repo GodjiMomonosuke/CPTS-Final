@@ -17,14 +17,14 @@ router.get('/', async (req, res, next) => {
             if (err) throw err;
             var student = []
             for (let i = 0; i < Object.keys(result).length; i++) {
-                if(result[i].TeacherAnswer === undefined){
-                    student.push(result[i])
-                }
+                    if(result[i].scoreLV1 === undefined){
+                        student.push(result[i])
+                    }
             }
             if(Object.keys(student).length === 0){
                 student.push("null")
             }
-            res.render('index/teacher', { person ,student});
+            res.render('teacher/answer', { person ,student});
             db.close();
         });
       });
@@ -34,7 +34,8 @@ router.get('/', async (req, res, next) => {
 /** teacher send student score */
 router.post('/submit', async (req, res, next) => {
     const person = req.user;
-
+    var answer = req.body.answer;
+    var idStudent = req.body.idStudent;
     
     if(idStudent === ""){}
     else{
@@ -42,7 +43,7 @@ router.post('/submit', async (req, res, next) => {
             if (err) throw err;
             var dbo = db.db(mydatabase);
             var myquery = {_id:ObjectId(idStudent)};
-            var newvalues = { $set: {scoreTeacher: score ,checkedBy:person.email} };
+            var newvalues = { $set: {scoreTeacher: answer ,checkedBy:person.email} };
             dbo.collection("StudentAnswer").updateOne(myquery, newvalues, function(err, res) {
             if (err) throw err;
             db.close();
