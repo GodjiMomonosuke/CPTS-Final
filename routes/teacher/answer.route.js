@@ -17,7 +17,7 @@ router.get('/', async (req, res, next) => {
             if (err) throw err;
             var student = []
             for (let i = 0; i < Object.keys(result).length; i++) {
-                    if(result[i].scoreTeacher === undefined){
+                    if(result[i].scoreLV1 === undefined){
                         student.push(result[i])
                     }
             }

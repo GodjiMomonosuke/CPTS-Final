@@ -1,20 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+
+        .button {
+            padding: 5px;
+            color: #ffffff;
+            background-color: #b5db9a;
+            border-radius: 3px;
+            border: solid #444444;
+            width: 100px;
+            height: 40px;
+            margin: 4px 0 0;
+            color: #444444;
+        }
+            
+        }
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/home1.css' />
+    <link rel='stylesheet' href='stylesheets/compiler_line.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>answer</title>
+</head>
+
+<body style="background-color: #cad19f;">
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+
+<br><br><br>
+    <div id="content" class="container">
+    <form action="/check/submit" method="post" autocomplete="off" >
+    <input type="hidden" id="idStudent" name="idStudent" value="<%= student[0]._id %>">
+
+        <div class="row align-items-start">
+            <div class="col-8">
+                <h1>คำถาม</h1>
+            </div>
+        </div>
+        
+        <%# START %> 
+        <div class="card bg-light shadow">
+            <div class="card-header">
+
+                <b> <%= student[0].contentName %> </b>  
+            </div>
+            <div class="card-body">
+                <% if(student[0] === "null" ){ %>
+                    ไม่มีคำถาม
+                        
+                    <% } else { %>
+                        <div class="row align-items-start">
+
+                            <div class="col">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><b>E-mail</b></span>
+                                    <span class="input-group-text text-uppercase"><%= student[0].email %> </span>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><b>Name</b></span>
+                                    <span class="input-group-text text-uppercase"><%= student[0].name %> </span>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><b>เวลาที่ส่ง</b></span>
+                                    <span class="input-group-text text-uppercase"><%= student[0].times %></span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><b>ครั้งที่ทำ</b></span>
+                                    <span class="input-group-text text-uppercase"><%= student[0].timetodo %></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <script>
+                            const textarea = document.querySelector("textarea");
+                            textarea.addEventListener("keyup", e =>{
+                              textarea.style.height = "63px";
+                              let scHeight = e.target.scrollHeight;
+                              textarea.style.height = `${scHeight}px`;
+                            });
+                          </script>
+                        <!--ข้อที่ 16-->
+                        <span class="input-group-text"><b>ข้อ 16</b></span>
+                        <div class="group2">
+
+                        </div>
+                        
+                            <div class="col-sm"> 
+                                <div class="card-body shadow rounded">
+                                    <span ><b>ข้อ 16.1</b> <%= student[0].ADRI1_1 %> </span>
+                                    <textarea style="height: 100%" class="form-control" name="code" rows="15" ><%= student[0].expResult17%></textarea>
+                                    <br>
+                                </div>
+                                <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="3" step="0.5" name="answer" id="studentScore" value="" placeholder="ข้อ 16.1">
+                            </div>
 
 
+            
+        </div>
+        <br>
+        <p style="font-size: 16px; margin: 0;">กด "เสร็จสิ้น"เพื่อส่งคะแนน</p>
+        <button type="submit"  class="button btn-outline-dark" >เสร็จสิ้น</button>
 
-<%# START %> 
-<form action="/answer/submit" method="post" autocomplete="off" >
-    <textarea class="" placeholder="คำตอบ" style="width: 300px;" rows="3" cols="10" name="answer" required></textarea>
+    </div>    
 
+        <% } %>
+        <%# END %> 
 
-    <%= student[0].contentName %>
-    <%= student[0].question %>
-    <%# SUBMIT %> 
-    <!-- Button trigger modal -->
-    <div class="">
-        <button type="submit" class="btn btn-dark" value="Submits" id="check" name="check">Send</button>
-    </div>
+ 
+
 </form> 
+<br>
 
-<%# END %> 
 
+<script src="javascripts/compilerStyle.js"></script>
+</body>
 
+</html>

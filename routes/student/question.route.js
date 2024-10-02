@@ -11,9 +11,15 @@ var ADRI_Answer = ""
 
 router.post('/submit', async (req, res, next) => {
   const person = req.user;
-  var question = req.body.question;
-  var code = "XXX"
-  var currentQuiz = "question" //*** */
+
+  var code = req.body.code;
+  var lang = req.body.lang;
+  var sendLink16 = req.body.sendLink16
+  var expResult16 = req.body.expResult16
+  var expResult17 = req.body.expResult17
+  var question = req.body.question
+
+  var currentProject = "TicketBookingSystem-(Project_quiz1)";
   var timetodo = 0;
 
   //*** COMPILER */
@@ -32,7 +38,7 @@ router.post('/submit', async (req, res, next) => {
         if (err) throw err;
         if(Object.keys(result).length >= 1){
           for (let i = 0; i < Object.keys(result).length; i++) {
-            if(result[i].contentName === currentQuiz) timetodo++;
+            if(result[i].contentName === currentProject) timetodo++;
           }
         }
         MongoClient.connect(url, function(err, db) {
@@ -40,13 +46,17 @@ router.post('/submit', async (req, res, next) => {
           var dbo = db.db(mydatabase);
           var myobj = { 
             timetodo:timetodo+1,
-                times: new Date().toLocaleString(), 
-                email: person.email,
-                name: person.name,
-                studentID: person.studentID,
-                role:person.role,
-                contentName:currentQuiz,
-                question:question
+            times: new Date().toLocaleString(), 
+            email: person.email,
+            role:person.role,
+            contentName:currentProject,
+            lang:lang,
+            sendLink16:sendLink16,
+            code:code,
+            output:dataOut,
+            expResult16:expResult16,
+            expResult17:expResult17,
+            question:question
 
             /*ADRI:ADRI,
             ADRI_Answer:ADRI_Answer*/
