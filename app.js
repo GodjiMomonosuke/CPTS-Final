@@ -410,25 +410,13 @@ async function runChat(userInput) {
       {
         role: "user",
         parts: [
-          {text: "สวัสดี"},
+          {text: "geekcodecraft คืออะไร"},
         ],
       },
       {
         role: "model",
         parts: [
-          {text: "สวัสดีค่ะ ยินดีที่ได้คุยด้วยเช่นกัน \n\nมีอะไรให้ฉันช่วยไหมเอ่ย? \n"},
-        ],
-      },
-      {
-        role: "user",
-        parts: [
-          {text: "CPTS คือ"},
-        ],
-      },
-      {
-        role: "model",
-        parts: [
-          {text: "CPTS คือ website ช่วยในการเรียนรู้การเขียนโปรแกรม\n"},
+          {text: "เว็บไซต์ การเรียนเขียนโปรแกรมมิ่ง"},
         ],
       },
     ],
