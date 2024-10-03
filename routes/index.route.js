@@ -93,7 +93,7 @@ router.get('/', async (req, res, next) => {
           for(let i = 0; i < studentAll; i++) {
             if( StudentAnswer[i].contentName ==='question' ){
               var question = StudentAnswer[i].question;
-              var answer = StudentAnswer[i].scoreTeacher;
+              var answer = StudentAnswer[i].answer;
             }
             if( StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Pre-test)' ){
               PreIntroductionLv1 = PreIntroductionLv1+StudentAnswer[i].scoreLV1;
