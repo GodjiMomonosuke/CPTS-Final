@@ -293,6 +293,11 @@ app.use('/check',
   ensureTeacher,
   require('./routes/teacher/check.route')
 );
+app.use('/checkQuiz',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureTeacher,
+  require('./routes/teacher/checkQuiz.route')
+);
 app.use('/answer',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureTeacher,

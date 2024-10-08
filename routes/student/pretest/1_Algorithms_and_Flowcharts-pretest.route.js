@@ -96,6 +96,7 @@ router.post('/submit', async (req, res, next) => {
   var sendLink192 = req.body.sendLink192
   var sendLink201 = req.body.sendLink201
   var sendLink202 = req.body.sendLink202
+  var scoreQuiz = ""
 
   //var ImproveResult = ADRI_Expect
   //var Improvevariable = req.body.Improvevariable
@@ -238,6 +239,7 @@ router.post('/submit', async (req, res, next) => {
                 expResult20:expResult20,
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
+                scoreQuiz:scoreQuiz,
                 ADRI1:ADRI1,
                 ADRI1_1:ADRI1_1,
                 ADRI1_2:ADRI1_2,
