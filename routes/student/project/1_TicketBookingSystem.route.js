@@ -17,6 +17,7 @@ router.post('/submit', async (req, res, next) => {
   var sendLink16 = req.body.sendLink16
   var expResult16 = req.body.expResult16
   var expResult17 = req.body.expResult17
+  var scoreTeacher = ""
 
   var currentProject = "TicketBookingSystem-(Project_quiz1)";
   var timetodo = 0;
@@ -55,6 +56,8 @@ router.post('/submit', async (req, res, next) => {
             output:dataOut,
             expResult16:expResult16,
             expResult17:expResult17,
+            ADRI:ADRI,
+            scoreTeacher:scoreTeacher
 
             /*ADRI:ADRI,
             ADRI_Answer:ADRI_Answer*/
