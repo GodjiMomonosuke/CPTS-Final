@@ -7,6 +7,10 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 var ADRI = "https://drive.google.com/file/d/1PpWrOPCdhHaGmN-OWPOpa4aYoqvlZeAq/preview"
+var ADRI1 = "Flowchart ใช้ draw.io (30 คะแนน)"
+var ADRI2 = "Source Code ที่เขียนขึ้น (50 คะแนน)"
+var ADRI3 = "แสดงผลลัพธ์ของโปรแกรม (10 คะแนน)"
+var ADRI4 = "คำถาม: ถ้าต้องการแสดงข้อมูล ที่อยู่ ของผู้จอง ตั้งแต่บ้านเลขที่ หมู่ที่ ตำบล อำเภอ จังหวัด และรหัสไปรษณีย์ ต้องใช้คำสั่งใดในการรับค่าของข้อมูลนี้ (10 คะแนน)"
 var ADRI_Answer = ""
 
 router.post('/submit', async (req, res, next) => {
@@ -48,6 +52,7 @@ router.post('/submit', async (req, res, next) => {
             timetodo:timetodo+1,
             times: new Date().toLocaleString(), 
             email: person.email,
+            name: person.name,
             role:person.role,
             contentName:currentProject,
             lang:lang,
@@ -57,6 +62,7 @@ router.post('/submit', async (req, res, next) => {
             expResult16:expResult16,
             expResult17:expResult17,
             ADRI:ADRI,
+            ADRI1:ADRI1,ADRI2:ADRI2,ADRI3:ADRI3,ADRI4:ADRI4,
             scoreTeacher:scoreTeacher
 
             /*ADRI:ADRI,
