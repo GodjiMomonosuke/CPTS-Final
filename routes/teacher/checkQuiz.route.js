@@ -50,7 +50,7 @@ router.post('/submit', async (req, res, next) => {
             if (err) throw err;
             var dbo = db.db(mydatabase);
             var myquery = {_id:ObjectId(idStudent)};
-            var newvalues = { $set: {scoreTeacher: score ,checkedBy:person.email} };
+            var newvalues = { $set: {scoreQuiz: score ,checkedBy:person.email} };
             dbo.collection("StudentAnswer").updateOne(myquery, newvalues, function(err, res) {
             if (err) throw err;
             db.close();

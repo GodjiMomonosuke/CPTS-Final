@@ -116,14 +116,14 @@
                                 <td class="text-start"> <!-- Project Quiz -->
                                     <span class="quiz">Project QUIZ1 </span>
                                     <div>
-                                        <% if (Studentresult[i].TicketBookingSystemScore != undefined) { %>
+                                        <% if (Studentresult[i].TicketBookingSystem === "รอตรวจ") { %>
                                             <div style="display: flex;">
-                                                <div class="status">Pretest</div>
+                                                <div class="status_w">Pretest</div>
                                                 <%=Studentresult[i].TicketBookingSystem %>
                                             </div> 
                                         <% }else{ %>
                                             <div style="display: flex;">
-                                                <div class="status_n">Pretest</div>
+                                                <div class="status">Pretest</div>
                                                 <%=Studentresult[i].TicketBookingSystem %>
                                             </div> 
                                         <% }%>
