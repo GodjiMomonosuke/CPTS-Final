@@ -53,11 +53,12 @@
                                     <div class="info">Name</div> <%=Studentresult[i].name %> <br>
                                     <div class="info">Course</div> <%=Studentresult[i].Course %> <br>
                                     <div class="info">Section</div> <%=Studentresult[i].Section %> <br><br><br>
-                                    <div> 
+                                    <div> <!-- Character -->
                                         <div class="info" style="width: auto;">Character</div> <br>
                                         <!-- k -->
                                          <% if(Studentresult[i].post_k === 0 && Studentresult[i].post_t === 0 && Studentresult[i].post_e === 0 && Studentresult[i].post_w === 0){ %>
                                             none
+                                            <img src="https://cdn-icons-png.flaticon.com/512/15547/15547949.png " alt="" style="margin: 20px; width: 150px;">
                                         <% } else { %> 
                                         <% if(Studentresult[i].post_k > Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
                                             k
@@ -98,6 +99,7 @@
                                         <!-- e -->
                                         <% if(Studentresult[i].post_e > Studentresult[i].post_k && Studentresult[i].post_e > Studentresult[i].post_t && Studentresult[i].post_e > Studentresult[i].post_w){ %>
                                             e
+                                            <img src="https://cdn-icons-png.flaticon.com/256/15547/15547871.png" alt="" style="margin: 20px; width: 150px;">
                                         <% } %> 
                                         <% if(Studentresult[i].post_e > Studentresult[i].post_k && Studentresult[i].post_e > Studentresult[i].post_t && Studentresult[i].post_e === Studentresult[i].post_w){ %>
                                             e = w
@@ -116,11 +118,18 @@
                                 <td class="text-start"> <!-- Project Quiz -->
                                     <span class="quiz">Project QUIZ1 </span>
                                     <div>
-                                        <% if (Studentresult[i].TicketBookingSystemScore != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Pretest</div>
-                                                <%=Studentresult[i].TicketBookingSystem %>
-                                            </div> 
+                                        <% if(Studentresult[i].TicketBookingSystem != "ยังไม่ทำ") { %>
+                                            <% if (Studentresult[i].TicketBookingSystem === "รอตรวจ") { %>
+                                                <div style="display: flex;">
+                                                    <div class="status_w">Pretest</div>
+                                                    <%=Studentresult[i].TicketBookingSystem %>
+                                                </div> 
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status">Pretest</div>
+                                                    <%=Studentresult[i].TicketBookingSystem %>
+                                                </div> 
+                                            <% }%>
                                         <% }else{ %>
                                             <div style="display: flex;">
                                                 <div class="status_n">Pretest</div>
@@ -130,11 +139,18 @@
                                     </div>
                                     <span class="quiz">Project QUIZ2 </span>
                                     <div>
-                                        <% if (Studentresult[i].PointofSalesSystemScore != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Pretest</div>
-                                                <%=Studentresult[i].PointofSalesSystem %>
-                                            </div> 
+                                        <% if(Studentresult[i].PointofSalesSystem != "ยังไม่ทำ") { %>
+                                            <% if (Studentresult[i].PointofSalesSystem === "รอตรวจ") { %>
+                                                <div style="display: flex;">
+                                                    <div class="status_w">Pretest</div>
+                                                    <%=Studentresult[i].PointofSalesSystem %>
+                                                </div> 
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status">Pretest</div>
+                                                    <%=Studentresult[i].PointofSalesSystem %>
+                                                </div> 
+                                            <% }%>
                                         <% }else{ %>
                                             <div style="display: flex;">
                                                 <div class="status_n">Pretest</div>
@@ -144,11 +160,18 @@
                                     </div>
                                     <span class="quiz">Project QUIZ3 </span>
                                     <div>
-                                        <% if (Studentresult[i].Project_QUIZ3Score != undefined) { %>
-                                            <div style="display: flex;">
-                                                <div class="status">Pretest</div>
-                                                <%=Studentresult[i].Project_QUIZ3 %>
-                                            </div> 
+                                        <% if(Studentresult[i].Project_QUIZ3 != "ยังไม่ทำ") { %>
+                                            <% if (Studentresult[i].Project_QUIZ3 === "รอตรวจ") { %>
+                                                <div style="display: flex;">
+                                                    <div class="status_w">Pretest</div>
+                                                    <%=Studentresult[i].Project_QUIZ3 %>
+                                                </div> 
+                                            <% }else{ %>
+                                                <div style="display: flex;">
+                                                    <div class="status">Pretest</div>
+                                                    <%=Studentresult[i].Project_QUIZ3 %>
+                                                </div> 
+                                            <% }%>
                                         <% }else{ %>
                                             <div style="display: flex;">
                                                 <div class="status_n">Pretest</div>
@@ -163,7 +186,7 @@
                                     <% } else{ %>  
                                     <span class="quiz">Algorithms and Flowcharts</span>
                                     <div>
-                                    <% if (Studentresult[i].Pretest1 != 0) { %> 
+                                    <% if (Studentresult[i].pre_Algorithms_and_Flowcharts != "ยังไม่ทำ") { %> 
                                         <% if (Studentresult[i].Pretest1S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -182,7 +205,7 @@
                                         </div> 
                                     <% }%>
                                     
-                                    <% if (Studentresult[i].Posttest1 != 0) { %>
+                                    <% if (Studentresult[i].post_Algorithms_and_Flowcharts != "ยังไม่ทำ") { %>
                                         <% if (Studentresult[i].Posttest1S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -203,7 +226,7 @@
                                     </div>
                                     <span class="quiz">Datatype and Variable</span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest2 != 0) { %>
+                                        <% if (Studentresult[i].pre_Datatype_and_Variable != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Pretest2S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -221,7 +244,7 @@
                                                 <%=Studentresult[i].pre_Datatype_and_Variable %> --- Total:<%=Studentresult[i].Pretest2 %>
                                             </div> 
                                         <% }%>
-                                        <% if (Studentresult[i].Posttest2 != 0) { %>
+                                        <% if (Studentresult[i].post_Datatype_and_Variable != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Posttest2S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -242,7 +265,7 @@
                                     </div>
                                     <span class="quiz">Input and Output</span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest3 != 0) { %>
+                                        <% if (Studentresult[i].pre_Input_and_Output != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Pretest3S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -260,7 +283,7 @@
                                                 <%=Studentresult[i].pre_Input_and_Output %> --- Total:<%=Studentresult[i].Pretest3 %>
                                             </div> 
                                         <% }%>
-                                        <% if (Studentresult[i].Posttest3 != 0) { %>
+                                        <% if (Studentresult[i].post_Input_and_Output != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Posttest3S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -281,7 +304,7 @@
                                     </div>
                                     <span class="quiz">Operators and Expressions</span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest4 != 0) { %>
+                                        <% if (Studentresult[i].pre_Operators_and_Expressions != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Pretest4S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -300,7 +323,7 @@
                                             </div> 
                                         <% }%>
 
-                                        <% if (Studentresult[i].Posttest4 != 0) { %>
+                                        <% if (Studentresult[i].post_Operators_and_Expressions != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Posttest4S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -321,7 +344,7 @@
                                     </div>
                                     <span class="quiz">Selection Statements </span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest5 != 0) { %>
+                                        <% if (Studentresult[i].pre_Selection_Statements != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Pretest5S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -341,7 +364,7 @@
                                         <% }%>
 
 
-                                        <% if (Studentresult[i].Posttest5 != 0) { %>
+                                        <% if (Studentresult[i].post_Selection_Statements != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Posttest5S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -362,7 +385,7 @@
                                     </div>
                                     <span class="quiz">Loop Statements</span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest6 != 0) { %>
+                                        <% if (Studentresult[i].pre_Loop_Statements != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Pretest6S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -382,7 +405,7 @@
                                         <% }%>
 
 
-                                        <% if (Studentresult[i].Posttest6 != 0) { %>
+                                        <% if (Studentresult[i].post_Loop_Statements != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Posttest6S === "รอตรวจ") { %>
                                                 <div style="display: flex;">
                                                     <div class="status_w">Posttest</div>
@@ -403,7 +426,7 @@
                                     </div>
                                     <span class="quiz">Arrays and Strings</span>
                                     <div>
-                                        <% if (Studentresult[i].Pretest7 != 0) { %>
+                                        <% if (Studentresult[i].pre_Arrays_and_Strings != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Pretest7S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -423,7 +446,7 @@
                                         <% }%>
 
 
-                                        <% if (Studentresult[i].Posttest7 != 0) { %>
+                                        <% if (Studentresult[i].post_Arrays_and_Strings != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Posttest7S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Posttest</div>
@@ -444,7 +467,7 @@
                                     </div>
                                     <span class="quiz">Functions</span> 
                                     <div>
-                                        <% if (Studentresult[i].Pretest8 != 0) { %>
+                                        <% if (Studentresult[i].pre_Functions != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Pretest8S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status_w">Pretest</div>
@@ -464,7 +487,7 @@
                                         <% }%>
 
 
-                                        <% if (Studentresult[i].Posttest8 != 0) { %>
+                                        <% if (Studentresult[i].post_Functions != "ยังไม่ทำ") { %>
                                             <% if (Studentresult[i].Posttest8S === "รอตรวจ") { %>
                                             <div style="display: flex;">
                                                 <div class="status">Posttest</div>

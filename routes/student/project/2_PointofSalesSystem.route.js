@@ -7,10 +7,16 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 var ADRI = "https://drive.google.com/file/d/1Lc9NMPH1fpHMb-GTLUmBYXFI9DGfMqY3/preview"
-var ADRI_Answer = "https://drive.google.com/file/d/1LS2I39MIXSXmqpdw5UouFV6YwslNBfhC/preview"
+var ADRI1 = "Flowchart ใช้ draw.io (3 คะแนน)"
+var ADRI2 = "Source Code ที่เขียนขึ้น (5 คะแนน)"
+var ADRI3 = "แสดงผลลัพธ์ของโปรแกรม (1 คะแนน)"
+var ADRI4 = "ถ้าต้องการตรวจสอบว่าผู้ใช้ป้อนตัวเลือกเมนูไม่ถูกต้อง ต้องเขียนคำสั่งและแสดงข้อความอย่างไรเพื่อให้ผู้ใช้รู้ เขียนให้เข้าใจพอสังเขป (1 คะแนน)"
+
+var ADRI_Answer = ""
 
 router.post('/submit', async (req, res, next) => {
   const person = req.user;
+
   var code = req.body.code;
   var lang = req.body.lang;
   var sendLink16 = req.body.sendLink16
@@ -55,6 +61,8 @@ router.post('/submit', async (req, res, next) => {
             output:dataOut,
             expResult16:expResult16,
             expResult17:expResult17,
+            ADRI:ADRI,
+            ADRI1:ADRI1,ADRI2:ADRI2,ADRI3:ADRI3,ADRI4:ADRI4,
             scoreTeacher:scoreTeacher
 
             /*ADRI:ADRI,

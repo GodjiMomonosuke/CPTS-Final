@@ -164,123 +164,229 @@
                 <div class="group">
                     <div>
                         <div class="boxbax">
-                            <p style="margin: 0;">Lab Progress (Post-test)</p>
-                            <div style="display: flex;">
-                                <div class="progress" style="background-color: #e2ddc8;">
-                                    <div style=" width: <%= TicketBooking_SystemPercent %>%;" class="progressvalue"></div>
-
-                                </div> 
-                                <b style="font-size: 12px; margin-left: 5px;"><%= TicketBooking_SystemPercent %>%</b>
+                            <div><!-- Lab Progress Pre-test-->
+                                <p style="margin: 0;">Lab Progress (Pre-test)</p>
+                                <% if (Pretest === 0) { %>
+                                    <div style="display: flex;">
+                                        <p class="station_w">1</p>
+                                        <p class="station_w">2</p>
+                                        <p class="station_w">3</p>
+                                        <p class="station_w">4</p>
+                                        <p class="station_w">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Pretest === 1) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station_w">2</p>
+                                        <p class="station_w">3</p>
+                                        <p class="station_w">4</p>
+                                        <p class="station_w">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Pretest === 2) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station_w">3</p>
+                                        <p class="station_w">4</p>
+                                        <p class="station_w">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Pretest === 3) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station_w">4</p>
+                                        <p class="station_w">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Pretest === 4) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station">4</p>
+                                        <p class="station_w">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Pretest === 5) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station">4</p>
+                                        <p class="station">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Pretest === 6) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station">4</p>
+                                        <p class="station">5</p>
+                                        <p class="station">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Pretest === 7) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station">4</p>
+                                        <p class="station">5</p>
+                                        <p class="station">6</p>
+                                        <p class="station">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Pretest === 8) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station">4</p>
+                                        <p class="station">5</p>
+                                        <p class="station">6</p>
+                                        <p class="station">7</p>
+                                        <p class="station">8</p>
+                                    </div>
+                                <% }%>
                             </div>
-                            <% if (TicketBooking_SystemPercent === 0) { %>
-                                <div style="display: flex;">
-                                    <p class="station_w">1</p>
-                                    <p class="station_w">2</p>
-                                    <p class="station_w">3</p>
-                                    <p class="station_w">4</p>
-                                    <p class="station_w">5</p>
-                                    <p class="station_w">6</p>
-                                    <p class="station_w">7</p>
-                                    <p class="station_w">8</p>
-                                </div>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 13) { %>
-                                <div style="display: flex;">
-                                    <p class="station">1</p>
-                                    <p class="station_w">2</p>
-                                    <p class="station_w">3</p>
-                                    <p class="station_w">4</p>
-                                    <p class="station_w">5</p>
-                                    <p class="station_w">6</p>
-                                    <p class="station_w">7</p>
-                                    <p class="station_w">8</p>
-                                </div>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 25) { %>
-                                <div style="display: flex;">
-                                    <p class="station">1</p>
-                                    <p class="station">2</p>
-                                    <p class="station_w">3</p>
-                                    <p class="station_w">4</p>
-                                    <p class="station_w">5</p>
-                                    <p class="station_w">6</p>
-                                    <p class="station_w">7</p>
-                                    <p class="station_w">8</p>
-                                </div>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 38) { %>
-                                <div style="display: flex;">
-                                    <p class="station">1</p>
-                                    <p class="station">2</p>
-                                    <p class="station">3</p>
-                                    <p class="station_w">4</p>
-                                    <p class="station_w">5</p>
-                                    <p class="station_w">6</p>
-                                    <p class="station_w">7</p>
-                                    <p class="station_w">8</p>
-                                </div>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 50) { %>
-                                <div style="display: flex;">
-                                    <p class="station">1</p>
-                                    <p class="station">2</p>
-                                    <p class="station">3</p>
-                                    <p class="station">4</p>
-                                    <p class="station_w">5</p>
-                                    <p class="station_w">6</p>
-                                    <p class="station_w">7</p>
-                                    <p class="station_w">8</p>
-                                </div>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 63) { %>
-                                <div style="display: flex;">
-                                    <p class="station">1</p>
-                                    <p class="station">2</p>
-                                    <p class="station">3</p>
-                                    <p class="station">4</p>
-                                    <p class="station">5</p>
-                                    <p class="station_w">6</p>
-                                    <p class="station_w">7</p>
-                                    <p class="station_w">8</p>
-                                </div>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 75) { %>
-                                <div style="display: flex;">
-                                    <p class="station">1</p>
-                                    <p class="station">2</p>
-                                    <p class="station">3</p>
-                                    <p class="station">4</p>
-                                    <p class="station">5</p>
-                                    <p class="station">6</p>
-                                    <p class="station_w">7</p>
-                                    <p class="station_w">8</p>
-                                </div>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 88) { %>
-                                <div style="display: flex;">
-                                    <p class="station">1</p>
-                                    <p class="station">2</p>
-                                    <p class="station">3</p>
-                                    <p class="station">4</p>
-                                    <p class="station">5</p>
-                                    <p class="station">6</p>
-                                    <p class="station">7</p>
-                                    <p class="station_w">8</p>
-                                </div>
-                            <% }%>
-                            <% if (TicketBooking_SystemPercent === 100) { %>
-                                <div style="display: flex;">
-                                    <p class="station">1</p>
-                                    <p class="station">2</p>
-                                    <p class="station">3</p>
-                                    <p class="station">4</p>
-                                    <p class="station">5</p>
-                                    <p class="station">6</p>
-                                    <p class="station">7</p>
-                                    <p class="station">8</p>
-                                </div>
-                            <% }%>
-                            
+                            <div><!-- Lab Progress Post-test-->
+                                <p style="margin: 0;">Lab Progress (Post-test)</p>
+                                <% if (Posttest === 0) { %>
+                                    <div style="display: flex;">
+                                        <p class="station_w">1</p>
+                                        <p class="station_w">2</p>
+                                        <p class="station_w">3</p>
+                                        <p class="station_w">4</p>
+                                        <p class="station_w">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Posttest === 1) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station_w">2</p>
+                                        <p class="station_w">3</p>
+                                        <p class="station_w">4</p>
+                                        <p class="station_w">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Posttest === 2) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station_w">3</p>
+                                        <p class="station_w">4</p>
+                                        <p class="station_w">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Posttest === 3) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station_w">4</p>
+                                        <p class="station_w">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Posttest === 4) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station">4</p>
+                                        <p class="station_w">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Posttest === 5) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station">4</p>
+                                        <p class="station">5</p>
+                                        <p class="station_w">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Posttest === 6) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station">4</p>
+                                        <p class="station">5</p>
+                                        <p class="station">6</p>
+                                        <p class="station_w">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Posttest === 7) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station">4</p>
+                                        <p class="station">5</p>
+                                        <p class="station">6</p>
+                                        <p class="station">7</p>
+                                        <p class="station_w">8</p>
+                                    </div>
+                                <% }%>
+                                <% if (Posttest === 8) { %>
+                                    <div style="display: flex;">
+                                        <p class="station">1</p>
+                                        <p class="station">2</p>
+                                        <p class="station">3</p>
+                                        <p class="station">4</p>
+                                        <p class="station">5</p>
+                                        <p class="station">6</p>
+                                        <p class="station">7</p>
+                                        <p class="station">8</p>
+                                    </div>
+                                <% }%>
+                            </div>
+
                             <hr>
                             <% if (TicketBooking_SystemPercent === 50) { %>
                                 <p style="margin: 0;">Project Quiz 1 ปลดล็อกแล้ว!</p>
@@ -331,12 +437,12 @@
                                     const data = { 
                                         labels: ['Knowledge', 'Tracing', 'Explaining','Writing'],
                                         datasets: [{
-                                            data: [<%= PreBasicPercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,10],
+                                            data: [<%= PreBasicPercent %>,<%= PreTracePercent %>,<%= PreExplainPercent %>,<%= PreWritePercent %> ],
                                             label: "Pre-test",
                                             borderColor: '#2F3C3D',
                                             backgroundColor: '#66B7BDcf',
                                         },{
-                                            data: [<%= BasicPercent %>,<%= TracePercent %>,<%= ExplainPercent %>,40],
+                                            data: [<%= BasicPercent %>,<%= TracePercent %>,<%= ExplainPercent %>,<%= WritePercent %> ],
                                             label: "Post-test",
                                             borderColor: '#2F3C3D',
                                             fill: true,

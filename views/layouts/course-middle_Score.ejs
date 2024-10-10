@@ -76,11 +76,14 @@ else {
 
         
         /* Check Value LV4 Score**/
-        if(typeof(StudentAnswer[i].scoreTeacher) === "string" ){
-            checkedLV4 = StudentAnswer[i].scoreTeacher;
+        if(StudentAnswer[i].contentName === "TicketBookingSystem-(Project_quiz1)" ){
+            if(StudentAnswer[i].scoreQuiz != undefined )
+            {
+                checkedLV4 = StudentAnswer[i].scoreQuiz;
+            }
             TeacherCheck = StudentAnswer[i].checkedBy;
             
-            if(StudentAnswer[i].scoreTeacher >= 20){
+            if(StudentAnswer[i].scoreQuiz >= 20){
                cLV4 = "background-color: #93c47d;" 
             }
             else {

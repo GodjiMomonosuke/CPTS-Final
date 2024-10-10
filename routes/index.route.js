@@ -340,25 +340,25 @@ router.get('/', async (req, res, next) => {
 
             if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
               var TicTacToeBG;
-              if(StudentAnswer[i].scoreTeacher === undefined){}
+              if(StudentAnswer[i].scoreQuiz === undefined){}
               else{
-                TicTacToeScore = TicTacToeScore+parseInt(StudentAnswer[i].scoreTeacher);}
+                TicTacToeScore = TicTacToeScore+parseInt((StudentAnswer[i].scoreQuiz*10)/4);}
                 TicTacToeBG = "#bd7b67"
                 TicTacToeCount++;
             }
             if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
               var LibrarySystemBG;
-              if(StudentAnswer[i].scoreTeacher === undefined){}
+              if(StudentAnswer[i].scoreQuiz === undefined){}
               else{
-                LibrarySystemScore = LibrarySystemScore+parseInt(StudentAnswer[i].scoreTeacher);}
+                LibrarySystemScore = LibrarySystemScore+parseInt((StudentAnswer[i].scoreQuiz*10)/4);}
                 LibrarySystemBG = "#bd7b67"
                 LibrarySystemCount++;
             }
             if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
               var RoshamboBG;
-              if(StudentAnswer[i].scoreTeacher === undefined){}
+              if(StudentAnswer[i].scoreQuiz === undefined){}
               else{
-                RoshamboScore = RoshamboScore+parseInt(StudentAnswer[i].scoreTeacher);}
+                RoshamboScore = RoshamboScore+parseInt((StudentAnswer[i].scoreQuiz*10)/4);}
                 RoshamboBG = "#bd7b67"
                 RoshamboCount++;
             }
@@ -571,7 +571,7 @@ router.get('/', async (req, res, next) => {
                 var Posttest1=0,Posttest2=0,Posttest3=0,Posttest4=0,Posttest5=0,Posttest6=0,Posttest7=0,Posttest8=0;
                 
                 var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ";
-                var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "";
+                var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "", StudentAnswerLV4W = "";
       
                 for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
 
@@ -597,7 +597,7 @@ router.get('/', async (req, res, next) => {
                   //** */
                   if(StudentAnswer[i].scoreTeacher != undefined){
                     StudentAnswerLV4 = parseInt(StudentAnswer[i].scoreTeacher);
-                    var StudentAnswerLV4W = parseInt(StudentAnswer[i].scoreTeacher);
+                    StudentAnswerLV4W = parseInt(StudentAnswer[i].scoreTeacher);
                   }else{
                     StudentAnswerLV4W= "รอตรวจ";
                     StudentAnswerLV4 = 0;
@@ -778,17 +778,29 @@ router.get('/', async (req, res, next) => {
                   var post = post1+post2+post3+post4+post5+post6+post7+post8;
 
                   //** Project-quiz */
-                  if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)' && StudentAnswer[i].scoreTeacher != undefined) {   
-                    Ticket_Booking_SystemDone = StudentAnswer[i].scoreTeacher
-                    var TicketBookingSystemScore = StudentAnswerLV4;
+                  if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
+                    if(StudentAnswer[i].scoreQuiz != undefined){
+                      Ticket_Booking_SystemDone = (StudentAnswer[i].scoreQuiz*10)/4;
+                    }else{
+                      Ticket_Booking_SystemDone = "รอตรวจ";
+                    }
+                    //var TicketBookingSystemScore = StudentAnswerLV4;
                   }
-                  if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)'&& StudentAnswer[i].scoreTeacher != undefined) {   
-                    Point_of_Sales_SystemDone = StudentAnswer[i].scoreTeacher 
-                    var Point_of_Sales_SystemScore = StudentAnswerLV4;
+                  if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
+                    if(StudentAnswer[i].scoreQuiz != undefined){
+                      Point_of_Sales_SystemDone = (StudentAnswer[i].scoreQuiz*10)/4;
+                    }else{
+                      Point_of_Sales_SystemDone = "รอตรวจ";
+                    }
+                    //var Point_of_Sales_SystemScore = StudentAnswerLV4;
                   }
-                  if (StudentAnswer[i].contentName ==='Project_QUIZ3'&& StudentAnswer[i].scoreTeacher != undefined) {   
-                    Project_QUIZ3Done = StudentAnswer[i].scoreTeacher
-                    var Project_QUIZ3Score = StudentAnswerLV4;
+                  if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
+                    if(StudentAnswer[i].scoreQuiz != undefined){
+                      Project_QUIZ3Done = (StudentAnswer[i].scoreQuiz*10)/4;
+                    }else{
+                      Project_QUIZ3Done = "รอตรวจ";
+                    }
+                    //var Project_QUIZ3Score = StudentAnswerLV4;
                   }
                 }
 
@@ -815,13 +827,14 @@ router.get('/', async (req, res, next) => {
 
                             //Project quiz
                             TicketBookingSystem:Ticket_Booking_SystemDone,
-                            TicketBookingSystemScore:TicketBookingSystemScore,
+                            //TicketBookingSystemScore:TicketBookingSystemScore,
 
                             PointofSalesSystem:Point_of_Sales_SystemDone,
-                            Point_of_Sales_SystemScore:Point_of_Sales_SystemScore,
+                            //Point_of_Sales_SystemScore:Point_of_Sales_SystemScore,
 
                             Project_QUIZ3:Project_QUIZ3Done,
-                            Project_QUIZ3Score:Project_QUIZ3Score,
+                            //Project_QUIZ3Score:Project_QUIZ3Score,
+
                             //Post test
                             pre_Algorithms_and_Flowcharts:Pretest1Done,
                             Pretest1:Pretest1,Pretest1S:Pretest1S,
@@ -918,6 +931,7 @@ router.get('/', async (req, res, next) => {
                 var StructureLV1=0,StructureLV2=0,StructureLV3=0,StructureLV4=0;
                 var StructureScoreLV1=0,StructureScoreLV2=0,StructureScoreLV3=0,StructureScoreLV4=0;
                 var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ";
+                var Pretest1Done = 0 ,Pretest2Done = 0 ,Pretest3Done = 0,Pretest4Done = 0 ,Pretest5Done = 0,Pretest6Done = 0,Pretest7Done = 0,Pretest8Done = 0;
                 var Posttest1Done = 0 ,Posttest2Done = 0 ,Posttest3Done = 0,Posttest4Done = 0 ,Posttest5Done = 0,Posttest6Done = 0,Posttest7Done = 0,Posttest8Done = 0;
                 var PretestScore1 = "",PretestScore2 = "",PretestScore3 = "",PretestScore4 = "",PretestScore5 = "",PretestScore6 = "",PretestScore7 = "",PretestScore8 = "";
                 var PosttestScore1 = "",PosttestScore2 = "",PosttestScore3 = "",PosttestScore4 = "",PosttestScore5 = "",PosttestScore6 = "",PosttestScore7 = "",PosttestScore8 = "";
@@ -1065,31 +1079,35 @@ router.get('/', async (req, res, next) => {
               for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {
                     if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
                       Ticket_Booking_SystemDone = 1;
-                        if (StudentAnswer[i].scoreTeacher === undefined) {
+                        if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz1Score = "รอตรวจ"
-                        } else {PrjQuiz1Score = parseInt(StudentAnswer[i].scoreTeacher) + "/25";
-                          Quiz1Score = parseInt(StudentAnswer[i].scoreTeacher)
+                        } else {PrjQuiz1Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
+                          Quiz1Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
                         }
                     }
                     if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
                         Point_of_Sales_SystemDone = 1;
-                        if (StudentAnswer[i].scoreTeacher === undefined) {
+                        if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz2Score = "รอตรวจ"
-                        } else {PrjQuiz2Score = parseInt(StudentAnswer[i].scoreTeacher) + "/25";
-                          Quiz2Score = parseInt(StudentAnswer[i].scoreTeacher)
+                        } else {PrjQuiz2Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
+                          Quiz2Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
                         }
                     }
                     if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
                         Project_QUIZ3Done = 1;
-                        if (StudentAnswer[i].scoreTeacher === undefined) {
+                        if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz3Score = "รอตรวจ"
-                        } else {PrjQuiz3Score = parseInt(StudentAnswer[i].scoreTeacher) + "/25";
-                          Quiz3Score = parseInt(StudentAnswer[i].scoreTeacher)
+                        } else {PrjQuiz3Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
+                          Quiz3Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
                         }
                     }
               }
 
                 /*** SUM */
+                var Pretest = 0;
+                Pretest = Pretest1Done+Pretest2Done+Pretest3Done+Pretest4Done+Pretest5Done+Pretest6Done+Pretest7Done+Pretest8Done;
+                var Posttest = 0;
+                Posttest = Posttest1Done+Posttest2Done+Posttest3Done+Posttest4Done+Posttest5Done+Posttest6Done+Posttest7Done+Posttest8Done
 
                 //*** Chart Pretest score */
                 var PreBasicScore = IntroductionLV1+StringLV1+DatatypeLV1+OperatorsLV1+FlowControlLV1+PointersLV1+FunctionLV1+StructureLV1 ;
@@ -1313,6 +1331,7 @@ router.get('/', async (req, res, next) => {
 
 
                     res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,answer,
+                      Pretest,Posttest,
                       PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score,
                       Quiz1Score,Quiz2Score,Quiz3Score,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,
