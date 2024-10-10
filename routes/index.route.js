@@ -571,7 +571,7 @@ router.get('/', async (req, res, next) => {
                 var Posttest1=0,Posttest2=0,Posttest3=0,Posttest4=0,Posttest5=0,Posttest6=0,Posttest7=0,Posttest8=0;
                 
                 var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ";
-                var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "";
+                var StudentAnswerLV1 = "", StudentAnswerLV2 = "" , StudentAnswerLV3 = "", StudentAnswerLV4 = "", StudentAnswerLV4W = "";
       
                 for (let i = 0; i < Object.keys(StudentAnswer).length; i++) {
 
@@ -596,8 +596,8 @@ router.get('/', async (req, res, next) => {
                   }
                   //** */
                   if(StudentAnswer[i].scoreTeacher != undefined){
-                    StudentAnswerLV4 = StudentAnswer[i].scoreTeacher;
-                    var StudentAnswerLV4W = StudentAnswer[i].scoreTeacher;
+                    StudentAnswerLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                    StudentAnswerLV4W = parseInt(StudentAnswer[i].scoreTeacher);
                   }else{
                     StudentAnswerLV4W= "รอตรวจ";
                     StudentAnswerLV4 = 0;
