@@ -342,7 +342,7 @@ router.get('/', async (req, res, next) => {
               var TicTacToeBG;
               if(StudentAnswer[i].scoreQuiz === undefined){}
               else{
-                TicTacToeScore = TicTacToeScore+parseInt(StudentAnswer[i].scoreQuiz);}
+                TicTacToeScore = TicTacToeScore+parseInt((StudentAnswer[i].scoreQuiz*10)/4);}
                 TicTacToeBG = "#bd7b67"
                 TicTacToeCount++;
             }
@@ -350,7 +350,7 @@ router.get('/', async (req, res, next) => {
               var LibrarySystemBG;
               if(StudentAnswer[i].scoreQuiz === undefined){}
               else{
-                LibrarySystemScore = LibrarySystemScore+parseInt(StudentAnswer[i].scoreQuiz);}
+                LibrarySystemScore = LibrarySystemScore+parseInt((StudentAnswer[i].scoreQuiz*10)/4);}
                 LibrarySystemBG = "#bd7b67"
                 LibrarySystemCount++;
             }
@@ -358,7 +358,7 @@ router.get('/', async (req, res, next) => {
               var RoshamboBG;
               if(StudentAnswer[i].scoreQuiz === undefined){}
               else{
-                RoshamboScore = RoshamboScore+parseInt(StudentAnswer[i].scoreQuiz);}
+                RoshamboScore = RoshamboScore+parseInt((StudentAnswer[i].scoreQuiz*10)/4);}
                 RoshamboBG = "#bd7b67"
                 RoshamboCount++;
             }
@@ -423,9 +423,9 @@ router.get('/', async (req, res, next) => {
           if(FunctionScore != 0)FunctionScore = FunctionScore/FunctionCount;
           if(StructureScore != 0)StructureScore = StructureScore/StructureCount;
 
-          if(TicTacToeScore != 0) TicTacToeScore = (TicTacToeScore/4)/TicTacToeCount;
-          if(LibrarySystemScore != 0) LibrarySystemScore = (LibrarySystemScore/4)/LibrarySystemCount;
-          if(RoshamboScore != 0) RoshamboScore = (RoshamboScore/4)/RoshamboCount;
+          if(TicTacToeScore != 0) TicTacToeScore = TicTacToeScore/TicTacToeCount;
+          if(LibrarySystemScore != 0) LibrarySystemScore = LibrarySystemScore/LibrarySystemCount;
+          if(RoshamboScore != 0) RoshamboScore = RoshamboScore/RoshamboCount;
 
           else;  
 
@@ -596,8 +596,8 @@ router.get('/', async (req, res, next) => {
                   }
                   //** */
                   if(StudentAnswer[i].scoreTeacher != undefined){
-                    StudentAnswerLV4 = parseInt(StudentAnswer[i].scoreTeacher);
-                    var StudentAnswerLV4W = parseInt(StudentAnswer[i].scoreTeacher);
+                    StudentAnswerLV4 = StudentAnswer[i].scoreTeacher;
+                    var StudentAnswerLV4W = StudentAnswer[i].scoreTeacher;
                   }else{
                     StudentAnswerLV4W= "รอตรวจ";
                     StudentAnswerLV4 = 0;
@@ -780,7 +780,7 @@ router.get('/', async (req, res, next) => {
                   //** Project-quiz */
                   if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
                     if(StudentAnswer[i].scoreQuiz != undefined){
-                      Ticket_Booking_SystemDone = StudentAnswer[i].scoreQuiz/4;
+                      Ticket_Booking_SystemDone = (StudentAnswer[i].scoreQuiz*10)/4;
                     }else{
                       Ticket_Booking_SystemDone = "รอตรวจ";
                     }
@@ -788,7 +788,7 @@ router.get('/', async (req, res, next) => {
                   }
                   if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
                     if(StudentAnswer[i].scoreQuiz != undefined){
-                      Point_of_Sales_SystemDone = StudentAnswer[i].scoreQuiz/4;
+                      Point_of_Sales_SystemDone = (StudentAnswer[i].scoreQuiz*10)/4;
                     }else{
                       Point_of_Sales_SystemDone = "รอตรวจ";
                     }
@@ -796,7 +796,7 @@ router.get('/', async (req, res, next) => {
                   }
                   if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
                     if(StudentAnswer[i].scoreQuiz != undefined){
-                      Project_QUIZ3Done = StudentAnswer[i].scoreQuiz/4;
+                      Project_QUIZ3Done = (StudentAnswer[i].scoreQuiz*10)/4;
                     }else{
                       Project_QUIZ3Done = "รอตรวจ";
                     }
@@ -931,6 +931,7 @@ router.get('/', async (req, res, next) => {
                 var StructureLV1=0,StructureLV2=0,StructureLV3=0,StructureLV4=0;
                 var StructureScoreLV1=0,StructureScoreLV2=0,StructureScoreLV3=0,StructureScoreLV4=0;
                 var Ticket_Booking_SystemDone = "ยังไม่ทำ" , Point_of_Sales_SystemDone = "ยังไม่ทำ" , Project_QUIZ3Done = "ยังไม่ทำ";
+                var Pretest1Done = 0 ,Pretest2Done = 0 ,Pretest3Done = 0,Pretest4Done = 0 ,Pretest5Done = 0,Pretest6Done = 0,Pretest7Done = 0,Pretest8Done = 0;
                 var Posttest1Done = 0 ,Posttest2Done = 0 ,Posttest3Done = 0,Posttest4Done = 0 ,Posttest5Done = 0,Posttest6Done = 0,Posttest7Done = 0,Posttest8Done = 0;
                 var PretestScore1 = "",PretestScore2 = "",PretestScore3 = "",PretestScore4 = "",PretestScore5 = "",PretestScore6 = "",PretestScore7 = "",PretestScore8 = "";
                 var PosttestScore1 = "",PosttestScore2 = "",PosttestScore3 = "",PosttestScore4 = "",PosttestScore5 = "",PosttestScore6 = "",PosttestScore7 = "",PosttestScore8 = "";
@@ -1080,29 +1081,33 @@ router.get('/', async (req, res, next) => {
                       Ticket_Booking_SystemDone = 1;
                         if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz1Score = "รอตรวจ"
-                        } else {PrjQuiz1Score = parseInt(StudentAnswer[i].scoreQuiz/4) + "/25";
-                          Quiz1Score = parseInt(StudentAnswer[i].scoreQuiz/4)
+                        } else {PrjQuiz1Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
+                          Quiz1Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
                         }
                     }
                     if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
                         Point_of_Sales_SystemDone = 1;
                         if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz2Score = "รอตรวจ"
-                        } else {PrjQuiz2Score = parseInt(StudentAnswer[i].scoreQuiz/4) + "/25";
-                          Quiz2Score = parseInt(StudentAnswer[i].scoreQuiz/4)
+                        } else {PrjQuiz2Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
+                          Quiz2Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
                         }
                     }
                     if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
                         Project_QUIZ3Done = 1;
                         if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz3Score = "รอตรวจ"
-                        } else {PrjQuiz3Score = parseInt(StudentAnswer[i].scoreQuiz/4) + "/25";
-                          Quiz3Score = parseInt(StudentAnswer[i].scoreQuiz/4)
+                        } else {PrjQuiz3Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
+                          Quiz3Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
                         }
                     }
               }
 
                 /*** SUM */
+                var Pretest = 0;
+                Pretest = Pretest1Done+Pretest2Done+Pretest3Done+Pretest4Done+Pretest5Done+Pretest6Done+Pretest7Done+Pretest8Done;
+                var Posttest = 0;
+                Posttest = Posttest1Done+Posttest2Done+Posttest3Done+Posttest4Done+Posttest5Done+Posttest6Done+Posttest7Done+Posttest8Done
 
                 //*** Chart Pretest score */
                 var PreBasicScore = IntroductionLV1+StringLV1+DatatypeLV1+OperatorsLV1+FlowControlLV1+PointersLV1+FunctionLV1+StructureLV1 ;
@@ -1326,6 +1331,7 @@ router.get('/', async (req, res, next) => {
 
 
                     res.render('index/index_student', { person ,result,RecommendaResult,StudentAnswer,answer,
+                      Pretest,Posttest,
                       PrjQuiz1Score,PrjQuiz2Score,PrjQuiz3Score,
                       Quiz1Score,Quiz2Score,Quiz3Score,
                       BasicPercent,TracePercent,ExplainPercent,WritePercent,

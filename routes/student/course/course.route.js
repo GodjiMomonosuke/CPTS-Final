@@ -205,7 +205,7 @@ router.get('/', async (req, res, next) => {
                       var pre1LV1 = StudentAnswer[i].scoreLV1;
                       var pre1LV2 = StudentAnswer[i].scoreLV2;
                       var pre1LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var pre1LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         pre1LV4 = "⌛️"
@@ -229,7 +229,7 @@ router.get('/', async (req, res, next) => {
                       var pre2LV1 = StudentAnswer[i].scoreLV1;
                       var pre2LV2 = StudentAnswer[i].scoreLV2;
                       var pre2LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var pre2LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         pre2LV4 = "⌛️"
@@ -241,7 +241,7 @@ router.get('/', async (req, res, next) => {
                       var post2LV1 = StudentAnswer[i].scoreLV1;
                       var post2LV2 = StudentAnswer[i].scoreLV2;
                       var post2LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var post2LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         post2LV4 = "⌛️"
@@ -253,7 +253,7 @@ router.get('/', async (req, res, next) => {
                       var pre3LV1 = StudentAnswer[i].scoreLV1;
                       var pre3LV2 = StudentAnswer[i].scoreLV2;
                       var pre3LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var pre3LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         pre3LV4 = "⌛️"
@@ -265,7 +265,7 @@ router.get('/', async (req, res, next) => {
                       var post3LV1 = StudentAnswer[i].scoreLV1;
                       var post3LV2 = StudentAnswer[i].scoreLV2;
                       var post3LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var post3LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         post3LV4 = "⌛️"
@@ -277,7 +277,7 @@ router.get('/', async (req, res, next) => {
                       var pre4LV1 = StudentAnswer[i].scoreLV1;
                       var pre4LV2 = StudentAnswer[i].scoreLV2;
                       var pre4LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var pre4LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         pre4LV4 = "⌛️"
@@ -289,7 +289,7 @@ router.get('/', async (req, res, next) => {
                       var post4LV1 = StudentAnswer[i].scoreLV1;
                       var post4LV2 = StudentAnswer[i].scoreLV2;
                       var post4LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var post4LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         post4LV4 = "⌛️"
@@ -301,7 +301,7 @@ router.get('/', async (req, res, next) => {
                       var pre5LV1 = StudentAnswer[i].scoreLV1;
                       var pre5LV2 = StudentAnswer[i].scoreLV2;
                       var pre5LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var pre5LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         pre5LV4 = "⌛️"
@@ -313,7 +313,7 @@ router.get('/', async (req, res, next) => {
                       var post5LV1 = StudentAnswer[i].scoreLV1;
                       var post5LV2 = StudentAnswer[i].scoreLV2;
                       var post5LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var post5LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         post5LV4 = "⌛️"
@@ -325,7 +325,7 @@ router.get('/', async (req, res, next) => {
                       var pre6LV1 = StudentAnswer[i].scoreLV1;
                       var pre6LV2 = StudentAnswer[i].scoreLV2;
                       var pre6LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var pre6LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         pre6LV4 = "⌛️"
@@ -337,7 +337,7 @@ router.get('/', async (req, res, next) => {
                       var post6LV1 = StudentAnswer[i].scoreLV1;
                       var post6LV2 = StudentAnswer[i].scoreLV2;
                       var post6LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var post6LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         post6LV4 = "⌛️"
@@ -349,7 +349,7 @@ router.get('/', async (req, res, next) => {
                       var pre7LV1 = StudentAnswer[i].scoreLV1;
                       var pre7LV2 = StudentAnswer[i].scoreLV2;
                       var pre7LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var pre7LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         pre7LV4 = "⌛️"
@@ -361,7 +361,7 @@ router.get('/', async (req, res, next) => {
                       var post7LV1 = StudentAnswer[i].scoreLV1;
                       var post7LV2 = StudentAnswer[i].scoreLV2;
                       var post7LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var post7LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         post7LV4 = "⌛️"
@@ -373,7 +373,7 @@ router.get('/', async (req, res, next) => {
                       var pre8LV1 = StudentAnswer[i].scoreLV1;
                       var pre8LV2 = StudentAnswer[i].scoreLV2;
                       var pre8LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var pre8LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         pre8LV4 = "⌛️"
@@ -385,7 +385,7 @@ router.get('/', async (req, res, next) => {
                       var post8LV1 = StudentAnswer[i].scoreLV1;
                       var post8LV2 = StudentAnswer[i].scoreLV2;
                       var post8LV3 = StudentAnswer[i].scoreLV3;
-                      if(typeof(StudentAnswer[i].scoreTeacher) === "string"){
+                      if(typeof(StudentAnswer[i].scoreTeacher) === "number"){
                         var post8LV4 = parseInt(StudentAnswer[i].scoreTeacher);
                       }else{
                         post8LV4 = "⌛️"
