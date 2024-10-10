@@ -6,102 +6,178 @@
   <title>Chatbot</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      background-color: #f0f0f0;
+      height: 100vh;
+      margin: 0;
+      background-color: #f7f7f8;
     }
-    
+
     #chat-container {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      width: 400px;
-    }
-    
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    #chat-history {
-      height: 300px;
-      overflow-y: scroll;
-    }
-    
-    .user-message {
-      text-align: right;
-      padding: 10px;
-      background-color: #f0f0f0;
-      border-radius: 10px;
-      margin-bottom: 5px;
-    }
-    
-    .bot-message {
-      text-align: left;
-      padding: 10px;
-      background-color: #e0f0e0;
-      border-radius: 10px;
-      margin-bottom: 5px;
-    }
-    
-    form {
+      width: 100%;
+      max-width: 800px;
+      height: 80vh;
       display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-    
+
+    #chat-history {
+      flex-grow: 1;
+      padding: 20px;
+      overflow-y: auto;
+      background-color: #27292b2b;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .message {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .user-message {
+      justify-content: flex-end;
+      text-align:right;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 15px;
+      align-self: flex-end;
+    }
+
+    .bot-message {
+      justify-content: flex-start;
+      text-align: left;
+      background-color: #f1f0f0;
+      color: black;
+      padding: 10px 15px;
+      border-radius: 15px;
+      align-self: flex-start;
+      display: inline-block;
+      word-wrap: break-word;
+      margin-bottom: 10px;
+    }
+
+    .bot-message pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      white-space: pre-wrap; /* ให้ข้อความโค้ดคงรูปแบบบรรทัด */
+      word-wrap: break-word; /* ให้คำยาวๆ ตัดคำตามขนาดของกล่อง */
+      overflow-x: auto;
+      position: relative;
+    }
+
+    .copy-icon {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      border: none;
+      background-color: transparent;
+      color: #007bff;
+    }
+
+    .copy-icon:hover {
+      color: #0056b3;
+    }
+
+    #chat-form {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+      background-color: white;
+    }
+
     input {
       flex-grow: 1;
-      margin-right: 10px;
       padding: 10px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 25px;
+      margin-right: 10px;
+      font-size: 16px;
     }
-    
+
     button {
-      background-color: #4CAF50;
+      padding: 10px 20px;
+      background-color: #007bff;
       color: white;
       border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
+      border-radius: 25px;
+      font-size: 16px;
       cursor: pointer;
     }
+
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
     #loader {
-    display: none; /* Hide by default */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-    </style>
+      display: none; /* Hide by default */
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
+  <!-- Narbar-->
+  <%- include('../views/navbar') %>
   <!-- Chat container -->
   <div id="chat-container">
-    <h1>Chatbot</h1>
+    <!-- Chat history -->
     <div id="chat-history"></div>
+
+    <!-- Loader -->
+    <div id="loader">
+      <img src="/images/loader.gif" alt="Loading..." width="50px">
+    </div>
+
+    <!-- Chat form -->
     <form id="chat-form">
-      <input type="text" id="user-input" placeholder="Enter your message">
+      <input type="text" id="user-input" placeholder="Enter your message..." autocomplete="off">
       <button type="submit">Send</button>
     </form>
   </div>
-
-  <!-- Loader -->
-  <div id="loader">
-    <img src="/images/loader.gif" width="150px" alt="Loading...">
-  </div>
-
   <script>
     const chatHistory = document.getElementById('chat-history');
     const userInput = document.getElementById('user-input');
     const form = document.getElementById('chat-form');
+    const loader = document.getElementById('loader');
 
+    // Function to add message to chat history
+    function addMessage(message, isUser = false) {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('message', isUser ? 'user-message' : 'bot-message');
+
+      // Check if message is code block
+      if (!isUser && message.includes('```')) {
+        const codeMessage = message.replace(/```/g, ''); // Remove the triple backticks
+        messageDiv.innerHTML = `
+          <pre><code>${codeMessage}</code><button class="copy-icon" onclick="copyCode(this)">Copy</button></pre>
+        `;
+      } else {
+        messageDiv.textContent = message;
+      }
+
+      chatHistory.appendChild(messageDiv);
+      chatHistory.scrollTop = chatHistory.scrollHeight; // Scroll to the bottom
+    }
+
+    // Function to handle message sending
     async function sendMessage() {
       const userMessage = userInput.value;
       userInput.value = ''; // Clear input field
+      addMessage(userMessage, true); // Add user message
+
       try {
+        loader.style.display = 'block'; // Show loader
+
         const response = await fetch('/chat', {
           method: 'POST',
           headers: {
@@ -112,26 +188,46 @@
 
         const data = await response.json();
         const botMessage = data.response;
-
-        // Add user message and bot response to the chat history
-        chatHistory.innerHTML += `<div class="user-message">${userMessage}</div>`;
-        chatHistory.innerHTML += `<div class="bot-message">${botMessage}</div>`;
-
-        // Scroll to the bottom of the chat history
-        chatHistory.scrollTop = chatHistory.scrollHeight;
+        addMessage(botMessage, false); // Add bot message
       } catch (error) {
         console.error('Error:', error);
+        addMessage('Error occurred. Please try again.', false);
+      } finally {
+        loader.style.display = 'none'; // Hide loader
       }
     }
 
+    // Handle form submission
     form.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevent form submission
-      const loader = document.getElementById('loader');
-      loader.style.display = 'block'; // Show the loader
-      sendMessage().finally(() => {
-      loader.style.display = 'none'; // Hide the loader after the message is sent
-    });;
+      event.preventDefault(); // Prevent form from refreshing the page
+      if (userInput.value.trim() !== '') {
+        sendMessage();
+      }
     });
+
+    // Function to copy code
+    function copyCode(button) {
+      const codeElement = button.previousElementSibling;
+      const codeText = codeElement.textContent;
+
+      // Create a temporary textarea element to hold the text
+      const tempTextArea = document.createElement('textarea');
+      tempTextArea.value = codeText;
+      document.body.appendChild(tempTextArea);
+
+      // Select and copy the text
+      tempTextArea.select();
+      document.execCommand('copy');
+
+      // Remove the temporary textarea
+      document.body.removeChild(tempTextArea);
+
+      // Update button text
+      button.textContent = 'Copied!';
+      setTimeout(() => {
+        button.textContent = 'Copy';
+      }, 2000); // Change back to Copy after 2 seconds
+    }
   </script>
 </body>
 </html>
