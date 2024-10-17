@@ -66,8 +66,8 @@
       background-color: #f4f4f4;
       padding: 10px;
       border-radius: 5px;
-      white-space: pre-wrap; /* ให้ข้อความโค้ดคงรูปแบบบรรทัด */
-      word-wrap: break-word; /* ให้คำยาวๆ ตัดคำตามขนาดของกล่อง */
+      white-space: pre-wrap;
+      word-wrap: break-word;
       overflow-x: auto;
       position: relative;
     }
@@ -119,9 +119,29 @@
     }
 
     #loader {
-      display: none; /* Hide by default */
+      display: none;
       text-align: center;
       margin-top: 20px;
+    }
+
+    #quick-messages {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+
+    .quick-message-btn {
+      padding: 5px 10px;
+      background-color: #f30909;
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    .quick-message-btn:hover {
+      background-color: #e0e0e0;
     }
   </style>
 </head>
@@ -138,6 +158,13 @@
       <img src="/images/loader.gif" alt="Loading..." width="50px">
     </div>
 
+    <!-- Quick message buttons -->
+    <div id="quick-messages">
+      <button class="quick-message-btn">สวัสดี</button>
+      <button class="quick-message-btn">ขอความช่วยเหลือ</button>
+      <button class="quick-message-btn">ขอบคุณ</button>
+    </div>
+
     <!-- Chat form -->
     <form id="chat-form">
       <input type="text" id="user-input" placeholder="Enter your message..." autocomplete="off">
@@ -149,6 +176,7 @@
     const userInput = document.getElementById('user-input');
     const form = document.getElementById('chat-form');
     const loader = document.getElementById('loader');
+    const quickMessageButtons = document.querySelectorAll('.quick-message-btn');
 
     // Function to add message to chat history
     function addMessage(message, isUser = false) {
@@ -228,6 +256,18 @@
         button.textContent = 'Copy';
       }, 2000); // Change back to Copy after 2 seconds
     }
+
+    // Function to handle quick message button clicks
+    function handleQuickMessage(event) {
+      const message = event.target.textContent;
+      userInput.value = message;
+      sendMessage();
+    }
+
+    // Add click event listeners to quick message buttons
+    quickMessageButtons.forEach(button => {
+      button.addEventListener('click', handleQuickMessage);
+    });
   </script>
 </body>
 </html>
