@@ -7,10 +7,10 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 var ADRI = "https://drive.google.com/file/d/1Lc9NMPH1fpHMb-GTLUmBYXFI9DGfMqY3/preview"
-var ADRI1 = "Flowchart ใช้ draw.io (3 คะแนน)"
-var ADRI2 = "Source Code ที่เขียนขึ้น (5 คะแนน)"
-var ADRI3 = "แสดงผลลัพธ์ของโปรแกรม (1 คะแนน)"
-var ADRI4 = "ถ้าต้องการตรวจสอบว่าผู้ใช้ป้อนตัวเลือกเมนูไม่ถูกต้อง ต้องเขียนคำสั่งและแสดงข้อความอย่างไรเพื่อให้ผู้ใช้รู้ เขียนให้เข้าใจพอสังเขป (1 คะแนน)"
+var ADRI1 = "Flowchart ใช้ draw.io (30 คะแนน)"
+var ADRI2 = "Source Code ที่เขียนขึ้น (50 คะแนน)"
+var ADRI3 = "แสดงผลลัพธ์ของโปรแกรม (10 คะแนน)"
+var ADRI4 = "ถ้าต้องการตรวจสอบว่าผู้ใช้ป้อนตัวเลือกเมนูไม่ถูกต้อง ต้องเขียนคำสั่งและแสดงข้อความอย่างไรเพื่อให้ผู้ใช้รู้ เขียนให้เข้าใจพอสังเขป (10 คะแนน)"
 
 var ADRI_Answer = ""
 
@@ -53,6 +53,7 @@ router.post('/submit', async (req, res, next) => {
             timetodo:timetodo+1,
             times: new Date().toLocaleString(), 
             email: person.email,
+            name: person.name,
             role:person.role,
             contentName:currentProject,
             lang:lang,

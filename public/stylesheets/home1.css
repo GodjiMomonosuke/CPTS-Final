@@ -188,7 +188,7 @@ progress[value]::-webkit-progress-bar {
 .TeacherBar {
   width: 200px; 
   height: auto; 
-  margin-left: 20px;
+  margin-left: 20px; 
 }
 .TeacherBarr {
   width: 100px; 
