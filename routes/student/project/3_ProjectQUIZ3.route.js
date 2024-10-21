@@ -7,6 +7,10 @@ const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
 var ADRI = "https://drive.google.com/file/d/1QZDHpVWIdYBwQiovUDiaSJk00b5Uf1O_/preview"
+var ADRI1 = "Flowchart ใช้ draw.io ในการวาด (30 คะแนน)"
+var ADRI2 = "Source Code ภาษาซีที่เขียนขึ้น (50 คะแนน)"
+var ADRI3 = "แสดงผลลัพธ์ของโปรแกรม (10 คะแนน)"
+var ADRI4 = "ถ้าต้องการให้แสดงรายการสินค้าเฉพาะที่มีจำนวนสินค้ามากกว่า 20 ชิ้น ต้องเขียนคำสั่งอย่างไร เขียนให้เข้าใจพอสังเขป (10 คะแนน)"
 var ADRI_Answer = "https://drive.google.com/file/d/1F_BdOz-dnlGqqTIJ9eUNoAXxv9YfvG7p/preview"
 
 router.post('/submit', async (req, res, next) => {
@@ -47,6 +51,7 @@ router.post('/submit', async (req, res, next) => {
             timetodo:timetodo+1,
             times: new Date().toLocaleString(), 
             email: person.email,
+            name: person.name,
             role:person.role,
             contentName:currentProject,
             lang:lang,
@@ -55,6 +60,8 @@ router.post('/submit', async (req, res, next) => {
             output:dataOut,
             expResult16:expResult16,
             expResult17:expResult17,
+            ADRI:ADRI,
+            ADRI1:ADRI1,ADRI2:ADRI2,ADRI3:ADRI3,ADRI4:ADRI4,
             scoreTeacher:scoreTeacher
             
             /*ADRI:ADRI,

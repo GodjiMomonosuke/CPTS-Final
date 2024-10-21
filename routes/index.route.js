@@ -342,7 +342,7 @@ router.get('/', async (req, res, next) => {
               var TicTacToeBG;
               if(StudentAnswer[i].scoreQuiz === undefined){}
               else{
-                TicTacToeScore = TicTacToeScore+parseInt((StudentAnswer[i].scoreQuiz*10)/4);}
+                TicTacToeScore = TicTacToeScore+parseInt(StudentAnswer[i].scoreQuiz);}
                 TicTacToeBG = "#bd7b67"
                 TicTacToeCount++;
             }
@@ -350,7 +350,7 @@ router.get('/', async (req, res, next) => {
               var LibrarySystemBG;
               if(StudentAnswer[i].scoreQuiz === undefined){}
               else{
-                LibrarySystemScore = LibrarySystemScore+parseInt((StudentAnswer[i].scoreQuiz*10)/4);}
+                LibrarySystemScore = LibrarySystemScore+parseInt(StudentAnswer[i].scoreQuiz);}
                 LibrarySystemBG = "#bd7b67"
                 LibrarySystemCount++;
             }
@@ -358,7 +358,7 @@ router.get('/', async (req, res, next) => {
               var RoshamboBG;
               if(StudentAnswer[i].scoreQuiz === undefined){}
               else{
-                RoshamboScore = RoshamboScore+parseInt((StudentAnswer[i].scoreQuiz*10)/4);}
+                RoshamboScore = RoshamboScore+parseInt(StudentAnswer[i].scoreQuiz);}
                 RoshamboBG = "#bd7b67"
                 RoshamboCount++;
             }
