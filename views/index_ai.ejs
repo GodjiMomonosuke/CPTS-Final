@@ -171,6 +171,20 @@
       overflow-y: auto;
     }
 
+    .modal.open {
+      transform: translateX(0);
+    }
+
+    #chat-container {
+      transition: all 0.3s ease-in-out;
+      margin: 0 auto;
+    }
+
+    #chat-container.shifted {
+      width: 55%;
+      margin-left: 2rem;
+    }
+
     #loader {
       display: none;
       position: fixed;
@@ -504,6 +518,7 @@
     const showPromptsBtn = document.getElementById('show-prompts-btn');
     const closeBtn = document.getElementsByClassName('close')[0];
     const promptButtons = document.querySelectorAll('.prompt-btn');
+    
 
     showPromptsBtn.onclick = function() {
       modal.style.display = 'block';
