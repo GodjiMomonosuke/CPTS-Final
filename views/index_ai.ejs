@@ -214,39 +214,87 @@
       border-radius: 0.75rem;
       padding: 1rem;
       margin-bottom: 1rem;
+      transition: all 0.3s ease;
     }
 
     .lab-title {
       color: var(--primary-color);
       font-size: 1.1rem;
       font-weight: 600;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--primary-color);
+      margin-bottom: 0;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background-color: transparent;
+    }
+
+    .lab-title:hover {
+      background-color: rgba(99, 102, 241, 0.1);
+      transform: translateX(4px);
+    }
+
+    .lab-title::after {
+      content: '▼';
+      font-size: 0.8rem;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0.7;
+    }
+
+    .lab-title.active {
+      margin-bottom: 0.5rem;
+    }
+
+    .lab-title.active::after {
+      transform: rotate(180deg);
+      opacity: 1;
     }
 
     .prompt-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.8rem;
+      padding: 0.5rem;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .prompt-grid.active {
+      max-height: 2000px; /* เพิ่มค่าให้มากพอสำหรับเนื้อหา */
+      opacity: 1;
+      transform: translateY(0);
+      margin-top: 0.5rem;
     }
 
     .prompt-btn {
       background-color: white;
       color: var(--text-primary);
-      padding: 0.5rem 1rem;
+      padding: 0.75rem 1rem;
       border: 1px solid var(--border-color);
       border-radius: 1rem;
       font-size: 0.875rem;
-      transition: all 0.2s;
-      flex: 1 1 auto;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       text-align: center;
-      min-width: 120px;
+      width: 100%;
+      transform: scale(1);
     }
 
     .prompt-btn:hover {
       background-color: var(--bg-chat);
       border-color: var(--primary-color);
+      transform: scale(1.02);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .lab-section:has(.lab-title.active) {
+      background-color: rgba(99, 102, 241, 0.05);
+      box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
     }
 
     .close {
@@ -535,13 +583,65 @@
     }
 
     promptButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const prompt = button.getAttribute('data-prompt');
-        userInput.value = prompt;
-        modal.style.display = 'none';
-        sendMessage();
-      });
+    button.addEventListener('click', () => {
+      const prompt = button.getAttribute('data-prompt');
+      userInput.value = prompt;
+      userInput.focus(); // ให้ focus ไปที่ input field
+      modal.style.display = 'none'; // ปิด modal
+      
+      // เลื่อน cursor ไปท้ายข้อความ
+      const length = userInput.value.length;
+      userInput.setSelectionRange(length, length);
     });
+  });
+    
+    document.addEventListener('DOMContentLoaded', () => {
+  const labTitles = document.querySelectorAll('.lab-title');
+  
+  labTitles.forEach(title => {
+    title.addEventListener('click', () => {
+      const grid = title.nextElementSibling;
+      const section = title.closest('.lab-section');
+      const isActive = title.classList.contains('active');
+      
+      // Close all other sections with animation
+      document.querySelectorAll('.lab-title.active').forEach(activeTitle => {
+        if (activeTitle !== title) {
+          const activeGrid = activeTitle.nextElementSibling;
+          const activeSection = activeTitle.closest('.lab-section');
+          
+          activeTitle.classList.remove('active');
+          activeGrid.classList.remove('active');
+          activeSection.style.backgroundColor = '';
+          activeSection.style.boxShadow = '';
+        }
+      });
+      
+      // Toggle current section with animation
+      title.classList.toggle('active');
+      
+      // Add a small delay for the grid animation
+      if (!isActive) {
+        requestAnimationFrame(() => {
+          grid.classList.add('active');
+          section.style.backgroundColor = 'rgba(99, 102, 241, 0.05)';
+          section.style.boxShadow = '0 2px 8px rgba(99, 102, 241, 0.1)';
+          
+          // Scroll into view with smooth animation
+          title.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'nearest',
+            inline: 'nearest'
+          });
+        });
+      } else {
+        grid.classList.remove('active');
+        section.style.backgroundColor = '';
+        section.style.boxShadow = '';
+      }
+    });
+  });
+});
   </script>
 </body>
 </html>
