@@ -419,7 +419,65 @@
                         </div><br>
                     </div>
                     <div  class="group2"> <!-- Competency chart -->
-                        <div></div>
+                        <div>
+                            <% if(BasicPercent === 0 || TracePercent === 0 || ExplainPercent === 0 || WritePercent === 0){ %>
+                                none
+                                <img src="https://cdn-icons-png.flaticon.com/512/15547/15547949.png " alt="" style="margin: 20px; width: 150px;">
+                            <% } else { %> 
+                            <% if(BasicPercent > TracePercent || BasicPercent > ExplainPercent || BasicPercent > WritePercent){ %>
+                                k
+                            <% } %> 
+                            <% if(BasicPercent === TracePercent || BasicPercent > ExplainPercent || BasicPercent > WritePercent){ %>
+                                k = t
+                            <% } %> 
+                            <% if(BasicPercent > TracePercent || BasicPercent === ExplainPercent || BasicPercent > WritePercent){ %>
+                                k = e
+                            <% } %> 
+                            <% if(BasicPercent > TracePercent || BasicPercent > ExplainPercent || BasicPercent === WritePercent){ %>
+                                k = w
+                            <% } %> 
+                            <% if(BasicPercent === TracePercent || BasicPercent === ExplainPercent || BasicPercent > WritePercent){ %>
+                                k = t = e
+                            <% } %> 
+                            <% if(BasicPercent === TracePercent || BasicPercent > ExplainPercent || BasicPercent === WritePercent){ %>
+                                k = t = w
+                            <% } %> 
+                            <% if(BasicPercent > TracePercent || BasicPercent === ExplainPercent || BasicPercent === WritePercent){ %>
+                                k = e = w
+                            <% } %> 
+                            
+                            <!-- t -->
+                            <% if(TracePercent > BasicPercent || TracePercent > ExplainPercent || TracePercent > WritePercent){ %>
+                                t
+                            <% } %> 
+                            <% if(TracePercent > BasicPercent || TracePercent === ExplainPercent || TracePercent > WritePercent){ %>
+                                t = e
+                            <% } %> 
+                            <% if(TracePercent > BasicPercent || TracePercent > ExplainPercent || TracePercent === WritePercent){ %>
+                                t = w
+                            <% } %> 
+                            <% if(TracePercent > BasicPercent || TracePercent === ExplainPercent || TracePercent === WritePercent){ %>
+                                t = e = w
+                            <% } %> 
+
+                            <!-- e -->
+                            <% if(ExplainPercent > BasicPercent || ExplainPercent > TracePercent || ExplainPercent > WritePercent){ %>
+                                e
+                                <img src="https://cdn-icons-png.flaticon.com/256/15547/15547871.png" alt="" style="margin: 20px; width: 150px;">
+                            <% } %> 
+                            <% if(ExplainPercent > BasicPercent || ExplainPercent > TracePercent || ExplainPercent === WritePercent){ %>
+                                e = w
+                            <% } %> 
+
+                            <!-- w -->
+                            <% if(WritePercent > BasicPercent || WritePercent > TracePercent || WritePercent > ExplainPercent){ %>
+                                w
+                            <% } %> 
+                            <% if(WritePercent === BasicPercent || WritePercent === TracePercent || WritePercent === ExplainPercent){ %>
+                                k = t = e = w
+                            <% } %> 
+                            <% } %>
+                        </div>
                         <div>
                             <h4 class="chakra-petch-regular">Competency</h4>   
                             <div>

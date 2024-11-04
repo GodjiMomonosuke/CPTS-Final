@@ -780,7 +780,7 @@ router.get('/', async (req, res, next) => {
                   //** Project-quiz */
                   if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
                     if(StudentAnswer[i].scoreQuiz != undefined){
-                      Ticket_Booking_SystemDone = (StudentAnswer[i].scoreQuiz*10)/4;
+                      Ticket_Booking_SystemDone = StudentAnswer[i].scoreQuiz;
                     }else{
                       Ticket_Booking_SystemDone = "รอตรวจ";
                     }
@@ -788,7 +788,7 @@ router.get('/', async (req, res, next) => {
                   }
                   if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
                     if(StudentAnswer[i].scoreQuiz != undefined){
-                      Point_of_Sales_SystemDone = (StudentAnswer[i].scoreQuiz*10)/4;
+                      Point_of_Sales_SystemDone = StudentAnswer[i].scoreQuiz;
                     }else{
                       Point_of_Sales_SystemDone = "รอตรวจ";
                     }
@@ -796,7 +796,7 @@ router.get('/', async (req, res, next) => {
                   }
                   if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
                     if(StudentAnswer[i].scoreQuiz != undefined){
-                      Project_QUIZ3Done = (StudentAnswer[i].scoreQuiz*10)/4;
+                      Project_QUIZ3Done = StudentAnswer[i].scoreQuiz;
                     }else{
                       Project_QUIZ3Done = "รอตรวจ";
                     }
@@ -1081,24 +1081,24 @@ router.get('/', async (req, res, next) => {
                       Ticket_Booking_SystemDone = 1;
                         if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz1Score = "รอตรวจ"
-                        } else {PrjQuiz1Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
-                          Quiz1Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
+                        } else {PrjQuiz1Score = parseInt(StudentAnswer[i].scoreQuiz) + "/100";
+                          Quiz1Score = parseInt(StudentAnswer[i].scoreQuiz)
                         }
                     }
                     if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
                         Point_of_Sales_SystemDone = 1;
                         if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz2Score = "รอตรวจ"
-                        } else {PrjQuiz2Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
-                          Quiz2Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
+                        } else {PrjQuiz2Score = parseInt(StudentAnswer[i].scoreQuiz) + "/100";
+                          Quiz2Score = parseInt(StudentAnswer[i].scoreQuiz)
                         }
                     }
                     if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
                         Project_QUIZ3Done = 1;
                         if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz3Score = "รอตรวจ"
-                        } else {PrjQuiz3Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
-                          Quiz3Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
+                        } else {PrjQuiz3Score = parseInt(StudentAnswer[i].scoreQuiz) + "/100";
+                          Quiz3Score = parseInt(StudentAnswer[i].scoreQuiz)
                         }
                     }
               }
