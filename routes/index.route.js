@@ -780,7 +780,7 @@ router.get('/', async (req, res, next) => {
                   //** Project-quiz */
                   if (StudentAnswer[i].contentName ==='TicketBookingSystem-(Project_quiz1)') {   
                     if(StudentAnswer[i].scoreQuiz != undefined){
-                      Ticket_Booking_SystemDone = (StudentAnswer[i].scoreQuiz*10)/4;
+                      Ticket_Booking_SystemDone = StudentAnswer[i].scoreQuiz;
                     }else{
                       Ticket_Booking_SystemDone = "รอตรวจ";
                     }
@@ -788,7 +788,7 @@ router.get('/', async (req, res, next) => {
                   }
                   if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
                     if(StudentAnswer[i].scoreQuiz != undefined){
-                      Point_of_Sales_SystemDone = (StudentAnswer[i].scoreQuiz*10)/4;
+                      Point_of_Sales_SystemDone = StudentAnswer[i].scoreQuiz;
                     }else{
                       Point_of_Sales_SystemDone = "รอตรวจ";
                     }
@@ -796,7 +796,7 @@ router.get('/', async (req, res, next) => {
                   }
                   if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
                     if(StudentAnswer[i].scoreQuiz != undefined){
-                      Project_QUIZ3Done = (StudentAnswer[i].scoreQuiz*10)/4;
+                      Project_QUIZ3Done = StudentAnswer[i].scoreQuiz;
                     }else{
                       Project_QUIZ3Done = "รอตรวจ";
                     }
@@ -946,15 +946,21 @@ router.get('/', async (req, res, next) => {
                       IntroductionLV1 = StudentAnswer[i].scoreLV1;
                       IntroductionLV2 = StudentAnswer[i].scoreLV2;
                       IntroductionLV3 = StudentAnswer[i].scoreLV3;
-                      IntroductionLV4 = parseInt(StudentAnswer[i].scoreTeacher);
-                      PretestScore1 = IntroductionLV1+IntroductionLV1+IntroductionLV3+IntroductionLV4;
+                      if(StudentAnswer[i].scoreTeacher != undefined){
+                        IntroductionLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{IntroductionLV4 = IntroductionLV4}
+                      
+                      PretestScore1 = IntroductionLV1+IntroductionLV2+IntroductionLV3+IntroductionLV4;
                       Pretest1Done = 1;
                   }      
                   if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Pre-test)') {   
                       StringLV1 = StudentAnswer[i].scoreLV1;
                       StringLV2 = StudentAnswer[i].scoreLV2;
                       StringLV3 = StudentAnswer[i].scoreLV3;
-                      StringLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      if(StudentAnswer[i].scoreTeacher != undefined){
+                        StringLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{StringLV4 = StringLV4}
+
                       PretestScore2 = StringLV1+StringLV2+StringLV3+StringLV4;
                       Pretest2Done = 1;
                   } 
@@ -962,7 +968,10 @@ router.get('/', async (req, res, next) => {
                       DatatypeLV1 = StudentAnswer[i].scoreLV1;
                       DatatypeLV2 = StudentAnswer[i].scoreLV2;
                       DatatypeLV3 = StudentAnswer[i].scoreLV3;
-                      DatatypeLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      if(StudentAnswer[i].scoreTeacher != undefined){
+                        DatatypeLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{DatatypeLV4 = DatatypeLV4}
+
                       PretestScore3 = DatatypeLV1+DatatypeLV2+DatatypeLV3+DatatypeLV4;
                       Pretest3Done = 1;
                   } 
@@ -970,7 +979,10 @@ router.get('/', async (req, res, next) => {
                       OperatorsLV1 = StudentAnswer[i].scoreLV1;
                       OperatorsLV2 = StudentAnswer[i].scoreLV2;
                       OperatorsLV3 = StudentAnswer[i].scoreLV3;
-                      OperatorsLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      if(StudentAnswer[i].scoreTeacher != undefined){
+                        OperatorsLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{OperatorsLV4 = OperatorsLV4}
+
                       PretestScore4 = OperatorsLV1+OperatorsLV2+OperatorsLV3+OperatorsLV4;
                       Pretest4Done = 1;
                   }
@@ -978,7 +990,10 @@ router.get('/', async (req, res, next) => {
                       FlowControlLV1 = StudentAnswer[i].scoreLV1;
                       FlowControlLV2 = StudentAnswer[i].scoreLV2;
                       FlowControlLV3 = StudentAnswer[i].scoreLV3;
-                      FlowControlLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      if(StudentAnswer[i].scoreTeacher != undefined){
+                        FlowControlLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{FlowControlLV4 = FlowControlLV4}
+                      
                       PretestScore5 = FlowControlLV1+FlowControlLV2+FlowControlLV3+FlowControlLV4;
                       Pretest5Done = 1;
                   }
@@ -986,7 +1001,10 @@ router.get('/', async (req, res, next) => {
                       PointersLV1 = StudentAnswer[i].scoreLV1;
                       PointersLV2 = StudentAnswer[i].scoreLV2;
                       PointersLV3 = StudentAnswer[i].scoreLV3;
-                      PointersLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      if(StudentAnswer[i].scoreTeacher != undefined){
+                        PointersLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{PointersLV4 = PointersLV4}
+
                       PretestScore6 = PointersLV1+PointersLV2+PointersLV3+PointersLV4;
                       Pretest6Done = 1;
                   }
@@ -994,7 +1012,10 @@ router.get('/', async (req, res, next) => {
                       FunctionLV1 = StudentAnswer[i].scoreLV1;
                       FunctionLV2 = StudentAnswer[i].scoreLV2;
                       FunctionLV3 = StudentAnswer[i].scoreLV3;
-                      FunctionLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      if(StudentAnswer[i].scoreTeacher != undefined){
+                        FunctionLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{FunctionLV4 = FunctionLV4}
+
                       PretestScore7 = FunctionLV1+FunctionLV2+FunctionLV3+FunctionLV4;
                       Pretest7Done = 1;
                   }
@@ -1002,7 +1023,10 @@ router.get('/', async (req, res, next) => {
                       StructureLV1 = StudentAnswer[i].scoreLV1;
                       StructureLV2 = StudentAnswer[i].scoreLV2;
                       StructureLV3 = StudentAnswer[i].scoreLV3;
-                      StructureLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      if(StudentAnswer[i].scoreTeacher != undefined){
+                        StructureLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                      }else{StructureLV4 = StructureLV4}
+
                       PretestScore8 = StructureLV1+StructureLV2+StructureLV3+StructureLV4;
                       Pretest8Done = 1;
                   }
@@ -1011,7 +1035,10 @@ router.get('/', async (req, res, next) => {
                         IntroductionScoreLV1 = StudentAnswer[i].scoreLV1;
                         IntroductionScoreLV2 = StudentAnswer[i].scoreLV2;
                         IntroductionScoreLV3 = StudentAnswer[i].scoreLV3;
-                        IntroductionScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        if(StudentAnswer[i].scoreTeacher != undefined){
+                          IntroductionScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        }else{IntroductionScoreLV4 = IntroductionScoreLV4}
+                        
                         PosttestScore1 = IntroductionScoreLV1+IntroductionScoreLV2+IntroductionScoreLV3+IntroductionScoreLV4;
                         Posttest1Done = 1;
                     }      
@@ -1019,7 +1046,10 @@ router.get('/', async (req, res, next) => {
                         StringScoreLV1 = StudentAnswer[i].scoreLV1;
                         StringScoreLV2 = StudentAnswer[i].scoreLV2;
                         StringScoreLV3 = StudentAnswer[i].scoreLV3;
-                        StringScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        if(StudentAnswer[i].scoreTeacher != undefined){
+                          StringScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        }else{StringScoreLV4 = StringScoreLV4}
+
                         PosttestScore2 = StringScoreLV1+StringScoreLV2+StringScoreLV3+StringScoreLV4;
                         Posttest2Done = 1;
                     } 
@@ -1027,7 +1057,10 @@ router.get('/', async (req, res, next) => {
                         DatatypeScoreLV1 = StudentAnswer[i].scoreLV1;
                         DatatypeScoreLV2 = StudentAnswer[i].scoreLV2;
                         DatatypeScoreLV3 = StudentAnswer[i].scoreLV3;
-                        DatatypeScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        if(StudentAnswer[i].scoreTeacher != undefined){
+                          DatatypeScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        }else{DatatypeScoreLV4 = DatatypeScoreLV4}
+                        
                         PosttestScore3 = DatatypeScoreLV1+DatatypeScoreLV2+DatatypeScoreLV3+DatatypeScoreLV4;
                         Posttest3Done = 1;
                     } 
@@ -1035,7 +1068,10 @@ router.get('/', async (req, res, next) => {
                         OperatorsScoreLV1 = StudentAnswer[i].scoreLV1;
                         OperatorsScoreLV2 = StudentAnswer[i].scoreLV2;
                         OperatorsScoreLV3 = StudentAnswer[i].scoreLV3;
-                        OperatorsScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        if(StudentAnswer[i].scoreTeacher != undefined){
+                          OperatorsScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        }else{OperatorsScoreLV4 = OperatorsScoreLV4}
+
                         PosttestScore4 = OperatorsScoreLV1+OperatorsScoreLV2+OperatorsScoreLV3+OperatorsScoreLV4;
                         Posttest4Done = 1;
                     }
@@ -1043,7 +1079,10 @@ router.get('/', async (req, res, next) => {
                         FlowControlScoreLV1 = StudentAnswer[i].scoreLV1;
                         FlowControlScoreLV2 = StudentAnswer[i].scoreLV2;
                         FlowControlScoreLV3 = StudentAnswer[i].scoreLV3;
-                        FlowControlScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        if(StudentAnswer[i].scoreTeacher != undefined){
+                          FlowControlScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        }else{FlowControlScoreLV4 = FlowControlScoreLV4}
+
                         PosttestScore5 = FlowControlScoreLV1+FlowControlScoreLV2+FlowControlScoreLV3+FlowControlScoreLV4;
                         Posttest5Done = 1;
                     }
@@ -1051,7 +1090,10 @@ router.get('/', async (req, res, next) => {
                         PointersScoreLV1 = StudentAnswer[i].scoreLV1;
                         PointersScoreLV2 = StudentAnswer[i].scoreLV2;
                         PointersScoreLV3 = StudentAnswer[i].scoreLV3;
-                        PointersScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        if(StudentAnswer[i].scoreTeacher != undefined){
+                          PointersScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        }else{PointersScoreLV4 = PointersScoreLV4}
+
                         PosttestScore6 = PointersScoreLV1+PointersScoreLV3+PointersScoreLV3+PointersScoreLV4;
                         Posttest6Done = 1;
                     }
@@ -1059,7 +1101,10 @@ router.get('/', async (req, res, next) => {
                         FunctionScoreLV1 = StudentAnswer[i].scoreLV1;
                         FunctionScoreLV2 = StudentAnswer[i].scoreLV2;
                         FunctionScoreLV3 = StudentAnswer[i].scoreLV3;
-                        FunctionScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        if(StudentAnswer[i].scoreTeacher != undefined){
+                          FunctionScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        }else{FunctionScoreLV4 = FunctionScoreLV4}
+
                         PosttestScore7 = FunctionScoreLV1+FunctionScoreLV2+FunctionScoreLV3+FunctionScoreLV4;
                         Posttest7Done = 1;
                     }
@@ -1067,7 +1112,10 @@ router.get('/', async (req, res, next) => {
                         StructureScoreLV1 = StudentAnswer[i].scoreLV1;
                         StructureScoreLV2 = StudentAnswer[i].scoreLV2;
                         StructureScoreLV3 = StudentAnswer[i].scoreLV3;
-                        StructureScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        if(StudentAnswer[i].scoreTeacher != undefined){
+                          StructureScoreLV4 = parseInt(StudentAnswer[i].scoreTeacher);
+                        }else{StructureScoreLV4 = StructureScoreLV4}
+
                         PosttestScore8 = StructureScoreLV1+StructureScoreLV2+StructureScoreLV3+StructureScoreLV4;
                         Posttest8Done = 1;
                     }
@@ -1081,24 +1129,24 @@ router.get('/', async (req, res, next) => {
                       Ticket_Booking_SystemDone = 1;
                         if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz1Score = "รอตรวจ"
-                        } else {PrjQuiz1Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
-                          Quiz1Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
+                        } else {PrjQuiz1Score = parseInt(StudentAnswer[i].scoreQuiz) + "/100";
+                          Quiz1Score = parseInt(StudentAnswer[i].scoreQuiz)
                         }
                     }
                     if (StudentAnswer[i].contentName ==='PointofSalesSystem-(Project_quiz2)') {   
                         Point_of_Sales_SystemDone = 1;
                         if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz2Score = "รอตรวจ"
-                        } else {PrjQuiz2Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
-                          Quiz2Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
+                        } else {PrjQuiz2Score = parseInt(StudentAnswer[i].scoreQuiz) + "/100";
+                          Quiz2Score = parseInt(StudentAnswer[i].scoreQuiz)
                         }
                     }
                     if (StudentAnswer[i].contentName ==='Project_QUIZ3') {   
                         Project_QUIZ3Done = 1;
                         if (StudentAnswer[i].scoreQuiz === undefined) {
                           PrjQuiz3Score = "รอตรวจ"
-                        } else {PrjQuiz3Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4) + "/25";
-                          Quiz3Score = parseInt((StudentAnswer[i].scoreQuiz*10)/4)
+                        } else {PrjQuiz3Score = parseInt(StudentAnswer[i].scoreQuiz) + "/100";
+                          Quiz3Score = parseInt(StudentAnswer[i].scoreQuiz)
                         }
                     }
               }
