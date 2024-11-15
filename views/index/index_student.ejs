@@ -429,14 +429,16 @@
                     </div>
                     <div  class="group2"> <!-- Charater & Chart -->
                         <div><!-- Character -->
-                            <h4 class="chakra-petch-regular">Competency</h4>  
-                            <div class="Character">
+                            <h4 class="chakra-petch-regular">Character</h4>  
+                            <div class="Character" style="height: 300px; width: 300px;">
                                 <% if(BasicPercent === 0 && TracePercent === 0 && ExplainPercent === 0 && WritePercent === 0){ %>
                                     none
                                     <img src="https://cdn-icons-png.flaticon.com/512/15547/15547949.png " alt="" style="margin: 20px; width: 150px;">
                                 <% } else { %> 
                                 <% if(BasicPercent > TracePercent && BasicPercent > ExplainPercent && BasicPercent > WritePercent){ %>
-                                    k
+                                    <img src="/images/IMG_3171.webp" alt="Knowledge" style=" width: 200px; height: 200px;">
+                                    <p style="margin-bottom: 0px;"><b>KN</b>
+                                    <p>Knowledge</p>
                                 <% } %> 
                                 <% if(BasicPercent === TracePercent && BasicPercent > ExplainPercent && BasicPercent > WritePercent){ %>
                                     k = t
@@ -459,7 +461,9 @@
                                 
                                 <!-- t -->
                                 <% if(TracePercent > BasicPercent && TracePercent > ExplainPercent && TracePercent > WritePercent){ %>
-                                    t
+                                    <img src="/images/IMG_3178.png" alt="Knowledge" style=" width: 200px; height: 200px;">
+                                    <p style="margin-bottom: 0px;"><b>TR</b>
+                                    <p>Tracing</p>
                                 <% } %> 
                                 <% if(TracePercent > BasicPercent && TracePercent === ExplainPercent && TracePercent > WritePercent){ %>
                                     t = e
@@ -475,7 +479,7 @@
                                 <% if(ExplainPercent > BasicPercent && ExplainPercent > TracePercent && ExplainPercent > WritePercent){ %>
                                     <img src="/images/IMG_3239.png" alt="Knowledge" style=" width: 200px; height: 200px;">
                                     <p style="margin-bottom: 0px;"><b>EX</b>
-                                    <p>Explaining + Knowledge</p>
+                                    <p>Explaining</p>
                                 <% } %>
                                 <% if(ExplainPercent > BasicPercent && ExplainPercent > TracePercent && ExplainPercent === WritePercent){ %>
                                     e = w
@@ -483,7 +487,9 @@
 
                                 <!-- w -->
                                 <% if(WritePercent > BasicPercent && WritePercent > TracePercent && WritePercent > ExplainPercent){ %>
-                                    w
+                                    <img src="/images/IMG_3232.png" alt="Knowledge" style=" width: 200px; height: 200px;">
+                                    <p style="margin-bottom: 0px;"><b>WR</b>
+                                    <p>Writing</p>
                                 <% } %>
                                 <% if(WritePercent === BasicPercent && WritePercent === TracePercent && WritePercent === ExplainPercent){ %>
                                     k = t = e = w
@@ -491,10 +497,11 @@
                                 <% } %>
                             </div>
                         </div>
-                        <div><!-- Competency chart -->
+                        <!-- Competency chart -->
+                        <div class="chart">
                             <h4 class="chakra-petch-regular">Competency</h4>   
                             <div>
-                                <div class="chartCard">
+                                <div class="chartCard" style="width: 300px;">
                                     <div class="chartBox" style="background-color: #ffffff37; border: solid #fff;">
                                         <canvas id="myChart"></canvas>
                                     </div>
