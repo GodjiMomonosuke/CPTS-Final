@@ -316,11 +316,11 @@
       
         <!-- Prompts Panel -->
         <div id="prompts-panel">
-          <h2 style="margin-bottom: 20px; text-align: center;">Lab Prompts</h2>
+          <h2 style="margin-bottom: 20px; text-align: center;">Tutor Guide</h2>
           <div class="labs-container">
             <!-- Lab 1 -->
             <div class="lab-section">
-              <div class="lab-title">Lab 1: Algorithms and Flowcharts</div>
+              <div class="lab-title">Algorithms and Flowcharts</div>
               <div class="prompt-grid">
                 <button class="prompt-btn" data-prompt="อธิบายความสำคัญของการออกแบบอัลกอริทึมที่มีประสิทธิภาพและยกตัวอย่างการแก้ปัญหาด้วยอัลกอริทึม">1. ความสำคัญของอัลกอริทึม</button>
                 <button class="prompt-btn" data-prompt="วาด flowchart ที่แสดงขั้นตอนการตรวจสอบว่าจำนวนที่ป้อนเข้ามาเป็นเลขคี่หรือเลขคู่พร้อมอธิบาย">2. Flowchart เลขคี่-คู่</button>
@@ -336,7 +336,7 @@
       
             <!-- Lab 2 -->
             <div class="lab-section">
-              <div class="lab-title">Lab 2: Data Types and Variables</div>
+              <div class="lab-title">Data Types and Variables</div>
               <div class="prompt-grid">
                 <button class="prompt-btn" data-prompt="อธิบายประเภทข้อมูลในภาษา C พร้อมยกตัวอย่าง">1. Data Types</button>
                 <button class="prompt-btn" data-prompt="เขียนโปรแกรมแสดงการสร้างตัวแปรประเภทต่างๆ">2. Variables Declaration</button>
@@ -350,7 +350,7 @@
       
             <!-- Lab 3 -->
             <div class="lab-section">
-              <div class="lab-title">Lab 3: Input and Output</div>
+              <div class="lab-title">Input and Output</div>
               <div class="prompt-grid">
                 <button class="prompt-btn" data-prompt="อธิบายหลักการรับข้อมูลและแสดงผลลัพธ์ในภาษา C">1. I/O Basics</button>
                 <button class="prompt-btn" data-prompt="เขียนโปรแกรมรับข้อมูลและแสดงผลลัพธ์">2. Basic I/O Program</button>
@@ -365,7 +365,7 @@
       
             <!-- Lab 4 -->
             <div class="lab-section">
-              <div class="lab-title">Lab 4: Operators and Expressions</div>
+              <div class="lab-title">Operators and Expressions</div>
               <div class="prompt-grid">
                 <button class="prompt-btn" data-prompt="อธิบายประเภทของ operators พร้อมตัวอย่าง">1. Types of Operators</button>
                 <button class="prompt-btn" data-prompt="เขียนโปรแกรมใช้ตัวดำเนินการทางคณิตศาสตร์">2. Arithmetic Operators</button>
@@ -382,7 +382,7 @@
       
             <!-- Lab 5 -->
             <div class="lab-section">
-              <div class="lab-title">Lab 5: Selection Statements</div>
+              <div class="lab-title">Selection Statements</div>
               <div class="prompt-grid">
                 <button class="prompt-btn" data-prompt="อธิบายแนวคิดของ selection statements">1. Selection Basics</button>
                 <button class="prompt-btn" data-prompt="เขียนโปรแกรมใช้ if-else statements">2. If-Else Program</button>
@@ -396,7 +396,7 @@
       
             <!-- Lab 6 -->
             <div class="lab-section">
-              <div class="lab-title">Lab 6: Loop Statements</div>
+              <div class="lab-title">Loop Statements</div>
               <div class="prompt-grid">
                 <button class="prompt-btn" data-prompt="อธิบายประเภทของ loop statements">1. Loop Types</button>
                 <button class="prompt-btn" data-prompt="เขียนโปรแกรมใช้ for loop">2. For Loop Sum</button>
@@ -412,7 +412,7 @@
       
             <!-- Lab 7 -->
             <div class="lab-section">
-              <div class="lab-title">Lab 7: Arrays and Strings</div>
+              <div class="lab-title">Arrays and Strings</div>
               <div class="prompt-grid">
                 <button class="prompt-btn" data-prompt="อธิบายความแตกต่างระหว่าง array และ string">1. Arrays vs Strings</button>
                 <button class="prompt-btn" data-prompt="เขียนโปรแกรมคำนวณผลรวม array">2. Array Sum</button>
@@ -427,7 +427,7 @@
       
             <!-- Lab 8 -->
             <div class="lab-section">
-              <div class="lab-title">Lab 8: Functions</div>
+              <div class="lab-title">Functions</div>
               <div class="prompt-grid">
                 <button class="prompt-btn" data-prompt="อธิบายแนวคิดของฟังก์ชัน">1. Function Basics</button>
                 <button class="prompt-btn" data-prompt="เขียนฟังก์ชันคำนวณผลรวม">2. Sum Function</button>
@@ -451,6 +451,8 @@ const loader = document.getElementById('loader');
 const quickMessageButtons = document.querySelectorAll('.quick-message-btn');
 const promptButtons = document.querySelectorAll('.prompt-btn');
 
+let isPromptButton = false; // Flag to track if message is from prompt button
+
 function addMessage(message, isUser = false) {
   const messageDiv = document.createElement('div');
   messageDiv.classList.add('message', isUser ? 'user-message' : 'bot-message');
@@ -470,12 +472,13 @@ function addMessage(message, isUser = false) {
 
 async function sendMessage() {
   const originalMessage = userInput.value;
-  // เคลียร์ช่อง input ทันทีและแสดงข้อความดั้งเดิมของผู้ใช้
   userInput.value = '';
   addMessage(originalMessage, true);
 
-  // Format prompt ในระบบโดยไม่แสดงให้ผู้ใช้เห็น
-  const formattedMessage = `${originalMessage}\n\nกรุณาแสดงตัวอย่างโค้ดภาษา C 3 ตัวอย่างที่แตกต่างกัน พร้อมอธิบายการทำงานของแต่ละตัวอย่าง`;
+  // Only format message if it's from a prompt button
+  const messageToSend = isPromptButton 
+    ? `${originalMessage}\n\nกรุณาอธิบายความหมายและตัวอย่างโค้ดภาษา C 3 ตัวอย่างที่แตกต่างกัน พร้อมอธิบายการทำงานของแต่ละตัวอย่าง`
+    : originalMessage;
 
   const loadingDiv = document.createElement('div');
   loadingDiv.classList.add('message', 'bot-message');
@@ -489,8 +492,7 @@ async function sendMessage() {
       headers: {
         'Content-Type': 'application/json',
       },
-      // ส่ง formatted message ไปที่ server
-      body: JSON.stringify({ userInput: formattedMessage }),
+      body: JSON.stringify({ userInput: messageToSend }),
     });
 
     const data = await response.json();
@@ -501,14 +503,18 @@ async function sendMessage() {
     chatHistory.removeChild(loadingDiv);
     addMessage('Error occurred. Please try again.', false);
   }
+  
+  // Reset the flag after sending
+  isPromptButton = false;
 }
 
 // Event Listeners
 promptButtons.forEach(button => {
   button.addEventListener('click', () => {
     const prompt = button.getAttribute('data-prompt');
-    userInput.value = prompt; // แสดงเฉพาะ prompt ดั้งเดิม
+    userInput.value = prompt;
     userInput.focus();
+    isPromptButton = true; // Set flag when prompt button is clicked
     
     const length = userInput.value.length;
     userInput.setSelectionRange(length, length);
