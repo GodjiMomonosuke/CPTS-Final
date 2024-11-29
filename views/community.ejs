@@ -1,88 +1,130 @@
-<%- include('./layouts/header') %>
+<%- include('layouts/header') %>
 
-<div class="container mt-4">
-    <h2>Community Board</h2>
+<div class="container mt-5">
+    <!-- Header Section -->
+    <div class="mb-4">
+        <h2 class="display-5 fw-bold">Community Board</h2>
+        <p class="text-muted">แชร์ความคิดเห็นและแลกเปลี่ยนประสบการณ์</p>
+    </div>
 
-    <!-- ฟอร์มสำหรับสร้างโพสต์ใหม่ -->
-    <div class="card mb-4">
-        <div class="card-body">
+    <!-- Create Post Card -->
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body p-4">
             <form action="/community" method="POST">
-                <div class="form-group">
-                    <textarea 
-                        name="content" 
-                        class="form-control" 
-                        rows="3" 
-                        placeholder="แชร์ความคิดของคุณ..."
-                        required
-                    ></textarea>
+                <textarea 
+                    name="content" 
+                    class="form-control border-0 bg-light"
+                    style="resize: none;"
+                    rows="3" 
+                    placeholder="คุณกำลังคิดอะไรอยู่..."
+                    required
+                ></textarea>
+                <div class="d-flex justify-content-end mt-3">
+                    <button type="submit" class="btn btn-primary d-flex align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                            <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                        </svg>
+                        <span>โพสต์</span>
+                    </button>
                 </div>
-                <button type="submit" class="btn btn-primary mt-2">โพสต์</button>
             </form>
         </div>
     </div>
 
-    <!-- แสดงข้อความแจ้งเตือน -->
-    <% if (messages.error) { %>
-        <div class="alert alert-danger"><%= messages.error %></div>
-    <% } %>
-    <% if (messages.success) { %>
-        <div class="alert alert-success"><%= messages.success %></div>
-    <% } %>
-
-    <!-- แสดงโพสต์ทั้งหมด -->
+    <!-- Posts Section -->
     <div class="posts">
         <% if (posts && posts.length > 0) { %>
             <% posts.forEach(post => { %>
-                <div class="card mb-3" id="post-<%= post._id %>">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <%= post.author.username %>
-                        </h5>
+                <div class="card shadow-sm border-0 mb-3" id="post-<%= post._id %>">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="d-flex align-items-center">
+                                <!-- Initial Circle -->
+                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" 
+                                     style="width: 40px; height: 40px;">
+                                    <span class="text-white fw-bold">
+                                        <%= post.name.charAt(0).toUpperCase() %>
+                                    </span>
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-bold"><%= post.name %></h6>
+                                    <small class="text-muted">
+                                        <%= new Date(post.createdAt).toLocaleString('th-TH') %>
+                                    </small>
+                                </div>
+                            </div>
+                            <% if (person.email === post.email || person.role === 'teacher') { %>
+                                <button 
+                                    class="btn btn-outline-danger btn-sm d-flex align-items-center gap-2"
+                                    data-post-id="<%= post._id %>"
+                                    onclick="deletePost(this)"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                                    </svg>
+                                    <span>ลบ</span>
+                                </button>
+                            <% } %>
+                        </div>
                         <p class="card-text"><%= post.content %></p>
-                        <p class="card-text">
-                            <small class="text-muted">
-                                <%= new Date(post.createdAt).toLocaleString() %>
-                            </small>
-                        </p>
-                        <% if (user && post.author._id.toString() === user._id.toString()) { %>
-                            <button 
-                                class="btn btn-danger btn-sm delete-post" 
-                                data-post-id="<%= post._id %>"
-                            >
-                                ลบ
-                            </button>
-                        <% } %>
                     </div>
                 </div>
             <% }); %>
         <% } else { %>
-            <p class="text-center">ยังไม่มีโพสต์</p>
+            <div class="text-center py-5">
+                <div class="text-muted mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </div>
+                <p class="text-muted mb-0">ยังไม่มีโพสต์</p>
+                <p class="text-muted">เริ่มต้นการสนทนาด้วยการแชร์ความคิดของคุณ</p>
+            </div>
         <% } %>
     </div>
 </div>
 
+<style>
+.hover-shadow {
+    transition: all 0.3s ease;
+}
+.hover-shadow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+/* Animation for post deletion */
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+</style>
+
 <script>
-// สคริปต์สำหรับลบโพสต์
-document.querySelectorAll('.delete-post').forEach(button => {
-    button.addEventListener('click', async () => {
-        if (confirm('คุณแน่ใจหรือไม่ที่จะลบโพสต์นี้?')) {
-            const postId = button.dataset.postId;
-            try {
-                const response = await fetch(`/community/${postId}`, {
-                    method: 'DELETE'
-                });
-                if (response.ok) {
-                    document.getElementById(`post-${postId}`).remove();
-                } else {
-                    const data = await response.json();
-                    alert(data.error || 'เกิดข้อผิดพลาดในการลบโพสต์');
-                }
-            } catch (error) {
-                alert('เกิดข้อผิดพลาดในการลบโพสต์');
+// Delete Post
+function deletePost(button) {
+    if (confirm('คุณแน่ใจหรือไม่ที่จะลบโพสต์นี้?')) {
+        const postId = button.dataset.postId;
+        const postElement = document.getElementById(`post-${postId}`);
+        
+        fetch(`/community/${postId}`, {
+            method: 'DELETE'
+        })
+        .then(response => {
+            if (response.ok) {
+                postElement.classList.add('fade-out');
+                setTimeout(() => postElement.remove(), 300);
+            } else {
+                throw new Error('เกิดข้อผิดพลาดในการลบโพสต์');
             }
-        }
-    });
-});
+        })
+        .catch(error => {
+            alert(error.message);
+        });
+    }
+}
 </script>
 
-<%- include('./layouts/footer') %>
+<%- include('layouts/footer') %>

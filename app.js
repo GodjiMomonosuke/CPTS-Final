@@ -310,6 +310,7 @@ app.use('/classStudent',
 );
 
 
+// Community route
 app.use('/community', 
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   require('./routes/community.route')

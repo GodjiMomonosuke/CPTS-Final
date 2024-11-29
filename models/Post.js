@@ -6,19 +6,22 @@ const postSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    author: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
+    email: {
+        type: String,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true
+    },
+    role: {
+        type: String,
         required: true
     },
     createdAt: {
         type: Date,
         default: Date.now
-    },
-    likes: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    }]
+    }
 });
 
-module.exports = mongoose.model('Post', postSchema);
+module.exports = mongoose.model('post', postSchema);

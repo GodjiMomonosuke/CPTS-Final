@@ -1,58 +1,99 @@
 const router = require('express').Router();
-const Post = require('../models/Post');
+const MongoClient = require('mongodb').MongoClient;
+const ObjectID = require('mongodb').ObjectID;
+const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
+const mydatabase = "Cluster0";
+const { ensureLoggedIn } = require('connect-ensure-login');
 
-// แสดงหน้า community
-router.get('/', async (req, res) => {
-    try {
-        const posts = await Post.find()
-            .populate('author', 'username email')
-            .sort('-createdAt');
-        res.render('community', { 
-            posts,
-            user: req.user
+// แสดงโพสต์ทั้งหมด
+router.get('/', ensureLoggedIn({ redirectTo: '/auth/login' }), (req, res) => {
+    const person = req.user;
+    console.log('Current user:', person); // Debug log
+    
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db(mydatabase);
+
+        dbo.collection("Posts").find({}).sort({ createdAt: -1 }).toArray(function(err, posts) {
+            if (err) {
+                console.error("Error loading posts:", err);
+                res.redirect('/');
+                return;
+            }
+            console.log('Posts:', posts); // Debug log
+            res.render('community', { 
+                person: person,
+                posts: posts
+            });
+            db.close();
         });
-    } catch (error) {
-        console.error(error);
-        req.flash('error', 'ไม่สามารถโหลดโพสต์ได้');
-        res.redirect('back');
-    }
+    });
 });
 
 // สร้างโพสต์ใหม่
-router.post('/', async (req, res) => {
-    try {
-        const post = new Post({
+router.post('/', ensureLoggedIn({ redirectTo: '/auth/login' }), (req, res) => {
+    const person = req.user;
+    
+    MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db(mydatabase);
+        var myobj = {
             content: req.body.content,
-            author: req.user._id
+            email: person.email,
+            name: person.name || person.email,
+            createdAt: new Date()
+        };
+        
+        dbo.collection("Posts").insertOne(myobj, function(err, result) {
+            if (err) {
+                req.flash('error', 'ไม่สามารถสร้างโพสต์ได้');
+            } else {
+                req.flash('success', 'โพสต์สำเร็จ');
+            }
+            db.close();
+            res.redirect('/community');
         });
-        await post.save();
-        req.flash('success', 'โพสต์สำเร็จ');
-        res.redirect('/community');
-    } catch (error) {
-        console.error(error);
-        req.flash('error', 'ไม่สามารถสร้างโพสต์ได้');
-        res.redirect('/community');
-    }
+    });
 });
 
 // ลบโพสต์
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', ensureLoggedIn({ redirectTo: '/auth/login' }), (req, res) => {
+    const person = req.user;
     try {
-        const post = await Post.findById(req.params.id);
-        if (!post) {
-            return res.status(404).json({ error: 'ไม่พบโพสต์' });
-        }
+        const postId = new ObjectID(req.params.id);
         
-        if (post.author.toString() !== req.user._id.toString()) {
-            return res.status(403).json({ error: 'ไม่มีสิทธิ์ลบโพสต์นี้' });
-        }
-        
-        await post.remove();
-        res.json({ message: 'ลบโพสต์สำเร็จ' });
+        MongoClient.connect(url, function(err, db) {
+            if (err) throw err;
+            var dbo = db.db(mydatabase);
+            
+            dbo.collection("Posts").findOne({ _id: postId }, function(err, post) {
+                if (err || !post) {
+                    res.status(404).json({ error: 'ไม่พบโพสต์' });
+                    db.close();
+                    return;
+                }
+                
+                if (post.email !== person.email && person.role !== 'teacher') {
+                    res.status(403).json({ error: 'ไม่มีสิทธิ์ลบโพสต์นี้' });
+                    db.close();
+                    return;
+                }
+                
+                dbo.collection("Posts").deleteOne({ _id: postId }, function(err, result) {
+                    if (err) {
+                        res.status(500).json({ error: 'เกิดข้อผิดพลาดในการลบโพสต์' });
+                    } else {
+                        res.json({ message: 'ลบโพสต์สำเร็จ' });
+                    }
+                    db.close();
+                });
+            });
+        });
     } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'เกิดข้อผิดพลาดในการลบโพสต์' });
+        res.status(400).json({ error: 'รูปแบบ ID ไม่ถูกต้อง' });
     }
 });
+
+
 
 module.exports = router;
