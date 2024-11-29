@@ -1,0 +1,88 @@
+<%- include('./layouts/header') %>
+
+<div class="container mt-4">
+    <h2>Community Board</h2>
+
+    <!-- ฟอร์มสำหรับสร้างโพสต์ใหม่ -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <form action="/community" method="POST">
+                <div class="form-group">
+                    <textarea 
+                        name="content" 
+                        class="form-control" 
+                        rows="3" 
+                        placeholder="แชร์ความคิดของคุณ..."
+                        required
+                    ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">โพสต์</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- แสดงข้อความแจ้งเตือน -->
+    <% if (messages.error) { %>
+        <div class="alert alert-danger"><%= messages.error %></div>
+    <% } %>
+    <% if (messages.success) { %>
+        <div class="alert alert-success"><%= messages.success %></div>
+    <% } %>
+
+    <!-- แสดงโพสต์ทั้งหมด -->
+    <div class="posts">
+        <% if (posts && posts.length > 0) { %>
+            <% posts.forEach(post => { %>
+                <div class="card mb-3" id="post-<%= post._id %>">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%= post.author.username %>
+                        </h5>
+                        <p class="card-text"><%= post.content %></p>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                <%= new Date(post.createdAt).toLocaleString() %>
+                            </small>
+                        </p>
+                        <% if (user && post.author._id.toString() === user._id.toString()) { %>
+                            <button 
+                                class="btn btn-danger btn-sm delete-post" 
+                                data-post-id="<%= post._id %>"
+                            >
+                                ลบ
+                            </button>
+                        <% } %>
+                    </div>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p class="text-center">ยังไม่มีโพสต์</p>
+        <% } %>
+    </div>
+</div>
+
+<script>
+// สคริปต์สำหรับลบโพสต์
+document.querySelectorAll('.delete-post').forEach(button => {
+    button.addEventListener('click', async () => {
+        if (confirm('คุณแน่ใจหรือไม่ที่จะลบโพสต์นี้?')) {
+            const postId = button.dataset.postId;
+            try {
+                const response = await fetch(`/community/${postId}`, {
+                    method: 'DELETE'
+                });
+                if (response.ok) {
+                    document.getElementById(`post-${postId}`).remove();
+                } else {
+                    const data = await response.json();
+                    alert(data.error || 'เกิดข้อผิดพลาดในการลบโพสต์');
+                }
+            } catch (error) {
+                alert('เกิดข้อผิดพลาดในการลบโพสต์');
+            }
+        }
+    });
+});
+</script>
+
+<%- include('./layouts/footer') %>

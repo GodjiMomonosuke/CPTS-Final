@@ -310,6 +310,11 @@ app.use('/classStudent',
 );
 
 
+app.use('/community', 
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/community.route')
+);
+
 // 404 Handler
 app.get('/error', (req, res) => {
   const error = {
