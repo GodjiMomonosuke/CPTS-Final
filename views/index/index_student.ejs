@@ -48,13 +48,68 @@
             opacity: 0.6;
         }
         .Character {
-            width: 300px;
-            height: 300px;
+            width: 400px; /* Increased from 300px */
+            height: 400px; /* Increased from 300px */
             background-color: #f1f1f1;
             border-radius: 10px;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding-top: 40px;
+            padding: 20px;
+        }
+
+        /* Adjust character image size */
+        .Character img {
+            width: 300px !important; /* Increased from 200px */
+            height: 300px !important; /* Increased from 200px */
+            margin-bottom: 10px;
+        }
+
+        /* Character text styles */
+        .Character p {
+            margin: 5px 0;
+            font-size: 1.2rem; /* Increased font size */
+        }
+
+        .Character p:first-of-type {
+            font-size: 1.5rem; /* Larger font size for character type */
+            font-weight: bold;
+        }
+
+        .group2 {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px; /* Increased gap between character and chart */
+            margin: 20px 0;
+        }
+
+        /* Chart container styles */
+        .chart {
+            margin-left: auto; /* Push chart to the right */
+            padding-right: 20px; /* Add some padding on the right */
+        }
+
+        .chartCard {
+            width: 340px; /* Slightly increased width */
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .chartBox {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff37;
+            border: solid #fff;
+        }
+
+        .group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
         }
     </style>
 
@@ -88,6 +143,7 @@
                                 </svg><b> Change Class</b>
                             </button>
                     <br>
+                    <br>
                     <p>ติดต่ออาจารย์ผู้สอน : <a href="mailto:result[0].teacher"> <%= result[0].teacher%></a></p>
                     <% } else{ %>  
                         <b>คลิกเพื่อเข้าร่วม Class</b><br>
@@ -97,7 +153,8 @@
                                 </svg><b> Join Class</b>
                             </button>
                             
-                    <% } %> <br><br>
+                    <% } %>
+                    
                 </div>    
 
                 <div class="item1" style="width: auto;">
@@ -430,68 +487,99 @@
                     </div>
                     <div  class="group2"> <!-- Charater & Chart -->
                         <div><!-- Character -->
-                            <h4 class="chakra-petch-regular">Competency</h4>  
+                            <h4 class="chakra-petch-regular">Character</h4>  
                             <div class="Character">
                                 <% if(BasicPercent === 0 && TracePercent === 0 && ExplainPercent === 0 && WritePercent === 0){ %>
-                                    none
-                                    <img src="https://cdn-icons-png.flaticon.com/512/15547/15547949.png " alt="" style="margin: 20px; width: 150px;">
+                                    <img src="/images/IMG_3241.png" alt="Rookie">
+                                    <p style="margin-bottom: 0px;"><b>ROOKIE</b>
+                                    <p>Rookie</p>
                                 <% } else { %> 
                                 <% if(BasicPercent > TracePercent && BasicPercent > ExplainPercent && BasicPercent > WritePercent){ %>
-                                    k
+                                    <img src="/images/IMG_3171.webp" alt="Knowledge">
+                                    <p style="margin-bottom: 0px;"><b>KN</b>
+                                    <p>Knowledge</p>
                                 <% } %> 
                                 <% if(BasicPercent === TracePercent && BasicPercent > ExplainPercent && BasicPercent > WritePercent){ %>
-                                    k = t
+                                    <img src="/images/IMG_3170.png" alt="Knowledge">
+                                    <p style="margin-bottom: 0px;"><b>KNTR</b>
+                                    <p>Knowledge + Tracing</p>
                                 <% } %> 
                                 <% if(BasicPercent > TracePercent && BasicPercent === ExplainPercent && BasicPercent > WritePercent){ %>
-                                    k = e
+                                    <img src="/images/IMG_3169.png" alt="Knowledge">
+                                    <p style="margin-bottom: 0px;"><b>KNEX</b>
+                                    <p>Knowledge + Explaining</p>
                                 <% } %> 
                                 <% if(BasicPercent > TracePercent && BasicPercent > ExplainPercent && BasicPercent === WritePercent){ %>
-                                    k = w
+                                    <img src="/images/IMG_3168.png" alt="Knowledge">
+                                    <p style="margin-bottom: 0px;"><b>KNWR</b>
+                                    <p>Knowledge + Writing</p>
                                 <% } %> 
                                 <% if(BasicPercent === TracePercent && BasicPercent === ExplainPercent && BasicPercent > WritePercent){ %>
-                                    k = t = e
+                                    <img src="/images/IMG_3167.png" alt="Knowledge">
+                                    <p style="margin-bottom: 0px;"><b>KNTREX</b>
+                                    <p>Knowledge + Tracing + Explaining</p>
                                 <% } %> 
                                 <% if(BasicPercent === TracePercent && BasicPercent > ExplainPercent && BasicPercent === WritePercent){ %>
-                                    k = t = w
+                                    <img src="/images/IMG_3166.png" alt="Knowledge">
+                                    <p style="margin-bottom: 0px;"><b>KNTRWR</b>
+                                    <p>Knowledge + Tracing + Writing</p>
                                 <% } %> 
                                 <% if(BasicPercent > TracePercent && BasicPercent === ExplainPercent && BasicPercent === WritePercent){ %>
-                                    k = e = w
+                                    <img src="/images/IMG_3165.png" alt="Knowledge">
+                                    <p style="margin-bottom: 0px;"><b>KNEXWR</b>
+                                    <p>Knowledge + Explaining + Writing</p>
                                 <% } %> 
                                 
                                 <!-- t -->
                                 <% if(TracePercent > BasicPercent && TracePercent > ExplainPercent && TracePercent > WritePercent){ %>
-                                    t
+                                    <img src="/images/IMG_3178.png" alt="Tracing">
+                                    <p style="margin-bottom: 0px;"><b>TR</b>
+                                    <p>Tracing</p>
                                 <% } %> 
                                 <% if(TracePercent > BasicPercent && TracePercent === ExplainPercent && TracePercent > WritePercent){ %>
-                                    t = e
+                                    <img src="/images/IMG_3176.png" alt="Tracing">
+                                    <p style="margin-bottom: 0px;"><b>TREX</b>
+                                    <p>Tracing + Explaining</p>
                                 <% } %> 
                                 <% if(TracePercent > BasicPercent && TracePercent > ExplainPercent && TracePercent === WritePercent){ %>
-                                    t = w
+                                    <img src="/images/IMG_3175.png" alt="Tracing">
+                                    <p style="margin-bottom: 0px;"><b>TRWR</b>
+                                    <p>Tracing + Writing</p>
                                 <% } %> 
                                 <% if(TracePercent > BasicPercent && TracePercent === ExplainPercent && TracePercent === WritePercent){ %>
-                                    t = e = w
+                                    <img src="/images/IMG_3173.png" alt="Tracing">
+                                    <p style="margin-bottom: 0px;"><b>TREXWR</b>
+                                    <p>Tracing + Explaining + Writing</p>
                                 <% } %> 
 
                                 <!-- e -->
                                 <% if(ExplainPercent > BasicPercent && ExplainPercent > TracePercent && ExplainPercent > WritePercent){ %>
-                                    <img src="https://cdn-icons-png.flaticon.com/256/15547/15547871.png" alt="" style="margin: 20px; width: 150px;">
-                                    <br> e
-                                <% } %> 
+                                    <img src="/images/IMG_3239.png" alt="Explaining">
+                                    <p style="margin-bottom: 0px;"><b>EX</b>
+                                    <p>Explaining</p>
+                                <% } %>
                                 <% if(ExplainPercent > BasicPercent && ExplainPercent > TracePercent && ExplainPercent === WritePercent){ %>
-                                    e = w
-                                <% } %> 
+                                    <img src="/images/IMG_3236.png" alt="Explaining">
+                                    <p style="margin-bottom: 0px;"><b>EXWR</b>
+                                    <p>Explaining + Writing</p>
+                                <% } %>
 
                                 <!-- w -->
                                 <% if(WritePercent > BasicPercent && WritePercent > TracePercent && WritePercent > ExplainPercent){ %>
-                                    w
-                                <% } %> 
+                                    <img src="/images/IMG_3232.png" alt="Writing">
+                                    <p style="margin-bottom: 0px;"><b>WR</b>
+                                    <p>Writing</p>
+                                <% } %>
                                 <% if(WritePercent === BasicPercent && WritePercent === TracePercent && WritePercent === ExplainPercent){ %>
-                                    k = t = e = w
-                                <% } %>  
+                                    <img src="/images/IMG_3242.png" alt="KING">
+                                    <p style="margin-bottom: 0px;"><b>KING</b>
+                                    <p>King</p>
+                                <% } %>
                                 <% } %>
                             </div>
                         </div>
-                        <div><!-- Competency chart -->
+                        <!-- Competency chart -->
+                        <div class="chart">
                             <h4 class="chakra-petch-regular">Competency</h4>   
                             <div>
                                 <div class="chartCard">
