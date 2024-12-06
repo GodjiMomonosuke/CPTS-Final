@@ -1,84 +1,146 @@
-<!DOCTYPE html>
-<html lang="th">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>คู่มือการใช้งาน</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='stylesheets/home1.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        .centered-container {
+        body {
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
-            background-color: #f4f6f9;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4eaf1 100%);
+            margin: 0;
+            font-family: 'Prompt', sans-serif;
+            padding-bottom: 100px; /* เพิ่มระยะห่างด้านล่าง */
         }
-        .guide-container {
+
+        .container {
             background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 4rem 3rem; /* เพิ่มความสูงของ container */
+            max-width: 600px;
+            width: 90%;
             text-align: center;
+            transition: transform 0.3s ease;
+            margin-top: -100px; /* ขยับขึ้นด้านบน */
         }
-        .guide-title {
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
             color: #2c3e50;
-            margin-bottom: 30px;
+            font-size: 2.8rem; /* เพิ่มขนาดตัวอักษร */
+            margin-bottom: 1rem; /* เพิ่มระยะห่าง */
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
-        .guide-description {
-            color: #34495e;
+
+        .description {
+            color: #6c757d;
+            font-size: 1.2rem; /* เพิ่มขนาดตัวอักษร */
+            margin-bottom: 3rem; /* เพิ่มระยะห่าง */
             line-height: 1.6;
-            margin-bottom: 30px;
+            padding: 0 20px;
         }
-        .btn-start {
-            background-color: #3498db;
+
+        .btn-secondary {
+            background: linear-gradient(45deg, #3498db, #2980b9);
             color: white;
             border: none;
-            padding: 12px 30px;
+            padding: 15px 40px; /* เพิ่มความกว้างปุ่ม */
             border-radius: 50px;
-            font-size: 18px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
             margin-right: 15px;
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
         }
-        .btn-start:hover {
-            background-color: #2980b9;
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+            background: linear-gradient(45deg, #2980b9, #3498db);
         }
+
         .btn-skip {
-            background-color: #ecf0f1;
-            color: #7f8c8d;
+            background-color: #f8f9fa;
+            color: #495057;
             border: none;
-            padding: 12px 30px;
+            padding: 15px 40px; /* เพิ่มความกว้างปุ่ม */
             border-radius: 50px;
-            font-size: 18px;
+            font-size: 1.2rem;
+            font-weight: 500;
             transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
+
         .btn-skip:hover {
-            background-color: #bdc3c7;
-            color: white;
+            background-color: #e9ecef;
+            color: #212529;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .button-container {
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 3rem 2rem;
+                margin-top: -50px;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .description {
+                font-size: 1.1rem;
+                padding: 0;
+            }
+
+            .btn-secondary, .btn-skip {
+                padding: 12px 30px;
+                font-size: 1.1rem;
+            }
         }
     </style>
+    
+    <title>Guide</title>
 </head>
+
 <body>
-    <div class="centered-container">
-        <div class="guide-container">
-            <h2 class="guide-title">geekcodecraft</h2>
-            
-            <p class="guide-description">
-                ยินดีต้อนรับสู่คู่มือการใช้งาน กรุณาอ่านคำแนะนำเบื้องต้นเพื่อทำความเข้าใจระบบ
-            </p>
+    <div id="content" class="container">
+        <h2>GeekCodeCraft</h2>
+        <p class="description">แพลตฟอร์มการเรียนรู้ทางออนไลน์ที่สร้างขึ้นเพื่อพัฒนาทักษะการเขียนโปรแกรมและความคิดสร้างสรรค์</p>
 
-            <div class="d-flex justify-content-center">
-                <a href="/pretestSubmit" class="btn btn-start">เริ่มต้นใช้งาน</a>
-                <a href="/auth/logout" class="btn btn-skip">กลับ</a>
+        <%# START %> 
+        <form action="/pretestSubmit" method="post" autocomplete="off">
+            <%# button %> 
+                
+        <%# content %> 
+            <div class="accordion accordion-flush" id="accordionMain">
+            <%# %>
+                <div id="test0" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionMain">
+                    <div class="button-container">
+                        <button type="submit" class="btn btn-secondary">เข้าใช้งาน</button>  
+                        <a href="/auth/logout" class="btn btn-skip">กลับ</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        <%# END %>
+        </form>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
