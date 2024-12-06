@@ -338,11 +338,13 @@ mongoose
     useFindAndModify: false,
   })
   .then(() => {
-    console.log('💾 connected...');
+    console.log('💾 Connected to MongoDB...');
+    console.log('Database:', process.env.DB_NAME);
     // Listening for connections on the defined PORT
     app.listen(PORT, () => console.log(`🚀 @ http://localhost:${PORT}`));
   })
-  .catch((err) => console.log(err.message));
+  .catch((err) => console.error('MongoDB connection error:', err.message));
+  
 
 // function ensureAuthenticated(req, res, next) {
 //   if (req.isAuthenticated()) {
