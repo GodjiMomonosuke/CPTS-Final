@@ -14,15 +14,31 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  role: {},
-  name: {},
-  studentID: {},
-  plan:{},
-  other: {},
-  MA105: {},
-  EN101:{},
-  PH109:{},
-
+  role: {
+    type: String,
+    default: roles.student // หรือค่า default ที่ต้องการ
+  },
+  name: {
+    type: String
+  },
+  studentID: {
+    type: String
+  },
+  plan: {
+    type: String
+  },
+  other: {
+    type: String
+  },
+  MA105: {
+    type: String
+  },
+  EN101: {
+    type: String
+  },  
+  PH109: {
+    type: String
+  }
 });
 
 
@@ -47,6 +63,17 @@ UserSchema.methods.isValidPassword = async function (password) {
   try {
     return await bcrypt.compare(password, this.password);
   } catch (error) {
+    throw createHttpError.InternalServerError(error.message);
+  }
+};
+
+UserSchema.methods.isValidPassword = async function (password) {
+  try {
+    const isValid = await bcrypt.compare(password, this.password);
+    console.log('Password validation:', isValid ? 'success' : 'failed');
+    return isValid;
+  } catch (error) {
+    console.error('Password validation error:', error);
     throw createHttpError.InternalServerError(error.message);
   }
 };

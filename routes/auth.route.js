@@ -103,3 +103,35 @@ module.exports = router;
 //     next();
 //   }
 // }
+
+
+router.post(
+  '/login',
+  ensureLoggedOut({ redirectTo: '/' }),
+  (req, res, next) => {
+    // Log ข้อมูลที่ส่งมาจาก form
+    console.log('Login attempt:', req.body);
+
+    passport.authenticate('local', (err, user, info) => {
+      if (err) {
+        console.error('Authentication error:', err);
+        return next(err);
+      }
+
+      if (!user) {
+        console.log('Login failed:', info.message);
+        req.flash('error', info.message || 'Invalid credentials');
+        return res.redirect('/auth/login');
+      }
+
+      req.logIn(user, (err) => {
+        if (err) {
+          console.error('Login error:', err);
+          return next(err);
+        }
+        console.log('Login successful:', user.email);
+        return res.redirect('/');
+      });
+    })(req, res, next);
+  }
+);

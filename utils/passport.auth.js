@@ -10,19 +10,26 @@ passport.use(
     },
     async (email, password, done) => {
       try {
+        console.log('Login attempt for email:', email);
         const user = await User.findOne({ email });
-        // Username/email does NOT exist
+        
         if (!user) {
+          console.log('User not found:', email);
           return done(null, false, {
             message: 'Username/email not registered',
           });
         }
-        // Email exist and now we need to verify the password
+
         const isMatch = await user.isValidPassword(password);
+        if (!isMatch) {
+          console.log('Invalid password for user:', email);
+        }
+        
         return isMatch
           ? done(null, user)
           : done(null, false, { message: 'Incorrect password' });
       } catch (error) {
+        console.error('Authentication error:', error);
         done(error);
       }
     }
@@ -33,8 +40,11 @@ passport.serializeUser(function (user, done) {
   done(null, user.id);
 });
 
-passport.deserializeUser(function (id, done) {
-  User.findById(id, function (err, user) {
-    done(err, user);
-  });
+passport.deserializeUser(async function (id, done) {
+  try {
+    const user = await User.findById(id);
+    done(null, user);
+  } catch (error) {
+    done(error, null);
+  }
 });
