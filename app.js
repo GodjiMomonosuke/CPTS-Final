@@ -476,3 +476,14 @@ app.post('/chat', async (req, res) => {
   }
 });
 
+// Add CSP header
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdnjs.cloudflare.com"
+  );
+  next();
+});
+
+// Routes
+app.use('/', require('./routes/index.route'));
