@@ -41,16 +41,11 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({ 
-      mongooseConnection: mongoose.connection,
-      ttl: 24 * 60 * 60 // 1 day
-    }),
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
     cookie: {
-      // secure: true, // ถ้าใช้ HTTPS
-      httpOnly: true,
-      maxAge: 24 * 60 * 60 * 1000 // 1 day
-    }
+      // secure: true,
+      httpOnly: false,
+    },
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
   })
 );
 
