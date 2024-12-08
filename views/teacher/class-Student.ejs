@@ -56,12 +56,11 @@
                                     <div> <!-- Character -->
                                         <div class="info" style="width: auto;">Character</div> <br>
                                         <!-- k -->
-                                         <% if(Studentresult[i].post_k === 0 && Studentresult[i].post_t === 0 && Studentresult[i].post_e === 0 && Studentresult[i].post_w === 0){ %>
-                                            none
-                                            <img src="https://cdn-icons-png.flaticon.com/512/15547/15547949.png " alt="" style="margin: 20px; width: 150px;">
+                                         <% if(Studentresult[i].post_k === 0 && Studentresult[i].post_t === 0 && Studentresult[i].post_e === 0 && Studentresult[i].post_w === 0){ %> 
+                                            <img src="/images/6.png" alt="Rookie" style="margin: 20px; width: 150px;">
                                         <% } else { %> 
                                         <% if(Studentresult[i].post_k > Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
-                                            k
+                                            <img src="/images/1.webp" alt="Knowledge">
                                         <% } %> 
                                         <% if(Studentresult[i].post_k === Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
                                             k = t
@@ -84,7 +83,7 @@
                                         
                                         <!-- t -->
                                         <% if(Studentresult[i].post_t > Studentresult[i].post_k && Studentresult[i].post_t > Studentresult[i].post_e && Studentresult[i].post_t > Studentresult[i].post_w){ %>
-                                            t
+                                            <img src="/images/2.png" alt="Tracing">
                                         <% } %> 
                                         <% if(Studentresult[i].post_t > Studentresult[i].post_k && Studentresult[i].post_t === Studentresult[i].post_e && Studentresult[i].post_t > Studentresult[i].post_w){ %>
                                             t = e
@@ -98,8 +97,7 @@
 
                                         <!-- e -->
                                         <% if(Studentresult[i].post_e > Studentresult[i].post_k && Studentresult[i].post_e > Studentresult[i].post_t && Studentresult[i].post_e > Studentresult[i].post_w){ %>
-                                            <img src="https://cdn-icons-png.flaticon.com/256/15547/15547871.png" alt="" style="margin: 20px; width: 150px;">
-                                            <p>E</p>
+                                            <img src="/images/3.png" alt="Explaining">
                                         <% } %> 
                                         <% if(Studentresult[i].post_e > Studentresult[i].post_k && Studentresult[i].post_e > Studentresult[i].post_t && Studentresult[i].post_e === Studentresult[i].post_w){ %>
                                             e = w
@@ -107,10 +105,10 @@
 
                                         <!-- w -->
                                         <% if(Studentresult[i].post_w > Studentresult[i].post_k && Studentresult[i].post_w > Studentresult[i].post_t && Studentresult[i].post_w > Studentresult[i].post_e){ %>
-                                            w
+                                            <img src="/images/4.png" alt="Writing">
                                         <% } %> 
                                         <% if(Studentresult[i].post_w === Studentresult[i].post_k && Studentresult[i].post_w === Studentresult[i].post_t && Studentresult[i].post_w === Studentresult[i].post_e){ %>
-                                            k = t = e = w
+                                            <img src="/images/5.png" alt="KING">
                                         <% } %> 
                                         <% } %>
                                     </div>
