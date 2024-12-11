@@ -81,7 +81,7 @@ else {
 
         
         /* Check Value LV4 Score**/
-        if(typeof(StudentAnswer[i].scoreTeacher) === "string" ){
+        if(typeof(StudentAnswer[i].scoreTeacher) === "number" ){
             checkedLV4 = StudentAnswer[i].scoreTeacher;
             TeacherCheck = StudentAnswer[i].checkedBy;
             bgColor = "background-color: #93c47d;"
@@ -95,8 +95,6 @@ else {
                 cLV4 = "background-color: #e06666;" 
                 checkedLV4 = "✗"
             }
-           
-
         }
         else{
             if(StudentAnswer[i].contentName === ""){
@@ -104,9 +102,21 @@ else {
 
             TeacherCheck = "";
             } else {
-                checkedLV4 = "รอตรวจ"
-                TeacherCheck = "";
-                bgColor = "background-color: #ed9769;"
+                if(typeof(StudentAnswer[i].scoreQuiz) === "number" ){
+                    if(StudentAnswer[i].contentName === "TicketBookingSystem-(Project_quiz1)" || StudentAnswer[i].contentName === "PointofSalesSystem-(Project_quiz2)" || StudentAnswer[i].contentName === "Project_QUIZ3") {
+                        
+                            checkedLV4 = StudentAnswer[i].scoreQuiz;
+                        if(StudentAnswer[i].scoreQuiz >= 20){
+                            cLV4 = "background-color: #93c47d;" 
+                        }else{
+                            cLV4 = "background-color: #e06666;" 
+                        }
+                    }
+                }else{
+                    checkedLV4 = "-"
+                }
+                TeacherCheck = "รอตรวจ";
+                bgColor = "background-color: #ffd75e;"
             }
         }
 

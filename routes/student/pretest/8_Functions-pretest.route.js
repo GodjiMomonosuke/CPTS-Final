@@ -94,6 +94,7 @@ router.post('/submit', async (req, res, next) => {
   var sendLink201 = req.body.sendLink201
   var sendLink202 = req.body.sendLink202
   var rating = req.body.rating
+  var scoreQuiz = ""
 
   var score1 = 0;
   var score2 = 0;
@@ -230,6 +231,7 @@ if(choice15 === 'D'){
                 sendLink201:sendLink201,
                 sendLink202:sendLink202,
                 rating:rating,
+                scoreQuiz:scoreQuiz,
                 ADRI1_1:ADRI1_1,
                 ADRI1_2:ADRI1_2,
                 ADRI1_3:ADRI1_3,

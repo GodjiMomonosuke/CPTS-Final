@@ -12,7 +12,7 @@
   }
 
 .item1 {
-    height: 140px;
+    height: 200px;
     background-color: #fff;
     padding: 10px;
     width: 400px; 
@@ -186,9 +186,14 @@ progress[value]::-webkit-progress-bar {
 }
 
 .TeacherBar {
+  width: 200px; 
+  height: auto; 
+  margin-left: 20px; 
+}
+.TeacherBarr {
   width: 100px; 
   height: 20px; 
-  background-color: #f7f7f7;
+  background-color: #c3c3c3;
   margin-top: 3px;
 }
 .TeacherBarValue {
@@ -198,6 +203,8 @@ progress[value]::-webkit-progress-bar {
   padding-left: 3px;
   --w:0px;
   width:var(--w);
+  --c:#fff;
+  background-color: var(--c);
 }
 
 .station {

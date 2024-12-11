@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+
+        .button {
+            padding: 5px;
+            color: #ffffff;
+            background-color: #b5db9a;
+            border-radius: 3px;
+            border: solid #444444;
+            width: 100px;
+            height: 40px;
+            margin: 4px 0 0;
+            color: #444444;
+        }
+            
+        }
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/home1.css' />
+    <link rel='stylesheet' href='stylesheets/compiler_line.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Project Quiz Check</title>
+</head>
+
+<body style="background-color: #cad19f;">
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+
+<br><br><br>
+    <div id="content" class="container">
+    <form action="/checkQuiz/submit" method="post" autocomplete="off" >
+    <input type="hidden" id="idStudent" name="idStudent" value="<%= student[0]._id %>">
+
+        <div class="row align-items-start">
+            <div class="col-8">
+                <h1>Project-Quiz answer</h1>
+            </div>
+        </div>
+        
+        <%# START %> 
+        <div class="card bg-light shadow">
+            <div class="card-header">
+                <b> <%= student[0].contentName %> </b>  
+            </div>
+            <div class="card-body">
+                <% if(student[0] === "null" ){ %>
+                    ไม่มีคำตอบจากผู้เรียน
+                        
+                    <% } else { %>
+                        <div class="row align-items-start">
+
+                            <div class="col">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><b>E-mail</b></span>
+                                    <span class="input-group-text text-uppercase"><%= student[0].email %> </span>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><b>Name</b></span>
+                                    <span class="input-group-text text-uppercase"><%= student[0].name %> </span>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><b>เวลาที่ส่ง</b></span>
+                                    <span class="input-group-text text-uppercase"><%= student[0].times %></span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><b>ครั้งที่ทำ</b></span>
+                                    <span class="input-group-text text-uppercase"><%= student[0].timetodo %></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <script>
+                            const textarea = document.querySelector("textarea");
+                            textarea.addEventListener("keyup", e =>{
+                              textarea.style.height = "63px";
+                              let scHeight = e.target.scrollHeight;
+                              textarea.style.height = `${scHeight}px`;
+                            });
+                          </script>
+
+
+                        <iframe src="<%= student[0].ADRI %> " width="100%" height="600px" allow="autoplay"></iframe>
+
+                        <span class="input-group-text"><b>Approach:</b>&ensp;<%= student[0].ADRI1 %></span>
+                            <div class="col-sm"> 
+                                <div class="card-body shadow rounded">
+                                    <textarea style="height: 100%" class="form-control" name="code" rows="5" ><%= student[0].sendLink16%></textarea>
+                                    <br>
+                                </div>
+                                <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="30" step="0.5" name="studentScore1" id="studentScore" value="" placeholder="30 คะแนน">
+                            </div>
+
+
+                        <br>
+                        
+                        <span class="input-group-text"><b>Deployment:</b>&ensp;<%= student[0].ADRI2 %></span>               
+                        <div class="col-sm"> 
+                            <div class="card-body shadow rounded group2">
+                                <textarea style="height: 100%" class="form-control" name="code" rows="10" ><%= student[0].code%></textarea>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe> 
+                            </div>
+                            <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="50" step="0.5" name="studentScore2" id="studentScore" value="" placeholder="50 คะแนน">
+                        </div>
+ 
+
+
+                    <br>
+                    <span class="input-group-text"><b>Result:</b>&ensp;<%= student[0].ADRI3 %></span>
+                    <div class="col-sm"> 
+                        <div class="card-body shadow rounded">
+                            <textarea style="height: 100%" class="form-control" name="code" rows="5" ><%= student[0].expResult16%></textarea>
+                            <br>
+                        </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="10" step="0.5" name="studentScore3" id="studentScore" value="" placeholder="10 คะแนน">
+                    </div>
+    
+
+                
+                <br>
+                <span class="input-group-text"><b>Improvement:</b>&ensp;<%= student[0].ADRI4 %></span>
+                    <div class="col-sm"> 
+                        <div class="card-body shadow rounded">
+                            <textarea style="height: 100%" class="form-control" name="code" rows="5" ><%= student[0].expResult17%></textarea>
+                            <br>
+                        </div>
+                        <input class="form-check-input" style="width: 100px; height: 40px;" type="number" min="0" max="10" step="0.5" name="studentScore4" id="studentScore" value="" placeholder="10 คะแนน">
+                    </div>
+          
+
+
+                <br>
+            </div>
+
+            
+        </div>
+        <br>
+        <p style="font-size: 16px; margin: 0;">กด "เสร็จสิ้น"เพื่อส่งคะแนน</p>
+        <button type="submit"  class="button btn-outline-dark" >เสร็จสิ้น</button>
+
+    </div>    
+
+        <% } %>
+        <%# END %> 
+
+ 
+
+</form> 
+<br>
+
+<!-- Modal CODE -->        
+
+      
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Online compiler</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="500px"></iframe>
+        </div>   
+
+        <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-lg btn-block" data-bs-dismiss="modal">ปิด</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script src="javascripts/compilerStyle.js"></script>
+</body>
+
+</html>

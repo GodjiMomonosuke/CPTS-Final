@@ -12,6 +12,8 @@ const { roles } = require('./utils/constants');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 
+const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require('@google/generative-ai');
+
 // Initialization
 const app = express();
 app.use(morgan('dev'));
@@ -19,6 +21,10 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(express.json());
+const MODEL_NAME = "gemini-pro";
+const API_KEY = process.env.API_KEY;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,7 +43,7 @@ app.use(
     saveUninitialized: false,
     cookie: {
       // secure: true,
-      httpOnly: true,
+      httpOnly: false,
     },
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
   })
@@ -75,6 +81,7 @@ app.use('/course',
   ensureStudent,
   require('./routes/student/course/course.route')
 );
+
 /** project */
 app.use('/project',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -265,6 +272,16 @@ app.use('/pretest8_check',
   require('./routes/student/pretest_check/pretest8_check.route')
 );
 
+
+
+app.use('/question',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureStudent,
+  require('./routes/student/question.route')
+);
+
+
+
 // ****** teacher ******** // 
 app.use('/class',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
@@ -276,12 +293,28 @@ app.use('/check',
   ensureTeacher,
   require('./routes/teacher/check.route')
 );
+app.use('/checkQuiz',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureTeacher,
+  require('./routes/teacher/checkQuiz.route')
+);
+app.use('/answer',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  ensureTeacher,
+  require('./routes/teacher/answer.route')
+);
 app.use('/classStudent',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureTeacher,
   require('./routes/teacher/classStudent.route')
 );
-// *************** // 
+
+
+// Community route
+app.use('/community', 
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/community.route')
+);
 
 // 404 Handler
 app.get('/error', (req, res) => {
@@ -305,11 +338,13 @@ mongoose
     useFindAndModify: false,
   })
   .then(() => {
-    console.log('💾 connected...');
+    console.log('💾 Connected to MongoDB...');
+    console.log('Database:', process.env.DB_NAME);
     // Listening for connections on the defined PORT
     app.listen(PORT, () => console.log(`🚀 @ http://localhost:${PORT}`));
   })
-  .catch((err) => console.log(err.message));
+  .catch((err) => console.error('MongoDB connection error:', err.message));
+  
 
 // function ensureAuthenticated(req, res, next) {
 //   if (req.isAuthenticated()) {
@@ -344,3 +379,113 @@ function ensureTeacher(req, res, next) {
     res.redirect('/');
   }
 }
+
+
+// ... AI
+
+// Routes
+app.get('/index_ai', (req, res) => {
+  res.render('index_ai'); // ไม่จำเป็นต้องใส่ 'views/' เพราะ Express จะมองหาในโฟลเดอร์ 'views' โดยอัตโนมัติ
+});
+
+// AI
+async function runChat(userInput) {
+  const genAI = new GoogleGenerativeAI(API_KEY);
+  const model = genAI.getGenerativeModel({ model: MODEL_NAME });
+
+  const generationConfig = {
+    temperature: 0.9,
+    topK: 1,
+    topP: 1,
+    maxOutputTokens: 1000,
+  };
+
+  const safetySettings = [
+    {
+      category: HarmCategory.HARM_CATEGORY_HARASSMENT,
+      threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
+    },
+    // ... other safety settings
+  ];
+
+  const chat = model.startChat({
+    generationConfig,
+    safetySettings,
+    history: [
+      {
+        role: "user",
+        parts: [
+          {text: "hi"},
+        ],
+      },
+      {
+        role: "model",
+        parts: [
+          {text: "สวัสดีค่ะ \n\nมีอะไรให้ฉันช่วยไหมคะ  \n"},
+        ],
+      },
+      {
+        role: "user",
+        parts: [
+          {text: "hello"},
+        ],
+      },
+      {
+        role: "model",
+        parts: [
+          {text: "สวัสดีค่ะ \n\nยินดีที่ได้คุยด้วย  มีอะไรให้ช่วยไหมคะ \n"},
+        ],
+      },
+      {
+        role: "user",
+        parts: [
+          {text: "geekcodecraft คืออะไร"},
+        ],
+      },
+      {
+        role: "model",
+        parts: [
+          {text: "เว็บไซต์ การเรียนเขียนโปรแกรมมิ่ง"},
+        ],
+      },
+    ],
+  });
+
+  const result = await chat.sendMessage(userInput);
+  const response = result.response;
+  return response.text();
+}
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index_ai');
+});
+app.get('/loader.gif', (req, res) => {
+  res.sendFile(__dirname + '/loader.gif');
+});
+app.post('/chat', async (req, res) => {
+  try {
+    const userInput = req.body?.userInput;
+    console.log('incoming /chat req', userInput)
+    if (!userInput) {
+      return res.status(400).json({ error: 'Invalid request body' });
+    }
+
+    const response = await runChat(userInput);
+    res.json({ response });
+  } catch (error) {
+    console.error('Error in chat endpoint:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// Add CSP header
+app.use((req, res, next) => {
+  res.setHeader(
+    'Content-Security-Policy',
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdnjs.cloudflare.com"
+  );
+  next();
+});
+
+// Routes
+app.use('/', require('./routes/index.route'));
