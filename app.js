@@ -43,7 +43,7 @@ app.use(
     saveUninitialized: false,
     cookie: {
       // secure: true,
-      httpOnly: false,
+      httpOnly: A,
     },
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
   })

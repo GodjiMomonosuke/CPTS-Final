@@ -24,8 +24,7 @@ router.get('/', function(req, res, next) {
           if (err) throw err;
           // console.log(Object.keys(Studentresult).length);
 
-          res.render('teacher/class-Student', {person,classResult,Studentresult
-          });
+          res.render('teacher/class-Student', {person,classResult,Studentresult});
         });
         });
       });
