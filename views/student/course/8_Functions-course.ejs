@@ -48,22 +48,1087 @@
     <div class="content">
         <div id = "content" class="container">
             <h1>บทที่ 8 Functions</h1>
-            <div class="accordion" id="accordionParentSyntax">
-                <iframe src="https://drive.google.com/file/d/1SsJji7j1TVEBLAKU8Vc2y8V5CMuCCk-A/preview" width="100%" height="820" allow="autoplay"></iframe>
-                <h2>สร้างฟังก์ชันใช้เอง Functions</h2>
-                <iframe width="100%" height="600" src="https://www.youtube.com/embed/GunI8Uga3hs?si=PT4sSeH1uOJ1h2hG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <b>แบบฝึกหัด</b>
+            <a href="/course-Functions#Knowledge" class="scrollbtnK"  type="button"  >
+                Knowledge
+            </a>
+            <a href="/course-Functions#Tracing" class="scrollbtnT"  type="button"  >
+                Tracing
+            </a>
+            <a href="/course-Functions#Explaining" class="scrollbtnE"  type="button"  >
+                Explaining
+            </a>
+            <a href="/course-Functions#Writing" class="scrollbtnW" type="button"  >
+                Writing
+            </a>
 
 
+
+            <BR id="Knowledge"> <br><br>
+                <h2>Knowledge</h2>
+                <div class="game">
+                    <!--* ข้อ K1 *-->
+                    <div class="gamecontent">
+                        <div  class="question">
+                        <h5>1. ข้อใดอธิบายความหมายของ Function Library ได้ถูกต้องที่สุด</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo1"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW1()">ฟังก์ชันที่ผู้ใช้สร้างขึ้นเองตามต้องการ</p>
+                                    <p id="demo" class="button" onclick="myFunctionW1()">ฟังก์ชันที่ต้องเขียนขึ้นใหม่ทุกครั้งที่ใช้งาน</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT1()">ฟังก์ชันมาตรฐานที่ภาษา C เตรียมไว้ในไลบรารีต่างๆ</p>   
+                                    <p id="demo" class="button" onclick="myFunctionW1()">ฟังก์ชันที่ต้องสร้าง header file ใหม่ </p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--* ข้อ K2 *-->
+                    <div class="gamecontent">
+                        <div  class="question">
+                        <h5>2. ข้อใดเป็นวิธีการใช้งาน Function Library ที่ถูกต้อง</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo2"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW2()"> ต้องเขียนฟังก์ชันขึ้นมาใหม่ทุกครั้ง</p>
+                                    <p id="demo" class="button" onclick="myFunctionT2()">ประกาศ header file ที่เกี่ยวข้องแล้วเรียกใช้งานได้ทันที</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW2()">ต้องกำหนดชื่อฟังก์ชันใหม่ทุกครั้ง</p>   
+                                    <p id="demo" class="button" onclick="myFunctionW2()">conio.h</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--* ข้อ K3 *-->
+                    <div class="gamecontent">
+                        <div  class="question">
+                        <h5>3. ฟังก์ชัน printf() อยู่ใน Header file ใด</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo3"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW3()">math.h </p>
+                                    <p id="demo" class="button" onclick="myFunctionW3()">string.h</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT3()">stdio.h </p>   
+                                    <p id="demo" class="button" onclick="myFunctionW3()">conio.h</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game">
+                    <!--* ข้อ K4 *-->
+                    <div class="gamecontent">
+                        <div  class="question">
+                        <h5>4. ฟังก์ชัน pow() อยู่ใน Header file ใด</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo4"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW4()">string.h </p>
+                                    <p id="demo" class="button" onclick="myFunctionT4()">math.h </p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW4()">stdio.h </p>   
+                                    <p id="demo" class="button" onclick="myFunctionW4()">conio.h</p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--* ข้อ K5 *-->
+                    <div class="gamecontent">
+                        <div  class="question">
+                        <h5>5. ข้อใดอธิบายความหมายของ User Defined Function ได้ถูกต้องที่สุด</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo5"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW5()">ฟังก์ชันที่มีอยู่แล้วในภาษา C ที่ต้องเรียกใช้ผ่าน header file</p>
+                                    <p id="demo" class="button" onclick="myFunctionW5()">ฟังก์ชันที่ต้องมีการส่งค่ากลับเท่านั้น </p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT5()">ฟังก์ชันที่ผู้เขียนโปรแกรมสร้างขึ้นเองเพื่อใช้งานตามวัตถุประสงค์เฉพาะ</p>   
+                                    <p id="demo" class="button" onclick="myFunctionW5()">ฟังก์ชันที่ต้องประกาศในไลบรารีมาตรฐานเท่านั้น </p>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game">
+                    <!--* ข้อ K6 *-->
+                    <div class="gamecontent">
+                        <div  class="question">
+                        <h5>6. ข้อใดเป็นลักษณะของฟังก์ชันที่ไม่มีการรับค่าและไม่มีการส่งค่า</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo6"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW6()">ต้องมีการ return ค่าเสมอ</p>                                                                      
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW6()">ต้องมีพารามิเตอร์อย่างน้อย 1 ตัว</p> 
+                                <p id="demo" class="button" onclick="myFunctionT6()">มักใช้ในการแสดงผลข้อมูลที่กำหนดไว้แน่นอน</p>     
+                                <p id="demo" class="button" onclick="myFunctionW6()">ไม่สามารถมีตัวแปรภายในฟังก์ชันได้</p>  
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <!--* ข้อ K7 *-->
+                    <div class="gamecontent">
+                        <div  class="question">
+                        <h5>7. ข้อใดผิดเกี่ยวกับการส่งค่าพารามิเตอร์เข้าฟังก์ชัน</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo7"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionT7()">ต้องส่งค่าเป็นตัวแปรเท่านั้น</p> 
+                                <p id="demo" class="button" onclick="myFunctionW7()">ต้องส่งค่าตรงกับชนิดข้อมูลที่ประกาศ</p>                                                                      
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW7()">สามารถส่งตัวแปรได้</p>    
+                                <p id="demo" class="button" onclick="myFunctionW7()">สามารถส่งค่าคงที่ได้</p>  
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+        
+                    <!--* ข้อ K8 *-->
+                    <div class="gamecontent">
+                        <div  class="question">
+                        <h5>8. ข้อใดผิดเกี่ยวกับฟังก์ชันที่ไม่รับค่าแต่ส่งค่า</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo8"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionT8()">ต้องมีการระบุชนิดข้อมูลที่จะส่งกลับ</p>  
+                                <p id="demo" class="button" onclick="myFunctionW8()">ไม่สามารถมีการคำนวณภายในฟังก์ชันได้ </p>                                                                      
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW8()">สามารถมีการกำหนดค่าภายในฟังก์ชันได้</p>   
+                                <p id="demo" class="button" onclick="myFunctionW8()">ต้องมี return ค่าที่ตรงกับชนิดข้อมูลที่ประกาศ</p>  
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game">
+                    <!--* ข้อ K9 *-->
+                    <div class="gamecontent">
+                        <div class="question">
+                        <h5>9. ข้อใดเป็นประโยชน์ของฟังก์ชันที่รับและส่งค่า </h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo9"> </p>
+                        
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW9()">ใช้แสดงผลที่มีรูปแบบเดิมซ้ำๆ</p>    
+                                <p id="demo" class="button" onclick="myFunctionW9()">ใช้สำหรับการรับค่าจากผู้ใช้เท่านั้น </p>    
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionT9()">ใช้สำหรับการคำนวณที่ต้องการข้อมูลจากภายนอกและต้องการนำผลลัพธ์ไปใช้ต่อ</p>  
+                                <p id="demo" class="button" onclick="myFunctionW9()">ใช้สำหรับการแสดงผลเท่านั้น </p>  
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+        
+                    <!--* ข้อ K10 *-->
+                    <div class="gamecontent">
+                        <div  class="question">
+                        <h5>10. ข้อใดเป็นการประกาศฟังก์ชันที่ถูกต้องสำหรับฟังก์ชันที่รับและส่งค่า</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo10"> </p>
+                        
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW10()">void sum(int a, int b) { return a + b; }</p>       
+                                <p id="demo" class="button" onclick="myFunctionW10()"> int sum(a, b) { return a + b; } </p>                                                                      
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionT10()">int sum(int a, int b) { return a + b; }</p>  
+                                <p id="demo" class="button" onclick="myFunctionW10()">sum(int a, int b) { return a + b; } </p>  
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <BR id="Tracing"> <br><br>
+                    <h2>Tracing</h2> 
+                    <div class="game">
+                        <!--* ข้อ T1 *-->
+                        <div class="gamecontent-T">
+                            <div  class="question-T">
+                            <h5>1. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                            <p>#include < stdio.h > 
+                            <br>int add(int x, int y) {
+                            <br>&ensp;return x + y;
+                            <br>}
+                            <br>int main() {
+                            <br>&ensp;printf("%d", add(5, 3));
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo11"></p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW11()">5</p>    
+                                        <p id="demo" class="button" onclick="myFunctionW11()">3</p>                                                                      
+                                        <p id="demo" class="button" onclick="myFunctionT11()">8</p>  
+                                        <p id="demo" class="button" onclick="myFunctionW11()">15</p>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
             
-            <button onclick="window.location.href='/course-Functions-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" >
-            <h2><u>แบบทดสอบหลังเรียน</h2></u></button>
-        
+                        <!--* ข้อ T2 *-->
+                        <div class="gamecontent-T">
+                            <div  class="question-T">
+                            <h5>2. ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
+                            <p>#include < stdio.h > 
+                            <br>int multiply(int a, int b) {
+                            <br>&ensp;if(b == 1) return a;
+                            <br>&ensp;return a + multiply(a, b-1);
+                            <br>}
+                            <br>int main() {
+                            <br>&ensp;printf("%d", multiply(2, 3));
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo12"></p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW12()">5</p>    
+                                        <p id="demo" class="button" onclick="myFunctionT12()">6</p>                                                                      
+                                        <p id="demo" class="button" onclick="myFunctionW12()">7</p>  
+                                        <p id="demo" class="button" onclick="myFunctionW12()">8</p>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="game">
+                        <!--* ข้อ T3 *-->
+                        <div class="gamecontent-T">
+                            <div  class="question-T">
+                            <h5>3. ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
+                            <p>#include < stdio.h > 
+                            <br>int max(int a, int b) {
+                            <br>&ensp;  return (a > b) ? a : b;
+                            <br>}
+                            <br>int main() {
+                            <br>&ensp; printf("%d", max(max(3,4), max(5,2)));
+                            <br>&ensp; return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo13"></p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW13()">2</p>    
+                                        <p id="demo" class="button" onclick="myFunctionW13()">3</p>                                                                      
+                                        <p id="demo" class="button" onclick="myFunctionW13()">4</p>  
+                                        <p id="demo" class="button" onclick="myFunctionT13()">5</p>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!--* ข้อ T4 *-->
+                        <div class="gamecontent-T">
+                            <div  class="question-T">
+                            <h5>4. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                            <p>#include < stdio.h > 
+                            <br>void showMessage() {
+                            <br>&ensp;printf("Hello ");
+                            <br>}
+                            <br>void printWorld() {
+                            <br>&ensp;printf("World");
+                            <br>}
+                            <br>int main() {
+                            <br>&ensp; showMessage();
+                            <br>&ensp; printWorld();
+                            <br>&ensp; return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo14"></p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW14()">Hello</p>    
+                                        <p id="demo" class="button" onclick="myFunctionW14()">World</p>  
+                                    </div> 
+                                    <div class="btn">   
+                                        <p id="demo" class="button" onclick="myFunctionT14()">Hello World</p>  
+                                        <p id="demo" class="button" onclick="myFunctionW14()">HelloWorld</p>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="game">
+                        <!--* ข้อ T5 *-->
+                        <div class="gamecontent-T">
+                            <div  class="question-T">
+                            <h5>5. ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
+                            <p>#include < stdio.h > 
+                            <br>void printNumber(int num) {
+                            <br>&ensp; printf("%d", num * 2);
+                            <br>}
+                            <br>int main() {
+                            <br>&ensp;int x = 5;
+                            <br>&ensp;printNumber(x);
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo15"></p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW15()">2</p>    
+                                        <p id="demo" class="button" onclick="myFunctionW15()">5</p>                                                                      
+                                        <p id="demo" class="button" onclick="myFunctionW15()">7</p>  
+                                        <p id="demo" class="button" onclick="myFunctionT15()">10</p>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!--* ข้อ T6 *-->
+                        <div class="gamecontent-T">
+                            <div  class="question-T">
+                            <h5>6. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                            <p>#include < stdio.h > 
+                            <br>int getValue() {
+                            <br>&ensp;return 10;
+                            <br>}
+                            <br>int main() {
+                            <br>&ensp; int result = getValue() + 5;
+                            <br>&ensp;printf("%d", result);
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo16"></p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW16()">10</p>    
+                                        <p id="demo" class="button" onclick="myFunctionT16()">15</p>                                                                      
+                                        <p id="demo" class="button" onclick="myFunctionW16()">20</p>  
+                                        <p id="demo" class="button" onclick="myFunctionW16()">5</p>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="game">
+                        <!--* ข้อ T7 *-->
+                        <div class="gamecontent-T">
+                            <div  class="question-T">
+                            <h5>7. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                            <p>#include < stdio.h > 
+                            <br>int multiply(int x, int y) {
+                            <br>&ensp;return x * y;
+                            <br>&ensp;}
+                            <br>int main() {
+                            <br>&ensp;printf("%d", multiply(3, 4));
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo17"></p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionT17()">12</p>    
+                                        <p id="demo" class="button" onclick="myFunctionW17()">7</p>                                                                      
+                                        <p id="demo" class="button" onclick="myFunctionW17()">3</p>  
+                                        <p id="demo" class="button" onclick="myFunctionW17()">4</p>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!--* ข้อ T8 *-->
+                        <div class="gamecontent-T">
+                            <div  class="question-T">
+                            <h5>8. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                            <p>#include < stdio.h > 
+                            <br>void printLine() {
+                            <br>&ensp;printf("---");
+                            <br>}
+                            <br>int getNum() {
+                            <br>&ensp;return 5;
+                            <br>}
+                            <br>void showResult(int x) {
+                            <br>&ensp;printf("%d", x);
+                            <br>}
+                            <br>int main() {
+                            <br>&ensp;printLine();
+                            <br>&ensp;showResult(getNum());
+                            <br>&ensp;printLine();
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo18"></p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW18()">5--- </p>    
+                                        <p id="demo" class="button" onclick="myFunctionT18()">---5---  </p>                                                                      
+                                        <p id="demo" class="button" onclick="myFunctionW18()">---5 </p>  
+                                        <p id="demo" class="button" onclick="myFunctionW18()">5</p>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="game">
+                        <!--* ข้อ T9 *-->
+                        <div class="gamecontent-T">
+                            <div  class="question-T">
+                            <h5>9. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                            <p>#include < stdio.h >
+                            <br>void printChar(char c) {
+                            <br>&ensp;printf("%c", c);
+                            <br>}
+                            <br>char getChar() {
+                            <br>&ensp; return 'A';
+                            <br>}
+                            <br>int main() {
+                            <br>&ensp;printChar(getChar());
+                            <br>&ensp;printChar('B');
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo19"></p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW19()">A</p>    
+                                    <p id="demo" class="button" onclick="myFunctionW19()">B</p>  
+                                </div>
+                                <div class="btn">                                                                    
+                                    <p id="demo" class="button" onclick="myFunctionT19()">AB</p>  
+                                    <p id="demo" class="button" onclick="myFunctionW19()">BA</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>  
+            
+                        <!--* ข้อ T10 *-->
+                        <div class="gamecontent-T">
+                            <div  class="question-T">
+                            <h5>10. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                            <p>#include < stdio.h >
+                            <br>int sum(int x, int y) {
+                            <br>&ensp;return x + y;
+                            <br>}
+                            <br>void printSum() {
+                            <br>&ensp;printf("Sum = ");
+                            <br>}
+                            <br>int getNumber() {
+                            <br>&ensp; return 7;
+                            <br>}
+                            <br>int main() {
+                            <br>&ensp;printSum();
+                            <br>&ensp;printf("%d", sum(getNumber(), 3));
+                            <br>&ensp;return 0;
+                            <br>}
+                            </p>
+                            <p style="text-align: center;" id="demo20"></p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW20()">Sum = 7</p>    
+                                    <p id="demo" class="button" onclick="myFunctionW20()">Sum = 3</p>         
+                                </div>
+                                <div class="btn">                                                             
+                                    <p id="demo" class="button" onclick="myFunctionT20()">Sum = 10</p>  
+                                    <p id="demo" class="button" onclick="myFunctionW20()">10</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>  
+                    </div>
 
-        
 
-        <br></div>
+                    <BR id="Explaining"> <br><br>
+                        <h2>Explaining</h2> 
+                        <div class="game">
+                            <!--* ข้อ E1*-->
+                            <div class="gamecontent-E">
+                                <div  class="question-E">
+                                    <h5>1. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                                    <p>#include < stdio.h >
+                                    <br>void showMessage() {
+                                    <br>&ensp;printf("Hello");
+                                    <br>}
+                                    <br>int main() {
+                                    <br>&ensp;showMessage();
+                                    <br>&ensp;showMessage();
+                                    <br>&ensp;return 0;
+                                    <br>}
+                                    </p>
+                                    <p style="text-align: center;" id="demo21"></p>
+                                </div>
+                                <div class="ans">
+                                    <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionW21()">เรียกฟังก์ชันครั้งเดียวเพื่อพิมพ์ Hello</p>  
+                                            <p id="demo" class="button" onclick="myFunctionW21()">ฟังก์ชันส่งค่า Hello กลับ</p>   
+                                        </div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionT21()">เรียกฟังก์ชันสองครั้งเพื่อพิมพ์ HelloHello</p> 
+                                            <p id="demo" class="button" onclick="myFunctionW21()">เรียกฟังก์ชันเพื่อรับข้อความ</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>     
+                        </div>
+                
+                        <div class="game">
+                        <!--* ข้อ E2*-->
+                            <div class="gamecontent-E">
+                                <div  class="question-E">
+                                    <h5>2. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                                    <p>#include < stdio.h >
+                                    <br>void printNumber(int n) {
+                                    <br>&ensp; for(int i = 1; i <= n; i++) {
+                                    <br>&ensp;&ensp; printf("%d ", i);
+                                    <br>&ensp;}
+                                    <br>}
+                                    <br>int main() {
+                                    <br>&ensp;printNumber(3);
+                                    <br>&ensp;return 0;
+                                    <br>}
+                                    </p>
+                                    <p style="text-align: center;" id="demo22"></p>
+                                </div>
+                                <div class="ans">
+                                    <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW22()">พิมพ์เลข 3 ซ้ำกันสามครั้ง</p> 
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT22()">พิมพ์เลข 1 ถึง 3 ตามลำดับ</p> 
+                                        </div>    
+                                        <div class="btn">
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW22()">พิมพ์ผลรวมของเลข 1 ถึง 3</p>  
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW22()">พิมพ์เลขคู่จาก 1 ถึง 3</p>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                
+                        <div class="game">
+                            <!--* ข้อ E3*-->
+                                <div class="gamecontent-E">
+                                    <div  class="question-E">
+                                        <h5>3. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                                        <p>#include < stdio.h >
+                                        <br>int getMaxValue() {
+                                        <br>&ensp;int a = 5, b = 8;
+                                        <br>&ensp;return (a > b) ? a : b
+                                        <br>}
+                                        <br>int main() {
+                                        <br>&ensp;printf("%d", getMaxValue());
+                                        <br>&ensp;return 0;
+                                        <br>}
+                                        </p>
+                                        <p style="text-align: center;" id="demo23"></p>
+                                    </div>
+                                    <div class="ans">
+                                        <div>
+                                            <div class="btn">
+                                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW23()">เปรียบเทียบค่าจากผู้ใช้</p> 
+                                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW23()">พิมพ์ค่า a และ b</p> 
+                                            </div>    
+                                            <div class="btn">
+                                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT23()">ส่งค่ามากสุดระหว่าง 5 และ 8 กลับมาและพิมพ์ผล</p> 
+                                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW23()">ส่งค่าผลรวมของ a และ b </p>    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
+                
+                            <div class="game">
+                                <!--* ข้อ E4 *-->
+                                    <div class="gamecontent-E">
+                                        <div  class="question-E">
+                                            <h5>4. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                                            <p>#include < stdio.h >
+                                            <br>int power(int base, int exp) {
+                                            <br>&ensp; int result = 1;
+                                            <br>&ensp; for(int i = 0; i < exp; i++) {
+                                            <br>&ensp;&ensp;result *= base;
+                                            <br>&ensp;}
+                                            <br>&ensp;return result;
+                                            <br>}
+                                            <br>int main() {
+                                            <br>&ensp;printf("%d", power(2, 3));
+                                            <br>&ensp;return 0;
+                                            <br>}
+                                            </p>
+                                            <p style="text-align: center;" id="demo24"></p>
+                                        </div>
+                                        <div class="ans">
+                                            <div>
+                                                <div class="btn">
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW24()">คำนวณผลบวกของ 2 และ 3</p> 
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW24()">คูณ 2 ด้วย 3</p> 
+                                                </div>    
+                                                <div class="btn">
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW24()">หารค่าของ 2 ด้วย 3</p>  
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT24()">คำนวณ 2 ยกกำลัง 3 แล้วส่งค่ากลับมาพิมพ์</p>   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                
+                            <div class="game">
+                                <!--* ข้อ E5 *-->
+                                    <div class="gamecontent-E">
+                                        <div  class="question-E">
+                                            <h5>5. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                                            <p>#include < stdio.h >
+                                            <br>int getValue() {
+                                            <br>&ensp;return 5;
+                                            <br>}
+                                            <br>void printDouble(int x) {
+                                            <br>&ensp;printf("%d", x * 2);
+                                            <br>}
+                                            <br>int main() {
+                                            <br>&ensp;printDouble(getValue());
+                                            <br>&ensp;return 0;
+                                            <br>}
+                                            </p>
+                                            <p style="text-align: center;" id="demo25"></p>
+                                        </div>
+                                        <div class="ans">
+                                            <div>
+                                                <div class="btn">
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW25()">พิมพ์ค่า 5 สองครั้ง</p>  
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT25()">เรียกฟังก์ชัน getValue เพื่อรับค่า 5 แล้วส่งไปให้ printDouble พิมพ์ค่าคูณ 2</p> 
+                                                </div>    
+                                                <div class="btn">
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW25()">ส่งค่า 10 กลับมาที่ main</p> 
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW25()">รับค่าจากผู้ใช้แล้วคูณด้วย 2</p>     
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                                
+                            <div class="game">
+                                <!--* ข้อ E6 *-->
+                                    <div class="gamecontent-E">
+                                        <div  class="question-E">
+                                            <h5>6. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                                            <p>#include < stdio.h >
+                                            <br>int sum(int x, int y) {
+                                            <br>&ensp;return x + y;
+                                            <br>}
+                                            <br>void printResult() {
+                                            <br>&ensp;int result = sum(3, 4);
+                                            <br>&ensp;printf("Result = %d", result);
+                                            <br>}
+                                            <br>int main() {
+                                            <br>&ensp;printResult();
+                                            <br>&ensp;return 0;
+                                            <br>}
+                                            </p>
+                                            <p style="text-align: center;" id="demo26"></p>
+                                        </div>
+                                        <div class="ans">
+                                            <div>
+                                                <div class="btn">
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW26()">รับค่าจากผู้ใช้สองค่าแล้วบวกกัน</p> 
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW26()">พิมพ์ค่า 3 และ 4</p> 
+                                                </div>    
+                                                <div class="btn">
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT26()">เรียกฟังก์ชัน sum ให้บวก 3 กับ 4 แล้วนำผลลัพธ์ไปพิมพ์ใน printResult</p> 
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW26()">ส่งค่าผลบวกกลับไปที่ main</p>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                
+                            <div class="game">
+                                <!--* ข้อ E7*-->
+                                <div class="gamecontent-E">
+                                    <div  class="question-E">
+                                    <h5>7. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                                    <p>#include < stdio.h >
+                                    <br>int increment(int x) {
+                                    <br>&ensp;return x + 1;
+                                    <br>}
+                                    <br>int getStartValue() {
+                                    <br>&ensp;return 10;
+                                    <br>}
+                                    <br>int main() {
+                                    <br>&ensp;int result = increment(getStartValue());
+                                    <br>&ensp;printf("%d", result);
+                                    <br>&ensp;return 0;
+                                    <br>}
+                                    </p>
+                                    <p style="text-align: center;" id="demo27"></p>
+                                    </div>
+                                    <div class="ans">
+                                        <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT27()">รับค่าเริ่มต้น 10 จาก getStartValue แล้วเพิ่มค่า 1 ด้วย increment</p>      
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW27()">เพิ่มค่า 1 ให้กับตัวแปร x</p> 
+                                        </div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW27()">พิมพ์ค่า 10</p>       
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW28()">ส่งค่า 1 กลับไปที่ main</p> 
+                                        </div>
+                                    </div>
+                                        
+                                    </div>
+                                </div>  
+                
+                                <!--* ข้อ E8 *-->
+                                <div class="gamecontent-E">
+                                    <div  class="question-E">
+                                    <h5>8. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                                    <p>#include < stdio.h > 
+                                    <br>void printLine() {
+                                    <br>&ensp;printf("-----\n");
+                                    <br>}
+                                    <br>void showNumber(int n) {
+                                    <br>&ensp;printf("%d\n", n);
+                                    <br>}
+                                    <br>int main() {
+                                    <br>&ensp;printLine();
+                                    <br>&ensp;showNumber(100);
+                                    <br>&ensp;printLine();
+                                    <br>&ensp;return 0;
+                                    <br>}
+                                    </p>
+                                    <p style="text-align: center;" id="demo28"></p>
+                                    </div>
+                                    <div class="ans">
+                                        <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW28()">พิมพ์เส้นประแล้วตามด้วยเลข 100</p>    
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW28()">พิมพ์เลข 100 ซ้ำกันสองครั้ง</p>  
+                                        </div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT28()">พิมพ์เส้นประ ตามด้วยเลข 100 และปิดท้ายด้วยเส้นประอีกบรรทัด</p>  
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW28()">พิมพ์เส้นประซ้ำกันสองครั้ง</p>  
+                                        </div>
+                                    </div>
+                                        
+                                    </div>
+                                </div>
+                
+                            </div>
+                            
+                        <div class="game">
+                            <!--* ข้อ E9 *-->
+                                <div class="gamecontent-E">
+                                    <div  class="question-E">
+                                    <h5>9. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                                    <p>#include < stdio.h > 
+                                    <br>int isEven(int n) {
+                                    <br>&ensp;return n % 2 == 0;
+                                    <br>}
+                                    <br>void checkAndPrint(int x) {
+                                    <br>&ensp;if(isEven(x)) {
+                                    <br>&ensp;&ensp;printf("Even");
+                                    <br>&ensp;} else {
+                                    <br>&ensp;&ensp;printf("Odd");
+                                    <br>&ensp;}
+                                    <br>}
+                                    <br>int main() {
+                                    <br>&ensp;checkAndPrint(4);
+                                    <br>&ensp;return 0;
+                                    <br>}
+                                    </p>
+                                    <p style="text-align: center;" id="demo29"></p>
+                                    </div>
+                                    <div class="ans">
+                                            <div>
+                                            <div class="btn">
+                                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW29()">พิมพ์เลข 4</p>    
+                                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW29()">ตรวจสอบว่าเลขหารด้วย 4 ลงตัวหรือไม่/p>  
+                                            </div>
+                                            <div class="btn">
+                                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT29()">ตรวจสอบว่า 4 เป็นเลขคู่หรือคี่ แล้วพิมพ์ผลลัพธ์</p>  
+                                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW29()">พิมพ์ค่าที่หารด้วย 2 </p>  
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="game">
+                                <!--* ข้อ E10 *-->
+                                    <div class="gamecontent-E">
+                                        <div  class="question-E">
+                                        <h5>10. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                                        <p>#include < stdio.h > 
+                                        <br>int multiply(int x, int y) {
+                                        <br>&ensp; return x * y;
+                                        <br>}
+                                        <br>int getNumber() {
+                                        <br>&ensp;return 5;
+                                        <br>}
+                                        <br>void printCalculation(int a, int b) {
+                                        <br>&ensp;printf("%d * %d = %d", a, b, multiply(a, b));
+                                        <br>}
+                                        <br>int main() {
+                                        <br>&ensp;printCalculation(getNumber(), 3);
+                                        <br>&ensp;return 0;
+                                        <br>}
+                                        </p>
+                                        <p style="text-align: center;" id="demo30"></p>
+                                        </div>
+                                        <div class="ans">
+                                                <div>
+                                                <div class="btn">
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW30()">คูณเลข 5 กับ 3</p>    
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW30()">รับค่าจากผู้ใช้สองค่าแล้วคูณกัน</p>  
+                                                </div>
+                                                <div class="btn">
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT30()">รับค่า 5 จาก getNumber แล้วคูณกับ 3 จากนั้นพิมพ์สมการและผลลัพธ์</p>  
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW30()">พิมพ์ค่า 5 และ 3</p>  
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+            <!--* writing *-->
+            <BR id="Writing"> <br><br>
+                <h2>Writing</h2>
+                <div class="game"></div>
+                <!--* 1 *-->
+                <div class="gamecontent-W">
+                    <h5 style="text-align: left;">1.ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้ </h5>
+                    <iframe src="https://drive.google.com/file/d/1tgJJQUChHhVUBNxhQHomawLlVOZUGy8-/preview" width="550" height="500" allow="autoplay"></iframe>                    
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction1()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV1" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/16yFaBlAPNL4odX7Wx0yuFmDdLoQBE6bh/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1zwFRXjE3pr8LnnJgz2-iYeSmCjgUdDQH/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+                <!--* 2 *-->
+                <div class="gamecontent-W">
+                    <h5 style="text-align: left;">2. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
+                    <iframe src="https://drive.google.com/file/d/1VhPG26EMO3ExTchZ423Nhd9yzYdCrxkQ/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction2()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV2" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1LSkhBkyMdUCVHQlQGovM2WUpNxYpe_ve/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1rbnTqwPjAlHd_N6TMVlsV7qwkqktNDzz/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+                <!--* 3 *-->
+                <div class="gamecontent-W">
+                    <h5 style="text-align: left;">3. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
+                    <iframe src="https://drive.google.com/file/d/1pEE_RJ-ej03Fetp1HAS5yJrUpm4XLctp/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction3()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV3" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1OsvdT2-_OXVTkBurxoOepZJFqMvaqTQ1/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1wTYHc5NbIObCRPK62pELehTILwPnSG9l/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1tBgDZ9rLAAEJD1WPG-E6H2lMSzLBEjnI/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+                <!--* 4 *-->
+                <div class="gamecontent-W">
+                    <h5 style="text-align: left;">4. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
+                    <iframe src="https://drive.google.com/file/d/1rY9V2CPruA0uqI3dN_C7V1or18sXRfEU/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction4()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV4" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1fchImyuEAgnQV5V5Bai6vDZF4FG7SgTf/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1rOXqHajuGUCkpX_3RLFQPfooeHc3xcUz/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+                <!--* 5 *-->
+                <div class="gamecontent-W">
+                    <h5 style="text-align: left;">5. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
+                    <iframe src="https://drive.google.com/file/d/1CepIn_BeQtubhlEQxXtaUJKUdhWaNLoF/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction5()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV5" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1xSxBAHAtbiSgt0Ohchxl3U10JXCBSfrn/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1HccZ5En8a-iOW_CCsW_YH_rxZlbraLu1/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1vXBF6xY_KzBzyCnLMoVEamBkSyrf_Ppj/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1l9Jrn8dMKP5xcDCkboWbK_L4g-iBSAf9/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1DgHu4unRCDcIa__JcHmVUJqhIBF3e-De/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+                <!--* 6 *-->
+                <div class="gamecontent-W">
+                    <h5 style="text-align: left;">6. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
+                    <iframe src="https://drive.google.com/file/d/1wAJKqShrstgk_nCWJaOfiG3FNq1alJ9K/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction6()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV6" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1w1JqcZZw2ILqgN1kf7O-AZnWWEz4lY6y/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1gOXpjnivTlFQ7K8jcRZixh4t4nJSSNTo/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1njuGlLQ79OQLUgetiIlDP3TsdfR0YGtM/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/187kTEbnf9HOiKd6dG59HHwfTagFgMBn_/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1r2S5BWGdUfy1ActRrkwywglOa8rC639q/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+                <!--* 7 *-->
+                <div class="gamecontent-W">
+                    <h5 style="text-align: left;">7. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
+                    <iframe src="https://drive.google.com/file/d/1MeUQnssX2JxDR1TO0KowznZ-Ow-dcoql/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction7()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV7" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1JQJnHuCm27QrQMWUxof7aQ8TUAJNJ2fG/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1KhgxzrwCuH9lSez84_D7nA5hFvaNrxxI/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+                <!--* 8 *-->
+                <div class="gamecontent-W">
+                    <h5 style="text-align: left;">8. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
+                    <iframe src="https://drive.google.com/file/d/133REIlbQ_p55lURRWSAGB6kkpE6fN9RB/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction8()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV8" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1BaPTONk-IrgbCzAa6RqIj_EnFl_2EQcx/preview"" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1pOMkVlBi8FGKahMbR6sqgdp3x6Hiwoeq/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1PyuypuV8ok5v1F094CyqALzx8SbEILQ8/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1KLhP9gErIRY2OSipbiWAb0gP2ot0YLde/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/10aRhlk9AIM8LNip_AO89PEf3UROwv-S7/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+                <!--* 9 *-->
+                <div class="gamecontent-W">
+                    <h5 style="text-align: left;">9. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
+                    <iframe src="https://drive.google.com/file/d/1ZNnQ_v8mYC1kEWQicN6WeHMEvdMYzymo/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction9()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV9" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1Jx7MQY0Bix6YNrPzYuVfWbIPLrV1zxQw/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1X3p104n0izUgLTD3vjEIofSOsoU85G9C/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1kaeXbDdb-lD8-wsXabO-4zaS5BzW-Hz5/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/12qI2iJSsRgZj2XoOCAoDUMnQ_sETuOMD/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1debgc3vebF9qJrKPNVK5hV8Phtd4usPB/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+                <!--* 10 *-->
+                <div class="gamecontent-W">
+                    <h5 style="text-align: left;">10. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
+                    <iframe src="https://drive.google.com/file/d/1O_NXMCvesrkRH1nA6cYLveml-KothJmh/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                </div>
+                <div class="gamecontent-W">
+                    <button class="btn btn-info" onclick="myFunction10()">คลิกเพื่อดูเฉลย</button>
+                    <div id="myDIV10" style="margin-top: 10px; display:none; align-items: flex-end;">
+                        <iframe src="https://drive.google.com/file/d/1fOGEHDbSr2e8slEeDSMTt0YzPfzsRdrv/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1asgU3SdBSfAm0jsTcZTqyftdpfkO6kec/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1QjKBV70kXK-im3fF6kit5FQweZ-rQU6l/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1RKQ6JOu1DFT-89tvtFxTi_I12EMJ1qS2/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1s7qd3XhVfihCpIZoKGQfHRzAy_5lp58Z/preview" width="640" height="480" allow="autoplay"></iframe>
+                    </div>
+                </div>
+
+
         </div>
     </div>
+
+
 
 
     <!-- END Of MIDDLE  -->
