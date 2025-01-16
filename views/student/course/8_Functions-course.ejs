@@ -25,7 +25,8 @@
         
     </style>
 
-    <link rel='stylesheet' href='stylesheets/home.css' />
+<link rel='stylesheet' href='stylesheets/gamequiz.css' />
+<script src="javascripts/gamequiz.js"></script>
     <title>Functions</title>
 </head>
 
@@ -46,7 +47,7 @@
     </style>
     <a id="Token"></a>
     <div class="content">
-        <div id = "content" class="container">
+        <div id = "content" class="container"><br><br>
             <h1>บทที่ 8 Functions</h1>
             <b>แบบฝึกหัด</b>
             <a href="/course-Functions#Knowledge" class="scrollbtnK"  type="button"  >
@@ -63,6 +64,12 @@
             </a>
 
 
+            <div class="accordion" id="accordionParentSyntax">
+                <!-- <iframe src="" width="100%" height="820" allow="autoplay"></iframe> -->
+                <br><br><h4>สร้างฟังก์ชันใช้เอง Functions 🔥</h4>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/GunI8Uga3hs?si=VrhwdcCO5blXyXzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        <br><br>
 
             <BR id="Knowledge"> <br><br>
                 <h2>Knowledge</h2>
@@ -78,10 +85,14 @@
                             <div>
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW1()">ฟังก์ชันที่ผู้ใช้สร้างขึ้นเองตามต้องการ</p>
+                                    </div>
+                                <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW1()">ฟังก์ชันที่ต้องเขียนขึ้นใหม่ทุกครั้งที่ใช้งาน</p>  
                                 </div>
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionT1()">ฟังก์ชันมาตรฐานที่ภาษา C เตรียมไว้ในไลบรารีต่างๆ</p>   
+                                </div>
+                                <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW1()">ฟังก์ชันที่ต้องสร้าง header file ใหม่ </p>    
                                 </div>
                             </div>
@@ -99,16 +110,21 @@
                             <div>
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW2()"> ต้องเขียนฟังก์ชันขึ้นมาใหม่ทุกครั้ง</p>
+                                </div>
+                                <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionT2()">ประกาศ header file ที่เกี่ยวข้องแล้วเรียกใช้งานได้ทันที</p>  
                                 </div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionW2()">ต้องกำหนดชื่อฟังก์ชันใหม่ทุกครั้ง</p>   
+                                    <p id="demo" class="button" onclick="myFunctionW2()">ต้องกำหนดชื่อฟังก์ชันใหม่ทุกครั้ง</p> 
+                                </div>
+                                <div class="btn">  
                                     <p id="demo" class="button" onclick="myFunctionW2()">conio.h</p>    
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div class="game">
                     <!--* ข้อ K3 *-->
                     <div class="gamecontent">
                         <div  class="question">
@@ -121,17 +137,13 @@
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW3()">math.h </p>
                                     <p id="demo" class="button" onclick="myFunctionW3()">string.h</p>  
-                                </div>
-                                <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionT3()">stdio.h </p>   
                                     <p id="demo" class="button" onclick="myFunctionW3()">conio.h</p>    
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="game">
+                
                     <!--* ข้อ K4 *-->
                     <div class="gamecontent">
                         <div  class="question">
@@ -144,8 +156,6 @@
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW4()">string.h </p>
                                     <p id="demo" class="button" onclick="myFunctionT4()">math.h </p>  
-                                </div>
-                                <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW4()">stdio.h </p>   
                                     <p id="demo" class="button" onclick="myFunctionW4()">conio.h</p>    
                                 </div>
@@ -153,6 +163,8 @@
                         </div>
                     </div>
 
+                </div>
+                <div class="game">
                     <!--* ข้อ K5 *-->
                     <div class="gamecontent">
                         <div  class="question">
@@ -164,18 +176,20 @@
                             <div>
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW5()">ฟังก์ชันที่มีอยู่แล้วในภาษา C ที่ต้องเรียกใช้ผ่าน header file</p>
+                                </div>
+                                <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW5()">ฟังก์ชันที่ต้องมีการส่งค่ากลับเท่านั้น </p>  
                                 </div>
                                 <div class="btn">
-                                    <p id="demo" class="button" onclick="myFunctionT5()">ฟังก์ชันที่ผู้เขียนโปรแกรมสร้างขึ้นเองเพื่อใช้งานตามวัตถุประสงค์เฉพาะ</p>   
+                                    <p id="demo" class="button" onclick="myFunctionT5()">ฟังก์ชันที่ผู้เขียนโปรแกรมสร้างขึ้นเองเพื่อใช้งานตามวัตถุประสงค์เฉพาะ</p>
+                                </div>
+                                <div class="btn">   
                                     <p id="demo" class="button" onclick="myFunctionW5()">ฟังก์ชันที่ต้องประกาศในไลบรารีมาตรฐานเท่านั้น </p>    
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="game">
+                
                     <!--* ข้อ K6 *-->
                     <div class="gamecontent">
                         <div  class="question">
@@ -190,7 +204,11 @@
                             </div>
                             <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW6()">ต้องมีพารามิเตอร์อย่างน้อย 1 ตัว</p> 
-                                <p id="demo" class="button" onclick="myFunctionT6()">มักใช้ในการแสดงผลข้อมูลที่กำหนดไว้แน่นอน</p>     
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionT6()">มักใช้ในการแสดงผลข้อมูลที่กำหนดไว้แน่นอน</p> 
+                            </div>
+                            <div class="btn">   
                                 <p id="demo" class="button" onclick="myFunctionW6()">ไม่สามารถมีตัวแปรภายในฟังก์ชันได้</p>  
                             </div>
                         </div>
@@ -210,10 +228,14 @@
                             <div>
                             <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionT7()">ต้องส่งค่าเป็นตัวแปรเท่านั้น</p> 
+                            </div>
+                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW7()">ต้องส่งค่าตรงกับชนิดข้อมูลที่ประกาศ</p>                                                                      
                             </div>
                             <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionW7()">สามารถส่งตัวแปรได้</p>    
+                                <p id="demo" class="button" onclick="myFunctionW7()">สามารถส่งตัวแปรได้</p>  
+                            </div>
+                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW7()">สามารถส่งค่าคงที่ได้</p>  
                             </div>
                         </div>
@@ -232,10 +254,14 @@
                             <div>
                             <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionT8()">ต้องมีการระบุชนิดข้อมูลที่จะส่งกลับ</p>  
+                            </div>
+                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW8()">ไม่สามารถมีการคำนวณภายในฟังก์ชันได้ </p>                                                                      
                             </div>
                             <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionW8()">สามารถมีการกำหนดค่าภายในฟังก์ชันได้</p>   
+                                <p id="demo" class="button" onclick="myFunctionW8()">สามารถมีการกำหนดค่าภายในฟังก์ชันได้</p>  
+                            </div>
+                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW8()">ต้องมี return ค่าที่ตรงกับชนิดข้อมูลที่ประกาศ</p>  
                             </div>
                         </div>
@@ -257,10 +283,14 @@
                             <div>
                             <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW9()">ใช้แสดงผลที่มีรูปแบบเดิมซ้ำๆ</p>    
+                            </div>
+                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW9()">ใช้สำหรับการรับค่าจากผู้ใช้เท่านั้น </p>    
                             </div>
                             <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionT9()">ใช้สำหรับการคำนวณที่ต้องการข้อมูลจากภายนอกและต้องการนำผลลัพธ์ไปใช้ต่อ</p>  
+                            </div>
+                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW9()">ใช้สำหรับการแสดงผลเท่านั้น </p>  
                             </div>
                         </div>
@@ -279,11 +309,15 @@
                         <div class="ans">
                             <div>
                             <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionW10()">void sum(int a, int b) { return a + b; }</p>       
+                                <p id="demo" class="button" onclick="myFunctionW10()">void sum(int a, int b) { return a + b; }</p> 
+                            </div>
+                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW10()"> int sum(a, b) { return a + b; } </p>                                                                      
                             </div>
                             <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionT10()">int sum(int a, int b) { return a + b; }</p>  
+                            </div>
+                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW10()">sum(int a, int b) { return a + b; } </p>  
                             </div>
                         </div>
@@ -403,9 +437,7 @@
                                 <div>
                                     <div class="btn">
                                         <p id="demo" class="button" onclick="myFunctionW14()">Hello</p>    
-                                        <p id="demo" class="button" onclick="myFunctionW14()">World</p>  
-                                    </div> 
-                                    <div class="btn">   
+                                        <p id="demo" class="button" onclick="myFunctionW14()">World</p>   
                                         <p id="demo" class="button" onclick="myFunctionT14()">Hello World</p>  
                                         <p id="demo" class="button" onclick="myFunctionW14()">HelloWorld</p>  
                                     </div>
@@ -562,8 +594,6 @@
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW19()">A</p>    
                                     <p id="demo" class="button" onclick="myFunctionW19()">B</p>  
-                                </div>
-                                <div class="btn">                                                                    
                                     <p id="demo" class="button" onclick="myFunctionT19()">AB</p>  
                                     <p id="demo" class="button" onclick="myFunctionW19()">BA</p>  
                                 </div>
@@ -598,9 +628,7 @@
                                 <div>
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW20()">Sum = 7</p>    
-                                    <p id="demo" class="button" onclick="myFunctionW20()">Sum = 3</p>         
-                                </div>
-                                <div class="btn">                                                             
+                                    <p id="demo" class="button" onclick="myFunctionW20()">Sum = 3</p>                                                                     
                                     <p id="demo" class="button" onclick="myFunctionT20()">Sum = 10</p>  
                                     <p id="demo" class="button" onclick="myFunctionW20()">10</p>  
                                 </div>
@@ -848,7 +876,9 @@
                                         
                                     </div>
                                 </div>  
-                
+                            </div>
+                            
+                            <div class="game">
                                 <!--* ข้อ E8 *-->
                                 <div class="gamecontent-E">
                                     <div  class="question-E">
@@ -913,7 +943,7 @@
                                             <div>
                                             <div class="btn">
                                                 <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW29()">พิมพ์เลข 4</p>    
-                                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW29()">ตรวจสอบว่าเลขหารด้วย 4 ลงตัวหรือไม่/p>  
+                                                <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW29()">ตรวจสอบว่าเลขหารด้วย 4 ลงตัวหรือไม่</p>  
                                             </div>
                                             <div class="btn">
                                                 <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT29()">ตรวจสอบว่า 4 เป็นเลขคู่หรือคี่ แล้วพิมพ์ผลลัพธ์</p>  
@@ -966,14 +996,16 @@
 
             <!--* writing *-->
             <BR id="Writing"> <br><br>
-                <h2>Writing</h2>
-                <div class="game"></div>
+            <h2>Writing</h2>
+            <div class="game">
                 <!--* 1 *-->
                 <div class="gamecontent-W">
-                    <h5 style="text-align: left;">1.ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้ </h5>
-                    <iframe src="https://drive.google.com/file/d/1tgJJQUChHhVUBNxhQHomawLlVOZUGy8-/preview" width="550" height="500" allow="autoplay"></iframe>                    
+                    <h5 style="text-align: left;">1.ให้เขียนโปรแกรมคำนวณพื้นที่สี่เหลี่ยม โดยใช้ฟังก์ชันที่มีการรับและส่งค่า </h5>
+                    <iframe src="https://drive.google.com/file/d/1tgJJQUChHhVUBNxhQHomawLlVOZUGy8-/preview" width="500" height="500" allow="autoplay"></iframe>                    
                     <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
                 </div>
+            </div>
+            <div class="game">
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction1()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV1" style="margin-top: 10px; display:none; align-items: flex-end;">
@@ -981,13 +1013,16 @@
                         <iframe src="https://drive.google.com/file/d/1zwFRXjE3pr8LnnJgz2-iYeSmCjgUdDQH/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
-
+            </div>
+            <div class="game">
                 <!--* 2 *-->
                 <div class="gamecontent-W">
-                    <h5 style="text-align: left;">2. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
-                    <iframe src="https://drive.google.com/file/d/1VhPG26EMO3ExTchZ423Nhd9yzYdCrxkQ/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <h5 style="text-align: left;">2. ให้เขียนโปรแกรมแสดงข้อความทักทาย โดยใช้ฟังก์ชันที่ไม่มีการรับและส่งค่า</h5>
+                    <iframe src="https://drive.google.com/file/d/1VhPG26EMO3ExTchZ423Nhd9yzYdCrxkQ/preview" width="500" height="500" allow="autoplay"></iframe>  
                     <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
                 </div>
+            </div>
+            <div class="game">
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction2()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV2" style="margin-top: 10px; display:none; align-items: flex-end;">
@@ -995,13 +1030,16 @@
                         <iframe src="https://drive.google.com/file/d/1rbnTqwPjAlHd_N6TMVlsV7qwkqktNDzz/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
-
+            </div>
+            <div class="game">
                 <!--* 3 *-->
                 <div class="gamecontent-W">
-                    <h5 style="text-align: left;">3. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
-                    <iframe src="https://drive.google.com/file/d/1pEE_RJ-ej03Fetp1HAS5yJrUpm4XLctp/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <h5 style="text-align: left;">3. ให้เขียนโปรแกรมตรวจสอบตัวเลขคู่คี่ โดยใช้ฟังก์ชันที่รับค่าแต่ไม่ส่งค่า</h5>
+                    <iframe src="https://drive.google.com/file/d/1pEE_RJ-ej03Fetp1HAS5yJrUpm4XLctp/preview" width="500" height="500" allow="autoplay"></iframe>  
                     <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
                 </div>
+            </div>
+            <div class="game">
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction3()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV3" style="margin-top: 10px; display:none; align-items: flex-end;">
@@ -1010,13 +1048,16 @@
                         <iframe src="https://drive.google.com/file/d/1tBgDZ9rLAAEJD1WPG-E6H2lMSzLBEjnI/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
-
+            </div>
+            <div class="game">
                 <!--* 4 *-->
                 <div class="gamecontent-W">
-                    <h5 style="text-align: left;">4. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
-                    <iframe src="https://drive.google.com/file/d/1rY9V2CPruA0uqI3dN_C7V1or18sXRfEU/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <h5 style="text-align: left;">4. ให้เขียนโปรแกรมหาค่าสูงสุดต่ำสุด โดยใช้ฟังก์ชันที่ไม่รับค่าแต่ส่งค่า</h5>
+                    <iframe src="https://drive.google.com/file/d/1rY9V2CPruA0uqI3dN_C7V1or18sXRfEU/preview" width="500" height="500" allow="autoplay"></iframe>  
                     <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
                 </div>
+            </div>
+            <div class="game">
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction4()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV4" style="margin-top: 10px; display:none; align-items: flex-end;">
@@ -1024,13 +1065,16 @@
                         <iframe src="https://drive.google.com/file/d/1rOXqHajuGUCkpX_3RLFQPfooeHc3xcUz/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
-
+            </div>
+            <div class="game">
                 <!--* 5 *-->
                 <div class="gamecontent-W">
-                    <h5 style="text-align: left;">5. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
-                    <iframe src="https://drive.google.com/file/d/1CepIn_BeQtubhlEQxXtaUJKUdhWaNLoF/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <h5 style="text-align: left;">5. ให้เขียนโปรแกรมคำนวณค่าไฟฟ้า โดยใช้ฟังก์ชันผสมทั้ง 4 แบบ</h5>
+                    <iframe src="https://drive.google.com/file/d/1CepIn_BeQtubhlEQxXtaUJKUdhWaNLoF/preview" width="500" height="500" allow="autoplay"></iframe>  
                     <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
                 </div>
+            </div>
+            <div class="game">
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction5()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV5" style="margin-top: 10px; display:none; align-items: flex-end;">
@@ -1041,13 +1085,16 @@
                         <iframe src="https://drive.google.com/file/d/1DgHu4unRCDcIa__JcHmVUJqhIBF3e-De/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
-
+            </div>
+            <div class="game">
                 <!--* 6 *-->
                 <div class="gamecontent-W">
-                    <h5 style="text-align: left;">6. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
-                    <iframe src="https://drive.google.com/file/d/1wAJKqShrstgk_nCWJaOfiG3FNq1alJ9K/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <h5 style="text-align: left;">6. ให้เขียนโปรแกรมคำนวณภาษี โดยใช้ฟังก์ชันแบบผสม</h5>
+                    <iframe src="https://drive.google.com/file/d/1wAJKqShrstgk_nCWJaOfiG3FNq1alJ9K/preview" width="500" height="500" allow="autoplay"></iframe>  
                     <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
                 </div>
+            </div>
+            <div class="game">
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction6()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV6" style="margin-top: 10px; display:none; align-items: flex-end;">
@@ -1058,13 +1105,16 @@
                         <iframe src="https://drive.google.com/file/d/1r2S5BWGdUfy1ActRrkwywglOa8rC639q/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
-
+            </div>
+            <div class="game">
                 <!--* 7 *-->
                 <div class="gamecontent-W">
-                    <h5 style="text-align: left;">7. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
-                    <iframe src="https://drive.google.com/file/d/1MeUQnssX2JxDR1TO0KowznZ-Ow-dcoql/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <h5 style="text-align: left;">7. ให้เขียนโปรแกรมจัดการร้านอาหาร โดยใช้ฟังก์ชันแบบผสม</h5>
+                    <iframe src="https://drive.google.com/file/d/1MeUQnssX2JxDR1TO0KowznZ-Ow-dcoql/preview" width="500" height="500" allow="autoplay"></iframe>  
                     <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
                 </div>
+            </div>
+            <div class="game">
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction7()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV7" style="margin-top: 10px; display:none; align-items: flex-end;">
@@ -1075,27 +1125,32 @@
 
                 <!--* 8 *-->
                 <div class="gamecontent-W">
-                    <h5 style="text-align: left;">8. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
-                    <iframe src="https://drive.google.com/file/d/133REIlbQ_p55lURRWSAGB6kkpE6fN9RB/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <h5 style="text-align: left;">8. ให้เขียนโปรแกรมคำนวณดัชนีมวลกาย (BMI) โดยใช้ฟังก์ชันแบบผสม</h5>
+                    <iframe src="https://drive.google.com/file/d/133REIlbQ_p55lURRWSAGB6kkpE6fN9RB/preview" width="500" height="500" allow="autoplay"></iframe>  
                     <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
                 </div>
+            </div>
+            <div class="game">
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction8()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV8" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/1BaPTONk-IrgbCzAa6RqIj_EnFl_2EQcx/preview"" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1BaPTONk-IrgbCzAa6RqIj_EnFl_2EQcx/preview" width="640" height="480" allow="autoplay"></iframe>
                         <iframe src="https://drive.google.com/file/d/1pOMkVlBi8FGKahMbR6sqgdp3x6Hiwoeq/preview" width="640" height="480" allow="autoplay"></iframe>
                         <iframe src="https://drive.google.com/file/d/1PyuypuV8ok5v1F094CyqALzx8SbEILQ8/preview" width="640" height="480" allow="autoplay"></iframe>
                         <iframe src="https://drive.google.com/file/d/1KLhP9gErIRY2OSipbiWAb0gP2ot0YLde/preview" width="640" height="480" allow="autoplay"></iframe>
                         <iframe src="https://drive.google.com/file/d/10aRhlk9AIM8LNip_AO89PEf3UROwv-S7/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
-
+            </div>
+            <div class="game">
                 <!--* 9 *-->
                 <div class="gamecontent-W">
-                    <h5 style="text-align: left;">9. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
-                    <iframe src="https://drive.google.com/file/d/1ZNnQ_v8mYC1kEWQicN6WeHMEvdMYzymo/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <h5 style="text-align: left;">9. ให้เขียนโปรแกรมคำนวณเงินเดือนพนักงาน โดยใช้ฟังก์ชันแบบผสม</h5>
+                    <iframe src="https://drive.google.com/file/d/1ZNnQ_v8mYC1kEWQicN6WeHMEvdMYzymo/preview" width="500" height="500" allow="autoplay"></iframe>  
                     <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
                 </div>
+            </div>
+            <div class="game">
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction9()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV9" style="margin-top: 10px; display:none; align-items: flex-end;">
@@ -1106,13 +1161,16 @@
                         <iframe src="https://drive.google.com/file/d/1debgc3vebF9qJrKPNVK5hV8Phtd4usPB/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
-
+            </div>
+            <div class="game">
                 <!--* 10 *-->
                 <div class="gamecontent-W">
-                    <h5 style="text-align: left;">10. ให้เขียน Flowchart (Block-based Programming) ของ Algorithm นี้</h5>
-                    <iframe src="https://drive.google.com/file/d/1O_NXMCvesrkRH1nA6cYLveml-KothJmh/preview" width="550" height="500" allow="autoplay"></iframe>  
+                    <h5 style="text-align: left;">10. ให้เขียนโปรแกรมจัดการคลังสินค้า โดยใช้ฟังก์ชันแบบผสม</h5>
+                    <iframe src="https://drive.google.com/file/d/1O_NXMCvesrkRH1nA6cYLveml-KothJmh/preview" width="500" height="500" allow="autoplay"></iframe>  
                     <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
                 </div>
+            </div>
+            <div class="game">
                 <div class="gamecontent-W">
                     <button class="btn btn-info" onclick="myFunction10()">คลิกเพื่อดูเฉลย</button>
                     <div id="myDIV10" style="margin-top: 10px; display:none; align-items: flex-end;">
@@ -1123,7 +1181,10 @@
                         <iframe src="https://drive.google.com/file/d/1s7qd3XhVfihCpIZoKGQfHRzAy_5lp58Z/preview" width="640" height="480" allow="autoplay"></iframe>
                     </div>
                 </div>
-
+            </div>
+                <br>
+                <button onclick="window.location.href='/course-Arrays_and_Strings-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" >
+                <h4>แบบทดสอบหลังเรียน</h4></button><br><br>
 
         </div>
     </div>

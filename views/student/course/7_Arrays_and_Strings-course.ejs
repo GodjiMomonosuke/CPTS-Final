@@ -25,7 +25,8 @@
         
     </style>
 
-    <link rel='stylesheet' href='stylesheets/home.css' />
+<link rel='stylesheet' href='stylesheets/gamequiz.css' />
+<script src="javascripts/gamequiz.js"></script>
     <title>Array and String</title>
 </head>
 
@@ -47,7 +48,7 @@
     <a id="Token"></a>
     <!-- MIDDLE 1 -->
     <div class="content">
-        <div id = "content" class="container">
+        <div id = "content" class="container"><br><br>
             <h1>บทที่ 7 Array and String</h1>
             <b>แบบฝึกหัด</b>
             <a href="/course-Arrays_and_Strings#Knowledge" class="scrollbtnK"  type="button"  >
@@ -63,7 +64,22 @@
                 Writing
             </a>
 
-
+            <div class="accordion" id="accordionParentSyntax">
+                <!-- <iframe src="" width="100%" height="820" allow="autoplay"></iframe> -->
+                <br><br><h4>ใช้งานอาร์เรย์ Array ระบุตำแหน่ง Index 🔥</h4>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/ExueZI39aaA?si=kN0awYkMCfslQ4ZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br><br><h4>สร้างคำสั่ง Array 1 มิติ One Dimensional Array 🔥</h4>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/OL1L427L-wQ?si=ay7YVRv07X_m5wuN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br><br><h4>สร้างคำสั่ง Array 2 มิติ Two Dimensional Array 🔥</h4>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/JMum4tGPfKM?si=7vMIqBUOJqk1oV_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br><br><h4>สร้างคำสั่ง Array 3 มิติ Three Dimensional Array 🔥</h4>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/UXFVeOZAhRo?si=SHZgpKDfJAYOlImc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br><br><h4>ใช้งาน char and string ตัวอักขระและข้อความ 🔥</h4>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/WRtyzrDlIPg?si=cEuMLphtQoHvOv6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br><br><h4>ใช้งาน string.h Library คำสั่งด้านข้อความ 🔥</h4>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/oqTVH0aRfro?si=ojuefezc7ybROzxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        <br><br>
 
 
             <BR id="Knowledge"> <br><br>
@@ -110,7 +126,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
+                <div class="game">
                     <!--* ข้อ K3 *-->
                     <div class="gamecontent">
                         <div  class="question">
@@ -131,13 +149,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="game">
+                                
                     <!--* ข้อ K4 *-->
                     <div class="gamecontent">
                         <div  class="question">
-                        <h5>การเข้าถึงสมาชิกสุดท้ายของ array ที่มีขนาด n ควรใช้ index ใด</h5>
+                        <h5>4. การเข้าถึงสมาชิกสุดท้ายของ array ที่มีขนาด n ควรใช้ index ใด</h5>
                         <br><br>
                         <p style="text-align: center;" id="demo4"> </p>
                         </div>
@@ -146,8 +162,6 @@
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW4()">n</p>
                                     <p id="demo" class="button" onclick="myFunctionT4()">n-1</p>  
-                                </div>
-                                <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW4()">n+1</p>   
                                     <p id="demo" class="button" onclick="myFunctionW4()">-1</p>    
                                 </div>
@@ -189,8 +203,6 @@
                             <div>
                             <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW6()">strconcat()</p>                                                                      
-                            </div>
-                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionT6()">strcat()</p> 
                                 <p id="demo" class="button" onclick="myFunctionW6()">concat()</p>     
                                 <p id="demo" class="button" onclick="myFunctionW6()">append()</p>  
@@ -199,8 +211,7 @@
                             
                         </div>
                     </div>
-                </div>
-                <div class="game">
+
                     <!--* ข้อ K7 *-->
                     <div class="gamecontent">
                         <div  class="question">
@@ -210,19 +221,18 @@
                         </div>
                         <div class="ans">
                             <div>
-                            <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionW7()">strfind()</p> 
-                                <p id="demo" class="button" onclick="myFunctionW7()">indexOf()</p>                                                                      
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW7()">strfind()</p> 
+                                    <p id="demo" class="button" onclick="myFunctionW7()">indexOf()</p>                                                                      
+                                    <p id="demo" class="button" onclick="myFunctionT7()">strchr()</p>    
+                                    <p id="demo" class="button" onclick="myFunctionW7()">find()</p>  
+                                </div>
                             </div>
-                            <div class="btn">
-                                <p id="demo" class="button" onclick="myFunctionT7()">strchr()</p>    
-                                <p id="demo" class="button" onclick="myFunctionW7()">find()</p>  
-                            </div>
-                        </div>
                             
                         </div>
                     </div>
-        
+                </div>
+                <div class="game">        
                     <!--* ข้อ K8 *-->
                     <div class="gamecontent">
                         <div  class="question">
@@ -235,8 +245,6 @@
                             <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionT8()">เพื่อระบุจุดสิ้นสุดของ string</p>  
                                 <p id="demo" class="button" onclick="myFunctionW8()">เพื่อป้องกันการแก้ไขข้อมูล</p>                                                                      
-                            </div>
-                            <div class="btn">
                                 <p id="demo" class="button" onclick="myFunctionW8()">เพื่อให้สามารถคำนวณความยาวได้เร็วขึ้น</p>   
                                 <p id="demo" class="button" onclick="myFunctionW8()">เพื่อประหยัดหน่วยความจำ</p>  
                             </div>
@@ -401,8 +409,6 @@
                                     <div class="btn">
                                         <p id="demo" class="button" onclick="myFunctionW14()">35</p>    
                                         <p id="demo" class="button" onclick="myFunctionW14()">40</p>  
-                                    </div> 
-                                    <div class="btn">   
                                         <p id="demo" class="button" onclick="myFunctionT14()">45</p>  
                                         <p id="demo" class="button" onclick="myFunctionW14()">50</p>  
                                     </div>
@@ -547,8 +553,6 @@
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW19()">Programming</p>    
                                     <p id="demo" class="button" onclick="myFunctionW19()">gram</p>  
-                                </div>
-                                <div class="btn">                                                                    
                                     <p id="demo" class="button" onclick="myFunctionT19()">gramming</p>  
                                     <p id="demo" class="button" onclick="myFunctionW19()">ming</p>  
                                 </div>
@@ -578,8 +582,6 @@
                                 <div class="btn">
                                     <p id="demo" class="button" onclick="myFunctionW20()">Hello</p>    
                                     <p id="demo" class="button" onclick="myFunctionW20()">World</p>         
-                                </div>
-                                <div class="btn">                                                             
                                     <p id="demo" class="button" onclick="myFunctionT20()">Hello World</p>  
                                     <p id="demo" class="button" onclick="myFunctionW20()">HelloWorld</p>  
                                 </div>
@@ -619,11 +621,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>     
-                        </div>
-                
-                        <div class="game">
-                        <!--* ข้อ E2*-->
+                            </div>                     
+
+                            <!--* ข้อ E2*-->
                             <div class="gamecontent-E">
                                 <div  class="question-E">
                                     <h5>2. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
@@ -639,8 +639,8 @@
                                 <div class="ans">
                                     <div>
                                         <div class="btn">
-                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT22()">พิมพ์ตัวอักษรแรกของสตริง คือ H</p> 
-                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW22()">พิมพ์ตัวอักษรสุดท้ายของสตริง คือ o</p> 
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT22()">พิมพ์ตัวอักษรแรกของสตริง <br>คือ H</p> 
+                                            <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW22()">พิมพ์ตัวอักษรสุดท้าย <br>ของสตริง คือ o</p> 
                                         </div>    
                                         <div class="btn">
                                             <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW22()">พิมพ์สตริงทั้งหมด</p>  
@@ -708,14 +708,12 @@
                                                 </div>    
                                                 <div class="btn">
                                                     <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW24()">พิมพ์เลขคู่ทั้งหมดในอาเรย์</p>  
-                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT24()">ตรวจสอบว่าค่าแรกเป็นเลขคู่ ถ้าใช่แสดง Even ไม่ใช่แสดง Odd</p>   
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT24()">ตรวจสอบว่าค่าแรกเป็นเลขคู่ <br>ถ้าใช่แสดง Even ไม่ใช่แสดง Odd</p>   
                                                 </div>
                                             </div>
                                         </div>
                                     </div>  
-                                </div>
-                
-                            <div class="game">
+
                                 <!--* ข้อ E5 *-->
                                     <div class="gamecontent-E">
                                         <div  class="question-E">
@@ -735,7 +733,7 @@
                                             <div>
                                                 <div class="btn">
                                                     <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW25()">สลับค่าในอาเรย์</p>  
-                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT25()">คัดลอกค่าจากตำแหน่งที่ 2 และ 3 มาแทนที่ตำแหน่งที่ 1 และ 2</p> 
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT25()">คัดลอกค่าจากตำแหน่งที่ 2 และ 3 <br>มาแทนที่ตำแหน่งที่ 1 และ 2</p> 
                                                 </div>    
                                                 <div class="btn">
                                                     <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW25()">เพิ่มค่าในอาเรย์</p> 
@@ -770,7 +768,7 @@
                                                     <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW26()">นับจำนวนช่องว่างในสตริง</p> 
                                                 </div>    
                                                 <div class="btn">
-                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT26()">ตรวจสอบว่าสตริงมีความยาวมากกว่า 3 ถ้าใช่จะแสดง Long string</p> 
+                                                    <p id="demo" class="button" style="text-align: left;" onclick="myFunctionT26()">ตรวจสอบว่าสตริงมีความยาวมากกว่า 3 brถ้าใช่จะแสดง Long string</p> 
                                                     <p id="demo" class="button" style="text-align: left;" onclick="myFunctionW26()">เปรียบเทียบความยาวของสตริง</p>    
                                                 </div>
                                             </div>
@@ -809,6 +807,9 @@
                                     </div>
                                 </div>  
                 
+                            </div>
+                                
+                            <div class="game">
                                 <!--* ข้อ E8 *-->
                                 <div class="gamecontent-E">
                                     <div  class="question-E">
@@ -912,151 +913,183 @@
                     <!--* writing *-->
             <BR id="Writing"> <br><br>
                 <h2>Writing</h2>
-                <div class="game"></div>
-                <!--* 1 *-->
-                <div class="gamecontent-W">
-                    <h5 style="text-align: left;">1. ให้เขียนโปรแกรมรับคะแนนนักเรียน 5 คน แล้วหาค่าเฉลี่ย </h5>
-                    <iframe src="https://drive.google.com/file/d/1wVY9u-I_Ngc3m7JRO1RiuI49h5wKe5re/preview" width="550" height="500" allow="autoplay"></iframe>                    
-                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                <div class="game">
+                    <!--* 1 *-->
+                    <div class="gamecontent-W">
+                        <h5 style="text-align: left;">1. ให้เขียนโปรแกรมรับคะแนนนักเรียน 5 คน แล้วหาค่าเฉลี่ย </h5>
+                        <iframe src="https://drive.google.com/file/d/1wVY9u-I_Ngc3m7JRO1RiuI49h5wKe5re/preview" width="500" height="500" allow="autoplay"></iframe>                    
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                    </div>
                 </div>
-                <div class="gamecontent-W">
-                    <button class="btn btn-info" onclick="myFunction1()">คลิกเพื่อดูเฉลย</button>
-                    <div id="myDIV1" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/10ug3cdD57hRva1RHrR-_PTEkQAxDJee9/preview" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="https://drive.google.com/file/d/1uYpSeV6T1razqg9qIAbXb7ruv6PiN8gA/preview" width="400" height="480" allow="autoplay"></iframe>
+                <div class="game">
+                    <div class="gamecontent-W">
+                        <button class="btn btn-info" onclick="myFunction1()">คลิกเพื่อดูเฉลย</button>
+                        <div id="myDIV1" style="margin-top: 10px; display:none; align-items: flex-end;">
+                            <iframe src="https://drive.google.com/file/d/10ug3cdD57hRva1RHrR-_PTEkQAxDJee9/preview" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1uYpSeV6T1razqg9qIAbXb7ruv6PiN8gA/preview" width="400" height="480" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <!--* 2 *-->
+                    <div class="gamecontent-W">
+                        <h5 style="text-align: left;">2. ให้เขียนโปรแกรมรับคะแนนนักเรียน 3 คน สอบ 2 วิชา แล้วหาค่าเฉลี่ยแต่ละคน</h5>
+                        <iframe src="https://drive.google.com/file/d/1Bbf_Qz9IbM_zg2ZT01yoWPY1jCzvkmMX/preview" width="500" height="500" allow="autoplay"></iframe>                    
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="gamecontent-W">
+                        <button class="btn btn-info" onclick="myFunction2()">คลิกเพื่อดูเฉลย</button>
+                        <div id="myDIV2" style="margin-top: 10px; display:none; align-items: flex-end;">
+                            <iframe src="https://drive.google.com/file/d/1VG28ia9Mj4Y_6IpXVQLY6nKcfMIEOUGh/preview" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1yrBgGVzA2X7BhTNq5Ugs2MmrsfbsNoAB/preview" width="400" height="480" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">                
+                    <!--* 3 *-->
+                    <div class="gamecontent-W">
+                        <h5 style="text-align: left;">3. ให้เขียนโปรแกรมรับคะแนนนักเรียน 2 ห้อง ห้องละ 3 คน คนละ 2 วิชา</h5>
+                        <iframe src="https://drive.google.com/file/d/1KSy6KicgsmobBq6RiPVpQ4uoCtqwk2rP/preview" width="500" height="500" allow="autoplay"></iframe>                    
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="gamecontent-W">
+                        <button class="btn btn-info" onclick="myFunction3()">คลิกเพื่อดูเฉลย</button>
+                        <div id="myDIV3" style="margin-top: 10px; display:none; align-items: flex-end;">
+                            <iframe src="https://drive.google.com/file/d/1S8IwoKTk0KkX5JUMKYMVj74YYXrxz19N/preview" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1Ke-7LcEM3tdU55v51W7TEdcIoYx3UhNK/preview" width="400" height="480" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <!--* 4 *-->
+                    <div class="gamecontent-W">
+                        <h5 style="text-align: left;">4. ให้เขียนโปรแกรมหาค่าสูงสุด ต่ำสุด และค่าเฉลี่ยใน Array 1 มิติ</h5>
+                        <iframe src="https://drive.google.com/file/d/12z5f0BApIa1DXqceUhxOIyzfXe4Zop3j/preview" width="500" height="500" allow="autoplay"></iframe>                    
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="gamecontent-W">
+                        <button class="btn btn-info" onclick="myFunction4()">คลิกเพื่อดูเฉลย</button>
+                        <div id="myDIV4" style="margin-top: 10px; display:none; align-items: flex-end;">
+                            <iframe src="https://drive.google.com/file/d/1SyYdKfleq4poLmCzY0VPqV78MHeqEpQl/preview" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1wqGCe1bYAFiTpBmfZHEug31xrxyHrHmO/preview" width="400" height="480" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <!--* 5 *-->
+                    <div class="gamecontent-W">
+                        <h5 style="text-align: left;">5. ให้เขียนโปรแกรมหาผลรวมของแถวและหลักในเมทริกซ์</h5>
+                        <iframe src="https://drive.google.com/file/d/15Fz-MNMNPqwVZH93Z3pADa9aC7FJppLv/preview" width="500" height="500" allow="autoplay"></iframe>                    
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="gamecontent-W">
+                        <button class="btn btn-info" onclick="myFunction5()">คลิกเพื่อดูเฉลย</button>
+                        <div id="myDIV5" style="margin-top: 10px; display:none; align-items: flex-end;">
+                            <iframe src="https://drive.google.com/file/d/15UdqOWkjC6UBPm5C1fveHXNfxwv2M2sq/preview" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1FCn9vu7okdFoU0NkZKTZws86c_dCPrjx/preview" width="400" height="480" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <!--* 6 *-->
+                    <div class="gamecontent-W">
+                        <h5 style="text-align: left;">6. ให้เขียนโปรแกรมเก็บและแสดงคะแนนสอบของนักเรียนหลายห้องในหลายวิชา</h5>
+                        <iframe src="https://drive.google.com/file/d/1_pTzMx0s_F07SKd9CEBJ76AIoAl1jTFi/preview" width="500" height="500" allow="autoplay"></iframe>                    
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="gamecontent-W">
+                        <button class="btn btn-info" onclick="myFunction6()">คลิกเพื่อดูเฉลย</button>
+                        <div id="myDIV6" style="margin-top: 10px; display:none; align-items: flex-end;">
+                            <iframe src="https://drive.google.com/file/d/1VdLMyTvKWWT7GeKJ3qzgVn7oXBlI4fRf/preview" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1pQS3CRO3Qbf0qIjG9a01H4vW9S9gtrk_/preview" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1390OSHOzkOmHBtnwpKYXvRDRZxIJJ7lg/preview" width="400" height="480" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <!--* 7 *-->
+                    <div class="gamecontent-W">
+                        <h5 style="text-align: left;">7. ให้เขียนโปรแกรมจัดเรียงรายชื่อนักเรียนพร้อมคะแนน</h5>
+                        <iframe src="https://drive.google.com/file/d/10LuDZ-Sa2FT8YV55LoI01dGU7kXue-Zi/preview" width="500" height="500" allow="autoplay"></iframe>                    
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="gamecontent-W">
+                        <button class="btn btn-info" onclick="myFunction7()">คลิกเพื่อดูเฉลย</button>
+                        <div id="myDIV7" style="margin-top: 10px; display:none; align-items: flex-end;">
+                            <iframe src="https://drive.google.com/file/d/1uUYasdiPAXHqM14SL0pn54pTaoxGE0WB/preview" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1GhLADCqax8JdaXxqafZx50WwUZHN3TuD/preview" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1qSGuUpC8luQU7HeaCdNyKTKi_tBOi-Kk/preview" width="400" height="480" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <!--* 8 *-->
+                    <div class="gamecontent-W">
+                        <h5 style="text-align: left;">8. ให้โปรแกรมตรวจสอบความยาวและทำตัวพิมพ์ใหญ่</h5>
+                        <iframe src="https://drive.google.com/file/d/1h4tn5mjXEhtVjHmiy2XRhxLEybr6OLIu/preview" width="500" height="500" allow="autoplay"></iframe>                    
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="gamecontent-W">
+                        <button class="btn btn-info" onclick="myFunction8()">คลิกเพื่อดูเฉลย</button>
+                        <div id="myDIV8" style="margin-top: 10px; display:none; align-items: flex-end;">
+                            <iframe src="https://drive.google.com/file/d/1U_IMz0AFkwKakVinXh1WsIfiE97qYy_5/preview" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="https://drive.google.com/file/d/1VGzeM0y_k8ry_q97WX7hrmldjCPS3AmY/preview" width="400" height="480" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <!--* 9 *-->
+                    <div class="gamecontent-W">
+                        <h5 style="text-align: left;">9. ให้เขียนโปรแกรมเปรียบเทียบและต่อ string</h5>
+                        <iframe src="https://drive.google.com/file/d/1Gi3ZBDyptxT5N7kFSgdxoJsrKbDoOmR1/preview" width="500" height="500" allow="autoplay"></iframe>                    
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="gamecontent-W">
+                        <button class="btn btn-info" onclick="myFunction9()">คลิกเพื่อดูเฉลย</button>
+                        <div id="myDIV9" style="margin-top: 10px; display:none; align-items: flex-end;">
+                            <iframe src="" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="" width="400" height="480" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="game">
+                    <!--* 10 *-->
+                    <div class="gamecontent-W">
+                        <h5 style="text-align: left;">10. ให้เขียนโปรแกรมรวมชื่อและนามสกุลแล้วแปลงเป็นตัวพิมพ์ใหญ่</h5>
+                        <iframe src="https://drive.google.com/file/d/1UGcGN5lW5A7Uy3MpFnz1qF4eizzCk8VW/preview" width="500" height="500" allow="autoplay"></iframe>                    
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                    </div>
+                </div>
+                <div class="game">
+                    <div class="gamecontent-W">
+                        <button class="btn btn-info" onclick="myFunction10()">คลิกเพื่อดูเฉลย</button>
+                        <div id="myDIV10" style="margin-top: 10px; display:none; align-items: flex-end;">
+                            <iframe src="" width="640" height="480" allow="autoplay"></iframe>
+                            <iframe src="" width="400" height="480" allow="autoplay"></iframe>
+                        </div>
                     </div>
                 </div>
 
-                <!--* 2 *-->
-                <div class="gamecontent-W">
-                    <h5 style="text-align: left;">2. ให้เขียนโปรแกรมรับคะแนนนักเรียน 3 คน สอบ 2 วิชา แล้วหาค่าเฉลี่ยแต่ละคน</h5>
-                    <iframe src="https://drive.google.com/file/d/1Bbf_Qz9IbM_zg2ZT01yoWPY1jCzvkmMX/preview" width="550" height="500" allow="autoplay"></iframe>                    
-                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
-                </div>
-                <div class="gamecontent-W">
-                    <button class="btn btn-info" onclick="myFunction2()">คลิกเพื่อดูเฉลย</button>
-                    <div id="myDIV2" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/1VG28ia9Mj4Y_6IpXVQLY6nKcfMIEOUGh/preview" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="https://drive.google.com/file/d/1yrBgGVzA2X7BhTNq5Ugs2MmrsfbsNoAB/preview" width="400" height="480" allow="autoplay"></iframe>
-                    </div>
-                </div>
-
-                <!--* 3 *-->
-                <div class="gamecontent-W">
-                    <h5 style="text-align: left;">3. ให้เขียนโปรแกรมรับคะแนนนักเรียน 2 ห้อง ห้องละ 3 คน คนละ 2 วิชา</h5>
-                    <iframe src="https://drive.google.com/file/d/1KSy6KicgsmobBq6RiPVpQ4uoCtqwk2rP/preview" width="550" height="500" allow="autoplay"></iframe>                    
-                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
-                </div>
-                <div class="gamecontent-W">
-                    <button class="btn btn-info" onclick="myFunction3()">คลิกเพื่อดูเฉลย</button>
-                    <div id="myDIV3" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/1S8IwoKTk0KkX5JUMKYMVj74YYXrxz19N/preview" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="https://drive.google.com/file/d/1Ke-7LcEM3tdU55v51W7TEdcIoYx3UhNK/preview" width="400" height="480" allow="autoplay"></iframe>
-                    </div>
-                </div>
-
-                <!--* 4 *-->
-                <div class="gamecontent-W">
-                    <h5 style="text-align: left;">4. ให้เขียนโปรแกรมหาค่าสูงสุด ต่ำสุด และค่าเฉลี่ยใน Array 1 มิติ</h5>
-                    <iframe src="https://drive.google.com/file/d/12z5f0BApIa1DXqceUhxOIyzfXe4Zop3j/preview" width="550" height="500" allow="autoplay"></iframe>                    
-                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
-                </div>
-                <div class="gamecontent-W">
-                    <button class="btn btn-info" onclick="myFunction4()">คลิกเพื่อดูเฉลย</button>
-                    <div id="myDIV4" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/1SyYdKfleq4poLmCzY0VPqV78MHeqEpQl/preview" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="https://drive.google.com/file/d/1wqGCe1bYAFiTpBmfZHEug31xrxyHrHmO/preview" width="400" height="480" allow="autoplay"></iframe>
-                    </div>
-                </div>
-
-                <!--* 5 *-->
-                <div class="gamecontent-W">
-                    <h5 style="text-align: left;">5. ให้เขียนโปรแกรมหาผลรวมของแถวและหลักในเมทริกซ์</h5>
-                    <iframe src="https://drive.google.com/file/d/15Fz-MNMNPqwVZH93Z3pADa9aC7FJppLv/preview" width="550" height="500" allow="autoplay"></iframe>                    
-                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
-                </div>
-                <div class="gamecontent-W">
-                    <button class="btn btn-info" onclick="myFunction5()">คลิกเพื่อดูเฉลย</button>
-                    <div id="myDIV5" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/15UdqOWkjC6UBPm5C1fveHXNfxwv2M2sq/preview" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="https://drive.google.com/file/d/1FCn9vu7okdFoU0NkZKTZws86c_dCPrjx/preview" width="400" height="480" allow="autoplay"></iframe>
-                    </div>
-                </div>
-
-                <!--* 6 *-->
-                <div class="gamecontent-W">
-                    <h5 style="text-align: left;">6. ให้เขียนโปรแกรมเก็บและแสดงคะแนนสอบของนักเรียนหลายห้องในหลายวิชา</h5>
-                    <iframe src="https://drive.google.com/file/d/1_pTzMx0s_F07SKd9CEBJ76AIoAl1jTFi/preview" width="550" height="500" allow="autoplay"></iframe>                    
-                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
-                </div>
-                <div class="gamecontent-W">
-                    <button class="btn btn-info" onclick="myFunction6()">คลิกเพื่อดูเฉลย</button>
-                    <div id="myDIV6" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/1VdLMyTvKWWT7GeKJ3qzgVn7oXBlI4fRf/preview" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="https://drive.google.com/file/d/1pQS3CRO3Qbf0qIjG9a01H4vW9S9gtrk_/preview" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="https://drive.google.com/file/d/1390OSHOzkOmHBtnwpKYXvRDRZxIJJ7lg/preview" width="400" height="480" allow="autoplay"></iframe>
-                    </div>
-                </div>
-
-                <!--* 7 *-->
-                <div class="gamecontent-W">
-                    <h5 style="text-align: left;">7. ให้เขียนโปรแกรมจัดเรียงรายชื่อนักเรียนพร้อมคะแนน</h5>
-                    <iframe src="https://drive.google.com/file/d/10LuDZ-Sa2FT8YV55LoI01dGU7kXue-Zi/preview" width="550" height="500" allow="autoplay"></iframe>                    
-                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
-                </div>
-                <div class="gamecontent-W">
-                    <button class="btn btn-info" onclick="myFunction7()">คลิกเพื่อดูเฉลย</button>
-                    <div id="myDIV7" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/1uUYasdiPAXHqM14SL0pn54pTaoxGE0WB/preview" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="https://drive.google.com/file/d/1GhLADCqax8JdaXxqafZx50WwUZHN3TuD/preview" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="https://drive.google.com/file/d/1qSGuUpC8luQU7HeaCdNyKTKi_tBOi-Kk/preview" width="400" height="480" allow="autoplay"></iframe>
-                    </div>
-                </div>
-
-                <!--* 8 *-->
-                <div class="gamecontent-W">
-                    <h5 style="text-align: left;">8. ให้โปรแกรมตรวจสอบความยาวและทำตัวพิมพ์ใหญ่</h5>
-                    <iframe src="https://drive.google.com/file/d/1h4tn5mjXEhtVjHmiy2XRhxLEybr6OLIu/preview" width="550" height="500" allow="autoplay"></iframe>                    
-                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
-                </div>
-                <div class="gamecontent-W">
-                    <button class="btn btn-info" onclick="myFunction8()">คลิกเพื่อดูเฉลย</button>
-                    <div id="myDIV8" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="https://drive.google.com/file/d/1U_IMz0AFkwKakVinXh1WsIfiE97qYy_5/preview" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="https://drive.google.com/file/d/1VGzeM0y_k8ry_q97WX7hrmldjCPS3AmY/preview" width="400" height="480" allow="autoplay"></iframe>
-                    </div>
-                </div>
-
-                <!--* 9 *-->
-                <div class="gamecontent-W">
-                    <h5 style="text-align: left;">9. ให้เขียนโปรแกรมเปรียบเทียบและต่อ string</h5>
-                    <iframe src="https://drive.google.com/file/d/1Gi3ZBDyptxT5N7kFSgdxoJsrKbDoOmR1/preview" width="550" height="500" allow="autoplay"></iframe>                    
-                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
-                </div>
-                <div class="gamecontent-W">
-                    <button class="btn btn-info" onclick="myFunction9()">คลิกเพื่อดูเฉลย</button>
-                    <div id="myDIV9" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="" width="400" height="480" allow="autoplay"></iframe>
-                    </div>
-                </div>
-
-                <!--* 10 *-->
-                <div class="gamecontent-W">
-                    <h5 style="text-align: left;">10. ให้เขียนโปรแกรมรวมชื่อและนามสกุลแล้วแปลงเป็นตัวพิมพ์ใหญ่</h5>
-                    <iframe src="https://drive.google.com/file/d/1UGcGN5lW5A7Uy3MpFnz1qF4eizzCk8VW/preview" width="550" height="500" allow="autoplay"></iframe>                    
-                    <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
-                </div>
-                <div class="gamecontent-W">
-                    <button class="btn btn-info" onclick="myFunction10()">คลิกเพื่อดูเฉลย</button>
-                    <div id="myDIV10" style="margin-top: 10px; display:none; align-items: flex-end;">
-                        <iframe src="" width="640" height="480" allow="autoplay"></iframe>
-                        <iframe src="" width="400" height="480" allow="autoplay"></iframe>
-                    </div>
-                </div>
-
-
+                <br>
+                <button onclick="window.location.href='/course-Arrays_and_Strings-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" >
+                <h4>แบบทดสอบหลังเรียน</h4></button><br><br>
 
         </div>
     </div>
