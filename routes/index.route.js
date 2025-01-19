@@ -1172,6 +1172,7 @@ router.get('/', async (req, res, next) => {
                 PreExplain = PreExplain;
                 PreWrite = PreWrite;
 
+                //*** Chart คิดเป็น % */
                 var PreBasicPercent = Math.round((PreBasicScore/40)*100);
                 var PreTracePercent = Math.round((PreTraceScore/40)*100);
                 var PreExplainPercent = Math.round((PreExplainScore/40)*100);
