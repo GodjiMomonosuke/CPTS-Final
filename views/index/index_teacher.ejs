@@ -503,9 +503,9 @@
                                     <p class="score_title">Lab 2</p>
                                     <div class="pie animate" style="--p:<%= (PreStringScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PreStringCount === 0) { %>
-                                            <%= (PreStringScore/1)%>
+                                            <%= Math.round(PreStringScore/1)%>
                                         <% } else { %>
-                                            <%= (PreStringScore/PreStringCount) %>
+                                            <%= Math.round(PreStringScore/PreStringCount) %>
                                         <% }%>
                                     </div>
                                     <div class="TeacherBar">
@@ -514,17 +514,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv1/PreStringCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreStringCount === 0) { %>
-                                                        <%= (PreStringLv1/1)%>
+                                                        <%= Math.round(PreStringLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (PreStringLv1/PreStringCount) %>
+                                                        <%= Math.round(PreStringLv1/PreStringCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreStringCount === 0) { %>
-                                                    <%= ((PreStringLv1/1)/5)*100%>%
+                                                    <%= Math.round(((PreStringLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreStringLv1/PreStringCount)/5)*100 %>%
+                                                    <%= Math.round(((PreStringLv1/PreStringCount)/5)*100)%>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -533,17 +533,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv2/PreStringCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreStringCount === 0) { %>
-                                                        <%= (PreStringLv2/1)%>
+                                                        <%= Math.round(PreStringLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (PreStringLv2/PreStringCount) %>
+                                                        <%= Math.round(PreStringLv2/PreStringCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreStringCount === 0) { %>
-                                                    <%= ((PreStringLv2/1)/5)*100%>%
+                                                    <%= Math.round(((PreStringLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreStringLv2/PreStringCount)/5)*100 %>%
+                                                    <%= Math.round(((PreStringLv2/PreStringCount)/5)*100 )%>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -552,17 +552,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv3/PreStringCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreStringCount === 0) { %>
-                                                        <%= (PreStringLv3/1)%>
+                                                        <%= Math.round(PreStringLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (PreStringLv3/PreStringCount) %>
+                                                        <%= Math.round(PreStringLv3/PreStringCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreStringCount === 0) { %>
-                                                    <%= ((PreStringLv3/1)/5)*100%>%
+                                                    <%= Math.round(((PreStringLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreStringLv3/PreStringCount)/5)*100 %>%
+                                                    <%= Math.round(((PreStringLv3/PreStringCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -571,15 +571,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreIntroductionBG2 %>; --w :<%= ((PreStringLv4/PreStringCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreStringCount === 0) { %>
-                                                        <%= (PreStringLv4/1)%>
+                                                        <%= Math.round(PreStringLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (PreStringLv4/PreStringCount) %>
+                                                        <%= Math.round(PreStringLv4/PreStringCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreStringCount === 0) { %>
-                                                    <%= ((PreStringLv4/1)/25)*100%>%
+                                                    <%= Math.round(((PreStringLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((PreStringLv4/PreStringCount)/25)*100) %>%
                                                 <% }%>
@@ -594,9 +594,9 @@
                                     <p class="score_title">Lab 3</p>
                                     <div class="pie animate" style="--p:<%= (PreDatatypeScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PreDatatypeCount === 0) { %>
-                                            <%= (PreDatatypeScore/1)%>
+                                            <%= Math.round(PreDatatypeScore/1)%>
                                         <% } else { %>
-                                            <%= (PreDatatypeScore/PreDatatypeCount) %>
+                                            <%= Math.round(PreDatatypeScore/PreDatatypeCount) %>
                                         <% }%>
                                     </div>                   
                                     <div class="TeacherBar">
@@ -605,17 +605,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreDatatypeBG2 %>; --w :<%= ((PreDatatypeLv1/PreDatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreDatatypeCount === 0) { %>
-                                                        <%= (PreDatatypeLv1/1)%>
+                                                        <%= Math.round(PreDatatypeLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (PreDatatypeLv1/PreDatatypeCount) %>
+                                                        <%=Math.round(PreDatatypeLv1/PreDatatypeCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreDatatypeCount === 0) { %>
-                                                    <%= ((PreDatatypeLv1/1)/5)*100%>%
+                                                    <%= Math.round(((PreDatatypeLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreDatatypeLv1/PreDatatypeCount)/5)*100 %>%
+                                                    <%= Math.round(((PreDatatypeLv1/PreDatatypeCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -624,17 +624,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreDatatypeBG2 %>; --w :<%= ((PreDatatypeLv2/PreDatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreDatatypeCount === 0) { %>
-                                                        <%= (PreDatatypeLv2/1)%>
+                                                        <%= Math.round(PreDatatypeLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (PreDatatypeLv2/PreDatatypeCount) %>
+                                                        <%= Math.round(PreDatatypeLv2/PreDatatypeCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreDatatypeCount === 0) { %>
-                                                    <%= ((PreDatatypeLv2/1)/5)*100%>%
+                                                    <%= Math.round(((PreDatatypeLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreDatatypeLv2/PreDatatypeCount)/5)*100 %>%
+                                                    <%= Math.round(((PreDatatypeLv2/PreDatatypeCount)/5)*100)%>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -643,17 +643,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreDatatypeBG2 %>; --w :<%= ((PreDatatypeLv3/PreDatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreDatatypeCount === 0) { %>
-                                                        <%= (PreDatatypeLv3/1)%>
+                                                        <%= Math.round(PreDatatypeLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (PreDatatypeLv3/PreDatatypeCount) %>
+                                                        <%= Math.round(PreDatatypeLv3/PreDatatypeCount)%>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreDatatypeCount === 0) { %>
-                                                    <%= ((PreDatatypeLv3/1)/5)*100%>%
+                                                    <%= Math.round(((PreDatatypeLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreDatatypeLv3/PreDatatypeCount)/5)*100 %>%
+                                                    <%= Math.round(((PreDatatypeLv3/PreDatatypeCount)/5)*100)%>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -662,15 +662,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreDatatypeBG2 %>; --w :<%= ((PreDatatypeLv4/PreDatatypeCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreDatatypeCount === 0) { %>
-                                                        <%= (PreDatatypeLv4/1)%>
+                                                        <%= Math.round(PreDatatypeLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (PreDatatypeLv4/PreDatatypeCount) %>
+                                                        <%= Math.round(PreDatatypeLv4/PreDatatypeCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreDatatypeCount === 0) { %>
-                                                    <%= ((PreDatatypeLv4/1)/25)*100%>%
+                                                    <%= Math.round(((PreDatatypeLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((PreDatatypeLv4/PreDatatypeCount)/25)*100) %>%
                                                 <% }%>
@@ -685,9 +685,9 @@
                                     <p class="score_title">Lab 4</p>
                                     <div class="pie animate" style="--p:<%= (PreOperatorsScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PreOperatorsCount === 0) { %>
-                                            <%= (PreOperatorsScore/1)%>
+                                            <%= Math.round(PreOperatorsScore/1)%>
                                         <% } else { %>
-                                            <%= (PreOperatorsScore/PreOperatorsCount) %>
+                                            <%= Math.round(PreOperatorsScore/PreOperatorsCount) %>
                                         <% }%>
                                     </div>                    
                                     <div class="TeacherBar">
@@ -696,17 +696,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreOperatorsBG2 %>; --w :<%= ((PreOperatorsLv1/PreOperatorsCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreOperatorsCount === 0) { %>
-                                                        <%= (PreOperatorsLv1/1)%>
+                                                        <%= Math.round(PreOperatorsLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (PreOperatorsLv1/PreOperatorsCount) %>
+                                                        <%= Math.round(PreOperatorsLv1/PreOperatorsCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreOperatorsCount === 0) { %>
-                                                    <%= ((PreOperatorsLv1/1)/5)*100%>%
+                                                    <%= Math.round(((PreOperatorsLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreOperatorsLv1/PreOperatorsCount)/5)*100 %>%
+                                                    <%= Math.round(((PreOperatorsLv1/PreOperatorsCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -715,17 +715,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreOperatorsBG2 %>; --w :<%= ((PreOperatorsLv2/PreOperatorsCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreOperatorsCount === 0) { %>
-                                                        <%= (PreOperatorsLv2/1)%>
+                                                        <%= Math.round(PreOperatorsLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (PreOperatorsLv2/PreOperatorsCount) %>
+                                                        <%= Math.round(PreOperatorsLv2/PreOperatorsCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreOperatorsCount === 0) { %>
-                                                    <%= ((PreOperatorsLv2/1)/5)*100%>%
+                                                    <%= Math.round(((PreOperatorsLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreOperatorsLv2/PreOperatorsCount)/5)*100 %>%
+                                                    <%= Math.round(((PreOperatorsLv2/PreOperatorsCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -734,17 +734,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreOperatorsBG2 %>; --w :<%= ((PreOperatorsLv3/PreOperatorsCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreOperatorsCount === 0) { %>
-                                                        <%= (PreOperatorsLv3/1)%>
+                                                        <%= Math.round(PreOperatorsLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (PreOperatorsLv3/PreOperatorsCount) %>
+                                                        <%= Math.round(PreOperatorsLv3/PreOperatorsCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreOperatorsCount === 0) { %>
-                                                    <%= ((PreOperatorsLv3/1)/5)*100%>%
+                                                    <%= Math.round(((PreOperatorsLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreOperatorsLv3/PreOperatorsCount)/5)*100 %>%
+                                                    <%= Math.round(((PreOperatorsLv3/PreOperatorsCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -753,15 +753,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreOperatorsBG2 %>; --w :<%= ((PreOperatorsLv4/PreOperatorsCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreOperatorsCount === 0) { %>
-                                                        <%= (PreOperatorsLv4/1)%>
+                                                        <%= Math.round(PreOperatorsLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (PreOperatorsLv4/PreOperatorsCount) %>
+                                                        <%= Math.round(PreOperatorsLv4/PreOperatorsCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreOperatorsCount === 0) { %>
-                                                    <%= ((PreOperatorsLv4/1)/25)*100%>%
+                                                    <%= Math.round(((PreOperatorsLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((PreOperatorsLv4/PreOperatorsCount)/25)*100) %>%
                                                 <% }%>
@@ -776,9 +776,9 @@
                                     <p class="score_title">Lab 5</p>
                                     <div class="pie animate" style="--p:<%= (PreFlowControlScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PreFlowControlCount === 0) { %>
-                                            <%= (PreFlowControlScore/1)%>
+                                            <%= Math.round(PreFlowControlScore/1)%>
                                         <% } else { %>
-                                            <%= (PreFlowControlScore/PreFlowControlCount) %>
+                                            <%= Math.round(PreFlowControlScore/PreFlowControlCount) %>
                                         <% }%>
                                     </div>                        
                                     <div class="TeacherBar">
@@ -787,17 +787,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreFlowControlBG2 %>; --w :<%= ((PreFlowControlLv1/PreFlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreFlowControlCount === 0) { %>
-                                                        <%= (PreFlowControlLv1/1)%>
+                                                        <%= Math.round(PreFlowControlLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (PreFlowControlLv1/PreFlowControlCount) %>
+                                                        <%= Math.round(PreFlowControlLv1/PreFlowControlCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreFlowControlCount === 0) { %>
-                                                    <%= ((PreFlowControlLv1/1)/5)*100%>%
+                                                    <%= Math.round(((PreFlowControlLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreFlowControlLv1/PreFlowControlCount)/5)*100 %>%
+                                                    <%= Math.round(((PreFlowControlLv1/PreFlowControlCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -806,17 +806,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreFlowControlBG2 %>; --w :<%= ((PreFlowControlLv2/PreFlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreFlowControlCount === 0) { %>
-                                                        <%= (PreFlowControlLv2/1)%>
+                                                        <%= Math.round(PreFlowControlLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (PreFlowControlLv2/PreFlowControlCount) %>
+                                                        <%= Math.round(PreFlowControlLv2/PreFlowControlCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreFlowControlCount === 0) { %>
-                                                    <%= ((PreFlowControlLv2/1)/5)*100%>%
+                                                    <%= Math.round(((PreFlowControlLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreFlowControlLv2/PreFlowControlCount)/5)*100 %>%
+                                                    <%= Math.round(((PreFlowControlLv2/PreFlowControlCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -825,17 +825,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreFlowControlBG2 %>; --w :<%= ((PreFlowControlLv3/PreFlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreFlowControlCount === 0) { %>
-                                                        <%= (PreFlowControlLv3/1)%>
+                                                        <%= Math.round(PreFlowControlLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (PreFlowControlLv3/PreFlowControlCount) %>
+                                                        <%= Math.round(PreFlowControlLv3/PreFlowControlCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreFlowControlCount === 0) { %>
-                                                    <%= ((PreFlowControlLv3/1)/5)*100%>%
+                                                    <%= Math.round(((PreFlowControlLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreFlowControlLv3/PreFlowControlCount)/5)*100 %>%
+                                                    <%= Math.round(((PreFlowControlLv3/PreFlowControlCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -844,15 +844,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreFlowControlBG2 %>; --w :<%= ((PreFlowControlLv4/PreFlowControlCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreFlowControlCount === 0) { %>
-                                                        <%= (PreFlowControlLv4/1)%>
+                                                        <%= Math.round(PreFlowControlLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (PreFlowControlLv4/PreFlowControlCount) %>
+                                                        <%= Math.round(PreFlowControlLv4/PreFlowControlCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreFlowControlCount === 0) { %>
-                                                    <%= ((PreFlowControlLv4/1)/25)*100%>%
+                                                    <%= Math.round(((PreFlowControlLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((PreFlowControlLv4/PreFlowControlCount)/25)*100) %>%
                                                 <% }%>
@@ -867,9 +867,9 @@
                                     <p class="score_title">Lab 6</p>
                                     <div class="pie animate" style="--p:<%= (PrePointersScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PrePointersCount === 0) { %>
-                                            <%= (PrePointersScore/1)%>
+                                            <%= Math.round(PrePointersScore/1)%>
                                         <% } else { %>
-                                            <%= (PrePointersScore/PrePointersCount) %>
+                                            <%= Math.round(PrePointersScore/PrePointersCount) %>
                                         <% }%>
                                     </div>   
                                     <div class="TeacherBar">
@@ -878,17 +878,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PrePointersBG2 %>; --w :<%= ((PrePointersLv1/PrePointersCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PrePointersCount === 0) { %>
-                                                        <%= (PrePointersLv1/1)%>
+                                                        <%= Math.round(PrePointersLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (PrePointersLv1/PrePointersCount) %>
+                                                        <%= Math.round(PrePointersLv1/PrePointersCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PrePointersCount === 0) { %>
-                                                    <%= ((PrePointersLv1/1)/5)*100%>%
+                                                    <%= Math.round(((PrePointersLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PrePointersLv1/PrePointersCount)/5)*100 %>%
+                                                    <%= Math.round(((PrePointersLv1/PrePointersCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -897,17 +897,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PrePointersBG2 %>; --w :<%= ((PrePointersLv2/PrePointersCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PrePointersCount === 0) { %>
-                                                        <%= (PrePointersLv2/1)%>
+                                                        <%= Math.round(PrePointersLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (PrePointersLv2/PrePointersCount) %>
+                                                        <%= Math.round(PrePointersLv2/PrePointersCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PrePointersCount === 0) { %>
-                                                    <%= ((PrePointersLv2/1)/5)*100%>%
+                                                    <%= Math.round(((PrePointersLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PrePointersLv2/PrePointersCount)/5)*100 %>%
+                                                    <%= Math.round(((PrePointersLv2/PrePointersCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -916,17 +916,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PrePointersBG2 %>; --w :<%= ((PrePointersLv3/PrePointersCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PrePointersCount === 0) { %>
-                                                        <%= (PrePointersLv3/1)%>
+                                                        <%= Math.round(PrePointersLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (PrePointersLv3/PrePointersCount) %>
+                                                        <%= Math.round(PrePointersLv3/PrePointersCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PrePointersCount === 0) { %>
-                                                    <%= ((PrePointersLv3/1)/5)*100%>%
+                                                    <%= Math.round(((PrePointersLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PrePointersLv3/PrePointersCount)/5)*100 %>%
+                                                    <%= Math.round(((PrePointersLv3/PrePointersCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -935,15 +935,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PrePointersBG2 %>; --w :<%= ((PrePointersLv4/PrePointersCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PrePointersCount === 0) { %>
-                                                        <%= (PrePointersLv4/1)%>
+                                                        <%= Math.round(PrePointersLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (PrePointersLv4/PrePointersCount) %>
+                                                        <%= Math.round(PrePointersLv4/PrePointersCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PrePointersCount === 0) { %>
-                                                    <%= ((PrePointersLv4/1)/25)*100%>%
+                                                    <%= Math.round(((PrePointersLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((PrePointersLv4/PrePointersCount)/25)*100) %>%
                                                 <% }%>
@@ -958,9 +958,9 @@
                                     <p class="score_title">Lab 7</p>
                                     <div class="pie animate" style="--p:<%= (PreFunctionScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PreFunctionCount === 0) { %>
-                                            <%= (PreFunctionScore/1)%>
+                                            <%= Math.round(PreFunctionScore/1)%>
                                         <% } else { %>
-                                            <%= (PreFunctionScore/PreFunctionCount) %>
+                                            <%= Math.round(PreFunctionScore/PreFunctionCount) %>
                                         <% }%>
                                     </div>                    
                                     <div class="TeacherBar">
@@ -969,17 +969,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreFunctionBG2 %>; --w :<%= ((PreFunctionLv1/PreFunctionCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreFunctionCount === 0) { %>
-                                                        <%= (PreFunctionLv1/1)%>
+                                                        <%= Math.round(PreFunctionLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (PreFunctionLv1/PreFunctionCount) %>
+                                                        <%= Math.round(PreFunctionLv1/PreFunctionCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreFunctionCount === 0) { %>
-                                                    <%= ((PreFunctionLv1/1)/5)*100%>%
+                                                    <%= Math.round(((PreFunctionLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreFunctionLv1/PreFunctionCount)/5)*100 %>%
+                                                    <%= Math.round(((PreFunctionLv1/PreFunctionCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -988,17 +988,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreFunctionBG2 %>; --w :<%= ((PreFunctionLv2/PreFunctionCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreFunctionCount === 0) { %>
-                                                        <%= (PreFunctionLv2/1)%>
+                                                        <%= Math.round(PreFunctionLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (PreFunctionLv2/PreFunctionCount) %>
+                                                        <%= Math.round(PreFunctionLv2/PreFunctionCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreFunctionCount === 0) { %>
-                                                    <%= ((PreFunctionLv2/1)/5)*100%>%
+                                                    <%= Math.round(((PreFunctionLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreFunctionLv2/PreFunctionCount)/5)*100 %>%
+                                                    <%= Math.round(((PreFunctionLv2/PreFunctionCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1007,17 +1007,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreFunctionBG2 %>; --w :<%= ((PreFunctionLv3/PreFunctionCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreFunctionCount === 0) { %>
-                                                        <%= (PreFunctionLv3/1)%>
+                                                        <%= Math.round(PreFunctionLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (PreFunctionLv3/PreFunctionCount) %>
+                                                        <%= Math.round(PreFunctionLv3/PreFunctionCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreFunctionCount === 0) { %>
-                                                    <%= ((PreFunctionLv3/1)/5)*100%>%
+                                                    <%= Math.round(((PreFunctionLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreFunctionLv3/PreFunctionCount)/5)*100 %>%
+                                                    <%= Math.round(((PreFunctionLv3/PreFunctionCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1026,15 +1026,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreFunctionBG2 %>; --w :<%= ((PreFunctionLv4/PreFunctionCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreFunctionCount === 0) { %>
-                                                        <%= (PreFunctionLv4/1)%>
+                                                        <%= Math.round(PreFunctionLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (PreFunctionLv4/PreFunctionCount) %>
+                                                        <%= Math.round(PreFunctionLv4/PreFunctionCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreFunctionCount === 0) { %>
-                                                    <%= ((PreFunctionLv4/1)/25)*100%>%
+                                                    <%= Math.round(((PreFunctionLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((PreFunctionLv4/PreFunctionCount)/25)*100) %>%
                                                 <% }%>
@@ -1049,9 +1049,9 @@
                                     <p class="score_title">Lab 8</p>
                                     <div class="pie animate" style="--p:<%= (PreStructureScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PreStructureCount === 0) { %>
-                                            <%= (PreStructureScore/1)%>
+                                            <%= Math.round(PreStructureScore/1)%>
                                         <% } else { %>
-                                            <%= (PreStructureScore/PreStructureCount) %>
+                                            <%= Math.round(PreStructureScore/PreStructureCount) %>
                                         <% }%>
                                     </div>                 
                                     <div class="TeacherBar">
@@ -1060,17 +1060,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreStructureBG2 %>; --w :<%= ((PreStructureLv1/PreStructureCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreStructureCount === 0) { %>
-                                                        <%= (PreStructureLv1/1)%>
+                                                        <%= Math.round(PreStructureLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (PreStructureLv1/PreStructureCount) %>
+                                                        <%= Math.round(PreStructureLv1/PreStructureCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreStructureCount === 0) { %>
-                                                    <%= ((PreStructureLv1/1)/5)*100%>%
+                                                    <%= Math.round(((PreStructureLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreStructureLv1/PreStructureCount)/5)*100 %>%
+                                                    <%= Math.round(((PreStructureLv1/PreStructureCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1079,17 +1079,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreStructureBG2 %>; --w :<%= ((PreStructureLv2/PreStructureCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreStructureCount === 0) { %>
-                                                        <%= (PreStructureLv2/1)%>
+                                                        <%= Math.round(PreStructureLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (PreStructureLv2/PreStructureCount) %>
+                                                        <%= Math.round(PreStructureLv2/PreStructureCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreStructureCount === 0) { %>
-                                                    <%= ((PreStructureLv2/1)/5)*100%>%
+                                                    <%= Math.round(((PreStructureLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreStructureLv2/PreStructureCount)/5)*100 %>%
+                                                    <%= Math.round(((PreStructureLv2/PreStructureCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1098,17 +1098,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreStructureBG2 %>; --w :<%= ((PreStructureLv3/PreStructureCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreStructureCount === 0) { %>
-                                                        <%= (PreStructureLv3/1)%>
+                                                        <%= Math.round(PreStructureLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (PreStructureLv3/PreStructureCount) %>
+                                                        <%= Math.round(PreStructureLv3/PreStructureCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreStructureCount === 0) { %>
-                                                    <%= ((PreStructureLv3/1)/5)*100%>%
+                                                    <%= Math.round(((PreStructureLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PreStructureLv3/PreStructureCount)/5)*100 %>%
+                                                    <%= Math.round(((PreStructureLv3/PreStructureCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1117,15 +1117,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PreStructureBG2 %>; --w :<%= ((PreStructureLv4/PreStructureCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PreStructureCount === 0) { %>
-                                                        <%= (PreStructureLv4/1)%>
+                                                        <%= Math.round(PreStructureLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (PreStructureLv4/PreStructureCount) %>
+                                                        <%= Math.round(PreStructureLv4/PreStructureCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PreStructureCount === 0) { %>
-                                                    <%= ((PreStructureLv4/1)/25)*100%>%
+                                                    <%= Math.round(((PreStructureLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((PreStructureLv4/PreStructureCount)/25)*100) %>%
                                                 <% }%>
@@ -1236,9 +1236,9 @@
                                     <p class="score_title">Lab 2</p>
                                     <div class="pie animate" style="--p:<%= (StringScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (StringCount === 0) { %>
-                                            <%= (StringScore/1)%>
+                                            <%= Math.round(StringScore/1)%>
                                         <% } else { %>
-                                            <%= (StringScore) %>
+                                            <%= Math.round(StringScore) %>
                                         <% }%>
                                     </div>    
                                     <div class="TeacherBar">
@@ -1247,17 +1247,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= StringBG2 %>; --w :<%= ((StringLv1/StringCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (StringCount === 0) { %>
-                                                        <%= (StringLv1/1)%>
+                                                        <%= Math.round(StringLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (StringLv1/StringCount) %>
+                                                        <%= Math.round(StringLv1/StringCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (StringCount === 0) { %>
-                                                    <%= ((StringLv1/1)/5)*100%>%
+                                                    <%= Math.round(((StringLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((StringLv1/StringCount)/5)*100 %>%
+                                                    <%= Math.round(((StringLv1/StringCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1266,17 +1266,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= StringBG2 %>; --w :<%= ((StringLv2/StringCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (StringCount === 0) { %>
-                                                        <%= (StringLv2/1)%>
+                                                        <%= Math.round(StringLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (StringLv2/StringCount) %>
+                                                        <%= Math.round(StringLv2/StringCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (StringCount === 0) { %>
-                                                    <%= ((StringLv2/1)/5)*100%>%
+                                                    <%= Math.round(((StringLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((StringLv2/StringCount)/5)*100 %>%
+                                                    <%= Math.round(((StringLv2/StringCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1285,17 +1285,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= StringBG2 %>; --w :<%= ((StringLv3/StringCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (StringCount === 0) { %>
-                                                        <%= (StringLv3/1)%>
+                                                        <%= Math.round(StringLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (StringLv3/StringCount) %>
+                                                        <%= Math.round(StringLv3/StringCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (StringCount === 0) { %>
-                                                    <%= ((StringLv3/1)/5)*100%>%
+                                                    <%= Math.round(((StringLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((StringLv3/StringCount)/5)*100 %>%
+                                                    <%= Math.round(((StringLv3/StringCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1304,15 +1304,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= StringBG2 %>; --w :<%= ((StringLv4/StringCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (StringCount === 0) { %>
-                                                        <%= (StringLv4/1)%>
+                                                        <%= Math.round(StringLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (StringLv4/StringCount) %>
+                                                        <%= Math.round(StringLv4/StringCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>   
                                             <div class="percent">
                                                 <% if (StringCount === 0) { %>
-                                                    <%= ((StringLv4/1)/25)*100%>%
+                                                    <%= Math.round(((StringLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((StringLv4/StringCount)/25)*100) %>%
                                                 <% }%>
@@ -1327,9 +1327,9 @@
                                     <p class="score_title">Lab 3</p>
                                     <div class="pie animate" style="--p:<%= (DatatypeScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (DatatypeCount === 0) { %>
-                                            <%= (DatatypeScore/1)%>
+                                            <%= Math.round(DatatypeScore/1)%>
                                         <% } else { %>
-                                            <%= (DatatypeScore) %>
+                                            <%= Math.round(DatatypeScore) %>
                                         <% }%>
                                     </div>    
                                     <div class="TeacherBar">
@@ -1338,17 +1338,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= DatatypeBG2 %>; --w :<%= ((DatatypeLv1/DatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (DatatypeCount === 0) { %>
-                                                        <%= (DatatypeLv1/1)%>
+                                                        <%= Math.round(DatatypeLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (DatatypeLv1/DatatypeCount) %>
+                                                        <%= Math.round(DatatypeLv1/DatatypeCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (DatatypeCount === 0) { %>
-                                                    <%= ((DatatypeLv1/1)/5)*100%>%
+                                                    <%= Math.round(((DatatypeLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((DatatypeLv1/DatatypeCount)/5)*100 %>%
+                                                    <%= Math.round(((DatatypeLv1/DatatypeCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1357,17 +1357,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= DatatypeBG2 %>; --w :<%= ((DatatypeLv2/DatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (DatatypeCount === 0) { %>
-                                                        <%= (DatatypeLv2/1)%>
+                                                        <%= Math.round(DatatypeLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (DatatypeLv2/DatatypeCount) %>
+                                                        <%= Math.round(DatatypeLv2/DatatypeCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (DatatypeCount === 0) { %>
-                                                    <%= ((DatatypeLv2/1)/5)*100%>%
+                                                    <%= Math.round(((DatatypeLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((DatatypeLv2/DatatypeCount)/5)*100 %>%
+                                                    <%= Math.round(((DatatypeLv2/DatatypeCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1376,17 +1376,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= DatatypeBG2 %>; --w :<%= ((DatatypeLv3/DatatypeCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (DatatypeCount === 0) { %>
-                                                        <%= (DatatypeLv3/1)%>
+                                                        <%= Math.round(DatatypeLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (DatatypeLv3/DatatypeCount) %>
+                                                        <%= Math.round(DatatypeLv3/DatatypeCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (DatatypeCount === 0) { %>
-                                                    <%= ((DatatypeLv3/1)/5)*100%>%
+                                                    <%= Math.round(((DatatypeLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((DatatypeLv3/DatatypeCount)/5)*100 %>%
+                                                    <%= Math.round(((DatatypeLv3/DatatypeCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1395,15 +1395,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= DatatypeBG2 %>; --w :<%= ((DatatypeLv4/DatatypeCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (DatatypeCount === 0) { %>
-                                                        <%= (DatatypeLv4/1)%>
+                                                        <%= Math.round(DatatypeLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (DatatypeLv4/DatatypeCount) %>
+                                                        <%= Math.round(DatatypeLv4/DatatypeCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>      
                                             <div class="percent">
                                                 <% if (DatatypeCount === 0) { %>
-                                                    <%= ((DatatypeLv4/1)/25)*100%>%
+                                                    <%= Math.round(((DatatypeLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((DatatypeLv4/DatatypeCount)/25)*100) %>%
                                                 <% }%>
@@ -1509,9 +1509,9 @@
                                     <p class="score_title">Lab 5</p>
                                     <div class="pie animate" style="--p:<%= (FlowControlScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (FlowControlCount === 0) { %>
-                                            <%= (FlowControlScore/1)%>
+                                            <%= Math.round(FlowControlScore/1)%>
                                         <% } else { %>
-                                            <%= (FlowControlScore) %>
+                                            <%= Math.round(FlowControlScore) %>
                                         <% }%>
                                     </div>     
                                     <div class="TeacherBar">
@@ -1520,17 +1520,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= FlowControlBG2 %>; --w :<%= ((FlowControlLv1/FlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (FlowControlCount === 0) { %>
-                                                        <%= (FlowControlLv1/1)%>
+                                                        <%= Math.round(FlowControlLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (FlowControlLv1/FlowControlCount) %>
+                                                        <%= Math.round(FlowControlLv1/FlowControlCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (FlowControlCount === 0) { %>
-                                                    <%= ((FlowControlLv1/1)/5)*100%>%
+                                                    <%= Math.round(((FlowControlLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((FlowControlLv1/FlowControlCount)/5)*100 %>%
+                                                    <%= Math.round(((FlowControlLv1/FlowControlCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1539,17 +1539,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= FlowControlBG2 %>; --w :<%= ((FlowControlLv2/FlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (FlowControlCount === 0) { %>
-                                                        <%= (FlowControlLv2/1)%>
+                                                        <%= Math.round(FlowControlLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (FlowControlLv2/FlowControlCount) %>
+                                                        <%= Math.round(FlowControlLv2/FlowControlCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (FlowControlCount === 0) { %>
-                                                    <%= ((FlowControlLv2/1)/5)*100%>%
+                                                    <%= Math.round(((FlowControlLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((FlowControlLv2/FlowControlCount)/5)*100 %>%
+                                                    <%= Math.round(((FlowControlLv2/FlowControlCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1558,17 +1558,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= FlowControlBG2 %>; --w :<%= ((FlowControlLv3/FlowControlCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (FlowControlCount === 0) { %>
-                                                        <%= (FlowControlLv3/1)%>
+                                                        <%= Math.round(FlowControlLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (FlowControlLv3/FlowControlCount) %>
+                                                        <%= Math.round(FlowControlLv3/FlowControlCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (FlowControlCount === 0) { %>
-                                                    <%= ((FlowControlLv3/1)/5)*100%>%
+                                                    <%= Math.round(((FlowControlLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((FlowControlLv3/FlowControlCount)/5)*100 %>%
+                                                    <%= Math.round(((FlowControlLv3/FlowControlCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1577,15 +1577,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= FlowControlBG2 %>; --w :<%= ((FlowControlLv4/FlowControlCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (FlowControlCount === 0) { %>
-                                                        <%= (FlowControlLv4/1)%>
+                                                        <%= Math.round(FlowControlLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (FlowControlLv4/FlowControlCount) %>
+                                                        <%= Math.round(FlowControlLv4/FlowControlCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (FlowControlCount === 0) { %>
-                                                    <%= ((FlowControlLv4/1)/25)*100%>%
+                                                    <%= Math.round(((FlowControlLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((FlowControlLv4/FlowControlCount)/25)*100) %>%
                                                 <% }%>
@@ -1600,9 +1600,9 @@
                                     <p class="score_title">Lab 6</p>
                                     <div class="pie animate" style="--p:<%= (PointersScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (PointersCount === 0) { %>
-                                            <%= (PointersScore/1)%>
+                                            <%= Math.round(PointersScore/1)%>
                                         <% } else { %>
-                                            <%= (PointersScore) %>
+                                            <%= Math.round(PointersScore) %>
                                         <% }%>
                                     </div>  
                                     <div class="TeacherBar">
@@ -1611,17 +1611,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PointersBG2 %>; --w :<%= ((PointersLv1/PointersCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PointersCount === 0) { %>
-                                                    <%= (PointersLv1/1)%>
+                                                    <%= Math.round(PointersLv1/1)%>
                                                     <% } else { %>
-                                                    <%= (PointersLv1/PointersCount) %>
+                                                    <%= Math.round(PointersLv1/PointersCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PointersCount === 0) { %>
-                                                    <%= ((PointersLv1/1)/5)*100%>%
+                                                    <%= Math.round(((PointersLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PointersLv1/PointersCount)/5)*100 %>%
+                                                    <%= Math.round(((PointersLv1/PointersCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1630,17 +1630,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PointersBG2 %>; --w :<%= ((PointersLv2/PointersCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PointersCount === 0) { %>
-                                                        <%= (PointersLv2/1)%>
+                                                        <%= Math.round(PointersLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (PointersLv2/PointersCount) %>
+                                                        <%= Math.round(PointersLv2/PointersCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PointersCount === 0) { %>
-                                                    <%= ((PointersLv2/1)/5)*100%>%
+                                                    <%= Math.round(((PointersLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PointersLv2/PointersCount)/5)*100 %>%
+                                                    <%= Math.round(((PointersLv2/PointersCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1649,17 +1649,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PointersBG2 %>; --w :<%= ((PointersLv3/PointersCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PointersCount === 0) { %>
-                                                        <%= (PointersLv3/1)%>
+                                                        <%= Math.round(PointersLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (PointersLv3/PointersCount) %>
+                                                        <%= Math.round(PointersLv3/PointersCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PointersCount === 0) { %>
-                                                    <%= ((PointersLv3/1)/5)*100%>%
+                                                    <%= Math.round(((PointersLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((PointersLv3/PointersCount)/5)*100 %>%
+                                                    <%= Math.round(((PointersLv3/PointersCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1668,15 +1668,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= PointersBG2 %>; --w :<%= ((PointersLv4/PointersCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (PointersCount === 0) { %>
-                                                        <%= (PointersLv4/1)%>
+                                                        <%= Math.round(PointersLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (PointersLv4/PointersCount) %>
+                                                        <%= Math.round(PointersLv4/PointersCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (PointersCount === 0) { %>
-                                                    <%= ((PointersLv4/1)/25)*100%>%
+                                                    <%= Math.round(((PointersLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((PointersLv4/PointersCount)/25)*100) %>%
                                                 <% }%>
@@ -1691,9 +1691,9 @@
                                     <p class="score_title">Lab 7</p>
                                     <div class="pie animate" style="--p:<%= (FunctionScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (FunctionCount === 0) { %>
-                                            <%= (FunctionScore/1)%>
+                                            <%= Math.round(FunctionScore/1)%>
                                         <% } else { %>
-                                            <%= (FunctionScore) %>
+                                            <%= Math.round(FunctionScore) %>
                                         <% }%>
                                     </div>     
                                     <div class="TeacherBar">
@@ -1702,17 +1702,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= FunctionBG2 %>; --w :<%= ((FunctionLv1/FunctionCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (FunctionCount === 0) { %>
-                                                        <%= (FunctionLv1/1)%>
+                                                        <%= Math.round(FunctionLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (FunctionLv1/FunctionCount) %>
+                                                        <%= Math.round(FunctionLv1/FunctionCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (FunctionCount === 0) { %>
-                                                    <%= ((FunctionLv1/1)/5)*100%>%
+                                                    <%= Math.round(((FunctionLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((FunctionLv1/FunctionCount)/5)*100 %>%
+                                                    <%= Math.round(((FunctionLv1/FunctionCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1721,17 +1721,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= FunctionBG2 %>; --w :<%= ((FunctionLv2/FunctionCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (FunctionCount === 0) { %>
-                                                        <%= (FunctionLv2/1)%>
+                                                        <%= Math.round(FunctionLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (FunctionLv2/FunctionCount) %>
+                                                        <%= Math.round(FunctionLv2/FunctionCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (FunctionCount === 0) { %>
-                                                    <%= ((FunctionLv2/1)/5)*100%>%
+                                                    <%= Math.round(((FunctionLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((FunctionLv2/FunctionCount)/5)*100 %>%
+                                                    <%= Math.round(((FunctionLv2/FunctionCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1740,17 +1740,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= FunctionBG2 %>; --w :<%= ((FunctionLv3/FunctionCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (FunctionCount === 0) { %>
-                                                        <%= (FunctionLv3/1)%>
+                                                        <%= Math.round(FunctionLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (FunctionLv3/FunctionCount) %>
+                                                        <%= Math.round(FunctionLv3/FunctionCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (FunctionCount === 0) { %>
-                                                    <%= ((FunctionLv3/1)/5)*100%>%
+                                                    <%= Math.round(((FunctionLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((FunctionLv3/FunctionCount)/5)*100 %>%
+                                                    <%= Math.round(((FunctionLv3/FunctionCount)/5)*100) %>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1759,15 +1759,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= FunctionBG2 %>; --w :<%= ((FunctionLv4/FunctionCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (FunctionCount === 0) { %>
-                                                        <%= (FunctionLv4/1)%>
+                                                        <%= Math.round(FunctionLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (FunctionLv4/FunctionCount) %>
+                                                        <%= Math.round(FunctionLv4/FunctionCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>   
                                             <div class="percent">
                                                 <% if (FunctionCount === 0) { %>
-                                                    <%= ((FunctionLv4/1)/25)*100%>%
+                                                    <%= Math.round(((FunctionLv4/1)/25)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((FunctionLv4/FunctionCount)/25)*100) %>%
                                                 <% }%>
@@ -1782,9 +1782,9 @@
                                     <p class="score_title">Lab 8</p>
                                     <div class="pie animate" style="--p:<%= (StructureScore*5)/2 %>;--c:#66B7BD; font-size: 14px;"> 
                                         <% if (StructureCount === 0) { %>
-                                            <%= (StructureScore/1)%>
+                                            <%= Math.round(StructureScore/1)%>
                                         <% } else { %>
-                                            <%= (StructureScore) %>
+                                            <%= Math.round(StructureScore) %>
                                         <% }%>
                                     </div> 
                                     <div class="TeacherBar">
@@ -1793,17 +1793,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= StructureBG2 %>; --w :<%= ((StructureLv1/StructureCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (StructureCount === 0) { %>
-                                                        <%= (StructureLv1/1)%>
+                                                        <%= Math.round(StructureLv1/1)%>
                                                     <% } else { %>
-                                                        <%= (StructureLv1/StructureCount) %>
+                                                        <%= Math.round(StructureLv1/StructureCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (StructureCount === 0) { %>
-                                                    <%= ((StructureLv1/1)/5)*100%>%
+                                                    <%= Math.round(((StructureLv1/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((StructureLv1/StructureCount)/5)*100 %>%
+                                                    <%= Math.round(((StructureLv1/StructureCount)/5)*100 )%>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1812,17 +1812,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= StructureBG2 %>; --w :<%= ((StructureLv2/StructureCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (StructureCount === 0) { %>
-                                                        <%= (StructureLv2/1)%>
+                                                        <%= Math.round(StructureLv2/1)%>
                                                     <% } else { %>
-                                                        <%= (StructureLv2/StructureCount) %>
+                                                        <%= Math.round(StructureLv2/StructureCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (StructureCount === 0) { %>
-                                                    <%= ((StructureLv2/1)/5)*100%>%
+                                                    <%= Math.round(((StructureLv2/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((StructureLv2/StructureCount)/5)*100 %>%
+                                                    <%= Math.round(((StructureLv2/StructureCount)/5)*100 )%>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1831,17 +1831,17 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= StructureBG2 %>; --w :<%= ((StructureLv3/StructureCount)/5)*100 %>px; " class="TeacherBarValue">
                                                     <% if (StructureCount === 0) { %>
-                                                        <%= (StructureLv3/1)%>
+                                                        <%= Math.round(StructureLv3/1)%>
                                                     <% } else { %>
-                                                        <%= (StructureLv3/StructureCount) %>
+                                                        <%= Math.round(StructureLv3/StructureCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>
                                             <div class="percent">
                                                 <% if (StructureCount === 0) { %>
-                                                    <%= ((StructureLv3/1)/5)*100%>%
+                                                    <%= Math.round(((StructureLv3/1)/5)*100)%>%
                                                 <% } else { %>
-                                                    <%= ((StructureLv3/StructureCount)/5)*100 %>%
+                                                    <%= Math.round(((StructureLv3/StructureCount)/5)*100 )%>%
                                                 <% }%>
                                             </div>
                                         </div>
@@ -1850,15 +1850,15 @@
                                             <div class="TeacherBarr">
                                                 <div style="--c: <%= StructureBG2 %>; --w :<%= ((StructureLv4/StructureCount)/25)*100 %>px; " class="TeacherBarValue">
                                                     <% if (StructureCount === 0) { %>
-                                                        <%= (StructureLv4/1)%>
+                                                        <%= Math.round(StructureLv4/1)%>
                                                     <% } else { %>
-                                                        <%= (StructureLv4/StructureCount) %>
+                                                        <%= Math.round(StructureLv4/StructureCount) %>
                                                     <% }%>
                                                 </div>
                                             </div>      
                                             <div class="percent">
                                                 <% if (StructureCount === 0) { %>
-                                                    <%= ((StructureLv4/1)/5)*100%>%
+                                                    <%= Math.round(((StructureLv4/1)/5)*100)%>%
                                                 <% } else { %>
                                                     <%= Math.round(((StructureLv4/StructureCount)/5)*100) %>%
                                                 <% }%>
