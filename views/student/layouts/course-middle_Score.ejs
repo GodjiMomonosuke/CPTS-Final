@@ -80,45 +80,59 @@ else {
         } 
 
         
-        /* Check Value LV4 Score**/
-        if(typeof(StudentAnswer[i].scoreTeacher) === "number" ){
-            checkedLV4 = StudentAnswer[i].scoreTeacher;
-            TeacherCheck = StudentAnswer[i].checkedBy;
-            bgColor = "background-color: #93c47d;"
-            
-            if(StudentAnswer[i].scoreTeacher >= 20){
-                checkedLV4 = "✓"
-                cLV4 = "background-color: #93c47d;" 
-            }
-            else {
-                training4 = "ทำแบบฝึกหัดเพิ่มเติม";
-                cLV4 = "background-color: #e06666;" 
-                checkedLV4 = "✗"
-            }
-        }
-        else{
-            if(StudentAnswer[i].contentName === ""){
-                checkedLV4 = "";
+        /* Check Value LV4 Score**/    <!--****** -->
+        if(StudentAnswer[i].contentName === "TicketBookingSystem-(Project_quiz1)" || StudentAnswer[i].contentName === "PointofSalesSystem-(Project_quiz2)" || StudentAnswer[i].contentName === "Project_QUIZ3") {
+            if(typeof(StudentAnswer[i].scoreQuiz) === "number" ){
+                checkedLV4 = StudentAnswer[i].scoreQuiz;
+                TeacherCheck = StudentAnswer[i].checkedBy;
+                bgColor = "background-color: #fff;"
 
-            TeacherCheck = "";
-            } else {
-                if(typeof(StudentAnswer[i].scoreQuiz) === "number" ){
-                    if(StudentAnswer[i].contentName === "TicketBookingSystem-(Project_quiz1)" || StudentAnswer[i].contentName === "PointofSalesSystem-(Project_quiz2)" || StudentAnswer[i].contentName === "Project_QUIZ3") {
-                        
-                            checkedLV4 = StudentAnswer[i].scoreQuiz;
-                        if(StudentAnswer[i].scoreQuiz >= 20){
-                            cLV4 = "background-color: #93c47d;" 
-                        }else{
-                            cLV4 = "background-color: #e06666;" 
-                        }
-                    }
-                }else{
-                    checkedLV4 = "-"
+                if(StudentAnswer[i].scoreQuiz >= 80){
+                    cLV4 = "background-color: #93c47d;" <!-- green-->
                 }
+                else{
+                    cLV4 = "background-color: #e06666;" <!-- red -->
+                }
+            }
+        }else{
+            if(typeof(StudentAnswer[i].scoreTeacher) === "number" ){
+                checkedLV4 = StudentAnswer[i].scoreTeacher;
+                TeacherCheck = StudentAnswer[i].checkedBy;
+                bgColor = "background-color: #fff;"
+                
+                if(StudentAnswer[i].scoreTeacher >= 20){
+                    checkedLV4 = "✓"
+                    cLV4 = "background-color: #93c47d;" 
+                }
+                else {
+                    training4 = "ทำแบบฝึกหัดเพิ่มเติม";
+                    cLV4 = "background-color: #e06666;" 
+                    checkedLV4 = "✗"
+                }
+            }else{
+                checkedLV4 = "-"
                 TeacherCheck = "รอตรวจ";
-                bgColor = "background-color: #ffd75e;"
+                bgColor = "background-color: #ffd75e;" <!-- yellow -->
+            }
+            if(StudentAnswer[i].contentName === ""){ <!-- *เช็คการเข้าสู่ระบบครั้งแรก* -->
+                checkedLV4 = "";
+                TeacherCheck = "";
+                bgColor = "background-color: #fff;"
             }
         }
+    
+
+
+
+
+
+            
+
+  
+       
+                
+            
+        
 
         /* Score tranfrom to Pass/Not Pass**/
         
