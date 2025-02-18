@@ -458,15 +458,15 @@ router.get('/', async (req, res, next) => {
             return ProjectScoreObj[b].score - ProjectScoreObj[a].score;
           });
 
-          var PreKnowledgePercent =  Math.round((PreKnowledgeScore/40)*100);
-          var PreTracePercent= Math.round((PreTraceScore/40)*100);
-          var PreExplainPercent = Math.round((PreExplainScore/40)*100);
-          var PreWritePercent = Math.round((PreWriteScore/200)*100);
+          var PreKnowledgePercent =  Math.round(PreKnowledgeScore*5);
+          var PreTracePercent= Math.round(PreTraceScore*5);
+          var PreExplainPercent = Math.round(PreExplainScore*5);
+          var PreWritePercent = Math.round(PreWriteScore);
           
-          var KnowledgePercent =  Math.round((KnowledgeScore/40)*100);
-          var TracePercent= Math.round((TraceScore/40)*100);
-          var ExplainPercent = Math.round((ExplainScore/40)*100);
-          var WritePercent = Math.round((WriteScore/200)*100);
+          var KnowledgePercent =  Math.round(KnowledgeScore*5);
+          var TracePercent= Math.round(TraceScore*5);
+          var ExplainPercent = Math.round(ExplainScore*5);
+          var WritePercent = Math.round(WriteScore);
 
           PreKnowledgePercent = PreKnowledgePercent;
           PreTracePercent = PreTracePercent;
@@ -1172,7 +1172,6 @@ router.get('/', async (req, res, next) => {
                 PreExplain = PreExplain;
                 PreWrite = PreWrite;
 
-                //*** Chart คิดเป็น % */
                 var PreBasicPercent = Math.round((PreBasicScore/40)*100);
                 var PreTracePercent = Math.round((PreTraceScore/40)*100);
                 var PreExplainPercent = Math.round((PreExplainScore/40)*100);
