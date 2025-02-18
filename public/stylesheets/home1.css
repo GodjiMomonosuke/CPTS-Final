@@ -297,12 +297,12 @@ progress[value]::-webkit-progress-bar {
   }
   @keyframes p {
     from{--p:0}
-  }
+  } 
   
   a.DrawIo {
     color: black;
     text-decoration: none;
-    background-color: #bababa;
+    background-color: #e28f42;
     height: 40px;
     width: 400px;
     text-align: center;
