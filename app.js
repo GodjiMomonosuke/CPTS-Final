@@ -144,12 +144,7 @@ app.use('/course-Functions',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/course/8_Functions-course.route')
-);
-app.use('/course-suiigame',
-  ensureLoggedIn({ redirectTo: '/auth/login' }),
-  ensureStudent,
-  require('./routes/student/course/suiigame.route')
-);
+);      
 
 //** Quiz **//
 app.use('/course-Algorithms_and_Flowcharts-quiz',
