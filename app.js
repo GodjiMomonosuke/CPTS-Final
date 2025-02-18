@@ -144,7 +144,7 @@ app.use('/course-Functions',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureStudent,
   require('./routes/student/course/8_Functions-course.route')
-);
+);      
 
 //** Quiz **//
 app.use('/course-Algorithms_and_Flowcharts-quiz',
