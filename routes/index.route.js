@@ -1222,14 +1222,14 @@ router.get('/', async (req, res, next) => {
                     var ArrCourseDone = [];
                     for(let i = 0; i < Object.keys(StudentAnswer).length; i++) {        //value คือ ความยาก ง่าย - 1 ยาก - 8
                       var LV1 = StudentAnswer[i].scoreLV1 , LV2 = StudentAnswer[i].scoreLV2 , LV3 = StudentAnswer[i].scoreLV3;
-                      if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Algorithms and Flowcharts",value:1});} 
-                      if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'       && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Datatype and Variable",value:2});}
-                      if (StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'            && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Input and Output",value:3});} 
-                      if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Operators and Expressions",value:4});}
-                      if (StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)'        && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Selection Statements",value:5});}
-                      if (StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)'             && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Loop Statements",value:6});}
-                      if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)'          && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Arrays and Strings",value:7});}
-                      if (StudentAnswer[i].contentName ==='Functions-(Post-test)'                   && LV1 >= 4 && LV2 >= 4 && LV3 >= 4) {ArrCourseDone.push({key:"Functions",value:8});}
+                      if (StudentAnswer[i].contentName ==='Algorithms_and_Flowcharts-(Post-test)'   && LV1 >= 3 && LV2 >= 3 && LV3 >= 3) {ArrCourseDone.push({key:"Algorithms and Flowcharts",value:1});} 
+                      if (StudentAnswer[i].contentName ==='Datatype_and_Variable-(Post-test)'       && LV1 >= 3 && LV2 >= 3 && LV3 >= 3) {ArrCourseDone.push({key:"Datatype and Variable",value:2});}
+                      if (StudentAnswer[i].contentName ==='Input_and_Output-(Post-test)'            && LV1 >= 3 && LV2 >= 3 && LV3 >= 3) {ArrCourseDone.push({key:"Input and Output",value:3});} 
+                      if (StudentAnswer[i].contentName ==='Operators_and_Expressions-(Post-test)'   && LV1 >= 3 && LV2 >= 3 && LV3 >= 3) {ArrCourseDone.push({key:"Operators and Expressions",value:4});}
+                      if (StudentAnswer[i].contentName ==='Selection_Statements-(Post-test)'        && LV1 >= 3 && LV2 >= 3 && LV3 >= 3) {ArrCourseDone.push({key:"Selection Statements",value:5});}
+                      if (StudentAnswer[i].contentName ==='Loop_Statements-(Post-test)'             && LV1 >= 3 && LV2 >= 3 && LV3 >= 3) {ArrCourseDone.push({key:"Loop Statements",value:6});}
+                      if (StudentAnswer[i].contentName ==='Arrays_and_Strings-(Post-test)'          && LV1 >= 3 && LV2 >= 3 && LV3 >= 3) {ArrCourseDone.push({key:"Arrays and Strings",value:7});}
+                      if (StudentAnswer[i].contentName ==='Functions-(Post-test)'                   && LV1 >= 3 && LV2 >= 3 && LV3 >= 3) {ArrCourseDone.push({key:"Functions",value:8});}
                       
                     }
                    

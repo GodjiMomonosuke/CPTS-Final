@@ -10,14 +10,15 @@
                 <div class="w-100"></div>
                 <div class="col">
                     <% if (Object.keys(RecommendaResult[0].RecommendCourse).length !== 0) { %>
-                        <h1 style="color: black;">บทเรียนที่แนะนำ "<%= RecommendaResult[0].RecommendCourse %>"</h1>
+                        <h1 style="color: black;">หากทำแบบทดสอบหลังเรียน "<%= RecommendaResult[0].RecommendCourse %>" ไม่ผ่าน <br> Project Quiz จะยังไม่ปลดล็อก</h1>
+                        <p>จะต้องได้อย่างน้อย 3 คะแนนขึ้นไป ของพาร์ท Knowledge, Tracing และ Explaining</p> <br>
                     <% } else { %>
                     <% } %>
                     
                 </div>
                 <div class="w-100"></div>
                 <div class="col">
-    
+     
     
                     <% if(RecommendaResult[0].RecommendCourse === "Algorithms and Flowcharts"){ %> <%# Output จาก Recommend มาเทียบ %> 
                         
