@@ -161,7 +161,7 @@
 
                     <% if (Object.keys(RecommendaResult).length !== 0 && RecommendaResult[0].RecommendCourse != "null" ) { %> <%# ถ้าเลือกวิธีแนะนำแล้ว %> 
                         <br>
-                        <%= RecommendaResult[0].RecommendationType %> <%# วิธีแนะนำคือ %> 
+                        การแนะนำแบบ <%= RecommendaResult[0].RecommendationType %> <%# วิธีแนะนำคือ %>  <br>
                         <br>
                             
                         <% if (TicketBooking_SystemPercent === 100 && PointofSales_SystemPercent === 100 && ProjectQUIZ3Percent === 100 ) { %> <%# ถ้า Path ครบแล้ว %> 
@@ -170,35 +170,43 @@
                             <div class="row">
                                 <% if(RecommendaResult[0].RecommendCourse === "Algorithms and Flowcharts"){ %> <%# Output จาก Recommend มาเทียบ %> 
                                 <div class="col-6">
-                                    <button onclick="window.location.href='/course-Algorithms_and_Flowcharts'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Algorithms and Flowcharts</button>
+                                    <h4>บทที่ 1 Algorithms and Flowcharts</h4>
+                                    <button onclick="window.location.href='/course'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Algorithms and Flowcharts</button>
                                 </div>
                                 <% }else if(RecommendaResult[0].RecommendCourse === "Datatype and Variable"){ %>
                                     <div class="col-6">
-                                        <button onclick="window.location.href='/course-Datatype_and_Variable'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Datatype and Variable</button>
+                                        <h4>บทที่ 2 Datatype and Variable</h4>
+                                        <button onclick="window.location.href='/course'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Datatype and Variable</button>
                                     </div>
                                 <% }else if(RecommendaResult[0].RecommendCourse === "Input and Output"){ %>
                                     <div class="col-6">
-                                        <button onclick="window.location.href='/course-Input_and_Output'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Input and Output</button>
+                                        <h4>บทที่ 3 Input and Output</h4>
+                                        <button onclick="window.location.href='/course'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Input and Output</button>
                                     </div>
                                 <% }else if(RecommendaResult[0].RecommendCourse === "Operators and Expressions"){ %>
                                     <div class="col-6">
-                                        <button onclick="window.location.href='/course-Operators_and_Expressions'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Operators and Expressions</button>
+                                        <h4>บทที่ 4 Operators and Expressions</h4>
+                                        <button onclick="window.location.href='/course'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Operators and Expressions</button>
                                     </div>
                                 <% }else if(RecommendaResult[0].RecommendCourse === "Selection Statements"){ %>
                                     <div class="col-6">
-                                        <button onclick="window.location.href='/course-Selection_Statements'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Selection Statement</button>
+                                        <h4>บทที่ 5 Selection Statements</h4>
+                                        <button onclick="window.location.href='/course'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Selection Statement</button>
                                     </div>
                                 <% }else if(RecommendaResult[0].RecommendCourse === "Loop Statements"){ %>
                                     <div class="col-6">
-                                        <button onclick="window.location.href='/course-Loop_Statements'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Loop Statement</button>
+                                        <h4>บทที่ 6 Loop Statements</h4>
+                                        <button onclick="window.location.href='/course'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Loop Statement</button>
                                     </div>
                                 <% }else if(RecommendaResult[0].RecommendCourse === "Arrays and Strings"){ %>
                                     <div class="col-6">
-                                        <button onclick="window.location.href='/course-Arrays_and_Strings'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Array and String</button>
+                                        <h4>บทที่ 7 Arrays and Strings</h4>
+                                        <button onclick="window.location.href='/course'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Array and String</button>
                                     </div>
                                 <% }else if(RecommendaResult[0].RecommendCourse === "Functions"){ %>
                                     <div class="col-6">
-                                        <button onclick="window.location.href='/course-Functions'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Function</button>
+                                        <h4>บทที่ 8 Functions</h4>
+                                        <button onclick="window.location.href='/course'" type="button" class="btn btn-outline-dark btn-sm btn-block mb-2"> <i class="fa fa-paper-plane" style="font-size:16px"></i> Function</button>
                                     </div>
                                 <% } else{ %>  <%# ถ้าไม่มีการแนะนำ คือ เรียนตาม path ที่เลือกเรียบร้อยแล้ว%> 
                                     <h6>Finished</h6>
