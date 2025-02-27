@@ -23,28 +23,64 @@
                 font-size: 3.5rem;
             }
         }
+        div a{
+            text-decoration: none;
+        }
+        .link{
+            text-decoration: none;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            width: 350px;
+        }
+        .link:hover{
+            background-color: #e8ecce;
+        }
+        .box{
+            width: 400px;
+            
+        }
+        .group2{
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
     </style>
 </head>
 
 <%- include('../layouts/header') %>
 <body style="background-color: #cad19f;">
 <br><br><br>
-
 <div id = "content" class="container">
-
-    <a class="nav-item "><a class="nav-link" href="/check" style="color: #ffffff;">Lab-Check </a></a>
-    <a class="nav-item "><a class="nav-link" href="/checkQuiz" style="color: #ffffff;">Quiz-Check </a></a>
-
-    <a class="a1"  href="/TeacherCourse-Algorithms_and_Flowcharts">Algorithms and Flowcharts !</a><br>
-    <a class="a1"  href="/TeacherCourse-Datatype_and_Variable">Datatype and Variable !</a><br>
-    <a class="a1"  href="/TeacherCourse-Input_and_Output">Input and Output !</a><br>
-    <a class="a1"  href="/TeacherCourse-Operators_and_Expressions">Operators and Expressions !</a><br>
-    <a class="a1"  href="/TeacherCourse-Selection_Statements">Selection Statements !</a><br>
-    <a class="a1"  href="/TeacherCourse-Loop_Statements">Loop Statements !</a><br>
-    <a class="a1"  href="/TeacherCourse-Arrays_and_Strings">Array and String !</a><br>
-    <a class="a1"  href="/TeacherCourse-Functions">Functions !</a><br>
-
-
+    <h3>ให้คะแนนแบททดสอบ และ Project Quiz</h3>
+    <div class="box">
+        <a href="/check"><p class="link">แบบทดสอบก่อนเรียน-หลังเรียน</p></a>
+        <a href="/checkQuiz"><p class="link">Project Quiz</p></a>
+    </div>
+        
+        
+    
+    
+    <br>
+    <h3>เนื้อหาบทเรียน</h3>
+    <div class="group2">
+        <div class="box">
+            <a href="/TeacherCourse-Algorithms_and_Flowcharts"><p class="link">Algorithms and Flowcharts</p></a>
+            <a href="/TeacherCourse-Datatype_and_Variable"><p class="link">Datatype and Variable</p></a>
+            <a href="/TeacherCourse-Input_and_Output"><p class="link">Input and Output</p></a>
+            <a href="/TeacherCourse-Operators_and_Expressions"><p class="link">Operators and Expressions</p></a>
+        </div>
+        <div class="box">
+            <a href="/TeacherCourse-Selection_Statements"><p class="link">Selection Statements</p></a>
+            <a href="/TeacherCourse-Loop_Statements"><p class="link">Loop Statements</p></a>
+            <a href="/TeacherCourse-Arrays_and_Strings"><p class="link">Array and String</p></a>
+            <a href="/TeacherCourse-Functions"><p class="link">Functions</p></a>
+        </div>
+    </div>
+</div>
 
 
  
