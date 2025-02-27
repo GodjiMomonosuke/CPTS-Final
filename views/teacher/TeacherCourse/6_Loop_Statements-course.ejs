@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/gamequiz.css' />
+    <script src="javascripts/gamequiz.js"></script>
+    <title>Loop Statements</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+
+    <!-- MIDDLE 1 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+    <a id="Token"></a>
+    <!-- MIDDLE 1 -->
+    <div class="content">
+        <div id = "content" class="container">
+            <h1>บทที่ 6 Loop Statements</h1>
+            <b>แบบฝึกหัด</b>
+            <a href="/course-Loop_Statements#Knowledge" class="scrollbtnK"  type="button">Knowledge
+            </a>
+            <a href="/course-Loop_Statements#Tracing" class="scrollbtnT"  type="button">Tracing
+            </a>
+            <a href="/course-Loop_Statements#Explaining" class="scrollbtnE"  type="button">Explaining
+            </a>
+            <a href="/course-Loop_Statements#Writing" class="scrollbtnW" type="button">Writing
+            </a>
+
+            <div class="accordion" id="accordionParentSyntax">
+                <iframe src="https://drive.google.com/file/d/1oNeppnUNCA7OoeRny4YLdgAceX2AobQW/preview" width="100%" height="820" allow="autoplay"></iframe>
+                <h2>สร้างสูตรคูณด้วย For Loop Control Statements</h2>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/n1dVTTIdat8?si=QIAPZCoz2kjwaYb-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2>คำสั่งลูป While Loop Control Statements</h2>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/5-xtea0hEQQ?si=T_AtFk94XSAgxadZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2>สร้างโปรแกรมทอนเงิน While Loop Control Statements</h2>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/NiZTDz1fRtI?si=MEhfb6IzZXJtqzNZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2>คำสั่งลูป While Loop รวม For Control Statements</h2>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/Fapsg6kOz5c?si=dRKhWoCqcueKNuno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2>คำสั่งลูปซ้อนลูป Nested Loop Control Statements</h2>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/DI29Fs-4nqc?si=ddbDwm_IluEAT24h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2>คำสั่ง Break Jump Statements</h2>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/q6GHUpS1JLw?si=XtGWkSbSdZ4l5UQu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2>คำสั่ง Continue Jump Statements</h2>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/4Pdl4oFUWRg?si=_U5j71KFDNbLKv2y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2>สร้างเกมทายตัวเลข Number Guessing Game Project</h2>
+                <iframe width="100%" height="600" src="https://www.youtube.com/embed/VjaGkkKMLzM?si=y9de5_ICaXUrA6QV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <br></div>
+
+
+                <BR id="Knowledge"> <br><br>
+                    <h2>Knowledge</h2>
+                    <div class="game">
+                    <!--* ข้อ 1 K1 *-->
+                    <div class="gamecontent" style="height: auto">
+                        <div  class="question">
+                        <h5>1. ข้อใดไม่ใช่ loop statement ในภาษาซี</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo1"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW1()">for</p>
+                                <p id="demo" class="button" onclick="myFunctionW1()">while</p>
+                                <p id="demo" class="button" onclick="myFunctionW1()">do-while</p>
+                                <p id="demo" class="button" onclick="myFunctionT1()">loop-until</p>
+                            </div>
+                        
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="game">
+                    <!--* ข้อ 2 K2 *-->
+                    <div class="gamecontent" style="height: auto">
+                        <div  class="question">
+                        <h5>2. ส่วนประกอบใดไม่จำเป็นในการเขียน for loop</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo2"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW2()">Initialization</p>    
+                                <p id="demo" class="button" onclick="myFunctionW2()">Condition</p>
+                                <p id="demo" class="button" onclick="myFunctionW2()">Increment</p> 
+                                <p id="demo" class="button" onclick="myFunctionT2()">Return statement</p>                                                                   
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    
+        
+                    <div class="game">
+                    <!--* ข้อ 3 K3 *-->
+                    <div class="gamecontent" style="height: auto;">
+                        <div  class="question">
+                        <h5>3. คำสั่งใดที่ถูกต้องสำหรับการเขียน loop ในภาษาซี</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo3"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                 <p id="demo" class="button" onclick="myFunctionW3()">for int i = 0; i < 10; i++ { }</p>                                                                                              
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionT3()">for (int i = 0; i < 10; i++) { }</p> 
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW3()">for i in range(0, 10) { }</p> 
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW3()">foreach (int i = 0; i < 10; i++) { }</p>  
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="game">
+                    <!--* ข้อ 4 K4 *-->
+                    <div class="gamecontent" style="height: auto;">
+                        <div  class="question">
+                        <h5>4. ถ้าต้องการให้ loop ทำงานอย่างน้อยหนึ่งครั้ง ไม่ว่าเงื่อนไขจะเป็นอย่างไร ควรใช้ loop แบบใด</h5>
+                        <br><br>
+                        <p style="text-align: center;" id="demo4"> </p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW4()">for</p>    
+                                <p id="demo" class="button" onclick="myFunctionW4()">while</p>
+                                <p id="demo" class="button" onclick="myFunctionT4()">do-while</p>  
+                                <p id="demo" class="button" onclick="myFunctionW4()">until</p>                                                                     
+                            </div>
+                            
+                        </div>
+                            
+                        </div>
+                    </div>
+        
+                    </div>
+        
+                    <div class="game">
+                        <!--* ข้อ 5 K5 *-->
+                        <div class="gamecontent" style="height: auto;">
+                            <div  class="question">
+                            <h5>5. เมื่อใดที่การใช้ break; จะมีผล</h5>
+                            <br><br>
+                            <p style="text-align: center;" id="demo5"> </p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT5()">เมื่อต้องการทำให้ loop หยุดทำงาน</p>                                                                  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW5()">เมื่อต้องการข้ามไปยังการรันครั้งถัดไปของ loop</p>
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW5()">เมื่อต้องการเพิ่มค่าตัวแปรควบคุม loop</p>
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW5()">เมื่อต้องการเรียกใช้ function อื่น</p>
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+                        </div>
+            
+                        <div class="game">
+                        <!--* ข้อ 6 K6 *-->
+                        <div class="gamecontent" style="height: auto">
+                            <div  class="question">
+                            <h5>6. คำสั่งใดที่ใช้สำหรับข้ามการรันปัจจุบันของ loop และดำเนินการกับการรันถัดไป</h5>
+                            <br><br>
+                            <p style="text-align: center;" id="demo6"> </p>
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT6()">continue;</p>
+                                    <p id="demo" class="button" onclick="myFunctionW6()">break;</p>
+                                    <p id="demo" class="button" onclick="myFunctionW6()">pass;</p>
+                                    <p id="demo" class="button" onclick="myFunctionW6()">skip;</p>
+                                </div>
+
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                        </div>
+        
+                        <div class="game">
+                            <!--* ข้อ 7 K7 *-->
+                            <div class="gamecontent" style="height: auto;">
+                                <div  class="question">
+                                <h5>7. การใช้ nested loops หมายถึงอะไร</h5>
+                                <br><br>
+                                <p style="text-align: center;" id="demo7"> </p>
+                                </div>
+                                <div class="ans">
+                                    <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW7()">Loop ที่ใช้เงื่อนไขเดียวกันหลายครั้ง</p>                                                                     
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW7()">Loop ที่สามารถข้ามการรันของตัวเอง</p>
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionT7()">Loop ที่มี loop อื่นๆ ซ้อนอยู่ภายใน</p> 
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW7()">Loop ที่ทำงานโดยไม่มีเงื่อนไข</p>
+                                    </div>
+                                    
+                                </div>
+                                    
+                                </div>
+                            </div>
+                            </div>
+        
+                            <div class="game">
+                            <!--* ข้อ 8 K8 *-->
+                            <div class="gamecontent" style="height: auto;">
+                                <div  class="question">
+                                <h5>8. เมื่อใช้คำสั่ง while(1) เป็นการใช้ while loop ที่ทำให้เงื่อนไขเป็น true ตลอดจะเกิดอะไรขึ้น</h5>
+                                <br><br>
+                                <p style="text-align: center;" id="demo8"> </p>
+                                </div>
+                                <div class="ans">
+                                    <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionT8()">Loop จะทำงานตลอดไป (infinite loop)</p> 
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW8()">Loop จะหยุดหลังจากรันครั้งแรก</p>
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW8()">Loop จะข้ามไปยังคำสั่งถัดไปโดยไม่รัน</p>
+                                    </div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW8()">Loop จะทำงานเพียงครั้งเดียวและหยุด</p>
+                                    </div>
+                                    
+                                </div>
+                                    
+                                </div>
+                            </div>
+                
+                            </div>
+        
+                            <div class="game">
+                                <!--* ข้อ 9 K9 *-->
+                                <div class="gamecontent" style="height: auto;">
+                                    <div  class="question">
+                                    <h5>9. คำสั่ง while(0) จะทำงานอย่างไร</h5>
+                                    <br><br>
+                                    <p style="text-align: center;" id="demo9"> </p>
+                                    </div>
+                                    <div class="ans">
+                                        <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionW9()">สร้าง infinite loop</p>    
+                                            <p id="demo" class="button" onclick="myFunctionT9()">ไม่เข้า loop และข้ามคำสั่งใน loop</p>
+                                            <p id="demo" class="button" onclick="myFunctionW9()">ทำงานเพียงครั้งเดียว</p>  
+                                            <p id="demo" class="button" onclick="myFunctionW9()">ทำงานสองครั้ง</p>                                                              
+                                        </div>
+                                        
+                                    </div>
+                                        
+                                    </div>
+                                </div>
+                    
+                                </div>
+        
+                                <div class="game">
+                                    <!--* ข้อ 10 K10 *-->
+                                    <div class="gamecontent" style="height: auto;">
+                                        <div  class="question">
+                                        <h5>10. คำสั่ง for (;;) จะทำงานอะไร</h5>
+                                        <br><br>
+                                        <p style="text-align: center;" id="demo10"> </p>
+                                        </div>
+                                        <div class="ans">
+                                            <div>
+                                            <div class="btn">
+                                                <p id="demo" class="button" onclick="myFunctionW10()">สร้าง syntax error</p>
+                                                <p id="demo" class="button" onclick="myFunctionW10()">สร้าง compile-time error</p>
+                                                <p id="demo" class="button" onclick="myFunctionT10()">สร้าง infinite loop</p>
+                                                <p id="demo" class="button" onclick="myFunctionW10()">ไม่ทำอะไรเลย</p>
+                                            </div>
+                                            
+                                        </div>
+                                            
+                                        </div>
+                                    </div>
+                        
+                                    </div>
+        
+        
+                    <BR id="Tracing"> <br><br>
+                    <h2>Tracing</h2>
+                    <div class="game">
+                    <!--* ข้อ 11 T1 *-->
+                    <div class="gamecontent-T" style="height: auto">
+                        <div  class="question-T">
+                        <h5>1. ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
+                        <p>#include < stdio.h > 
+                        <br>int main() {
+                        <br>&ensp;for (int i = 0; i < 5; i++) {
+                        <br>&ensp;&ensp;printf("%d ", i);
+                        <br>&ensp;}
+                        <br>&ensp;return 0;
+                        <br>}
+        
+                        </p>
+                        <p style="text-align: center;" id="demo11"></p>
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW11()">1 2 3 4 5</p>
+                                <p id="demo" class="button" onclick="myFunctionT11()">0 1 2 3 4</p>
+                                <p id="demo" class="button" onclick="myFunctionW11()">0 1 2 3 4 5 </p>
+                                <p id="demo" class="button" onclick="myFunctionW11()">1 2 3 4 </p>
+                            </div>
+                           
+                        </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+        
+                    <div class="game">
+                    <!--* ข้อ 12 T2*-->
+                    <div class="gamecontent-T" style="height: auto">
+                        <div  class="question-T">
+                        <h5>2. ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
+                        <p>#include < stdio.h >
+                        <br>int main() {
+                        <br>&ensp;for (int i = 5; i > 0; i--) {
+                        <br>&ensp;&ensp;printf("%d ", i);
+                        <br>&ensp;}
+                        <br>&ensp;return 0;
+                        <br>}
+        
+                        </p>
+                        <p style="text-align: center;" id="demo12"></p>
+                        
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW12()">1 2 3 4 5 </p>
+                                <p id="demo" class="button" onclick="myFunctionW12()">6 5 4 3 2 1 </p>
+                                <p id="demo" class="button" onclick="myFunctionT12()">5 4 3 2 1</p>
+                                <p id="demo" class="button" onclick="myFunctionW12()">1 2 3 4 5 6</p>                                                                
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>  
+                    </div>
+        
+                    <div class="game">
+                        <!--* ข้อ 13 T3*-->
+                        <div class="gamecontent-T" style="height: auto">
+                            <div  class="question-T">
+                            <h5>3. ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
+                            <p>#include < stdio.h >
+                            <br>int main() {
+                            <br>&ensp;for (int i = 0; i <= 10; i += 2) {
+                            <br>&ensp;&ensp;printf("%d ", i);
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo13"></p>
+                            
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW13()">0 2 4 6 8 9</p>
+                                    <p id="demo" class="button" onclick="myFunctionW13()">1 2 4 6 8 10</p>
+                                    <p id="demo" class="button" onclick="myFunctionT13()">0 2 4 6 8 10</p>
+                                    <p id="demo" class="button" onclick="myFunctionW13()">2 4 6 8 10</p>
+                                </div>
+                                
+                            </div>
+                                
+                            </div>
+                        </div>  
+                        </div>
+        
+                        <div class="game">
+                            <!--* ข้อ 14 T4*-->
+                            <div class="gamecontent-T" style="height: auto">
+                                <div  class="question-T">
+                                <h5>4. ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
+                                <p>#include < stdio.h >
+                                <br>int main() {
+                                <br>&ensp;int sum = 0;
+                                <br>&ensp;for (int i = 1; i <= 4; i++) {
+                                <br>&ensp;&ensp;sum += i;
+                                <br>&ensp;}
+                                <br>&ensp;printf("Sum = %d", sum);
+                                <br>&ensp;return 0;
+                                <br>}
+                
+                                </p>
+                                <p style="text-align: center;" id="demo14"></p>
+                                
+                                </div>
+                                <div class="ans">
+                                    <div>
+                                    <div class="btn">
+                                        <p id="demo" class="button" onclick="myFunctionW14()">Sum = 4</p>
+                                        <p id="demo" class="button" onclick="myFunctionW14()">Sum = 6</p>
+                                        <p id="demo" class="button" onclick="myFunctionW14()">Sum = 8</p>
+                                        <p id="demo" class="button" onclick="myFunctionT14()">Sum = 10</p>
+                                    </div>
+                                    
+                                </div>
+                                    
+                                </div>
+                            </div>  
+                            </div>
+        
+                            <div class="game">
+                                <!--* ข้อ 15 T5*-->
+                                <div class="gamecontent-T" style="height: auto">
+                                    <div  class="question-T">
+                                    <h5>5. ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
+                                    <p>#include < stdio.h >
+                                    <br>int main() {
+                                    <br>&ensp;for (int i = 1; i <= 10; i++) {
+                                    <br>&ensp;&ensp;if (i == 5) break;
+                                    <br>&ensp;&ensp;printf("%d ", i);
+                                    <br>&ensp;}
+                                    <br>&ensp;return 0;
+                                    <br>}
+                    
+                                    </p>
+                                    <p style="text-align: center;" id="demo15"></p>
+                                    
+                                    </div>
+                                    <div class="ans">
+                                        <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionT15()">1 2 3 4</p>
+                                            <p id="demo" class="button" onclick="myFunctionW15()">1 2 3 4 5</p>
+                                            <p id="demo" class="button" onclick="myFunctionW15()">1 2 3 4 6 7 8 9 10</p>
+                                            <p id="demo" class="button" onclick="myFunctionW15()">1 2 3 4 5 6 7 8 9 10</p>                                                                     
+                                        </div>
+                                       
+                                    </div>
+                                        
+                                    </div>
+                                </div>  
+                            </div>
+        
+                            <div class="game">
+                                <!--* ข้อ 16 T6*-->
+                                <div class="gamecontent-T" style="height: auto">
+                                    <div  class="question-T">
+                                    <h5>6. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                                    <p>#include < stdio.h >
+                                    <br>int main() {
+                                    <br>&ensp;for (int i = 1; i <= 10; i++) {
+                                    <br>&ensp;if (i == 5) continue;
+                                    <br>&ensp;printf("%d ", i);
+                                    <br>&ensp;}
+                                    <br>&ensp;return 0;
+                                    <br>}
+                    
+                                    </p>
+                                    <p style="text-align: center;" id="demo16"></p>
+                                    
+                                    </div>
+                                    <div class="ans">
+                                        <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionW16()">1 2 3 4</p>
+                                            <p id="demo" class="button" onclick="myFunctionW16()">1 2 3 4 5</p> 
+                                            <p id="demo" class="button" onclick="myFunctionT16()">1 2 3 4 6 7 8 9 10</p> 
+                                            <p id="demo" class="button" onclick="myFunctionW16()">1 2 3 4 5 6 7 8 9 10</p> 
+                                        </div>
+                            
+                                    </div>
+                                        
+                                    </div>
+                                </div>  
+                            </div>
+        
+                            <div class="game">
+                                <!--* ข้อ 17 T7*-->
+                                <div class="gamecontent-T" style="height: auto">
+                                    <div  class="question-T">
+                                    <h5>7. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                                    <p>#include < stdio.h >
+                                    <br>int main() {
+                                    <br>&ensp;int i = 0;
+                                    <br>&ensp;while (i < 5) {
+                                    <br>&ensp;&ensp;printf("%d ", i);
+                                    <br>&ensp;&ensp;i++;
+                                    <br>&ensp;}
+                                    <br>&ensp;return 0;
+                                    <br>}
+                    
+                                    </p>
+                                    <p style="text-align: center;" id="demo17"></p>
+                                    
+                                    </div>
+                                    <div class="ans">
+                                        <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionW17()">1 2 3 4 5</p>
+                                            <p id="demo" class="button" onclick="myFunctionT17()">0 1 2 3 4</p>
+                                            <p id="demo" class="button" onclick="myFunctionW17()">0 1 2 3 4 5 </p>
+                                            <p id="demo" class="button" onclick="myFunctionW17()">1 2 3 4 </p>                                                                      
+                                        </div>
+                                        
+                                    </div>
+                                        
+                                    </div>
+                                </div>  
+                            </div>
+        
+                            <div class="game">
+                                <!--* ข้อ 18 T8*-->
+                                <div class="gamecontent-T" style="height: auto">
+                                    <div  class="question-T">
+                                    <h5>8. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                                    <p>#include < stdio.h >
+                                    <br>int main() {
+                                    <br>&ensp;int i = 1;
+                                    <br>&ensp;while (i <= 10) {
+                                    <br>&ensp;&ensp;if (i % 2 == 0) {
+                                    <br>&ensp;&ensp;&ensp;printf("%d ", i);
+                                    <br>&ensp;&ensp;}
+                                    <br>&ensp;&ensp;i++;
+                                    <br>&ensp;}
+                                    <br>&ensp;return 0;
+                                    <br>}
+                    
+                                    </p>
+                                    <p style="text-align: center;" id="demo18"></p>
+                                    
+                                    </div>
+                                    <div class="ans">
+                                        <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionW18()">1 3 5 7 9</p>
+                                            <p id="demo" class="button" onclick="myFunctionW18()">1 2 3 4 5 6 7 8 9 10</p>
+                                            <p id="demo" class="button" onclick="myFunctionW18()">0 2 4 6 8 10</p>
+                                            <p id="demo" class="button" onclick="myFunctionT18()">2 4 6 8 10</p>                                                                       
+                                        </div>
+                                        
+                                    </div>
+                                        
+                                    </div>
+                                </div>  
+                            </div>
+        
+                            <div class="game">
+                                <!--* ข้อ 19 T9*-->
+                                <div class="gamecontent-T" style="height: auto">
+                                    <div  class="question-T">
+                                    <h5>9. ผลลัพธ์ของโค้ดนี้คืออะไร</h5>
+                                    <p>#include < stdio.h >
+                                    <br>int main() {
+                                    <br>&ensp;int i = 3;
+                                    <br>&ensp;do {
+                                    <br>&ensp;&ensp;printf("%d ", i);
+                                    <br>&ensp;&ensp;i += 3;
+                                    <br>&ensp;} while (i <= 9);
+                                    <br>&ensp;return 0;
+                                    <br>}
+                    
+                                    </p>
+                                    <p style="text-align: center;" id="demo19"></p>
+                                    
+                                    </div>
+                                    <div class="ans">
+                                        <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionW19()">1 2 3</p>
+                                            <p id="demo" class="button" onclick="myFunctionW19()">2 4 8</p>
+                                            <p id="demo" class="button" onclick="myFunctionT19()">3 6 9</p>
+                                            <p id="demo" class="button" onclick="myFunctionW19()">4 6 10</p>
+                                        </div>
+                                    </div>
+                                        
+                                    </div>
+                                </div>  
+                            </div>
+        
+                            <div class="game">
+                                <!--* ข้อ 20 T10*-->
+                                <div class="gamecontent-T" style="height: auto">
+                                    <div  class="question-T">
+                                    <h5>10. ผลลัพธ์ของโค้ดนี้คืออะไร </h5>
+                                    <p>#include < stdio.h >
+                                    <br>int main() {
+                                    <br>&ensp;for (int i = 1; i <= 2; i++) {
+                                    <br>&ensp;&ensp;for (int j = 1; j <= 3; j++) {
+                                    <br>&ensp;&ensp;&ensp;printf("%d ", i*j);
+                                    <br>&ensp;&ensp;}
+                                    <br>&ensp;&ensp;printf("# ");
+                                    <br>&ensp;}
+                                    <br>&ensp;return 0;
+                                    <br>}
+                    
+                                    </p>
+                                    <p style="text-align: center;" id="demo20"></p>
+                                    
+                                    </div>
+                                    <div class="ans">
+                                        <div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionW20()">1 2 3 # 3 4 5</p>                                                                      
+                                        </div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionW20()">1 2 3 4 # 4 5 6 #</p>  
+                                        </div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionT20()">1 2 3 # 2 4 6 #</p>  
+                                        </div>
+                                        <div class="btn">
+                                            <p id="demo" class="button" onclick="myFunctionW20()">1 2 3 # 2 4 6 # 5 7 9 #</p>  
+                                        </div>
+                                    </div>
+                                        
+                                    </div>
+                                </div>  
+                            </div>
+        
+                <BR id="Explaining"> <br><br>
+                <h2>Explaining</h2>
+                <div class="game">
+                    <!--* ข้อ 21 E1 *-->
+                    <div class="gamecontent-E" style="height: auto">
+                        <div  class="question-E" >
+                        <h5>1. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                        <p>#include < stdio.h >
+                        <br>int main() {
+                        <br>&ensp;for (int i = 1; i <= 3; i++) {
+                        <br>&ensp;&ensp;printf("Loop %d\n", i);
+                        <br>&ensp;}
+                        <br>&ensp;return 0;
+                        <br>}
+        
+                        </p>
+                        <p style="text-align: center;" id="demo21"></p>
+        
+                        </div>
+                        <div class="ans">
+                            <div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW21()">สร้าง loop ไม่มีที่สิ้นสุด</p>    
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionT21()">พิมพ์ "Loop" ตามด้วยตัวเลขจาก 1 ถึง 3 แต่ละบรรทัด</p>  
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW21()">พิมพ์ "Loop" เพียงครั้งเดียว</p>  
+                            </div>
+                            <div class="btn">
+                                <p id="demo" class="button" onclick="myFunctionW21()">ไม่พิมพ์อะไรเลย</p>  
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div></div>
+                    <div class="game">
+                        <!--* ข้อ 22 E2 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>2. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;for (int i = 0; i < 5; i += 2) {
+                            <br>&ensp;&ensp;printf("i = %d\n", i);
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo22"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT22()">พิมพ์ค่าของ i ที่เพิ่มขึ้นทีละ 2 จาก 0 ถึง 4</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW22()">สร้าง loop ที่พิมพ์ค่า i จาก 0 ถึง 5</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW22()">พิมพ์ค่าของ i จาก 1 ถึง 5 โดยเพิ่มทีละ 2</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW22()">ไม่พิมพ์อะไรเลย</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 23 E3 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>3. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;for (int i = 1; i <= 10; i++) {
+                            <br>&ensp;&ensp;if (i % 3 == 0) {
+                            <br>&ensp;&ensp;&ensp;printf("%d is divisible by 3\n", i);
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo23"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW23()">พิมพ์ตัวเลขที่ไม่หารด้วย 3 ลงตัวจาก 1 ถึง 10</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW23()">พิมพ์ทุกตัวเลขจาก 1 ถึง 10 และระบุว่าหารด้วย 3 ลงตัวหรือไม่</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT23()">พิมพ์ตัวเลขจาก 1 ถึง 10 ที่หารด้วย 3 ลงตัว</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW23()">ไม่พิมพ์อะไรเลย</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 24 E4 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>4. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;for (int i = 1; i <= 4; i++) {
+                            <br>&ensp;&ensp;for (int j = 1; j <= 4; j++) {
+                            <br>&ensp;&ensp;&ensp;printf("%d", j);
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;printf("\n");
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo24"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW24()">พิมพ์ตัวเลขจาก 1 ถึง 4 บนบรรทัดเดียว</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW24()">สร้างรูปสามเหลี่ยมด้วยตัวเลข</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW24()">พิมพ์ตัวเลข 1 ในทุกบรรทัด</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT24()">สร้างรูปสี่เหลี่ยมโดยพิมพ์ตัวเลขจาก 1 ถึง 4 ในแต่ละบรรทัด</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 25 E5 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>5. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int i = 5;
+                            <br>&ensp;while (i > 0) {
+                            <br>&ensp;&ensp;printf("i = %d\n", i);
+                            <br>&ensp;&ensp;i--;
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo25"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT25()">พิมพ์ตัวเลขจาก 5 ลงไปถึง 1</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW25()">สร้าง loop ไม่มีที่สิ้นสุด</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW25()">พิมพ์เพียงตัวเลข 5</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW25()">ไม่พิมพ์อะไรเลย</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 26 E6 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div class="question-E">
+                            <h5>6. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int i = 1;
+                            <br>&ensp;while (i <= 5) {
+                            <br>&ensp;&ensp;if (i % 2 == 0) {
+                            <br>&ensp;&ensp;&ensp;printf("%d is even.\n", i);
+                            <br>&ensp;&ensp;} else {
+                            <br>&ensp;&ensp;&ensp;printf("%d is odd.\n", i);
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;i++;
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo26"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW26()">พิมพ์เฉพาะตัวเลขคู่จาก 1 ถึง 5</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW26()">พิมพ์เฉพาะตัวเลขคี่จาก 1 ถึง 5</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT26()">พิมพ์ตัวเลขจาก 1 ถึง 5 พร้อมระบุความเป็นคู่ (even) หรือคี่ (odd) </p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW26()">ไม่พิมพ์อะไรเลย</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 27 E7 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>7. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int number = 0;
+                            <br>&ensp;while (1) {  // คือคำสั่งที่สั่งให้ทำงานตลอด
+                            <br>&ensp;&ensp;printf("Enter a number (999 to stop): ");
+                            <br>&ensp;&ensp;scanf("%d", &number);
+                            <br>&ensp;&ensp;if (number == 999) {
+                            <br>&ensp;&ensp;&ensp;printf("Terminating program...\n");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;} else if (number % 2 == 0) {
+                            <br>&ensp;&ensp;&ensp;printf("%d is even.\n", number);
+                            <br>&ensp;&ensp;} else {
+                            <br>&ensp;&ensp;&ensp;printf("%d is odd.\n", number);
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;}
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo27"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT27()">รับตัวเลขจากผู้ใช้ และระบุว่าเป็นตัวเลขคู่หรือตัวเลขคี่ จนกว่าจะป้อน 999 เพื่อหยุด</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW27()">รับตัวเลขจากผู้ใช้และพิมพ์เฉพาะตัวเลขคู่</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW27()">สร้าง loop ไม่มีที่สิ้นสุดโดยไม่มีการหยุด</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW27()">พิมพ์ "Terminating program..." ทันทีโดยไม่รับตัวเลขใดๆ</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 28 E8 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>8. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int counter = 1;
+                            <br>&ensp;do {
+                            <br>&ensp;&ensp;if (counter % 2 == 0) {
+                            <br>&ensp;&ensp;&ensp;printf("%d is even.\n", counter);
+                            <br>&ensp;&ensp;} else {
+                            <br>&ensp;&ensp;&ensp;printf("%d is odd.\n", counter);
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;counter++;
+                            <br>&ensp;} while (counter <= 5);
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo28"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW28()">พิมพ์ตัวเลขคู่จาก 1 ถึง 5</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW28()">พิมพ์ตัวเลขคี่จาก 1 ถึง 5</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT28()">พิมพ์ตัวเลขจาก 1 ถึง 5 พร้อมระบุความเป็นคู่หรือคี่</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW28()">ไม่พิมพ์อะไรเลย</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 29 E9 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>9. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int number;
+                            <br>&ensp;do {
+                            <br>&ensp;&ensp;printf("Enter a number (0 to stop): ");
+                            <br>&ensp;&ensp;scanf("%d", &number);
+                            <br>&ensp;&ensp;if (number > 0) {
+                            <br>&ensp;&ensp;&ensp;printf("You entered a positive number.\n");
+                            <br>&ensp;&ensp;} else if (number < 0) {
+                            <br>&ensp;&ensp;&ensp;printf("You entered a negative number.\n");
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;} while (number != 0);
+                            <br>&ensp;printf("End of program.\n");
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo29"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW29()">พิมพ์ตัวเลขที่ผู้ใช้ป้อนในแต่ละรอบและหยุดเมื่อผู้ใช้ป้อน 0</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW29()">รับค่าตัวเลขจากผู้ใช้เพียงครั้งเดียวแล้วหยุด</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT29()">รับค่าตัวเลขจากผู้ใช้พร้อมระบุว่าเป็นเลขบวกหรือลบ และป้อนเลข 0 เพื่อจบการทำงาน</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW29()">รับค่าตัวเลขจากผู้ใช้และพิมพ์ "End of program." ทุกรอบ</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="game">
+                        <!--* ข้อ 30 E10 *-->
+                        <div class="gamecontent-E" style="height: auto">
+                            <div  class="question-E">
+                            <h5>10. ข้อใดอธิบายโค้ดนี้ได้ถูกต้อง</h5>
+                            <p>#include < stdio.h > 
+                            <br>int main() {
+                            <br>&ensp;int score;
+                            <br>&ensp;do {
+                            <br>&ensp;&ensp;printf("Enter your score (0-100, -1 to exit): ");
+                            <br>&ensp;&ensp;scanf("%d", &score);
+                            <br>&ensp;&ensp;if (score == -1) {
+                            <br>&ensp;&ensp;&ensp;printf("Exiting...\n");
+                            <br>&ensp;&ensp;&ensp;break;
+                            <br>&ensp;&ensp;} else if (score >= 50) {
+                            <br>&ensp;&ensp;&ensp;printf("You passed.\n");
+                            <br>&ensp;&ensp;} else {
+                            <br>&ensp;&ensp;&ensp;printf("You failed.\n");
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;} while (1);
+                            <br>&ensp;return 0;
+                            <br>}
+            
+                            </p>
+                            <p style="text-align: center;" id="demo30"></p>
+        
+                            </div>
+                            <div class="ans">
+                                <div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW30()">พิมพ์ "Exiting..." ทันทีโดยไม่รับคะแนน</p>    
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW30()">รับคะแนนเพียงครั้งเดียวแล้วหยุด</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionT30()">รับคะแนนจากผู้ใช้และแจ้งว่าผ่าน (>= 50)หรือไม่ผ่าน (<50) จนกว่าจะป้อน -1 เพื่อหยุด</p>  
+                                </div>
+                                <div class="btn">
+                                    <p id="demo" class="button" onclick="myFunctionW30()">สร้าง loop ไม่มีที่สิ้นสุดโดยไม่มีการพิมพ์อะไรเลย</p>  
+                                </div>
+                            </div>
+                                
+                            </div>
+                        </div>
+            
+                    </div>
+                    
+        
+                    <!--* writing *-->
+                    <BR id="Writing"> <br><br>
+                        <h2>Writing</h2>
+                        <!--* 1 *-->
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <h5>1. ให้เขียนโปรแกรมตารางสูตรคูณ</h5>
+                                <iframe src="https://drive.google.com/file/d/1Sny_oIr9xL6ejPt_d8WomBcL7lnJb56t/preview" width="500" height="500" allow="autoplay"></iframe>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                            </div>
+                        </div>
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <button class="btn btn-info" onclick="myFunction1()">คลิกเพื่อดูเฉลย</button>
+                                <div id="myDIV1" style="margin-top: 10px; display:none; align-items: flex-end;">
+                                    <iframe src="https://drive.google.com/file/d/1l9P6wbVqYj712cIeVMrJdPd6vSn1Id2V/preview" width="640" height="480" allow="autoplay"></iframe>
+                                    <iframe src="https://drive.google.com/file/d/1HtH9Hxh9P9-ugmPYljJGxxHIK1ZCb_2-/preview" width="400" height="480" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--* 2 *-->
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <h5>2. ให้เขียนโปรแกรมหาเลขคู่</h5>
+                                <iframe src="https://drive.google.com/file/d/1NxReX7sQjiKnrvAF4EEoLhTWAcm3Ag5Z/preview" width="500" height="500" allow="autoplay"></iframe>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                            </div>
+                        </div>
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <button class="btn btn-info" onclick="myFunction2()">คลิกเพื่อดูเฉลย</button>
+                                <div id="myDIV2" style="margin-top: 10px; display:none; align-items: flex-end;">
+                                    <iframe src="https://drive.google.com/file/d/1DxPfrhK8iliKMuD_ad49cABpYnkTm598/preview" width="640" height="480" allow="autoplay"></iframe>
+                                    <iframe src="https://drive.google.com/file/d/1Gq8Ho-WvDRCDCNbLGNQFoSr667IMmagc/preview" width="400" height="480" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--* 3 *-->
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <h5>3. ให้เขียนโปรแกรมหาเลขคู่และเลขคี่</h5>
+                                <iframe src="https://drive.google.com/file/d/1r4wS1MWR6icEObZte6-AcEM3xtBwQUdi/preview" width="500" height="500" allow="autoplay"></iframe>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                            </div>
+                        </div>
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <button class="btn btn-info" onclick="myFunction3()">คลิกเพื่อดูเฉลย</button>
+                                <div id="myDIV3" style="margin-top: 10px; display:none; align-items: flex-end;">
+                                    <iframe src="https://drive.google.com/file/d/1HEKS4tzvQbVRSajjw4Y2WSpMXjPfCmUL/preview" width="640" height="480" allow="autoplay"></iframe>
+                                    <iframe src="https://drive.google.com/file/d/1BJrU-1e3ldCO_cdee_Gmh79MQ5gd_5F6/preview" width="400" height="480" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--* 4 *-->
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <h5>4. ให้เขียนโปรแกรมแสดงจำนวนตัวเลขตามที่กำหนด</h5>
+                                <iframe src="https://drive.google.com/file/d/1vscsnwdcPmw2rNeq9NC2DYtBTqmCtFG9/preview" width="500" height="500" allow="autoplay"></iframe>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                            </div>
+                        </div>
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <button class="btn btn-info" onclick="myFunction4()">คลิกเพื่อดูเฉลย</button>
+                                <div id="myDIV4" style="margin-top: 10px; display:none; align-items: flex-end;">
+                                    <iframe src="https://drive.google.com/file/d/1PfN2xmzlAgGmnb-V5YyyCZLX-MvGMOO0/preview" width="640" height="480" allow="autoplay"></iframe>
+                                    <iframe src="https://drive.google.com/file/d/1-18pRDGUrtzjNvN-pWfGvm7Ow-ulv-Za/preview" width="400" height="480" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--* 5 *-->
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <h5>5. ให้เขียนโปรแกรมหาค่าเฉลี่ย</h5>
+                                <iframe src="https://drive.google.com/file/d/13aQGqhR4Ka5FCbw3ZZqKU9W50Q7qRUpR/preview" width="500" height="500" allow="autoplay"></iframe>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                            </div>
+                        </div>
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <button class="btn btn-info" onclick="myFunction5()">คลิกเพื่อดูเฉลย</button>
+                                <div id="myDIV5" style="margin-top: 10px; display:none; align-items: flex-end;">
+                                    <iframe src="https://drive.google.com/file/d/1c1lOzRWxr-keesGnbz-X3pGq-cV43EGY/preview" width="640" height="480" allow="autoplay"></iframe>
+                                    <iframe src="https://drive.google.com/file/d/1047zxWugGFQYdSaDWIV2B0icAkDNht9u/preview" width="400" height="480" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--* 6 *-->
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <h5>6. ให้เขียนโปรแกรมสร้างเมนูเลือกแสดงข้อความ</h5>
+                                <iframe src="https://drive.google.com/file/d/1C2Lun2vTxMg-o3MCmKnuHotnP3mXoL0u/preview" width="500" height="500" allow="autoplay"></iframe>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                            </div>
+                        </div>
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <button class="btn btn-info" onclick="myFunction6()">คลิกเพื่อดูเฉลย</button>
+                                <div id="myDIV6" style="margin-top: 10px; display:none; align-items: flex-end;">
+                                    <iframe src="https://drive.google.com/file/d/1AoBP5-VQ83tGILKZXZVhGr47mjCjH1N7/preview" width="640" height="480" allow="autoplay"></iframe>
+                                    <iframe src="https://drive.google.com/file/d/1xqnqGi1xV6N7lksclelXNdW0RMCqz1Cy/preview" width="400" height="480" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--* 7 *-->
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <h5>7. ให้เขียนโปรแกรมเมนูเลือกคำนวณพื้นที่</h5>
+                                <iframe src="https://drive.google.com/file/d/1lisiPOE_jbuLhTRZQeQ7Ewld1E-PljfE/preview" width="500" height="500" allow="autoplay"></iframe>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                            </div>
+                        </div>
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <button class="btn btn-info" onclick="myFunction7()">คลิกเพื่อดูเฉลย</button>
+                                <div id="myDIV7" style="margin-top: 10px; display:none; align-items: flex-end;">
+                                    <iframe src="https://drive.google.com/file/d/1fTZpdeqNpsr9LnpUnfFf3LsiM_lIjeh4/preview" width="640" height="480" allow="autoplay"></iframe>
+                                    <iframe src="https://drive.google.com/file/d/1p7SU5IGJR9eV8-bGcCtQL2eRD2G_hHd2/preview" width="400" height="480" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--* 8 *-->
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <h5>8. ให้เขียนโปรแกรมแสดงคะแนนและเกรด</h5>
+                                <iframe src="https://drive.google.com/file/d/1ZEfW00mczvvzBoT0eM8j5LDj4GlaMQmH/preview" width="500" height="500" allow="autoplay"></iframe>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                            </div>
+                        </div>
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <button class="btn btn-info" onclick="myFunction8()">คลิกเพื่อดูเฉลย</button>
+                                <div id="myDIV8" style="margin-top: 10px; display:none; align-items: flex-end;">
+                                    <iframe src="https://drive.google.com/file/d/1Hu-sCnN2QQRR7nojwLPQABgLGPa4kFdA/preview" width="640" height="480" allow="autoplay"></iframe>
+                                    <iframe src="https://drive.google.com/file/d/1A--bbQhQoWfq71hCBQ5BnDysaeTKZ3bC/preview" width="400" height="480" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--* 9 *-->
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <h5>9. ให้เขียนโปรแกรมเลือกเมนูคำนวณผลบวกและผลคูณ</h5>
+                                <iframe src="https://drive.google.com/file/d/1iN3mWXoW95y5Ph20yzDhyRAeyFrlL8Rl/preview" width="500" height="500" allow="autoplay"></iframe>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                            </div>
+                        </div>
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <button class="btn btn-info" onclick="myFunction9()">คลิกเพื่อดูเฉลย</button>
+                                <div id="myDIV9" style="margin-top: 10px; display:none; align-items: flex-end;">
+                                    <iframe src="https://drive.google.com/file/d/1TMJQbWP6gOMlCgGnpcUbyeeN3Y9uK4yX/preview" width="640" height="480" allow="autoplay"></iframe>
+                                    <iframe src="https://drive.google.com/file/d/1006Z46kD5y5YPPACZSGKk04PUdRpyqHC/preview" width="400" height="480" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--* 10 *-->
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <h5>10. ให้เขียนโปรแกรมคำนวณผลรวมของตัวเลขที่เป็นเลขคู่</h5>
+                                <iframe src="https://drive.google.com/file/d/1SdNnpAgdCPXN010h7kT1o37TbNsFGTFN/preview" width="500" height="500" allow="autoplay"></iframe>
+                                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="50%" height="500px"></iframe>  
+                            </div>
+                        </div>
+                        <div class="game">
+                            <div class="gamecontent-W">
+                                <button class="btn btn-info" onclick="myFunction10()">คลิกเพื่อดูเฉลย</button>
+                                <div id="myDIV10" style="margin-top: 10px; display:none; align-items: flex-end;">
+                                    <iframe src="https://drive.google.com/file/d/1zQl62F9yGABywmaM5-z9euljgCcFq3Q-/preview" width="640" height="480" allow="autoplay"></iframe>
+                                    <iframe src="https://drive.google.com/file/d/11E_3wTNVfuQcrmAnQAM_gyqNVVry2vqg/preview" width="400" height="480" allow="autoplay"></iframe>
+                                </div> 
+                            </div>
+                        </div>
+
+
+        
+        <button onclick="window.location.href='/course-Loop_Statements-quiz'" type="button" class="btn btn-outline-secondary btn-lg btn-block bg-light shadow" style="color:black" >
+        <h2><u>แบบทดสอบหลังเรียน</h2></u></button>
+
+        
+        </div>
+    </div>
+
+
+    <!-- END Of MIDDLE  -->
+    </body>
+</html>
+
+

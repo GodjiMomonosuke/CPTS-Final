@@ -298,15 +298,49 @@ app.use('/checkQuiz',
   ensureTeacher,
   require('./routes/teacher/checkQuiz.route')
 );
-app.use('/answer',
-  ensureLoggedIn({ redirectTo: '/auth/login' }),
-  ensureTeacher,
-  require('./routes/teacher/answer.route')
-);
+
 app.use('/classStudent',
   ensureLoggedIn({ redirectTo: '/auth/login' }),
   ensureTeacher,
   require('./routes/teacher/classStudent.route')
+);
+app.use('/TeacherCourse',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherCourse.route')
+);
+
+//** TeacherCourse **//
+app.use('/TeacherCourse-Algorithms_and_Flowcharts',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherCourse/1_Algorithms_and_Flowcharts-course.route')
+);
+app.use('/TeacherCourse-Datatype_and_Variable',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherCourse/2_Datatype_and_Variable-course.route')
+);
+app.use('/TeacherCourse-Input_and_Output',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherCourse/3_Input_and_Output-course.route')
+);
+app.use('/TeacherCourse-Operators_and_Expressions',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherCourse/4_Operators_and_Expressions-course.route')
+);
+app.use('/TeacherCourse-Selection_Statements',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherCourse/5_Selection_Statements-course.route')
+);
+app.use('/TeacherCourse-Loop_Statements',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherCourse/6_Loop_Statements-course.route')
+);
+app.use('/TeacherCourse-Arrays_and_Strings',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherCourse/7_Arrays_and_Strings-course.route')
+);
+app.use('/TeacherCourse-Functions',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherCourse/8_Functions-course.route')
 );
 
 
