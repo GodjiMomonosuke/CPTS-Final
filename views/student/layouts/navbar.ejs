@@ -44,10 +44,11 @@
       <% if (user.role === 'Teacher') { %>
         <ul class="nav navbar-nav hidden-xs">
           <li class="nav-item "><a class="nav-link" href="/" style="color: #ffffff;">Home</a></li>
-              <li class="nav-item "><a class="nav-link" href="/class" style="color: #ffffff;">Class </a></li>
-              <!--<li class="nav-item "><a class="nav-link" href="/check" style="color: #ffffff;">Lab-Check </a></li>
-              <li class="nav-item "><a class="nav-link" href="/checkQuiz" style="color: #ffffff;">Quiz-Check </a></li>-->
-              <li class="nav-item "><a class="nav-link" href="/community" style="color: #ffffff;">Chat</a></li>
+          <li class="nav-item "><a class="nav-link" href="/class" style="color: #ffffff;">Class </a></li>
+          <li class="nav-item "><a class="nav-link" href="/TeacherCourse" style="color: #ffffff;">Course </a></li>
+          <!--<li class="nav-item "><a class="nav-link" href="/check" style="color: #ffffff;">Lab-Check </a></li>
+          <li class="nav-item "><a class="nav-link" href="/checkQuiz" style="color: #ffffff;">Quiz-Check </a></li>-->
+          <li class="nav-item "><a class="nav-link" href="/community" style="color: #ffffff;">Chat</a></li>
         </ul>
         <ul class="navbar-nav mb-0 ms-auto">
           <li class="nav-item nav-link" style="color: #ffffff;" ><%= user.name %></li>
