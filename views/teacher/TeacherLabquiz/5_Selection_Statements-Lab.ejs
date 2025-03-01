@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        .a{
+            text-decoration: none;
+            color: #8c521f;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/home1.css' />
+    <link rel='stylesheet' href='stylesheets/compiler_line.css' />
+    <link rel='stylesheet' href='stylesheets/Drag_Drop.css' />
+    <link rel="stylesheet" href="stylesheets/quiz.css">
+    <title>Selection Statements</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+
+<!-- MIDDLE 1 -->
+<div class="content">
+    <div id = "content" class="container">
+<!--   C Language -->
+        <div class="accordion" id="accordionParentSyntax">
+            <!--   Introduce -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h1>Selection Statements</h1>
+                
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><i href="/home" class="fa fa-home" style="font-size:16px"></i></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a class="a" href="/TeacherCourse">TeacherCourse</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a class="a" href="/TeacherCourse-Selection_Statements-lab">Selection Statements</a></li>
+                </ol>
+
+<%# START %> 
+<form action="/course-Selection_Statements-pretest/submit" method="post" autocomplete="off" >
+
+    
+
+    <%# LV1 %> <br>
+
+        
+       
+    
+                <h3>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</h3>
+                <!-- ข้อ 1 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        1. การใช้ if statement ใช้สำหรับอะไร                  
+                    </p>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-1">
+                        การทำซ้ำแบบไม่มีเงื่อนไข
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-2">
+                        การดำเนินการเงื่อนไข
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-3">
+                        การกำหนดค่าตัวแปร
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-4">
+                        การสร้างฟังก์ชัน                     
+                    </label>
+                </div> <br>
+                <!-- ข้อ 2 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        2. คำสั่ง else ใน if-else statement ใช้ทำอะไร?
+                    </p>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-1">
+                        ระบุเงื่อนไข
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-2">
+                        ระบุบล็อกของคำสั่ง
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-3">
+                        ระบุเงื่อนไขเมื่อเงื่อนไข if ไม่เป็นจริง
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-4">
+                        ระบุการวนซ้ำ
+                    </label>
+                </div><br>
+                <!-- ข้อ 3 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        3. ภายใน if statement สิ่งที่อยู่ในวงเล็บ ( ) เรียกว่าอะไร
+                    </p>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-1">
+                        ส่วนคำสั่ง
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-2">
+                        ส่วนเปรียบเทียบ
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-3">
+                        ส่วนเงื่อนไข
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-4">
+                        ส่วนเงื่อนไข
+                    </label>
+                </div><br>
+                <!-- ข้อ 4 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; "> 
+                        4. การใช้ switch statement จะมีประโยชน์ในสถานการณ์ใด
+                    </p>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-1">
+                        เมื่อต้องการทำสมการคณิตศาสตร์
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-2">
+                        เมื่อต้องการตรวจสอบเงื่อนไขหลาย ๆ รายการ
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-3">
+                        เมื่อต้องการเรียกฟังก์ชัน
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-4">
+                        เมื่อต้องการทำลูป
+                    </label>
+                </div><br>
+                <!-- ข้อ 5 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        5. คำสั่ง default ใน switch statement มีหน้าที่อะไร
+                    </p>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-1">
+                        บังคับให้โปรแกรมทำคำสั่ง break
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-2">
+                        ทำให้โปรแกรมเลือก case ใด ๆ แบบสุ่ม
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-3">
+                        ระบุเงื่อนไขที่จะทำงานเมื่อไม่มี case ใดที่ตรงกับค่าใน switch expression                     
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-4">
+                        ทำให้โปรแกรมหยุดทำงาน
+                    </label>
+                </div><br>
+                <br>
+    <%# LV2 %>                     
+                <h3>ข้อที่ 6 - 10: วัดความสามารถด้านการติดตามโค้ด (Tracing)</h3>
+                <!-- ข้อ 6 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        6. หลังจากการทำงานของโค้ดนี้ ค่าของ x และ y คืออะไร
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include < stdio.h> 
+                        <br>&ensp;int main() 
+                        <br>&ensp;{ 
+                        <br>&ensp;&ensp;int x = 10;
+                        <br>&ensp;&ensp;int y = 20
+                        <br>&ensp;&ensp;if (x < y) {
+                        <br>&ensp;&ensp;x = x + y;
+                        <br>&ensp;&ensp;}
+                        <br>&ensp;&ensp;else {
+                        <br>&ensp;&ensp;y = y - x;
+                        <br>&ensp;&ensp;}
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;} <br>
+                    </b> 
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice6" id="option6-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-1">
+                        x เป็น 10 และ y เป็น 20
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-2">
+                        x เป็น 30 และ y เป็น 20
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-3">
+                        x เป็น 10 และ y เป็น -10
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-4">
+                        x เป็น 20 และ y เป็น 10
+                    </label>
+                </div><br>
+                <!-- ข้อ 7 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        7. ผลลัพธ์ของการรันโค้ดนี้คืออะไร <br>
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include < stdio.h> 
+                        <br>&ensp;int main() 
+                        <br>&ensp;{ 
+                        <br>&ensp;&ensp;int a = 5;
+                        <br>&ensp;&ensp;int b = 10;
+                        <br>&ensp;&ensp;if (a < b) {
+                        <br>&ensp;&ensp;printf("a is less than b\n");
+                        <br>&ensp;&ensp;} else if (a == b) {
+                        <br>&ensp;&ensp;printf("a is equal to b\n");
+                        <br>&ensp;&ensp;} else {
+                        <br>&ensp;&ensp;printf("a is greater than b\n");
+                        <br>&ensp;&ensp;}
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;} <br>     
+                    </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice7" id="option7-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-1">
+                        a is less than b
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-2">
+                        a is equal to b
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-3">
+                        a is greater than b
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-4">
+                        ไม่แสดงผล
+                    </label>
+                </div><br>
+                <!-- ข้อ 8 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        8. ผลลัพธ์ของการรันโค้ดนี้คืออะไร <br>
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include < stdio.h> 
+                        <br>&ensp;int main() 
+                        <br>&ensp;{ 
+                        <br>&ensp;&ensp;int x = 10;
+                        <br>&ensp;&ensp;int y = 5;
+                        <br>&ensp;&ensp;if (x > 5) {
+                        <br>&ensp;&ensp;if (y < 10) {
+                        <br>&ensp;&ensp;printf("Both conditions are true.\n");
+                        <br>&ensp;&ensp;} else {
+                        <br>&ensp;&ensp;printf("Second condition is false.\n");
+                        <br>&ensp;&ensp;}
+                        <br>&ensp;&ensp;} else {
+                        <br>&ensp;&ensp;}
+                        <br>&ensp;&ensp;printf("First condition is false.\n");
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;} <br> 
+                    </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice8" id="option8-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-1">
+                        Second condition is false
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-2">
+                        First condition is false.
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-3">
+                        Both conditions are true.
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-4">
+                        Both conditions are true. First condition is false.
+                    </label>
+                </div><br> 
+                <!-- ข้อ 9 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">   
+                        9. ผลลัพธ์ของการรันโค้ดนี้คืออะไร ถ้ากำหนดให้ num = 3 <br>
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include < stdio.h> 
+                        <br>&ensp;int main() 
+                        <br>&ensp;{ 
+                        <br>&ensp;&ensp;int day = num;
+                        <br>&ensp;&ensp;switch (day) {
+                        <br>&ensp;&ensp;case 1:
+                        <br>&ensp;&ensp;printf("Sunday");
+                        <br>&ensp;&ensp;break;
+                        <br>&ensp;&ensp;case 2:
+                        <br>&ensp;&ensp;printf("Monday");
+                        <br>&ensp;&ensp;break;
+                        <br>&ensp;&ensp;case 3:
+                        <br>&ensp;&ensp;printf("Tuesday");
+                        <br>&ensp;&ensp;break;
+                        <br>&ensp;&ensp;default:
+                        <br>&ensp;&ensp;printf("Other day");
+                        <br>&ensp;&ensp;}
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;} <br> 
+
+                    </b>
+                    </p>                   
+                    <input type="radio" class="btn-check" name="choice9" id="option9-1" autocomplete="off" value="A">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-1">
+                        Sunday
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-2">
+                        Monday
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-3">
+                        Tuesday
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-4">
+                        Other day
+                    </label>
+                </div><br>  
+                <!-- ข้อ 10 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        10. ผลลัพธ์ของการรันโค้ดนี้ result มีค่าเท่ากับเท่าไร ถ้ากำหนดให้ num1 = 3 และ num2 = 6 <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int option = num1;
+                            <br>&ensp;&ensp;int result = num2;
+                            <br>&ensp;&ensp;switch (option) {
+                            <br>&ensp;&ensp;case 1:
+                            <br>&ensp;&ensp;result = result + 10;
+                            <br>&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 2:
+                            <br>&ensp;&ensp;result = result + 5;
+                            <br>&ensp;&ensp;case 3:
+                            <br>&ensp;&ensp;result = result + 3;
+                            <br>&ensp;&ensp;break;
+                            <br>&ensp;&ensp;default:
+                            <br>&ensp;&ensp;result = result - 1;
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;printf("result = %d", result);
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br> 
+                    </b>
+                    </p>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-1">
+                        13
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-2">
+                        11
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-3">
+                        9
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-4">
+                        5
+                    </label>
+                </div><br>  
+        <%# LV3 %>
+                <h2>ข้อที่ 11 - 15: วัดความสามารถด้านการอธิบายโค้ด (Explaining)</h2>
+                <!-- ข้อ 11 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        11. โค้ดดังต่อไปนี้ทำงานอย่างไร <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int x = 5;
+                            <br>&ensp;&ensp;int y = 10;
+                            <br>&ensp;&ensp;if (x < y) {
+                            <br>&ensp;&ensp;printf("x is less than y\n");
+                            <br>&ensp;&ensp;} else {
+                            <br>&ensp;&ensp;printf("x is greater than or equal to y\n");
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br> 
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-1">
+                        โค้ดนี้จะเปรียบเทียบค่าของ x และ y และจะพิมพ์ "x is greater than or equal to y" เนื่องจาก x น้อยกว่า y
+                    </label>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-2">
+                        โค้ดนี้จะเปรียบเทียบค่าของ x และ y และจะพิมพ์ "x is less than y" เนื่องจาก x น้อยกว่า y
+                    </label>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-3">
+                        โค้ดนี้จะเปรียบเทียบค่าของ x และ y และจะพิมพ์ "x is greater than y" เนื่องจาก x น้อยกว่า y
+                    </label>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-4">
+                        โค้ดนี้จะเปรียบเทียบค่าของ x และ y และจะพิมพ์ "x is less than y" เนื่องจาก x มากกว่า y
+                    </label>
+                </div><br>  
+                <!-- ข้อ 12  -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        12. โค้ดดังต่อไปนี้ทำงานอย่างไร <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int day = 6;
+                            <br>&ensp;&ensp;if (day == 1) {
+                            <br>&ensp;&ensp;printf("Sunday\n");
+                            <br>&ensp;&ensp;} else if (day == 2) {
+                            <br>&ensp;&ensp;printf("Monday\n");
+                            <br>&ensp;&ensp;} else if (day == 3) {
+                            <br>&ensp;&ensp;printf("Tuesday\n");
+                            <br>&ensp;&ensp;} else if (day ==6) {
+                            <br>&ensp;&ensp;printf("Saturday\n");
+                            <br>&ensp;&ensp;} else {
+                            <br>&ensp;&ensp;printf("Other day\n");
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br>     
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-1">
+                        โค้ดนี้ใช้ if-else if เพื่อตรวจสอบค่าของ day และพิมพ์ชื่อของวันที่เกี่ยวข้องกับค่า day ที่ถูกเลือก ในกรณีนี้ day เป็น 1 ดังนั้นจะพิมพ์ "Sunday" ในเงื่อนไข if จากนั้นขึ้นบรรทัดใหม่ แล้วจบการทำงาน
+                    </label>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-2">
+                        โค้ดนี้ใช้ if-else if เพื่อตรวจสอบค่าของ day และพิมพ์ชื่อของวันที่เกี่ยวข้องกับค่า day ที่ถูกเลือก ในกรณีนี้ day เป็น 2 ดังนั้นจะพิมพ์ "Monday" ในเงื่อนไข else if แล้วขึ้นบรรทัดใหม่ แล้วจบการทำงาน
+                    </label>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-3">
+                        โค้ดนี้ใช้ if-else if เพื่อตรวจสอบค่าของ day และพิมพ์ชื่อของวันที่เกี่ยวข้องกับค่า day ที่ถูกเลือก ในกรณีนี้ day เป็น 6 ดังนั้นจะพิมพ์ "Saturday" ในเงื่อนไข else if แล้วจบการทำงาน
+                    </label>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-4">
+                        โค้ดนี้ใช้ if-else if เพื่อตรวจสอบค่าของ day และพิมพ์ชื่อของวันที่เกี่ยวข้องกับค่า day ที่ถูกเลือก ในกรณีนี้ day เป็น 6 ดังนั้นจะพิมพ์ "Saturday" ในเงื่อนไข else if จากนั้นขึ้นบรรทัดใหม่ แล้วจบการทำงาน
+                    </label>
+                </div><br>  
+                <!-- ข้อ 13  -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        13. ข้อใดอธิบายการทำงานได้ถูกต้อง <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int age;
+                            <br>&ensp;&ensp;printf("Enter your age: ");
+                            <br>&ensp;&ensp;scanf("%d", &age);
+                            <br>&ensp;&ensp;if (age < 2 {
+                            <br>&ensp;&ensp;if (age < 10) {
+                            <br>&ensp;&ensp;printf("Child\n");
+                            <br>&ensp;&ensp;} else if (age >= 10 && age <= 12) {
+                            <br>&ensp;&ensp;printf("Pre-Teen");
+                            <br>&ensp;&ensp;} else if (age >= 13 && age <= 20) {
+                            <br>&ensp;&ensp;printf("Teen\n");
+                            <br>&ensp;&ensp;} else {
+                            <br>&ensp;&ensp;printf("Pre-Adult");
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;else {
+                            <br>&ensp;&ensp;printf("Adult\n");
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br>     
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-1">
+                        โค้ดนี้เป็นโปรแกรมที่ใช้ในการตรวจสอบอายุ (age) และจะพิมพ์ข้อความที่เกี่ยวข้องกับอายุที่ป้อน โดยถ้ารับค่า age เป็น 18 จะเช็คเงื่อนไขภายใน if (age < 23) และใช้เงื่อนไข else if (age >= 10 && age <= 12) แสดงข้อควาาม Child ออกทางหน้าจอ
+                    </label>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-2">
+                        โค้ดนี้เป็นโปรแกรมที่ใช้ในการตรวจสอบอายุ (age) และจะพิมพ์ข้อความที่เกี่ยวข้องกับอายุที่ป้อน โดยถ้ารับค่า age เป็น 26 จะเช็คเงื่อนไขภายใน else แสดงข้อควาาม Pre-Adult ออกทางหน้าจอ
+                    </label>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-3">
+                        โค้ดนี้เป็นโปรแกรมที่ใช้ในการตรวจสอบอายุ (age) และจะพิมพ์ข้อความที่เกี่ยวข้องกับอายุที่ป้อน โดยถ้ารับค่า age เป็น 23 จะเช็คเงื่อนไขภายใน if (age < 23) และใช้เงื่อนไข else if (age >= 13 && age <= 20) แสดงข้อควาาม Adult ออกทางหน้าจอ
+                    </label>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-4">
+                        โค้ดนี้เป็นโปรแกรมที่ใช้ในการตรวจสอบอายุ (age) และจะพิมพ์ข้อความที่เกี่ยวข้องกับอายุที่ป้อน โดยถ้ารับค่า age เป็น 18 จะเช็คเงื่อนไขภายใน if (age < 23) และใช้เงื่อนไข else if (age >= 13 && age <= 20) แสดงข้อควาาม Teen ออกทางหน้าจอ
+                    </label>
+                </div><br>  
+                <!-- ข้อ 14  -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        14. ข้อใดอธิบายการทำงานได้ถูกต้อง <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int choice;
+                            <br>&ensp;&ensp;printf("Enter choice: ");
+                            <br>&ensp;&ensp;scanf("%d", &choice);
+                            <br>&ensp;&ensp;switch (choice) {
+                            <br>&ensp;&ensp;case 1:
+                            <br>&ensp;&ensp;printf("Man U");
+                            <br>&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 2:
+                            <br>&ensp;&ensp;printf("Liverpool");
+                            <br>&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 3:
+                            <br>&ensp;&ensp;printf("Chelsea");
+                            <br>&ensp;&ensp;break;
+                            <br>&ensp;&ensp;default:
+                            <br>&ensp;&ensp;printf("Other Teams");
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br>  
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-1">
+                        โค้ดนี้ใช้ switch case เพื่อตรวจสอบค่าของ choice และพิมพ์ข้อความที่เกี่ยวข้องกับค่า choice ที่ถูกเลือก ในกรณีที่รับค่า choice เป็น 1 จะแสดงข้อความ Man U
+                    </label>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-2">
+                        โค้ดนี้ใช้ switch case เพื่อตรวจสอบค่าของ choice และพิมพ์ข้อความที่เกี่ยวข้องกับค่า choice ที่ถูกเลือก ในกรณีที่รับค่า choice เป็น 3 จะแสดงข้อความ Chelsea
+                    </label>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-3">
+                        โค้ดนี้ใช้ switch case เพื่อตรวจสอบค่าของ choice และพิมพ์ข้อความที่เกี่ยวข้องกับค่า choice ที่ถูกเลือก ในกรณีที่รับค่า choice เป็นตัวอักขระที่ไม่ใช่ 1, 2, 3  จะแสดงข้อความ Other Teams
+                    </label>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-4">
+                        ถูกทุกข้อ
+                    </label>
+                </div><br>  
+                <!-- ข้อ 15 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        15. ข้อใดอธิบายการทำงานได้ถูกต้อง <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;void main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;char grade;
+                            <br>&ensp;&ensp;printf("Enter grade: ");
+                            <br>&ensp;&ensp;scanf("%c", &grade);
+                            <br>&ensp;&ensp;switch (grade) {
+                            <br>&ensp;&ensp;case 'A':
+                            <br>&ensp;&ensp;printf("Excellent\n");
+                            <br>&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 'B':
+                            <br>&ensp;&ensp;printf("Good\n");
+                            <br>&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 'C':
+                            <br>&ensp;&ensp;printf("Satisfactory\n");
+                            <br>&ensp;&ensp;break;
+                            <br>&ensp;&ensp;case 'D':
+                            <br>&ensp;&ensp;printf("Needs Improvement\n");
+                            <br>&ensp;&ensp;break;
+                            <br>&ensp;&ensp;default:
+                            <br>&ensp;&ensp;printf("Invalid Grade\n");
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br>  
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-1">
+                        โค้ดนี้เป็นโปรแกรมที่ใช้ switch case ในการตรวจสอบเกรด grade และพิมพ์ข้อความที่เกี่ยวข้องกับเกรดนั้นออกทางหน้าจอ โดยถ้ารับค่า grade เป็น A หรือ B หรือ C หรือ D หรือตัวอักขระอื่น ๆ จะแสดงข้อความ Excellent หรือ Good หรือ Satisfactory หรือ Needs improvement หรือ Invalid grade ตามลำดับ ออกทางหน้าจอ
+                    </label>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-2">
+                        โค้ดนี้เป็นโปรแกรมที่ใช้ switch case ในการตรวจสอบเกรด grade และพิมพ์ข้อความที่เกี่ยวข้องกับเกรดนั้นออกทางหน้าจอ โดยถ้ารับค่า grade เป็น a หรือ b หรือ c หรือ d หรือตัวอักขระอื่น ๆ จะแสดงข้อความ Excellent หรือ Good หรือ Satisfactory หรือ Needs Improvement หรือ Invalid Grade ตามลำดับ ออกทางหน้าจอ
+                    </label>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-3">
+                        โค้ดนี้เป็นโปรแกรมที่ใช้ switch case ในการตรวจสอบเกรด grade และพิมพ์ข้อความที่เกี่ยวข้องกับเกรดนั้นออกทางหน้าจอ โดยถ้ารับค่า grade เป็น A หรือ B หรือ C หรือ D หรือตัวอักขระอื่น ๆ จะแสดงข้อความ Excellent หรือ Good หรือ Satisfactory หรือ Needs Improvement หรือ Invalid Grade ตามลำดับ ออกทางหน้าจอ
+                    </label>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-4">
+                        ถูกทุกข้อ
+                    </label>
+                </div><br>  
+        <%# LV4 %>                
+                <h2>ข้อที่ 16 - 20: วัดความสามารถด้านการเขียนโปรแกรม (Writing)</h2> 
+                     <br>
+
+                <!-- ข้อ 16 -->
+                <div style="background-color: #363e62;">
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #363e62;">
+                        16.1 (Deployment) ให้เขียนโปรแกรมรับค่าของตัวแปรและแสดงค่าของข้อมูลดังนี้ (3 คะแนน)
+                    <br></p>
+                    <div class="group2"  style="margin: 20px;">
+                        <iframe src="https://drive.google.com/file/d/1TzxSd-3BQJWSP3_mhcOfkbZ6upXz4miL/preview " width="90%" height="600" allow="autoplay"></iframe>
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                    </div>    
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="วางโค้ดที่นี่" rows="10" cols="30" name="code" required></textarea>
+                    </div>
+                </div>
+                
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #363e62;">
+                    16.2 (Result) แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 16.1 (1 คะแนน)
+                </p>
+                    <textarea class="form-control" placeholder="คำตอบ"  rows="4" cols="30" name="expResult16" required></textarea>
+                <br>
+                <p type="text" class="list-group-item list-group-item-action"  style="color: white; background-color: #363e62;">
+                    16.3 (Improvement) ถ้าต้องการให้อายุเท่าไรก็ได้ แต่ขอให้มีใบขับขี่ ให้แสดงข้อความ Can Drive ต้องแก้ไขอย่างไร (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้)<br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="คำตอบ" name="sendLink16" type="text" rows="4" required></textarea>
+                            </div>
+                <br><br>
+
+                <!-- ข้อ 17 -->
+                <div style="background-color: #8c521f;">
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #8c521f;">
+                        17.1 (Deployment) ให้เขียนโปรแกรมรับค่าของตัวแปรและแสดงค่าของข้อมูลดังนี้ (3 คะแนน)
+                    <br></p>
+                    <div class="group2" style="margin: 20px;">
+                        <iframe src="https://drive.google.com/file/d/1vLX8I5lnKCB3Mhiw13mkPFTJFO4A7YjJ/preview" width="90%" height="600" allow="autoplay"></iframe>                
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="วางโค้ดที่นี่" rows="10" cols="30" name="sendLink171" required></textarea>
+                    </div>
+                </div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #8c521f;">
+                    17.2 (Result) แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 17.1 (1 คะแนน)</p>
+                    <textarea class="form-control" placeholder="คำตอบ"  rows="4" cols="30" name="expResult17" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #8c521f;">
+                    17.3 (Improvement) ถ้าต้องการให้ใส่คะแนนได้เฉพาะตัวเลขจำนวนเต็ม ต้องแก้ไขอย่างไร (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="คำตอบ" name="sendLink172" type="text" rows="4" required></textarea>
+                    </div>
+                <br><br>
+
+                <!-- ข้อ 18 -->
+                <div style="background-color: #366241;">
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #366241;">
+                        18.1 (Deployment) ให้เขียนโปรแกรมรับค่าของตัวแปรและแสดงผลลัพธ์ของสมการ a + b^(2n) - (4c - 5) สำหรับการยกกำลังให้ใช้ Library math.h (3 คะแนน)<br>
+                    </p>
+                    <div class="group2" style="margin: 20px;">
+                        <iframe src="https://drive.google.com/file/d/1pQr8wLNTTtauCa83cvg7bhRDn2zrA572/preview" width="90%" height="600" allow="autoplay"></iframe>
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                    </div>
+                        <div class="form-group">
+                        <textarea class="form-control" placeholder="วางโค้ดที่นี่" rows="10" cols="30" name="sendLink181" required></textarea>
+                    </div>
+                </div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #366241;">
+                    18.2 (Result) แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 18.1 (1 คะแนน)</p>
+                    <textarea class="form-control" placeholder="คำตอบ"  rows="4" cols="30" name="expResult18" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #366241;">
+                    18.3 (Improvement) ถ้าต้องการให้เพิ่มเงื่อนไขจากโค้ดเดิม โดยให้พิมพ์ K ทำการแปลงอุณภูมิ Celsius เป็น Kelvin ต้องแก้ไขอย่างไร กำหนดให้สูตร Kelvin = Celsius + 273.15 (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="คำตอบ" rows="4" cols="30" name="sendLink182" required></textarea>
+    
+                        </div>
+                <br><br>
+
+                <!-- ข้อ 19 -->
+                <div style="background-color: #453662;">
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #453662;">
+                        19.1 (Deployment) ให้เขียนโปรแกรมรับค่าของตัวแปรและแสดงค่าของข้อมูลดังนี้ (3 คะแนน)<br>
+                    </p>
+                    <div class="group2" style="margin: 20px;">
+                        <iframe src="https://drive.google.com/file/d/16881Ni6lSdoS2gU3dH3EUKYBvPEs4uHn/preview" width="90%" height="600" allow="autoplay"></iframe>
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                    </div>    
+                    <div class="form-group">
+                        <textarea class="form-control" laceholder="วางโค้ดที่นี่" rows="10" cols="30" name="sendLink191" required></textarea>
+                    </div>
+                </div>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #453662;">
+                    19.2 (Result) แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 19.1 (1 คะแนน)</p>
+                    <textarea class="form-control" placeholder="คำตอบ"  rows="4" cols="30" name="expResult19" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #453662;">
+                    19.3 (Improvement) ถ้าต้องการให้มีการตรวจเช็คกรณีที่ number ไม่ได้ใส่ค่าที่เป็นตัวเลข ให้แจ้งเตือนแสดงข้อความว่า "Please Enter a number" ต้องแก้ไขอย่างไร (1 คะแนน)
+                    <br>Hint. if (scanf("%d", &number) == 1) คำสั่งนี้ช่วยตรวจสอบการรับค่าที่เป็นตัวเลข
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="คำตอบ" rows="4" cols="30" name="sendLink192" required></textarea>
+                    </div>
+                <br><br>
+
+                <!-- ข้อ 20 -->
+                <div style="background-color: #687521;">
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #687521;">
+                        20.1 (Deployment) ให้เขียนโปรแกรม Point of Sale คำนวณราคาสินค้าพร้อมส่วนลด โดยให้รับค่าของตัวแปรและแสดงค่าของข้อมูลดังนี้ (3 คะแนน) <br>
+                    </p>
+                    <div class="group2" style="margin: 20px;">
+                        <iframe src="https://drive.google.com/file/d/1Rp1Lh2rVBOTnu9G0YwzlnaApwg9mu5yZ/preview" width="90%" height="600" allow="autoplay"></iframe> 
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="วางโค้ดที่นี่" rows="10" cols="30" name="sendLink201" required></textarea>
+                    </div>
+                </div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #687521;">
+                    20.2 (Result) แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 20.1 (1 คะแนน)</p>
+                    <textarea class="form-control" placeholder="คำตอบ"  rows="4" cols="30" name="expResult20" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #687521;">
+                    20.3 (Improvement) ถ้าต้องการให้มีการตรวจเช็คกรณีที่รับค่าของ mode แล้ว ไม่ใช่เลข 1 - 5 ให้แจ้งเตือนแสดงข้อความว่า "Please Enter 1 - 5" ก่อนที่จะมีการรับค่าตัวแปรของตัวเลข ต้องแก้ไขอย่างไร (1 คะแนน)
+                    <br>Hint. ใช้คำสั่ง if else และ Logical Operators ช่วยในการสร้างเงื่อนไขเพื่อเขียนโปรแกรม
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) 
+                    <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="คำตอบ" rows="4" cols="30" name="sendLink202" required></textarea>
+    
+                        </div>
+                
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #465e8f;">
+                    ประเมินความมั่นใจในการทำ Pre-Test จาก 1-5 <br> (5 คือมากสุด, 1 คือน้อยสุด)
+                </p>
+                    <input type="radio" class="btn-check" name="rating" id="rating-1" autocomplete="off" value="1">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-1">
+                        1 ⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-2" autocomplete="off" value="2">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-2">
+                        2 ⭐⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-3" autocomplete="off" value="3">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-3">
+                        3 ⭐⭐⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-4" autocomplete="off" value="4">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-4">
+                        4 ⭐⭐⭐⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-5" autocomplete="off" value="5">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-5">
+                        5 ⭐⭐⭐⭐⭐
+                    </label>
+
+                    <br><br>
+
+
+
+                Language : <select name="lang"><option value="C">C</option></select>
+                <br>
+                <br>
+    
+                <div class="d-grid gap-2">
+                    <a href="/TeacherCourse" class="btn btn-outline-dark">ย้อนกลับ</a>
+                </div>
+</form> 
+
+<%# END %> 
+
+        <br></div>
+        </div>
+    </div>
+</div>
+<!--<script src="javascripts/lv3/5_1_Selection.js"></script></script>-->
+<script src="javascripts/compilerStyle.js"></script>
