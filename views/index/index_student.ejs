@@ -493,87 +493,267 @@
                     <div  class="group2"> <!-- Charater & Chart -->
                         <div class="character-box"><!-- Character -->
                             <h4 class="chakra-petch-regular">Character</h4>  
-                            <div class="Character">
-                                <% if(BasicPercent === 0 && TracePercent === 0 && ExplainPercent === 0 && WritePercent === 0){ %>
-                                    <img src="/images/6.png" alt="Rookie">
-                                    <p style="margin-bottom: 0px;">
-                                <% } else { %> 
-                                <% if(BasicPercent > TracePercent && BasicPercent > ExplainPercent && BasicPercent > WritePercent){ %>
-                                    <img src="/images/7.png" alt="Knowledge">
-                                    <p style="margin-bottom: 0px;">
-                                <% } %> 
-                                <!-- <% if(BasicPercent === TracePercent && BasicPercent > ExplainPercent && BasicPercent > WritePercent){ %>
-                                    <img src="/images/IMG_3170.png" alt="Knowledge">
-                                    <p style="margin-bottom: 0px;"><b>KNTR</b>
-                                    <p>Knowledge + Tracing</p>
-                                <% } %> 
-                                <% if(BasicPercent > TracePercent && BasicPercent === ExplainPercent && BasicPercent > WritePercent){ %>
-                                    <img src="/images/IMG_3169.png" alt="Knowledge">
-                                    <p style="margin-bottom: 0px;"><b>KNEX</b>
-                                    <p>Knowledge + Explaining</p>
-                                <% } %> 
-                                <% if(BasicPercent > TracePercent && BasicPercent > ExplainPercent && BasicPercent === WritePercent){ %>
-                                    <img src="/images/IMG_3168.png" alt="Knowledge">
-                                    <p style="margin-bottom: 0px;"><b>KNWR</b>
-                                    <p>Knowledge + Writing</p>
-                                <% } %> 
-                                <% if(BasicPercent === TracePercent && BasicPercent === ExplainPercent && BasicPercent > WritePercent){ %>
-                                    <img src="/images/IMG_3167.png" alt="Knowledge">
-                                    <p style="margin-bottom: 0px;"><b>KNTREX</b>
-                                    <p>Knowledge + Tracing + Explaining</p>
-                                <% } %> 
-                                <% if(BasicPercent === TracePercent && BasicPercent > ExplainPercent && BasicPercent === WritePercent){ %>
-                                    <img src="/images/IMG_3166.png" alt="Knowledge">
-                                    <p style="margin-bottom: 0px;"><b>KNTRWR</b>
-                                    <p>Knowledge + Tracing + Writing</p>
-                                <% } %> 
-                                <% if(BasicPercent > TracePercent && BasicPercent === ExplainPercent && BasicPercent === WritePercent){ %>
-                                    <img src="/images/IMG_3165.png" alt="Knowledge">
-                                    <p style="margin-bottom: 0px;"><b>KNEXWR</b>
-                                    <p>Knowledge + Explaining + Writing</p>
-                                <% } %>  -->
-                                
-                                <!-- t -->
-                                <% if(TracePercent > BasicPercent && TracePercent > ExplainPercent && TracePercent > WritePercent){ %>
-                                    <img src="/images/2.png" alt="Tracing">
-                                    <p style="margin-bottom: 0px;">
-                                <% } %> 
-                                <!-- <% if(TracePercent > BasicPercent && TracePercent === ExplainPercent && TracePercent > WritePercent){ %>
-                                    <img src="/images/IMG_3176.png" alt="Tracing">
-                                    <p style="margin-bottom: 0px;"><b>TREX</b>
-                                    <p>Tracing + Explaining</p>
-                                <% } %> 
-                                <% if(TracePercent > BasicPercent && TracePercent > ExplainPercent && TracePercent === WritePercent){ %>
-                                    <img src="/images/IMG_3175.png" alt="Tracing">
-                                    <p style="margin-bottom: 0px;"><b>TRWR</b>
-                                    <p>Tracing + Writing</p>
-                                <% } %> 
-                                <% if(TracePercent > BasicPercent && TracePercent === ExplainPercent && TracePercent === WritePercent){ %>
-                                    <img src="/images/IMG_3173.png" alt="Tracing">
-                                    <p style="margin-bottom: 0px;"><b>TREXWR</b>
-                                    <p>Tracing + Explaining + Writing</p>
-                                <% } %>  -->
-
-                                <!-- e -->
-                                <% if(ExplainPercent > BasicPercent && ExplainPercent > TracePercent && ExplainPercent > WritePercent){ %>
-                                    <img src="/images/3.png" alt="Explaining">
-                                    <p style="margin-bottom: 0px;">
-                                <% } %>
-                                <!-- <% if(ExplainPercent > BasicPercent && ExplainPercent > TracePercent && ExplainPercent === WritePercent){ %>
-                                    <img src="/images/IMG_3236.png" alt="Explaining">
-                                    <p style="margin-bottom: 0px;"><b>EXWR</b>
-                                    <p>Explaining + Writing</p>
-                                <% } %> -->
-
-                                <!-- w -->
-                                <% if(WritePercent > BasicPercent && WritePercent > TracePercent && WritePercent > ExplainPercent){ %>
-                                    <img src="/images/4.png" alt="Writing">
-                                    <p style="margin-bottom: 0px;">
-                                <% } %>
-                                <% if(WritePercent === BasicPercent && WritePercent === TracePercent && WritePercent === ExplainPercent){ %>
-                                    <img src="/images/5.png" alt="KING">
-                                    <p style="margin-bottom: 0px;">
-                                <% } %>
+                            <div class="Character" style="position: relative; padding: 10px; min-height: 300px; display: flex; flex-direction: column; justify-content: center;">
+                                <% 
+                                try {
+                                    // Original scores (may contain NaN)
+                                    const originalBasic = BasicPercent;
+                                    const originalTrace = TracePercent;
+                                    const originalExplain = ExplainPercent;
+                                    const originalWrite = WritePercent;
+                                    
+                                    // Check which ones are NaN
+                                    const isBasicNaN = typeof originalBasic !== 'number' || isNaN(originalBasic);
+                                    const isTraceNaN = typeof originalTrace !== 'number' || isNaN(originalTrace);
+                                    const isExplainNaN = typeof originalExplain !== 'number' || isNaN(originalExplain);
+                                    const isWriteNaN = typeof originalWrite !== 'number' || isNaN(originalWrite);
+                                    
+                                    // Replace NaN with 0 for calculation but track original values
+                                    BasicPercent = isBasicNaN ? 0 : Math.max(0, originalBasic);
+                                    TracePercent = isTraceNaN ? 0 : Math.max(0, originalTrace);
+                                    ExplainPercent = isExplainNaN ? 0 : Math.max(0, originalExplain);
+                                    WritePercent = isWriteNaN ? 0 : Math.max(0, originalWrite);
+                                    
+                                    // Calculate how many valid scores we have
+                                    const validScoreCount = 
+                                        (isBasicNaN ? 0 : 1) + 
+                                        (isTraceNaN ? 0 : 1) + 
+                                        (isExplainNaN ? 0 : 1) + 
+                                        (isWriteNaN ? 0 : 1);
+                                    
+                                    // Calculate total score from valid scores only
+                                    const totalScore = BasicPercent + TracePercent + ExplainPercent + WritePercent;
+                                    
+                                    // Set thresholds based on absolute scores instead of percentages
+                                    const rookieThreshold = 64;  // 20% of 320
+                                    const kingThreshold = 256;   // 80% of 320
+                                    const maxScore = 320;        // Maximum possible score
+                                    
+                                    // Set base path for images
+                                    const basePaths = [
+                                        "/public/images", 
+                                        "/images",        
+                                        "../images",       
+                                        "./public/images", 
+                                        "./images"         
+                                    ];
+                                    
+                                    // Function to check how many scores are tied for highest among valid scores only
+                                    function countHighestScores() {
+                                        // Create array with only valid scores
+                                        const validScores = [];
+                                        if (!isBasicNaN) validScores.push({ value: BasicPercent, type: 'basic' });
+                                        if (!isTraceNaN) validScores.push({ value: TracePercent, type: 'trace' });
+                                        if (!isExplainNaN) validScores.push({ value: ExplainPercent, type: 'explain' });
+                                        if (!isWriteNaN) validScores.push({ value: WritePercent, type: 'write' });
+                                        
+                                        // If no valid scores, return 0
+                                        if (validScores.length === 0) return 0;
+                                        
+                                        // Find max value
+                                        const maxValue = Math.max(...validScores.map(item => item.value));
+                                        
+                                        // Return count of scores equal to max
+                                        return validScores.filter(item => item.value === maxValue).length;
+                                    }
+                                    
+                                    // Function to find which score type has highest value (ignoring NaN)
+                                    function getHighestScoreType() {
+                                        const scores = [
+                                            { value: BasicPercent, isNaN: isBasicNaN, type: 'basic' },
+                                            { value: TracePercent, isNaN: isTraceNaN, type: 'trace' },
+                                            { value: ExplainPercent, isNaN: isExplainNaN, type: 'explain' },
+                                            { value: WritePercent, isNaN: isWriteNaN, type: 'write' }
+                                        ];
+                                        
+                                        // Filter out NaN values
+                                        const validScores = scores.filter(item => !item.isNaN);
+                                        
+                                        // If no valid scores, return null
+                                        if (validScores.length === 0) return null;
+                                        
+                                        // Sort by value (highest first)
+                                        validScores.sort((a, b) => b.value - a.value);
+                                        
+                                        // Return the type with highest value
+                                        return validScores[0].type;
+                                    }
+                                    
+                                    // Variables to store character info
+                                    let characterName = "";
+                                    let imageNumber = "";
+                                    let altText = "";
+                                    
+                                    // REORDERED CONDITIONS: Check highest score conditions first
+                                    
+                                    // 1. If score is above kingThreshold (80%), it's KING
+                                    if(totalScore >= kingThreshold) { 
+                                        characterName = "KING";
+                                        imageNumber = "6";
+                                        altText = "KING";
+                                    } 
+                                    // 2. If we have valid scores that can be compared, check their relationships
+                                    else if(validScoreCount > 0) {
+                                        // Score is between 20% and 80%
+                                        if(totalScore >= rookieThreshold && totalScore < kingThreshold) { 
+                                            const tiedHighest = countHighestScores();
+                                            
+                                            // Check if all valid scores are tied
+                                            if(tiedHighest === validScoreCount && validScoreCount === 4) {
+                                                characterName = "Queen";
+                                                imageNumber = "8";
+                                                altText = "Queen";
+                                            } else if(tiedHighest === validScoreCount && validScoreCount === 3) { 
+                                                characterName = "Queen";
+                                                imageNumber = "8";
+                                                altText = "Queen";
+                                            } else if(tiedHighest === validScoreCount && validScoreCount === 2) { 
+                                                characterName = "Knight";
+                                                imageNumber = "7";
+                                                altText = "Knight";
+                                            } else {
+                                                // Find highest score type
+                                                const highestType = getHighestScoreType();
+                                                
+                                                if (highestType === 'basic') {
+                                                    characterName = "Knowledge";
+                                                    imageNumber = "2";
+                                                    altText = "Knowledge";
+                                                } else if (highestType === 'trace') {
+                                                    characterName = "Tracing";
+                                                    imageNumber = "3";
+                                                    altText = "Tracing";
+                                                } else if (highestType === 'explain') {
+                                                    characterName = "Explaining";
+                                                    imageNumber = "1";
+                                                    altText = "Explaining";
+                                                } else if (highestType === 'write') {
+                                                    characterName = "Writing";
+                                                    imageNumber = "4";
+                                                    altText = "Writing";
+                                                }
+                                            }
+                                        } 
+                                        // Score is below 20%
+                                        else if(totalScore < rookieThreshold) {
+                                            // Even if below rookieThreshold, check if we have a highest score to use
+                                            const highestType = getHighestScoreType();
+                                            
+                                            if (highestType && validScoreCount > 0) {
+                                                // Use highest score character even if total is low
+                                                if (highestType === 'basic') {
+                                                    characterName = "Knowledge";
+                                                    imageNumber = "2";
+                                                    altText = "Knowledge";
+                                                } else if (highestType === 'trace') {
+                                                    characterName = "Tracing";
+                                                    imageNumber = "3";
+                                                    altText = "Tracing";
+                                                } else if (highestType === 'explain') {
+                                                    characterName = "Explaining";
+                                                    imageNumber = "1";
+                                                    altText = "Explaining";
+                                                } else if (highestType === 'write') {
+                                                    characterName = "Writing";
+                                                    imageNumber = "4";
+                                                    altText = "Writing";
+                                                } else {
+                                                    // Fallback to Rookie if something went wrong
+                                                    characterName = "Rookie";
+                                                    imageNumber = "5";
+                                                    altText = "Rookie";
+                                                }
+                                            } else {
+                                                // No valid highest score, use Rookie
+                                                characterName = "Rookie";
+                                                imageNumber = "5";
+                                                altText = "Rookie";
+                                            }
+                                        }
+                                    } 
+                                    // 3. Only if all else fails, use Rookie character
+                                    else {
+                                        characterName = "Rookie";
+                                        imageNumber = "5";
+                                        altText = "Rookie";
+                                    }
+                                    
+                                    // Get image path with fallback support
+                                    const primaryImagePath = `${basePaths[0]}/${imageNumber}.png`;
+                                    
+                                    // Format total score display - show actual values including any NaN
+                                    const displayScores = [
+                                        isBasicNaN ? "NaN" : originalBasic,
+                                        isTraceNaN ? "NaN" : originalTrace,
+                                        isExplainNaN ? "NaN" : originalExplain,
+                                        isWriteNaN ? "NaN" : originalWrite
+                                    ];
+                                    
+                                    // For display purposes, show total of valid scores
+                                    const displayTotalScore = isBasicNaN && isTraceNaN && isExplainNaN && isWriteNaN 
+                                        ? "NaN" 
+                                        : totalScore;
+                                %>
+                                    <!-- แสดงรูปตัวละคร -->
+                                    <div style="text-align: center;">
+                                        <img 
+                                            src="<%= primaryImagePath %>" 
+                                            alt="<%= altText %>" 
+                                            onerror="
+                                                if (!this.dataset.triedCount) { this.dataset.triedCount = 0; }
+                                                const basePaths = ['/public/images', '/images', '../images', './public/images', './images'];
+                                                const imageNumber = '<%= imageNumber %>';
+                                                if (parseInt(this.dataset.triedCount) < basePaths.length - 1) {
+                                                    this.dataset.triedCount = parseInt(this.dataset.triedCount) + 1;
+                                                    this.src = basePaths[this.dataset.triedCount] + '/' + imageNumber + '.png';
+                                                } else {
+                                                    // If all paths fail, show text instead of image
+                                                    this.style.display = 'none';
+                                                    this.nextElementSibling.style.display = 'block';
+                                                }
+                                            "
+                                            style="max-width: 90%; height: auto;  object-fit: contain; display: block; margin: 0 auto;"
+                                        />
+                                        
+                                        <!-- Fallback text if image fails to load (hidden by default) -->
+                                        <div style="display: none; font-size: 48px; font-weight: bold; text-align: center; padding: 20px;">
+                                            <%= characterName %>
+                                        </div>
+                                        
+                                        <!-- แสดงคะแนนรวมใต้รูป -->
+                                        <div style="text-align: center; margin-top: 15px; margin-bottom: 10px; font-weight: bold;">
+                                            Total Score: <%= displayTotalScore %> / <%= maxScore %>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- ลบคะแนนรวมด้านข้าง -->
+                                    <style>
+                                        /* เพิ่ม CSS เพื่อซ่อนหรือกำหนดตำแหน่งใหม่สำหรับส่วนที่อาจมีการแสดงคะแนนรวมด้านข้าง */
+                                        .Total-Score-Side {
+                                            display: none !important;
+                                        }
+                                        
+                                        /* จัดให้ Character อยู่ในกรอบ */
+                                        .character-box {
+                                            box-sizing: border-box;
+                                        }
+                                        
+                                        .Character {
+                                            box-sizing: border-box;
+                                            overflow: hidden;
+                                        }
+                                    </style>
+                                <%
+                                } catch (error) { 
+                                %>
+                                    <div style="text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+                                        <div style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px;">
+                                            Rookie
+                                        </div>
+                                        <div style="text-align: center; margin-top: 15px; margin-bottom: 10px; font-weight: bold;">
+                                            Total Score: Error / <%= maxScore %>
+                                        </div>
+                                    </div>
                                 <% } %>
                             </div>
                         </div>
