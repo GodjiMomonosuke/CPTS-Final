@@ -343,6 +343,39 @@ app.use('/TeacherCourse-Functions',
   require('./routes/teacher/TeacherCourse/8_Functions-course.route')
 );
 
+//** TeacherLabquiz **//
+app.use('/TeacherCourse-Algorithms_and_Flowcharts-lab',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherLabquiz/1_Algorithms_and_Flowcharts-Lab.route')
+);
+app.use('/TeacherCourse-Datatype_and_Variable-lab',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherLabquiz/2_Datatype_and_Variable-Lab.route')
+);
+app.use('/TeacherCourse-Input_and_Output-lab',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherLabquiz/3_Input_and_Output-Lab.route')
+);
+app.use('/TeacherCourse-Operators_and_Expressions-lab',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherLabquiz/4_Operators_and_Expressions-Lab.route')
+);
+app.use('/TeacherCourse-Selection_Statements-lab',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherLabquiz/5_Selection_Statements-Lab.route')
+);
+app.use('/TeacherCourse-Loop_Statements-lab',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherLabquiz/6_Loop_Statements-Lab.route')
+);
+app.use('/TeacherCourse-Arrays_and_Strings-lab',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherLabquiz/7_Arrays_and_Strings-Lab.route')
+);
+app.use('/TeacherCourse-Functions-lab',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherLabquiz/8_Functions-Lab.route')
+);
 
 // Community route
 app.use('/community', 

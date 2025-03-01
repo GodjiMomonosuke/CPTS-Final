@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        .a{
+            text-decoration: none;
+            color: #8c521f;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .breadcrumb {
+            margin-bottom: 0;
+            background-color: white;
+            }
+        .blockquote-footer {
+            color:black;
+        }
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/home1.css' />
+    <link rel='stylesheet' href='stylesheets/compiler_line.css' />
+    <link rel='stylesheet' href='stylesheets/Drag_Drop.css' />
+    <link rel="stylesheet" href="stylesheets/quiz.css">
+    <title>Loop Statements</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+
+<!-- MIDDLE 1 -->
+<div class="content">
+    <div id = "content" class="container">
+<!--   C Language -->
+        <div class="accordion" id="accordionParentSyntax">
+            <!--   Introduce -->
+            <div id="collapseIntroduce" class="accordion-collapse collapse show" data-bs-parent="#accordionParentSyntax">
+                <h1>Loop Statements</h1>
+                
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><i href="/home" class="fa fa-home" style="font-size:16px"></i></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a class="a" href="/TeacherCourse">TeacherCourse</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a class="a" href="/TeacherCourse-Loop_Statements-lab">Loop Statements</a></li>
+                </ol>
+
+<%# START %> 
+<form action="/course-Loop_Statements-pretest/submit" method="post" autocomplete="off" >
+
+    
+
+    <%# LV1 %> <br>
+
+        
+       
+    
+                <h3>ข้อที่ 1 - 5: วัดความสามารถด้านความรู้ (Knowledge)</h3>
+                <!-- ข้อ 1 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        1. การใช้ for loop มีรูปแบบใด              
+                    </p>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-1">
+                        for (initialization; condition; update)
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-2">
+                        for (condition; initialization; update)
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-3">
+                        for (update; initialization; condition)
+                    </label>
+                    <input type="radio" class="btn-check" name="choice1" id="option1-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option1-4">
+                        for (condition; update; initialization)                     
+                    </label>
+                </div> <br>
+                <!-- ข้อ 2 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        2. การใช้ while loop ต้องมีอะไรอยู่ในวงเล็บ ( )
+                    </p>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-1">
+                        เงื่อนไข (condition) เท่านั้น
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-2">
+                        เงื่อนไข (condition) และคำสั่ง (statement)
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-3">
+                        คำสั่ง (statement) และค่าเริ่มต้น (initialization)
+                    </label>
+                    <input type="radio" class="btn-check" name="choice2" id="option2-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option2-4">
+                        เงื่อนไข (condition) และค่าเริ่มต้น (initialization)
+                    </label>
+                </div><br>
+                <!-- ข้อ 3 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        3. การใช้ do while loop จะเริ่มต้นทำตามคำสั่งกี่ครั้งก่อนจะมีการเช็คเงื่อนไข
+                    </p>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-1">
+                        0 ครั้ง
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-2">
+                        1 ครั้ง
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-3">
+                        2 ครั้ง
+                    </label>
+                    <input type="radio" class="btn-check" name="choice3" id="option3-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option3-4">
+                        ไม่มีจำกัด
+                    </label>
+                </div><br>
+                <!-- ข้อ 4 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; "> 
+                        4. คำสั่งใดจะทำให้โปรแกรมข้ามไปทำคำสั่งถัดไปในลูปทันที
+                    </p>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-1">
+                        break;
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-2">
+                        continue;
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-3">
+                        return;
+                    </label>
+                    <input type="radio" class="btn-check" name="choice4" id="option4-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option4-4">
+                        goto;
+                    </label>
+                </div><br>
+                <!-- ข้อ 5 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p1" style="color: white; ">
+                        5. Nested Loops หรือ ลูปซ้อนลูปคืออะไร
+                    </p>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-1">
+                        การใช้คำสั่ง goto ในลูป
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-2">
+                        การใช้ for loop และ while loop ทำงานร่วมกัน
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-3">
+                        การใช้ลูปซ้อนกันซ้อนเข้าไปในลูปอีกครั้ง            
+                    </label>
+                    <input type="radio" class="btn-check" name="choice5" id="option5-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option5-4">
+                        การใช้ if statement ภายในลูป
+                    </label>
+                </div><br>
+                <br>
+    <%# LV2 %>                     
+                <h3>ข้อที่ 6 - 10: วัดความสามารถด้านการติดตามโค้ด (Tracing)</h3>
+                <!-- ข้อ 6 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        6. หลังจากการทำงานของโค้ดนี้ โปรแกรมทำการวนลูปทั้งหมดกี่ครั้ง
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include < stdio.h> 
+                        <br>&ensp;int main() 
+                        <br>&ensp;{ 
+                        <br>&ensp;&ensp;int i;
+                        <br>&ensp;&ensp;for (i = 1; i <= 5; i++) {
+                        <br>&ensp;&ensp;printf("%d ", i);
+                        <br>&ensp;&ensp;}
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;} <br>
+                    </b> 
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice6" id="option6-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-1">
+                        3
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-2">
+                        4
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-3">
+                        5
+                    </label>
+                    <input type="radio" class="btn-check" name="choice6" id="option6-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option6-4">
+                        6
+                    </label>
+                </div><br>
+                <!-- ข้อ 7 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        7. หลังจากการทำงานของโค้ดนี้ ค่าที่จะถูกพิมพ์ออกทางหน้าจอคืออะไร <br>
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include < stdio.h> 
+                        <br>&ensp;int main() 
+                        <br>&ensp;{ 
+                        <br>&ensp;&ensp;int i;
+                        <br>&ensp;&ensp;for (i = 1; i <= 5; i++) {
+                        <br>&ensp;&ensp;printf("%d ", i);
+                        <br>&ensp;&ensp;}
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;} <br>     
+                    </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice7" id="option7-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-1">
+                        5 4 3 2 1
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-2">
+                        1 1 1 1 1
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-3">
+                        1 2 3 4 5
+                    </label>
+                    <input type="radio" class="btn-check" name="choice7" id="option7-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option7-4">
+                        0 1 2 3 4
+                    </label>
+                </div><br>
+                <!-- ข้อ 8 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        8. หลังจากการทำงานของโค้ดนี้ ค่าที่จะถูกพิมพ์ออกทางหน้าจอคืออะไร <br>
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include < stdio.h> 
+                        <br>&ensp;int main() 
+                        <br>&ensp;{ 
+                        <br>&ensp;&ensp;int i = 10;
+                        <br>&ensp;&ensp;while (i >= 0) {
+                        <br>&ensp;&ensp;printf("%d ", i);
+                        <br>&ensp;&ensp;i -= 2;
+                        <br>&ensp;&ensp;}
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;} <br> 
+                    </b>
+                    </p>
+                    
+                    <input type="radio" class="btn-check" name="choice8" id="option8-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-1">
+                        10 9 8 7 6 5 4 3 2 1 0
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-2">
+                        0 2 4 6 8 10
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-3">
+                        10 8 6 4 2 0
+                    </label>
+                    <input type="radio" class="btn-check" name="choice8" id="option8-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option8-4">
+                        10 7 4 1
+                    </label>
+                </div><br> 
+                <!-- ข้อ 9 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">   
+                        9. หลังจากการทำงานของโค้ดนี้ ค่าที่จะถูกพิมพ์ออกทางหน้าจอคืออะไร <br>
+                    <b style="font-weight: lighter;"> 
+                        <br>&ensp;#include < stdio.h> 
+                        <br>&ensp;int main() 
+                        <br>&ensp;{ 
+                        <br>&ensp;&ensp;int x = 5;
+                        <br>&ensp;&ensp;do {
+                        <br>&ensp;&ensp;printf("%d ", x);
+                        <br>&ensp;&ensp;x -= 3;
+                        <br>&ensp;&ensp;} while (x > 0);
+                        <br>&ensp;&ensp;return 0;
+                        <br>&ensp;} <br> 
+
+                    </b>
+                    </p>                   
+                    <input type="radio" class="btn-check" name="choice9" id="option9-1" autocomplete="off" value="A">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-1">
+                        5 2
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-2">
+                        5 2 -1
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-3">
+                        5
+                    </label>
+                    <input type="radio" class="btn-check" name="choice9" id="option9-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option9-4">
+                        5 3 1
+                    </label>
+                </div><br>  
+                <!-- ข้อ 10 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item p2" style="color: white;">
+                        10. หลังจากการทำงานของโค้ดนี้ ค่าที่จะถูกพิมพ์ออกทางหน้าจอคืออะไร <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int i, j;
+                            <br>&ensp;&ensp;for (i = 1; i <= 3; i++) {
+                            <br>&ensp;&ensp;for (j = 1; j <= 2; j++) {
+                            <br>&ensp;&ensp;printf("%d%d ", i, j);
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br> 
+                    </b>
+                    </p>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-1">
+                        123 123
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-2">
+                        111 222 333
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-3">
+                        11 12 21 22 31 32
+                    </label>
+                    <input type="radio" class="btn-check" name="choice10" id="option10-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option10-4">
+                        12 12 12 22 22 22 32 32 32
+                    </label>
+                </div><br>  
+        <%# LV3 %>
+                <h2>ข้อที่ 11 - 15: วัดความสามารถด้านการอธิบายโค้ด (Explaining)</h2>
+                <!-- ข้อ 11 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        11. โค้ดดังต่อไปนี้ทำงานอย่างไร <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int i;
+                            <br>&ensp;&ensp;for (i = 1; i <= 8; i++) {
+                            <br>&ensp;&ensp;printf("%d ", i);
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br> 
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-1">
+                        โค้ดนี้ใช้ for loop เพื่อพิมพ์ค่าของตัวแปร i ที่เริ่มจาก 8 และวนลูปไปจนถึง 1 โดยในแต่ละรอบของลูปจะแสดงค่าของ i และลด i ไป 1 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "8 7 6 5 4 3 2 1"
+                    </label>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-2">
+                        โค้ดนี้ใช้ for loop เพื่อพิมพ์ค่าของตัวแปร i ที่เริ่มจาก 1 และวนลูปไปจนถึง 8 โดยในแต่ละรอบของลูปจะแสดงค่าของ i และเพิ่ม i ไป 1 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "1 2 3 4 5 6 7 8"
+                    </label>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-3">
+                        โค้ดนี้ใช้ for loop เพื่อพิมพ์ค่าของตัวแปร i ที่เริ่มจาก 1 และวนลูปไปจนถึง 5 โดยในแต่ละรอบของลูปจะแสดงค่าของ i และเพิ่ม i ไป 1 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "1 2 3 4 5"
+                    </label>
+                    <input type="radio" class="btn-check" name="choice11" id="option11-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="option11-4">
+                        โค้ดนี้ใช้ for loop เพื่อพิมพ์ค่าของตัวแปร i ที่เริ่มจาก 0 และวนลูปไปจนถึง 8 โดยในแต่ละรอบของลูปจะแสดงค่าของ i และเพิ่ม i ไป 1 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "0 1 2 3 4 5 6 7 8"
+                    </label>
+                </div><br>  
+                <!-- ข้อ 12  -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        12. โค้ดดังต่อไปนี้ทำงานอย่างไร <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int i = 10;
+                            <br>&ensp;&ensp;while (i >= 0) {
+                            <br>&ensp;&ensp;printf("%d ", i);
+                            <br>&ensp;&ensp;i -= 3;
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br>     
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-1">
+                        โค้ดนี้ใช้ do while loop เพื่อพิมพ์ค่าของตัวแปร i ที่เริ่มจาก 10 และทำงานจนกว่า i จะมากกว่าหรือเท่ากับ 0 ในแต่ละรอบของลูปจะแสดงค่าของ i และลด i ลง 3 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "10 7 4 1"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-2">
+                        โค้ดนี้ใช้ for loop เพื่อพิมพ์ค่าของตัวแปร i ที่เริ่มจาก 10 และทำงานจนกว่า i จะมากกว่าหรือเท่ากับ 0 ในแต่ละรอบของลูปจะแสดงค่าของ i และลด i ลง 3 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "10 7 4 1"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-3">
+                        โค้ดนี้ใช้ while loop เพื่อพิมพ์ค่าของตัวแปร i ที่เริ่มจาก 10 และทำงานจนกว่า i จะมากกว่าหรือเท่ากับ 0 ในแต่ละรอบของลูปจะแสดงค่าของ i และลด i ลง 2 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "10 8 6 4 2 0"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice12" id="choice12-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice12-4">
+                        โค้ดนี้ใช้ while loop เพื่อพิมพ์ค่าของตัวแปร i ที่เริ่มจาก 10 และทำงานจนกว่า i จะมากกว่าหรือเท่ากับ 0 ในแต่ละรอบของลูปจะแสดงค่าของ i และลด i ลง 3 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "10 7 4 1"                    
+                    </label>
+                </div><br>  
+                <!-- ข้อ 13  -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        13. ข้อใดอธิบายการทำงานได้ถูกต้อง <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int x = 28;
+                            <br>&ensp;&ensp;do {
+                            <br>&ensp;&ensp;printf("%d ", x);
+                            <br>&ensp;&ensp;x -= 3;
+                            <br>&ensp;&ensp;} while (x > 0);
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br>     
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-1">
+                        โค้ดนี้ใช้ do while loop เพื่อพิมพ์ค่าของตัวแปร x ที่เริ่มจาก 28 และทำงานจนกว่า x จะมากกว่าเท่ากับ 0 ในแต่ละรอบของลูปจะแสดงค่าของ x และลด x ลง 3 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "28 25 22 19 16 13 10 7 4 1 0"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-2">
+                        โค้ดนี้ใช้ do while loop เพื่อพิมพ์ค่าของตัวแปร x ที่เริ่มจาก 28 และทำงานจนกว่า x จะมากกว่า 0 ในแต่ละรอบของลูปจะแสดงค่าของ x และลด x ลง 3 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "28 22 19 16 13 10 7 4 1"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-3">
+                        โค้ดนี้ใช้ while loop เพื่อพิมพ์ค่าของตัวแปร x ที่เริ่มจาก 28 และทำงานจนกว่า x จะมากกว่า 0 ในแต่ละรอบของลูปจะแสดงค่าของ x และลด x ลง 3 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "28 25 22 19 16 13 10 7 4 1"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice13" id="choice13-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice13-4">
+                        โค้ดนี้ใช้ do while loop เพื่อพิมพ์ค่าของตัวแปร x ที่เริ่มจาก 28 และทำงานจนกว่า x จะมากกว่า 0 ในแต่ละรอบของลูปจะแสดงค่าของ x และลด x ลง 3 ในทุกๆ รอบ ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "28 25 22 19 16 13 10 7 4 1"                    
+                    </label>
+                </div><br>  
+                <!-- ข้อ 14  -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        14. ข้อใดอธิบายการทำงานได้ถูกต้อง <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;int main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int i, j;
+                            <br>&ensp;&ensp;for (i = 1; i <= 3; i++) {
+                            <br>&ensp;&ensp;for (j = 1; j <= 2; j++) {
+                            <br>&ensp;&ensp;printf("%d%d ", i, j);
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br>  
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-1">
+                        โค้ดนี้ใช้ nested for loop (ลูปซ้อนลูป) เพื่อพิมพ์ค่าของตัวแปร i และ j ที่เริ่มจาก 1 และทำงานตามเงื่อนไขในลูป โดยในแต่ละรอบของลูปภายในจะแสดงค่าของ i และ j แล้วเพิ่ม j ไป 1 ในทุกๆ รอบภายใน ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "12 11 21 22 31 32"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-2">
+                        โค้ดนี้ใช้ nested for while loop (ลูปซ้อนลูป) เพื่อพิมพ์ค่าของตัวแปร i และ j ที่เริ่มจาก 1 และทำงานตามเงื่อนไขในลูป โดยในแต่ละรอบของลูปภายในจะแสดงค่าของ i และ j แล้วเพิ่ม j ไป 1 ในทุกๆ รอบภายใน ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "11 12 21 22 31 32"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-3">
+                        โค้ดนี้ใช้ nested for loop (ลูปซ้อนลูป) เพื่อพิมพ์ค่าของตัวแปร i และ j ที่เริ่มจาก 1 และทำงานตามเงื่อนไขในลูป โดยในแต่ละรอบของลูปภายในจะแสดงค่าของ i และ j แล้วเพิ่ม j ไป 1 ในทุกๆ รอบภายใน ผลลัพธ์ที่จะถูกพิมพ์ออกทางหน้าจอคือ "11 12 21 22 31 32"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice14" id="choice14-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice14-4">
+                        ถูกทุกข้อ
+                    </label>
+                </div><br>  
+                <!-- ข้อ 15 -->
+                <div class="list-group">
+                    <p type="text" class="list-group-item list-group-item-action bg-dark" style="color: white;">
+                        15. ข้อใดอธิบายการทำงานได้ถูกต้อง <br>
+                        <b style="font-weight: lighter;"> 
+                            <br>&ensp;#include < stdio.h> 
+                            <br>&ensp;void main() 
+                            <br>&ensp;{ 
+                            <br>&ensp;&ensp;int i;
+                            <br>&ensp;&ensp;for (i = 1; i <= 5; i++) {
+                            <br>&ensp;&ensp;printf("%d ", i);
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;printf("\n");
+                            <br>&ensp;&ensp;int j = 10;
+                            <br>&ensp;&ensp;while (j >= 6) {
+                            <br>&ensp;&ensp;printf("%d ", j);
+                            <br>&ensp;&ensp;j--;
+                            <br>&ensp;&ensp;}
+                            <br>&ensp;&ensp;return 0;
+                            <br>&ensp;} <br>  
+                        </b></p>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-1" autocomplete="off" value="A" required>
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-1">
+                        เริ่มต้นด้วยการใช้ for loop เพื่อพิมพ์ตัวเลขจาก 1 ถึง 5 ได้ผลเป็น "0 1 2 3 4 5" และใช้ while loop เพื่อพิมพ์ตัวเลขจาก 10 ถึง 6 ได้ผลเป็น "10 9 8 7 6"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-2" autocomplete="off" value="B">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-2">
+                        เริ่มต้นด้วยการใช้ while loop เพื่อพิมพ์ตัวเลขจาก 1 ถึง 6 ได้ผลเป็น "1 2 3 4 5 6" และใช้ for loop เพื่อพิมพ์ตัวเลขจาก 10 ถึง 5 ได้ผลเป็น "10 9 8 7 5"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-3" autocomplete="off" value="C">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-3">
+                        เริ่มต้นด้วยการใช้ for loop เพื่อพิมพ์ตัวเลขจาก 1 ถึง 5 ได้ผลเป็น "1 2 3 4 5" และใช้ while loop เพื่อพิมพ์ตัวเลขจาก 10 ถึง 6 ได้ผลเป็น "10 9 8 7 6"                    
+                    </label>
+                    <input type="radio" class="btn-check" name="choice15" id="choice15-4" autocomplete="off" value="D">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="choice15-4">
+                        เริ่มต้นด้วยการใช้ while loop เพื่อพิมพ์ตัวเลขจาก 1 ถึง 5 ได้ผลเป็น "1 2 3 4 5" และใช้ for loop เพื่อพิมพ์ตัวเลขจาก 10 ถึง 6 ได้ผลเป็น "10 9 8 7 6"                    
+                    </label>
+                </div><br>  
+        <%# LV4 %>                
+                <h2>ข้อที่ 16 - 20: วัดความสามารถด้านการเขียนโปรแกรม (Writing)</h2> 
+                     <br>
+
+                <!-- ข้อ 16 -->
+                <div style="background-color: #363e62;">
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #363e62;">
+                        16.1 (Deployment) ให้เขียนโปรแกรมแสดงสูตรคูณ รับค่าของตัวแปร สร้างเงื่อนไขใช้คำสั่ง for และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)
+                        <br></p>
+                    <div class="group2"  style="margin: 20px;">
+                        <iframe src="https://drive.google.com/file/d/1NCFVwnLT9L4WsbNvJUipqavLCad1zx8v/preview" width="90%" height="600" allow="autoplay"></iframe>
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                    </div>    
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="วางโค้ดที่นี่" rows="10" cols="30" name="code" required></textarea>
+                    </div>
+                </div>
+                
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #363e62;">
+                    16.2 (Result) แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 16.1 (1 คะแนน)
+                </p>
+                    <textarea class="form-control" placeholder="คำตอบ" rows="4" cols="30" name="expResult16" required></textarea>
+                <br>
+                <p type="text" class="list-group-item list-group-item-action"  style="color: white; background-color: #363e62;">
+                    16.3 (Improvement) เพิ่มเติมโค้ดให้สามารถตรวจสอบค่าของตัวเลข number ที่ป้อนว่าเป็นจำนวนเต็มบวกหรือไม่ ถ้าไม่ใช่ให้แจ้งเตือนแสดงข้อความ "Please enter a positive integer." (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้)<br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="คำตอบ" name="sendLink16" type="text" rows="4" required></textarea>
+                            </div>
+                <br><br>
+
+                <!-- ข้อ 17 -->
+                <div style="background-color: #8c521f;">
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #8c521f;">
+                        17.1 (Deployment) ให้เขียนโปรแกรมแสดงผลรวมของตัวเลขตามจำนวนที่กำหนด โดยให้รับค่าของตัวแปร สร้างเงื่อนไขใช้คำสั่ง while และแสดงค่าของข้อมูลดังนี้ <br>(3 คะแนน)
+                    <br></p>
+                    <div class="group2" style="margin: 20px;">
+                        <iframe src="https://drive.google.com/file/d/1X6IaInO0TTEDlarsfj-gCaptJIluu3_X/preview" width="90%" height="600" allow="autoplay"></iframe>                
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="วางโค้ดที่นี่" rows="10" cols="30" name="sendLink171" required></textarea>
+                    </div>
+                </div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #8c521f;">
+                    17.2 (Result) แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 17.1 (1 คะแนน)</p>
+                    <textarea class="form-control" placeholder="คำตอบ" rows="4" cols="30" name="expResult17" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #8c521f;">
+                    17.3 (Improvement) ให้แก้ไขโค้ดนี้เปลี่ยนจากการใช้ while loop เป็น for loop แทน (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="คำตอบ" name="sendLink172" type="text" rows="4" required></textarea>
+                    </div>
+                <br><br>
+
+                <!-- ข้อ 18 -->
+                <div style="background-color: #366241;">
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #366241;">
+                        18.1 (Deployment) เขียนโปรแกรมท้ายตัวเลข 1-100 โดยให้รับค่าของตัวแปร สร้างเงื่อนไขใช้คำสั่ง do while และแสดงค่าของข้อมูลดังนี้ (3 คะแนน)
+                        <br>
+                    </p>
+                    <div class="group2" style="margin: 20px;">
+                        <iframe src="https://drive.google.com/file/d/1bIYtpUKh3pY2FphsoVlpUguKvZiT2pUo/preview" width="90%" height="600" allow="autoplay"></iframe>
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                    </div>
+                        <div class="form-group">
+                        <textarea class="form-control" placeholder="วางโค้ดที่นี่" rows="10" cols="30" name="sendLink181" required></textarea>
+                    </div>
+                </div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #366241;">
+                    18.2 (Result) แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 18.1 (1 คะแนน)</p>
+                    <textarea class="form-control" placeholder="คำตอบ"  rows="4" cols="30" name="expResult18" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #366241;">
+                    18.3 (Improvement) แก้ไขเป็นใช้ while loop แทน (1 คะแนน) <br>
+
+                    Hint. ใช้ while(1) จะเป็นการสั่งให้ทำงานตลอดเพราะเงื่อนไขตั้งเป็น 1 คือเป็นจริงเสมอ
+                              ใช้ break ช่วยหยุดคำสั่งเมื่อผลลัพธ์ถูกต้อง
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control"  placeholder="คำตอบ" rows="4" cols="30" name="sendLink182" required></textarea>
+    
+                        </div>
+                <br><br>
+
+                <!-- ข้อ 19 -->
+                <div style="background-color: #453662;">
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #453662;">
+                        19.1 (Deployment) เขียนโปรแกรมสร้างรูปสามเหลี่ยม โดยรับค่าของตัวแปร สร้างเงื่อนไขใช้คำสั่ง Nested Loops (for ซ้อน for) และแสดงค่าของข้อมูลดังนี้ <br>(3 คะแนน)<br>
+                    </p>
+                    <div class="group2" style="margin: 20px;">
+                        <iframe src="https://drive.google.com/file/d/1g8Y5MN3Oc5CZ8bw1klvBXM_Vlnfra-sn/preview" width="90%" height="600" allow="autoplay"></iframe>
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                    </div>    
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="วางโค้ดที่นี่" rows="4" cols="30" name="sendLink191" required></textarea>
+                    </div>
+                </div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #453662;">
+                    19.2 (Result) แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 19.1 (1 คะแนน)</p>
+                    <textarea class="form-control" placeholder="คำตอบ" rows="4" cols="30" name="expResult19" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #453662;">
+                    19.3 (Improvement) อ้างอิงโค้ดเดิมให้เขียนโปรแกรมใหม่โดยให้สร้างเป็นรูปสี่เหลี่ยม (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="คำตอบ" rows="4" cols="30" name="sendLink192" required></textarea>
+                    </div>
+                <br><br>
+
+                <!-- ข้อ 20 -->
+                <div style="background-color: #687521;">
+                    <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #687521;">
+                        20.1 (Deployment) เขียนโปรแกรมการคำนวณเกรดนักเรียน โดยให้รับค่าของตัวแปร สร้างเงื่อนไขวนลูป และแสดงค่าของข้อมูลดังนี้
+                        <br></p>
+                    <div class="group2" style="margin: 20px;">
+                        <iframe src="https://drive.google.com/file/d/1a8y56ondTbiB1PyJec7fVR0ylyGIhJTe/preview" width="90%" height="600" allow="autoplay"></iframe> 
+                        <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="100%" height="600px"></iframe>  
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="วางโค้ดที่นี่" rows="10" cols="30" name="sendLink201" required></textarea>
+                    </div>
+                </div>
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #687521;">
+                    20.2 (Result) แสดงผลลัพธ์ที่ได้ให้ครบทุกกรณีของข้อที่ 20.1 (1 คะแนน)</p>
+                    <textarea class="form-control" placeholder="คำตอบ" rows="4" cols="30" name="expResult20" required></textarea>
+                <br>
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #687521;">
+                    20.3 (Improvement) แก้ไขโค้ดโดยเพิ่มเติมให้มีการตรวจสอบค่าคะแนนของ score ต้องอยู่ในช่วง 0 - 100 เท่านั้น ถ้าไม่ใช่ให้มีการแจ้งเตือนเป็นข้อความ "Please enter a score between 0 and 100. " (1 คะแนน)
+                    <br>(ให้เขียนอธิบายสิ่งที่แก้ไข และผลลัพธ์ที่ได้) 
+                    <br>
+                    </p>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="คำตอบ" rows="4" cols="30" name="sendLink202" required></textarea>
+    
+                        </div>
+                
+
+                <p type="text"  class="list-group-item list-group-item-action" style="color: white; background-color: #465e8f;">
+                    ประเมินความมั่นใจในการทำ Pre-Test จาก 1-5 <br> (5 คือมากสุด, 1 คือน้อยสุด)
+                </p>
+                    <input type="radio" class="btn-check" name="rating" id="rating-1" autocomplete="off" value="1">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-1">
+                        1 ⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-2" autocomplete="off" value="2">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-2">
+                        2 ⭐⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-3" autocomplete="off" value="3">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-3">
+                        3 ⭐⭐⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-4" autocomplete="off" value="4">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-4">
+                        4 ⭐⭐⭐⭐
+                    </label>
+                    <input type="radio" class="btn-check" name="rating" id="rating-5" autocomplete="off" value="5">
+                    <label class="list-group-item btn-outline-dark list-group-item-action" for="rating-5">
+                        5 ⭐⭐⭐⭐⭐
+                    </label>
+
+                    <br><br>
+
+
+
+                Language : <select name="lang"><option value="C">C</option></select>
+                <br>
+                <br>
+
+                <div class="d-grid gap-2">
+                    <a href="/TeacherCourse" class="btn btn-outline-dark">ย้อนกลับ</a>
+                </div>
+</form> 
+
+<%# END %> 
+
+        <br></div>
+        </div>
+    </div>
+</div>
+
+<script src="javascripts/compilerStyle.js"></script>
