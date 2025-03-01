@@ -52,13 +52,18 @@
             display: grid;
             grid-template-columns: 60% 40%;
         }
+        .grid3 {
+            display: grid;
+            grid-template-columns: 400px auto auto;
+        }
         .group2{
             background-color: #fefefe;
             padding: 10px;
             border-radius: 10px;
         }
         @media (max-width: 1500px) {
-            .grid2 {display: block;}
+            .grid2,.grid3 {display: block;}
+            .link{width: auto;}
             html {height: fit-content;}
         }
         
@@ -74,8 +79,8 @@
         <a href="/check"><p class="link">แบบทดสอบก่อนเรียน-หลังเรียน</p></a>
         <a href="/checkQuiz"><p class="link">Project Quiz</p></a>
     </div>
-        
-        
+        <br>
+        <hr>
     
     
     <br>
@@ -114,6 +119,16 @@
             <a href="/TeacherCourse-Functions-lab"><p class="linkpretest">แบบทดสอบ</p></a>
         </div>
     </div>
+
+    <br>
+    <h3>Project Quiz</h3>
+    <div class="grid3">
+        <a href="/TeacherCourse-Ticket_Booking_System"><p class="link">Project Quiz 1</p></a>
+        <a href="/TeacherCourse-Point_of_Sales_System"><p class="link">Project Quiz 2</p></a>
+        <div></div>
+        <a href="/TeacherCourse-Project_QUIZ3"><p class="link">Project Quiz 3</p></a>
+    </div>
+
 </div>
 
 

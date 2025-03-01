@@ -377,6 +377,21 @@ app.use('/TeacherCourse-Functions-lab',
   require('./routes/teacher/TeacherLabquiz/8_Functions-Lab.route')
 );
 
+//** Project */
+app.use('/TeacherCourse-Ticket_Booking_System',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherProject/1_TicketBookingSystem.route')
+);
+app.use('/TeacherCourse-Point_of_Sales_System',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherProject/2_PointofSalesSystem.route')
+);
+app.use('/TeacherCourse-Project_QUIZ3',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherProject/3_ProjectQUIZ3.route')
+);
+
+
 // Community route
 app.use('/community', 
   ensureLoggedIn({ redirectTo: '/auth/login' }),

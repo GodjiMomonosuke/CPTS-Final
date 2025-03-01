@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        .group2 {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 10px;
+        }
+        a.DrawIo {
+            color: black;
+            text-decoration: none;
+            background-color: #d27700;
+            padding-top: 15px;
+            height: 60px;
+            width: 600px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        .a{
+            text-decoration: none;
+            color: #8c521f;
+        }
+    </style>
+
+    <link rel='stylesheet' href='stylesheets/home.css' />
+    <link rel='stylesheet' href='stylesheets/compiler_line.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>Point of Sales System</title>
+</head>
+
+<body>
+    <!-- Narbar-->
+    <%- include('../layouts/navbar') %>
+    <!-- end of Narbar-->
+
+<br><br><br>
+    <div id = "content" class="container">
+        
+<form action="/project-Point_of_Sales_System/submit" method="post" autocomplete="off" > 
+        <%# LV4 %>                
+        <h2>Point of Sales System</h2> 
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><i href="/home" class="fa fa-home" style="font-size:16px"></i></li>
+            <li class="breadcrumb-item active" aria-current="page"><a class="a" href="/TeacherCourse">TeacherCourse</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a class="a" href="/TeacherCourse-Point_of_Sales_System">Point of Sales System</a></li>
+        </ol> <br>
+        <p>ให้ซื่อสัตย์ในการทำข้อสอบ
+            Project QUIZ #2 ในวิชา CE213 2/2566 <br>
+            เอกสารประกอบการเรียน <a href="https://bit.ly/ce2132024" target="_blank">https://bit.ly/ce2132024</a>  <br>
+            อนุญาตให้เปิดเอกสาร Lectures และ Assignments ประกอบการเรียนได้เท่านั้น <br>
+            ไม่อนุญาตให้ค้นหาข้อมูลทาง Internet
+        </p>
+        
+        <div class="group2" style="background-color: #212121;">
+            <iframe src="https://drive.google.com/file/d/1Lc9NMPH1fpHMb-GTLUmBYXFI9DGfMqY3/preview" width="600px" height="800" allow="autoplay"></iframe>
+            <div>
+                <a class="DrawIo btn" href="https://app.diagrams.net/" target="_blank">Click to go to Draw.io</a>
+
+                <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="600px" height="740px"></iframe> 
+            </div>
+            
+        </div>  
+
+        <br>
+        <div class="form-group">
+            <h3>Approach</h3>
+            <p>Flowchart ใช้ draw.io ในการวาด (30 คะแนน)</p>
+            <textarea class="form-control" style="height: 100px;" rows="4" cols="30" name="sendLink16" required></textarea>
+        </div><br>
+
+        <div class="form-group">
+            <h3>Deployment</h3>
+            <p> Source Code ภาษาซีที่เขียนขึ้น (50 คะแนน)</p>
+            <textarea  class="form-control"  name="code" rows="20" required></textarea>
+        </div><br>
+
+        <div class="form-group">
+            <h3>Result</h3>
+            <p>แสดงผลลัพธ์ของโปรแกรม (10 คะแนน)</p>
+            <textarea class="form-control" style="height: 100px;" rows="4" name="expResult16" cols="50"></textarea>
+        </div><br>
+        
+        <div class="form-group">
+            <h3>Improvement</h3>
+            <p>ตอบคำถาม (10 คะแนน)</p>
+            <p>ถ้าต้องการตรวจสอบว่าผู้ใช้ป้อนตัวเลือกเมนูไม่ถูกต้อง ต้องเขียนคำสั่งและแสดงข้อความอย่างไรเพื่อให้ผู้ใช้รู้ เขียนให้เข้าใจพอสังเขป</p>
+            <textarea class="form-control" style="height: 150px;" rows="4" name="expResult17" cols="50"></textarea>
+        </div><br>
+
+
+        Language : <select name="lang"><option value="C">C</option></select>
+        
+        <br><br>
+        <div class="d-grid gap-2">
+            <a href="/TeacherCourse" class="btn btn-outline-dark">ย้อนกลับ</a>
+        </div>
+        <br>
+    </div>
+</form>
+<script src="javascripts/compilerStyle.js"></script>
+</body>
+
+</html>
