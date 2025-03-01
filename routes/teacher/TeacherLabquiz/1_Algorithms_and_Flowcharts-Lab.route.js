@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
       dbo.collection("StudentRecommendation").find(query).toArray(function(err) {
         if (err) throw err;
     
-        res.render('teacher/TeacherLabquiz/1_Algorithms_and_Flowcharts-lab', { person });
+        res.render('teacher/TeacherLabQuiz/1_Algorithms_and_Flowcharts-lab', { person });
       });
     });
 

@@ -391,6 +391,10 @@ app.use('/TeacherCourse-Project_QUIZ3',
   require('./routes/teacher/TeacherProject/3_ProjectQUIZ3.route')
 );
 
+app.use('/TeacherCourse-Functions',
+  ensureLoggedIn({ redirectTo: '/auth/login' }),
+  require('./routes/teacher/TeacherProject/8_Functions-Lab.route')
+);
 
 // Community route
 app.use('/community', 
