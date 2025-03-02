@@ -3,7 +3,6 @@ const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://cpts9850:Cpts1234@cluster0.fvblynd.mongodb.net";
 const mydatabase = "Cluster0";
 
-
 router.get('/', async (req, res, next) => {
   const person = req.user;
   if(person != undefined){
@@ -15,7 +14,7 @@ router.get('/', async (req, res, next) => {
       dbo.collection("StudentRecommendation").find(query).toArray(function(err) {
         if (err) throw err;
     
-        res.render('teacher/TeacherLabquiz/8_Functions-lab', { person  });
+        res.render('teacher/TeacherProject/6_Loop_Statements-lab', { person  });
       });
     });
 
