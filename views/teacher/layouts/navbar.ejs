@@ -25,7 +25,10 @@
     .navshadow {
       box-shadow: 0 0 15px 5px #cd7161;
     } 
-    a {
+    a.nav-link {
+      color:#ffffff
+    }
+    a.nav-link:hover {
       color: black;
     }
 </style>
@@ -47,29 +50,29 @@
           <% } %>
           <% if (user.role === 'Teacher') { %>
             <ul class="nav navbar-nav hidden-xs">
-              <li class="nav-item "><a class="nav-link" href="/" style="color: #ffffff;">Home</a></li>
-              <li class="nav-item "><a class="nav-link" href="/class" style="color: #ffffff;">Class </a></li>
-              <li class="nav-item "><a class="nav-link" href="/TeacherCourse" style="color: #ffffff;">Course </a></li>
-              <!--<li class="nav-item "><a class="nav-link" href="/check" style="color: #ffffff;">Lab-Check </a></li>
-              <li class="nav-item "><a class="nav-link" href="/checkQuiz" style="color: #ffffff;">Quiz-Check </a></li>-->
-              <li class="nav-item "><a class="nav-link" href="/community" style="color: #ffffff;">Chat</a></li>
+              <li class="nav-item "><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item "><a class="nav-link" href="/class">Class </a></li>
+              <li class="nav-item "><a class="nav-link" href="/TeacherCourse">Course/Checking</a></li>
+              <!--<li class="nav-item "><a class="nav-link" href="/check">Lab-Check </a></li>
+              <li class="nav-item "><a class="nav-link" href="/checkQuiz">Quiz-Check </a></li>-->
+              <li class="nav-item "><a class="nav-link" href="/community">Message</a></li>
             </ul>
             <ul class="navbar-nav mb-0 ms-auto">
-              <li class="nav-item nav-link" style="color: #ffffff;" ><%= user.name %></li>
-              <li class="nav-item "><a class="nav-link"  href="/auth/logout" style="color: #ffffff;"><i class="fa fa-power-off" style="font-size: 25px;;align-items: center; " ></i></a></li>     
+              <li class="nav-item nav-link" style="color: #ffffff;"><%= user.name %></li>
+              <li class="nav-item "><a class="nav-link"  href="/auth/logout"><i class="fa fa-power-off" style="font-size: 25px;;align-items: center; " ></i></a></li>     
             </ul>
           <% } %>
           <% if (user.role === 'Student') { %>
             <ul class="nav navbar-nav hidden-xs">
-              <li class="nav-item "><a class="nav-link" href="/" style="color: #ffffff;">Home</a></li>
-              <li class="nav-item "><a class="nav-link" href="/course" style="color: #ffffff;">Course</a></li>
-              <li class="nav-item "><a class="nav-link" href="/project" style="color: #ffffff;">Project</a></li>
-              <li class="nav-item "><a class="nav-link" href="/index_ai" style="color: #ffffff;">Ai</a></li>
-              <li class="nav-item "><a class="nav-link" href="/community" style="color: #ffffff;">Chat</a></li>
+              <li class="nav-item "><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item "><a class="nav-link" href="/course">Course</a></li>
+              <li class="nav-item "><a class="nav-link" href="/project">Project</a></li>
+              <li class="nav-item "><a class="nav-link" href="/index_ai">Ai</a></li>
+              <li class="nav-item "><a class="nav-link" href="/community">Message</a></li>
             </ul>
             <ul class="navbar-nav mb-0 ms-auto">
               <li class="nav-item nav-link" style="color: #ffffff;" ><%= user.name %></li>
-              <li class="nav-item "><a class="nav-link"  href="/auth/logout" style="color: #ffffff;"><i class="fa fa-power-off" style="font-size: 25px;;align-items: center; " ></i></a></li>     
+              <li class="nav-item "><a class="nav-link"  href="/auth/logout"><i class="fa fa-power-off" style="font-size: 25px;;align-items: center; " ></i></a></li>     
             </ul>
           <% } %>
         <% } else { %>
