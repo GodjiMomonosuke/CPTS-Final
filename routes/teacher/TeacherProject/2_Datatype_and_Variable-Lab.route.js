@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
       dbo.collection("StudentRecommendation").find(query).toArray(function(err) {
         if (err) throw err;
     
-        res.render('teacher/TeacherLabquiz/4_Operators_and_Expressions-lab', { person  });
+        res.render('teacher/TeacherProject/2_Datatype_and_Variable-lab', { person });
       });
     });
 
@@ -25,8 +25,3 @@ router.get('/', async (req, res, next) => {
 
 
 module.exports = router;
-
-
-
-
-
