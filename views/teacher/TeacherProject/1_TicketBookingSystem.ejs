@@ -15,30 +15,46 @@
             -moz-user-select: none;
             user-select: none;
         }
-        .group2 {
+        .grid2 {
             display: grid;
             grid-template-columns: 50% 50%;
-            padding: 10px;
+            padding-top: 10px;
         }
         a.DrawIo {
             color: black;
             text-decoration: none;
             background-color: #d27700;
-            padding-top: 15px;
+            padding: 15px;
             height: 60px;
-            width: 600px;
+            width: 300px;
             text-align: center;
         }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
+        a.compiler {
+            color: black;
+            text-decoration: none;
+            background-color: #ffffff;
+            padding: 15px;
+            height: 60px;
+            width: 300px;
+            text-align: center;
+        }
+        .PJQbox{
+            display: flex;
         }
         .a{
             text-decoration: none;
             color: #8c521f;
         }
+        @media (max-width: 1500px) {
+            .grid2 {display: block;}
+            
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
     </style>
 
     
@@ -70,11 +86,13 @@
         อนุญาตให้เปิดเอกสาร Lectures และ Assignments ประกอบการเรียนได้เท่านั้น <br>
         ไม่อนุญาตให้ค้นหาข้อมูลทาง Internet</p>
 
-        <div class="group2" style="background-color: #212121;">
+        <div class="grid2" style="background-color: #212121;">
             <iframe src="https://drive.google.com/file/d/1PpWrOPCdhHaGmN-OWPOpa4aYoqvlZeAq/preview" width="600px" height="800" allow="autoplay"></iframe>
             <div>
-                <a class="DrawIo btn" href="https://app.diagrams.net/" target="_blank">Click to go to Draw.io</a>
-
+                <div class="PJQbox">
+                    <a class="DrawIo btn" href="https://app.diagrams.net/" target="_blank">Click to go to Draw.io</a>
+                    <a class="compiler btn" href="https://www.programiz.com/c-programming/online-compiler/" target="_blank">Click to go to Draw.io</a>
+                </div>
                 <iframe src="https://www.programiz.com/c-programming/online-compiler/" width="600px" height="740px"></iframe> 
             </div>
             
