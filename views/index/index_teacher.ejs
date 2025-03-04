@@ -58,6 +58,29 @@
             font-size: 14px;
             margin-top: 2px;
         }
+        .aaa{ 
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding-top: 2px;
+            background-color: #ffffff;
+            border-radius: 100%;
+        }
+        .firstSpan:hover .secondSpan {
+            visibility: visible;
+        }
+        .firstSpan .secondSpan {
+            visibility: hidden;
+            width: 120px;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            margin: -50px;
+        }
 
     </style>
 
@@ -81,9 +104,9 @@
         <div  class="group2">
             <div>
                 <h4 class="chakra-petch-regular">Progress</h4>  
-                แบบฝึกหัดที่นักเรียนทำไปแล้ว 
+                <p>(ชี้เพื่อดูว่าแต่ละบททำไปแล้วกี่ครั้ง)</p>
                 <div><!-- pretest progress-->
-                    Pre-test
+                    Pre-test 
                     <% if (pretest_progress === 0) { %>
                         <div style="display: flex;">
                             <p class="station_w">1</p>
@@ -98,7 +121,7 @@
                     <% }%>
                     <% if (pretest_progress === 1) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest1 %> ครั้ง</span></p>
                             <p class="station_w">2</p>
                             <p class="station_w">3</p>
                             <p class="station_w">4</p>
@@ -110,8 +133,8 @@
                     <% }%>
                     <% if (pretest_progress === 2) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest2 %> ครั้ง</span></p>
                             <p class="station_w">3</p>
                             <p class="station_w">4</p>
                             <p class="station_w">5</p>
@@ -122,9 +145,9 @@
                     <% }%>
                     <% if (pretest_progress === 3) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest3 %> ครั้ง</span></p>
                             <p class="station_w">4</p>
                             <p class="station_w">5</p>
                             <p class="station_w">6</p>
@@ -134,10 +157,10 @@
                     <% }%>
                     <% if (pretest_progress === 4) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
-                            <p class="station">4</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest3 %> ครั้ง</span></p>
+                            <p class="station firstSpan">4<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest4 %> ครั้ง</span></p>
                             <p class="station_w">5</p>
                             <p class="station_w">6</p>
                             <p class="station_w">7</p>
@@ -146,11 +169,11 @@
                     <% }%>
                     <% if (pretest_progress === 5) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
-                            <p class="station">4</p>
-                            <p class="station">5</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest3 %> ครั้ง</span></p>
+                            <p class="station firstSpan">4<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest4 %> ครั้ง</span></p>
+                            <p class="station firstSpan">5<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest5 %> ครั้ง</span></p>
                             <p class="station_w">6</p>
                             <p class="station_w">7</p>
                             <p class="station_w">8</p>
@@ -158,38 +181,38 @@
                     <% }%>
                     <% if (pretest_progress === 6) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
-                            <p class="station">4</p>
-                            <p class="station">5</p>
-                            <p class="station">6</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest3 %> ครั้ง</span></p>
+                            <p class="station firstSpan">4<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest4 %> ครั้ง</span></p>
+                            <p class="station firstSpan">5<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest5 %> ครั้ง</span></p>
+                            <p class="station firstSpan">6<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest6 %> ครั้ง</span></p>
                             <p class="station_w">7</p>
                             <p class="station_w">8</p>
                         </div>
                     <% }%>
                     <% if (pretest_progress === 7) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
-                            <p class="station">4</p>
-                            <p class="station">5</p>
-                            <p class="station">6</p>
-                            <p class="station">7</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest3 %> ครั้ง</span></p>
+                            <p class="station firstSpan">4<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest4 %> ครั้ง</span></p>
+                            <p class="station firstSpan">5<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest5 %> ครั้ง</span></p>
+                            <p class="station firstSpan">6<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest6 %> ครั้ง</span></p>
+                            <p class="station firstSpan">7<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest7 %> ครั้ง</span></p>
                             <p class="station_w">8</p>
                         </div>
                     <% }%>
                     <% if (pretest_progress === 8) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
-                            <p class="station">4</p>
-                            <p class="station">5</p>
-                            <p class="station">6</p>
-                            <p class="station">7</p>
-                            <p class="station">8</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest3 %> ครั้ง</span></p>
+                            <p class="station firstSpan">4<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest4 %> ครั้ง</span></p>
+                            <p class="station firstSpan">5<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest5 %> ครั้ง</span></p>
+                            <p class="station firstSpan">6<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest6 %> ครั้ง</span></p>
+                            <p class="station firstSpan">7<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest7 %> ครั้ง</span></p>
+                            <p class="station firstSpan">8<span class="secondSpan">ทำไปแล้ว <%= NumbeOfPretest8 %> ครั้ง</span></p>
                         </div>
                     <% }%>
                 </div>
@@ -210,7 +233,7 @@
                     <% }%>
                     <% if (posttest_progress === 1) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest1 %> ครั้ง</span></p>
                             <p class="station_w">2</p>
                             <p class="station_w">3</p>
                             <p class="station_w">4</p>
@@ -222,8 +245,8 @@
                     <% }%>
                     <% if (posttest_progress === 2) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest2 %> ครั้ง</span></p>
                             <p class="station_w">3</p>
                             <p class="station_w">4</p>
                             <p class="station_w">5</p>
@@ -234,9 +257,9 @@
                     <% }%>
                     <% if (posttest_progress === 3) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest3 %> ครั้ง</span></p>
                             <p class="station_w">4</p>
                             <p class="station_w">5</p>
                             <p class="station_w">6</p>
@@ -246,10 +269,10 @@
                     <% }%>
                     <% if (posttest_progress === 4) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
-                            <p class="station">4</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest3 %> ครั้ง</span></p>
+                            <p class="station firstSpan">4<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest4 %> ครั้ง</span></p>
                             <p class="station_w">5</p>
                             <p class="station_w">6</p>
                             <p class="station_w">7</p>
@@ -258,11 +281,11 @@
                     <% }%>
                     <% if (posttest_progress === 5) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
-                            <p class="station">4</p>
-                            <p class="station">5</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest3 %> ครั้ง</span></p>
+                            <p class="station firstSpan">4<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest4 %> ครั้ง</span></p>
+                            <p class="station firstSpan">5<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest5 %> ครั้ง</span></p>
                             <p class="station_w">6</p>
                             <p class="station_w">7</p>
                             <p class="station_w">8</p>
@@ -270,45 +293,46 @@
                     <% }%>
                     <% if (posttest_progress === 6) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
-                            <p class="station">4</p>
-                            <p class="station">5</p>
-                            <p class="station">6</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest3 %> ครั้ง</span></p>
+                            <p class="station firstSpan">4<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest4 %> ครั้ง</span></p>
+                            <p class="station firstSpan">5<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest5 %> ครั้ง</span></p>
+                            <p class="station firstSpan">6<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest6 %> ครั้ง</span></p>
                             <p class="station_w">7</p>
                             <p class="station_w">8</p>
                         </div>
                     <% }%>
                     <% if (posttest_progress === 7) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
-                            <p class="station">4</p>
-                            <p class="station">5</p>
-                            <p class="station">6</p>
-                            <p class="station">7</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest3 %> ครั้ง</span></p>
+                            <p class="station firstSpan">4<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest4 %> ครั้ง</span></p>
+                            <p class="station firstSpan">5<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest5 %> ครั้ง</span></p>
+                            <p class="station firstSpan">6<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest6 %> ครั้ง</span></p>
+                            <p class="station firstSpan">7<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest7 %> ครั้ง</span></p>
                             <p class="station_w">8</p>
                         </div>
                     <% }%>
                     <% if (posttest_progress === 8) { %>
                         <div style="display: flex;">
-                            <p class="station">1</p>
-                            <p class="station">2</p>
-                            <p class="station">3</p>
-                            <p class="station">4</p>
-                            <p class="station">5</p>
-                            <p class="station">6</p>
-                            <p class="station">7</p>
-                            <p class="station">8</p>
+                            <p class="station firstSpan">1<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest1 %> ครั้ง</span></p>
+                            <p class="station firstSpan">2<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest2 %> ครั้ง</span></p>
+                            <p class="station firstSpan">3<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest3 %> ครั้ง</span></p>
+                            <p class="station firstSpan">4<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest4 %> ครั้ง</span></p>
+                            <p class="station firstSpan">5<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest5 %> ครั้ง</span></p>
+                            <p class="station firstSpan">6<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest6 %> ครั้ง</span></p>
+                            <p class="station firstSpan">7<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest7 %> ครั้ง</span></p>
+                            <p class="station firstSpan">8<span class="secondSpan">ทำไปแล้ว <%= NumbeOfTest8 %> ครั้ง</span></p>
                         </div>
                     <% }%>
                 </div>
             </div>
 
         <div><!-- chart -->
-                <h4 class="chakra-petch-regular">Competency</h4>   
+                <b class="chakra-petch-regular" style="font-size: 30px;">Competency</b>  
+                <b class="chakra-petch-regular"></b>
                 <div> 
                     <div class="chartCard">
                         <div class="chartBox" style="background-color: #e2ddc8; border: solid #fff; width: 300px;">

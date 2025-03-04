@@ -62,28 +62,36 @@ router.get('/', async (req, res, next) => {
           var studentAll = Object.keys(StudentAnswer).length
           
           var IntroductionScore=0,IntroductionCount=0,PreIntroductionScore=0,PreIntroductionCount=0,PreIntroduction=0,Introduction=0,
-          PreIntroductionLv1=0,PreIntroductionLv2=0,PreIntroductionLv3=0,PreIntroductionLv4=0,IntroductionLv1=0,IntroductionLv2=0,IntroductionLv3=0,IntroductionLv4=0;
+          PreIntroductionLv1=0,PreIntroductionLv2=0,PreIntroductionLv3=0,PreIntroductionLv4=0,IntroductionLv1=0,IntroductionLv2=0,IntroductionLv3=0,IntroductionLv4=0,
+          NumbeOfPretest1=0,NumbeOfTest1=0;
 
           var StringScore=0,StringCount=0,PreStringScore=0,PreStringCount=0,PreString=0,String=0,
-          PreStringLv1=0,PreStringLv2=0,PreStringLv3=0,PreStringLv4=0,StringLv1=0,StringLv2=0,StringLv3=0,StringLv4=0;
+          PreStringLv1=0,PreStringLv2=0,PreStringLv3=0,PreStringLv4=0,StringLv1=0,StringLv2=0,StringLv3=0,StringLv4=0,
+          NumbeOfPretest2=0,NumbeOfTest2=0;
 
           var DatatypeScore=0,DatatypeCount=0,PreDatatypeScore=0,PreDatatypeCount=0,PreDatatype=0,Datatype=0,
-          PreDatatypeLv1=0,PreDatatypeLv2=0,PreDatatypeLv3=0,PreDatatypeLv4=0,DatatypeLv1=0,DatatypeLv2=0,DatatypeLv3=0,DatatypeLv4=0;
+          PreDatatypeLv1=0,PreDatatypeLv2=0,PreDatatypeLv3=0,PreDatatypeLv4=0,DatatypeLv1=0,DatatypeLv2=0,DatatypeLv3=0,DatatypeLv4=0,
+          NumbeOfPretest3=0,NumbeOfTest3=0;
 
           var OperatorsScore=0,OperatorsCount=0,PreOperatorsScore=0,PreOperatorsCount=0,PreOperators=0,Operators=0,
-          PreOperatorsLv1=0,PreOperatorsLv2=0,PreOperatorsLv3=0,PreOperatorsLv4=0,OperatorsLv1=0,OperatorsLv2=0,OperatorsLv3=0,OperatorsLv4=0;
+          PreOperatorsLv1=0,PreOperatorsLv2=0,PreOperatorsLv3=0,PreOperatorsLv4=0,OperatorsLv1=0,OperatorsLv2=0,OperatorsLv3=0,OperatorsLv4=0,
+          NumbeOfPretest4=0,NumbeOfTest4=0;
 
           var FlowControlScore=0,FlowControlCount=0,PreFlowControlScore=0,PreFlowControlCount=0,PreFlowControl=0,FlowControl=0,
-          PreFlowControlLv1=0,PreFlowControlLv2=0,PreFlowControlLv3=0,PreFlowControlLv4=0,FlowControlLv1=0,FlowControlLv2=0,FlowControlLv3=0,FlowControlLv4=0;
+          PreFlowControlLv1=0,PreFlowControlLv2=0,PreFlowControlLv3=0,PreFlowControlLv4=0,FlowControlLv1=0,FlowControlLv2=0,FlowControlLv3=0,FlowControlLv4=0,
+          NumbeOfPretest5=0,NumbeOfTest5=0;
 
           var PointersScore=0,PointersCount=0,PrePointersScore=0,PrePointersCount=0,PrePointers=0,Pointers=0,
-          PrePointersLv1=0,PrePointersLv2=0,PrePointersLv3=0,PrePointersLv4=0,PointersLv1=0,PointersLv2=0,PointersLv3=0,PointersLv4=0;
+          PrePointersLv1=0,PrePointersLv2=0,PrePointersLv3=0,PrePointersLv4=0,PointersLv1=0,PointersLv2=0,PointersLv3=0,PointersLv4=0,
+          NumbeOfPretest6=0,NumbeOfTest6=0;
 
           var FunctionScore=0,FunctionCount=0,PreFunctionScore=0,PreFunctionCount=0,PreFunction=0,Function=0,
-          PreFunctionLv1=0,PreFunctionLv2=0,PreFunctionLv3=0,PreFunctionLv4=0,FunctionLv1=0,FunctionLv2=0,FunctionLv3=0,FunctionLv4=0;
+          PreFunctionLv1=0,PreFunctionLv2=0,PreFunctionLv3=0,PreFunctionLv4=0,FunctionLv1=0,FunctionLv2=0,FunctionLv3=0,FunctionLv4=0,
+          NumbeOfPretest7=0,NumbeOfTest7=0;
 
           var StructureScore=0,StructureCount=0,PreStructureScore=0,PreStructureCount=0,PreStructure=0,Structure=0,
-          PreStructureLv1=0,PreStructureLv2=0,PreStructureLv3=0,PreStructureLv4=0,StructureLv1=0,StructureLv2=0,StructureLv3=0,StructureLv4=0;
+          PreStructureLv1=0,PreStructureLv2=0,PreStructureLv3=0,PreStructureLv4=0,StructureLv1=0,StructureLv2=0,StructureLv3=0,StructureLv4=0,
+          NumbeOfPretest8=0,NumbeOfTest8=0;
 
           var TicTacToeScore=0,TicTacToeCount=0;
           var LibrarySystemScore=0,LibrarySystemCount=0;
@@ -102,6 +110,7 @@ router.get('/', async (req, res, next) => {
               PreIntroductionLv4 = PreIntroductionLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var PreIntroductionBG,PreIntroductionBG2;
               PreIntroduction=1;
+              NumbeOfPretest1 = NumbeOfPretest1+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreIntroductionScore = PreIntroductionLv1+PreIntroductionLv2+PreIntroductionLv3;}
               else{
@@ -117,6 +126,7 @@ router.get('/', async (req, res, next) => {
               PreStringLv4 = PreStringLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var PreStringBG,PreStringBG2;
               PreString = 1;
+              NumbeOfPretest2 = NumbeOfPretest2+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreStringScore = PreStringLv1+PreStringLv2+PreStringLv3;}
               else{
@@ -132,6 +142,7 @@ router.get('/', async (req, res, next) => {
               PreDatatypeLv4 = PreDatatypeLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var PreDatatypeBG,PreDatatypeBG2;
               PreDatatype = 1;
+              NumbeOfPretest3 = NumbeOfPretest3+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreDatatypeScore = PreDatatypeLv1+PreDatatypeLv2+PreDatatypeLv3;}
               else{
@@ -147,6 +158,7 @@ router.get('/', async (req, res, next) => {
               PreOperatorsLv4 = PreOperatorsLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var PreOperatorsBG,PreOperatorsBG2;
               PreOperators = 1;
+              NumbeOfPretest4 = NumbeOfPretest4+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreOperatorsScore = PreOperatorsLv1+PreOperatorsLv2+PreOperatorsLv3;}
               else{
@@ -162,6 +174,7 @@ router.get('/', async (req, res, next) => {
               PreFlowControlLv4 = PreFlowControlLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var PreFlowControlBG,PreFlowControlBG2;
               PreFlowControl =1;
+              NumbeOfPretest5 = NumbeOfPretest5+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreFlowControlScore = PreFlowControlLv1+PreFlowControlLv2+PreFlowControlLv3;}
               else{
@@ -177,6 +190,7 @@ router.get('/', async (req, res, next) => {
               PrePointersLv4 = PrePointersLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var PrePointersBG,PrePointersBG2;
               PrePointers=1;
+              NumbeOfPretest6 = NumbeOfPretest6+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PrePointersScore = PrePointersLv1+PrePointersLv2+PrePointersLv3;}
               else{
@@ -192,6 +206,7 @@ router.get('/', async (req, res, next) => {
               PreFunctionLv4 = PreFunctionLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var PreFunctionBG,PreFunctionBG2;
               PreFunction=1;
+              NumbeOfPretest7 =  NumbeOfPretest7+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreFunctionScore = PreFunctionLv1+PreFunctionLv2+PreFunctionLv3;}
               else{
@@ -207,6 +222,7 @@ router.get('/', async (req, res, next) => {
               PreStructureLv4 = PreStructureLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var PreStructureBG,PreStructureBG2;
               PreStructure=1;
+              NumbeOfPretest8 = NumbeOfPretest8+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PreStructureScore = PreStructureLv1+PreStructureLv2+PreStructureLv3;}
               else{
@@ -222,6 +238,7 @@ router.get('/', async (req, res, next) => {
               IntroductionLv4 = IntroductionLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var IntroductionBG,IntroductionBG2;
               Introduction=1;
+              NumbeOfTest1 = NumbeOfTest1+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 IntroductionScore = IntroductionLv1+IntroductionLv2+IntroductionLv3;}
               else{
@@ -237,6 +254,7 @@ router.get('/', async (req, res, next) => {
               StringLv4 = StringLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var StringBG,StringBG2;
               String=1;
+              NumbeOfTest2 = NumbeOfTest2+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 StringScore = StringLv1+StringLv2+StringLv3;}
               else{
@@ -252,6 +270,7 @@ router.get('/', async (req, res, next) => {
               DatatypeLv4 = DatatypeLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var DatatypeBG,DatatypeBG2;
               Datatype=1;
+              NumbeOfTest3 = NumbeOfTest3+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 DatatypeScore = DatatypeLv1+DatatypeLv2+DatatypeLv3;}
               else{
@@ -267,6 +286,7 @@ router.get('/', async (req, res, next) => {
               OperatorsLv4 = OperatorsLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var OperatorsBG,OperatorsBG2;
               Operators=1;
+              NumbeOfTest4 = NumbeOfTest4+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 OperatorsScore = OperatorsLv1+OperatorsLv2+OperatorsLv3;}
               else{
@@ -282,6 +302,7 @@ router.get('/', async (req, res, next) => {
               FlowControlLv4 = FlowControlLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var FlowControlBG,FlowControlBG2;
               FlowControl=1;
+              NumbeOfTest5 = NumbeOfTest5+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 FlowControlScore = FlowControlLv1+FlowControlLv2+FlowControlLv3;}
               else{
@@ -297,6 +318,7 @@ router.get('/', async (req, res, next) => {
               PointersLv4 = PointersLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var PointersBG,PointersBG2;
               Pointers=1;
+              NumbeOfTest6 = NumbeOfTest6+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 PointersScore = PointersLv1+PointersLv2+PointersLv3;}
               else{
@@ -312,6 +334,7 @@ router.get('/', async (req, res, next) => {
               FunctionLv4 = FunctionLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var FunctionBG,FunctionBG2;
               Function=1;
+              NumbeOfTest7 = NumbeOfTest7+1;
               if(StudentAnswer[i].scoreTeacher === undefined){
                 FunctionScore = FunctionLv1+FunctionLv2+FunctionLv3;}
               else{
@@ -327,6 +350,7 @@ router.get('/', async (req, res, next) => {
               StructureLv4 = StructureLv4+parseInt(StudentAnswer[i].scoreTeacher);
               var StructureBG,StructureBG2;
               Structure=1;
+              NumbeOfTest8 = NumbeOfTest8+1; 
               if(StudentAnswer[i].scoreTeacher === undefined){
                 StructureScore = StructureLv1+StructureLv2+StructureLv3;}
               else{
@@ -458,15 +482,15 @@ router.get('/', async (req, res, next) => {
             return ProjectScoreObj[b].score - ProjectScoreObj[a].score;
           });
 
-          var PreKnowledgePercent =  Math.round(PreKnowledgeScore*5);
-          var PreTracePercent= Math.round(PreTraceScore*5);
-          var PreExplainPercent = Math.round(PreExplainScore*5);
-          var PreWritePercent = Math.round(PreWriteScore);
+          var PreKnowledgePercent =  Math.round(PreKnowledgeScore);
+          var PreTracePercent= Math.round(PreTraceScore);
+          var PreExplainPercent = Math.round(PreExplainScore);
+          var PreWritePercent = Math.round(PreWriteScore/5);
           
-          var KnowledgePercent =  Math.round(KnowledgeScore*5);
-          var TracePercent= Math.round(TraceScore*5);
-          var ExplainPercent = Math.round(ExplainScore*5);
-          var WritePercent = Math.round(WriteScore);
+          var KnowledgePercent =  Math.round(KnowledgeScore);
+          var TracePercent= Math.round(TraceScore);
+          var ExplainPercent = Math.round(ExplainScore);
+          var WritePercent = Math.round(WriteScore/5);
 
           PreKnowledgePercent = PreKnowledgePercent;
           PreTracePercent = PreTracePercent;
@@ -488,6 +512,9 @@ router.get('/', async (req, res, next) => {
 
           res.render('index/index_teacher', { person ,sortedCourse,sortedProject,answer,question,
             pretest_progress,posttest_progress,
+            NumbeOfPretest1,NumbeOfPretest2,NumbeOfPretest3,NumbeOfPretest4,NumbeOfPretest5,NumbeOfPretest6,NumbeOfPretest7,NumbeOfPretest8,
+            NumbeOfTest1,NumbeOfTest2,NumbeOfTest3,NumbeOfTest4,NumbeOfTest5,NumbeOfTest6,NumbeOfTest7,NumbeOfTest8,
+
             PreKnowledgePercent,PreTracePercent,PreExplainPercent,PreWritePercent,
             KnowledgePercent,TracePercent,ExplainPercent,WritePercent,
 
