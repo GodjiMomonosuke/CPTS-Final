@@ -53,65 +53,269 @@
                                     <div class="info">Name</div> <%=Studentresult[i].name %> <br>
                                     <div class="info">Course</div> <%=Studentresult[i].Course %> <br>
                                     <div class="info">Section</div> <%=Studentresult[i].Section %> <br><br><br>
-                                    <div> <!-- Character -->
-                                        <div class="info" style="width: auto;">Character</div> <br>
-                                        <!-- k -->
-                                         <% if(Studentresult[i].post_k === 0 && Studentresult[i].post_t === 0 && Studentresult[i].post_e === 0 && Studentresult[i].post_w === 0){ %> 
-                                            <img src="/images/6.png" alt="Rookie" style="margin: 20px; width: 150px;">
-                                        <% } else { %> 
-                                        <% if(Studentresult[i].post_k > Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
-                                            <img src="/images/1.webp" alt="Knowledge">
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_k === Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
-                                            k = t
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_k > Studentresult[i].post_t && Studentresult[i].post_k === Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
-                                            k = e
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_k > Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k === Studentresult[i].post_w){ %>
-                                            k = w
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_k === Studentresult[i].post_t && Studentresult[i].post_k === Studentresult[i].post_e && Studentresult[i].post_k > Studentresult[i].post_w){ %>
-                                            k = t = e
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_k === Studentresult[i].post_t && Studentresult[i].post_k > Studentresult[i].post_e && Studentresult[i].post_k === Studentresult[i].post_w){ %>
-                                            k = t = w
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_k > Studentresult[i].post_t && Studentresult[i].post_k === Studentresult[i].post_e && Studentresult[i].post_k === Studentresult[i].post_w){ %>
-                                            k = e = w
-                                        <% } %> 
-                                        
-                                        <!-- t -->
-                                        <% if(Studentresult[i].post_t > Studentresult[i].post_k && Studentresult[i].post_t > Studentresult[i].post_e && Studentresult[i].post_t > Studentresult[i].post_w){ %>
-                                            <img src="/images/2.png" alt="Tracing">
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_t > Studentresult[i].post_k && Studentresult[i].post_t === Studentresult[i].post_e && Studentresult[i].post_t > Studentresult[i].post_w){ %>
-                                            t = e
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_t > Studentresult[i].post_k && Studentresult[i].post_t > Studentresult[i].post_e && Studentresult[i].post_t === Studentresult[i].post_w){ %>
-                                            t = w
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_t > Studentresult[i].post_k && Studentresult[i].post_t === Studentresult[i].post_e && Studentresult[i].post_t === Studentresult[i].post_w){ %>
-                                            t = e = w
-                                        <% } %> 
-
-                                        <!-- e -->
-                                        <% if(Studentresult[i].post_e > Studentresult[i].post_k && Studentresult[i].post_e > Studentresult[i].post_t && Studentresult[i].post_e > Studentresult[i].post_w){ %>
-                                            <img src="/images/3.png" alt="Explaining">
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_e > Studentresult[i].post_k && Studentresult[i].post_e > Studentresult[i].post_t && Studentresult[i].post_e === Studentresult[i].post_w){ %>
-                                            e = w
-                                        <% } %> 
-
-                                        <!-- w -->
-                                        <% if(Studentresult[i].post_w > Studentresult[i].post_k && Studentresult[i].post_w > Studentresult[i].post_t && Studentresult[i].post_w > Studentresult[i].post_e){ %>
-                                            <img src="/images/4.png" alt="Writing">
-                                        <% } %> 
-                                        <% if(Studentresult[i].post_w === Studentresult[i].post_k && Studentresult[i].post_w === Studentresult[i].post_t && Studentresult[i].post_w === Studentresult[i].post_e){ %>
-                                            <img src="/images/5.png" alt="KING">
-                                        <% } %> 
-                                        <% } %>
-                                    </div>
+                                    <div class="character-box">
+                                        <div class="character-box"><!-- Character -->
+                                            <h4 class="chakra-petch-regular">Character</h4>  
+                                            <div class="Character" style="position: relative; padding: 10px; min-height: 300px; display: flex; flex-direction: column; justify-content: center;">
+                                                <% 
+                                                try {
+                                                    // นำตัวแปรคะแนนจาก Studentresult[i]
+                                                    const originalBasic = Studentresult[i].post_k || 0;
+                                                    const originalTrace = Studentresult[i].post_t || 0;
+                                                    const originalExplain = Studentresult[i].post_e || 0;
+                                                    const originalWrite = Studentresult[i].post_w || 0;
+                                                    
+                                                    // Check which ones are NaN
+                                                    const isBasicNaN = typeof originalBasic !== 'number' || isNaN(originalBasic);
+                                                    const isTraceNaN = typeof originalTrace !== 'number' || isNaN(originalTrace);
+                                                    const isExplainNaN = typeof originalExplain !== 'number' || isNaN(originalExplain);
+                                                    const isWriteNaN = typeof originalWrite !== 'number' || isNaN(originalWrite);
+                                                    
+                                                    // Replace NaN with 0 for calculation but track original values
+                                                    const basicValue = isBasicNaN ? 0 : Math.max(0, originalBasic);
+                                                    const traceValue = isTraceNaN ? 0 : Math.max(0, originalTrace);
+                                                    const explainValue = isExplainNaN ? 0 : Math.max(0, originalExplain);
+                                                    const writeValue = isWriteNaN ? 0 : Math.max(0, originalWrite);
+                                                    
+                                                    // Calculate how many valid scores we have
+                                                    const validScoreCount = 
+                                                        (isBasicNaN ? 0 : 1) + 
+                                                        (isTraceNaN ? 0 : 1) + 
+                                                        (isExplainNaN ? 0 : 1) + 
+                                                        (isWriteNaN ? 0 : 1);
+                                                    
+                                                    // Calculate total score from valid scores only
+                                                    const totalScore = basicValue + traceValue + explainValue + writeValue;
+                                                    
+                                                    // Set thresholds based on absolute scores instead of percentages
+                                                    const rookieThreshold = 64;  // 20% of 320
+                                                    const kingThreshold = 256;   // 80% of 320
+                                                    const maxScore = 320;        // Maximum possible score
+                                                    
+                                                    // Set base path for images
+                                                    const basePaths = [
+                                                        "/public/images", 
+                                                        "/images",        
+                                                        "../images",       
+                                                        "./public/images", 
+                                                        "./images"         
+                                                    ];
+                                                    
+                                                    // Function to check how many scores are tied for highest among valid scores only
+                                                    function countHighestScores() {
+                                                        // Create array with only valid scores
+                                                        const validScores = [];
+                                                        if (!isBasicNaN) validScores.push({ value: basicValue, type: 'basic' });
+                                                        if (!isTraceNaN) validScores.push({ value: traceValue, type: 'trace' });
+                                                        if (!isExplainNaN) validScores.push({ value: explainValue, type: 'explain' });
+                                                        if (!isWriteNaN) validScores.push({ value: writeValue, type: 'write' });
+                                                        
+                                                        // If no valid scores, return 0
+                                                        if (validScores.length === 0) return 0;
+                                                        
+                                                        // Find max value
+                                                        const maxValue = Math.max(...validScores.map(item => item.value));
+                                                        
+                                                        // Return count of scores equal to max
+                                                        return validScores.filter(item => item.value === maxValue).length;
+                                                    }
+                                                    
+                                                    // Function to find which score type has highest value (ignoring NaN)
+                                                    function getHighestScoreType() {
+                                                        const scores = [
+                                                            { value: basicValue, isNaN: isBasicNaN, type: 'basic' },
+                                                            { value: traceValue, isNaN: isTraceNaN, type: 'trace' },
+                                                            { value: explainValue, isNaN: isExplainNaN, type: 'explain' },
+                                                            { value: writeValue, isNaN: isWriteNaN, type: 'write' }
+                                                        ];
+                                                        
+                                                        // Filter out NaN values
+                                                        const validScores = scores.filter(item => !item.isNaN);
+                                                        
+                                                        // If no valid scores, return null
+                                                        if (validScores.length === 0) return null;
+                                                        
+                                                        // Sort by value (highest first)
+                                                        validScores.sort((a, b) => b.value - a.value);
+                                                        
+                                                        // Return the type with highest value
+                                                        return validScores[0].type;
+                                                    }
+                                                    
+                                                    // Variables to store character info
+                                                    let characterName = "";
+                                                    let imageNumber = "";
+                                                    let altText = "";
+                                                    
+                                                    // REORDERED CONDITIONS: Check highest score conditions first
+                                                    
+                                                    // 1. If score is above kingThreshold (80%), it's KING
+                                                    if(totalScore >= kingThreshold) { 
+                                                        characterName = "KING";
+                                                        imageNumber = "5";
+                                                        altText = "KING";
+                                                    } 
+                                                    // 2. If we have valid scores that can be compared, check their relationships
+                                                    else if(validScoreCount > 0) {
+                                                        // Score is between 20% and 80%
+                                                        if(totalScore >= rookieThreshold && totalScore < kingThreshold) { 
+                                                            const tiedHighest = countHighestScores();
+                                                            
+                                                            // Check if all valid scores are tied
+                                                            if(tiedHighest === validScoreCount && validScoreCount === 4) {
+                                                                characterName = "Queen";
+                                                                imageNumber = "8";
+                                                                altText = "Queen";
+                                                            } else if(tiedHighest === validScoreCount && validScoreCount === 3) { 
+                                                                characterName = "Queen";
+                                                                imageNumber = "8";
+                                                                altText = "Queen";
+                                                            } else if(tiedHighest === validScoreCount && validScoreCount === 2) { 
+                                                                characterName = "Knight";
+                                                                imageNumber = "7";
+                                                                altText = "Knight";
+                                                            } else {
+                                                                // Find highest score type
+                                                                const highestType = getHighestScoreType();
+                                                                
+                                                                if (highestType === 'basic') {
+                                                                    characterName = "Knowledge";
+                                                                    imageNumber = "2";
+                                                                    altText = "Knowledge";
+                                                                } else if (highestType === 'trace') {
+                                                                    characterName = "Tracing";
+                                                                    imageNumber = "3";
+                                                                    altText = "Tracing";
+                                                                } else if (highestType === 'explain') {
+                                                                    characterName = "Explaining";
+                                                                    imageNumber = "1";
+                                                                    altText = "Explaining";
+                                                                } else if (highestType === 'write') {
+                                                                    characterName = "Writing";
+                                                                    imageNumber = "4";
+                                                                    altText = "Writing";
+                                                                }
+                                                            }
+                                                        } 
+                                                        // Score is below 20%
+                                                        else if(totalScore < rookieThreshold) {
+                                                            // Even if below rookieThreshold, check if we have a highest score to use
+                                                            const highestType = getHighestScoreType();
+                                                            
+                                                            if (highestType && validScoreCount > 0) {
+                                                                // Use highest score character even if total is low
+                                                                if (highestType === 'basic') {
+                                                                    characterName = "Knowledge";
+                                                                    imageNumber = "2";
+                                                                    altText = "Knowledge";
+                                                                } else if (highestType === 'trace') {
+                                                                    characterName = "Tracing";
+                                                                    imageNumber = "3";
+                                                                    altText = "Tracing";
+                                                                } else if (highestType === 'explain') {
+                                                                    characterName = "Explaining";
+                                                                    imageNumber = "1";
+                                                                    altText = "Explaining";
+                                                                } else if (highestType === 'write') {
+                                                                    characterName = "Writing";
+                                                                    imageNumber = "4";
+                                                                    altText = "Writing";
+                                                                } else {
+                                                                    // Fallback to Rookie if something went wrong
+                                                                    characterName = "Rookie";
+                                                                    imageNumber = "6";
+                                                                    altText = "Rookie";
+                                                                }
+                                                            } else {
+                                                                // No valid highest score, use Rookie
+                                                                characterName = "Rookie";
+                                                                imageNumber = "6";
+                                                                altText = "Rookie";
+                                                            }
+                                                        }
+                                                    } 
+                                                    // 3. Only if all else fails, use Rookie character
+                                                    else {
+                                                        characterName = "Rookie";
+                                                        imageNumber = "6";
+                                                        altText = "Rookie";
+                                                    }
+                                                    
+                                                    // Get image path with fallback support
+                                                    const primaryImagePath = `${basePaths[0]}/${imageNumber}.png`;
+                                                %>
+                                                    <!-- แสดงรูปตัวละคร -->
+                                                    <div style="text-align: center;">
+                                                        <img 
+                                                            src="<%= primaryImagePath %>" 
+                                                            alt="<%= altText %>" 
+                                                            onerror="
+                                                                if (!this.dataset.triedCount) { this.dataset.triedCount = 0; }
+                                                                const basePaths = ['/public/images', '/images', '../images', './public/images', './images'];
+                                                                const imageNumber = '<%= imageNumber %>';
+                                                                if (parseInt(this.dataset.triedCount) < basePaths.length - 1) {
+                                                                    this.dataset.triedCount = parseInt(this.dataset.triedCount) + 1;
+                                                                    this.src = basePaths[this.dataset.triedCount] + '/' + imageNumber + '.png';
+                                                                } else {
+                                                                    // If all paths fail, show text instead of image
+                                                                    this.style.display = 'none';
+                                                                    this.nextElementSibling.style.display = 'block';
+                                                                }
+                                                            "
+                                                            style="max-width: 90%; height: auto; object-fit: contain; display: block; margin: 0 auto;"
+                                                        />
+                                                        
+                                                        <!-- Fallback text if image fails to load (hidden by default) -->
+                                                        <div style="display: none; font-size: 48px; font-weight: bold; text-align: center; padding: 20px;">
+                                                            <%= characterName %>
+                                                        </div>
+                                                        
+                                                        <!-- ไม่แสดงคะแนนรวมใต้รูป -->
+                                                    </div>
+                                                    
+                                                    <!-- CSS styles -->
+                                                    <style>
+                                                        /* จัดให้ Character อยู่ในกรอบ */
+                                                        .character-box {
+                                                            box-sizing: border-box;
+                                                        }
+                                                        
+                                                        .Character {
+                                                            box-sizing: border-box;
+                                                            overflow: hidden;
+                                                        }
+                                                        
+                                                        /* ขยายขนาดของรูปภาพตัวละคร */
+                                                        .Character img {
+                                                            max-width: 100% !important; /* แทนที่ค่า max-width เดิม */
+                                                            width: auto;
+                                                            height: auto;
+                                                            max-height: 450px !important; /* เพิ่มความสูงสูงสุด */
+                                                            object-fit: contain;
+                                                            display: block;
+                                                            margin: 0 auto;
+                                                        }
+                                                        
+                                                        /* ขยายขนาดพื้นที่แสดงผลตัวละคร */
+                                                        .Character {
+                                                            min-height: 340px; /* เพิ่มความสูงขั้นต่ำ */
+                                                            padding: 15px; /* เพิ่ม padding */
+                                                        }
+                                                    </style>
+                                                <%
+                                                } catch (error) { 
+                                                    // แสดง error ในคอนโซลสำหรับการแก้ไขปัญหา
+                                                    console.error("Character component error:", error);
+                                                %>
+                                                    <div style="text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
+                                                        <div style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px;">
+                                                            Charecter
+                                                        </div>
+                                                        <!-- ไม่แสดงคะแนนรวมแม้ในกรณี error -->
+                                                    </div>
+                                                <% } %>
+                                            </div>
+                                        </div>
                                 </td>
                                 <td class="text-start"> <!-- Project Quiz -->
                                     <span class="quiz">Project QUIZ1 </span>
