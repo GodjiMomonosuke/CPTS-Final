@@ -18,18 +18,36 @@ router.get('/', function(req, res, next) {
       MongoClient.connect(url, function(err, db) {
         if (err) throw err;
         var dbo = db.db(mydatabase);
-        //var query = { email: /.*m.*/ };
         var query = {teacher:person.email };
         dbo.collection("StudentClass").find(query).toArray(function(err, Studentresult) {
           if (err) throw err;
-          // console.log(Object.keys(Studentresult).length);
-
-          res.render('teacher/class-Student', {person,classResult,Studentresult});
-        });
+          
+          // ดึงข้อมูลคะแนนของนักเรียนจาก Studentresult
+          // สมมติว่า Studentresult มีข้อมูลคะแนนในรูปแบบเปอร์เซ็นต์
+          let BasicPercent = 0, TracePercent = 0, ExplainPercent = 0, WritePercent = 0;
+          
+          if (Studentresult && Studentresult.length > 0) {
+            // สมมติว่า Studentresult[0] มีข้อมูลคะแนนอยู่
+            BasicPercent = Studentresult[0].post_k || 0;
+            TracePercent = Studentresult[0].post_t || 0;
+            ExplainPercent = Studentresult[0].post_e || 0;
+            WritePercent = Studentresult[0].post_w || 0;
+          }
+          
+          // ส่งตัวแปรคะแนนไปยังเทมเพลต
+          res.render('teacher/class-Student', {
+            person,
+            classResult,
+            Studentresult,
+            BasicPercent,
+            TracePercent,
+            ExplainPercent,
+            WritePercent
+          });
         });
       });
+    });
   });  
-  
 });
 
 
