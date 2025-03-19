@@ -59,40 +59,248 @@
                                             <div class="Character" style="position: relative; padding: 10px; min-height: 300px; display: flex; flex-direction: column; justify-content: center;">
                                                 <% 
                                                 try {
-                                                    // นำตัวแปรคะแนนจาก Studentresult[i]
-                                                    const originalBasic = Studentresult[i].post_k || 0;
-                                                    const originalTrace = Studentresult[i].post_t || 0;
-                                                    const originalExplain = Studentresult[i].post_e || 0;
-                                                    const originalWrite = Studentresult[i].post_w || 0;
+                                                    // DEBUG MODE - เปลี่ยนเป็น true เพื่อแสดงรายละเอียดการคำนวณ
+                                                    const DEBUG_MODE = false;
                                                     
-                                                    // Check which ones are NaN
+                                                    /**
+                                                     * ฟังก์ชันสำหรับตรวจสอบและจำกัดค่าให้อยู่ในช่วงที่กำหนด
+                                                     * @param {number|any} value - ค่าที่ต้องการตรวจสอบ
+                                                     * @param {number} min - ค่าต่ำสุดที่อนุญาต
+                                                     * @param {number} max - ค่าสูงสุดที่อนุญาต
+                                                     * @return {number} - ค่าที่ถูกต้องในช่วงที่กำหนด หรือ NaN ถ้าค่าไม่ถูกต้อง
+                                                     */
+                                                    function validateScore(value, min, max) {
+                                                        if (typeof value !== 'number' || isNaN(value)) {
+                                                            return NaN;
+                                                        }
+                                                        return Math.max(min, Math.min(max, value));
+                                                    }
+                                                    
+                                                    // ตรวจสอบและแปลงคะแนนดิบ
+                                                    // ตามที่ระบุไว้ไม่ต้องแก้ไขในส่วนของค่า NaN จึงยังคงใช้ isNaN ตามเดิม
+                                                    const originalBasic = typeof Studentresult !== 'undefined' ? (Studentresult[i].post_k || 0) : (BasicPercent || 0);
+                                                    const originalTrace = typeof Studentresult !== 'undefined' ? (Studentresult[i].post_t || 0) : (TracePercent || 0);
+                                                    const originalExplain = typeof Studentresult !== 'undefined' ? (Studentresult[i].post_e || 0) : (ExplainPercent || 0);
+                                                    const originalWrite = typeof Studentresult !== 'undefined' ? (Studentresult[i].post_w || 0) : (WritePercent || 0);
+                                                    
                                                     const isBasicNaN = typeof originalBasic !== 'number' || isNaN(originalBasic);
                                                     const isTraceNaN = typeof originalTrace !== 'number' || isNaN(originalTrace);
                                                     const isExplainNaN = typeof originalExplain !== 'number' || isNaN(originalExplain);
                                                     const isWriteNaN = typeof originalWrite !== 'number' || isNaN(originalWrite);
                                                     
-                                                    // Replace NaN with 0 for calculation but track original values
-                                                    const basicValue = isBasicNaN ? 0 : Math.max(0, originalBasic);
-                                                    const traceValue = isTraceNaN ? 0 : Math.max(0, originalTrace);
-                                                    const explainValue = isExplainNaN ? 0 : Math.max(0, originalExplain);
-                                                    const writeValue = isWriteNaN ? 0 : Math.max(0, originalWrite);
+                                                    // คะแนนสำหรับแต่ละด้าน - จำกัดไม่ให้ต่ำกว่า 0
+                                                    // ใช้ validateScore เพื่อให้มั่นใจว่าคะแนนอยู่ในช่วงที่ถูกต้อง
+                                                    const maxKnowledgeScore = 40;
+                                                    const maxTracingScore = 40;
+                                                    const maxExplainingScore = 40;
+                                                    const maxWritingScore = 200;
                                                     
-                                                    // Calculate how many valid scores we have
-                                                    const validScoreCount = 
-                                                        (isBasicNaN ? 0 : 1) + 
-                                                        (isTraceNaN ? 0 : 1) + 
-                                                        (isExplainNaN ? 0 : 1) + 
-                                                        (isWriteNaN ? 0 : 1);
+                                                    let basicScore = isBasicNaN ? 0 : validateScore(originalBasic, 0, maxKnowledgeScore);
+                                                    let traceScore = isTraceNaN ? 0 : validateScore(originalTrace, 0, maxTracingScore);
+                                                    let explainScore = isExplainNaN ? 0 : validateScore(originalExplain, 0, maxExplainingScore);
+                                                    let writeScore = isWriteNaN ? 0 : validateScore(originalWrite, 0, maxWritingScore);
                                                     
-                                                    // Calculate total score from valid scores only
-                                                    const totalScore = basicValue + traceValue + explainValue + writeValue;
+                                                    // คำนวณคะแนน Writing ที่ถูกต้อง - ปรับเป็นคะแนนเทียบจาก 200 เป็น 40
+                                                    const adjustedWriteScore = !isWriteNaN ? (writeScore / maxWritingScore) * 40 : 0;
                                                     
-                                                    // Set thresholds based on absolute scores instead of percentages
-                                                    const rookieThreshold = 64;  // 20% of 320
-                                                    const kingThreshold = 256;   // 80% of 320
-                                                    const maxScore = 320;        // Maximum possible score
+                                                    /**
+                                                     * คำนวณคะแนนรวมจากทุกด้าน
+                                                     * @return {Object} - วัตถุที่มีคะแนนรวมและเงื่อนไขต่างๆ
+                                                     */
+                                                    function calculateTotalScore() {
+                                                        // คำนวณคะแนนรวม
+                                                        const totalScore = basicScore + traceScore + explainScore + adjustedWriteScore;
+                                                        const displayTotalScore = Math.round(totalScore);
+                                                        
+                                                        // คะแนนเต็มและเกณฑ์สำหรับ Rookie และ King
+                                                        const maxDisplayScore = 160; // คะแนนเต็ม (40 x 4)
+                                                        const rookieThreshold = 0.2 * maxDisplayScore; // 32
+                                                        const kingThreshold = 0.8 * maxDisplayScore; // 128
+                                                        
+                                                        // จำนวนคะแนนที่มีค่า (ไม่เป็น NaN)
+                                                        const validScoreCount = 
+                                                            (isBasicNaN ? 0 : 1) + 
+                                                            (isTraceNaN ? 0 : 1) + 
+                                                            (isExplainNaN ? 0 : 1) + 
+                                                            (isWriteNaN ? 0 : 1);
+                                                        
+                                                        // ตรวจสอบว่าทุกด้านมีคะแนนน้อยกว่า 20% หรือไม่
+                                                        const rookieBasicThreshold = 0.2 * maxKnowledgeScore; // 8
+                                                        const rookieTraceThreshold = 0.2 * maxTracingScore; // 8
+                                                        const rookieExplainThreshold = 0.2 * maxExplainingScore; // 8
+                                                        const rookieWriteThreshold = 0.2 * maxWritingScore; // 40
+                                                        
+                                                        const isAllBelowRookieThreshold = 
+                                                            (isBasicNaN || basicScore < rookieBasicThreshold) && 
+                                                            (isTraceNaN || traceScore < rookieTraceThreshold) && 
+                                                            (isExplainNaN || explainScore < rookieExplainThreshold) && 
+                                                            (isWriteNaN || writeScore < rookieWriteThreshold);
+                                                        
+                                                        return {
+                                                            totalScore,
+                                                            displayTotalScore,
+                                                            maxDisplayScore,
+                                                            rookieThreshold,
+                                                            kingThreshold,
+                                                            validScoreCount,
+                                                            isAllBelowRookieThreshold
+                                                        };
+                                                    }
                                                     
-                                                    // Set base path for images
+                                                    /**
+                                                     * ตรวจสอบจำนวนคะแนนที่เท่ากันและมีค่าสูงสุด
+                                                     * @return {Object} - ข้อมูลเกี่ยวกับคะแนนสูงสุด
+                                                     */
+                                                    function analyzeHighestScores() {
+                                                        // คำนวณเปอร์เซ็นต์ของแต่ละด้าน
+                                                        const percentScores = [];
+                                                        
+                                                        if (!isBasicNaN) {
+                                                            percentScores.push({ 
+                                                                type: 'basic', 
+                                                                label: 'Knowledge',
+                                                                value: basicScore / maxKnowledgeScore,
+                                                                roundedValue: Math.round((basicScore / maxKnowledgeScore) * 1000) / 1000
+                                                            });
+                                                        }
+                                                        
+                                                        if (!isTraceNaN) {
+                                                            percentScores.push({ 
+                                                                type: 'trace', 
+                                                                label: 'Tracing',
+                                                                value: traceScore / maxTracingScore,
+                                                                roundedValue: Math.round((traceScore / maxTracingScore) * 1000) / 1000
+                                                            });
+                                                        }
+                                                        
+                                                        if (!isExplainNaN) {
+                                                            percentScores.push({ 
+                                                                type: 'explain', 
+                                                                label: 'Explaining',
+                                                                value: explainScore / maxExplainingScore,
+                                                                roundedValue: Math.round((explainScore / maxExplainingScore) * 1000) / 1000
+                                                            });
+                                                        }
+                                                        
+                                                        if (!isWriteNaN) {
+                                                            percentScores.push({ 
+                                                                type: 'write', 
+                                                                label: 'Writing',
+                                                                value: writeScore / maxWritingScore,
+                                                                roundedValue: Math.round((writeScore / maxWritingScore) * 1000) / 1000
+                                                            });
+                                                        }
+                                                        
+                                                        // เรียงลำดับคะแนนจากมากไปน้อย
+                                                        percentScores.sort((a, b) => b.roundedValue - a.roundedValue);
+                                                        
+                                                        // ถ้าไม่มีคะแนนใดๆ
+                                                        if (percentScores.length === 0) {
+                                                            return {
+                                                                highestScore: null,
+                                                                tiedHighestCount: 0,
+                                                                percentScores: []
+                                                            };
+                                                        }
+                                                        
+                                                        const highestScore = percentScores[0];
+                                                        
+                                                        // นับจำนวนคะแนนที่เท่ากับคะแนนสูงสุด (ใช้ค่าที่ปัดเศษแล้ว)
+                                                        // ใช้ความแม่นยำ 3 ตำแหน่งเพื่อหลีกเลี่ยงปัญหาทศนิยมที่ไม่แน่นอน
+                                                        const tiedHighestCount = percentScores.filter(
+                                                            score => score.roundedValue === highestScore.roundedValue
+                                                        ).length;
+                                                        
+                                                        return {
+                                                            highestScore,
+                                                            tiedHighestCount,
+                                                            percentScores
+                                                        };
+                                                    }
+                                                    
+                                                    /**
+                                                     * กำหนดตัวละครตามคะแนนและเงื่อนไข
+                                                     * @return {Object} - ข้อมูลตัวละคร
+                                                     */
+                                                    function determineCharacter() {
+                                                        const score = calculateTotalScore();
+                                                        const highestScoreData = analyzeHighestScores();
+                                                        
+                                                        // ตัวแปรเก็บข้อมูลตัวละคร
+                                                        let characterName = "";
+                                                        let imageNumber = "";
+                                                        let altText = "";
+                                                        
+                                                        // เริ่มตรวจสอบเงื่อนไขจากกรณีพิเศษเพื่อลดความซับซ้อน
+                                                        
+                                                        // กรณี 1: ถ้าไม่มีคะแนนใดๆ หรือทุกคะแนนเป็น NaN
+                                                        if (score.validScoreCount === 0) {
+                                                            characterName = "Rookie";
+                                                            imageNumber = "5";
+                                                            altText = "Rookie - No Valid Scores";
+                                                        }
+                                                        // กรณี 2: ถ้าคะแนนสูงมาก (80% ขึ้นไป) ให้เป็น KING
+                                                        else if (score.displayTotalScore >= score.kingThreshold) { 
+                                                            characterName = "KING";
+                                                            imageNumber = "6";
+                                                            altText = "KING - High Score";
+                                                        }
+                                                        // กรณี 3: ถ้าคะแนนต่ำมาก (ทุกด้านต่ำกว่า 20% หรือคะแนนรวมต่ำกว่า 20%)
+                                                        else if (score.isAllBelowRookieThreshold || score.displayTotalScore < score.rookieThreshold) {
+                                                            characterName = "Rookie";
+                                                            imageNumber = "5";
+                                                            altText = "Rookie - Low Score";
+                                                        }
+                                                        // กรณี 4: ถ้ามีคะแนนสูงสุดเท่ากัน 3-4 ด้าน
+                                                        else if (highestScoreData.tiedHighestCount === score.validScoreCount && score.validScoreCount >= 3) {
+                                                            characterName = "Queen";
+                                                            imageNumber = "8";
+                                                            altText = "Queen - Balanced (3-4 skills)";
+                                                        }
+                                                        // กรณี 5: ถ้ามีคะแนนสูงสุดเท่ากัน 2 ด้าน
+                                                        else if (highestScoreData.tiedHighestCount === score.validScoreCount && score.validScoreCount === 2) {
+                                                            characterName = "Knight";
+                                                            imageNumber = "7";
+                                                            altText = "Knight - Dual Skills";
+                                                        }
+                                                        // กรณี 6: กรณีทั่วไป - มีด้านใดด้านหนึ่งโดดเด่น
+                                                        else if (highestScoreData.highestScore) {
+                                                            const highestType = highestScoreData.highestScore.type;
+                                                            characterName = highestScoreData.highestScore.label;
+                                                            
+                                                            if (highestType === 'basic') {
+                                                                imageNumber = "2";
+                                                            } else if (highestType === 'trace') {
+                                                                imageNumber = "3";
+                                                            } else if (highestType === 'explain') {
+                                                                imageNumber = "1";
+                                                            } else if (highestType === 'write') {
+                                                                imageNumber = "4";
+                                                            }
+                                                            
+                                                            altText = characterName + " Specialist";
+                                                        }
+                                                        // กรณี 7: กรณีอื่นๆ ที่ไม่ตรงกับเงื่อนไขข้างต้น (ไม่ควรเกิดขึ้น แต่เผื่อไว้)
+                                                        else {
+                                                            characterName = "Rookie";
+                                                            imageNumber = "5";
+                                                            altText = "Rookie - Default Case";
+                                                        }
+                                                        
+                                                        return {
+                                                            characterName,
+                                                            imageNumber,
+                                                            altText,
+                                                            scoreData: score,
+                                                            highestScoreData: highestScoreData
+                                                        };
+                                                    }
+                                                    
+                                                    // ดำเนินการคำนวณและกำหนดตัวละคร
+                                                    const characterData = determineCharacter();
+                                                    const scoreData = characterData.scoreData;
+                                                    
+                                                    // รวบรวมข้อมูลสำหรับแสดงผล
                                                     const basePaths = [
                                                         "/public/images", 
                                                         "/images",        
@@ -101,158 +309,23 @@
                                                         "./images"         
                                                     ];
                                                     
-                                                    // Function to check how many scores are tied for highest among valid scores only
-                                                    function countHighestScores() {
-                                                        // Create array with only valid scores
-                                                        const validScores = [];
-                                                        if (!isBasicNaN) validScores.push({ value: basicValue, type: 'basic' });
-                                                        if (!isTraceNaN) validScores.push({ value: traceValue, type: 'trace' });
-                                                        if (!isExplainNaN) validScores.push({ value: explainValue, type: 'explain' });
-                                                        if (!isWriteNaN) validScores.push({ value: writeValue, type: 'write' });
+                                                    // กำหนดเส้นทางไฟล์ภาพ
+                                                    const primaryImagePath = `${basePaths[0]}/${characterData.imageNumber}.png`;
                                                         
-                                                        // If no valid scores, return 0
-                                                        if (validScores.length === 0) return 0;
-                                                        
-                                                        // Find max value
-                                                        const maxValue = Math.max(...validScores.map(item => item.value));
-                                                        
-                                                        // Return count of scores equal to max
-                                                        return validScores.filter(item => item.value === maxValue).length;
-                                                    }
-                                                    
-                                                    // Function to find which score type has highest value (ignoring NaN)
-                                                    function getHighestScoreType() {
-                                                        const scores = [
-                                                            { value: basicValue, isNaN: isBasicNaN, type: 'basic' },
-                                                            { value: traceValue, isNaN: isTraceNaN, type: 'trace' },
-                                                            { value: explainValue, isNaN: isExplainNaN, type: 'explain' },
-                                                            { value: writeValue, isNaN: isWriteNaN, type: 'write' }
-                                                        ];
-                                                        
-                                                        // Filter out NaN values
-                                                        const validScores = scores.filter(item => !item.isNaN);
-                                                        
-                                                        // If no valid scores, return null
-                                                        if (validScores.length === 0) return null;
-                                                        
-                                                        // Sort by value (highest first)
-                                                        validScores.sort((a, b) => b.value - a.value);
-                                                        
-                                                        // Return the type with highest value
-                                                        return validScores[0].type;
-                                                    }
-                                                    
-                                                    // Variables to store character info
-                                                    let characterName = "";
-                                                    let imageNumber = "";
-                                                    let altText = "";
-                                                    
-                                                    // REORDERED CONDITIONS: Check highest score conditions first
-                                                    
-                                                    // 1. If score is above kingThreshold (80%), it's KING
-                                                    if(totalScore >= kingThreshold) { 
-                                                        characterName = "KING";
-                                                        imageNumber = "5";
-                                                        altText = "KING";
-                                                    } 
-                                                    // 2. If we have valid scores that can be compared, check their relationships
-                                                    else if(validScoreCount > 0) {
-                                                        // Score is between 20% and 80%
-                                                        if(totalScore >= rookieThreshold && totalScore < kingThreshold) { 
-                                                            const tiedHighest = countHighestScores();
-                                                            
-                                                            // Check if all valid scores are tied
-                                                            if(tiedHighest === validScoreCount && validScoreCount === 4) {
-                                                                characterName = "Queen";
-                                                                imageNumber = "8";
-                                                                altText = "Queen";
-                                                            } else if(tiedHighest === validScoreCount && validScoreCount === 3) { 
-                                                                characterName = "Queen";
-                                                                imageNumber = "8";
-                                                                altText = "Queen";
-                                                            } else if(tiedHighest === validScoreCount && validScoreCount === 2) { 
-                                                                characterName = "Knight";
-                                                                imageNumber = "7";
-                                                                altText = "Knight";
-                                                            } else {
-                                                                // Find highest score type
-                                                                const highestType = getHighestScoreType();
-                                                                
-                                                                if (highestType === 'basic') {
-                                                                    characterName = "Knowledge";
-                                                                    imageNumber = "2";
-                                                                    altText = "Knowledge";
-                                                                } else if (highestType === 'trace') {
-                                                                    characterName = "Tracing";
-                                                                    imageNumber = "3";
-                                                                    altText = "Tracing";
-                                                                } else if (highestType === 'explain') {
-                                                                    characterName = "Explaining";
-                                                                    imageNumber = "1";
-                                                                    altText = "Explaining";
-                                                                } else if (highestType === 'write') {
-                                                                    characterName = "Writing";
-                                                                    imageNumber = "4";
-                                                                    altText = "Writing";
-                                                                }
-                                                            }
-                                                        } 
-                                                        // Score is below 20%
-                                                        else if(totalScore < rookieThreshold) {
-                                                            // Even if below rookieThreshold, check if we have a highest score to use
-                                                            const highestType = getHighestScoreType();
-                                                            
-                                                            if (highestType && validScoreCount > 0) {
-                                                                // Use highest score character even if total is low
-                                                                if (highestType === 'basic') {
-                                                                    characterName = "Knowledge";
-                                                                    imageNumber = "2";
-                                                                    altText = "Knowledge";
-                                                                } else if (highestType === 'trace') {
-                                                                    characterName = "Tracing";
-                                                                    imageNumber = "3";
-                                                                    altText = "Tracing";
-                                                                } else if (highestType === 'explain') {
-                                                                    characterName = "Explaining";
-                                                                    imageNumber = "1";
-                                                                    altText = "Explaining";
-                                                                } else if (highestType === 'write') {
-                                                                    characterName = "Writing";
-                                                                    imageNumber = "4";
-                                                                    altText = "Writing";
-                                                                } else {
-                                                                    // Fallback to Rookie if something went wrong
-                                                                    characterName = "Rookie";
-                                                                    imageNumber = "6";
-                                                                    altText = "Rookie";
-                                                                }
-                                                            } else {
-                                                                // No valid highest score, use Rookie
-                                                                characterName = "Rookie";
-                                                                imageNumber = "6";
-                                                                altText = "Rookie";
-                                                            }
-                                                        }
-                                                    } 
-                                                    // 3. Only if all else fails, use Rookie character
-                                                    else {
-                                                        characterName = "Rookie";
-                                                        imageNumber = "6";
-                                                        altText = "Rookie";
-                                                    }
-                                                    
-                                                    // Get image path with fallback support
-                                                    const primaryImagePath = `${basePaths[0]}/${imageNumber}.png`;
+                                                    // รายละเอียดคะแนนสำหรับการตรวจสอบ
+                                                    const scoreDetails = `K: ${basicScore.toFixed(1)}/${maxKnowledgeScore}, T: ${traceScore.toFixed(1)}/${maxTracingScore}, E: ${explainScore.toFixed(1)}/${maxExplainingScore}, W: ${writeScore.toFixed(1)}/${maxWritingScore}`;
+                                                    const adjustedWritingDetails = `Writing คิดเป็น ${adjustedWriteScore.toFixed(1)}/40 (${((writeScore/maxWritingScore)*100).toFixed(1)}%)`;
+                                                    const calculationDetails = `Total = ${basicScore.toFixed(1)} + ${traceScore.toFixed(1)} + ${explainScore.toFixed(1)} + ${adjustedWriteScore.toFixed(1)} = ${scoreData.totalScore.toFixed(1)}`;
                                                 %>
                                                     <!-- แสดงรูปตัวละคร -->
                                                     <div style="text-align: center;">
                                                         <img 
                                                             src="<%= primaryImagePath %>" 
-                                                            alt="<%= altText %>" 
+                                                            alt="<%= characterData.altText %>" 
                                                             onerror="
                                                                 if (!this.dataset.triedCount) { this.dataset.triedCount = 0; }
                                                                 const basePaths = ['/public/images', '/images', '../images', './public/images', './images'];
-                                                                const imageNumber = '<%= imageNumber %>';
+                                                                const imageNumber = '<%= characterData.imageNumber %>';
                                                                 if (parseInt(this.dataset.triedCount) < basePaths.length - 1) {
                                                                     this.dataset.triedCount = parseInt(this.dataset.triedCount) + 1;
                                                                     this.src = basePaths[this.dataset.triedCount] + '/' + imageNumber + '.png';
@@ -262,19 +335,35 @@
                                                                     this.nextElementSibling.style.display = 'block';
                                                                 }
                                                             "
-                                                            style="max-width: 90%; height: auto; object-fit: contain; display: block; margin: 0 auto;"
+                                                            style="max-width: 90%; height: auto; object-fit: contain; display: block; margin: 0 auto; max-height: 450px;"
                                                         />
                                                         
                                                         <!-- Fallback text if image fails to load (hidden by default) -->
                                                         <div style="display: none; font-size: 48px; font-weight: bold; text-align: center; padding: 20px;">
-                                                            <%= characterName %>
+                                                            <%= characterData.characterName %>
                                                         </div>
                                                         
-                                                        <!-- ไม่แสดงคะแนนรวมใต้รูป -->
+                                                        <!-- ซ่อนรายละเอียดคะแนน (แสดงเมื่ออยู่ในโหมด DEBUG) -->
+                                                        <div style="<%= DEBUG_MODE ? 'display: block;' : 'display: none;' %> text-align: center; font-size: 0.8em; color: #666; border-top: 1px dashed #ccc; padding-top: 5px;">
+                                                            <h4>DEBUG INFO</h4>
+                                                            <%= scoreDetails %><br>
+                                                            <%= adjustedWritingDetails %><br>
+                                                            <%= calculationDetails %><br>
+                                                            Total Score: <%= scoreData.displayTotalScore %> / <%= scoreData.maxDisplayScore %><br>
+                                                            Valid Score Count: <%= scoreData.validScoreCount %><br>
+                                                            Character: <%= characterData.characterName %> (Image: <%= characterData.imageNumber %>)<br>
+                                                            Highest Type: <%= characterData.highestScoreData.highestScore ? characterData.highestScoreData.highestScore.type : 'none' %><br>
+                                                            Tied Count: <%= characterData.highestScoreData.tiedHighestCount %>
+                                                        </div>
                                                     </div>
                                                     
-                                                    <!-- CSS styles -->
+                                                    <!-- CSS สำหรับจัดการแสดงผล -->
                                                     <style>
+                                                        /* เพิ่ม CSS เพื่อซ่อนหรือกำหนดตำแหน่งใหม่สำหรับส่วนที่อาจมีการแสดงคะแนนรวมด้านข้าง */
+                                                        .Total-Score-Side {
+                                                            display: none !important;
+                                                        }
+                                                        
                                                         /* จัดให้ Character อยู่ในกรอบ */
                                                         .character-box {
                                                             box-sizing: border-box;
@@ -283,6 +372,8 @@
                                                         .Character {
                                                             box-sizing: border-box;
                                                             overflow: hidden;
+                                                            min-height: 340px; /* เพิ่มความสูงขั้นต่ำ */
+                                                            padding: 15px; /* เพิ่ม padding */
                                                         }
                                                         
                                                         /* ขยายขนาดของรูปภาพตัวละคร */
@@ -295,23 +386,23 @@
                                                             display: block;
                                                             margin: 0 auto;
                                                         }
-                                                        
-                                                        /* ขยายขนาดพื้นที่แสดงผลตัวละคร */
-                                                        .Character {
-                                                            min-height: 340px; /* เพิ่มความสูงขั้นต่ำ */
-                                                            padding: 15px; /* เพิ่ม padding */
-                                                        }
                                                     </style>
                                                 <%
                                                 } catch (error) { 
-                                                    // แสดง error ในคอนโซลสำหรับการแก้ไขปัญหา
-                                                    console.error("Character component error:", error);
+                                                    // บันทึกข้อผิดพลาดที่พบ
+                                                    const errorMessage = error.message || "Unknown error";
+                                                    const errorStack = error.stack || "";
                                                 %>
                                                     <div style="text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
                                                         <div style="font-size: 48px; font-weight: bold; text-align: center; padding: 20px;">
-                                                            Charecter
+                                                            Rookie
                                                         </div>
-                                                        <!-- ไม่แสดงคะแนนรวมแม้ในกรณี error -->
+                                                        <div style="text-align: center; font-size: 0.8em; color: red; display: none;">
+                                                            Error: <%= errorMessage %>
+                                                            <pre style="text-align: left; font-size: 0.9em; max-height: 100px; overflow: auto; background: #f5f5f5; padding: 5px; margin-top: 5px;">
+                                                                <%= errorStack %>
+                                                            </pre>
+                                                        </div>
                                                     </div>
                                                 <% } %>
                                             </div>
